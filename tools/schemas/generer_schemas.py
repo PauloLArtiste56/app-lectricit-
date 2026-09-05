@@ -425,7 +425,7 @@ svg("symboles_hab", c)
 
 c = titre("La consignation : S-C-I-V")
 etapes = [("S", "Séparation", "ouvrir l'appareil", "de coupure", BLEU),
-          ("C", "Condamnation", "cadenas + pancarte", "pas de remise sous tension", ROUGE),
+          ("C", "Condamnation", "cadenas + pancarte", "remise impossible", ROUGE),
           ("I", "Identification", "être sûr d'être", "sur le bon ouvrage", AMBRE),
           ("V", "VAT", "absence de tension", "VAT testé avant / après", VERT)]
 for i, (l, nom, d1, d2, col) in enumerate(etapes):

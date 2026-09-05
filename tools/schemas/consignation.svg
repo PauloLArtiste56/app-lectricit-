@@ -14,7 +14,7 @@
 <text x="465" y="195" font-size="56" fill="white" text-anchor="middle" font-weight="bold" >C</text>
 <text x="465" y="275" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >Condamnation</text>
 <text x="465" y="330" font-size="19" fill="#78909C" text-anchor="middle" font-weight="normal" >cadenas + pancarte</text>
-<text x="465" y="360" font-size="19" fill="#78909C" text-anchor="middle" font-weight="normal" >pas de remise sous tension</text>
+<text x="465" y="360" font-size="19" fill="#78909C" text-anchor="middle" font-weight="normal" >remise impossible</text>
 <line x1="582" y1="295" x2="618" y2="295" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
 <polygon points="618,295 598.7,305.5 598.7,284.5" fill="#78909C"/>
 <rect x="620" y="130" width="230" height="330" rx="24" fill="white" stroke="#FFB300" stroke-width="6"/>
