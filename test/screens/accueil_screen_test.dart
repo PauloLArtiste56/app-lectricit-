@@ -1,8 +1,11 @@
 import 'package:elecapp/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  setUp(() => SharedPreferences.setMockInitialValues({}));
+
   testWidgets("l'accueil affiche les modules avec leur progression",
       (tester) async {
     await tester.pumpWidget(const ElecApp());

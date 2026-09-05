@@ -1,8 +1,11 @@
+import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:elecapp/screens/resultat_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 const _q1 = Question(
   id: 'q1',
@@ -31,15 +34,20 @@ const _module = Module(
 );
 
 void main() {
+  setUp(() => SharedPreferences.setMockInitialValues({}));
+
   testWidgets('affiche le score et les questions ratées avec la bonne réponse',
       (tester) async {
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: const MaterialApp(
       home: ResultatScreen(
         module: _module,
         score: 1,
         total: 2,
         questionsRatees: [_q1],
       ),
+    ),
     ));
 
     expect(find.text('1 / 2'), findsOneWidget);
@@ -50,13 +58,16 @@ void main() {
 
   testWidgets('sans faute : pas de liste ni de bouton "Refaire"',
       (tester) async {
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: const MaterialApp(
       home: ResultatScreen(
         module: _module,
         score: 2,
         total: 2,
         questionsRatees: [],
       ),
+    ),
     ));
 
     expect(find.text('Sans faute !'), findsOneWidget);
@@ -66,13 +77,16 @@ void main() {
 
   testWidgets('"Refaire les ratées" relance un quiz limité aux ratées',
       (tester) async {
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: const MaterialApp(
       home: ResultatScreen(
         module: _module,
         score: 1,
         total: 2,
         questionsRatees: [_q1],
       ),
+    ),
     ));
 
     await tester.tap(find.text('Refaire les ratées (1)'));

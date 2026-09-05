@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'data/app_state.dart';
 import 'screens/accueil_screen.dart';
 
 void main() {
@@ -11,13 +13,17 @@ class ElecApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ElecApp',
-      theme: ThemeData(
-        colorSchemeSeed: Colors.amber,
-        useMaterial3: true,
+    // AppState est créé une fois ici et accessible depuis tous les écrans.
+    return ChangeNotifierProvider(
+      create: (_) => AppState()..charger(),
+      child: MaterialApp(
+        title: 'ElecApp',
+        theme: ThemeData(
+          colorSchemeSeed: Colors.amber,
+          useMaterial3: true,
+        ),
+        home: const AccueilScreen(),
       ),
-      home: const AccueilScreen(),
     );
   }
 }

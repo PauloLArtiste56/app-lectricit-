@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../data/app_state.dart';
 import '../data/quiz_session.dart';
 import '../models/module.dart';
 import '../models/question.dart';
@@ -27,7 +29,11 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _suivante() {
     setState(() => _session.suivante());
-    if (_session.estTerminee) _afficherResultat();
+    if (_session.estTerminee) {
+      // La sauvegarde part en arrière-plan ; on n'attend pas pour afficher.
+      context.read<AppState>().enregistrerResultat(widget.module, _session);
+      _afficherResultat();
+    }
   }
 
   /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
