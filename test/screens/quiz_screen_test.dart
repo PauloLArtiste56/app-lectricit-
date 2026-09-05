@@ -1,9 +1,11 @@
+import 'dart:io';
+
 import 'package:elecapp/data/app_state.dart';
+import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:elecapp/screens/quiz_screen.dart';
-import 'package:elecapp/widgets/reponse_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -39,7 +41,7 @@ final _module = Module(
 
 /// Écran de test assez haut pour afficher tout l'accueil sans défiler.
 void _ecranHaut(WidgetTester tester) {
-  tester.view.physicalSize = const Size(480, 7000);
+  tester.view.physicalSize = const Size(480, 8000);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }
@@ -103,18 +105,22 @@ void main() {
     await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
-    // On choisit une mauvaise réponse : la première qui n'est pas la bonne.
-    final boutons = find.byType(ReponseButton);
-    for (final e in boutons.evaluate()) {
-      final b = e.widget as ReponseButton;
-      final texte = b.texte;
-      await tester.tap(find.text(texte));
-      await tester.pump();
-      if (find.text('Mauvaise réponse').evaluate().isNotEmpty) break;
-      // Bonne réponse par hasard : on passe à la suivante et on réessaie.
-      await tester.tap(find.text('Question suivante'));
-      await tester.pumpAndSettle();
-    }
+    // On repère la question affichée dans le contenu réel, puis on choisit
+    // une réponse fausse à coup sûr (le quiz est mélangé).
+    final questions = ContentLoader.parserModules(
+      File('assets/content.json').readAsStringSync(),
+    ).first.questions;
+    final textes = find
+        .byType(Text)
+        .evaluate()
+        .map((e) => (e.widget as Text).data)
+        .whereType<String>()
+        .toSet();
+    final affichee = questions.firstWhere((q) => textes.contains(q.enonce));
+    final mauvaise = affichee.reponses[(affichee.bonne + 1) % affichee.reponses.length];
+    await tester.tap(find.text(mauvaise));
+    await tester.pump();
+    expect(find.text('Mauvaise réponse'), findsOneWidget);
     expect(find.textContaining('Revoir la fiche'), findsOneWidget);
 
     await tester.tap(find.textContaining('Revoir la fiche'));

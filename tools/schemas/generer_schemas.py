@@ -549,3 +549,22 @@ RESUMES_E = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_E:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_F = [
+ ("organisation_tableau", "Organisation d'un tableau", "TAB", [("Un différentiel par rangée", "peigne d'alimentation"), ("Circuits d'une pièce répartis", "sur plusieurs différentiels"), ("Type A", "plaque, lave-linge"), ("20 % de réserve", "borniers terre et neutre")], BLEU),
+ ("reperage", "Repérer les circuits", "L N PE", [("Étiquettes sur chaque disjoncteur", "sinon chasse au trésor"), ("Lampe + disjoncteurs un par un", "méthode simple"), ("Schéma unifilaire dans la porte", "obligatoire dans le neuf"), ("L1 L2 L3, N, PE", "repères normalisés")], VERT),
+ ("calibres_lecture", "Lire un disjoncteur", "C16", [("Calibre et courbe", "C standard, B sensible, D moteurs"), ("Pouvoir de coupure", "3 000 / 4 500 A"), ("Manette haut / bas", "enclenché / déclenché"), ("Différentiel", "30 mA, type, calibre, bouton T")], AMBRE),
+ ("methode", "La méthode de dépannage", "1→6", [("Observer, localiser", "quoi, où, depuis quand"), ("Le plus simple d'abord", "disjoncteur, ampoule, appareil"), ("Isoler, mesurer", "hors tension si possible"), ("Réparer, tester", "jamais de protection plus grosse")], BLEU),
+ ("pannes_courantes", "Les pannes courantes", "?", [("Différentiel qui saute", "appareil en fuite : un par un"), ("Disjoncteur sur un appareil", "défaut dans l'appareil"), ("Prise morte", "connexion desserrée"), ("Prise chaude, odeur", "couper, ne plus utiliser")], ROUGE),
+ ("mesures_depannage", "Mesurer pour comprendre", "Ω V", [("Continuité", "fil coupé, fusible, interrupteur"), ("Résistance de chauffe", "1 000 W ≈ 50 Ω"), ("Phase-neutre 230 V, neutre-terre ≈ 0 V", "avec précautions BR"), ("Pince, testeur de prise", "consommation, câblage")], VERT),
+ ("definition_cf", "Courants forts, courants faibles", "mA", [("Forts : énergie", "230 V, prises, chauffage"), ("Faibles : information", "téléphone, réseau, TV, alarme"), ("Gaines séparées", "croisements à angle droit"), ("Sans danger", "mais propreté et repérage")], BLEU),
+ ("coffret_com", "Le coffret de communication", "RJ45", [("Arrivée opérateur, box", "panneau de brassage"), ("Cat 5e, 6, 6A", "100 m maximum"), ("TV : coaxial ou réseau", "coffret relié à la terre"), ("Parafoudre ligne", "protège la box")], VERT),
+ ("fibre_reseau", "Fibre, Wi-Fi, bonnes pratiques", "PoE", [("Fibre : lumière", "fragile, outillage spécifique"), ("Câble > Wi-Fi", "pour les postes fixes"), ("Repérer, tester", "rayon de courbure, pas d'agrafes"), ("PoE 48 V", "caméra, borne Wi-Fi")], AMBRE),
+ ("choix_ext", "Choisir l'éclairage extérieur", "IP65", [("IP44 → IP65 → IP67/68", "exposé, enterré"), ("LED, 2 700 à 4 000 K", "ambiance ou sécurité"), ("Détecteur, crépusculaire, horloge", "commandes"), ("Vers le bas", "pollution lumineuse")], BLEU),
+ ("cablage_ext", "Câbler dehors", "TPC", [("Différentiel 30 mA", "circuit dédié"), ("R2V en gaine TPC rouge", "50 cm, grillage"), ("Boîtes IP55, entrées par le bas", "presse-étoupes"), ("Classe I à la terre", "12 V : transfo au sec")], VERT),
+ ("solaire_ext", "Solaire, 12 V, entretien", "12V", [("Solaire autonome", "balisage seulement"), ("TBTS 12 / 24 V", "sans risque"), ("Chute de tension", "section plus grosse"), ("Optiques, joints, bouton T", "luminaire noyé : remplacer")], AMBRE),
+ ("alarme_intrusion", "L'alarme intrusion", "ALM", [("Détecteurs", "ouverture, mouvement, bris de vitre"), ("Centrale 230 V + batterie", "filaire ou radio"), ("Sirènes et alerte", "intérieure, extérieure, téléphone"), ("Total / partiel", "code, badge, télécommande")], ROUGE),
+ ("video", "La vidéosurveillance", "CAM", [("PoE ou Wi-Fi", "NVR, carte, cloud"), ("IP66, infrarouge, 2,5 à 3 m", "extérieur"), ("Sa propriété seulement", "pas la rue ni le voisin"), ("Mots de passe, mises à jour", "sécurité numérique")], BLEU),
+ ("installation_alarme", "Installer et entretenir", "OK", [("Centrale hors de vue", "sirène extérieure en hauteur"), ("Détecteurs dans les angles à 2,2 m", "pas face aux fenêtres"), ("Batterie 3 à 5 ans", "piles radio"), ("Tester", "coupler à la domotique")], VERT),
+]
+for nom, titre_s, ini, points, col in RESUMES_F:
+    carte_resume(nom, titre_s, ini, points, col)

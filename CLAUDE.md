@@ -135,10 +135,16 @@ Modules existants (par thème) :
 32. Ventilation et climatisation
 33. Outillage électroportatif et chantier
 34. Normes et diagnostic électrique
+35. Lire et repérer un tableau
+36. Dépannage pas à pas
+37. Courants faibles : téléphone, réseau, TV
+38. Éclairage extérieur et jardin
+39. Alarme et vidéosurveillance
 
-Sujets à venir : histoire de l'électricité, électricité en camping-car / bateau, éclairage
-extérieur et jardin, alarme et vidéosurveillance, tableau : lecture et repérage, dépannage
-pas à pas, courants faibles (téléphone, réseau, TV), énergie : autoconsommation avancée…
+Sujets à venir : histoire de l'électricité, camping-car et bateau, autoconsommation
+avancée, triphasé en pratique, mesures avancées (isolement, terre), rénovation d'une
+installation ancienne, électricité et enfants, énergie réactive et cos φ, groupes
+électrogènes et onduleurs de secours, électricité statique et ATEX…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
