@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../widgets/module_card.dart';
-import 'quiz_screen.dart';
+import 'module_screen.dart';
 
 /// Écran d'accueil : la liste des modules avec leur progression.
 class AccueilScreen extends StatelessWidget {
@@ -33,10 +33,9 @@ class AccueilScreen extends StatelessWidget {
               return ModuleCard(
                 module: module,
                 questionsReussies: etat.questionsReussies(module),
-                // Étape 5 : passer par les fiches avant le quiz.
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (_) => QuizScreen(module: module),
+                    builder: (_) => ModuleScreen(module: module),
                   ),
                 ),
               );

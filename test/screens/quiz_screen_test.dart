@@ -72,12 +72,14 @@ void main() {
     expect(find.text('1 / 2'), findsOneWidget);
   });
 
-  testWidgets("depuis l'accueil, un clic sur un module ouvre son quiz",
+  testWidgets("depuis l'accueil, module puis \"Lancer le quiz\" ouvre le quiz",
       (tester) async {
     await tester.pumpWidget(const ElecApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text("Grandeurs électriques et loi d'Ohm"));
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
     expect(find.text('Question 1 / 10'), findsOneWidget);
