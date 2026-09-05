@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Puissance et commande</text>
+<circle cx="190" cy="330" r="110" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="190" y="350.16" font-size="56" fill="white" text-anchor="middle" font-weight="bold" >24V</text>
+<circle cx="380" cy="192" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="200" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Puissance : traits épais</text>
+<text x="420" y="240" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >Q1, KM, F, M</text>
+<circle cx="380" cy="307" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="315" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Commande : traits fins</text>
+<text x="420" y="355" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >T1, arrêt d'urgence, S1, S2, H</text>
+<circle cx="380" cy="422" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="430" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >De haut en bas</text>
+<text x="420" y="470" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >bobine alimentée si branche fermée</text>
+<circle cx="380" cy="537" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="545" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Auto-maintien</text>
+<text x="420" y="585" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >KM1 en parallèle de S2</text>
+
+</svg>
