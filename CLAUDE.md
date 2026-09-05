@@ -160,11 +160,21 @@ Modules existants (par thème) :
 57. Pompes, puits et arrosage
 58. Énergie éolienne
 59. Hydrogène et piles à combustible
+60. Nucléaire et centrales thermiques
+61. Énergie hydraulique
+62. Réseaux intelligents et flexibilité
+63. Câbler un tableau pas à pas
+64. Lire un schéma industriel
+65. Moteurs pas à pas et servomoteurs
+66. Soudure à l'arc et sécurité
+67. Foudre et paratonnerre
+68. Électricité ferroviaire
+69. Électricité en agriculture
 
-Sujets à venir : nucléaire et centrales, hydraulique, réseaux intelligents, câblage
-d'un tableau pas à pas, lecture de schémas industriels, moteur pas à pas et servomoteurs,
-soudure électrique, chauffage par induction, électrochimie et galvanoplastie, foudre et
-paratonnerre, télécommunications, ferroviaire, aéronautique, médical, agriculture…
+Sujets à venir : électricité médicale et hôpitaux, aéronautique et spatial, télécoms et
+antennes, chauffage par induction et fours industriels, électrochimie et galvanoplastie,
+data centers, ascension de la tension (postes HTB), maintenance préventive, lecture de
+factures pro, électricité et santé (champs électromagnétiques)…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,

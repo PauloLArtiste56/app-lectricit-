@@ -4924,9 +4924,1549 @@
       "ordre": 16
     },
     {
+      "id": "nucleaire",
+      "titre": "Nucléaire et centrales thermiques",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "principe_centrale",
+          "titre": "Le principe d'une centrale thermique",
+          "contenu": "Charbon, gaz, fioul, biomasse ou nucléaire : dans tous les cas, on produit de la chaleur qui transforme de l'eau en vapeur. La vapeur fait tourner une turbine, la turbine entraîne un alternateur.\n\nLa vapeur est ensuite refroidie et condensée (tour de refroidissement ou eau de rivière, de mer) pour repartir dans le circuit.\n\nRendement : 33 à 38 % pour le nucléaire, jusqu'à 60 % pour un cycle combiné gaz (turbine à gaz + turbine à vapeur). Le reste part en chaleur.\n\nL'alternateur produit en 20 kV environ, élevé à 400 kV pour le transport.",
+          "image": "principe_centrale.png"
+        },
+        {
+          "id": "reacteur",
+          "titre": "Le réacteur nucléaire",
+          "contenu": "Dans un réacteur à eau pressurisée (REP, la filière française), la fission de l'uranium dans le cœur chauffe l'eau du circuit primaire (155 bar, 300 °C). Un générateur de vapeur transfère la chaleur au circuit secondaire, séparé, qui alimente la turbine.\n\nLe contrôle : les barres de commande absorbent les neutrons et règlent la puissance ; le bore dissous dans l'eau primaire aussi.\n\nSûreté : trois barrières (gaine du combustible, cuve et circuit primaire, enceinte de confinement), redondance des systèmes, alimentation électrique de secours par diesels : un réacteur à l'arrêt a toujours besoin d'électricité pour refroidir.",
+          "image": "reacteur.png"
+        },
+        {
+          "id": "parc_francais",
+          "titre": "Le parc français",
+          "contenu": "56 réacteurs sur 18 sites, de 900 à 1 450 MW chacun, plus l'EPR de Flamanville : environ 60 % de la production électrique française, ce qui rend l'électricité française peu carbonée.\n\nLe reste : hydraulique (12 %), éolien et solaire (en croissance), gaz pour les pointes.\n\nEnjeux : prolongation des réacteurs (visites décennales), nouveaux EPR2, gestion des déchets, disponibilité en été (température des rivières).\n\nCôté métier : les centrales emploient des milliers d'électriciens, avec des habilitations spécifiques (nucléaire : formation SCN, CSQ) en plus de l'habilitation électrique.",
+          "image": "parc_francais.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5901",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "Dans une centrale thermique, la turbine est entraînée par…",
+          "reponses": [
+            "le vent",
+            "la vapeur",
+            "le courant",
+            "le charbon directement"
+          ],
+          "bonne": 1,
+          "explication": "Quelle que soit la source de chaleur."
+        },
+        {
+          "id": "q5902",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "La tour de refroidissement sert à…",
+          "reponses": [
+            "produire la vapeur",
+            "condenser la vapeur après la turbine",
+            "filtrer la fumée",
+            "stocker l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Le panache est de la vapeur d'eau."
+        },
+        {
+          "id": "q5903",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "Rendement d'une centrale nucléaire ?",
+          "reponses": [
+            "90 %",
+            "33 à 38 %",
+            "10 %",
+            "60 %"
+          ],
+          "bonne": 1,
+          "explication": "Le reste est rejeté en chaleur."
+        },
+        {
+          "id": "q5904",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "Le cycle combiné gaz atteint…",
+          "reponses": [
+            "20 %",
+            "jusqu'à 60 %",
+            "100 %",
+            "33 %"
+          ],
+          "bonne": 1,
+          "explication": "Turbine à gaz + récupération de chaleur pour une turbine à vapeur."
+        },
+        {
+          "id": "q5905",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "L'alternateur d'une centrale produit en…",
+          "reponses": [
+            "230 V",
+            "environ 20 kV, élevé ensuite à 400 kV",
+            "400 kV directement",
+            "12 V"
+          ],
+          "bonne": 1,
+          "explication": "Transformateur élévateur en sortie."
+        },
+        {
+          "id": "q5906",
+          "fiche_id": "principe_centrale",
+          "type": "qcm",
+          "enonce": "Quel combustible n'est pas thermique ?",
+          "reponses": [
+            "Charbon",
+            "Gaz",
+            "Uranium",
+            "Le vent"
+          ],
+          "bonne": 3,
+          "explication": "L'éolien n'a pas de cycle vapeur."
+        },
+        {
+          "id": "q5907",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "La filière française de réacteurs est…",
+          "reponses": [
+            "à eau bouillante",
+            "à eau pressurisée (REP)",
+            "à graphite",
+            "à sels fondus"
+          ],
+          "bonne": 1,
+          "explication": "Circuits primaire et secondaire séparés."
+        },
+        {
+          "id": "q5908",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "Le générateur de vapeur…",
+          "reponses": [
+            "est la turbine",
+            "transfère la chaleur du primaire au secondaire, sans mélange",
+            "refroidit le cœur",
+            "stocke l'uranium"
+          ],
+          "bonne": 1,
+          "explication": "L'eau du secondaire ne passe pas dans le cœur."
+        },
+        {
+          "id": "q5909",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "Les barres de commande…",
+          "reponses": [
+            "chauffent le cœur",
+            "absorbent les neutrons pour régler ou arrêter la réaction",
+            "produisent la vapeur",
+            "refroidissent"
+          ],
+          "bonne": 1,
+          "explication": "Insérées, elles arrêtent la réaction en chaîne."
+        },
+        {
+          "id": "q5910",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "Les trois barrières de sûreté sont…",
+          "reponses": [
+            "porte, mur, toit",
+            "gaine du combustible, circuit primaire, enceinte de confinement",
+            "eau, vapeur, air",
+            "béton, acier, plomb"
+          ],
+          "bonne": 1,
+          "explication": "Chacune retient les produits radioactifs."
+        },
+        {
+          "id": "q5911",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "Un réacteur à l'arrêt a besoin…",
+          "reponses": [
+            "de rien",
+            "d'électricité pour continuer à refroidir le cœur",
+            "de charbon",
+            "de vent"
+          ],
+          "bonne": 1,
+          "explication": "D'où les diesels de secours."
+        },
+        {
+          "id": "q5912",
+          "fiche_id": "reacteur",
+          "type": "qcm",
+          "enonce": "Pression du circuit primaire d'un REP ?",
+          "reponses": [
+            "1 bar",
+            "155 bar",
+            "10 bar",
+            "1 000 bar"
+          ],
+          "bonne": 1,
+          "explication": "Pour garder l'eau liquide à 300 °C."
+        },
+        {
+          "id": "q5913",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "Part du nucléaire dans la production électrique française ?",
+          "reponses": [
+            "10 %",
+            "environ 60 %",
+            "90 %",
+            "30 %"
+          ],
+          "bonne": 1,
+          "explication": "D'où une électricité peu carbonée."
+        },
+        {
+          "id": "q5914",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "Puissance d'un réacteur français ?",
+          "reponses": [
+            "9 MW",
+            "900 à 1 450 MW",
+            "90 000 MW",
+            "9 kW"
+          ],
+          "bonne": 1,
+          "explication": "L'EPR : 1 600 MW."
+        },
+        {
+          "id": "q5915",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "La deuxième source d'électricité en France ?",
+          "reponses": [
+            "Le charbon",
+            "L'hydraulique",
+            "Le fioul",
+            "Le solaire"
+          ],
+          "bonne": 1,
+          "explication": "Environ 12 %."
+        },
+        {
+          "id": "q5916",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "Les visites décennales servent à…",
+          "reponses": [
+            "nettoyer",
+            "vérifier et décider la prolongation du réacteur",
+            "changer l'uranium",
+            "peindre"
+          ],
+          "bonne": 1,
+          "explication": "Tous les dix ans, examen complet."
+        },
+        {
+          "id": "q5917",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "En été, une centrale peut réduire sa puissance à cause…",
+          "reponses": [
+            "du vent",
+            "de la température des rivières de refroidissement",
+            "des vacances",
+            "du prix"
+          ],
+          "bonne": 1,
+          "explication": "Limites de rejet thermique."
+        },
+        {
+          "id": "q5918",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "Pour travailler en centrale nucléaire, il faut en plus…",
+          "reponses": [
+            "un permis bateau",
+            "des formations spécifiques (SCN, CSQ) et une surveillance dosimétrique",
+            "rien",
+            "un diplôme de physique"
+          ],
+          "bonne": 1,
+          "explication": "En plus de l'habilitation électrique."
+        },
+        {
+          "id": "q5919",
+          "fiche_id": "parc_francais",
+          "type": "qcm",
+          "enonce": "Le gaz sert surtout…",
+          "reponses": [
+            "en base",
+            "pour les pointes de consommation",
+            "jamais",
+            "la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Démarrage rapide."
+        },
+        {
+          "id": "q5920",
+          "fiche_id": "principe_centrale",
+          "type": "ordre",
+          "enonce": "De la chaleur au réseau : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Source de chaleur (fission, combustion)",
+            "L'eau devient vapeur",
+            "La vapeur entraîne la turbine",
+            "La turbine entraîne l'alternateur",
+            "Transformateur élévateur vers 400 kV"
+          ],
+          "explication": "Chaleur, vapeur, turbine, alternateur, réseau."
+        }
+      ],
+      "ordre": 17
+    },
+    {
+      "id": "hydraulique",
+      "titre": "Énergie hydraulique",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "principe_hydro",
+          "titre": "De l'eau à l'électricité",
+          "contenu": "L'eau qui descend entraîne une turbine, qui entraîne un alternateur. La puissance dépend du débit et de la hauteur de chute : P ≈ 9,81 × débit (m³/s) × hauteur (m) × rendement, en kW.\n\nTypes de turbines : Pelton (haute chute, faible débit, montagne), Francis (moyenne chute), Kaplan (basse chute, gros débit, fleuves).\n\nRendement excellent, 85 à 90 %, démarrage en quelques minutes : l'hydraulique est la source la plus souple du réseau.",
+          "image": "principe_hydro.png"
+        },
+        {
+          "id": "barrages",
+          "titre": "Barrages, fil de l'eau, STEP",
+          "contenu": "Barrage de retenue (lac) : stocke l'eau, produit à la demande. Centrale au fil de l'eau : sur un fleuve, produit en continu selon le débit. Éclusée : petite retenue pour les heures de pointe.\n\nSTEP (station de transfert d'énergie par pompage) : deux bassins, on pompe vers le haut quand l'électricité est abondante, on turbine vers le bas à la pointe. Rendement du cycle 75 à 80 % : le plus grand stockage d'électricité existant.\n\nSécurité : lâchers d'eau, zones interdites en aval, alarmes.",
+          "image": "barrages.png"
+        },
+        {
+          "id": "petite_hydro",
+          "titre": "La petite hydraulique",
+          "contenu": "Micro-centrale sur un ruisseau ou un ancien moulin : de quelques kW à quelques centaines de kW. Turbine, alternateur ou génératrice asynchrone, régulation, raccordement au réseau ou site isolé avec batteries.\n\nDroit d'eau, débit réservé pour la rivière, passe à poissons : la réglementation est exigeante.\n\nCôté électrique : régulation de vitesse ou de charge (ballast), protections de découplage, mise à la terre, locaux humides (IP élevé, différentiel).",
+          "image": "petite_hydro.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6001",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "La puissance hydraulique dépend…",
+          "reponses": [
+            "de la couleur de l'eau",
+            "du débit et de la hauteur de chute",
+            "de la température",
+            "du vent"
+          ],
+          "bonne": 1,
+          "explication": "P ≈ 9,81 × Q × H × rendement."
+        },
+        {
+          "id": "q6002",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "Turbine adaptée à une haute chute en montagne ?",
+          "reponses": [
+            "Kaplan",
+            "Pelton",
+            "Francis",
+            "Éolienne"
+          ],
+          "bonne": 1,
+          "explication": "Jets d'eau sur des augets."
+        },
+        {
+          "id": "q6003",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "Turbine adaptée à une basse chute sur un fleuve ?",
+          "reponses": [
+            "Pelton",
+            "Kaplan",
+            "Francis",
+            "Savonius"
+          ],
+          "bonne": 1,
+          "explication": "Hélice à pales orientables."
+        },
+        {
+          "id": "q6004",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "Rendement d'une turbine hydraulique ?",
+          "reponses": [
+            "30 %",
+            "85 à 90 %",
+            "10 %",
+            "100 %"
+          ],
+          "bonne": 1,
+          "explication": "Le meilleur de toutes les sources."
+        },
+        {
+          "id": "q6005",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "Un débit de 10 m³/s sur 50 m de chute, rendement 0,9, donne environ…",
+          "reponses": [
+            "4,4 kW",
+            "4 400 kW",
+            "44 kW",
+            "440 000 kW"
+          ],
+          "bonne": 1,
+          "explication": "9,81 × 10 × 50 × 0,9 ≈ 4 400 kW."
+        },
+        {
+          "id": "q6006",
+          "fiche_id": "principe_hydro",
+          "type": "qcm",
+          "enonce": "L'hydraulique démarre…",
+          "reponses": [
+            "en plusieurs heures",
+            "en quelques minutes",
+            "en une journée",
+            "jamais à la demande"
+          ],
+          "bonne": 1,
+          "explication": "Source la plus souple."
+        },
+        {
+          "id": "q6007",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "Une centrale au fil de l'eau…",
+          "reponses": [
+            "stocke l'eau",
+            "produit en continu selon le débit du fleuve",
+            "pompe",
+            "fonctionne la nuit seulement"
+          ],
+          "bonne": 1,
+          "explication": "Pas de réserve."
+        },
+        {
+          "id": "q6008",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "Une STEP sert à…",
+          "reponses": [
+            "irriguer",
+            "stocker l'électricité en pompant puis en turbinant",
+            "pêcher",
+            "refroidir"
+          ],
+          "bonne": 1,
+          "explication": "Le plus grand stockage électrique existant."
+        },
+        {
+          "id": "q6009",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "Rendement du cycle d'une STEP ?",
+          "reponses": [
+            "10 %",
+            "75 à 80 %",
+            "100 %",
+            "50 %"
+          ],
+          "bonne": 1,
+          "explication": "Pompage puis turbinage."
+        },
+        {
+          "id": "q6010",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "On pompe dans une STEP quand…",
+          "reponses": [
+            "l'électricité est abondante et peu chère",
+            "à la pointe",
+            "il pleut",
+            "jamais"
+          ],
+          "bonne": 0,
+          "explication": "Et on turbine à la pointe."
+        },
+        {
+          "id": "q6011",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "Une centrale d'éclusée…",
+          "reponses": [
+            "est sur la mer",
+            "a une petite retenue pour produire aux heures de pointe",
+            "pompe",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Entre le lac et le fil de l'eau."
+        },
+        {
+          "id": "q6012",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "En aval d'un barrage, on peut être surpris par…",
+          "reponses": [
+            "le vent",
+            "des lâchers d'eau : zones interdites, alarmes",
+            "le froid",
+            "les poissons"
+          ],
+          "bonne": 1,
+          "explication": "Montée rapide du niveau."
+        },
+        {
+          "id": "q6013",
+          "fiche_id": "barrages",
+          "type": "qcm",
+          "enonce": "Un barrage de retenue produit…",
+          "reponses": [
+            "en continu selon la pluie",
+            "à la demande, en stockant l'eau",
+            "seulement l'été",
+            "seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Réserve d'énergie."
+        },
+        {
+          "id": "q6014",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "Une micro-centrale fait…",
+          "reponses": [
+            "des GW",
+            "de quelques kW à quelques centaines de kW",
+            "des MW",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Ruisseau, ancien moulin."
+        },
+        {
+          "id": "q6015",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "Le débit réservé, c'est…",
+          "reponses": [
+            "l'eau pour la turbine",
+            "l'eau laissée à la rivière pour la vie aquatique",
+            "l'eau stockée",
+            "l'eau potable"
+          ],
+          "bonne": 1,
+          "explication": "Obligation réglementaire."
+        },
+        {
+          "id": "q6016",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "En site isolé, une micro-centrale utilise…",
+          "reponses": [
+            "le réseau",
+            "une régulation par ballast et des batteries",
+            "un compteur",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Le ballast absorbe l'excédent."
+        },
+        {
+          "id": "q6017",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "La passe à poissons…",
+          "reponses": [
+            "produit de l'électricité",
+            "permet aux poissons de franchir l'ouvrage",
+            "filtre l'eau",
+            "refroidit"
+          ],
+          "bonne": 1,
+          "explication": "Continuité écologique."
+        },
+        {
+          "id": "q6018",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "La protection de découplage sert à…",
+          "reponses": [
+            "protéger la turbine",
+            "déconnecter la centrale du réseau en cas de défaut réseau",
+            "chauffer",
+            "mesurer le débit"
+          ],
+          "bonne": 1,
+          "explication": "Comme pour le photovoltaïque."
+        },
+        {
+          "id": "q6019",
+          "fiche_id": "petite_hydro",
+          "type": "qcm",
+          "enonce": "Le local d'une micro-centrale est…",
+          "reponses": [
+            "sec",
+            "humide : IP élevé et différentiel",
+            "en HT",
+            "sans électricité"
+          ],
+          "bonne": 1,
+          "explication": "Eau partout."
+        },
+        {
+          "id": "q6020",
+          "fiche_id": "barrages",
+          "type": "ordre",
+          "enonce": "Cycle d'une STEP : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Électricité abondante la nuit",
+            "Pompage vers le bassin supérieur",
+            "Stockage de l'eau en hauteur",
+            "Turbinage à la pointe du soir",
+            "Électricité restituée au réseau"
+          ],
+          "explication": "Pomper quand c'est abondant, turbiner à la pointe."
+        }
+      ],
+      "ordre": 18
+    },
+    {
+      "id": "smart_grid",
+      "titre": "Réseaux intelligents et flexibilité",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "equilibre",
+          "titre": "L'équilibre production-consommation",
+          "contenu": "À chaque instant, la production doit égaler la consommation : sinon la fréquence dévie de 50 Hz. Le gestionnaire (RTE) pilote des réserves : centrales qui montent ou descendent en puissance en secondes ou minutes.\n\nLa fréquence est l'indicateur : elle baisse si la consommation dépasse la production, elle monte dans le cas inverse. Au-delà de quelques dixièmes de hertz, des automatismes délestent ou déconnectent.\n\nAvec l'éolien et le solaire variables, l'équilibrage demande plus de souplesse : stockage, interconnexions européennes, effacement.",
+          "image": "equilibre.png"
+        },
+        {
+          "id": "compteur_communicant",
+          "titre": "Compteurs communicants et données",
+          "contenu": "Le compteur communicant transmet les index chaque jour et peut enregistrer la courbe de charge (consommation par demi-heure) si l'usager l'accepte.\n\nIl permet des offres à tarifs variables (heures creuses, week-end, pointe mobile), le suivi en temps réel via une sortie locale (TIC) et la détection des coupures.\n\nLes données sont personnelles : accès contrôlé, consentement pour le partage avec des tiers.",
+          "image": "compteur_communicant.png"
+        },
+        {
+          "id": "flexibilite",
+          "titre": "Effacement, autoconsommation collective, V2G",
+          "contenu": "Effacement : un client accepte de réduire sa consommation à la demande (chauffe-eau, chauffage, industriel) contre rémunération. Des agrégateurs regroupent des milliers de foyers.\n\nAutoconsommation collective : des voisins partagent une production solaire dans un rayon de 2 km, avec une clé de répartition.\n\nV2G (vehicle-to-grid) : la batterie du véhicule électrique rend de l'énergie au réseau ou à la maison aux heures de pointe. Le pilotage de la recharge (V1G) est déjà courant.\n\nLe réseau de demain est bidirectionnel et piloté par les données.",
+          "image": "flexibilite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6101",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Si la consommation dépasse la production, la fréquence…",
+          "reponses": [
+            "monte",
+            "baisse",
+            "reste à 50 Hz",
+            "devient continue"
+          ],
+          "bonne": 1,
+          "explication": "Les alternateurs ralentissent."
+        },
+        {
+          "id": "q6102",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Qui pilote l'équilibre du réseau en France ?",
+          "reponses": [
+            "Enedis",
+            "RTE",
+            "EDF",
+            "La mairie"
+          ],
+          "bonne": 1,
+          "explication": "Gestionnaire du réseau de transport."
+        },
+        {
+          "id": "q6103",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Les réserves de puissance sont…",
+          "reponses": [
+            "des batteries de téléphone",
+            "des centrales prêtes à monter ou descendre en secondes ou minutes",
+            "des stocks de charbon",
+            "des lignes"
+          ],
+          "bonne": 1,
+          "explication": "Réserves primaire, secondaire, tertiaire."
+        },
+        {
+          "id": "q6104",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Un écart de fréquence important déclenche…",
+          "reponses": [
+            "rien",
+            "des délestages ou déconnexions automatiques",
+            "une hausse de tension",
+            "un changement de tarif"
+          ],
+          "bonne": 1,
+          "explication": "Pour éviter l'effondrement du réseau."
+        },
+        {
+          "id": "q6105",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Les interconnexions européennes servent à…",
+          "reponses": [
+            "vendre du gaz",
+            "échanger de l'électricité et mutualiser les réserves",
+            "chauffer",
+            "isoler la France"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau européen est synchrone."
+        },
+        {
+          "id": "q6106",
+          "fiche_id": "equilibre",
+          "type": "qcm",
+          "enonce": "Éolien et solaire compliquent l'équilibrage car…",
+          "reponses": [
+            "ils sont trop puissants",
+            "leur production est variable",
+            "ils sont en continu",
+            "ils sont en HT"
+          ],
+          "bonne": 1,
+          "explication": "D'où stockage et flexibilité."
+        },
+        {
+          "id": "q6107",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "La courbe de charge, c'est…",
+          "reponses": [
+            "la facture",
+            "la consommation enregistrée par demi-heure",
+            "la puissance souscrite",
+            "le prix du kWh"
+          ],
+          "bonne": 1,
+          "explication": "Avec l'accord de l'usager."
+        },
+        {
+          "id": "q6108",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "La sortie TIC du compteur permet…",
+          "reponses": [
+            "de payer",
+            "de suivre sa consommation en temps réel avec un boîtier",
+            "de produire",
+            "de couper le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Télé-information client."
+        },
+        {
+          "id": "q6109",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "Les données du compteur sont…",
+          "reponses": [
+            "publiques",
+            "personnelles : consentement pour le partage",
+            "vendues",
+            "inexistantes"
+          ],
+          "bonne": 1,
+          "explication": "Protection des données."
+        },
+        {
+          "id": "q6110",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "Une offre à pointe mobile…",
+          "reponses": [
+            "coûte plus cher certains jours signalés la veille",
+            "est fixe",
+            "n'existe pas",
+            "concerne la nuit"
+          ],
+          "bonne": 0,
+          "explication": "Incitation à réduire aux moments critiques."
+        },
+        {
+          "id": "q6111",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "Le compteur communicant détecte…",
+          "reponses": [
+            "les voleurs",
+            "les coupures et informe le distributeur",
+            "la météo",
+            "le wifi"
+          ],
+          "bonne": 1,
+          "explication": "Dépannage plus rapide."
+        },
+        {
+          "id": "q6112",
+          "fiche_id": "compteur_communicant",
+          "type": "qcm",
+          "enonce": "La relève des index se fait…",
+          "reponses": [
+            "par un agent tous les six mois",
+            "à distance, chaque jour",
+            "jamais",
+            "par téléphone"
+          ],
+          "bonne": 1,
+          "explication": "Fini l'estimation."
+        },
+        {
+          "id": "q6113",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "L'effacement, c'est…",
+          "reponses": [
+            "couper le compteur",
+            "réduire sa consommation à la demande contre rémunération",
+            "effacer ses données",
+            "changer de fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Piloté par des agrégateurs."
+        },
+        {
+          "id": "q6114",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "Un agrégateur…",
+          "reponses": [
+            "vend des panneaux",
+            "regroupe des milliers de consommateurs pour offrir de la flexibilité au réseau",
+            "répare les lignes",
+            "produit du gaz"
+          ],
+          "bonne": 1,
+          "explication": "Le poids du nombre."
+        },
+        {
+          "id": "q6115",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "L'autoconsommation collective partage une production dans un rayon de…",
+          "reponses": [
+            "20 m",
+            "2 km",
+            "200 km",
+            "toute la France"
+          ],
+          "bonne": 1,
+          "explication": "Avec une clé de répartition."
+        },
+        {
+          "id": "q6116",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "V2G signifie…",
+          "reponses": [
+            "voiture à gaz",
+            "vehicle-to-grid : la voiture rend de l'énergie au réseau",
+            "vitesse 2 gigas",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Bidirectionnel."
+        },
+        {
+          "id": "q6117",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "V1G, c'est…",
+          "reponses": [
+            "la recharge pilotée dans un seul sens",
+            "la décharge",
+            "une norme de câble",
+            "une prise"
+          ],
+          "bonne": 0,
+          "explication": "Déjà courant."
+        },
+        {
+          "id": "q6118",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "Le réseau de demain est…",
+          "reponses": [
+            "unidirectionnel",
+            "bidirectionnel et piloté par les données",
+            "sans électricité",
+            "en continu"
+          ],
+          "bonne": 1,
+          "explication": "Producteurs et consommateurs mélangés."
+        },
+        {
+          "id": "q6119",
+          "fiche_id": "flexibilite",
+          "type": "qcm",
+          "enonce": "Quel appareil domestique est le plus facile à effacer ?",
+          "reponses": [
+            "Le réfrigérateur",
+            "Le chauffe-eau",
+            "La télévision",
+            "La box"
+          ],
+          "bonne": 1,
+          "explication": "Quelques heures de décalage sans gêne."
+        },
+        {
+          "id": "q6120",
+          "fiche_id": "equilibre",
+          "type": "ordre",
+          "enonce": "Réagir à une chute de fréquence : remets les étapes dans l'ordre.",
+          "reponses": [
+            "La consommation dépasse la production",
+            "La fréquence baisse sous 50 Hz",
+            "La réserve primaire augmente la puissance des centrales",
+            "La réserve secondaire prend le relais",
+            "Si insuffisant, délestage automatique"
+          ],
+          "explication": "Détecter, réagir vite, puis durablement, puis délester."
+        }
+      ],
+      "ordre": 19
+    },
+    {
+      "id": "servomoteurs",
+      "titre": "Moteurs pas à pas et servomoteurs",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "pas_a_pas",
+          "titre": "Le moteur pas à pas",
+          "contenu": "Le moteur pas à pas tourne par incréments fixes : 200 pas par tour (1,8° par pas) pour les plus courants. On commande la position sans capteur, en comptant les impulsions envoyées au driver.\n\nDeux bobines (bipolaire) ou quatre (unipolaire). Le driver séquence les bobines ; le micropas divise chaque pas pour plus de douceur.\n\nAvantages : simple, précis, peu cher. Limites : couple qui chute à haute vitesse, perte de pas si la charge est trop forte, chauffe à l'arrêt car il reste alimenté. Applications : imprimantes 3D, machines de découpe, automatismes légers.",
+          "image": "pas_a_pas.png"
+        },
+        {
+          "id": "servo",
+          "titre": "Le servomoteur",
+          "contenu": "Un servomoteur est un moteur (souvent brushless) avec un capteur de position (codeur) et un variateur qui asservit la position, la vitesse ou le couple. Il corrige en permanence l'écart entre consigne et mesure.\n\nLe petit servo de modélisme : moteur continu, réducteur, potentiomètre, commandé par une impulsion de 1 à 2 ms (PWM). Le servo industriel : moteur brushless, codeur haute résolution, bus de communication.\n\nAvantages : couple élevé, dynamique, aucune perte de position. Coût et complexité supérieurs au pas à pas. Applications : robots, machines-outils, convoyeurs précis.",
+          "image": "servo.png"
+        },
+        {
+          "id": "brushless",
+          "titre": "Moteur brushless et commande",
+          "contenu": "Le moteur brushless (BLDC) n'a ni balais ni collecteur : les aimants sont sur le rotor, les bobines sur le stator, et l'électronique commute les bobines selon la position du rotor (capteurs à effet Hall ou mesure de la tension induite).\n\nRendement élevé, durée de vie longue, vitesse variable : trottinettes, vélos électriques, drones, ventilateurs, disques durs, outils sans fil.\n\nLa commande est un variateur (ESC) en continu : tension de batterie, courants élevés, protection contre les surchauffes. On coupe l'alimentation avant toute intervention : les aimants génèrent une tension dès que l'axe tourne.",
+          "image": "brushless.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6401",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Un moteur pas à pas de 200 pas fait par pas…",
+          "reponses": [
+            "1°",
+            "1,8°",
+            "10°",
+            "90°"
+          ],
+          "bonne": 1,
+          "explication": "360 / 200 = 1,8°."
+        },
+        {
+          "id": "q6402",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Le pas à pas se positionne…",
+          "reponses": [
+            "avec un capteur obligatoire",
+            "en comptant les impulsions, sans capteur",
+            "au hasard",
+            "avec un potentiomètre"
+          ],
+          "bonne": 1,
+          "explication": "Boucle ouverte."
+        },
+        {
+          "id": "q6403",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Le micropas sert à…",
+          "reponses": [
+            "accélérer",
+            "diviser chaque pas pour plus de douceur et de finesse",
+            "chauffer moins",
+            "augmenter le couple"
+          ],
+          "bonne": 1,
+          "explication": "Jusqu'à 1/256 de pas."
+        },
+        {
+          "id": "q6404",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Défaut du pas à pas ?",
+          "reponses": [
+            "Trop cher",
+            "Couple qui chute à haute vitesse, perte de pas possible",
+            "Trop rapide",
+            "Sans driver"
+          ],
+          "bonne": 1,
+          "explication": "Boucle ouverte : une perte de pas n'est pas détectée."
+        },
+        {
+          "id": "q6405",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Un pas à pas à l'arrêt…",
+          "reponses": [
+            "ne consomme rien",
+            "reste alimenté et chauffe",
+            "se déconnecte",
+            "tourne lentement"
+          ],
+          "bonne": 1,
+          "explication": "Il maintient sa position."
+        },
+        {
+          "id": "q6406",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Application typique ?",
+          "reponses": [
+            "Ascenseur",
+            "Imprimante 3D",
+            "Éolienne",
+            "Frigo"
+          ],
+          "bonne": 1,
+          "explication": "Précision et faible coût."
+        },
+        {
+          "id": "q6407",
+          "fiche_id": "pas_a_pas",
+          "type": "qcm",
+          "enonce": "Un moteur bipolaire a…",
+          "reponses": [
+            "une bobine",
+            "deux bobines",
+            "huit bobines",
+            "aucune"
+          ],
+          "bonne": 1,
+          "explication": "L'unipolaire en a quatre."
+        },
+        {
+          "id": "q6408",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "Un servomoteur corrige sa position grâce à…",
+          "reponses": [
+            "un fusible",
+            "un capteur (codeur) et un asservissement",
+            "une horloge",
+            "la gravité"
+          ],
+          "bonne": 1,
+          "explication": "Boucle fermée."
+        },
+        {
+          "id": "q6409",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "Le servo de modélisme se commande par…",
+          "reponses": [
+            "une tension continue",
+            "une impulsion de 1 à 2 ms (PWM)",
+            "un bus Ethernet",
+            "un interrupteur"
+          ],
+          "bonne": 1,
+          "explication": "La largeur donne la position."
+        },
+        {
+          "id": "q6410",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "Avantage du servo industriel ?",
+          "reponses": [
+            "Prix bas",
+            "Couple élevé, dynamique, aucune perte de position",
+            "Simplicité",
+            "Sans électronique"
+          ],
+          "bonne": 1,
+          "explication": "Robots, machines-outils."
+        },
+        {
+          "id": "q6411",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "Le servo industriel utilise souvent un moteur…",
+          "reponses": [
+            "à balais",
+            "brushless avec codeur",
+            "pas à pas",
+            "diesel"
+          ],
+          "bonne": 1,
+          "explication": "Haute résolution."
+        },
+        {
+          "id": "q6412",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "L'asservissement compare…",
+          "reponses": [
+            "deux moteurs",
+            "la consigne et la mesure, et corrige l'écart",
+            "le prix et la qualité",
+            "la tension et la fréquence"
+          ],
+          "bonne": 1,
+          "explication": "En permanence."
+        },
+        {
+          "id": "q6413",
+          "fiche_id": "servo",
+          "type": "qcm",
+          "enonce": "Le servo de modélisme contient…",
+          "reponses": [
+            "un codeur optique",
+            "moteur continu, réducteur, potentiomètre",
+            "une batterie",
+            "un variateur triphasé"
+          ],
+          "bonne": 1,
+          "explication": "Simple et bon marché."
+        },
+        {
+          "id": "q6414",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "Un moteur brushless n'a pas…",
+          "reponses": [
+            "d'aimants",
+            "de balais ni de collecteur",
+            "de bobines",
+            "de rotor"
+          ],
+          "bonne": 1,
+          "explication": "D'où sa longévité."
+        },
+        {
+          "id": "q6415",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "Dans un brushless, les aimants sont…",
+          "reponses": [
+            "sur le stator",
+            "sur le rotor",
+            "absents",
+            "dans l'ESC"
+          ],
+          "bonne": 1,
+          "explication": "Les bobines sont sur le stator."
+        },
+        {
+          "id": "q6416",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "Les capteurs à effet Hall servent à…",
+          "reponses": [
+            "mesurer la température",
+            "connaître la position du rotor pour commuter les bobines",
+            "freiner",
+            "charger"
+          ],
+          "bonne": 1,
+          "explication": "Ou mesure de la tension induite (sensorless)."
+        },
+        {
+          "id": "q6417",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "ESC signifie…",
+          "reponses": [
+            "Electronic Speed Controller, le variateur du brushless",
+            "Étoile Série Continu",
+            "Energy Storage Cell",
+            "rien"
+          ],
+          "bonne": 0,
+          "explication": "Alimenté en continu."
+        },
+        {
+          "id": "q6418",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "Un brushless dont on tourne l'axe à la main…",
+          "reponses": [
+            "ne fait rien",
+            "génère une tension : couper avant d'intervenir",
+            "chauffe",
+            "se démagnétise"
+          ],
+          "bonne": 1,
+          "explication": "C'est un alternateur."
+        },
+        {
+          "id": "q6419",
+          "fiche_id": "brushless",
+          "type": "qcm",
+          "enonce": "Application typique du brushless ?",
+          "reponses": [
+            "Ampoule",
+            "Trottinette, vélo électrique, drone",
+            "Radiateur",
+            "Fusible"
+          ],
+          "bonne": 1,
+          "explication": "Rendement et légèreté."
+        },
+        {
+          "id": "q6420",
+          "fiche_id": "servo",
+          "type": "ordre",
+          "enonce": "Boucle d'asservissement : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Consigne de position",
+            "Mesure par le codeur",
+            "Calcul de l'écart",
+            "Correction par le variateur",
+            "Le moteur bouge, nouvelle mesure"
+          ],
+          "explication": "Consigne, mesure, écart, correction, en boucle."
+        }
+      ],
+      "ordre": 20
+    },
+    {
+      "id": "ferroviaire",
+      "titre": "Électricité ferroviaire",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "traction",
+          "titre": "La traction électrique",
+          "contenu": "Les trains électriques sont alimentés par une caténaire (fil aérien) ou un troisième rail (métros). Le courant revient par les rails.\n\nEn France, deux systèmes : 1 500 V continu (sud-est, réseau ancien) et 25 kV 50 Hz alternatif (lignes à grande vitesse, nord et est). Les locomotives modernes sont bicourant.\n\nLe TGV absorbe jusqu'à 8 à 12 MW en pointe. La récupération d'énergie au freinage renvoie du courant dans la caténaire.\n\nLe métro parisien : troisième rail 750 V continu ; les tramways : caténaire 750 V continu ou alimentation par le sol.",
+          "image": "traction.png"
+        },
+        {
+          "id": "sous_stations",
+          "titre": "Sous-stations et signalisation",
+          "contenu": "Les sous-stations transforment le 63 ou 225 kV du réseau en 25 kV pour la caténaire, ou redressent en 1 500 V continu. Elles sont espacées de 40 à 60 km en 25 kV, 10 à 15 km en 1 500 V.\n\nLa signalisation est un monde à part : circuits de voie (détection des trains par les rails), aiguillages motorisés, signaux lumineux, en basse tension et courants faibles, avec une sécurité intrinsèque (un défaut met le signal au rouge).\n\nLes postes d'aiguillage et les armoires de signalisation sont des installations électriques classiques, mais aux règles ferroviaires.",
+          "image": "sous_stations.png"
+        },
+        {
+          "id": "securite_ferroviaire",
+          "titre": "Sécurité près des voies",
+          "contenu": "La caténaire est sous tension en permanence, 25 kV : approche interdite à moins de 3 m sans consignation ; un arc peut jaillir à distance. Monter sur un wagon sous caténaire est mortel.\n\nLe troisième rail des métros est accessible au sol : ne jamais descendre sur les voies.\n\nTravaux : consignation de la caténaire par les agents habilités, mise à la terre par perches, habilitations spécifiques (ferroviaire) en plus de la NF C 18-510.\n\nLes lignes électriques aériennes qui croisent les voies obéissent aux mêmes distances.",
+          "image": "securite_ferroviaire.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6701",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Le courant d'un train revient…",
+          "reponses": [
+            "par la caténaire",
+            "par les rails",
+            "par l'air",
+            "par le sol seulement"
+          ],
+          "bonne": 1,
+          "explication": "Rails = conducteur de retour."
+        },
+        {
+          "id": "q6702",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Les deux systèmes de traction en France ?",
+          "reponses": [
+            "12 V et 230 V",
+            "1 500 V continu et 25 kV 50 Hz",
+            "400 V et 20 kV",
+            "750 V et 3 kV"
+          ],
+          "bonne": 1,
+          "explication": "Locomotives bicourant."
+        },
+        {
+          "id": "q6703",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Les lignes à grande vitesse sont en…",
+          "reponses": [
+            "1 500 V continu",
+            "25 kV alternatif",
+            "750 V",
+            "230 V"
+          ],
+          "bonne": 1,
+          "explication": "Puissance et sous-stations espacées."
+        },
+        {
+          "id": "q6704",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Puissance d'un TGV en pointe ?",
+          "reponses": [
+            "8 kW",
+            "8 à 12 MW",
+            "800 W",
+            "8 GW"
+          ],
+          "bonne": 1,
+          "explication": "Autant qu'une petite ville."
+        },
+        {
+          "id": "q6705",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Le métro parisien est alimenté par…",
+          "reponses": [
+            "une caténaire 25 kV",
+            "un troisième rail 750 V continu",
+            "des batteries",
+            "le sol seulement"
+          ],
+          "bonne": 1,
+          "explication": "Accessible au sol : danger."
+        },
+        {
+          "id": "q6706",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Le freinage par récupération…",
+          "reponses": [
+            "chauffe les rails",
+            "renvoie du courant dans la caténaire",
+            "use les freins",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Économie d'énergie."
+        },
+        {
+          "id": "q6707",
+          "fiche_id": "traction",
+          "type": "qcm",
+          "enonce": "Une locomotive bicourant…",
+          "reponses": [
+            "roule au diesel",
+            "fonctionne sous 1 500 V continu et 25 kV alternatif",
+            "a deux moteurs",
+            "a deux pantographes seulement"
+          ],
+          "bonne": 1,
+          "explication": "Change de système en roulant."
+        },
+        {
+          "id": "q6708",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "Une sous-station 25 kV est alimentée en…",
+          "reponses": [
+            "230 V",
+            "63 ou 225 kV",
+            "1 500 V",
+            "12 V"
+          ],
+          "bonne": 1,
+          "explication": "Depuis le réseau de transport."
+        },
+        {
+          "id": "q6709",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "Espacement des sous-stations en 25 kV ?",
+          "reponses": [
+            "1 km",
+            "40 à 60 km",
+            "500 km",
+            "100 m"
+          ],
+          "bonne": 1,
+          "explication": "10 à 15 km en 1 500 V."
+        },
+        {
+          "id": "q6710",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "Le circuit de voie sert à…",
+          "reponses": [
+            "alimenter le train",
+            "détecter la présence d'un train par les rails",
+            "chauffer les rails",
+            "éclairer"
+          ],
+          "bonne": 1,
+          "explication": "Base de la signalisation."
+        },
+        {
+          "id": "q6711",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "La sécurité intrinsèque en signalisation signifie…",
+          "reponses": [
+            "rien ne tombe en panne",
+            "un défaut met le signal au rouge",
+            "les signaux sont verts",
+            "les trains s'arrêtent seuls"
+          ],
+          "bonne": 1,
+          "explication": "Défaillance vers l'état sûr."
+        },
+        {
+          "id": "q6712",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "La signalisation fonctionne en…",
+          "reponses": [
+            "25 kV",
+            "basse tension et courants faibles",
+            "1 500 V",
+            "400 kV"
+          ],
+          "bonne": 1,
+          "explication": "Armoires et postes d'aiguillage."
+        },
+        {
+          "id": "q6713",
+          "fiche_id": "sous_stations",
+          "type": "qcm",
+          "enonce": "En 1 500 V continu, la sous-station…",
+          "reponses": [
+            "transforme",
+            "redresse le courant alternatif du réseau",
+            "stocke",
+            "pompe"
+          ],
+          "bonne": 1,
+          "explication": "Redresseurs de forte puissance."
+        },
+        {
+          "id": "q6714",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "Distance minimale d'une caténaire 25 kV sans consignation ?",
+          "reponses": [
+            "30 cm",
+            "3 m",
+            "10 m",
+            "50 cm"
+          ],
+          "bonne": 1,
+          "explication": "Un arc peut jaillir à distance."
+        },
+        {
+          "id": "q6715",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "Monter sur un wagon sous caténaire…",
+          "reponses": [
+            "est sans risque",
+            "est mortel : amorçage à distance",
+            "est autorisé la nuit",
+            "demande un B0"
+          ],
+          "bonne": 1,
+          "explication": "Accidents fréquents."
+        },
+        {
+          "id": "q6716",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "Descendre sur les voies d'un métro…",
+          "reponses": [
+            "est sans danger",
+            "expose au troisième rail sous tension",
+            "est autorisé pour ramasser un objet",
+            "est recommandé"
+          ],
+          "bonne": 1,
+          "explication": "Et aux trains."
+        },
+        {
+          "id": "q6717",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "La consignation d'une caténaire comprend…",
+          "reponses": [
+            "un cadenas seulement",
+            "coupure, VAT et mise à la terre par perches",
+            "un panneau",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Par des agents habilités."
+        },
+        {
+          "id": "q6718",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "Travailler près des voies demande…",
+          "reponses": [
+            "une habilitation électrique seulement",
+            "des habilitations ferroviaires spécifiques en plus",
+            "rien",
+            "un permis de train"
+          ],
+          "bonne": 1,
+          "explication": "Risques électriques et de circulation."
+        },
+        {
+          "id": "q6719",
+          "fiche_id": "securite_ferroviaire",
+          "type": "qcm",
+          "enonce": "La caténaire est sous tension…",
+          "reponses": [
+            "seulement au passage des trains",
+            "en permanence",
+            "la nuit seulement",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "On ne présume jamais."
+        },
+        {
+          "id": "q6720",
+          "fiche_id": "traction",
+          "type": "ordre",
+          "enonce": "Du réseau au moteur du train : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Réseau de transport 63 ou 225 kV",
+            "Sous-station : transformation en 25 kV",
+            "Caténaire",
+            "Pantographe et transformateur embarqué",
+            "Moteurs de traction, retour par les rails"
+          ],
+          "explication": "Transport, sous-station, caténaire, train, rails."
+        }
+      ],
+      "ordre": 21
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 17,
+      "ordre": 22,
       "fiches": [
         {
           "id": "multimetre",
@@ -5234,7 +6774,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 18,
+      "ordre": 23,
       "fiches": [
         {
           "id": "tableau",
@@ -5844,7 +7384,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 19
+      "ordre": 24
     },
     {
       "id": "cablage",
@@ -6152,7 +7692,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 20
+      "ordre": 25
     },
     {
       "id": "parafoudre",
@@ -6459,7 +7999,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 21
+      "ordre": 26
     },
     {
       "id": "locaux_risques",
@@ -6766,7 +8306,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 22
+      "ordre": 27
     },
     {
       "id": "photovoltaique",
@@ -7073,7 +8613,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 23
+      "ordre": 28
     },
     {
       "id": "chauffage",
@@ -7380,7 +8920,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 24
+      "ordre": 29
     },
     {
       "id": "domotique",
@@ -7687,7 +9227,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 25
+      "ordre": 30
     },
     {
       "id": "vehicule_electrique",
@@ -7995,7 +9535,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 26
+      "ordre": 31
     },
     {
       "id": "plaque_signaletique",
@@ -8302,7 +9842,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 27
+      "ordre": 32
     },
     {
       "id": "ventilation",
@@ -8610,7 +10150,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 28
+      "ordre": 33
     },
     {
       "id": "lire_tableau",
@@ -8917,7 +10457,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 29
+      "ordre": 34
     },
     {
       "id": "depannage",
@@ -9225,7 +10765,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 30
+      "ordre": 35
     },
     {
       "id": "courants_faibles",
@@ -9533,7 +11073,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 31
+      "ordre": 36
     },
     {
       "id": "eclairage_exterieur",
@@ -9841,7 +11381,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 32
+      "ordre": 37
     },
     {
       "id": "alarme",
@@ -10149,7 +11689,7 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 33
+      "ordre": 38
     },
     {
       "id": "mesures_avancees",
@@ -10457,7 +11997,7 @@
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
         }
       ],
-      "ordre": 34
+      "ordre": 39
     },
     {
       "id": "renovation",
@@ -10765,7 +12305,7 @@
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
         }
       ],
-      "ordre": 35
+      "ordre": 40
     },
     {
       "id": "secours_energie",
@@ -11073,7 +12613,7 @@
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
         }
       ],
-      "ordre": 36
+      "ordre": 41
     },
     {
       "id": "camping_car_bateau",
@@ -11381,7 +12921,7 @@
           "explication": "Hors tension, brancher, enclencher, tester."
         }
       ],
-      "ordre": 37
+      "ordre": 42
     },
     {
       "id": "autoconsommation",
@@ -11688,7 +13228,7 @@
           "explication": "Mesurer, déplacer, router, stocker."
         }
       ],
-      "ordre": 38
+      "ordre": 43
     },
     {
       "id": "tertiaire_erp",
@@ -11996,7 +13536,7 @@
           "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
         }
       ],
-      "ordre": 39
+      "ordre": 44
     },
     {
       "id": "industrie",
@@ -12304,7 +13844,7 @@
           "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
         }
       ],
-      "ordre": 40
+      "ordre": 45
     },
     {
       "id": "variateurs",
@@ -12612,7 +14152,7 @@
           "explication": "Filtre, câble, blindage, séparation, réglages."
         }
       ],
-      "ordre": 41
+      "ordre": 46
     },
     {
       "id": "eclairage_public",
@@ -12920,7 +14460,7 @@
           "explication": "Baliser, couper, vérifier, intervenir, essayer."
         }
       ],
-      "ordre": 42
+      "ordre": 47
     },
     {
       "id": "portails_ascenseurs",
@@ -13228,7 +14768,7 @@
           "explication": "Alimentation, mécanique, sécurités, réglages, test."
         }
       ],
-      "ordre": 43
+      "ordre": 48
     },
     {
       "id": "pompes_eau",
@@ -13536,12 +15076,1244 @@
           "explication": "Protection, câble, raccordement, sécurité, essai."
         }
       ],
-      "ordre": 44
+      "ordre": 49
+    },
+    {
+      "id": "cabler_tableau",
+      "titre": "Câbler un tableau pas à pas",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "preparation_tableau",
+          "titre": "Préparer",
+          "contenu": "Lister les circuits : éclairage, prises, spécialisés, chauffage, extérieur. Attribuer section et calibre à chacun. Répartir sur les différentiels (type A pour plaque et lave-linge, les autres AC ou A).\n\nChoisir le coffret : nombre de rangées, 20 % de réserve. Prévoir peignes, borniers, étiquettes, schéma.\n\nOutils : tournevis isolés, pince à dénuder, pince coupante, pince à embouts, niveau, VAT. Hors tension : disjoncteur de branchement coupé et vérifié.",
+          "image": "preparation_tableau.png"
+        },
+        {
+          "id": "montage",
+          "titre": "Monter et raccorder",
+          "contenu": "1. Fixer le coffret, poser les rails et les borniers de terre.\n2. Clipser les appareils rangée par rangée : différentiel en tête, puis disjoncteurs par ordre de calibre.\n3. Peignes d'alimentation phase et neutre sur chaque rangée ; alimentation des différentiels depuis le disjoncteur de branchement en 10 ou 16 mm².\n4. Raccorder les circuits : phase et neutre sur le disjoncteur, terre sur le bornier. Fils rigides ou embouts sur le souple, dénudage 10 à 12 mm, serrage au couple.\n5. Repérer : étiquettes, numérotation, schéma dans la porte.\n\nOn range les fils dans les goulottes, sans tension mécanique sur les bornes.",
+          "image": "montage.png"
+        },
+        {
+          "id": "controle_tableau",
+          "titre": "Contrôler avant de mettre sous tension",
+          "contenu": "Vérification visuelle : aucun cuivre apparent, tous les fils serrés (tirer doucement), terre continue, peignes bien enfoncés et capots posés.\n\nMesures hors tension : continuité des terres, isolement entre conducteurs et terre.\n\nMise sous tension progressive : disjoncteur de branchement, différentiels, puis disjoncteurs un par un en surveillant. Test des différentiels au bouton T puis au contrôleur.\n\nRepasser une vérification de serrage après quelques semaines : le cuivre flue et les bornes se desserrent.",
+          "image": "controle_tableau.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6201",
+          "fiche_id": "preparation_tableau",
+          "type": "qcm",
+          "enonce": "Première étape pour câbler un tableau ?",
+          "reponses": [
+            "Acheter le coffret",
+            "Lister les circuits avec section et calibre",
+            "Serrer les vis",
+            "Tester"
+          ],
+          "bonne": 1,
+          "explication": "Le plan avant les mains."
+        },
+        {
+          "id": "q6202",
+          "fiche_id": "preparation_tableau",
+          "type": "qcm",
+          "enonce": "La réserve à prévoir dans le coffret ?",
+          "reponses": [
+            "0 %",
+            "20 %",
+            "50 %",
+            "5 %"
+          ],
+          "bonne": 1,
+          "explication": "Pour les extensions."
+        },
+        {
+          "id": "q6203",
+          "fiche_id": "preparation_tableau",
+          "type": "qcm",
+          "enonce": "Plaque et lave-linge vont sur un différentiel…",
+          "reponses": [
+            "AC",
+            "de type A",
+            "sans différentiel",
+            "de 300 mA"
+          ],
+          "bonne": 1,
+          "explication": "Courants de défaut à composante continue."
+        },
+        {
+          "id": "q6204",
+          "fiche_id": "preparation_tableau",
+          "type": "qcm",
+          "enonce": "Avant de toucher au tableau, on…",
+          "reponses": [
+            "coupe l'interrupteur de la pièce",
+            "coupe le disjoncteur de branchement et on vérifie l'absence de tension",
+            "enfile des gants en tissu",
+            "travaille vite"
+          ],
+          "bonne": 1,
+          "explication": "Toujours."
+        },
+        {
+          "id": "q6205",
+          "fiche_id": "preparation_tableau",
+          "type": "qcm",
+          "enonce": "L'outil pour préparer un fil souple ?",
+          "reponses": [
+            "Un marteau",
+            "Une pince à embouts",
+            "Une scie",
+            "Une lime"
+          ],
+          "bonne": 1,
+          "explication": "Embout serti."
+        },
+        {
+          "id": "q6206",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Dans une rangée, on place en premier…",
+          "reponses": [
+            "le plus gros disjoncteur",
+            "l'interrupteur différentiel",
+            "le parafoudre",
+            "le bornier"
+          ],
+          "bonne": 1,
+          "explication": "Il protège la rangée."
+        },
+        {
+          "id": "q6207",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Le peigne remplace…",
+          "reponses": [
+            "les disjoncteurs",
+            "les ponts en fil entre appareils",
+            "le différentiel",
+            "les étiquettes"
+          ],
+          "bonne": 1,
+          "explication": "Phase et neutre distribués proprement."
+        },
+        {
+          "id": "q6208",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Section de l'alimentation des différentiels depuis le disjoncteur de branchement ?",
+          "reponses": [
+            "1,5 mm²",
+            "10 ou 16 mm²",
+            "2,5 mm²",
+            "35 mm²"
+          ],
+          "bonne": 1,
+          "explication": "Selon la puissance souscrite."
+        },
+        {
+          "id": "q6209",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Un fil souple dans une borne à vis…",
+          "reponses": [
+            "se met tel quel",
+            "reçoit un embout",
+            "se torsade",
+            "se soude"
+          ],
+          "bonne": 1,
+          "explication": "Contact fiable."
+        },
+        {
+          "id": "q6210",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "La terre d'un circuit se raccorde…",
+          "reponses": [
+            "sur le disjoncteur",
+            "sur le bornier de terre",
+            "sur le neutre",
+            "nulle part"
+          ],
+          "bonne": 1,
+          "explication": "Bornier relié à la prise de terre."
+        },
+        {
+          "id": "q6211",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Les fils dans le tableau sont…",
+          "reponses": [
+            "tendus sur les bornes",
+            "rangés en goulottes, sans tension mécanique",
+            "enroulés",
+            "laissés libres"
+          ],
+          "bonne": 1,
+          "explication": "Une borne tirée se desserre."
+        },
+        {
+          "id": "q6212",
+          "fiche_id": "montage",
+          "type": "qcm",
+          "enonce": "Les disjoncteurs d'une rangée sont classés…",
+          "reponses": [
+            "au hasard",
+            "par ordre de calibre",
+            "par couleur",
+            "par prix"
+          ],
+          "bonne": 1,
+          "explication": "Lisibilité."
+        },
+        {
+          "id": "q6213",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Avant la mise sous tension, on vérifie…",
+          "reponses": [
+            "la couleur du coffret",
+            "serrage, cuivre apparent, terres, peignes",
+            "le prix",
+            "l'heure"
+          ],
+          "bonne": 1,
+          "explication": "Tirer doucement sur chaque fil."
+        },
+        {
+          "id": "q6214",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Mesure hors tension avant mise en service ?",
+          "reponses": [
+            "Puissance",
+            "Continuité des terres et isolement",
+            "Fréquence",
+            "Courant"
+          ],
+          "bonne": 1,
+          "explication": "Contrôleur d'installation."
+        },
+        {
+          "id": "q6215",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "La mise sous tension se fait…",
+          "reponses": [
+            "tout d'un coup",
+            "progressivement, disjoncteur par disjoncteur",
+            "la nuit",
+            "sans regarder"
+          ],
+          "bonne": 1,
+          "explication": "On surveille chaque circuit."
+        },
+        {
+          "id": "q6216",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Le test des différentiels se fait…",
+          "reponses": [
+            "au bouton T seulement",
+            "au bouton T puis au contrôleur",
+            "jamais",
+            "à la main"
+          ],
+          "bonne": 1,
+          "explication": "Mécanique puis sensibilité réelle."
+        },
+        {
+          "id": "q6217",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Pourquoi resserrer les bornes après quelques semaines ?",
+          "reponses": [
+            "Par habitude",
+            "Le cuivre flue et les bornes se desserrent",
+            "Pour la couleur",
+            "C'est inutile"
+          ],
+          "bonne": 1,
+          "explication": "Surtout sur les fortes sections."
+        },
+        {
+          "id": "q6218",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Un peigne mal enfoncé provoque…",
+          "reponses": [
+            "rien",
+            "un échauffement et un mauvais contact",
+            "une économie",
+            "un meilleur contact"
+          ],
+          "bonne": 1,
+          "explication": "Point chaud dans le tableau."
+        },
+        {
+          "id": "q6219",
+          "fiche_id": "controle_tableau",
+          "type": "qcm",
+          "enonce": "Le schéma du tableau se place…",
+          "reponses": [
+            "dans un tiroir",
+            "dans la porte du coffret",
+            "chez le voisin",
+            "nulle part"
+          ],
+          "bonne": 1,
+          "explication": "Accessible au prochain intervenant."
+        },
+        {
+          "id": "q6220",
+          "fiche_id": "montage",
+          "type": "ordre",
+          "enonce": "Câbler un tableau : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Lister et répartir les circuits",
+            "Fixer le coffret, rails et borniers",
+            "Clipser différentiels et disjoncteurs, poser les peignes",
+            "Raccorder les circuits et repérer",
+            "Contrôler hors tension puis mettre sous tension progressivement"
+          ],
+          "explication": "Préparer, monter, équiper, raccorder, contrôler."
+        }
+      ],
+      "ordre": 50
+    },
+    {
+      "id": "schemas_industriels",
+      "titre": "Lire un schéma industriel",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "organisation_schema",
+          "titre": "Comment un schéma est organisé",
+          "contenu": "Un dossier de schémas comporte des folios numérotés : puissance, commande, automate, borniers, implantation de l'armoire.\n\nChaque folio est quadrillé en colonnes ; un appareil est repéré par son nom (KM1) et sa position (folio / colonne). Les contacts d'un contacteur sont référencés vers sa bobine et inversement.\n\nRepères normalisés : Q disjoncteur ou sectionneur, F protection (fusible, relais thermique), KM contacteur, KA relais auxiliaire, S bouton ou capteur, H voyant, M moteur, T transformateur, X bornier.",
+          "image": "organisation_schema.png"
+        },
+        {
+          "id": "puissance_commande",
+          "titre": "Puissance et commande",
+          "contenu": "Folio de puissance : arrivée triphasée, sectionneur Q1, protections, contacteurs KM, relais thermiques F, moteurs M. Traits épais.\n\nFolio de commande : alimentation 24 V ou 230 V via transformateur T1, arrêt d'urgence, boutons S1 (arrêt) et S2 (marche), contacts des capteurs, bobines KM1, voyants H1. Traits fins.\n\nLecture : on suit le courant de haut en bas dans chaque branche. Une bobine est alimentée quand tous les contacts de sa branche sont fermés. Le contact d'auto-maintien KM1 en parallèle de S2 garde la bobine alimentée après relâchement.",
+          "image": "puissance_commande.png"
+        },
+        {
+          "id": "depanner_schema",
+          "titre": "Dépanner avec le schéma",
+          "contenu": "Symptôme : le moteur ne démarre pas. On suit le folio de commande : la bobine KM1 est-elle alimentée ? Sinon, quel contact est ouvert ? Arrêt d'urgence enclenché, relais thermique déclenché (contact F1 ouvert), capteur de sécurité, bouton défectueux.\n\nMesures : tension aux bornes de la bobine, continuité des contacts hors tension, état des voyants.\n\nLes repères de borniers (X1:12) permettent de retrouver le fil physique. On note ce qu'on modifie et on met le schéma à jour : un schéma faux est pire qu'un schéma absent.",
+          "image": "depanner_schema.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6301",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "Un dossier de schémas est organisé en…",
+          "reponses": [
+            "pages au hasard",
+            "folios numérotés : puissance, commande, automate, borniers",
+            "une seule feuille",
+            "photos"
+          ],
+          "bonne": 1,
+          "explication": "Chaque folio a un rôle."
+        },
+        {
+          "id": "q6302",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "KM désigne…",
+          "reponses": [
+            "un moteur",
+            "un contacteur",
+            "un capteur",
+            "un voyant"
+          ],
+          "bonne": 1,
+          "explication": "KM1, KM2…"
+        },
+        {
+          "id": "q6303",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "F désigne…",
+          "reponses": [
+            "un fusible ou un relais thermique",
+            "un moteur",
+            "une lampe",
+            "un bornier"
+          ],
+          "bonne": 0,
+          "explication": "Protection."
+        },
+        {
+          "id": "q6304",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "S désigne…",
+          "reponses": [
+            "un sectionneur",
+            "un bouton ou un capteur",
+            "une sortie",
+            "un schéma"
+          ],
+          "bonne": 1,
+          "explication": "S1 arrêt, S2 marche…"
+        },
+        {
+          "id": "q6305",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "H désigne…",
+          "reponses": [
+            "une haute tension",
+            "un voyant",
+            "un moteur",
+            "un relais"
+          ],
+          "bonne": 1,
+          "explication": "H1, H2 : signalisation."
+        },
+        {
+          "id": "q6306",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "X1:12 désigne…",
+          "reponses": [
+            "un moteur",
+            "la borne 12 du bornier X1",
+            "le folio 12",
+            "un câble de 12 mm²"
+          ],
+          "bonne": 1,
+          "explication": "Repère physique."
+        },
+        {
+          "id": "q6307",
+          "fiche_id": "organisation_schema",
+          "type": "qcm",
+          "enonce": "Les contacts d'un contacteur sont référencés…",
+          "reponses": [
+            "nulle part",
+            "vers sa bobine, folio et colonne",
+            "par couleur",
+            "par prix"
+          ],
+          "bonne": 1,
+          "explication": "On retrouve où ils sont utilisés."
+        },
+        {
+          "id": "q6308",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "Le folio de puissance est dessiné en…",
+          "reponses": [
+            "traits fins",
+            "traits épais",
+            "pointillés",
+            "rouge"
+          ],
+          "bonne": 1,
+          "explication": "La commande en traits fins."
+        },
+        {
+          "id": "q6309",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "La commande est souvent alimentée en…",
+          "reponses": [
+            "400 V",
+            "24 V ou 230 V via un transformateur T1",
+            "12 kV",
+            "continu 400 V"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité et isolement."
+        },
+        {
+          "id": "q6310",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "Une bobine est alimentée quand…",
+          "reponses": [
+            "un seul contact est fermé",
+            "tous les contacts de sa branche sont fermés",
+            "le moteur tourne",
+            "le voyant est allumé"
+          ],
+          "bonne": 1,
+          "explication": "Lecture en série."
+        },
+        {
+          "id": "q6311",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "Le contact d'auto-maintien est…",
+          "reponses": [
+            "en série avec S2",
+            "en parallèle du bouton marche S2",
+            "dans la puissance",
+            "un voyant"
+          ],
+          "bonne": 1,
+          "explication": "Il remplace le doigt sur le bouton."
+        },
+        {
+          "id": "q6312",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "On lit un schéma de commande…",
+          "reponses": [
+            "de droite à gauche",
+            "de haut en bas dans chaque branche",
+            "en diagonale",
+            "au hasard"
+          ],
+          "bonne": 1,
+          "explication": "Le courant descend."
+        },
+        {
+          "id": "q6313",
+          "fiche_id": "puissance_commande",
+          "type": "qcm",
+          "enonce": "L'arrêt d'urgence est placé…",
+          "reponses": [
+            "en parallèle",
+            "en série, en tête de la commande",
+            "dans la puissance seulement",
+            "nulle part"
+          ],
+          "bonne": 1,
+          "explication": "Il coupe tout."
+        },
+        {
+          "id": "q6314",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "Le moteur ne démarre pas. On vérifie d'abord…",
+          "reponses": [
+            "le moteur",
+            "si la bobine KM1 est alimentée",
+            "la couleur des fils",
+            "le prix"
+          ],
+          "bonne": 1,
+          "explication": "Puis quel contact est ouvert."
+        },
+        {
+          "id": "q6315",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "Cause fréquente : le contact F1 ouvert signifie…",
+          "reponses": [
+            "le voyant est grillé",
+            "le relais thermique a déclenché",
+            "le moteur est neuf",
+            "le schéma est faux"
+          ],
+          "bonne": 1,
+          "explication": "Surcharge du moteur."
+        },
+        {
+          "id": "q6316",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "La continuité des contacts se mesure…",
+          "reponses": [
+            "sous tension",
+            "hors tension",
+            "en 400 V",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Bip = contact fermé."
+        },
+        {
+          "id": "q6317",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "Après une modification, on…",
+          "reponses": [
+            "oublie",
+            "met le schéma à jour",
+            "cache le schéma",
+            "recommence tout"
+          ],
+          "bonne": 1,
+          "explication": "Un schéma faux est pire qu'absent."
+        },
+        {
+          "id": "q6318",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "Les voyants servent au dépannage car…",
+          "reponses": [
+            "ils décorent",
+            "ils indiquent l'état des circuits sans mesurer",
+            "ils chauffent",
+            "ils coupent"
+          ],
+          "bonne": 1,
+          "explication": "Premier indice."
+        },
+        {
+          "id": "q6319",
+          "fiche_id": "depanner_schema",
+          "type": "qcm",
+          "enonce": "Tension aux bornes de la bobine KM1 présente mais le contacteur ne colle pas : cause ?",
+          "reponses": [
+            "Bouton S2",
+            "Bobine grillée ou mécanique bloquée",
+            "Arrêt d'urgence",
+            "Fusible amont"
+          ],
+          "bonne": 1,
+          "explication": "La commande est bonne, l'organe est en cause."
+        },
+        {
+          "id": "q6320",
+          "fiche_id": "depanner_schema",
+          "type": "ordre",
+          "enonce": "Dépanner « le moteur ne démarre pas » : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Lire le folio de commande de KM1",
+            "Vérifier arrêt d'urgence et relais thermique",
+            "Mesurer la tension à la bobine",
+            "Contrôler les contacts ouverts hors tension",
+            "Réparer et mettre le schéma à jour"
+          ],
+          "explication": "Lire, vérifier les évidences, mesurer, contrôler, réparer."
+        }
+      ],
+      "ordre": 51
+    },
+    {
+      "id": "soudure",
+      "titre": "Soudure à l'arc et sécurité",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "procedes",
+          "titre": "Les procédés",
+          "contenu": "La soudure à l'arc utilise un arc électrique entre une électrode et la pièce : température de 3 000 à 6 000 °C.\n\n• Électrode enrobée (MMA) : simple, chantier, extérieur.\n• MIG-MAG : fil fusible et gaz de protection, rapide, atelier.\n• TIG : électrode de tungstène et gaz, précis, inox, aluminium.\n\nLe poste : un transformateur ou un onduleur qui délivre 20 à 400 A sous 20 à 40 V en soudage, avec une tension à vide de 50 à 100 V. Les postes inverter sont légers et régulés.",
+          "image": "procedes.png"
+        },
+        {
+          "id": "risques_soudure",
+          "titre": "Les risques",
+          "contenu": "Électriques : tension à vide jusqu'à 100 V, dangereuse en milieu humide ou conducteur. Le retour de courant doit être fixé au plus près de la pièce, sinon le courant cherche un chemin : par la terre, par les roulements d'une machine, par le corps.\n\nRayonnement : UV et infrarouge, coup d'arc aux yeux (kératite), brûlures de peau. Fumées : métaux, ozone, gaz.\n\nIncendie : projections jusqu'à plusieurs mètres, permis de feu en milieu inflammable. Bouteilles de gaz : fixées, protégées.\n\nEn milieu conducteur ou exigu : poste à tension à vide réduite (marquage S), tapis isolant, jamais de contact peau-pièce.",
+          "image": "risques_soudure.png"
+        },
+        {
+          "id": "alimentation_soudure",
+          "titre": "Alimenter un poste",
+          "contenu": "Un poste MMA de 160 A sur 230 V appelle 20 à 30 A en pointe : prise 32 A ou circuit dédié 16 A avec disjoncteur courbe D, câble de forte section, rallonge courte et déroulée.\n\nLes gros postes sont triphasés. Protection différentielle 30 mA, mais les postes inverter peuvent la faire déclencher (courants de fuite HF) : différentiel adapté (type A ou F).\n\nEPI : masque à teinte automatique, gants de soudeur, tablier, chaussures montantes, vêtements coton ou ignifugés, protection respiratoire ou aspiration des fumées.",
+          "image": "alimentation_soudure.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6501",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "La soudure à l'arc chauffe à…",
+          "reponses": [
+            "300 °C",
+            "3 000 à 6 000 °C",
+            "100 °C",
+            "30 000 °C"
+          ],
+          "bonne": 1,
+          "explication": "Fusion du métal."
+        },
+        {
+          "id": "q6502",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "Le procédé MMA utilise…",
+          "reponses": [
+            "un fil et du gaz",
+            "une électrode enrobée",
+            "une électrode de tungstène",
+            "un laser"
+          ],
+          "bonne": 1,
+          "explication": "Le plus simple, chantier."
+        },
+        {
+          "id": "q6503",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "Le TIG utilise…",
+          "reponses": [
+            "une électrode enrobée",
+            "une électrode de tungstène et du gaz",
+            "un fil fusible",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Précis, inox, aluminium."
+        },
+        {
+          "id": "q6504",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "La tension à vide d'un poste est de…",
+          "reponses": [
+            "5 V",
+            "50 à 100 V",
+            "230 V",
+            "1 000 V"
+          ],
+          "bonne": 1,
+          "explication": "Dangereuse en milieu humide."
+        },
+        {
+          "id": "q6505",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "Le courant de soudage va de…",
+          "reponses": [
+            "1 à 5 A",
+            "20 à 400 A",
+            "1 000 à 5 000 A",
+            "0,1 à 1 A"
+          ],
+          "bonne": 1,
+          "explication": "Sous 20 à 40 V."
+        },
+        {
+          "id": "q6506",
+          "fiche_id": "procedes",
+          "type": "qcm",
+          "enonce": "Un poste inverter est…",
+          "reponses": [
+            "lourd",
+            "léger et régulé électroniquement",
+            "interdit",
+            "à essence"
+          ],
+          "bonne": 1,
+          "explication": "Électronique de puissance."
+        },
+        {
+          "id": "q6507",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "La pince de masse (retour) se fixe…",
+          "reponses": [
+            "au sol",
+            "au plus près de la pièce",
+            "sur la table quelconque",
+            "sur le soudeur"
+          ],
+          "bonne": 1,
+          "explication": "Sinon le courant cherche un autre chemin."
+        },
+        {
+          "id": "q6508",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "Un retour de courant mal placé peut…",
+          "reponses": [
+            "faire de belles soudures",
+            "détruire les roulements d'une machine ou passer par le corps",
+            "refroidir",
+            "économiser"
+          ],
+          "bonne": 1,
+          "explication": "Le courant passe par où il peut."
+        },
+        {
+          "id": "q6509",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "Le coup d'arc, c'est…",
+          "reponses": [
+            "un choc électrique",
+            "une brûlure des yeux par les UV",
+            "une projection",
+            "un bruit"
+          ],
+          "bonne": 1,
+          "explication": "Kératite, très douloureuse, quelques heures après."
+        },
+        {
+          "id": "q6510",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "En milieu conducteur ou exigu, on utilise…",
+          "reponses": [
+            "un poste ordinaire",
+            "un poste à tension à vide réduite (marquage S) et un tapis isolant",
+            "une rallonge",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Peau-pièce : jamais de contact."
+        },
+        {
+          "id": "q6511",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "Les projections de soudure portent…",
+          "reponses": [
+            "à 10 cm",
+            "à plusieurs mètres : permis de feu en zone inflammable",
+            "nulle part",
+            "à 1 m"
+          ],
+          "bonne": 1,
+          "explication": "Incendie différé possible."
+        },
+        {
+          "id": "q6512",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "Les fumées de soudure contiennent…",
+          "reponses": [
+            "de l'oxygène pur",
+            "métaux, ozone, gaz toxiques",
+            "de l'eau",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Aspiration ou protection respiratoire."
+        },
+        {
+          "id": "q6513",
+          "fiche_id": "risques_soudure",
+          "type": "qcm",
+          "enonce": "Les bouteilles de gaz sont…",
+          "reponses": [
+            "couchées",
+            "fixées debout et protégées",
+            "dans le coffre",
+            "au soleil"
+          ],
+          "bonne": 1,
+          "explication": "Chute = danger."
+        },
+        {
+          "id": "q6514",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Un poste MMA 160 A sur 230 V appelle en pointe…",
+          "reponses": [
+            "2 A",
+            "20 à 30 A",
+            "100 A",
+            "0,5 A"
+          ],
+          "bonne": 1,
+          "explication": "Prise 32 A ou circuit dédié courbe D."
+        },
+        {
+          "id": "q6515",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Une rallonge pour poste à souder est…",
+          "reponses": [
+            "longue et enroulée",
+            "courte, déroulée, de forte section",
+            "fine",
+            "interdite"
+          ],
+          "bonne": 1,
+          "explication": "Chute de tension et chauffe."
+        },
+        {
+          "id": "q6516",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Un poste inverter peut faire déclencher…",
+          "reponses": [
+            "le compteur",
+            "le différentiel AC : prendre un type A ou F",
+            "les lampes",
+            "le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Courants de fuite haute fréquence."
+        },
+        {
+          "id": "q6517",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Les gros postes sont…",
+          "reponses": [
+            "en 12 V",
+            "triphasés",
+            "à piles",
+            "à essence"
+          ],
+          "bonne": 1,
+          "explication": "Puissance."
+        },
+        {
+          "id": "q6518",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Le masque à teinte automatique…",
+          "reponses": [
+            "est décoratif",
+            "s'assombrit à l'amorçage de l'arc",
+            "chauffe",
+            "filtre les fumées"
+          ],
+          "bonne": 1,
+          "explication": "Protection des yeux."
+        },
+        {
+          "id": "q6519",
+          "fiche_id": "alimentation_soudure",
+          "type": "qcm",
+          "enonce": "Vêtements pour souder ?",
+          "reponses": [
+            "Synthétique",
+            "Coton épais ou ignifugé, gants et tablier de soudeur",
+            "T-shirt",
+            "Short"
+          ],
+          "bonne": 1,
+          "explication": "Projections et UV."
+        },
+        {
+          "id": "q6520",
+          "fiche_id": "risques_soudure",
+          "type": "ordre",
+          "enonce": "Préparer une soudure en sécurité : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Écarter les matières inflammables, permis de feu si besoin",
+            "Fixer la pince de masse au plus près de la pièce",
+            "Mettre masque, gants, tablier",
+            "Vérifier l'aspiration des fumées",
+            "Amorcer l'arc"
+          ],
+          "explication": "Incendie, retour de courant, EPI, fumées, puis souder."
+        }
+      ],
+      "ordre": 52
+    },
+    {
+      "id": "agriculture",
+      "titre": "Électricité en agriculture",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "batiments_agricoles",
+          "titre": "Bâtiments d'élevage et stockage",
+          "contenu": "Milieux difficiles : humidité, ammoniac corrosif, poussières, rongeurs. Matériel IP44 minimum, souvent IP55 ou IP65, boîtiers en polyester, câbles protégés des rongeurs.\n\nLes animaux sont sensibles aux courants vagabonds : quelques volts entre l'abreuvoir et le sol suffisent à les faire fuir. Liaison équipotentielle de toutes les masses (barrières, mangeoires, abreuvoirs, sol), différentiel 30 mA.\n\nVentilation, traite, alimentation automatique : circuits dédiés et parfois alimentation de secours (groupe) car une panne de ventilation peut tuer un élevage en quelques heures.",
+          "image": "batiments_agricoles.png"
+        },
+        {
+          "id": "clotures",
+          "titre": "Clôtures électriques et irrigation",
+          "contenu": "L'électrificateur de clôture envoie des impulsions de 5 000 à 10 000 V, très brèves et de faible énergie : douloureuses, pas mortelles pour un humain en bonne santé, mais dangereuses pour un cœur fragile ou un enfant pris dans les fils. Panneaux d'avertissement obligatoires au bord des chemins.\n\nJamais de raccordement direct au secteur, jamais deux électrificateurs sur la même clôture.\n\nIrrigation : pompes triphasées de forte puissance, armoires IP65 en plein champ, câbles enterrés, protection contre la foudre. Une puissance souscrite importante, parfois en HTA.",
+          "image": "clotures.png"
+        },
+        {
+          "id": "machines_agricoles",
+          "titre": "Machines et sécurité",
+          "contenu": "Tracteurs et machines : 12 V, avec des courants forts (démarreur 300 A). Court-circuit sur batterie = incendie. Coupe-batterie obligatoire sur les machines récentes.\n\nLignes électriques aériennes dans les champs : les engins hauts (moissonneuses, bennes relevées, tuyaux d'irrigation) accrochent les lignes. Repérer les lignes avant de travailler, respecter les distances.\n\nLocaux de stockage de grains et de foin : poussières inflammables, matériel adapté, propreté des installations, thermographie des armoires.",
+          "image": "machines_agricoles.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6801",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "Indice IP minimal en bâtiment d'élevage ?",
+          "reponses": [
+            "IP20",
+            "IP44, souvent IP55 ou plus",
+            "IP00",
+            "IP10"
+          ],
+          "bonne": 1,
+          "explication": "Humidité, ammoniac, poussières."
+        },
+        {
+          "id": "q6802",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "Les courants vagabonds…",
+          "reponses": [
+            "sont sans effet",
+            "perturbent les animaux dès quelques volts",
+            "chauffent",
+            "sont des harmoniques"
+          ],
+          "bonne": 1,
+          "explication": "Vaches qui refusent l'abreuvoir."
+        },
+        {
+          "id": "q6803",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "Contre les courants vagabonds, on fait…",
+          "reponses": [
+            "rien",
+            "une liaison équipotentielle de toutes les masses et du sol",
+            "une prise de plus",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Barrières, mangeoires, abreuvoirs."
+        },
+        {
+          "id": "q6804",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "Pourquoi un groupe de secours en élevage ?",
+          "reponses": [
+            "Pour la télévision",
+            "Une panne de ventilation peut tuer les animaux en quelques heures",
+            "Pour le prix",
+            "Par tradition"
+          ],
+          "bonne": 1,
+          "explication": "Volailles et porcs surtout."
+        },
+        {
+          "id": "q6805",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "L'ammoniac des bâtiments d'élevage…",
+          "reponses": [
+            "améliore les contacts",
+            "corrode le matériel électrique",
+            "isole",
+            "est sans effet"
+          ],
+          "bonne": 1,
+          "explication": "Boîtiers polyester, connexions protégées."
+        },
+        {
+          "id": "q6806",
+          "fiche_id": "batiments_agricoles",
+          "type": "qcm",
+          "enonce": "Les rongeurs…",
+          "reponses": [
+            "évitent les câbles",
+            "rongent les câbles : protection mécanique",
+            "les réparent",
+            "sont sans effet"
+          ],
+          "bonne": 1,
+          "explication": "Gaines et chemins fermés."
+        },
+        {
+          "id": "q6807",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Tension d'une clôture électrique ?",
+          "reponses": [
+            "12 V",
+            "5 000 à 10 000 V en impulsions brèves",
+            "230 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "Faible énergie."
+        },
+        {
+          "id": "q6808",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Une clôture électrique est-elle mortelle pour un humain ?",
+          "reponses": [
+            "Toujours",
+            "Non en général, mais dangereuse pour un cœur fragile ou un enfant pris dans les fils",
+            "Jamais dangereuse",
+            "Seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Douleur vive."
+        },
+        {
+          "id": "q6809",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Peut-on raccorder une clôture directement au secteur ?",
+          "reponses": [
+            "Oui",
+            "Jamais : électrificateur homologué obligatoire",
+            "Oui en 12 V",
+            "Oui avec un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Le secteur tue."
+        },
+        {
+          "id": "q6810",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Deux électrificateurs sur la même clôture…",
+          "reponses": [
+            "doublent l'efficacité",
+            "sont interdits : impulsions cumulées dangereuses",
+            "sont obligatoires",
+            "sont sans effet"
+          ],
+          "bonne": 1,
+          "explication": "Un seul par clôture."
+        },
+        {
+          "id": "q6811",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Au bord d'un chemin, une clôture électrique doit avoir…",
+          "reponses": [
+            "rien",
+            "des panneaux d'avertissement",
+            "une lumière",
+            "un compteur"
+          ],
+          "bonne": 1,
+          "explication": "Information du public."
+        },
+        {
+          "id": "q6812",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Les pompes d'irrigation sont souvent…",
+          "reponses": [
+            "en 12 V",
+            "triphasées de forte puissance",
+            "à main",
+            "en 230 V monophasé"
+          ],
+          "bonne": 1,
+          "explication": "Armoires IP65 en plein champ."
+        },
+        {
+          "id": "q6813",
+          "fiche_id": "clotures",
+          "type": "qcm",
+          "enonce": "Une installation d'irrigation en plein champ est exposée…",
+          "reponses": [
+            "à rien",
+            "à la foudre : parafoudre et terre",
+            "au vent seulement",
+            "aux poissons"
+          ],
+          "bonne": 1,
+          "explication": "Point haut isolé."
+        },
+        {
+          "id": "q6814",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "Le démarreur d'un tracteur tire…",
+          "reponses": [
+            "3 A",
+            "300 A",
+            "30 mA",
+            "3 000 A"
+          ],
+          "bonne": 1,
+          "explication": "Sous 12 V : câbles énormes."
+        },
+        {
+          "id": "q6815",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "Un court-circuit sur une batterie de tracteur…",
+          "reponses": [
+            "ne fait rien",
+            "peut provoquer un incendie",
+            "recharge",
+            "est utile"
+          ],
+          "bonne": 1,
+          "explication": "Coupe-batterie obligatoire."
+        },
+        {
+          "id": "q6816",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "Une benne relevée sous une ligne aérienne…",
+          "reponses": [
+            "est sans risque",
+            "peut accrocher la ligne : mortel",
+            "améliore le signal",
+            "est autorisée"
+          ],
+          "bonne": 1,
+          "explication": "Repérer les lignes avant."
+        },
+        {
+          "id": "q6817",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "Un tuyau d'irrigation métallique manipulé près d'une ligne…",
+          "reponses": [
+            "est isolant",
+            "peut toucher la ligne et électrocuter",
+            "est sans risque",
+            "est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "Accidents réguliers."
+        },
+        {
+          "id": "q6818",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "Les poussières de grain et de foin sont…",
+          "reponses": [
+            "inertes",
+            "inflammables, voire explosives : matériel adapté",
+            "humides",
+            "isolantes"
+          ],
+          "bonne": 1,
+          "explication": "Comme les silos."
+        },
+        {
+          "id": "q6819",
+          "fiche_id": "machines_agricoles",
+          "type": "qcm",
+          "enonce": "La thermographie des armoires sert à…",
+          "reponses": [
+            "décorer",
+            "repérer les échauffements avant l'incendie",
+            "chauffer",
+            "mesurer la tension"
+          ],
+          "bonne": 1,
+          "explication": "Maintenance préventive."
+        },
+        {
+          "id": "q6820",
+          "fiche_id": "batiments_agricoles",
+          "type": "ordre",
+          "enonce": "Sécuriser un bâtiment d'élevage : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Liaison équipotentielle de toutes les masses et du sol",
+            "Différentiel 30 mA sur tous les circuits",
+            "Matériel IP55, boîtiers polyester",
+            "Protection des câbles contre les rongeurs",
+            "Groupe de secours pour la ventilation"
+          ],
+          "explication": "Équipotentialité, protection des personnes et animaux, matériel, câbles, secours."
+        }
+      ],
+      "ordre": 53
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 45,
+      "ordre": 54,
       "fiches": [
         {
           "id": "dangers",
@@ -13849,7 +16621,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 46,
+      "ordre": 55,
       "fiches": [
         {
           "id": "principe",
@@ -14457,7 +17229,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 47
+      "ordre": 56
     },
     {
       "id": "epi",
@@ -14764,7 +17536,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 48
+      "ordre": 57
     },
     {
       "id": "b0_bs",
@@ -15072,7 +17844,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 49
+      "ordre": 58
     },
     {
       "id": "br",
@@ -15380,7 +18152,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 50
+      "ordre": 59
     },
     {
       "id": "secours",
@@ -15687,7 +18459,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 51
+      "ordre": 60
     },
     {
       "id": "b1_b2",
@@ -15996,7 +18768,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 52
+      "ordre": 61
     },
     {
       "id": "bc",
@@ -16304,7 +19076,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 53
+      "ordre": 62
     },
     {
       "id": "outillage",
@@ -16612,7 +19384,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 54
+      "ordre": 63
     },
     {
       "id": "normes",
@@ -16920,7 +19692,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 55
+      "ordre": 64
     },
     {
       "id": "atex",
@@ -17228,7 +20000,7 @@
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
         }
       ],
-      "ordre": 56
+      "ordre": 65
     },
     {
       "id": "arc_tst",
@@ -17536,7 +20308,7 @@
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
         }
       ],
-      "ordre": 57
+      "ordre": 66
     },
     {
       "id": "haute_tension",
@@ -17844,7 +20616,7 @@
           "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
         }
       ],
-      "ordre": 58
+      "ordre": 67
     },
     {
       "id": "enfants",
@@ -18152,7 +20924,315 @@
           "explication": "Prises, câbles, lampe, appareils, parole."
         }
       ],
-      "ordre": 59
+      "ordre": 68
+    },
+    {
+      "id": "foudre",
+      "titre": "Foudre et paratonnerre",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "phenomene",
+          "titre": "Le phénomène",
+          "contenu": "La foudre est une décharge entre un nuage et le sol : des dizaines de milliers d'ampères pendant quelques microsecondes, des millions de volts. Elle frappe les points hauts et conducteurs.\n\nEn France, 1 à 2 millions d'impacts par an, surtout en été et dans le sud-est et les montagnes.\n\nEffets : incendie, destruction des installations, électrocution par coup direct, par tension de pas (courant qui se répand dans le sol) ou par contact avec un objet frappé.",
+          "image": "phenomene.png"
+        },
+        {
+          "id": "protection_batiment",
+          "titre": "Protéger un bâtiment",
+          "contenu": "Paratonnerre : une pointe captrice en hauteur, reliée à la terre par une descente en cuivre de forte section, avec une prise de terre dédiée. Il capte la foudre et l'écoule au sol sans passer par le bâtiment.\n\nCage maillée ou fils tendus pour les grands bâtiments. Obligatoire pour certains ERP, sites industriels, clochers, silos.\n\nLe parafoudre au tableau protège l'installation intérieure contre la surtension induite. Les deux sont complémentaires : paratonnerre pour la structure, parafoudre pour les appareils.\n\nToutes les terres du bâtiment sont interconnectées (équipotentialité).",
+          "image": "protection_batiment.png"
+        },
+        {
+          "id": "comportement",
+          "titre": "Se protéger pendant l'orage",
+          "contenu": "• Rester à l'abri dans un bâtiment ou une voiture (cage de Faraday), fenêtres fermées.\n• Dehors : s'éloigner des arbres isolés, des pylônes, des clôtures, des sommets ; s'accroupir pieds joints, ne pas s'allonger.\n• Ne pas téléphoner sur ligne fixe, ne pas prendre de bain, débrancher les appareils sensibles.\n• Règle des 30 secondes : moins de 30 s entre l'éclair et le tonnerre, l'orage est à moins de 10 km, on s'abrite ; on attend 30 min après le dernier coup.\n\nTravaux : on arrête les travaux en hauteur et sur les lignes dès que l'orage approche.",
+          "image": "comportement.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6601",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "Le courant d'un coup de foudre est de l'ordre de…",
+          "reponses": [
+            "10 A",
+            "des dizaines de milliers d'ampères",
+            "1 A",
+            "100 A"
+          ],
+          "bonne": 1,
+          "explication": "Pendant quelques microsecondes."
+        },
+        {
+          "id": "q6602",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "La foudre frappe de préférence…",
+          "reponses": [
+            "les creux",
+            "les points hauts et conducteurs",
+            "l'eau seulement",
+            "les voitures"
+          ],
+          "bonne": 1,
+          "explication": "Arbres, pylônes, clochers."
+        },
+        {
+          "id": "q6603",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "La tension de pas, c'est…",
+          "reponses": [
+            "une marche rapide",
+            "la tension entre les deux pieds quand le courant se répand dans le sol",
+            "une norme",
+            "un pas d'électrode"
+          ],
+          "bonne": 1,
+          "explication": "D'où les pieds joints."
+        },
+        {
+          "id": "q6604",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "Nombre d'impacts par an en France ?",
+          "reponses": [
+            "1 000",
+            "1 à 2 millions",
+            "100",
+            "1 milliard"
+          ],
+          "bonne": 1,
+          "explication": "Surtout en été."
+        },
+        {
+          "id": "q6605",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "Effet de la foudre sur une installation non protégée ?",
+          "reponses": [
+            "Aucun",
+            "Surtensions, destruction, incendie",
+            "Meilleur rendement",
+            "Recharge des batteries"
+          ],
+          "bonne": 1,
+          "explication": "D'où parafoudre et paratonnerre."
+        },
+        {
+          "id": "q6606",
+          "fiche_id": "phenomene",
+          "type": "qcm",
+          "enonce": "Peut-on être foudroyé sans coup direct ?",
+          "reponses": [
+            "Non",
+            "Oui, par tension de pas ou contact avec un objet frappé",
+            "Seulement en montagne",
+            "Seulement dans l'eau"
+          ],
+          "bonne": 1,
+          "explication": "La plupart des victimes."
+        },
+        {
+          "id": "q6607",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "Le paratonnerre…",
+          "reponses": [
+            "empêche l'orage",
+            "capte la foudre et l'écoule au sol par une descente",
+            "protège les appareils",
+            "attire la pluie"
+          ],
+          "bonne": 1,
+          "explication": "Il protège la structure."
+        },
+        {
+          "id": "q6608",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "La descente d'un paratonnerre est…",
+          "reponses": [
+            "un fil fin",
+            "un conducteur cuivre de forte section vers une terre dédiée",
+            "un tuyau",
+            "une gaine"
+          ],
+          "bonne": 1,
+          "explication": "Chemin direct et court."
+        },
+        {
+          "id": "q6609",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "Le parafoudre au tableau protège…",
+          "reponses": [
+            "la structure",
+            "l'installation intérieure contre la surtension induite",
+            "le toit",
+            "le jardin"
+          ],
+          "bonne": 1,
+          "explication": "Complément du paratonnerre."
+        },
+        {
+          "id": "q6610",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "Paratonnerre et parafoudre sont…",
+          "reponses": [
+            "concurrents",
+            "complémentaires : structure et appareils",
+            "identiques",
+            "interdits ensemble"
+          ],
+          "bonne": 1,
+          "explication": "Avec un parafoudre de type 1 si paratonnerre."
+        },
+        {
+          "id": "q6611",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "La cage maillée est utilisée…",
+          "reponses": [
+            "pour les maisons",
+            "pour les grands bâtiments",
+            "pour les voitures",
+            "pour les bateaux seulement"
+          ],
+          "bonne": 1,
+          "explication": "Conducteurs maillés sur toute la structure."
+        },
+        {
+          "id": "q6612",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "Les terres du bâtiment sont…",
+          "reponses": [
+            "séparées",
+            "interconnectées (équipotentialité)",
+            "inutiles",
+            "en série"
+          ],
+          "bonne": 1,
+          "explication": "Pas de différence de potentiel."
+        },
+        {
+          "id": "q6613",
+          "fiche_id": "protection_batiment",
+          "type": "qcm",
+          "enonce": "Le paratonnerre est obligatoire…",
+          "reponses": [
+            "partout",
+            "pour certains ERP, sites industriels, clochers, silos",
+            "jamais",
+            "en appartement"
+          ],
+          "bonne": 1,
+          "explication": "Selon l'analyse de risque foudre."
+        },
+        {
+          "id": "q6614",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "Où s'abriter pendant un orage ?",
+          "reponses": [
+            "Sous un arbre isolé",
+            "Dans un bâtiment ou une voiture fermée",
+            "Sur un sommet",
+            "Dans l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Cage de Faraday."
+        },
+        {
+          "id": "q6615",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "Dehors sans abri, on…",
+          "reponses": [
+            "s'allonge",
+            "s'accroupit pieds joints, loin des arbres et pylônes",
+            "court",
+            "lève un parapluie"
+          ],
+          "bonne": 1,
+          "explication": "Petite surface, pieds joints."
+        },
+        {
+          "id": "q6616",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "Pendant l'orage, on évite…",
+          "reponses": [
+            "de manger",
+            "le téléphone fixe et le bain",
+            "de dormir",
+            "de lire"
+          ],
+          "bonne": 1,
+          "explication": "Conducteurs vers l'extérieur."
+        },
+        {
+          "id": "q6617",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "Moins de 30 s entre l'éclair et le tonnerre signifie…",
+          "reponses": [
+            "l'orage est loin",
+            "l'orage est à moins de 10 km : on s'abrite",
+            "rien",
+            "l'orage s'éloigne"
+          ],
+          "bonne": 1,
+          "explication": "Le son parcourt 1 km en 3 s."
+        },
+        {
+          "id": "q6618",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "Après le dernier coup de tonnerre, on attend…",
+          "reponses": [
+            "1 minute",
+            "30 minutes",
+            "1 seconde",
+            "une journée"
+          ],
+          "bonne": 1,
+          "explication": "L'orage peut frapper encore."
+        },
+        {
+          "id": "q6619",
+          "fiche_id": "comportement",
+          "type": "qcm",
+          "enonce": "À l'approche d'un orage, sur un chantier…",
+          "reponses": [
+            "on continue",
+            "on arrête les travaux en hauteur et sur les lignes",
+            "on accélère",
+            "on monte plus haut"
+          ],
+          "bonne": 1,
+          "explication": "Nacelles, toits, lignes."
+        },
+        {
+          "id": "q6620",
+          "fiche_id": "protection_batiment",
+          "type": "ordre",
+          "enonce": "Chemin de la foudre avec paratonnerre : remets les étapes dans l'ordre.",
+          "reponses": [
+            "L'éclair frappe la pointe captrice",
+            "Le courant descend par le conducteur de descente",
+            "Il s'écoule dans la prise de terre dédiée",
+            "L'équipotentialité évite les différences de potentiel",
+            "Le parafoudre limite la surtension résiduelle"
+          ],
+          "explication": "Capter, descendre, écouler, équilibrer, limiter."
+        }
+      ],
+      "ordre": 69
     }
   ]
 }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Les risques</text>
+<circle cx="190" cy="330" r="110" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="190" y="355.92" font-size="72" fill="white" text-anchor="middle" font-weight="bold" >UV</text>
+<circle cx="380" cy="192" r="12" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="420" y="200" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Tension à vide</text>
+<text x="420" y="240" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >milieu humide, marquage S</text>
+<circle cx="380" cy="307" r="12" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="420" y="315" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Retour de courant près de la pièce</text>
+<text x="420" y="355" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >sinon chemin par le corps ou les machines</text>
+<circle cx="380" cy="422" r="12" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="420" y="430" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Coup d'arc, fumées</text>
+<text x="420" y="470" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >UV, ozone, métaux</text>
+<circle cx="380" cy="537" r="12" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="420" y="545" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Projections, gaz</text>
+<text x="420" y="585" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >permis de feu, bouteilles fixées</text>
+
+</svg>
