@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'data/app_state.dart';
-import 'screens/accueil_screen.dart';
+import 'screens/home_shell.dart';
 
 void main() {
   runApp(const ElecApp());
@@ -22,7 +22,7 @@ class ElecApp extends StatelessWidget {
           colorSchemeSeed: Colors.amber,
           useMaterial3: true,
         ),
-        home: const AccueilScreen(),
+        home: const HomeShell(),
       ),
     );
   }
