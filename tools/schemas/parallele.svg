@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Montage en parallèle : plusieurs branches</text>
+<line x1="160" y1="388" x2="240" y2="388" stroke="#37474F" stroke-width="6" stroke-linecap="round"/>
+<line x1="182" y1="412" x2="218" y2="412" stroke="#37474F" stroke-width="10" stroke-linecap="round"/>
+<text x="262" y="392" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >+</text>
+<text x="262" y="426" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >−</text>
+<line x1="200" y1="388" x2="200" y2="180" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="200" y1="180" x2="1000" y2="180" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="200" y1="620" x2="200" y2="412" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="200" y1="620" x2="1000" y2="620" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="600" y1="180" x2="600" y2="620" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<rect x="580" y="350" width="40" height="100" rx="8" fill="white" stroke="#37474F" stroke-width="5"/>
+<text x="640" y="408" font-size="30" fill="#1F2933" text-anchor="start" font-weight="normal" >R1</text>
+<line x1="600" y1="230" x2="600" y2="320" stroke="#FFB300" stroke-width="6" stroke-linecap="round"/>
+<polygon points="600,320 589.5,300.7 610.5,300.7" fill="#FFB300"/>
+<text x="570" y="285" font-size="32" fill="#FFB300" text-anchor="end" font-weight="bold" >I1</text>
+<line x1="1000" y1="180" x2="1000" y2="620" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<rect x="980" y="350" width="40" height="100" rx="8" fill="white" stroke="#37474F" stroke-width="5"/>
+<text x="1040" y="408" font-size="30" fill="#1F2933" text-anchor="start" font-weight="normal" >R2</text>
+<line x1="1000" y1="230" x2="1000" y2="320" stroke="#FFB300" stroke-width="6" stroke-linecap="round"/>
+<polygon points="1000,320 989.5,300.7 1010.5,300.7" fill="#FFB300"/>
+<text x="970" y="285" font-size="32" fill="#FFB300" text-anchor="end" font-weight="bold" >I2</text>
+<line x1="280" y1="180" x2="500" y2="180" stroke="#FFB300" stroke-width="6" stroke-linecap="round"/>
+<polygon points="500,180 480.7,190.5 480.7,169.5" fill="#FFB300"/>
+<text x="390" y="160" font-size="32" fill="#FFB300" text-anchor="middle" font-weight="bold" >I = I1 + I2</text>
+<text x="140" y="420" font-size="34" fill="#1565C0" text-anchor="middle" font-weight="bold" >U</text>
+<text x="800" y="300" font-size="30" fill="#1565C0" text-anchor="middle" font-weight="normal" >même U</text>
+<text x="800" y="520" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >1/R = 1/R1 + 1/R2</text>
+<text x="600.0" y="672" font-size="26" fill="#78909C" text-anchor="middle" font-weight="normal" >Deux résistances de 20 Ω en parallèle = 10 Ω.</text>
+<text x="600.0" y="708" font-size="26" fill="#78909C" text-anchor="middle" font-weight="normal" >Une branche en panne : les autres continuent.</text>
+
+</svg>

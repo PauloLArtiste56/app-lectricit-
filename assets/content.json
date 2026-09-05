@@ -8,17 +8,20 @@
         {
           "id": "grandeurs",
           "titre": "Les quatre grandeurs de base",
-          "contenu": "La tension U se mesure en volts (V) : c'est la « pression » qui pousse le courant.\nL'intensité I se mesure en ampères (A) : c'est le débit de courant qui circule.\nLa résistance R se mesure en ohms (Ω) : c'est ce qui freine le courant.\nLa puissance P se mesure en watts (W) : c'est l'énergie consommée chaque seconde."
+          "contenu": "La tension U se mesure en volts (V) : c'est la « pression » qui pousse le courant.\nL'intensité I se mesure en ampères (A) : c'est le débit de courant qui circule.\nLa résistance R se mesure en ohms (Ω) : c'est ce qui freine le courant.\nLa puissance P se mesure en watts (W) : c'est l'énergie consommée chaque seconde.",
+          "image": "grandeurs.png"
         },
         {
           "id": "ohm",
           "titre": "La loi d'Ohm",
-          "contenu": "La loi d'Ohm relie tension, résistance et intensité :\n\nU = R × I\n\nOn peut la retourner selon ce qu'on cherche :\nI = U / R\nR = U / I\n\nExemple : une résistance de 10 Ω traversée par 2 A a une tension de 10 × 2 = 20 V à ses bornes."
+          "contenu": "La loi d'Ohm relie tension, résistance et intensité :\n\nU = R × I\n\nOn peut la retourner selon ce qu'on cherche :\nI = U / R\nR = U / I\n\nExemple : une résistance de 10 Ω traversée par 2 A a une tension de 10 × 2 = 20 V à ses bornes.",
+          "image": "ohm.png"
         },
         {
           "id": "puissance",
           "titre": "La puissance électrique",
-          "contenu": "La puissance est le produit de la tension par l'intensité :\n\nP = U × I\n\nExemple : un radiateur en 230 V qui consomme 10 A a une puissance de 230 × 10 = 2 300 W, soit 2,3 kW.\n\nÀ l'inverse, I = P / U permet de trouver l'intensité appelée par un appareil dont on connaît la puissance."
+          "contenu": "La puissance est le produit de la tension par l'intensité :\n\nP = U × I\n\nExemple : un radiateur en 230 V qui consomme 10 A a une puissance de 230 × 10 = 2 300 W, soit 2,3 kW.\n\nÀ l'inverse, I = P / U permet de trouver l'intensité appelée par un appareil dont on connaît la puissance.",
+          "image": "puissance.png"
         }
       ],
       "questions": [
@@ -172,17 +175,20 @@
         {
           "id": "continu",
           "titre": "Le courant continu (DC)",
-          "contenu": "En courant continu, le courant circule toujours dans le même sens et la tension reste constante.\n\nSources de courant continu : piles, batteries, panneaux photovoltaïques, chargeurs USB (5 V), batterie de voiture (12 V).\n\nOn le note DC (Direct Current) ou avec le symbole ⎓. Une source continue a une borne + et une borne −."
+          "contenu": "En courant continu, le courant circule toujours dans le même sens et la tension reste constante.\n\nSources de courant continu : piles, batteries, panneaux photovoltaïques, chargeurs USB (5 V), batterie de voiture (12 V).\n\nOn le note DC (Direct Current) ou avec le symbole ⎓. Une source continue a une borne + et une borne −.",
+          "image": "continu.png"
         },
         {
           "id": "alternatif",
           "titre": "Le courant alternatif (AC)",
-          "contenu": "En courant alternatif, le courant change de sens régulièrement : il fait des allers-retours. La tension dessine une sinusoïde.\n\nLe réseau électrique en France (et en Europe) fournit du 230 V à 50 Hz. La fréquence, en hertz (Hz), est le nombre de cycles par seconde : à 50 Hz, un cycle dure 1/50 s, soit 20 ms.\n\nOn le note AC (Alternating Current) ou avec le symbole ~. Une prise domestique a une phase (L) et un neutre (N).\n\nPourquoi l'alternatif pour le réseau ? Parce qu'on peut facilement changer sa tension avec un transformateur : on transporte l'énergie à très haute tension (moins de pertes), puis on redescend à 230 V près des habitations."
+          "contenu": "En courant alternatif, le courant change de sens régulièrement : il fait des allers-retours. La tension dessine une sinusoïde.\n\nLe réseau électrique en France (et en Europe) fournit du 230 V à 50 Hz. La fréquence, en hertz (Hz), est le nombre de cycles par seconde : à 50 Hz, un cycle dure 1/50 s, soit 20 ms.\n\nOn le note AC (Alternating Current) ou avec le symbole ~. Une prise domestique a une phase (L) et un neutre (N).\n\nPourquoi l'alternatif pour le réseau ? Parce qu'on peut facilement changer sa tension avec un transformateur : on transporte l'énergie à très haute tension (moins de pertes), puis on redescend à 230 V près des habitations.",
+          "image": "alternatif.png"
         },
         {
           "id": "conversion",
           "titre": "Passer de l'un à l'autre",
-          "contenu": "Redresseur : transforme l'alternatif en continu. Il y en a un dans chaque chargeur de téléphone et dans chaque alimentation d'ordinateur.\n\nOnduleur : transforme le continu en alternatif. C'est lui qui permet d'injecter la production de panneaux solaires sur le réseau, ou d'alimenter une maison sur batterie.\n\nTriphasé : le réseau est en réalité composé de trois phases décalées dans le temps. Entre une phase et le neutre, on mesure 230 V ; entre deux phases, 400 V. Le triphasé sert aux moteurs et aux fortes puissances."
+          "contenu": "Redresseur : transforme l'alternatif en continu. Il y en a un dans chaque chargeur de téléphone et dans chaque alimentation d'ordinateur.\n\nOnduleur : transforme le continu en alternatif. C'est lui qui permet d'injecter la production de panneaux solaires sur le réseau, ou d'alimenter une maison sur batterie.\n\nTriphasé : le réseau est en réalité composé de trois phases décalées dans le temps. Entre une phase et le neutre, on mesure 230 V ; entre deux phases, 400 V. Le triphasé sert aux moteurs et aux fortes puissances.",
+          "image": "conversion.png"
         }
       ],
       "questions": [
@@ -336,17 +342,20 @@
         {
           "id": "serie",
           "titre": "Le montage en série",
-          "contenu": "En série, les récepteurs sont placés à la suite les uns des autres : le courant n'a qu'un seul chemin.\n\n• La même intensité traverse tous les éléments.\n• Les tensions se répartissent : U = U1 + U2 + …\n• Les résistances s'ajoutent : R = R1 + R2 + …\n\nSi un seul élément est coupé (une lampe grillée, par exemple), plus rien ne passe : tout s'éteint. C'était le défaut des anciennes guirlandes de Noël."
+          "contenu": "En série, les récepteurs sont placés à la suite les uns des autres : le courant n'a qu'un seul chemin.\n\n• La même intensité traverse tous les éléments.\n• Les tensions se répartissent : U = U1 + U2 + …\n• Les résistances s'ajoutent : R = R1 + R2 + …\n\nSi un seul élément est coupé (une lampe grillée, par exemple), plus rien ne passe : tout s'éteint. C'était le défaut des anciennes guirlandes de Noël.",
+          "image": "serie.png"
         },
         {
           "id": "parallele",
           "titre": "Le montage en parallèle (dérivation)",
-          "contenu": "En parallèle, chaque récepteur est sur sa propre branche, directement entre les deux bornes de la source.\n\n• Tous les éléments reçoivent la même tension.\n• Les intensités s'ajoutent : I = I1 + I2 + …\n• La résistance équivalente est plus petite que la plus petite des résistances : 1/R = 1/R1 + 1/R2 + …  Deux résistances identiques en parallèle donnent R/2.\n\nSi un élément tombe en panne, les autres continuent de fonctionner. C'est le montage de toutes les installations domestiques : chaque prise et chaque lampe reçoit 230 V indépendamment des autres."
+          "contenu": "En parallèle, chaque récepteur est sur sa propre branche, directement entre les deux bornes de la source.\n\n• Tous les éléments reçoivent la même tension.\n• Les intensités s'ajoutent : I = I1 + I2 + …\n• La résistance équivalente est plus petite que la plus petite des résistances : 1/R = 1/R1 + 1/R2 + …  Deux résistances identiques en parallèle donnent R/2.\n\nSi un élément tombe en panne, les autres continuent de fonctionner. C'est le montage de toutes les installations domestiques : chaque prise et chaque lampe reçoit 230 V indépendamment des autres.",
+          "image": "parallele.png"
         },
         {
           "id": "application",
           "titre": "Ce qu'il faut retenir",
-          "contenu": "Dans une maison, tout est en parallèle. Plus on branche d'appareils sur le même circuit, plus le courant total augmente. C'est pour cela que chaque circuit est protégé par un disjoncteur calibré (10 A, 16 A, 20 A…).\n\nUn interrupteur, lui, est toujours en série avec ce qu'il commande : il ouvre le seul chemin du courant.\n\nRécapitulatif :\nSérie → même I, les U s'ajoutent, les R s'ajoutent.\nParallèle → même U, les I s'ajoutent, 1/R = 1/R1 + 1/R2."
+          "contenu": "Dans une maison, tout est en parallèle. Plus on branche d'appareils sur le même circuit, plus le courant total augmente. C'est pour cela que chaque circuit est protégé par un disjoncteur calibré (10 A, 16 A, 20 A…).\n\nUn interrupteur, lui, est toujours en série avec ce qu'il commande : il ouvre le seul chemin du courant.\n\nRécapitulatif :\nSérie → même I, les U s'ajoutent, les R s'ajoutent.\nParallèle → même U, les I s'ajoutent, 1/R = 1/R1 + 1/R2.",
+          "image": "recap_circuits.png"
         }
       ],
       "questions": [
@@ -500,17 +509,20 @@
         {
           "id": "symboles",
           "titre": "Les symboles de base",
-          "contenu": "Un schéma électrique utilise des symboles normalisés (norme européenne IEC) :\n\n• Résistance : un rectangle.\n• Lampe : un cercle barré d'une croix.\n• Interrupteur : un trait qui s'écarte du circuit, comme une porte qui s'ouvre.\n• Pile ou générateur continu : deux traits parallèles, le long est la borne +, le court la borne −.\n• Fusible : un rectangle traversé par un trait.\n• Terre : un trait vertical terminé par trois barres horizontales de plus en plus courtes.\n• Voltmètre : un cercle avec un V. Ampèremètre : un cercle avec un A."
+          "contenu": "Un schéma électrique utilise des symboles normalisés (norme européenne IEC) :\n\n• Résistance : un rectangle.\n• Lampe : un cercle barré d'une croix.\n• Interrupteur : un trait qui s'écarte du circuit, comme une porte qui s'ouvre.\n• Pile ou générateur continu : deux traits parallèles, le long est la borne +, le court la borne −.\n• Fusible : un rectangle traversé par un trait.\n• Terre : un trait vertical terminé par trois barres horizontales de plus en plus courtes.\n• Voltmètre : un cercle avec un V. Ampèremètre : un cercle avec un A.",
+          "image": "symboles.png"
         },
         {
           "id": "couleurs",
           "titre": "Le code couleur des conducteurs",
-          "contenu": "Les couleurs des fils sont imposées, pour que tout le monde s'y retrouve :\n\n• Terre (PE) : vert et jaune. Cette couleur est réservée à la terre, on ne l'utilise jamais pour autre chose.\n• Neutre (N) : bleu clair.\n• Phase (L) : n'importe quelle autre couleur, en pratique rouge, marron ou noir.\n\nAttention aux anciennes installations : les couleurs n'étaient pas toujours respectées. On vérifie toujours avec un appareil de mesure."
+          "contenu": "Les couleurs des fils sont imposées, pour que tout le monde s'y retrouve :\n\n• Terre (PE) : vert et jaune. Cette couleur est réservée à la terre, on ne l'utilise jamais pour autre chose.\n• Neutre (N) : bleu clair.\n• Phase (L) : n'importe quelle autre couleur, en pratique rouge, marron ou noir.\n\nAttention aux anciennes installations : les couleurs n'étaient pas toujours respectées. On vérifie toujours avec un appareil de mesure.",
+          "image": "couleurs.png"
         },
         {
           "id": "schemas",
           "titre": "Lire un schéma",
-          "contenu": "Il existe plusieurs types de schémas :\n\n• Schéma de principe : montre le fonctionnement, sans se soucier de la position réelle des éléments.\n• Schéma unifilaire : un seul trait par liaison, avec des petites barres obliques indiquant le nombre de conducteurs. Utilisé pour les plans d'installation.\n• Schéma multifilaire : tous les fils sont dessinés. Utilisé pour le câblage.\n\nRepères : L = phase, N = neutre, PE = terre (Protective Earth).\n\nMesures : un voltmètre se branche en parallèle (sur les deux bornes de l'élément), un ampèremètre en série (dans le circuit).\n\nMontages courants : simple allumage (1 interrupteur, 1 lampe), va-et-vient (2 interrupteurs pour une même lampe, par exemple en haut et en bas d'un escalier)."
+          "contenu": "Il existe plusieurs types de schémas :\n\n• Schéma de principe : montre le fonctionnement, sans se soucier de la position réelle des éléments.\n• Schéma unifilaire : un seul trait par liaison, avec des petites barres obliques indiquant le nombre de conducteurs. Utilisé pour les plans d'installation.\n• Schéma multifilaire : tous les fils sont dessinés. Utilisé pour le câblage.\n\nRepères : L = phase, N = neutre, PE = terre (Protective Earth).\n\nMesures : un voltmètre se branche en parallèle (sur les deux bornes de l'élément), un ampèremètre en série (dans le circuit).\n\nMontages courants : simple allumage (1 interrupteur, 1 lampe), va-et-vient (2 interrupteurs pour une même lampe, par exemple en haut et en bas d'un escalier).",
+          "image": "schemas.png"
         }
       ],
       "questions": [
@@ -664,17 +676,20 @@
         {
           "id": "dangers",
           "titre": "Les effets du courant sur le corps",
-          "contenu": "Le corps humain conduit le courant. Ce qui blesse, c'est l'intensité qui le traverse et la durée du passage. Ordres de grandeur en alternatif 50 Hz :\n\n• 0,5 mA : seuil de perception, picotement.\n• 10 mA : seuil de non-lâcher. Les muscles se contractent, on ne peut plus lâcher le conducteur.\n• 30 mA : risque de paralysie respiratoire. C'est le seuil des différentiels qui protègent les personnes.\n• Quelques dizaines de mA et plus : risque de fibrillation cardiaque, c'est-à-dire d'arrêt du cœur.\n\nS'ajoutent les brûlures, internes et externes.\n\nFacteurs aggravants : humidité (mains mouillées, sol humide, pieds nus), durée du contact, trajet du courant à travers le cœur.\n\nTension limite de sécurité : 50 V en alternatif dans un local sec, 25 V dans un local humide. En dessous, le risque est considéré comme faible."
+          "contenu": "Le corps humain conduit le courant. Ce qui blesse, c'est l'intensité qui le traverse et la durée du passage. Ordres de grandeur en alternatif 50 Hz :\n\n• 0,5 mA : seuil de perception, picotement.\n• 10 mA : seuil de non-lâcher. Les muscles se contractent, on ne peut plus lâcher le conducteur.\n• 30 mA : risque de paralysie respiratoire. C'est le seuil des différentiels qui protègent les personnes.\n• Quelques dizaines de mA et plus : risque de fibrillation cardiaque, c'est-à-dire d'arrêt du cœur.\n\nS'ajoutent les brûlures, internes et externes.\n\nFacteurs aggravants : humidité (mains mouillées, sol humide, pieds nus), durée du contact, trajet du courant à travers le cœur.\n\nTension limite de sécurité : 50 V en alternatif dans un local sec, 25 V dans un local humide. En dessous, le risque est considéré comme faible.",
+          "image": "seuils.png"
         },
         {
           "id": "contacts",
           "titre": "Contact direct et contact indirect",
-          "contenu": "Contact direct : toucher une partie qui est normalement sous tension. Exemples : fil dénudé, borne d'un appareil ouvert, broche d'une prise.\nProtections : isolation des conducteurs, capots, éloignement, obstacles.\n\nContact indirect : toucher une masse, c'est-à-dire une partie métallique qui n'est normalement pas sous tension mais qui l'est devenue à cause d'un défaut d'isolement. Exemple : la carcasse d'un lave-linge dont un fil de phase touche le châssis.\nProtections : mise à la terre des masses + dispositif différentiel. Le courant de défaut part vers la terre et fait déclencher le différentiel avant qu'une personne ne touche l'appareil."
+          "contenu": "Contact direct : toucher une partie qui est normalement sous tension. Exemples : fil dénudé, borne d'un appareil ouvert, broche d'une prise.\nProtections : isolation des conducteurs, capots, éloignement, obstacles.\n\nContact indirect : toucher une masse, c'est-à-dire une partie métallique qui n'est normalement pas sous tension mais qui l'est devenue à cause d'un défaut d'isolement. Exemple : la carcasse d'un lave-linge dont un fil de phase touche le châssis.\nProtections : mise à la terre des masses + dispositif différentiel. Le courant de défaut part vers la terre et fait déclencher le différentiel avant qu'une personne ne touche l'appareil.",
+          "image": "contacts.png"
         },
         {
           "id": "protections",
           "titre": "Disjoncteur, différentiel, terre et bons réflexes",
-          "contenu": "Disjoncteur : coupe le circuit en cas de surcharge (trop d'appareils) ou de court-circuit. Il protège les câbles et l'installation contre l'échauffement et l'incendie. Il ne protège pas directement les personnes.\n\nDifférentiel 30 mA : compare le courant qui part par la phase et celui qui revient par le neutre. Si la différence atteint 30 mA (une fuite vers la terre, par exemple à travers une personne), il coupe en quelques millisecondes. C'est lui qui protège les personnes.\n\nMise à la terre : relie toutes les masses métalliques à la terre. En cas de défaut, le courant s'écoule vers la terre et fait déclencher le différentiel.\n\nBons réflexes :\n• Couper le courant au tableau avant toute intervention, puis vérifier l'absence de tension.\n• Ne jamais intervenir avec les mains mouillées ou les pieds dans l'eau.\n• Feu d'origine électrique : couper le courant, ne jamais utiliser d'eau, extincteur CO2 ou poudre.\n• Personne électrisée : couper le courant ou l'écarter avec un objet isolant (bois, plastique) avant de la toucher, puis appeler le 15 ou le 112."
+          "contenu": "Disjoncteur : coupe le circuit en cas de surcharge (trop d'appareils) ou de court-circuit. Il protège les câbles et l'installation contre l'échauffement et l'incendie. Il ne protège pas directement les personnes.\n\nDifférentiel 30 mA : compare le courant qui part par la phase et celui qui revient par le neutre. Si la différence atteint 30 mA (une fuite vers la terre, par exemple à travers une personne), il coupe en quelques millisecondes. C'est lui qui protège les personnes.\n\nMise à la terre : relie toutes les masses métalliques à la terre. En cas de défaut, le courant s'écoule vers la terre et fait déclencher le différentiel.\n\nBons réflexes :\n• Couper le courant au tableau avant toute intervention, puis vérifier l'absence de tension.\n• Ne jamais intervenir avec les mains mouillées ou les pieds dans l'eau.\n• Feu d'origine électrique : couper le courant, ne jamais utiliser d'eau, extincteur CO2 ou poudre.\n• Personne électrisée : couper le courant ou l'écarter avec un objet isolant (bois, plastique) avant de la toucher, puis appeler le 15 ou le 112.",
+          "image": "protections.png"
         }
       ],
       "questions": [

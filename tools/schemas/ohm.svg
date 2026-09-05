@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >La loi d'Ohm : le triangle magique</text>
+<polygon points="340,190 120,530 560,530" fill="white" stroke="#1565C0" stroke-width="8"/>
+<line x1="210" y1="400" x2="470" y2="400" stroke="#1565C0" stroke-width="8" stroke-linecap="round"/>
+<line x1="340" y1="400" x2="340" y2="530" stroke="#1565C0" stroke-width="8" stroke-linecap="round"/>
+<text x="340" y="340" font-size="80" fill="#1565C0" text-anchor="middle" font-weight="bold" >U</text>
+<text x="275" y="500" font-size="70" fill="#1565C0" text-anchor="middle" font-weight="bold" >R</text>
+<text x="405" y="500" font-size="70" fill="#1565C0" text-anchor="middle" font-weight="bold" >I</text>
+<text x="340" y="600" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >Cache la grandeur cherchée :</text>
+<text x="340" y="640" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >ce qui reste donne la formule</text>
+<rect x="660" y="190" width="480" height="110" rx="18" fill="white" stroke="#1565C0" stroke-width="4"/>
+<text x="900" y="238" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >U = R × I</text>
+<text x="900" y="280" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >10 Ω × 2 A = 20 V</text>
+<rect x="660" y="340" width="480" height="110" rx="18" fill="white" stroke="#1565C0" stroke-width="4"/>
+<text x="900" y="388" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >I = U / R</text>
+<text x="900" y="430" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >12 V / 4 Ω = 3 A</text>
+<rect x="660" y="490" width="480" height="110" rx="18" fill="white" stroke="#1565C0" stroke-width="4"/>
+<text x="900" y="538" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >R = U / I</text>
+<text x="900" y="580" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >230 V / 0,5 A = 460 Ω</text>
+
+</svg>

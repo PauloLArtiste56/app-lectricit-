@@ -42,6 +42,16 @@ void main() {
     }
   });
 
+  test('chaque image de fiche existe dans assets/images', () {
+    for (final module in modules) {
+      for (final fiche in module.fiches) {
+        expect(fiche.image, isNotNull, reason: '${fiche.id} sans image');
+        expect(File('assets/images/${fiche.image}').existsSync(), isTrue,
+            reason: 'image manquante : ${fiche.image}');
+      }
+    }
+  });
+
   test('estBonne compare bien avec l\'index de la bonne réponse', () {
     final q = modules.first.questions.first;
     expect(q.estBonne(q.bonne), isTrue);

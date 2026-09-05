@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Effets du courant sur le corps (alternatif 50 Hz)</text>
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#43A047"/><stop offset="0.35" stop-color="#FFB300"/><stop offset="1" stop-color="#E53935"/></linearGradient></defs>
+<rect x="120" y="306" width="960" height="48" rx="24" fill="url(#g)"/>
+<line x1="196.8" y1="290" x2="196.8" y2="370" stroke="#37474F" stroke-width="4" stroke-linecap="round"/>
+<text x="196.8" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >0,5 mA</text>
+<text x="196.8" y="420" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >picotement</text>
+<text x="196.8" y="454" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >seuil de perception</text>
+<line x1="465.59999999999997" y1="290" x2="465.59999999999997" y2="370" stroke="#37474F" stroke-width="4" stroke-linecap="round"/>
+<text x="465.59999999999997" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >10 mA</text>
+<text x="465.59999999999997" y="420" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >non-lâcher</text>
+<text x="465.59999999999997" y="454" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >les muscles se contractent</text>
+<line x1="734.4" y1="290" x2="734.4" y2="370" stroke="#37474F" stroke-width="4" stroke-linecap="round"/>
+<text x="734.4" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >30 mA</text>
+<text x="734.4" y="420" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >paralysie respiratoire</text>
+<text x="734.4" y="454" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >seuil du différentiel</text>
+<line x1="1003.2" y1="290" x2="1003.2" y2="370" stroke="#37474F" stroke-width="4" stroke-linecap="round"/>
+<text x="1003.2" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >> 50 mA</text>
+<text x="1003.2" y="420" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >fibrillation</text>
+<text x="1003.2" y="454" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >arrêt du cœur possible</text>
+<text x="120" y="500" font-size="1" fill="#1F2933" text-anchor="middle" font-weight="normal" ></text>
+<rect x="80" y="500" width="1040" height="200" rx="20" fill="white" stroke="#E53935" stroke-width="4"/>
+<text x="600.0" y="550" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >Ce qui blesse : l'intensité qui traverse le corps et la durée du contact</text>
+<text x="600.0" y="600" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="normal" >Aggravant : humidité, pieds nus, trajet par le cœur</text>
+<text x="600.0" y="660" font-size="26" fill="#E53935" text-anchor="middle" font-weight="bold" >Tension limite de sécurité : 50 V en local sec, 25 V en local humide</text>
+
+</svg>

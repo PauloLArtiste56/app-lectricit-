@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Série ou parallèle : ce qu'il faut retenir</text>
+<rect x="80" y="120" width="500" height="570" rx="24" fill="white" stroke="#1565C0" stroke-width="6"/>
+<rect x="80" y="120" width="500" height="90" rx="24" fill="#1565C0" stroke="#1565C0" stroke-width="6"/>
+<text x="330" y="180" font-size="40" fill="white" text-anchor="middle" font-weight="bold" >Série</text>
+<text x="330" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >Un seul chemin</text>
+<text x="330" y="348" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >Même I partout</text>
+<text x="330" y="426" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >Les U s'ajoutent</text>
+<text x="330" y="504" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >R = R1 + R2</text>
+<text x="330" y="582" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="normal" >Un élément coupé : tout s'arrête</text>
+<text x="330" y="660" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >Ex. : interrupteur + lampe</text>
+<rect x="620" y="120" width="500" height="570" rx="24" fill="white" stroke="#43A047" stroke-width="6"/>
+<rect x="620" y="120" width="500" height="90" rx="24" fill="#43A047" stroke="#43A047" stroke-width="6"/>
+<text x="870" y="180" font-size="40" fill="white" text-anchor="middle" font-weight="bold" >Parallèle</text>
+<text x="870" y="270" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >Plusieurs branches</text>
+<text x="870" y="348" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >Même U partout</text>
+<text x="870" y="426" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="bold" >Les I s'ajoutent</text>
+<text x="870" y="504" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >1/R = 1/R1 + 1/R2</text>
+<text x="870" y="582" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="normal" >Une panne : les autres continuent</text>
+<text x="870" y="660" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >Ex. : prises de la maison</text>
+
+</svg>

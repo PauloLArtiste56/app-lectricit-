@@ -49,8 +49,9 @@ lib/
   widgets/       # composants réutilisables (carte module, bouton réponse…)
 assets/
   content.json   # tout le contenu pédagogique
-  images/        # images des fiches (optionnel)
+  images/        # schémas des fiches (PNG)
 test/            # tests automatiques (flutter test)
+tools/schemas/   # source des schémas (script + SVG) pour les retoucher
 ```
 
 Règle : les écrans ne font qu'afficher. La lecture du contenu, la sauvegarde et le calcul

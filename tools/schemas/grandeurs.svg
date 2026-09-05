@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Les quatre grandeurs de base</text>
+<rect x="80" y="130" width="240" height="470" rx="24" fill="white" stroke="#1565C0" stroke-width="6"/>
+<circle cx="200" cy="230" r="60" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="200" y="252" font-size="64" fill="white" text-anchor="middle" font-weight="bold" >U</text>
+<text x="200" y="350" font-size="36" fill="#1F2933" text-anchor="middle" font-weight="bold" >Tension</text>
+<text x="200" y="400" font-size="32" fill="#1565C0" text-anchor="middle" font-weight="bold" >volt (V)</text>
+<text x="200" y="470" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >la « pression »</text>
+<text x="200" y="510" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >qui pousse</text>
+<rect x="350" y="130" width="240" height="470" rx="24" fill="white" stroke="#FFB300" stroke-width="6"/>
+<circle cx="470" cy="230" r="60" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="470" y="252" font-size="64" fill="white" text-anchor="middle" font-weight="bold" >I</text>
+<text x="470" y="350" font-size="36" fill="#1F2933" text-anchor="middle" font-weight="bold" >Intensité</text>
+<text x="470" y="400" font-size="32" fill="#FFB300" text-anchor="middle" font-weight="bold" >ampère (A)</text>
+<text x="470" y="470" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >le débit</text>
+<text x="470" y="510" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >de courant</text>
+<rect x="620" y="130" width="240" height="470" rx="24" fill="white" stroke="#E53935" stroke-width="6"/>
+<circle cx="740" cy="230" r="60" fill="#E53935" stroke="#E53935" stroke-width="5"/>
+<text x="740" y="252" font-size="64" fill="white" text-anchor="middle" font-weight="bold" >R</text>
+<text x="740" y="350" font-size="36" fill="#1F2933" text-anchor="middle" font-weight="bold" >Résistance</text>
+<text x="740" y="400" font-size="32" fill="#E53935" text-anchor="middle" font-weight="bold" >ohm (Ω)</text>
+<text x="740" y="470" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >ce qui freine</text>
+<text x="740" y="510" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >le courant</text>
+<rect x="890" y="130" width="240" height="470" rx="24" fill="white" stroke="#43A047" stroke-width="6"/>
+<circle cx="1010" cy="230" r="60" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="1010" y="252" font-size="64" fill="white" text-anchor="middle" font-weight="bold" >P</text>
+<text x="1010" y="350" font-size="36" fill="#1F2933" text-anchor="middle" font-weight="bold" >Puissance</text>
+<text x="1010" y="400" font-size="32" fill="#43A047" text-anchor="middle" font-weight="bold" >watt (W)</text>
+<text x="1010" y="470" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >l'énergie</text>
+<text x="1010" y="510" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >par seconde</text>
+<text x="330" y="690" font-size="34" fill="#1F2933" text-anchor="middle" font-weight="bold" >Loi d'Ohm : U = R × I</text>
+<text x="870" y="690" font-size="34" fill="#1F2933" text-anchor="middle" font-weight="bold" >Puissance : P = U × I</text>
+
+</svg>
