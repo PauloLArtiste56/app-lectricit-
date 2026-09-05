@@ -115,10 +115,15 @@ Modules existants (par thème) :
 12. Prises, interrupteurs et câblage pratique
 13. Le voisinage : zones et distances
 14. EPI et outillage isolé
+15. Parafoudre et surtensions
+16. Extérieur, garage, piscine
+17. Habilitations B0 et BS en détail
+18. Habilitation BR : les interventions
+19. Premiers secours et incendie électrique
 
-Sujets à venir : parafoudre, locaux à risques (extérieur, garage, piscine), habilitation B0/BS
-en détail, BR, B1V/B2V, premiers secours, incendie électrique, magnétisme, électronique de
-base, photovoltaïque, domotique, véhicule électrique…
+Sujets à venir : B1V/B2V et chargé de travaux, chargé de consignation BC, magnétisme,
+électronique de base, photovoltaïque, domotique, véhicule électrique, réseaux et
+distribution, normes et documents…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
