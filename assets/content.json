@@ -3077,9 +3077,316 @@
       "ordre": 10
     },
     {
+      "id": "unites",
+      "titre": "Unités et préfixes",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "unites_si",
+          "titre": "Les unités de l'électricien",
+          "contenu": "• Tension : volt (V)\n• Intensité : ampère (A)\n• Résistance : ohm (Ω)\n• Puissance : watt (W), et volt-ampère (VA) pour la puissance apparente\n• Énergie : wattheure (Wh), joule (J)\n• Fréquence : hertz (Hz)\n• Capacité : farad (F) ; capacité d'une batterie : ampère-heure (Ah)\n• Champ magnétique : tesla (T)\n• Flux lumineux : lumen (lm) ; éclairement : lux (lx)\n\nChaque unité porte le nom d'un savant : Volta, Ampère, Ohm, Watt, Joule, Hertz, Faraday, Tesla.",
+          "image": "unites_si.png"
+        },
+        {
+          "id": "prefixes",
+          "titre": "Les préfixes",
+          "contenu": "Les préfixes multiplient ou divisent par mille :\n\n• méga (M) : × 1 000 000 → 1 MW = 1 000 000 W\n• kilo (k) : × 1 000 → 1 kV = 1 000 V, 1 kWh = 1 000 Wh\n• (unité)\n• milli (m) : ÷ 1 000 → 1 mA = 0,001 A\n• micro (µ) : ÷ 1 000 000 → 1 µF = 0,000 001 F\n\nAttention aux majuscules : M = méga, m = milli. 1 MW et 1 mW sont séparés d'un facteur d'un milliard.\n\nPour convertir : 2 300 W = 2,3 kW ; 0,5 A = 500 mA ; 4 700 µF = 4,7 mF.",
+          "image": "prefixes.png"
+        },
+        {
+          "id": "ordres_grandeur",
+          "titre": "Ordres de grandeur à connaître",
+          "contenu": "• Pile : 1,5 V · batterie de voiture : 12 V · prise : 230 V · triphasé : 400 V · distribution : 20 kV · transport : 400 kV\n• LED : 10 W · télévision : 100 W · four : 2 500 W · plaque : 7 000 W · maison : 6 à 12 kVA · éolienne : 3 MW · réacteur nucléaire : 1 000 MW\n• Seuil de perception : 0,5 mA · non-lâcher : 10 mA · différentiel : 30 mA · prise : 16 A · plaque : 32 A · branchement 6 kVA : 30 A\n• Réseau : 50 Hz · période : 20 ms\n• Consommation d'un logement : 2 000 à 15 000 kWh par an selon le chauffage\n\nCes repères permettent de détecter une valeur aberrante avant même de calculer.",
+          "image": "ordres_grandeur.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2901",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "L'unité de la puissance est…",
+          "reponses": [
+            "le volt",
+            "le watt",
+            "l'ohm",
+            "le joule"
+          ],
+          "bonne": 1,
+          "explication": "Le watt (W). Le joule mesure une énergie."
+        },
+        {
+          "id": "q2902",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "L'unité de l'énergie facturée est…",
+          "reponses": [
+            "le watt",
+            "le wattheure (Wh) ou le kilowattheure",
+            "le volt",
+            "l'ampère"
+          ],
+          "bonne": 1,
+          "explication": "Puissance × temps : Wh, kWh."
+        },
+        {
+          "id": "q2903",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "La fréquence se mesure en…",
+          "reponses": [
+            "hertz",
+            "volts",
+            "watts",
+            "tours"
+          ],
+          "bonne": 0,
+          "explication": "Hz = cycles par seconde."
+        },
+        {
+          "id": "q2904",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "La capacité d'une batterie s'exprime en…",
+          "reponses": [
+            "farads",
+            "ampères-heures (Ah)",
+            "volts",
+            "ohms"
+          ],
+          "bonne": 1,
+          "explication": "Le farad est la capacité d'un condensateur, pas d'une batterie."
+        },
+        {
+          "id": "q2905",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "Le lumen mesure…",
+          "reponses": [
+            "l'éclairement d'une surface",
+            "le flux lumineux émis par une lampe",
+            "la puissance",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Le lux mesure l'éclairement reçu par une surface."
+        },
+        {
+          "id": "q2906",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "Le VA (volt-ampère) est l'unité de…",
+          "reponses": [
+            "la puissance apparente",
+            "l'énergie",
+            "la résistance",
+            "la tension"
+          ],
+          "bonne": 0,
+          "explication": "Utilisé pour la puissance souscrite (kVA) et les transformateurs."
+        },
+        {
+          "id": "q2907",
+          "fiche_id": "unites_si",
+          "type": "qcm",
+          "enonce": "L'ohm doit son nom à…",
+          "reponses": [
+            "un savant allemand, Georg Ohm",
+            "une ville",
+            "un outil",
+            "un animal"
+          ],
+          "bonne": 0,
+          "explication": "Comme le volt (Volta), l'ampère (Ampère), le watt (Watt)."
+        },
+        {
+          "id": "q2908",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "1 kV vaut…",
+          "reponses": [
+            "100 V",
+            "1 000 V",
+            "10 V",
+            "0,001 V"
+          ],
+          "bonne": 1,
+          "explication": "kilo = mille."
+        },
+        {
+          "id": "q2909",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "1 mA vaut…",
+          "reponses": [
+            "0,001 A",
+            "0,01 A",
+            "1 000 A",
+            "0,1 A"
+          ],
+          "bonne": 0,
+          "explication": "milli = un millième."
+        },
+        {
+          "id": "q2910",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "1 MW vaut…",
+          "reponses": [
+            "1 000 W",
+            "1 000 000 W",
+            "0,001 W",
+            "100 W"
+          ],
+          "bonne": 1,
+          "explication": "méga = un million. M majuscule."
+        },
+        {
+          "id": "q2911",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "2 300 W, c'est…",
+          "reponses": [
+            "23 kW",
+            "2,3 kW",
+            "0,23 kW",
+            "230 kW"
+          ],
+          "bonne": 1,
+          "explication": "On divise par 1 000."
+        },
+        {
+          "id": "q2912",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "0,5 A, c'est…",
+          "reponses": [
+            "5 mA",
+            "50 mA",
+            "500 mA",
+            "5 000 mA"
+          ],
+          "bonne": 2,
+          "explication": "On multiplie par 1 000."
+        },
+        {
+          "id": "q2913",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "4 700 µF, c'est…",
+          "reponses": [
+            "4,7 F",
+            "4,7 mF",
+            "47 mF",
+            "0,47 F"
+          ],
+          "bonne": 1,
+          "explication": "1 000 µF = 1 mF."
+        },
+        {
+          "id": "q2914",
+          "fiche_id": "prefixes",
+          "type": "qcm",
+          "enonce": "Quelle différence entre 1 MW et 1 mW ?",
+          "reponses": [
+            "Aucune",
+            "Un facteur d'un milliard",
+            "Un facteur mille",
+            "Un facteur dix"
+          ],
+          "bonne": 1,
+          "explication": "Méga (10⁶) contre milli (10⁻³) : 10⁹ d'écart. La casse compte."
+        },
+        {
+          "id": "q2915",
+          "fiche_id": "ordres_grandeur",
+          "type": "qcm",
+          "enonce": "Tension d'une pile classique ?",
+          "reponses": [
+            "1,5 V",
+            "12 V",
+            "230 V",
+            "5 V"
+          ],
+          "bonne": 0,
+          "explication": "1,5 V pour une pile alcaline, 1,2 V pour une rechargeable."
+        },
+        {
+          "id": "q2916",
+          "fiche_id": "ordres_grandeur",
+          "type": "qcm",
+          "enonce": "Puissance d'un réacteur nucléaire ?",
+          "reponses": [
+            "1 MW",
+            "1 000 MW",
+            "1 kW",
+            "100 W"
+          ],
+          "bonne": 1,
+          "explication": "Environ 1 GW par réacteur."
+        },
+        {
+          "id": "q2917",
+          "fiche_id": "ordres_grandeur",
+          "type": "qcm",
+          "enonce": "Puissance d'une éolienne terrestre récente ?",
+          "reponses": [
+            "3 kW",
+            "3 MW",
+            "300 W",
+            "3 GW"
+          ],
+          "bonne": 1,
+          "explication": "De 2 à 5 MW selon les modèles."
+        },
+        {
+          "id": "q2918",
+          "fiche_id": "ordres_grandeur",
+          "type": "qcm",
+          "enonce": "Une maison consomme par an de l'ordre de…",
+          "reponses": [
+            "20 kWh",
+            "2 000 à 15 000 kWh",
+            "1 000 000 kWh",
+            "2 kWh"
+          ],
+          "bonne": 1,
+          "explication": "Selon le chauffage, l'eau chaude et la surface."
+        },
+        {
+          "id": "q2919",
+          "fiche_id": "ordres_grandeur",
+          "type": "qcm",
+          "enonce": "Un résultat de calcul donne 5 000 A pour une lampe. C'est…",
+          "reponses": [
+            "plausible",
+            "aberrant : une lampe consomme moins d'1 A",
+            "normal en LED",
+            "possible en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Les ordres de grandeur servent à repérer les erreurs."
+        },
+        {
+          "id": "q2920",
+          "fiche_id": "prefixes",
+          "type": "ordre",
+          "enonce": "Classe ces valeurs de la plus petite à la plus grande.",
+          "reponses": [
+            "1 mW",
+            "1 W",
+            "1 kW",
+            "1 MW"
+          ],
+          "explication": "milli, unité, kilo, méga : chaque étape multiplie par 1 000."
+        }
+      ],
+      "ordre": 11
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 11,
+      "ordre": 12,
       "fiches": [
         {
           "id": "multimetre",
@@ -3387,7 +3694,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 12,
+      "ordre": 13,
       "fiches": [
         {
           "id": "tableau",
@@ -3997,7 +4304,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 13
+      "ordre": 14
     },
     {
       "id": "cablage",
@@ -4305,7 +4612,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 14
+      "ordre": 15
     },
     {
       "id": "parafoudre",
@@ -4612,7 +4919,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 15
+      "ordre": 16
     },
     {
       "id": "locaux_risques",
@@ -4919,7 +5226,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 16
+      "ordre": 17
     },
     {
       "id": "photovoltaique",
@@ -5226,7 +5533,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 17
+      "ordre": 18
     },
     {
       "id": "chauffage",
@@ -5533,7 +5840,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 18
+      "ordre": 19
     },
     {
       "id": "domotique",
@@ -5840,7 +6147,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 19
+      "ordre": 20
     },
     {
       "id": "vehicule_electrique",
@@ -6148,12 +6455,627 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 20
+      "ordre": 21
+    },
+    {
+      "id": "plaque_signaletique",
+      "titre": "Lire une plaque signalétique",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "marquages",
+          "titre": "Les marquages d'un appareil",
+          "contenu": "La plaque signalétique donne les caractéristiques d'un appareil :\n\n• Tension d'alimentation : 230 V~ 50 Hz (alternatif) ou 12 V⎓ (continu).\n• Puissance : en W ; parfois courant en A.\n• Classe de protection : classe I (avec terre, symbole ⏚), classe II (double isolation, carré dans un carré), classe III (TBTS, symbole d'un losange avec trois barres).\n• Indice IP : protection contre les solides et l'eau.\n• Marquage CE : conformité aux exigences européennes.\n• Symbole de la poubelle barrée : ne pas jeter avec les ordures, recyclage.\n• Fabricant, modèle, numéro de série, année.",
+          "image": "marquages.png"
+        },
+        {
+          "id": "plaque_moteur",
+          "titre": "La plaque d'un moteur",
+          "contenu": "Un moteur asynchrone porte :\n\n• Les tensions et le couplage : 230 V Δ / 400 V Y. Sur un réseau 400 V entre phases, on couple en étoile (Y).\n• Le courant nominal par couplage : par exemple 8,7 A / 5 A.\n• La puissance utile en kW : puissance mécanique disponible sur l'arbre.\n• La vitesse en tr/min : 1 450 tr/min = moteur 4 pôles à 50 Hz.\n• Le cos φ (facteur de puissance) : 0,8 typiquement.\n• Le rendement η, la classe d'isolation (F), l'indice IP (IP55), le service (S1 continu).\n\nPuissance absorbée ≈ puissance utile / rendement.",
+          "image": "plaque_moteur.png"
+        },
+        {
+          "id": "classes_ip",
+          "titre": "Classes et indices IP en pratique",
+          "contenu": "Classe I : la carcasse métallique est reliée à la terre par la fiche à broche de terre. Un défaut fait déclencher le différentiel.\n\nClasse II : double isolation, pas de terre, fiche à deux broches. Perceuse, sèche-cheveux, chargeur.\n\nClasse III : alimenté en très basse tension de sécurité (12 ou 24 V), sans danger de contact.\n\nIP : premier chiffre, solides (0 à 6, 5 = poussière, 6 = étanche à la poussière) ; second chiffre, eau (0 à 8, 4 = projections, 5 = jets, 7 = immersion temporaire). IP20 pour l'intérieur sec, IP44 dehors, IP65 exposé, IP68 immergé.",
+          "image": "classes_ip.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3001",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "Le symbole d'un carré dans un carré indique…",
+          "reponses": [
+            "la classe I",
+            "la classe II, double isolation",
+            "la classe III",
+            "le recyclage"
+          ],
+          "bonne": 1,
+          "explication": "Pas de terre nécessaire : la double isolation protège."
+        },
+        {
+          "id": "q3002",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "Le marquage CE signifie…",
+          "reponses": [
+            "fabriqué en Europe",
+            "conforme aux exigences européennes",
+            "contrôlé par Enedis",
+            "classe E"
+          ],
+          "bonne": 1,
+          "explication": "Le fabricant déclare la conformité aux directives."
+        },
+        {
+          "id": "q3003",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "La poubelle barrée sur un appareil signifie…",
+          "reponses": [
+            "appareil cassé",
+            "ne pas jeter avec les ordures ménagères : recyclage",
+            "poubelle interdite",
+            "classe III"
+          ],
+          "bonne": 1,
+          "explication": "Déchets d'équipements électriques : point de collecte."
+        },
+        {
+          "id": "q3004",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "« 230 V~ 50 Hz » sur une plaque indique…",
+          "reponses": [
+            "une alimentation continue",
+            "une alimentation alternative 230 V à 50 Hz",
+            "une batterie",
+            "du triphasé"
+          ],
+          "bonne": 1,
+          "explication": "Le ~ signale l'alternatif."
+        },
+        {
+          "id": "q3005",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "Le symbole ⏚ sur un appareil indique…",
+          "reponses": [
+            "la borne de terre, classe I",
+            "la classe II",
+            "une pile",
+            "une antenne"
+          ],
+          "bonne": 0,
+          "explication": "L'appareil doit être relié à la terre."
+        },
+        {
+          "id": "q3006",
+          "fiche_id": "marquages",
+          "type": "qcm",
+          "enonce": "Un appareil de classe III est alimenté…",
+          "reponses": [
+            "en 230 V",
+            "en très basse tension de sécurité (12 ou 24 V)",
+            "en 400 V",
+            "en haute tension"
+          ],
+          "bonne": 1,
+          "explication": "Aucun danger de contact : lampe de jardin 12 V, jouet…"
+        },
+        {
+          "id": "q3007",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "Un moteur marqué 230 V Δ / 400 V Y sur un réseau 400 V se couple…",
+          "reponses": [
+            "en triangle",
+            "en étoile",
+            "au choix",
+            "en série"
+          ],
+          "bonne": 1,
+          "explication": "Y (étoile) sur 400 V entre phases : chaque enroulement voit 230 V."
+        },
+        {
+          "id": "q3008",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "1 450 tr/min à 50 Hz correspond à un moteur…",
+          "reponses": [
+            "2 pôles",
+            "4 pôles",
+            "8 pôles",
+            "à courant continu"
+          ],
+          "bonne": 1,
+          "explication": "Vitesse de synchronisme 1 500 tr/min, moins le glissement."
+        },
+        {
+          "id": "q3009",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "La puissance en kW sur la plaque d'un moteur est…",
+          "reponses": [
+            "la puissance électrique absorbée",
+            "la puissance mécanique utile sur l'arbre",
+            "la puissance de démarrage",
+            "la puissance apparente"
+          ],
+          "bonne": 1,
+          "explication": "Absorbée = utile / rendement."
+        },
+        {
+          "id": "q3010",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "Un moteur de 4 kW utile avec un rendement de 0,8 absorbe…",
+          "reponses": [
+            "3,2 kW",
+            "5 kW",
+            "4 kW",
+            "8 kW"
+          ],
+          "bonne": 1,
+          "explication": "4 / 0,8 = 5 kW."
+        },
+        {
+          "id": "q3011",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "Le cos φ indique…",
+          "reponses": [
+            "la vitesse",
+            "le facteur de puissance",
+            "le rendement",
+            "la température"
+          ],
+          "bonne": 1,
+          "explication": "Rapport entre puissance active et apparente, souvent 0,8 pour un moteur."
+        },
+        {
+          "id": "q3012",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "Le service S1 signifie…",
+          "reponses": [
+            "démarrage difficile",
+            "fonctionnement continu",
+            "une seconde",
+            "monophasé"
+          ],
+          "bonne": 1,
+          "explication": "Le moteur peut tourner en permanence à sa puissance nominale."
+        },
+        {
+          "id": "q3013",
+          "fiche_id": "plaque_moteur",
+          "type": "qcm",
+          "enonce": "Sur une plaque « 8,7 A / 5 A », 5 A correspond…",
+          "reponses": [
+            "au couplage triangle 230 V",
+            "au couplage étoile 400 V",
+            "au démarrage",
+            "à la puissance"
+          ],
+          "bonne": 1,
+          "explication": "En étoile sous 400 V, le courant de ligne est plus faible."
+        },
+        {
+          "id": "q3014",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "Une perceuse sans broche de terre est de classe…",
+          "reponses": [
+            "I",
+            "II",
+            "III",
+            "0"
+          ],
+          "bonne": 1,
+          "explication": "Double isolation, fiche à deux broches."
+        },
+        {
+          "id": "q3015",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "Un lave-linge avec fiche à terre est de classe…",
+          "reponses": [
+            "I",
+            "II",
+            "III",
+            "IP"
+          ],
+          "bonne": 0,
+          "explication": "Sa carcasse métallique est reliée à la terre."
+        },
+        {
+          "id": "q3016",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "IP65 signifie…",
+          "reponses": [
+            "protégé contre les projections seulement",
+            "étanche à la poussière et protégé contre les jets d'eau",
+            "immergeable",
+            "intérieur sec seulement"
+          ],
+          "bonne": 1,
+          "explication": "6 = poussière, 5 = jets d'eau."
+        },
+        {
+          "id": "q3017",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "IP68 permet…",
+          "reponses": [
+            "l'intérieur sec",
+            "l'immersion prolongée",
+            "les projections seulement",
+            "rien de particulier"
+          ],
+          "bonne": 1,
+          "explication": "8 = immersion prolongée, selon les conditions du fabricant."
+        },
+        {
+          "id": "q3018",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "Un luminaire IP20 convient…",
+          "reponses": [
+            "dans la douche",
+            "en intérieur sec",
+            "dehors",
+            "dans la piscine"
+          ],
+          "bonne": 1,
+          "explication": "0 pour l'eau : aucune protection."
+        },
+        {
+          "id": "q3019",
+          "fiche_id": "classes_ip",
+          "type": "qcm",
+          "enonce": "Le premier chiffre de l'IP concerne…",
+          "reponses": [
+            "l'eau",
+            "les solides et la poussière",
+            "la tension",
+            "la classe"
+          ],
+          "bonne": 1,
+          "explication": "Second chiffre : l'eau."
+        },
+        {
+          "id": "q3020",
+          "fiche_id": "plaque_moteur",
+          "type": "ordre",
+          "enonce": "Calcule le courant absorbé d'un moteur : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Lire la puissance utile et le rendement",
+            "Calculer la puissance absorbée = utile / rendement",
+            "Lire la tension et le couplage sur le réseau",
+            "Comparer au courant indiqué sur la plaque pour ce couplage"
+          ],
+          "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
+        }
+      ],
+      "ordre": 22
+    },
+    {
+      "id": "ventilation",
+      "titre": "Ventilation et climatisation",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "vmc",
+          "titre": "La VMC",
+          "contenu": "La ventilation mécanique contrôlée renouvelle l'air : elle évacue l'humidité et les polluants des pièces humides (cuisine, salle de bains, WC) et fait entrer de l'air neuf par les entrées d'air des pièces sèches.\n\n• Simple flux autoréglable : débit fixe.\n• Simple flux hygroréglable : le débit augmente avec l'humidité, économies de chauffage.\n• Double flux : l'air extrait réchauffe l'air entrant via un échangeur, jusqu'à 90 % de la chaleur récupérée.\n\nUne VMC fonctionne 24 h/24 : circuit dédié, jamais coupé par un interrupteur. Puissance faible : 20 à 80 W. Entretien : bouches et filtres.",
+          "image": "vmc.png"
+        },
+        {
+          "id": "climatisation",
+          "titre": "La climatisation",
+          "contenu": "Une climatisation est une pompe à chaleur inversée : elle prend la chaleur dedans et la rejette dehors. Les modèles réversibles chauffent aussi l'hiver.\n\nSplit : une unité extérieure (compresseur) et une ou plusieurs unités intérieures reliées par des liaisons frigorifiques. Monobloc : tout dans un bloc, moins efficace.\n\nPuissance frigorifique en kW ou en BTU : environ 100 W par m² pour une pièce standard, 2,5 kW pour 25 m². La puissance électrique absorbée est 3 à 4 fois plus faible (coefficient EER / SEER).\n\nLe fluide frigorigène est manipulé par un professionnel attesté.",
+          "image": "climatisation.png"
+        },
+        {
+          "id": "raccordement_clim",
+          "titre": "Raccorder et entretenir",
+          "contenu": "Circuit dédié depuis le tableau : disjoncteur selon la puissance (16 ou 20 A en monophasé pour une petite clim), différentiel 30 mA, section adaptée.\n\nUnité extérieure : sur support antivibratile, à l'écart des voisins pour le bruit, protégée par un interrupteur de proximité pour la maintenance.\n\nCondensats : l'unité intérieure produit de l'eau qu'il faut évacuer (gravité ou pompe de relevage).\n\nEntretien : filtres nettoyés tous les mois en saison, contrôle d'étanchéité périodique selon la charge de fluide, VMC dépoussiérée deux fois par an.",
+          "image": "raccordement_clim.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3101",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "La VMC sert à…",
+          "reponses": [
+            "chauffer",
+            "renouveler l'air et évacuer l'humidité",
+            "refroidir",
+            "éclairer"
+          ],
+          "bonne": 1,
+          "explication": "Extraction dans les pièces humides, entrées d'air dans les pièces sèches."
+        },
+        {
+          "id": "q3102",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "Une VMC hygroréglable…",
+          "reponses": [
+            "a un débit fixe",
+            "adapte son débit à l'humidité",
+            "chauffe l'air",
+            "fonctionne à la main"
+          ],
+          "bonne": 1,
+          "explication": "Moins d'air extrait quand il est sec : économies de chauffage."
+        },
+        {
+          "id": "q3103",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "La VMC double flux…",
+          "reponses": [
+            "extrait seulement",
+            "récupère la chaleur de l'air extrait pour réchauffer l'air neuf",
+            "fonctionne deux fois par jour",
+            "est un climatiseur"
+          ],
+          "bonne": 1,
+          "explication": "L'échangeur récupère jusqu'à 90 % de la chaleur."
+        },
+        {
+          "id": "q3104",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "Une VMC doit fonctionner…",
+          "reponses": [
+            "la nuit seulement",
+            "24 h / 24, sur un circuit dédié sans interrupteur",
+            "une heure par jour",
+            "en hiver seulement"
+          ],
+          "bonne": 1,
+          "explication": "L'arrêter provoque condensation et moisissures."
+        },
+        {
+          "id": "q3105",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "Puissance typique d'une VMC simple flux ?",
+          "reponses": [
+            "2 000 W",
+            "20 à 80 W",
+            "500 W",
+            "5 W"
+          ],
+          "bonne": 1,
+          "explication": "Très faible : moins qu'une ampoule d'autrefois."
+        },
+        {
+          "id": "q3106",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "Les bouches d'extraction se trouvent…",
+          "reponses": [
+            "dans les chambres",
+            "dans les pièces humides : cuisine, salle de bains, WC",
+            "dans le salon",
+            "dehors"
+          ],
+          "bonne": 1,
+          "explication": "Les entrées d'air sont dans les pièces sèches."
+        },
+        {
+          "id": "q3107",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Une climatisation est…",
+          "reponses": [
+            "un radiateur",
+            "une pompe à chaleur qui rejette la chaleur dehors",
+            "un ventilateur",
+            "un chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Réversible, elle chauffe aussi en hiver."
+        },
+        {
+          "id": "q3108",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Un split, c'est…",
+          "reponses": [
+            "un monobloc",
+            "une unité extérieure et des unités intérieures reliées par des liaisons frigorifiques",
+            "un ventilateur",
+            "une VMC"
+          ],
+          "bonne": 1,
+          "explication": "Le compresseur bruyant reste dehors."
+        },
+        {
+          "id": "q3109",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Puissance frigorifique indicative pour 25 m² ?",
+          "reponses": [
+            "250 W",
+            "2,5 kW",
+            "25 kW",
+            "25 W"
+          ],
+          "bonne": 1,
+          "explication": "Environ 100 W par m²."
+        },
+        {
+          "id": "q3110",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Une clim de 2,5 kW frigorifiques absorbe électriquement environ…",
+          "reponses": [
+            "2,5 kW",
+            "0,7 kW",
+            "10 kW",
+            "25 W"
+          ],
+          "bonne": 1,
+          "explication": "3 à 4 fois moins que la puissance frigorifique (EER ≈ 3,5)."
+        },
+        {
+          "id": "q3111",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Qui manipule le fluide frigorigène ?",
+          "reponses": [
+            "N'importe qui",
+            "Un professionnel attesté",
+            "Le vendeur",
+            "Le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Attestation de capacité obligatoire : fluides à effet de serre."
+        },
+        {
+          "id": "q3112",
+          "fiche_id": "climatisation",
+          "type": "qcm",
+          "enonce": "Un climatiseur monobloc est…",
+          "reponses": [
+            "plus efficace qu'un split",
+            "moins efficace : tout est dans un bloc, souvent avec une gaine par la fenêtre",
+            "interdit",
+            "silencieux"
+          ],
+          "bonne": 1,
+          "explication": "Pratique mais bruyant et moins performant."
+        },
+        {
+          "id": "q3113",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "Une clim se raccorde…",
+          "reponses": [
+            "sur une prise du salon",
+            "sur un circuit dédié avec différentiel 30 mA",
+            "sur l'éclairage",
+            "sur le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Comme tout appareil de puissance."
+        },
+        {
+          "id": "q3114",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "L'interrupteur de proximité de l'unité extérieure sert à…",
+          "reponses": [
+            "allumer la clim",
+            "couper l'alimentation pour la maintenance",
+            "régler la température",
+            "économiser"
+          ],
+          "bonne": 1,
+          "explication": "Le technicien coupe et cadenasse sur place."
+        },
+        {
+          "id": "q3115",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "Les condensats sont…",
+          "reponses": [
+            "du fluide frigorigène",
+            "l'eau produite par l'unité intérieure, à évacuer",
+            "de la poussière",
+            "du gaz"
+          ],
+          "bonne": 1,
+          "explication": "Par gravité ou avec une pompe de relevage."
+        },
+        {
+          "id": "q3116",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "Les filtres d'une clim se nettoient…",
+          "reponses": [
+            "jamais",
+            "tous les mois en saison",
+            "tous les dix ans",
+            "une fois à l'achat"
+          ],
+          "bonne": 1,
+          "explication": "Un filtre sale fait chuter le rendement."
+        },
+        {
+          "id": "q3117",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "L'unité extérieure se pose…",
+          "reponses": [
+            "au sol sans fixation",
+            "sur un support antivibratile, en pensant au bruit pour les voisins",
+            "dans le grenier",
+            "dans la salle de bains"
+          ],
+          "bonne": 1,
+          "explication": "Vibrations et bruit sont les plaintes les plus fréquentes."
+        },
+        {
+          "id": "q3118",
+          "fiche_id": "raccordement_clim",
+          "type": "qcm",
+          "enonce": "Le contrôle d'étanchéité d'une clim…",
+          "reponses": [
+            "est inutile",
+            "est périodique selon la charge de fluide",
+            "se fait à l'eau",
+            "se fait avec un VAT"
+          ],
+          "bonne": 1,
+          "explication": "Fuite de fluide = perte de performance et impact climatique."
+        },
+        {
+          "id": "q3119",
+          "fiche_id": "vmc",
+          "type": "qcm",
+          "enonce": "Entretien d'une VMC ?",
+          "reponses": [
+            "Aucun",
+            "Bouches et filtres dépoussiérés, environ deux fois par an",
+            "Changer le moteur chaque année",
+            "La couper l'été"
+          ],
+          "bonne": 1,
+          "explication": "Des bouches encrassées réduisent le débit."
+        },
+        {
+          "id": "q3120",
+          "fiche_id": "raccordement_clim",
+          "type": "ordre",
+          "enonce": "Installer une clim split : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Tirer un circuit dédié avec différentiel 30 mA",
+            "Poser l'unité extérieure sur support antivibratile",
+            "Poser l'unité intérieure et l'évacuation des condensats",
+            "Raccorder les liaisons frigorifiques par un professionnel attesté",
+            "Mettre en service et tester"
+          ],
+          "explication": "Alimentation, unités, fluide, mise en service."
+        }
+      ],
+      "ordre": 23
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 21,
+      "ordre": 24,
       "fiches": [
         {
           "id": "dangers",
@@ -6461,7 +7383,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 22,
+      "ordre": 25,
       "fiches": [
         {
           "id": "principe",
@@ -7069,7 +7991,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 23
+      "ordre": 26
     },
     {
       "id": "epi",
@@ -7376,7 +8298,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 24
+      "ordre": 27
     },
     {
       "id": "b0_bs",
@@ -7684,7 +8606,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 25
+      "ordre": 28
     },
     {
       "id": "br",
@@ -7992,7 +8914,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 26
+      "ordre": 29
     },
     {
       "id": "secours",
@@ -8299,7 +9221,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 27
+      "ordre": 30
     },
     {
       "id": "b1_b2",
@@ -8608,7 +9530,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 28
+      "ordre": 31
     },
     {
       "id": "bc",
@@ -8916,7 +9838,623 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 29
+      "ordre": 32
+    },
+    {
+      "id": "outillage",
+      "titre": "Outillage électroportatif et chantier",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "outils_electro",
+          "titre": "Les outils électroportatifs",
+          "contenu": "Perceuse, visseuse, meuleuse, scie : sur secteur (230 V) ou sur batterie (18 V le plus souvent).\n\nLes outils secteur sont en général de classe II (double isolation). Vérifier le câble et la fiche avant chaque usage : un câble abîmé se remplace, il ne se répare pas au ruban adhésif.\n\nSur batterie : pas de risque de choc électrique au 230 V, mais attention aux batteries lithium (chute, court-circuit, chaleur).\n\nLire la plaque : puissance, vitesse, IP éventuel. Porter les protections adaptées à l'outil : lunettes, gants, protections auditives.",
+          "image": "outils_electro.png"
+        },
+        {
+          "id": "chantier",
+          "titre": "L'électricité sur un chantier",
+          "contenu": "Le coffret de chantier fournit des prises protégées par différentiel 30 mA. Les rallonges sont de type H07RN-F (souple, résistant), entièrement déroulées, protégées du passage et de l'eau.\n\nSans coffret, un disjoncteur différentiel portable (RCD) entre la prise et l'outil protège l'utilisateur.\n\nÉclairage de chantier : baladeuses de classe II ou en très basse tension, jamais de baladeuse 230 V dans un milieu humide ou conducteur (cuve, fosse) : TBTS 24 V obligatoire.\n\nLignes aériennes et câbles enterrés : demande de renseignements (DT-DICT) avant de creuser, distances de sécurité pour les engins.",
+          "image": "chantier.png"
+        },
+        {
+          "id": "bonnes_pratiques",
+          "titre": "Bonnes pratiques",
+          "contenu": "• Débrancher avant de changer un accessoire (foret, disque).\n• Ne jamais bloquer un interrupteur en position marche.\n• Tenir l'outil à deux mains, pas de vêtements flottants.\n• Poussière : aspiration ou masque adapté.\n• Ranger les batteries au sec, à l'abri des chocs, ne pas les laisser au soleil dans le véhicule.\n• Contrôler périodiquement les outils et rallonges (vérification visuelle et, en entreprise, contrôle électrique).\n• Un outil qui picote, chauffe anormalement ou sent le brûlé : on arrête et on fait vérifier.",
+          "image": "bonnes_pratiques.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3201",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "La plupart des outils électroportatifs secteur sont de classe…",
+          "reponses": [
+            "I",
+            "II",
+            "III",
+            "0"
+          ],
+          "bonne": 1,
+          "explication": "Double isolation : fiche sans terre."
+        },
+        {
+          "id": "q3202",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "Un câble d'outil abîmé…",
+          "reponses": [
+            "se répare au ruban adhésif",
+            "se remplace",
+            "se laisse tel quel",
+            "se raccourcit au couteau"
+          ],
+          "bonne": 1,
+          "explication": "Le ruban n'est pas un isolant certifié."
+        },
+        {
+          "id": "q3203",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "Tension habituelle des outils sur batterie ?",
+          "reponses": [
+            "230 V",
+            "18 V",
+            "400 V",
+            "1,5 V"
+          ],
+          "bonne": 1,
+          "explication": "12, 18 ou 36 V selon les gammes ; 18 V domine."
+        },
+        {
+          "id": "q3204",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "Le principal risque des outils sur batterie côté électricité ?",
+          "reponses": [
+            "Le choc au 230 V",
+            "La batterie lithium : chute, court-circuit, chaleur",
+            "La foudre",
+            "Le neutre"
+          ],
+          "bonne": 1,
+          "explication": "Pas de secteur, mais une batterie puissante."
+        },
+        {
+          "id": "q3205",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "Avant d'utiliser un outil secteur, on vérifie…",
+          "reponses": [
+            "la couleur",
+            "le câble, la fiche et l'état du boîtier",
+            "le prix",
+            "la marque"
+          ],
+          "bonne": 1,
+          "explication": "Vérification visuelle systématique."
+        },
+        {
+          "id": "q3206",
+          "fiche_id": "outils_electro",
+          "type": "qcm",
+          "enonce": "Pour une meuleuse, les protections indispensables incluent…",
+          "reponses": [
+            "lunettes, gants, protections auditives",
+            "chaussures de ville",
+            "rien",
+            "un chapeau"
+          ],
+          "bonne": 0,
+          "explication": "Projections, bruit, coupures."
+        },
+        {
+          "id": "q3207",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Le coffret de chantier fournit…",
+          "reponses": [
+            "du 12 V",
+            "des prises protégées par différentiel 30 mA",
+            "du triphasé sans protection",
+            "de l'éclairage seulement"
+          ],
+          "bonne": 1,
+          "explication": "Protection des personnes sur un chantier humide et encombré."
+        },
+        {
+          "id": "q3208",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Type de rallonge adapté au chantier ?",
+          "reponses": [
+            "H07V-U",
+            "H07RN-F",
+            "Câble téléphone",
+            "Fil de fer"
+          ],
+          "bonne": 1,
+          "explication": "Souple, résistant à l'abrasion et à l'eau."
+        },
+        {
+          "id": "q3209",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Sans coffret de chantier, on utilise…",
+          "reponses": [
+            "une multiprise",
+            "un disjoncteur différentiel portable (RCD) entre la prise et l'outil",
+            "rien",
+            "une rallonge plus longue"
+          ],
+          "bonne": 1,
+          "explication": "Il protège l'utilisateur en cas de fuite."
+        },
+        {
+          "id": "q3210",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Dans une cuve ou une fosse (milieu conducteur), l'éclairage est…",
+          "reponses": [
+            "en 230 V classe I",
+            "en très basse tension de sécurité 24 V",
+            "interdit",
+            "en 400 V"
+          ],
+          "bonne": 1,
+          "explication": "Milieu conducteur : le 230 V est mortel, même en classe II."
+        },
+        {
+          "id": "q3211",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Avant de creuser près de réseaux enterrés, on fait…",
+          "reponses": [
+            "rien",
+            "une demande de renseignements (DT-DICT)",
+            "un trou d'essai à la pelleteuse",
+            "confiance à sa mémoire"
+          ],
+          "bonne": 1,
+          "explication": "Obligatoire : localisation des câbles et canalisations."
+        },
+        {
+          "id": "q3212",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Un engin de chantier près d'une ligne aérienne doit…",
+          "reponses": [
+            "passer vite",
+            "respecter les distances de sécurité, guidé par un surveillant",
+            "toucher la ligne pour tester",
+            "ignorer la ligne"
+          ],
+          "bonne": 1,
+          "explication": "Un arc peut jaillir avant même le contact."
+        },
+        {
+          "id": "q3213",
+          "fiche_id": "chantier",
+          "type": "qcm",
+          "enonce": "Une rallonge sur enrouleur au chantier doit être…",
+          "reponses": [
+            "laissée enroulée",
+            "entièrement déroulée",
+            "coupée",
+            "mouillée"
+          ],
+          "bonne": 1,
+          "explication": "Sinon échauffement du câble enroulé."
+        },
+        {
+          "id": "q3214",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "Avant de changer un foret ou un disque, on…",
+          "reponses": [
+            "laisse l'outil branché",
+            "débranche l'outil ou retire la batterie",
+            "accélère",
+            "enlève ses lunettes"
+          ],
+          "bonne": 1,
+          "explication": "Un démarrage intempestif blesse gravement."
+        },
+        {
+          "id": "q3215",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "Bloquer l'interrupteur d'un outil en position marche…",
+          "reponses": [
+            "est pratique",
+            "est dangereux : l'outil ne s'arrête plus si on le lâche",
+            "est obligatoire",
+            "économise la batterie"
+          ],
+          "bonne": 1,
+          "explication": "L'outil continue seul en cas de chute ou de perte de contrôle."
+        },
+        {
+          "id": "q3216",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "Une batterie d'outil laissée au soleil dans le véhicule…",
+          "reponses": [
+            "se recharge",
+            "peut s'abîmer ou s'emballer",
+            "est sans risque",
+            "refroidit"
+          ],
+          "bonne": 1,
+          "explication": "Le lithium n'aime pas la chaleur."
+        },
+        {
+          "id": "q3217",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "Un outil qui picote à la main…",
+          "reponses": [
+            "est normal",
+            "signale un défaut d'isolement : on arrête et on fait vérifier",
+            "fonctionne mieux",
+            "est bien réglé"
+          ],
+          "bonne": 1,
+          "explication": "Défaut d'isolement = danger."
+        },
+        {
+          "id": "q3218",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "Contre la poussière de perçage ou de ponçage, on utilise…",
+          "reponses": [
+            "rien",
+            "une aspiration ou un masque adapté",
+            "un foulard",
+            "de l'eau sur l'outil secteur"
+          ],
+          "bonne": 1,
+          "explication": "Certaines poussières (silice, bois) sont toxiques."
+        },
+        {
+          "id": "q3219",
+          "fiche_id": "bonnes_pratiques",
+          "type": "qcm",
+          "enonce": "En entreprise, les outils et rallonges sont…",
+          "reponses": [
+            "jamais contrôlés",
+            "contrôlés périodiquement (visuel et électrique)",
+            "remplacés chaque semaine",
+            "laissés à la responsabilité de chacun"
+          ],
+          "bonne": 1,
+          "explication": "Registre de contrôle et étiquetage."
+        },
+        {
+          "id": "q3220",
+          "fiche_id": "chantier",
+          "type": "ordre",
+          "enonce": "Brancher une meuleuse sur un chantier : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier le câble, la fiche et le disque",
+            "Dérouler entièrement la rallonge H07RN-F",
+            "Brancher sur le coffret protégé par différentiel 30 mA",
+            "Mettre les EPI : lunettes, gants, protections auditives",
+            "Utiliser l'outil à deux mains"
+          ],
+          "explication": "Vérifier, alimenter proprement, se protéger, travailler."
+        }
+      ],
+      "ordre": 33
+    },
+    {
+      "id": "normes",
+      "titre": "Normes et diagnostic électrique",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "les_normes",
+          "titre": "Les normes à connaître",
+          "contenu": "• NF C 15-100 : la norme des installations électriques basse tension (logements, tertiaire). Sections, protections, salle de bains, nombre de prises…\n• NF C 18-510 : les opérations sur les ouvrages électriques et l'habilitation.\n• NF C 14-100 : le branchement, entre le réseau et l'installation.\n• NF C 13-100 / 13-200 : les postes et installations haute tension.\n\nUne norme n'est pas une loi, mais elle est rendue obligatoire par des arrêtés pour le neuf et les rénovations. Elle évolue par amendements : on applique la version en vigueur à la date des travaux.",
+          "image": "les_normes.png"
+        },
+        {
+          "id": "consuel",
+          "titre": "Le Consuel et la conformité",
+          "contenu": "Toute installation neuve ou entièrement rénovée doit recevoir une attestation de conformité visée par le Consuel avant la mise sous tension par le distributeur.\n\nL'installateur remplit l'attestation, le Consuel peut venir vérifier. Sans visa, pas de raccordement.\n\nDifférence importante : mise en conformité (tout aux normes actuelles, obligatoire dans le neuf) et mise en sécurité (les points essentiels de sécurité, suffisants pour l'existant : terre, différentiel, protection des circuits, salle de bains, absence de matériel vétuste, conducteurs protégés).",
+          "image": "consuel.png"
+        },
+        {
+          "id": "diagnostic",
+          "titre": "Le diagnostic électrique",
+          "contenu": "Obligatoire à la vente et à la location d'un logement dont l'installation a plus de 15 ans, valable 3 ans (vente) ou 6 ans (location).\n\nLe diagnostiqueur vérifie six points : l'appareil général de commande et de protection, le différentiel adapté au régime de neutre, la protection contre les surintensités sur chaque circuit, la liaison équipotentielle et les règles de la salle de bains, l'absence de matériel vétuste ou inadapté, et la protection des conducteurs (pas de fils nus, gaines).\n\nLe diagnostic informe, il n'oblige pas à faire les travaux, mais les anomalies signalées engagent le vendeur ou le bailleur.",
+          "image": "diagnostic.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3301",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "La norme des installations basse tension des logements est…",
+          "reponses": [
+            "NF C 18-510",
+            "NF C 15-100",
+            "NF C 14-100",
+            "ISO 9001"
+          ],
+          "bonne": 1,
+          "explication": "Sections, protections, salle de bains : tout y est."
+        },
+        {
+          "id": "q3302",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "La NF C 18-510 traite…",
+          "reponses": [
+            "des installations",
+            "des opérations sur les ouvrages électriques et de l'habilitation",
+            "du branchement",
+            "de la haute tension seulement"
+          ],
+          "bonne": 1,
+          "explication": "C'est la référence de l'habilitation."
+        },
+        {
+          "id": "q3303",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "La NF C 14-100 concerne…",
+          "reponses": [
+            "le branchement, entre le réseau et l'installation",
+            "les piscines",
+            "les moteurs",
+            "les batteries"
+          ],
+          "bonne": 0,
+          "explication": "Compteur, disjoncteur de branchement, liaison au réseau."
+        },
+        {
+          "id": "q3304",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "Une norme est-elle une loi ?",
+          "reponses": [
+            "Oui",
+            "Non, mais des arrêtés la rendent obligatoire pour le neuf et les rénovations",
+            "Non, elle est facultative partout",
+            "Oui, depuis toujours"
+          ],
+          "bonne": 1,
+          "explication": "L'obligation vient de la réglementation qui s'y réfère."
+        },
+        {
+          "id": "q3305",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "Quelle version de la norme applique-t-on ?",
+          "reponses": [
+            "Celle de la construction du bâtiment",
+            "Celle en vigueur à la date des travaux",
+            "La plus ancienne",
+            "Au choix"
+          ],
+          "bonne": 1,
+          "explication": "Les amendements successifs s'appliquent aux nouveaux travaux."
+        },
+        {
+          "id": "q3306",
+          "fiche_id": "les_normes",
+          "type": "qcm",
+          "enonce": "Les installations haute tension relèvent…",
+          "reponses": [
+            "de la NF C 15-100",
+            "de la NF C 13-100 et 13-200",
+            "du code de la route",
+            "de la NF C 18-510 uniquement"
+          ],
+          "bonne": 1,
+          "explication": "Postes de livraison et installations HT."
+        },
+        {
+          "id": "q3307",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "Le Consuel délivre…",
+          "reponses": [
+            "le permis de construire",
+            "l'attestation de conformité visée avant mise sous tension",
+            "le compteur",
+            "l'abonnement"
+          ],
+          "bonne": 1,
+          "explication": "Sans visa, le distributeur ne raccorde pas."
+        },
+        {
+          "id": "q3308",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "Qui remplit l'attestation de conformité ?",
+          "reponses": [
+            "Le Consuel",
+            "L'installateur (ou le particulier qui a réalisé les travaux)",
+            "Enedis",
+            "Le maire"
+          ],
+          "bonne": 1,
+          "explication": "Le Consuel la vise, éventuellement après visite."
+        },
+        {
+          "id": "q3309",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "La mise en conformité, c'est…",
+          "reponses": [
+            "les six points de sécurité",
+            "tout aux normes actuelles, obligatoire dans le neuf",
+            "un diagnostic",
+            "une réparation"
+          ],
+          "bonne": 1,
+          "explication": "Exigée pour une installation neuve ou entièrement rénovée."
+        },
+        {
+          "id": "q3310",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "La mise en sécurité, c'est…",
+          "reponses": [
+            "tout refaire",
+            "traiter les points essentiels de sécurité d'une installation existante",
+            "changer le compteur",
+            "repeindre le tableau"
+          ],
+          "bonne": 1,
+          "explication": "Terre, différentiel, protections, salle de bains, matériel vétuste, conducteurs protégés."
+        },
+        {
+          "id": "q3311",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "Une installation ancienne doit-elle être entièrement conforme à la norme actuelle ?",
+          "reponses": [
+            "Oui, toujours",
+            "Non : la mise en sécurité suffit tant qu'on ne rénove pas totalement",
+            "Oui, chaque année",
+            "Non, jamais rien à faire"
+          ],
+          "bonne": 1,
+          "explication": "La norme n'est pas rétroactive, mais la sécurité de base est due."
+        },
+        {
+          "id": "q3312",
+          "fiche_id": "consuel",
+          "type": "qcm",
+          "enonce": "Le Consuel est obligatoire pour…",
+          "reponses": [
+            "changer une ampoule",
+            "une installation neuve ou entièrement rénovée",
+            "remplacer une prise",
+            "un diagnostic"
+          ],
+          "bonne": 1,
+          "explication": "Et pour une installation photovoltaïque raccordée."
+        },
+        {
+          "id": "q3313",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Le diagnostic électrique est obligatoire à la vente si l'installation a plus de…",
+          "reponses": [
+            "5 ans",
+            "15 ans",
+            "30 ans",
+            "50 ans"
+          ],
+          "bonne": 1,
+          "explication": "Idem pour la location."
+        },
+        {
+          "id": "q3314",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Validité du diagnostic pour une vente ?",
+          "reponses": [
+            "1 an",
+            "3 ans",
+            "6 ans",
+            "10 ans"
+          ],
+          "bonne": 1,
+          "explication": "6 ans pour la location."
+        },
+        {
+          "id": "q3315",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Combien de points vérifie le diagnostiqueur ?",
+          "reponses": [
+            "2",
+            "6",
+            "20",
+            "100"
+          ],
+          "bonne": 1,
+          "explication": "Six points de sécurité essentiels."
+        },
+        {
+          "id": "q3316",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Quel point fait partie du diagnostic ?",
+          "reponses": [
+            "La couleur du tableau",
+            "Le différentiel adapté au régime de neutre",
+            "Le nombre de lampes",
+            "La marque du compteur"
+          ],
+          "bonne": 1,
+          "explication": "Avec la terre, les protections, la salle de bains, le matériel vétuste et les conducteurs."
+        },
+        {
+          "id": "q3317",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Le diagnostic oblige-t-il à faire les travaux ?",
+          "reponses": [
+            "Oui, sous un mois",
+            "Non, il informe, mais les anomalies engagent le vendeur ou le bailleur",
+            "Oui, avant la vente",
+            "Non, et il n'a aucun effet"
+          ],
+          "bonne": 1,
+          "explication": "L'acheteur ou le locataire est informé des risques."
+        },
+        {
+          "id": "q3318",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Des fils nus accessibles dans une boîte sont…",
+          "reponses": [
+            "acceptables",
+            "une anomalie : conducteurs non protégés",
+            "normaux dans l'ancien",
+            "une classe II"
+          ],
+          "bonne": 1,
+          "explication": "Point 6 du diagnostic : protection mécanique des conducteurs."
+        },
+        {
+          "id": "q3319",
+          "fiche_id": "diagnostic",
+          "type": "qcm",
+          "enonce": "Un tableau à fusibles à broches (anciens) est…",
+          "reponses": [
+            "conforme",
+            "du matériel vétuste signalé par le diagnostic",
+            "recommandé",
+            "obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "Matériel vétuste ou inadapté : point 5."
+        },
+        {
+          "id": "q3320",
+          "fiche_id": "consuel",
+          "type": "ordre",
+          "enonce": "Mettre sous tension une installation neuve : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Réaliser l'installation selon la NF C 15-100",
+            "Remplir l'attestation de conformité",
+            "Obtenir le visa du Consuel",
+            "Demander la mise en service au distributeur",
+            "Mise sous tension"
+          ],
+          "explication": "Norme, attestation, visa, mise en service."
+        }
+      ],
+      "ordre": 34
     }
   ]
 }
