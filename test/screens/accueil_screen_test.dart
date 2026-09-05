@@ -25,7 +25,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text("Grandeurs électriques et loi d'Ohm"), findsOneWidget);
-    expect(find.text('0/10 questions réussies'), findsNWidgets(5));
+    expect(find.text('0/10 questions réussies'), findsNWidgets(9));
     expect(find.text('Contenu à venir'), findsNothing);
   });
 }

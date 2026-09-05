@@ -14,9 +14,14 @@ class ContentLoader {
   static const String cheminContenu = 'assets/content.json';
 
   Future<List<Module>> chargerModules() async {
-    // `cache: false` : le contenu n'est lu qu'une fois au démarrage, et le
-    // cache de Flutter pose problème quand plusieurs tests rechargent l'appli.
-    final texte = await _bundle.loadString(cheminContenu, cache: false);
+    // On lit les octets et on décode nous-mêmes : `loadString` passe par un
+    // isolate au-delà de 50 Ko et garde un cache, deux comportements qui
+    // bloquent les tests quand l'appli est rechargée plusieurs fois.
+    final octets = await _bundle.load(cheminContenu);
+    final texte = utf8.decode(octets.buffer.asUint8List(
+      octets.offsetInBytes,
+      octets.lengthInBytes,
+    ));
     return parserModules(texte);
   }
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Lire un symbole d'habilitation</text>
+<text x="330" y="230" font-size="150" fill="#1565C0" text-anchor="middle" font-weight="bold" >B</text>
+<text x="520" y="230" font-size="150" fill="#FFB300" text-anchor="middle" font-weight="bold" >1</text>
+<text x="700" y="230" font-size="150" fill="#43A047" text-anchor="middle" font-weight="bold" >V</text>
+<rect x="80" y="290" width="320" height="400" rx="20" fill="white" stroke="#1565C0" stroke-width="5"/>
+<text x="240" y="335" font-size="24" fill="#1565C0" text-anchor="middle" font-weight="bold" >Domaine de tension</text>
+<text x="240" y="390" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >B = basse tension</text>
+<text x="240" y="420" font-size="20" fill="#78909C" text-anchor="middle" font-weight="normal" >(≤ 1 000 V alternatif)</text>
+<text x="240" y="470" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >H = haute tension</text>
+<rect x="430" y="290" width="420" height="400" rx="20" fill="white" stroke="#FFB300" stroke-width="5"/>
+<text x="640" y="335" font-size="24" fill="#F57F17" text-anchor="middle" font-weight="bold" >Rôle</text>
+<text x="450" y="385" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >0 : non-électricien</text>
+<text x="450" y="427" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >1 : exécutant électricien</text>
+<text x="450" y="469" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >2 : chargé de travaux</text>
+<text x="450" y="511" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >R : intervention générale</text>
+<text x="450" y="553" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >S : intervention élémentaire</text>
+<text x="450" y="595" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >C : chargé de consignation</text>
+<text x="450" y="637" font-size="22" fill="#1F2933" text-anchor="start" font-weight="normal" >E : essai, mesure, manœuvre</text>
+<rect x="880" y="290" width="240" height="400" rx="20" fill="white" stroke="#43A047" stroke-width="5"/>
+<text x="1000" y="335" font-size="24" fill="#43A047" text-anchor="middle" font-weight="bold" >Option</text>
+<text x="1000" y="400" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >V = voisinage</text>
+<text x="1000" y="435" font-size="20" fill="#78909C" text-anchor="middle" font-weight="normal" >de pièces nues</text>
+<text x="1000" y="462" font-size="20" fill="#78909C" text-anchor="middle" font-weight="normal" >sous tension</text>
+<text x="1000" y="560" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >Exemples :</text>
+<text x="1000" y="600" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="bold" >B0 · BS · BR</text>
+<text x="1000" y="640" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="bold" >B1V · B2V · BC</text>
+
+</svg>

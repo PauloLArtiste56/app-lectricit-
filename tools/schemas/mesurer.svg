@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Tension en parallèle, intensité en série</text>
+<line x1="140" y1="388" x2="220" y2="388" stroke="#37474F" stroke-width="6" stroke-linecap="round"/>
+<line x1="162" y1="412" x2="198" y2="412" stroke="#37474F" stroke-width="10" stroke-linecap="round"/>
+<text x="242" y="392" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >+</text>
+<text x="242" y="426" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >−</text>
+<line x1="180" y1="388" x2="180" y2="220" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="180" y1="220" x2="480" y2="220" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="480" y1="220" x2="480" y2="340" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<circle cx="480" cy="375" r="32" fill="white" stroke="#37474F" stroke-width="5"/>
+<line x1="457.376" y1="352.376" x2="502.624" y2="397.624" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="457.376" y1="397.624" x2="502.624" y2="352.376" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="480" y1="410" x2="480" y2="580" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="480" y1="580" x2="180" y2="580" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="180" y1="580" x2="180" y2="412" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="480" y1="340" x2="330" y2="340" stroke="#78909C" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+<line x1="480" y1="410" x2="330" y2="410" stroke="#78909C" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+<line x1="330" y1="340" x2="330" y2="410" stroke="#78909C" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+<circle cx="330" cy="375" r="34" fill="white" stroke="#37474F" stroke-width="5"/>
+<text x="330" y="387" font-size="34" fill="#1F2933" text-anchor="middle" font-weight="bold" >V</text>
+<text x="330" y="470" font-size="26" fill="#1565C0" text-anchor="middle" font-weight="bold" >en parallèle</text>
+<text x="330" y="505" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >sur les deux bornes</text>
+<line x1="660" y1="388" x2="740" y2="388" stroke="#37474F" stroke-width="6" stroke-linecap="round"/>
+<line x1="682" y1="412" x2="718" y2="412" stroke="#37474F" stroke-width="10" stroke-linecap="round"/>
+<text x="762" y="392" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >+</text>
+<text x="762" y="426" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >−</text>
+<line x1="700" y1="388" x2="700" y2="220" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="700" y1="220" x2="1000" y2="220" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="1000" y1="220" x2="1000" y2="340" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1000" cy="375" r="32" fill="white" stroke="#37474F" stroke-width="5"/>
+<line x1="977.376" y1="352.376" x2="1022.624" y2="397.624" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="977.376" y1="397.624" x2="1022.624" y2="352.376" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="1000" y1="410" x2="1000" y2="580" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="1000" y1="580" x2="700" y2="580" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<line x1="700" y1="580" x2="700" y2="412" stroke="#37474F" stroke-width="5" stroke-linecap="round"/>
+<circle cx="850" cy="220" r="34" fill="white" stroke="#37474F" stroke-width="5"/>
+<text x="850" y="232" font-size="34" fill="#1F2933" text-anchor="middle" font-weight="bold" >A</text>
+<text x="850" y="165" font-size="26" fill="#FFB300" text-anchor="middle" font-weight="bold" >en série</text>
+<circle cx="850" cy="580" r="42" fill="none" stroke="#43A047" stroke-width="8"/>
+<text x="850" y="650" font-size="22" fill="#43A047" text-anchor="middle" font-weight="bold" >pince : un seul conducteur</text>
+<text x="600.0" y="710" font-size="24" fill="#E53935" text-anchor="middle" font-weight="bold" >Résistance et continuité : toujours hors tension, composant isolé.</text>
+
+</svg>

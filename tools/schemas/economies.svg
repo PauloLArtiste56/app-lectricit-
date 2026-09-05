@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Où part l'électricité d'un logement tout électrique ?</text>
+<path d="M330,400 L330.0,200.0 A200,200 0 1 1 268.2,590.2 Z" fill="#E53935" stroke="white" stroke-width="4"/>
+<path d="M330,400 L268.2,590.2 A200,200 0 0 1 139.8,461.8 Z" fill="#FFB300" stroke="white" stroke-width="4"/>
+<path d="M330,400 L139.8,461.8 A200,200 0 0 1 133.5,362.5 Z" fill="#FB8C00" stroke="white" stroke-width="4"/>
+<path d="M330,400 L133.5,362.5 A200,200 0 0 1 212.4,238.2 Z" fill="#1565C0" stroke="white" stroke-width="4"/>
+<path d="M330,400 L212.4,238.2 A200,200 0 0 1 330.0,200.0 Z" fill="#43A047" stroke="white" stroke-width="4"/>
+<rect x="620" y="180" width="36" height="36" rx="8" fill="#E53935"/>
+<text x="680" y="208" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >Chauffage ~ 55 %</text>
+<rect x="620" y="250" width="36" height="36" rx="8" fill="#FFB300"/>
+<text x="680" y="278" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >Eau chaude ~ 15 %</text>
+<rect x="620" y="320" width="36" height="36" rx="8" fill="#FB8C00"/>
+<text x="680" y="348" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >Cuisson ~ 8 %</text>
+<rect x="620" y="390" width="36" height="36" rx="8" fill="#1565C0"/>
+<text x="680" y="418" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >Froid, lavage ~ 12 %</text>
+<rect x="620" y="460" width="36" height="36" rx="8" fill="#43A047"/>
+<text x="680" y="488" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >Éclairage, TV, veilles ~ 10 %</text>
+<rect x="80" y="620" width="1040" height="100" rx="20" fill="white" stroke="#43A047" stroke-width="4"/>
+<text x="600.0" y="660" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >Rendement = énergie utile / énergie consommée</text>
+<text x="600.0" y="698" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >Veilles : peu de watts, mais 24 h/24. Heures creuses : moins cher la nuit.</text>
+
+</svg>

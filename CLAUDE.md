@@ -36,7 +36,11 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 Navigation : barre du bas avec Accueil / Stats.
 Accueil → Module → Fiche → Quiz → Résultat → Accueil.
 
-Hors périmètre V1 : comptes utilisateurs, répétition espacée, notifications, backend, achats.
+Ajouts faits depuis : révision ciblée (les questions ratées reviennent jusqu'à être réussies),
+mélange des questions et réponses, "Revoir la fiche" après une erreur, questions de type `ordre`,
+vérification automatique par GitHub Actions.
+
+Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
 ## Modèle de données
 
@@ -66,8 +70,9 @@ Hors périmètre V1 : comptes utilisateurs, répétition espacée, notifications
   ]
 }
 ```
-Le champ `type` vaut `qcm` en V1. Prévoir dans les classes Dart de pouvoir ajouter
-`vrai_faux`, `ordre` et `image` plus tard sans casser la structure.
+Le champ `type` vaut `qcm` ou `ordre`. Pour `ordre`, les `reponses` sont les étapes dans
+le bon ordre et `bonne` est absent. Prévoir de pouvoir ajouter `vrai_faux` et `image` plus
+tard sans casser la structure.
 
 ### Progression utilisateur (stockage local)
 ```json
@@ -76,6 +81,7 @@ Le champ `type` vaut `qcm` en V1. Prévoir dans les classes Dart de pouvoir ajou
     "grandeurs": {
       "fiches_lues": ["ohm"],
       "questions_reussies": ["q001"],
+      "questions_a_revoir": ["q004"],
       "meilleur_score": 8
     }
   },
@@ -85,12 +91,16 @@ Le champ `type` vaut `qcm` en V1. Prévoir dans les classes Dart de pouvoir ajou
 }
 ```
 
-## Modules de contenu V1
+## Modules de contenu
 1. Grandeurs (U, I, R, P) et loi d'Ohm
 2. Courant continu / alternatif
 3. Circuits série / parallèle
 4. Symboles et schémas
 5. Dangers et sécurité de base (contact direct/indirect, disjoncteur, différentiel)
+6. Mesures et appareils (multimètre, pince ampèremétrique, VAT)
+7. Installation domestique (tableau, sections et calibres, salle de bains)
+8. Énergie et consommation (kWh, puissance souscrite, économies)
+9. Habilitation électrique : premiers repères (NF C 18-510, symboles, consignation)
 
 Environ 10 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,

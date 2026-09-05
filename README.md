@@ -8,8 +8,9 @@ une étape à la fois.
 
 ## État du projet
 
-✅ V1 complète : les 7 étapes de l'ordre de développement sont faites, et les 5 modules
-ont chacun 3 fiches et 10 questions. Le cadrage complet (périmètre, modèle de données,
+✅ V1 complète et enrichie : 9 modules, chacun avec 3 fiches illustrées et 10 questions
+(90 questions au total, dont des questions « remettre dans l'ordre »). Révision ciblée des
+points faibles, questions et réponses mélangées, bouton « Revoir la fiche » après une erreur. Le cadrage complet (périmètre, modèle de données,
 conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
 Parcours : Accueil → Module → Fiches → Quiz (feedback immédiat) → Résultat (« Refaire les
@@ -26,16 +27,28 @@ développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 - Stockage local : `shared_preferences` (passer à `hive` si besoin).
 - État : `provider` ou `riverpod`, au plus simple.
 
-## Contenu V1
+## Contenu
 
 1. Grandeurs électriques et loi d'Ohm
 2. Courant continu / alternatif
 3. Circuits série / parallèle
 4. Symboles et schémas
 5. Dangers et sécurité de base
+6. Mesures et appareils (multimètre, pince, VAT)
+7. Installation domestique (tableau, sections, salle de bains)
+8. Énergie et consommation
+9. Habilitation électrique : premiers repères (NF C 18-510, symboles, consignation)
 
 Tout le contenu est dans `assets/content.json` : pour ajouter ou corriger une fiche ou une
 question, c'est le seul fichier à modifier. Les tests vérifient sa cohérence.
+
+Deux types de question : `qcm` (une bonne réponse parmi 3 ou 4) et `ordre` (les `reponses`
+sont écrites dans le bon ordre, l'appli les mélange et l'utilisateur les remet en place).
+
+## Vérification automatique
+
+À chaque pull request, GitHub Actions lance `flutter analyze`, `flutter test` et
+`flutter build web` (fichier `.github/workflows/ci.yml`).
 
 ## Structure
 

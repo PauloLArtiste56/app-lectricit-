@@ -13,15 +13,14 @@ void main() {
   );
 
   test('les 5 modules V1 sont présents et triés par ordre', () {
-    expect(modules.map((m) => m.ordre), [1, 2, 3, 4, 5]);
+    expect(modules.map((m) => m.ordre), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
 
-  test('chaque module a des fiches et 10 questions de type qcm', () {
+  test('chaque module a des fiches et 10 questions', () {
     for (final module in modules) {
       expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
       expect(module.nombreQuestions, 10, reason: module.id);
-      expect(module.questions.every((q) => q.type == TypeQuestion.qcm), isTrue);
     }
   });
 
@@ -33,10 +32,16 @@ void main() {
         expect(idsVus.add(q.id), isTrue, reason: 'id en double : ${q.id}');
         expect(idsFiches, contains(q.ficheId),
             reason: '${q.id} pointe vers une fiche inconnue : ${q.ficheId}');
-        expect(q.reponses.length, inInclusiveRange(3, 4),
-            reason: '${q.id} doit avoir 3 ou 4 réponses');
-        expect(q.bonne, inInclusiveRange(0, q.reponses.length - 1),
-            reason: '${q.id} : index de bonne réponse hors limites');
+        switch (q.type) {
+          case TypeQuestion.qcm:
+            expect(q.reponses.length, inInclusiveRange(3, 4),
+                reason: '${q.id} doit avoir 3 ou 4 réponses');
+            expect(q.bonne, inInclusiveRange(0, q.reponses.length - 1),
+                reason: '${q.id} : index de bonne réponse hors limites');
+          case TypeQuestion.ordre:
+            expect(q.reponses.length, inInclusiveRange(3, 6),
+                reason: '${q.id} doit avoir 3 à 6 étapes');
+        }
         expect(q.explication, isNotEmpty, reason: '${q.id} sans explication');
       }
     }

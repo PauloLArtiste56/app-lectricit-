@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Le tableau électrique, de haut en bas</text>
+<rect x="80" y="120" width="1040" height="120" rx="18" fill="white" stroke="#37474F" stroke-width="5"/>
+<rect x="110" y="140" width="120" height="80" rx="8" fill="#ECEFF1" stroke="#37474F" stroke-width="3"/>
+<rect x="120" y="160" width="100" height="16" rx="3" fill="#37474F" stroke="#37474F" stroke-width="1"/>
+<text x="560" y="170" font-size="28" fill="#37474F" text-anchor="start" font-weight="bold" >Disjoncteur de branchement</text>
+<text x="560" y="210" font-size="22" fill="#78909C" text-anchor="start" font-weight="normal" >coupe tout, limite la puissance souscrite</text>
+<rect x="80" y="260" width="1040" height="120" rx="18" fill="white" stroke="#43A047" stroke-width="5"/>
+<rect x="110" y="280" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#43A047" stroke-width="3"/>
+<rect x="120" y="300" width="40" height="16" rx="3" fill="#43A047" stroke="#43A047" stroke-width="1"/>
+<rect x="180" y="280" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#43A047" stroke-width="3"/>
+<rect x="190" y="300" width="40" height="16" rx="3" fill="#43A047" stroke="#43A047" stroke-width="1"/>
+<text x="560" y="310" font-size="28" fill="#43A047" text-anchor="start" font-weight="bold" >Interrupteurs différentiels 30 mA</text>
+<text x="560" y="350" font-size="22" fill="#78909C" text-anchor="start" font-weight="normal" >protègent les personnes (type A : plaque, lave-linge)</text>
+<rect x="80" y="400" width="1040" height="120" rx="18" fill="white" stroke="#1565C0" stroke-width="5"/>
+<rect x="110" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="120" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<rect x="180" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="190" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<rect x="250" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="260" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<rect x="320" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="330" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<rect x="390" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="400" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<rect x="460" y="420" width="60" height="80" rx="8" fill="#ECEFF1" stroke="#1565C0" stroke-width="3"/>
+<rect x="470" y="440" width="40" height="16" rx="3" fill="#1565C0" stroke="#1565C0" stroke-width="1"/>
+<text x="560" y="450" font-size="28" fill="#1565C0" text-anchor="start" font-weight="bold" >Disjoncteurs divisionnaires</text>
+<text x="560" y="490" font-size="22" fill="#78909C" text-anchor="start" font-weight="normal" >un par circuit, calibrés selon le câble</text>
+<rect x="80" y="540" width="1040" height="120" rx="18" fill="white" stroke="#43A047" stroke-width="5"/>
+<rect x="110" y="560" width="120" height="80" rx="8" fill="#ECEFF1" stroke="#43A047" stroke-width="3"/>
+<rect x="120" y="580" width="100" height="16" rx="3" fill="#43A047" stroke="#43A047" stroke-width="1"/>
+<text x="560" y="590" font-size="28" fill="#43A047" text-anchor="start" font-weight="bold" >Bornier de terre</text>
+<text x="560" y="630" font-size="22" fill="#78909C" text-anchor="start" font-weight="normal" >tous les fils vert/jaune → prise de terre</text>
+
+</svg>
