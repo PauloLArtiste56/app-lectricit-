@@ -472,3 +472,23 @@ RESUMES = [
 ]
 for nom, titre_s, ini, points, col in RESUMES:
     carte_resume(nom, titre_s, ini, points, col)
+
+RESUMES_B = [
+ ("surtensions", "D'où viennent les surtensions", "kV", [("Quelques microsecondes", "plusieurs milliers de volts"), ("Foudre à distance", "par le réseau ou par le sol"), ("Manœuvres réseau, retours de coupure", "aussi des sources de pointes"), ("Type 1 · 2 · 3", "coup direct · tableau · près des appareils")], ROUGE),
+ ("installation_pf", "Installer un parafoudre", "50cm", [("En tête du tableau", "après le disjoncteur de branchement"), ("Déconnecteur dédié", "l'isole en fin de vie"), ("Liaisons < 50 cm", "sinon protection dégradée"), ("Obligatoire", "zones orageuses en aérien, paratonnerre")], BLEU),
+ ("proteger_appareils", "Protéger ses appareils", "UPS", [("Terre indispensable", "c'est le chemin d'évacuation"), ("Multiprise parafoudre = type 3", "complément, pas remplacement"), ("Onduleur", "coupures et microcoupures"), ("Orage violent", "débrancher le plus sensible")], VERT),
+ ("exterieur", "L'électricité en extérieur", "IP44", [("IP44 minimum", "IP55 / IP65 si exposé"), ("Différentiel 30 mA", "sur tout circuit extérieur"), ("U-1000 R2V", "enterré à 50 cm + grillage rouge"), ("Enrouleur déroulé", "section selon la puissance, jamais dans l'eau")], BLEU),
+ ("garage_atelier", "Garage et atelier", "IRVE", [("Prises et circuit dédié", "pour les outils puissants"), ("IP5X, arrêt d'urgence", "poussière, machines fixes"), ("Borne de recharge", "circuit dédié, différentiel type A ou F"), ("Pas de prise classique", "pour recharger des heures")], AMBRE),
+ ("piscine", "Piscine et bassins", "12V", [("Volume 0 : l'eau", "TBTS 12 V uniquement"), ("Volume 1 : 2 m", "TBTS ou matériel IPX5 fixe"), ("Volume 2 : + 1,5 m", "IPX4, différentiel 30 mA"), ("Liaison équipotentielle", "échelle, structure, garde-corps")], BLEU),
+ ("b0_detail", "B0 et H0 : le non-électricien", "B0", [("Travaux non électriques", "peinture, plomberie, maçonnerie"), ("Aucune opération électrique", "ne touche à aucun conducteur"), ("Exécutant ou chargé de chantier", "dirige et veille à la sécurité"), ("Zone 1 oui, zone 4 non", "sauf pièces hors de portée")], BLEU),
+ ("bs_detail", "BS : l'intervention élémentaire", "BS", [("Hors tension, ≤ 400 V, ≤ 32 A", "circuits terminaux protégés"), ("Remplacer, raccorder", "prise, interrupteur, lampe, fusible, radiateur"), ("Mise en sécurité", "identifier, séparer, condamner, VAT"), ("Seul, avec du matériel adapté", "signale toute anomalie")], VERT),
+ ("limites_b0_bs", "Ce que B0 et BS ne font pas", "STOP", [("Pas de recherche de défaut", "ni mesure sous tension : c'est le BR"), ("Pas plus de 32 A", "pas de HT, pas de sous tension"), ("BE Manœuvre, BP", "réarmer un disjoncteur ; photovoltaïque"), ("Doute ?", "on s'arrête, on appelle un BR ou un B1")], ROUGE),
+ ("br_role", "BR : l'intervention générale", "BR", [("Dépannage, recherche de défaut", "remplacement, raccordement, mesures"), ("BT ≤ 1 000 V, circuits ≤ 63 A", "32 A en continu"), ("Consignation pour son propre compte", "sans attestation"), ("Mesures sous tension", "avec EPI, pour chercher le défaut")], BLEU),
+ ("br_etapes", "Déroulé d'une intervention", "1→5", [("1. Analyse", "ordre, identification, risque"), ("2. Mise hors tension ou mesures avec EPI", "séparer, condamner, identifier, VAT"), ("3. Réparation · 4. Remise en service", "personne exposé"), ("5. Compte rendu", "au chargé d'exploitation")], VERT),
+ ("br_limites", "Limites du BR", "63A", [("Pas de travaux programmés", "c'est B1 / B2 sous consignation BC"), ("Pas de HT, pas plus de 63 A", "pas de TST"), ("Aidé par un B1", "sous sa responsabilité"), ("BE Essai, Mesurage, Vérification", "opérations spécifiques")], AMBRE),
+ ("electrisation", "Secourir une personne électrisée", "15", [("Protéger", "couper le courant, objet isolant sec"), ("Alerter", "15 · 18 · 112"), ("Secourir", "PLS si respire, RCP + DAE sinon"), ("Toujours consulter", "troubles cardiaques différés")], ROUGE),
+ ("incendie", "Feu d'origine électrique", "CO2", [("Couper le courant", "disjoncteur général"), ("Extincteur CO2 ou poudre", "jamais d'eau sous tension"), ("Alerter 18 / 112, évacuer", "fermer les portes derrière soi"), ("DAAF obligatoire", "détecteur de fumée")], ROUGE),
+ ("prevention", "Prévenir les accidents", "!", [("À la maison", "obturateurs, rien près de l'eau, débrancher"), ("Diagnostic > 15 ans", "obligatoire à la vente"), ("Au travail", "habilitation, EPI, procédures"), ("Signaux d'alerte", "odeur, prise noircie, picotements")], AMBRE),
+]
+for nom, titre_s, ini, points, col in RESUMES_B:
+    carte_resume(nom, titre_s, ini, points, col)

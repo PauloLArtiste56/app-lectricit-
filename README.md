@@ -8,8 +8,8 @@ une étape à la fois.
 
 ## État du projet
 
-✅ V1 complète et enrichie : 14 modules regroupés par thème, chacun avec 3 fiches illustrées
-et 20 questions (280 questions, dont des questions « remettre dans l'ordre »). Séance du jour
+✅ V1 complète et enrichie : 19 modules regroupés par thème, chacun avec 3 fiches illustrées
+et 20 questions (380 questions, dont des questions « remettre dans l'ordre »). Séance du jour
 avec révision espacée, série de jours, révision des points faibles, questions et réponses
 mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
 modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,
@@ -35,10 +35,12 @@ Les bases : grandeurs et loi d'Ohm · continu / alternatif · série / parallèl
 schémas · énergie et consommation · moteurs et transformateurs.
 
 Installation et pratique : mesures et appareils · installation domestique · éclairage et
-commandes · prises, interrupteurs et câblage.
+commandes · prises, interrupteurs et câblage · parafoudre et surtensions · extérieur, garage,
+piscine.
 
 Sécurité et habilitation : dangers et sécurité de base · habilitation (premiers repères) ·
-voisinage (zones et distances) · EPI et outillage isolé.
+voisinage (zones et distances) · EPI et outillage isolé · B0 et BS en détail · BR ·
+premiers secours et incendie électrique.
 
 Tout le contenu est dans `assets/content.json` : pour ajouter ou corriger une fiche ou une
 question, c'est le seul fichier à modifier. Les tests vérifient sa cohérence.

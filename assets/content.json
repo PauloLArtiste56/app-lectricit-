@@ -3079,9 +3079,623 @@
       "ordre": 10
     },
     {
+      "id": "parafoudre",
+      "titre": "Parafoudre et surtensions",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "surtensions",
+          "titre": "D'où viennent les surtensions",
+          "contenu": "Une surtension est une pointe de tension très brève, de quelques microsecondes, qui peut atteindre plusieurs milliers de volts. Elle détruit l'électronique : box internet, télévision, chaudière, électroménager.\n\nCauses : la foudre, rarement en coup direct, le plus souvent par le réseau ou par le sol, à plusieurs kilomètres ; les manœuvres sur le réseau ; le redémarrage après une coupure.\n\nLe parafoudre (SPD) détecte la surtension et l'écoule vers la terre en une fraction de seconde, puis se remet en veille.\n\nTrois types : type 1 pour les coups directs (bâtiments avec paratonnerre), type 2 au tableau principal (le plus courant), type 3 près des appareils sensibles, en complément.",
+          "image": "surtensions.png"
+        },
+        {
+          "id": "installation_pf",
+          "titre": "Installer un parafoudre",
+          "contenu": "Le parafoudre se place en tête du tableau, protégé par son propre disjoncteur (le déconnecteur) qui l'isole en fin de vie.\n\nRègle des 50 cm : la longueur totale des fils entre l'arrivée, le parafoudre et la barrette de terre doit rester inférieure à 50 cm. Plus les fils sont longs, moins la protection est efficace.\n\nIl est obligatoire (NF C 15-100) dans les zones très orageuses (niveau kéraunique élevé, AQ2) avec alimentation aérienne, et dans tout bâtiment équipé d'un paratonnerre. Ailleurs, il est recommandé dès qu'on a du matériel électronique.\n\nUn voyant ou un indicateur signale la fin de vie : la cartouche est à remplacer.",
+          "image": "installation_pf.png"
+        },
+        {
+          "id": "proteger_appareils",
+          "titre": "Protéger ses appareils",
+          "contenu": "Le parafoudre ne fonctionne que si la mise à la terre est bonne : c'est par la terre qu'il évacue la surtension.\n\nLes multiprises « parafoudre » sont des protections de type 3 : un complément près des appareils fragiles, pas un remplacement du parafoudre de tableau.\n\nEn cas d'orage violent, débrancher les appareils sensibles reste le plus sûr. Un onduleur (UPS) protège en plus contre les coupures et les microcoupures.\n\nCertaines assurances demandent un parafoudre pour indemniser les dégâts de foudre.",
+          "image": "proteger_appareils.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1401",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Une surtension due à la foudre dure…",
+          "reponses": [
+            "plusieurs minutes",
+            "quelques microsecondes",
+            "une heure",
+            "une journée"
+          ],
+          "bonne": 1,
+          "explication": "Très brève mais très intense : assez pour claquer les composants électroniques."
+        },
+        {
+          "id": "q1402",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "La foudre abîme le plus souvent une installation…",
+          "reponses": [
+            "par un coup direct sur la maison",
+            "par le réseau ou le sol, à distance",
+            "par la télévision",
+            "par la pluie"
+          ],
+          "bonne": 1,
+          "explication": "Un impact à plusieurs kilomètres remonte par les lignes ou par la terre."
+        },
+        {
+          "id": "q1403",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Que fait un parafoudre quand une surtension arrive ?",
+          "reponses": [
+            "Il coupe le courant définitivement",
+            "Il écoule la surtension vers la terre puis se remet en veille",
+            "Il stocke l'énergie",
+            "Il alerte le fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Il devient conducteur le temps de la surtension, puis redevient isolant."
+        },
+        {
+          "id": "q1404",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Le parafoudre de type 2 se place…",
+          "reponses": [
+            "près de chaque appareil",
+            "au tableau principal",
+            "sur le paratonnerre",
+            "sur le compteur"
+          ],
+          "bonne": 1,
+          "explication": "C'est le parafoudre standard d'une maison."
+        },
+        {
+          "id": "q1405",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Le parafoudre de type 1 est prévu pour…",
+          "reponses": [
+            "les appareils fragiles",
+            "les coups de foudre directs, bâtiments avec paratonnerre",
+            "les coupures",
+            "le 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Il encaisse des courants de foudre bien plus forts qu'un type 2."
+        },
+        {
+          "id": "q1406",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Un parafoudre de type 3…",
+          "reponses": [
+            "remplace celui du tableau",
+            "complète la protection près des appareils sensibles",
+            "est interdit",
+            "protège contre les surcharges"
+          ],
+          "bonne": 1,
+          "explication": "Multiprise parafoudre, protection intégrée à un appareil : un dernier filtre."
+        },
+        {
+          "id": "q1407",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Le déconnecteur d'un parafoudre sert à…",
+          "reponses": [
+            "l'allumer",
+            "l'isoler du réseau en fin de vie ou en cas de défaut",
+            "le relier au compteur",
+            "mesurer la foudre"
+          ],
+          "bonne": 1,
+          "explication": "C'est le disjoncteur dédié placé juste avant le parafoudre."
+        },
+        {
+          "id": "q1408",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "La longueur totale des liaisons du parafoudre doit rester inférieure à…",
+          "reponses": [
+            "5 m",
+            "50 cm",
+            "2 m",
+            "10 cm"
+          ],
+          "bonne": 1,
+          "explication": "Des fils trop longs augmentent la tension résiduelle qui atteint les appareils."
+        },
+        {
+          "id": "q1409",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Le parafoudre est obligatoire…",
+          "reponses": [
+            "partout en France",
+            "dans les zones très orageuses avec ligne aérienne, et avec un paratonnerre",
+            "seulement en appartement",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Ailleurs, il est fortement recommandé dès qu'on a de l'électronique."
+        },
+        {
+          "id": "q1410",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Le voyant de fin de vie d'un parafoudre indique…",
+          "reponses": [
+            "une surtension en cours",
+            "que la cartouche est à remplacer",
+            "que la terre est mauvaise",
+            "un orage proche"
+          ],
+          "bonne": 1,
+          "explication": "Un parafoudre en fin de vie ne protège plus : on change la cartouche."
+        },
+        {
+          "id": "q1411",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Où se place le parafoudre dans le tableau ?",
+          "reponses": [
+            "En bout de rangée",
+            "En tête, juste après le disjoncteur de branchement",
+            "Sous le compteur",
+            "Sur le circuit d'éclairage"
+          ],
+          "bonne": 1,
+          "explication": "Il doit voir passer la surtension avant tous les autres circuits."
+        },
+        {
+          "id": "q1412",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Le parafoudre est relié…",
+          "reponses": [
+            "à la phase seulement",
+            "aux conducteurs actifs et à la terre",
+            "au neutre seulement",
+            "à rien"
+          ],
+          "bonne": 1,
+          "explication": "C'est entre les conducteurs actifs et la terre qu'il écoule la surtension."
+        },
+        {
+          "id": "q1413",
+          "fiche_id": "proteger_appareils",
+          "type": "qcm",
+          "enonce": "Sans mise à la terre correcte, un parafoudre…",
+          "reponses": [
+            "fonctionne quand même",
+            "ne peut pas évacuer la surtension : il est inefficace",
+            "devient un disjoncteur",
+            "protège mieux"
+          ],
+          "bonne": 1,
+          "explication": "La terre est le chemin d'évacuation. Sans elle, rien ne s'écoule."
+        },
+        {
+          "id": "q1414",
+          "fiche_id": "proteger_appareils",
+          "type": "qcm",
+          "enonce": "Une multiprise parafoudre…",
+          "reponses": [
+            "remplace le parafoudre du tableau",
+            "est un type 3, en complément",
+            "protège contre les fuites",
+            "est un onduleur"
+          ],
+          "bonne": 1,
+          "explication": "Elle ne peut pas absorber une grosse surtension seule."
+        },
+        {
+          "id": "q1415",
+          "fiche_id": "proteger_appareils",
+          "type": "qcm",
+          "enonce": "Un onduleur (UPS) protège en plus contre…",
+          "reponses": [
+            "la foudre directe",
+            "les coupures et microcoupures",
+            "les surcharges",
+            "les courts-circuits"
+          ],
+          "bonne": 1,
+          "explication": "Sa batterie prend le relais le temps d'éteindre proprement ou de passer la coupure."
+        },
+        {
+          "id": "q1416",
+          "fiche_id": "proteger_appareils",
+          "type": "qcm",
+          "enonce": "En cas d'orage violent, le plus sûr pour la box et la télévision est de…",
+          "reponses": [
+            "les laisser allumées",
+            "les débrancher",
+            "les mettre en veille",
+            "augmenter le son"
+          ],
+          "bonne": 1,
+          "explication": "Débranché, un appareil ne peut pas recevoir de surtension par le réseau."
+        },
+        {
+          "id": "q1417",
+          "fiche_id": "surtensions",
+          "type": "qcm",
+          "enonce": "Une surtension peut aussi venir…",
+          "reponses": [
+            "de la pluie",
+            "des manœuvres sur le réseau ou d'un retour après coupure",
+            "de la neige",
+            "du wifi"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau lui-même génère des pointes de tension lors des commutations."
+        },
+        {
+          "id": "q1418",
+          "fiche_id": "proteger_appareils",
+          "type": "qcm",
+          "enonce": "Quels appareils sont les plus sensibles aux surtensions ?",
+          "reponses": [
+            "Les lampes à incandescence",
+            "Les appareils électroniques : box, TV, chaudière, électroménager",
+            "Les radiateurs",
+            "Les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Les composants électroniques claquent à quelques centaines de volts de trop."
+        },
+        {
+          "id": "q1419",
+          "fiche_id": "installation_pf",
+          "type": "qcm",
+          "enonce": "Le niveau kéraunique mesure…",
+          "reponses": [
+            "la tension du réseau",
+            "la fréquence des orages dans une région",
+            "la puissance du parafoudre",
+            "la résistance de terre"
+          ],
+          "bonne": 1,
+          "explication": "Il sert à définir les zones AQ1 (peu orageuses) et AQ2 (orageuses)."
+        },
+        {
+          "id": "q1420",
+          "fiche_id": "installation_pf",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre le chemin d'une surtension jusqu'à son évacuation.",
+          "reponses": [
+            "La surtension arrive par le réseau",
+            "Le disjoncteur de branchement la laisse passer",
+            "Le parafoudre devient conducteur",
+            "La surtension s'écoule vers la terre"
+          ],
+          "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
+        }
+      ],
+      "ordre": 11
+    },
+    {
+      "id": "locaux_risques",
+      "titre": "Extérieur, garage, piscine",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "exterieur",
+          "titre": "L'électricité en extérieur",
+          "contenu": "Dehors, l'eau et la poussière sont partout : le matériel doit être au minimum IP44, et IP55 ou IP65 s'il est exposé. Les prises extérieures ont un volet.\n\nLes câbles sont de type U-1000 R2V, en apparent protégé ou enterrés à 50 cm avec grillage avertisseur. Tout circuit extérieur est protégé par un différentiel 30 mA.\n\nEnrouleur et rallonge : dérouler entièrement l'enrouleur, sinon le câble chauffe. Choisir la section selon la puissance (2,5 mm² pour un gros outil). Jamais de connexion posée dans l'eau ou l'herbe mouillée.",
+          "image": "exterieur.png"
+        },
+        {
+          "id": "garage_atelier",
+          "titre": "Garage et atelier",
+          "contenu": "Des prises 16 A en nombre suffisant, un circuit dédié pour les outils puissants, un éclairage 4 000 K qui rend bien les couleurs.\n\nPoussière : matériel IP5X. Machines fixes : un arrêt d'urgence « coup de poing » accessible.\n\nBorne de recharge de véhicule électrique (IRVE) : circuit dédié depuis le tableau, différentiel 30 mA de type A ou F, câble dimensionné (souvent 32 A pour 7 kW), installation par un professionnel qualifié IRVE. Une prise classique n'est pas prévue pour recharger des heures à pleine charge.",
+          "image": "garage_atelier.png"
+        },
+        {
+          "id": "piscine",
+          "titre": "Piscine et bassins",
+          "contenu": "Comme la salle de bains, la piscine a ses volumes :\n\n• Volume 0 : l'eau du bassin. Uniquement de la TBTS 12 V (projecteurs immergés alimentés par un transformateur de sécurité placé hors volumes).\n• Volume 1 : jusqu'à 2 m du bord et 2,5 m de haut. TBTS, ou matériel fixe IPX5 spécialement prévu.\n• Volume 2 : 1,5 m de plus. Matériel IPX4 minimum, prises protégées par différentiel 30 mA.\n\nPompe et filtration dans un local technique. Liaison équipotentielle de toutes les masses métalliques : échelle, structure, garde-corps.",
+          "image": "piscine.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1501",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Indice de protection minimal du matériel électrique en extérieur ?",
+          "reponses": [
+            "IP20",
+            "IP44",
+            "IP00",
+            "IP10"
+          ],
+          "bonne": 1,
+          "explication": "IP44 : protégé contre les corps solides > 1 mm et les projections d'eau. Davantage si exposé."
+        },
+        {
+          "id": "q1502",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Un enrouleur utilisé enroulé avec un gros outil…",
+          "reponses": [
+            "fonctionne mieux",
+            "chauffe et peut fondre : il faut le dérouler entièrement",
+            "consomme moins",
+            "est plus sûr"
+          ],
+          "bonne": 1,
+          "explication": "Le câble enroulé ne peut pas évacuer sa chaleur."
+        },
+        {
+          "id": "q1503",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Un circuit extérieur doit être protégé par…",
+          "reponses": [
+            "un fusible seulement",
+            "un différentiel 30 mA",
+            "un parafoudre seulement",
+            "rien de particulier"
+          ],
+          "bonne": 1,
+          "explication": "L'humidité augmente le risque d'électrisation : le 30 mA est indispensable."
+        },
+        {
+          "id": "q1504",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Quel câble pour une alimentation extérieure enterrée ?",
+          "reponses": [
+            "H07V-U",
+            "U-1000 R2V",
+            "Un fil de téléphone",
+            "Un câble de haut-parleur"
+          ],
+          "bonne": 1,
+          "explication": "Le R2V résiste à l'humidité et à l'enfouissement, avec grillage avertisseur au-dessus."
+        },
+        {
+          "id": "q1505",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Une prise extérieure comporte…",
+          "reponses": [
+            "un volet de protection",
+            "un fusible",
+            "un compteur",
+            "un interrupteur obligatoire"
+          ],
+          "bonne": 0,
+          "explication": "Le volet ferme les alvéoles quand rien n'est branché."
+        },
+        {
+          "id": "q1506",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Quelle section de rallonge pour un outil de 3 000 W ?",
+          "reponses": [
+            "0,75 mm²",
+            "1 mm²",
+            "2,5 mm²",
+            "6 mm²"
+          ],
+          "bonne": 2,
+          "explication": "3 000 W ≈ 13 A : du 2,5 mm² évite l'échauffement, surtout sur une grande longueur."
+        },
+        {
+          "id": "q1507",
+          "fiche_id": "exterieur",
+          "type": "qcm",
+          "enonce": "Une connexion de rallonge posée dans l'herbe mouillée…",
+          "reponses": [
+            "est sans risque",
+            "présente un risque d'électrisation et de court-circuit",
+            "améliore la terre",
+            "est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "On surélève ou on protège les connexions, et on utilise du matériel IP44."
+        },
+        {
+          "id": "q1508",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Un arrêt d'urgence « coup de poing » sert à…",
+          "reponses": [
+            "démarrer la machine",
+            "couper immédiatement une machine en cas de danger",
+            "régler la vitesse",
+            "appeler les secours"
+          ],
+          "bonne": 1,
+          "explication": "Gros bouton rouge sur fond jaune, accessible sans réfléchir."
+        },
+        {
+          "id": "q1509",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Pour un atelier poussiéreux, le matériel doit être au moins…",
+          "reponses": [
+            "IP2X",
+            "IP5X",
+            "IP0X",
+            "IPX0"
+          ],
+          "bonne": 1,
+          "explication": "Le premier chiffre concerne les solides : 5 = protégé contre la poussière."
+        },
+        {
+          "id": "q1510",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Une borne de recharge de véhicule électrique (7 kW) se branche…",
+          "reponses": [
+            "sur une prise classique",
+            "sur un circuit dédié depuis le tableau, avec différentiel type A ou F",
+            "sur le circuit d'éclairage",
+            "sur une multiprise"
+          ],
+          "bonne": 1,
+          "explication": "Recharger des heures à 32 A demande un circuit prévu pour, installé par un professionnel IRVE."
+        },
+        {
+          "id": "q1511",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Recharger une voiture électrique sur une prise domestique classique pendant des heures…",
+          "reponses": [
+            "est idéal",
+            "fait chauffer la prise, non prévue pour une pleine charge prolongée",
+            "est plus rapide",
+            "est interdit par le constructeur"
+          ],
+          "bonne": 1,
+          "explication": "Les prises renforcées ou les bornes sont conçues pour cet usage."
+        },
+        {
+          "id": "q1512",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Quelle température de couleur pour bien voir les couleurs à l'atelier ?",
+          "reponses": [
+            "2 200 K",
+            "4 000 K",
+            "1 000 K",
+            "10 000 K"
+          ],
+          "bonne": 1,
+          "explication": "Un blanc neutre à froid rend mieux les détails et les couleurs."
+        },
+        {
+          "id": "q1513",
+          "fiche_id": "garage_atelier",
+          "type": "qcm",
+          "enonce": "Le différentiel de type F est adapté…",
+          "reponses": [
+            "aux lampes",
+            "aux bornes de recharge et appareils à variateur",
+            "au chauffage",
+            "aux sonnettes"
+          ],
+          "bonne": 1,
+          "explication": "Il détecte les courants de défaut à fréquences mixtes générés par l'électronique de puissance."
+        },
+        {
+          "id": "q1514",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "Dans l'eau d'une piscine (volume 0), on n'admet que…",
+          "reponses": [
+            "du 230 V IPX8",
+            "de la TBTS 12 V",
+            "du 400 V",
+            "rien du tout, même en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Projecteurs immergés en 12 V, alimentés par un transformateur de sécurité placé hors volumes."
+        },
+        {
+          "id": "q1515",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "Le volume 1 d'une piscine s'étend jusqu'à…",
+          "reponses": [
+            "50 cm du bord",
+            "2 m du bord et 2,5 m de haut",
+            "10 m",
+            "le local technique"
+          ],
+          "bonne": 1,
+          "explication": "Zone où l'on peut être mouillé et toucher du matériel : TBTS ou matériel IPX5 fixe."
+        },
+        {
+          "id": "q1516",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "Le transformateur de sécurité des projecteurs de piscine se place…",
+          "reponses": [
+            "dans l'eau",
+            "au bord du bassin",
+            "hors des volumes, dans le local technique",
+            "sur l'échelle"
+          ],
+          "bonne": 2,
+          "explication": "Le 230 V reste loin de l'eau ; seul le 12 V arrive au bassin."
+        },
+        {
+          "id": "q1517",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "L'échelle métallique d'une piscine doit être…",
+          "reponses": [
+            "isolée du sol",
+            "reliée à la liaison équipotentielle",
+            "peinte",
+            "en bois"
+          ],
+          "bonne": 1,
+          "explication": "Toutes les masses métalliques au même potentiel : pas de tension entre l'eau, l'échelle et le sol."
+        },
+        {
+          "id": "q1518",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "La pompe de filtration se trouve…",
+          "reponses": [
+            "dans le bassin",
+            "dans un local technique, hors volumes",
+            "sous l'échelle",
+            "sur le bord"
+          ],
+          "bonne": 1,
+          "explication": "Local technique fermé, matériel 230 V protégé par différentiel 30 mA."
+        },
+        {
+          "id": "q1519",
+          "fiche_id": "piscine",
+          "type": "qcm",
+          "enonce": "Une prise près d'une piscine (volume 2) doit être…",
+          "reponses": [
+            "interdite",
+            "IPX4 minimum, protégée par différentiel 30 mA",
+            "en 400 V",
+            "sans terre"
+          ],
+          "bonne": 1,
+          "explication": "Prise autorisée dans le volume 2 sous conditions ; interdite dans les volumes 0 et 1."
+        },
+        {
+          "id": "q1520",
+          "fiche_id": "exterieur",
+          "type": "ordre",
+          "enonce": "Brancher un outil électrique dehors : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier que le circuit est protégé par un différentiel 30 mA",
+            "Dérouler complètement l'enrouleur",
+            "Poser les connexions au sec, hors de l'herbe mouillée",
+            "Brancher et utiliser l'outil"
+          ],
+          "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
+        }
+      ],
+      "ordre": 12
+    },
+    {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 11,
+      "ordre": 13,
       "fiches": [
         {
           "id": "dangers",
@@ -3389,7 +4003,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 12,
+      "ordre": 14,
       "fiches": [
         {
           "id": "principe",
@@ -3997,7 +4611,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 13
+      "ordre": 15
     },
     {
       "id": "epi",
@@ -4304,7 +4918,930 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 14
+      "ordre": 16
+    },
+    {
+      "id": "b0_bs",
+      "titre": "Habilitations B0 et BS en détail",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "b0_detail",
+          "titre": "B0 et H0 : le non-électricien",
+          "contenu": "B0 (basse tension) et H0 (haute tension) concernent les personnes qui font des travaux d'ordre non électrique : peinture, plomberie, maçonnerie, nettoyage, dans un local électrique ou au voisinage simple d'installations.\n\nLe B0 ne touche à aucun conducteur, ne fait aucune opération électrique. Il peut être exécutant, ou chargé de chantier (celui qui dirige les travaux non électriques et veille à la sécurité de son équipe).\n\nIl respecte le balisage, les zones, et les consignes du chargé d'exploitation électrique. Formation courte, en général une journée.",
+          "image": "b0_detail.png"
+        },
+        {
+          "id": "bs_detail",
+          "titre": "BS : l'intervention élémentaire",
+          "contenu": "Le BS est chargé d'intervention élémentaire en basse tension. Il intervient hors tension sur des circuits terminaux protégés, jusqu'à 400 V et 32 A.\n\nCe qu'il fait : remplacer une prise, un interrupteur, une lampe, un fusible ; raccorder un appareil simple (radiateur, chauffe-eau) sur un circuit en attente.\n\nAvant : il met le circuit hors tension et en sécurité : pré-identification, séparation (ouverture du disjoncteur), condamnation, vérification d'absence de tension avec un VAT.\n\nIl travaille seul, avec du matériel adapté, et signale toute anomalie à un électricien.",
+          "image": "bs_detail.png"
+        },
+        {
+          "id": "limites_b0_bs",
+          "titre": "Ce que B0 et BS ne font pas",
+          "contenu": "Ni B0 ni BS ne font de recherche de défaut, de mesure sous tension ni de dépannage : c'est le BR.\n\nLe BS ne réalise pas de consignation complète d'une installation, ne travaille pas sur des circuits au-delà de 32 A, ni sous tension, ni en haute tension.\n\nAutres habilitations proches : BE Manœuvre (réarmer ou manœuvrer un appareil de protection dans un tableau), BP pour les installations photovoltaïques.\n\nEn cas de doute sur une opération : on s'arrête et on appelle un BR ou un B1.",
+          "image": "limites_b0_bs.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1601",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "Un peintre qui travaille dans un local électrique doit être habilité…",
+          "reponses": [
+            "BR",
+            "B0",
+            "BS",
+            "BC"
+          ],
+          "bonne": 1,
+          "explication": "B0 : travaux d'ordre non électrique au voisinage simple ou dans un local électrique."
+        },
+        {
+          "id": "q1602",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "Le B0 peut-il remplacer une prise ?",
+          "reponses": [
+            "Oui",
+            "Non : il ne fait aucune opération électrique",
+            "Oui, si elle est hors tension",
+            "Oui, avec des gants"
+          ],
+          "bonne": 1,
+          "explication": "Remplacer une prise est une intervention élémentaire : il faut au minimum un BS."
+        },
+        {
+          "id": "q1603",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "Le chargé de chantier B0…",
+          "reponses": [
+            "fait les travaux électriques",
+            "dirige les travaux non électriques et veille à la sécurité de son équipe",
+            "consigne l'installation",
+            "mesure les tensions"
+          ],
+          "bonne": 1,
+          "explication": "Il organise, fait respecter le balisage et les consignes."
+        },
+        {
+          "id": "q1604",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "H0 concerne…",
+          "reponses": [
+            "les hôpitaux",
+            "les travaux non électriques en haute tension",
+            "les habilitations hors tension",
+            "les hangars"
+          ],
+          "bonne": 1,
+          "explication": "H = haute tension, 0 = non-électricien."
+        },
+        {
+          "id": "q1605",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "Le B0 peut travailler…",
+          "reponses": [
+            "en zone 4 librement",
+            "en zone de voisinage simple, dans le respect du balisage",
+            "sur les conducteurs nus",
+            "sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Zone 1 (30 cm à 3 m) oui ; zone 4 non, sauf pièces mises hors de portée."
+        },
+        {
+          "id": "q1606",
+          "fiche_id": "b0_detail",
+          "type": "qcm",
+          "enonce": "La formation B0 dure en général…",
+          "reponses": [
+            "une journée",
+            "trois semaines",
+            "un an",
+            "une heure"
+          ],
+          "bonne": 0,
+          "explication": "Une journée : reconnaître le risque, respecter les zones et les consignes."
+        },
+        {
+          "id": "q1607",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Le BS intervient…",
+          "reponses": [
+            "sous tension",
+            "hors tension, sur des circuits terminaux protégés jusqu'à 32 A",
+            "en haute tension",
+            "sur le réseau public"
+          ],
+          "bonne": 1,
+          "explication": "Circuits terminaux : prises, éclairage, radiateur… jusqu'à 400 V et 32 A."
+        },
+        {
+          "id": "q1608",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Quelle opération est typique du BS ?",
+          "reponses": [
+            "Rechercher une panne",
+            "Remplacer un interrupteur ou une prise",
+            "Consigner une usine",
+            "Mesurer un courant sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Remplacement et raccordement simple, hors tension."
+        },
+        {
+          "id": "q1609",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Avant de remplacer une prise, le BS…",
+          "reponses": [
+            "coupe l'interrupteur de la pièce",
+            "met le circuit hors tension : séparation, condamnation, VAT",
+            "demande à un collègue de surveiller",
+            "travaille vite"
+          ],
+          "bonne": 1,
+          "explication": "Mise en sécurité du circuit, toujours vérifiée avec un VAT."
+        },
+        {
+          "id": "q1610",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Le BS peut raccorder…",
+          "reponses": [
+            "un tableau complet",
+            "un appareil simple sur un circuit en attente, par exemple un radiateur",
+            "un moteur triphasé",
+            "une ligne haute tension"
+          ],
+          "bonne": 1,
+          "explication": "Raccordement simple sur un circuit prévu et hors tension."
+        },
+        {
+          "id": "q1611",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Le BS travaille…",
+          "reponses": [
+            "toujours en équipe",
+            "seul, en général",
+            "uniquement avec un BR à côté",
+            "uniquement de nuit"
+          ],
+          "bonne": 1,
+          "explication": "Il est autonome sur ses interventions élémentaires."
+        },
+        {
+          "id": "q1612",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Le BS remplace un fusible qui a grillé. Il doit d'abord…",
+          "reponses": [
+            "remettre un fusible plus gros",
+            "couper et vérifier l'absence de tension, puis remplacer par un fusible de même calibre",
+            "mettre un fil à la place",
+            "attendre"
+          ],
+          "bonne": 1,
+          "explication": "Même calibre, jamais plus gros. Si ça regrille, il y a un défaut : c'est pour le BR."
+        },
+        {
+          "id": "q1613",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "Rechercher la cause d'une panne relève de…",
+          "reponses": [
+            "B0",
+            "BS",
+            "BR",
+            "H0"
+          ],
+          "bonne": 2,
+          "explication": "La recherche de défaut, avec mesures, est une intervention générale : BR."
+        },
+        {
+          "id": "q1614",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "Le BS peut-il intervenir sur un circuit de 63 A ?",
+          "reponses": [
+            "Oui",
+            "Non : il est limité à 32 A",
+            "Oui, hors tension",
+            "Oui, avec un VAT"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà de 32 A, ce n'est plus une intervention élémentaire."
+        },
+        {
+          "id": "q1615",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "L'habilitation BE Manœuvre permet…",
+          "reponses": [
+            "de dépanner",
+            "de réarmer ou manœuvrer un appareil de protection dans un tableau",
+            "de consigner",
+            "de travailler sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Manœuvre d'exploitation : réarmer un disjoncteur, sans intervention sur les conducteurs."
+        },
+        {
+          "id": "q1616",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "L'habilitation BP concerne…",
+          "reponses": [
+            "les pompiers",
+            "les installations photovoltaïques",
+            "les piscines",
+            "les pylônes"
+          ],
+          "bonne": 1,
+          "explication": "BP : opérations sur les installations photovoltaïques, qui restent sous tension tant qu'il y a de la lumière."
+        },
+        {
+          "id": "q1617",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "Le BS peut-il travailler sous tension ?",
+          "reponses": [
+            "Oui",
+            "Non, jamais",
+            "Oui, en 12 V",
+            "Oui, avec des gants classe 0"
+          ],
+          "bonne": 1,
+          "explication": "Le travail sous tension demande une habilitation spécifique (TST)."
+        },
+        {
+          "id": "q1618",
+          "fiche_id": "limites_b0_bs",
+          "type": "qcm",
+          "enonce": "En cas de doute sur une opération, le BS…",
+          "reponses": [
+            "improvise",
+            "s'arrête et appelle un BR ou un B1",
+            "demande au B0",
+            "continue prudemment"
+          ],
+          "bonne": 1,
+          "explication": "Le doute est un signal d'arrêt, pas une invitation à essayer."
+        },
+        {
+          "id": "q1619",
+          "fiche_id": "bs_detail",
+          "type": "qcm",
+          "enonce": "Le BS signale…",
+          "reponses": [
+            "rien",
+            "toute anomalie constatée à un électricien",
+            "uniquement les incendies",
+            "les retards"
+          ],
+          "bonne": 1,
+          "explication": "Fil chaud, borne noircie, disjoncteur qui saute : il remonte l'information."
+        },
+        {
+          "id": "q1620",
+          "fiche_id": "bs_detail",
+          "type": "ordre",
+          "enonce": "Le BS remplace un interrupteur : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Identifier le circuit et son disjoncteur",
+            "Ouvrir le disjoncteur et le condamner",
+            "Vérifier l'absence de tension avec le VAT",
+            "Remplacer l'interrupteur",
+            "Remettre sous tension et essayer"
+          ],
+          "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
+        }
+      ],
+      "ordre": 17
+    },
+    {
+      "id": "br",
+      "titre": "Habilitation BR : les interventions",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "br_role",
+          "titre": "BR : le chargé d'intervention générale",
+          "contenu": "Le BR est un électricien qui réalise des interventions générales en basse tension : dépannage, recherche de défaut, remplacement, raccordement, mesures.\n\nLimites : basse tension jusqu'à 1 000 V, circuits protégés jusqu'à 63 A en alternatif (32 A en continu).\n\nIl travaille seul ou avec un exécutant B1. Il peut réaliser une consignation pour son propre compte, sans attestation, pour la durée de son intervention.\n\nPour rechercher un défaut, il peut mesurer en présence de tension, avec les EPI et les outils adaptés.",
+          "image": "br_role.png"
+        },
+        {
+          "id": "br_etapes",
+          "titre": "Déroulé d'une intervention",
+          "contenu": "1. Analyse : ordre d'intervention, identification de l'installation, évaluation du risque.\n2. Mise hors tension du circuit pour son propre compte : séparation, condamnation, identification, VAT. Ou, pour la recherche de défaut, mesures sous tension avec EPI.\n3. Travail : remplacement, réparation, raccordement.\n4. Essais et remise en service, en s'assurant que personne n'est exposé.\n5. Compte rendu au chargé d'exploitation.\n\nOutillage isolé 1 000 V, VAT, gants isolants, écran facial, tapis si nécessaire.",
+          "image": "br_etapes.png"
+        },
+        {
+          "id": "br_limites",
+          "titre": "Limites et cas particuliers",
+          "contenu": "Le BR ne fait pas de travaux : les chantiers programmés (extension, rénovation) relèvent du B1 / B2 sous consignation par un BC.\n\nPas de haute tension, pas de circuits au-delà de 63 A, pas de travail sous tension au sens strict (TST, habilitation spécifique).\n\nLe BR peut être aidé par un exécutant B1, sous sa responsabilité.\n\nBE Essai, BE Mesurage, BE Vérification : habilitations pour des opérations spécifiques, souvent détenues aussi par des BR.",
+          "image": "br_limites.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1701",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Le BR réalise…",
+          "reponses": [
+            "des travaux non électriques",
+            "des interventions de dépannage et de recherche de défaut en basse tension",
+            "des travaux en haute tension",
+            "uniquement des mesures"
+          ],
+          "bonne": 1,
+          "explication": "Intervention générale : dépanner, chercher un défaut, remplacer, raccorder, mesurer."
+        },
+        {
+          "id": "q1702",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Limite de courant des circuits sur lesquels intervient un BR (alternatif) ?",
+          "reponses": [
+            "16 A",
+            "32 A",
+            "63 A",
+            "400 A"
+          ],
+          "bonne": 2,
+          "explication": "63 A en alternatif, 32 A en continu."
+        },
+        {
+          "id": "q1703",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Le BR peut consigner…",
+          "reponses": [
+            "toute l'usine avec attestation",
+            "pour son propre compte, sans attestation, le temps de son intervention",
+            "rien du tout",
+            "uniquement en haute tension"
+          ],
+          "bonne": 1,
+          "explication": "Consignation pour son propre usage : il est seul concerné."
+        },
+        {
+          "id": "q1704",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Pour rechercher un défaut, le BR peut…",
+          "reponses": [
+            "mesurer en présence de tension, avec EPI et outils adaptés",
+            "travailler sous tension sans protection",
+            "demander au B0",
+            "couper tout le bâtiment"
+          ],
+          "bonne": 0,
+          "explication": "Les mesures sous tension font partie de la recherche de défaut, dans le cadre des EPI."
+        },
+        {
+          "id": "q1705",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Le BR travaille…",
+          "reponses": [
+            "toujours en équipe de trois",
+            "seul, ou avec un exécutant B1",
+            "uniquement avec un BC",
+            "uniquement avec un BS"
+          ],
+          "bonne": 1,
+          "explication": "Il peut se faire aider par un B1 sous sa responsabilité."
+        },
+        {
+          "id": "q1706",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Le domaine de tension du BR est…",
+          "reponses": [
+            "la haute tension",
+            "la basse tension, jusqu'à 1 000 V alternatif",
+            "la très basse tension seulement",
+            "tous les domaines"
+          ],
+          "bonne": 1,
+          "explication": "B = basse tension."
+        },
+        {
+          "id": "q1707",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "La première étape d'une intervention BR est…",
+          "reponses": [
+            "remplacer la pièce",
+            "l'analyse : ordre d'intervention, identification, évaluation du risque",
+            "la remise en service",
+            "le compte rendu"
+          ],
+          "bonne": 1,
+          "explication": "On réfléchit avant de toucher."
+        },
+        {
+          "id": "q1708",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "Avant de remplacer un composant, le BR…",
+          "reponses": [
+            "met le circuit hors tension : séparation, condamnation, identification, VAT",
+            "travaille sous tension pour aller vite",
+            "demande au client",
+            "coupe seulement l'interrupteur"
+          ],
+          "bonne": 0,
+          "explication": "Consignation pour son propre compte, vérifiée au VAT."
+        },
+        {
+          "id": "q1709",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "Avant la remise en service, le BR s'assure…",
+          "reponses": [
+            "que la facture est prête",
+            "que personne n'est exposé et que le montage est correct",
+            "qu'il fait jour",
+            "que le B0 est parti"
+          ],
+          "bonne": 1,
+          "explication": "Remise sous tension = risque pour ceux qui seraient encore sur l'installation."
+        },
+        {
+          "id": "q1710",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "À la fin de l'intervention, le BR…",
+          "reponses": [
+            "rentre chez lui",
+            "rend compte au chargé d'exploitation",
+            "consigne l'usine",
+            "efface les traces"
+          ],
+          "bonne": 1,
+          "explication": "Le compte rendu informe sur ce qui a été fait et ce qui reste à surveiller."
+        },
+        {
+          "id": "q1711",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "Pour une mesure sous tension, le BR porte…",
+          "reponses": [
+            "un casque de vélo",
+            "des gants isolants et un écran facial",
+            "des lunettes de soleil",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Contact et arc : gants et écran."
+        },
+        {
+          "id": "q1712",
+          "fiche_id": "br_etapes",
+          "type": "qcm",
+          "enonce": "Le BR utilise des outils…",
+          "reponses": [
+            "ordinaires",
+            "isolés 1 000 V",
+            "en aluminium",
+            "en bois"
+          ],
+          "bonne": 1,
+          "explication": "Outillage isolé conforme IEC 60900."
+        },
+        {
+          "id": "q1713",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "Une extension complète d'installation (chantier programmé) relève…",
+          "reponses": [
+            "du BR",
+            "du B1 / B2 sous consignation par un BC",
+            "du BS",
+            "du B0"
+          ],
+          "bonne": 1,
+          "explication": "Ce sont des travaux, pas une intervention : organisation différente."
+        },
+        {
+          "id": "q1714",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "Le BR peut-il intervenir en haute tension ?",
+          "reponses": [
+            "Oui",
+            "Non : la HT demande une habilitation H",
+            "Oui, hors tension",
+            "Oui, avec un B0"
+          ],
+          "bonne": 1,
+          "explication": "Le BR est limité à la basse tension."
+        },
+        {
+          "id": "q1715",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "Le travail sous tension au sens strict (TST)…",
+          "reponses": [
+            "est inclus dans le BR",
+            "demande une habilitation spécifique",
+            "est interdit en France",
+            "est réservé au BS"
+          ],
+          "bonne": 1,
+          "explication": "Le TST est une spécialité avec formation et procédures dédiées."
+        },
+        {
+          "id": "q1716",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "BE Mesurage permet…",
+          "reponses": [
+            "de dépanner",
+            "de réaliser des mesures sur une installation",
+            "de consigner",
+            "de peindre"
+          ],
+          "bonne": 1,
+          "explication": "Opération spécifique de mesurage."
+        },
+        {
+          "id": "q1717",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "Le B1 qui aide un BR travaille…",
+          "reponses": [
+            "seul",
+            "sous la responsabilité du BR",
+            "sous la responsabilité du client",
+            "sans habilitation"
+          ],
+          "bonne": 1,
+          "explication": "Le BR dirige, le B1 exécute."
+        },
+        {
+          "id": "q1718",
+          "fiche_id": "br_role",
+          "type": "qcm",
+          "enonce": "Quelle situation est typique d'une intervention BR ?",
+          "reponses": [
+            "Repeindre un local",
+            "Un disjoncteur saute sans raison : trouver et réparer le défaut",
+            "Poser 30 prises dans un bâtiment neuf",
+            "Nettoyer une armoire"
+          ],
+          "bonne": 1,
+          "explication": "Diagnostic et réparation : le cœur du BR."
+        },
+        {
+          "id": "q1719",
+          "fiche_id": "br_limites",
+          "type": "qcm",
+          "enonce": "Le BR peut-il intervenir sur un circuit de 100 A ?",
+          "reponses": [
+            "Oui",
+            "Non : limité à 63 A",
+            "Oui, avec un B1",
+            "Oui, la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà de 63 A, il faut passer en travaux avec consignation."
+        },
+        {
+          "id": "q1720",
+          "fiche_id": "br_etapes",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les étapes d'une intervention BR.",
+          "reponses": [
+            "Analyse et évaluation du risque",
+            "Mise hors tension pour son propre compte (ou mesures sous tension avec EPI)",
+            "Réparation ou remplacement",
+            "Essais et remise en service",
+            "Compte rendu"
+          ],
+          "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
+        }
+      ],
+      "ordre": 18
+    },
+    {
+      "id": "secours",
+      "titre": "Premiers secours et incendie électrique",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "electrisation",
+          "titre": "Secourir une personne électrisée",
+          "contenu": "Protéger d'abord : couper le courant (disjoncteur, prise), ou écarter la victime avec un objet isolant sec (manche en bois, perche isolante). Ne jamais la toucher directement tant que le courant n'est pas coupé.\n\nAlerter : 15 (SAMU), 18 (pompiers) ou 112. Dire où, quoi, combien de victimes, leur état.\n\nSecourir : si la victime est inconsciente et respire, la mettre en position latérale de sécurité. Si elle ne respire pas, réanimation cardio-pulmonaire : 30 compressions, 2 insufflations, et défibrillateur (DAE) dès que possible.\n\nToute personne électrisée doit consulter, même sans symptôme : des troubles cardiaques peuvent apparaître plusieurs heures après. Brûlures : refroidir à l'eau tempérée, ne pas percer les cloques.",
+          "image": "electrisation.png"
+        },
+        {
+          "id": "incendie",
+          "titre": "Feu d'origine électrique",
+          "contenu": "Causes fréquentes : surcharge (multiprises en cascade), mauvais contact qui chauffe, appareil vétuste, câble écrasé.\n\nConduite à tenir : couper le courant au disjoncteur général, utiliser un extincteur CO2 ou poudre. Jamais d'eau tant que l'installation est sous tension. Alerter le 18 ou le 112, évacuer, fermer les portes derrière soi.\n\nPrévention : détecteur de fumée (DAAF) obligatoire dans chaque logement, ne pas couvrir les appareils qui chauffent, faire vérifier les installations anciennes.",
+          "image": "incendie.png"
+        },
+        {
+          "id": "prevention",
+          "titre": "Prévenir les accidents",
+          "contenu": "À la maison : prises avec obturateurs, aucun appareil branché à portée de l'eau, ne pas tirer sur les câbles, débrancher avant de nettoyer, ne jamais bricoler sous tension. Faire diagnostiquer une installation de plus de 15 ans (obligatoire à la vente).\n\nAu travail : habilitation adaptée, EPI, procédures, balisage. Le droit de retrait permet de s'arrêter face à un danger grave et imminent.\n\nLes signaux d'alerte : odeur de brûlé, prise noircie, disjoncteur qui saute souvent, picotements au contact d'un appareil. On n'attend pas.",
+          "image": "prevention.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1801",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Une personne est collée à un conducteur sous tension. La première action ?",
+          "reponses": [
+            "La tirer par le bras",
+            "Couper le courant ou l'écarter avec un objet isolant sec",
+            "Lui parler",
+            "Appeler la famille"
+          ],
+          "bonne": 1,
+          "explication": "Toucher la victime, c'est s'électriser à son tour. On coupe d'abord."
+        },
+        {
+          "id": "q1802",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Quel numéro pour le SAMU ?",
+          "reponses": [
+            "17",
+            "15",
+            "18",
+            "112"
+          ],
+          "bonne": 1,
+          "explication": "15 = SAMU, 18 = pompiers, 17 = police, 112 = urgences européen."
+        },
+        {
+          "id": "q1803",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Victime inconsciente qui respire : que faire ?",
+          "reponses": [
+            "La laisser sur le dos",
+            "La mettre en position latérale de sécurité",
+            "Lui donner à boire",
+            "La faire marcher"
+          ],
+          "bonne": 1,
+          "explication": "La PLS évite qu'elle s'étouffe en cas de vomissement."
+        },
+        {
+          "id": "q1804",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Victime qui ne respire pas : que faire en attendant les secours ?",
+          "reponses": [
+            "Attendre",
+            "Réanimation cardio-pulmonaire : 30 compressions, 2 insufflations, défibrillateur",
+            "Lui verser de l'eau",
+            "La secouer"
+          ],
+          "bonne": 1,
+          "explication": "Le DAE guide par la voix : toute personne peut l'utiliser."
+        },
+        {
+          "id": "q1805",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Une personne électrisée se sent bien après. Elle doit…",
+          "reponses": [
+            "reprendre le travail",
+            "consulter un médecin : des troubles cardiaques peuvent survenir plus tard",
+            "boire un café",
+            "se reposer une heure"
+          ],
+          "bonne": 1,
+          "explication": "Le courant a traversé le corps : le cœur peut réagir des heures après."
+        },
+        {
+          "id": "q1806",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Pour écarter une victime d'un conducteur, on utilise…",
+          "reponses": [
+            "ses mains",
+            "un objet isolant sec : manche en bois, perche isolante",
+            "un tuyau d'arrosage",
+            "une barre en métal"
+          ],
+          "bonne": 1,
+          "explication": "Isolant et sec. Le métal ou le mouillé conduisent."
+        },
+        {
+          "id": "q1807",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Brûlure électrique : que faire ?",
+          "reponses": [
+            "Percer les cloques",
+            "Refroidir à l'eau tempérée, protéger, faire examiner",
+            "Mettre du beurre",
+            "Frotter"
+          ],
+          "bonne": 1,
+          "explication": "Une brûlure électrique est souvent plus profonde qu'elle n'y paraît."
+        },
+        {
+          "id": "q1808",
+          "fiche_id": "electrisation",
+          "type": "qcm",
+          "enonce": "Le 112 est…",
+          "reponses": [
+            "le numéro des pompiers en France uniquement",
+            "le numéro d'urgence européen",
+            "le numéro d'EDF",
+            "le numéro du plombier"
+          ],
+          "bonne": 1,
+          "explication": "Il fonctionne partout en Europe, depuis n'importe quel téléphone."
+        },
+        {
+          "id": "q1809",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "Cause fréquente d'incendie électrique ?",
+          "reponses": [
+            "Une ampoule LED",
+            "Une multiprise surchargée ou un mauvais contact qui chauffe",
+            "Un interrupteur",
+            "Un fil bleu"
+          ],
+          "bonne": 1,
+          "explication": "L'échauffement d'un mauvais contact peut atteindre plusieurs centaines de degrés."
+        },
+        {
+          "id": "q1810",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "Un feu démarre sur un appareil électrique. La première action ?",
+          "reponses": [
+            "Jeter de l'eau",
+            "Couper le courant au disjoncteur général",
+            "Ouvrir les fenêtres",
+            "Souffler dessus"
+          ],
+          "bonne": 1,
+          "explication": "Sans courant, plus de risque d'électrisation et souvent plus d'alimentation du feu."
+        },
+        {
+          "id": "q1811",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "Quel extincteur sur un feu électrique ?",
+          "reponses": [
+            "À eau",
+            "CO2 ou poudre",
+            "À mousse",
+            "Un seau d'eau"
+          ],
+          "bonne": 1,
+          "explication": "Le CO2 étouffe le feu sans conduire l'électricité ni abîmer le matériel."
+        },
+        {
+          "id": "q1812",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "Pourquoi jamais d'eau sur un feu électrique sous tension ?",
+          "reponses": [
+            "L'eau alimente le feu",
+            "L'eau conduit : risque d'électrisation de celui qui la verse",
+            "L'eau est trop froide",
+            "Ça fait de la fumée"
+          ],
+          "bonne": 1,
+          "explication": "Le jet d'eau devient un conducteur entre l'installation et la personne."
+        },
+        {
+          "id": "q1813",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "Le DAAF est…",
+          "reponses": [
+            "un disjoncteur",
+            "un détecteur de fumée, obligatoire dans chaque logement",
+            "un parafoudre",
+            "un extincteur"
+          ],
+          "bonne": 1,
+          "explication": "Détecteur avertisseur autonome de fumée : il réveille avant que la fumée ne tue."
+        },
+        {
+          "id": "q1814",
+          "fiche_id": "incendie",
+          "type": "qcm",
+          "enonce": "En évacuant, on ferme les portes derrière soi pour…",
+          "reponses": [
+            "ranger",
+            "ralentir la propagation du feu et de la fumée",
+            "garder la chaleur",
+            "éviter les courants d'air"
+          ],
+          "bonne": 1,
+          "explication": "Une porte fermée retient la fumée plusieurs minutes."
+        },
+        {
+          "id": "q1815",
+          "fiche_id": "prevention",
+          "type": "qcm",
+          "enonce": "Quel signe doit alerter dans une installation ?",
+          "reponses": [
+            "Une lumière qui s'allume",
+            "Une prise noircie, une odeur de brûlé, un disjoncteur qui saute souvent",
+            "Un fil bleu",
+            "Un compteur qui tourne"
+          ],
+          "bonne": 1,
+          "explication": "Ce sont les signes d'un échauffement ou d'un défaut : on fait intervenir un électricien."
+        },
+        {
+          "id": "q1816",
+          "fiche_id": "prevention",
+          "type": "qcm",
+          "enonce": "Un diagnostic électrique est obligatoire à la vente d'un logement dont l'installation a plus de…",
+          "reponses": [
+            "5 ans",
+            "15 ans",
+            "50 ans",
+            "1 an"
+          ],
+          "bonne": 1,
+          "explication": "Il vérifie les points de sécurité essentiels : terre, différentiel, salle de bains…"
+        },
+        {
+          "id": "q1817",
+          "fiche_id": "prevention",
+          "type": "qcm",
+          "enonce": "Le droit de retrait permet…",
+          "reponses": [
+            "de partir en vacances",
+            "de s'arrêter face à un danger grave et imminent",
+            "de refuser tout travail",
+            "de changer d'employeur"
+          ],
+          "bonne": 1,
+          "explication": "Le salarié alerte et se retire, sans sanction possible."
+        },
+        {
+          "id": "q1818",
+          "fiche_id": "prevention",
+          "type": "qcm",
+          "enonce": "Avant de nettoyer un appareil électrique…",
+          "reponses": [
+            "on le mouille",
+            "on le débranche",
+            "on le laisse allumé",
+            "on met des gants en laine"
+          ],
+          "bonne": 1,
+          "explication": "Débranché, aucun risque d'électrisation ni de démarrage intempestif."
+        },
+        {
+          "id": "q1819",
+          "fiche_id": "prevention",
+          "type": "qcm",
+          "enonce": "Des picotements en touchant un appareil signifient…",
+          "reponses": [
+            "que tout va bien",
+            "un défaut d'isolement : arrêter d'utiliser l'appareil et faire vérifier",
+            "de l'électricité statique sans importance",
+            "que la terre est trop bonne"
+          ],
+          "bonne": 1,
+          "explication": "La carcasse est sous tension : la terre ou le différentiel ne fait pas son travail."
+        },
+        {
+          "id": "q1820",
+          "fiche_id": "electrisation",
+          "type": "ordre",
+          "enonce": "Face à une personne électrisée, remets les actions dans l'ordre.",
+          "reponses": [
+            "Couper le courant ou écarter la victime avec un objet isolant",
+            "Alerter le 15, le 18 ou le 112",
+            "Vérifier si la victime respire",
+            "PLS si elle respire, réanimation si elle ne respire pas"
+          ],
+          "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
+        }
+      ],
+      "ordre": 19
     }
   ]
 }
