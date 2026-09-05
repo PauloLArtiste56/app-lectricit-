@@ -11,6 +11,9 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
   comment les pièces s'assemblent). Pas d'explication ligne par ligne du code.
 - Avance par petites étapes, une feature à la fois, et attends ma validation entre chaque.
 - Ne génère pas toute l'appli d'un coup.
+- Quand une tâche que je t'ai confiée est terminée (fusionnée sur `main`), envoie-moi un mail
+  de compte rendu via la connexion Gmail, à l'adresse de mon compte : ce qui a été fait, ce que
+  je dois faire de mon côté, et le lien de la pull request. Court, en français.
 - Commente le code en français quand ce n'est pas évident.
 
 ## Stack
