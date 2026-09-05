@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Produire de l'hydrogène</text>
+<circle cx="190" cy="330" r="110" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="190" y="355.92" font-size="72" fill="white" text-anchor="middle" font-weight="bold" >H2</text>
+<circle cx="380" cy="192" r="12" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="420" y="200" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Eau + électricité</text>
+<text x="420" y="240" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >50 kWh pour 1 kg (33 kWh)</text>
+<circle cx="380" cy="307" r="12" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="420" y="315" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Rendement 60 à 70 %</text>
+<text x="420" y="355" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >bas-carbone si électricité propre</text>
+<circle cx="380" cy="422" r="12" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="420" y="430" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Vaporeformage</text>
+<text x="420" y="470" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >encore majoritaire, CO2</text>
+<circle cx="380" cy="537" r="12" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="420" y="545" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >350 / 700 bar ou −253 °C</text>
+<text x="420" y="585" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >vecteur, pas source</text>
+
+</svg>
