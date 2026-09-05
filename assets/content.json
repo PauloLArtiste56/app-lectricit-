@@ -3384,9 +3384,933 @@
       "ordre": 11
     },
     {
+      "id": "triphase",
+      "titre": "Le triphasé en pratique",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "principe_tri",
+          "titre": "Trois phases décalées",
+          "contenu": "Le réseau produit trois tensions alternatives identiques, décalées d'un tiers de période (120°) : L1, L2, L3, plus le neutre N.\n\nEntre une phase et le neutre : 230 V (tension simple). Entre deux phases : 400 V (tension composée). Le rapport est √3 ≈ 1,73.\n\nAvantages : pour une même puissance, des courants plus faibles par conducteur, donc des câbles plus fins ; et les moteurs asynchrones démarrent seuls grâce au champ tournant.\n\nUn abonnement triphasé s'impose au-delà de 12 kVA ou pour un moteur triphasé (atelier, pompe à chaleur puissante, borne 22 kW).",
+          "image": "principe_tri.png"
+        },
+        {
+          "id": "equilibrage",
+          "titre": "Équilibrer les phases",
+          "contenu": "En triphasé, on répartit les circuits monophasés sur les trois phases pour que chacune porte à peu près le même courant : c'est l'équilibrage.\n\nUn déséquilibre fait circuler un courant dans le neutre et peut faire disjoncter une phase alors que les autres sont peu chargées : le disjoncteur de branchement triphasé 12 kVA coupe à 20 A par phase, pas à 60 A au total.\n\nOn regroupe par phase : L1 les prises du rez-de-chaussée et le four, L2 l'étage et le lave-linge, L3 le chauffe-eau et l'éclairage, par exemple. La pince ampèremétrique sur chaque phase vérifie l'équilibre.\n\nUn neutre coupé en triphasé est dangereux : les tensions simples se déséquilibrent et peuvent dépasser 230 V sur certains appareils.",
+          "image": "equilibrage.png"
+        },
+        {
+          "id": "couplages",
+          "titre": "Étoile et triangle",
+          "contenu": "Un récepteur triphasé (moteur, chauffage) se couple de deux façons :\n\n• Étoile (Y) : les trois enroulements ont un point commun (le neutre, sorti ou non). Chaque enroulement voit la tension simple, 230 V sur un réseau 400 V.\n• Triangle (Δ) : les enroulements sont en boucle. Chaque enroulement voit la tension composée, 400 V.\n\nLa plaque du moteur donne les deux tensions : 230 V Δ / 400 V Y signifie que chaque enroulement supporte 230 V. Sur notre réseau 400 V, on couple en étoile. Le coupler en triangle par erreur le grille.\n\nPuissance triphasée : P = √3 × U × I × cos φ, avec U la tension composée (400 V).",
+          "image": "couplages.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3901",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Les trois phases sont décalées de…",
+          "reponses": [
+            "90°",
+            "120°",
+            "180°",
+            "0°"
+          ],
+          "bonne": 1,
+          "explication": "Un tiers de période chacune."
+        },
+        {
+          "id": "q3902",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Tension entre deux phases sur le réseau français ?",
+          "reponses": [
+            "230 V",
+            "400 V",
+            "690 V",
+            "120 V"
+          ],
+          "bonne": 1,
+          "explication": "Tension composée. 230 V entre phase et neutre."
+        },
+        {
+          "id": "q3903",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Le rapport entre tension composée et tension simple est…",
+          "reponses": [
+            "2",
+            "√3 ≈ 1,73",
+            "3",
+            "1"
+          ],
+          "bonne": 1,
+          "explication": "400 / 230 ≈ 1,73."
+        },
+        {
+          "id": "q3904",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Avantage du triphasé pour une même puissance ?",
+          "reponses": [
+            "Des câbles plus gros",
+            "Des courants plus faibles par conducteur",
+            "Une tension plus basse",
+            "Moins de sécurité"
+          ],
+          "bonne": 1,
+          "explication": "La puissance se répartit sur trois phases."
+        },
+        {
+          "id": "q3905",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Un moteur asynchrone triphasé démarre seul grâce…",
+          "reponses": [
+            "au neutre",
+            "au champ tournant créé par les trois phases",
+            "à un condensateur",
+            "à la terre"
+          ],
+          "bonne": 1,
+          "explication": "Le monophasé a besoin d'un condensateur de démarrage."
+        },
+        {
+          "id": "q3906",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Un abonnement triphasé s'impose…",
+          "reponses": [
+            "toujours",
+            "au-delà de 12 kVA ou pour un moteur triphasé",
+            "pour l'éclairage",
+            "en appartement"
+          ],
+          "bonne": 1,
+          "explication": "Atelier, grosse pompe à chaleur, borne 22 kW."
+        },
+        {
+          "id": "q3907",
+          "fiche_id": "principe_tri",
+          "type": "qcm",
+          "enonce": "Les conducteurs d'un branchement triphasé sont…",
+          "reponses": [
+            "L et N",
+            "L1, L2, L3 et N (plus la terre)",
+            "L1 et L2",
+            "N seulement"
+          ],
+          "bonne": 1,
+          "explication": "Trois phases et un neutre."
+        },
+        {
+          "id": "q3908",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Équilibrer les phases, c'est…",
+          "reponses": [
+            "mettre tout sur L1",
+            "répartir les circuits pour que chaque phase porte à peu près le même courant",
+            "couper le neutre",
+            "doubler le neutre"
+          ],
+          "bonne": 1,
+          "explication": "Sinon une phase disjoncte alors que les autres sont peu chargées."
+        },
+        {
+          "id": "q3909",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Un branchement triphasé 12 kVA coupe à…",
+          "reponses": [
+            "60 A au total",
+            "20 A par phase",
+            "12 A",
+            "230 A"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur surveille chaque phase séparément."
+        },
+        {
+          "id": "q3910",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Un fort déséquilibre fait circuler du courant…",
+          "reponses": [
+            "dans la terre",
+            "dans le neutre",
+            "nulle part",
+            "dans le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Équilibré, le courant de neutre est presque nul."
+        },
+        {
+          "id": "q3911",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Pour vérifier l'équilibre, on utilise…",
+          "reponses": [
+            "un voltmètre sur le neutre",
+            "une pince ampèremétrique sur chaque phase",
+            "un ohmmètre",
+            "un VAT"
+          ],
+          "bonne": 1,
+          "explication": "On compare les trois courants."
+        },
+        {
+          "id": "q3912",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Un neutre coupé en triphasé…",
+          "reponses": [
+            "est sans conséquence",
+            "déséquilibre les tensions simples, jusqu'à griller des appareils",
+            "coupe tout",
+            "augmente la sécurité"
+          ],
+          "bonne": 1,
+          "explication": "Certaines phases peuvent dépasser 230 V par rapport au neutre flottant."
+        },
+        {
+          "id": "q3913",
+          "fiche_id": "equilibrage",
+          "type": "qcm",
+          "enonce": "Comment répartir four, lave-linge et chauffe-eau ?",
+          "reponses": [
+            "Tous sur L1",
+            "Un par phase",
+            "Tous sur le neutre",
+            "Sur la terre"
+          ],
+          "bonne": 1,
+          "explication": "Les gros consommateurs sont répartis."
+        },
+        {
+          "id": "q3914",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "En couplage étoile sur un réseau 400 V, chaque enroulement voit…",
+          "reponses": [
+            "400 V",
+            "230 V",
+            "690 V",
+            "0 V"
+          ],
+          "bonne": 1,
+          "explication": "Tension simple entre phase et point neutre."
+        },
+        {
+          "id": "q3915",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "En couplage triangle sur un réseau 400 V, chaque enroulement voit…",
+          "reponses": [
+            "230 V",
+            "400 V",
+            "133 V",
+            "12 V"
+          ],
+          "bonne": 1,
+          "explication": "Tension composée, entre deux phases."
+        },
+        {
+          "id": "q3916",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "Un moteur 230 V Δ / 400 V Y sur le réseau 400 V se couple…",
+          "reponses": [
+            "en triangle",
+            "en étoile",
+            "au hasard",
+            "en série"
+          ],
+          "bonne": 1,
+          "explication": "Chaque enroulement supporte 230 V : étoile sur 400 V."
+        },
+        {
+          "id": "q3917",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "Coupler ce moteur en triangle par erreur sur 400 V…",
+          "reponses": [
+            "est sans effet",
+            "le fait chauffer et griller",
+            "le fait tourner à l'envers",
+            "le rend plus silencieux"
+          ],
+          "bonne": 1,
+          "explication": "Les enroulements reçoivent 400 V au lieu de 230 V."
+        },
+        {
+          "id": "q3918",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "Formule de la puissance triphasée ?",
+          "reponses": [
+            "P = U × I",
+            "P = √3 × U × I × cos φ",
+            "P = 3 × U",
+            "P = U / I"
+          ],
+          "bonne": 1,
+          "explication": "Avec U la tension composée (400 V)."
+        },
+        {
+          "id": "q3919",
+          "fiche_id": "couplages",
+          "type": "qcm",
+          "enonce": "Un moteur triphasé absorbe 10 A sous 400 V avec cos φ = 0,8. Puissance ?",
+          "reponses": [
+            "3 200 W",
+            "5 540 W",
+            "8 000 W",
+            "12 000 W"
+          ],
+          "bonne": 1,
+          "explication": "√3 × 400 × 10 × 0,8 ≈ 5 540 W."
+        },
+        {
+          "id": "q3920",
+          "fiche_id": "equilibrage",
+          "type": "ordre",
+          "enonce": "Équilibrer un tableau triphasé : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Lister les circuits et leur puissance",
+            "Répartir les circuits sur L1, L2, L3",
+            "Câbler chaque rangée sur sa phase",
+            "Mesurer les courants à la pince",
+            "Rééquilibrer si une phase est trop chargée"
+          ],
+          "explication": "Lister, répartir, câbler, mesurer, ajuster."
+        }
+      ],
+      "ordre": 12
+    },
+    {
+      "id": "cos_phi",
+      "titre": "Énergie réactive et cos φ",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "puissances",
+          "titre": "Active, réactive, apparente",
+          "contenu": "En alternatif, avec des moteurs, transformateurs ou bobines, le courant est décalé par rapport à la tension. On distingue :\n\n• Puissance active P (W) : celle qui travaille vraiment, transformée en chaleur, lumière, mouvement.\n• Puissance réactive Q (VAR) : échangée avec les bobinages, elle ne produit rien mais fait circuler du courant.\n• Puissance apparente S (VA) : ce que le réseau doit fournir, S² = P² + Q².\n\nLe cos φ (facteur de puissance) = P / S. Il vaut 1 pour une résistance pure (radiateur), 0,8 pour un moteur, moins pour un moteur à vide.\n\nD'où les abonnements en kVA : le réseau dimensionne sur l'apparente.",
+          "image": "puissances.png"
+        },
+        {
+          "id": "consequences",
+          "titre": "Pourquoi ça compte",
+          "contenu": "À puissance active égale, un cos φ faible impose un courant plus grand : I = P / (U × cos φ). Un moteur de 2 300 W à cos φ = 0,5 appelle 20 A au lieu de 10 A.\n\nConséquences : câbles et transformateurs surchargés, pertes en ligne plus élevées, disjoncteurs qui déclenchent, et pour les industriels une facturation de l'énergie réactive au-delà d'un seuil.\n\nChez un particulier, le compteur ne facture que l'active (kWh), mais l'abonnement en kVA doit couvrir l'apparente : un atelier avec de gros moteurs à vide peut disjoncter alors que les kWh sont faibles.",
+          "image": "consequences.png"
+        },
+        {
+          "id": "compensation",
+          "titre": "Compenser le réactif",
+          "contenu": "On relève le cos φ en ajoutant des condensateurs : ils fournissent l'énergie réactive que les moteurs consomment, le réseau n'a plus à la fournir.\n\nBatterie de condensateurs au tableau général (compensation globale) ou près de chaque moteur (compensation locale). Objectif courant : cos φ ≥ 0,93.\n\nAttention : les condensateurs restent chargés après coupure, il faut attendre leur décharge (résistances intégrées) avant d'intervenir.\n\nLes variateurs et alimentations électroniques créent aussi des harmoniques : un autre sujet, traité par des filtres.",
+          "image": "compensation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4301",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "La puissance active se mesure en…",
+          "reponses": [
+            "VA",
+            "W",
+            "VAR",
+            "Ah"
+          ],
+          "bonne": 1,
+          "explication": "Celle qui travaille : chaleur, lumière, mouvement."
+        },
+        {
+          "id": "q4302",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "La puissance réactive se mesure en…",
+          "reponses": [
+            "W",
+            "VAR",
+            "VA",
+            "Hz"
+          ],
+          "bonne": 1,
+          "explication": "Échangée avec les bobinages, elle ne produit rien."
+        },
+        {
+          "id": "q4303",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "La puissance apparente S vaut…",
+          "reponses": [
+            "P + Q",
+            "√(P² + Q²)",
+            "P × Q",
+            "P − Q"
+          ],
+          "bonne": 1,
+          "explication": "Relation du triangle des puissances."
+        },
+        {
+          "id": "q4304",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "Le cos φ d'un radiateur électrique est…",
+          "reponses": [
+            "0",
+            "0,5",
+            "0,8",
+            "1"
+          ],
+          "bonne": 3,
+          "explication": "Résistance pure : courant et tension en phase."
+        },
+        {
+          "id": "q4305",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "Le cos φ typique d'un moteur en charge est…",
+          "reponses": [
+            "0,1",
+            "0,8",
+            "1",
+            "2"
+          ],
+          "bonne": 1,
+          "explication": "Et bien moins à vide."
+        },
+        {
+          "id": "q4306",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "Le cos φ vaut…",
+          "reponses": [
+            "P / S",
+            "S / P",
+            "Q / P",
+            "U / I"
+          ],
+          "bonne": 0,
+          "explication": "Rapport entre puissance active et apparente."
+        },
+        {
+          "id": "q4307",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "Pourquoi les abonnements sont-ils en kVA ?",
+          "reponses": [
+            "Par habitude",
+            "Parce que le réseau dimensionne sur la puissance apparente",
+            "Parce que c'est plus cher",
+            "Parce que les compteurs ne savent pas compter les W"
+          ],
+          "bonne": 1,
+          "explication": "Le courant dépend de S, pas de P."
+        },
+        {
+          "id": "q4308",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "À puissance active égale, un cos φ faible…",
+          "reponses": [
+            "réduit le courant",
+            "augmente le courant appelé",
+            "ne change rien",
+            "baisse la tension"
+          ],
+          "bonne": 1,
+          "explication": "I = P / (U × cos φ)."
+        },
+        {
+          "id": "q4309",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "Un moteur de 2 300 W à cos φ = 0,5 sous 230 V appelle…",
+          "reponses": [
+            "10 A",
+            "20 A",
+            "5 A",
+            "2 A"
+          ],
+          "bonne": 1,
+          "explication": "2 300 / (230 × 0,5) = 20 A."
+        },
+        {
+          "id": "q4310",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "Conséquence d'un mauvais cos φ sur les câbles ?",
+          "reponses": [
+            "Ils refroidissent",
+            "Ils sont surchargés, plus de pertes",
+            "Ils sont plus courts",
+            "Aucune"
+          ],
+          "bonne": 1,
+          "explication": "Plus de courant pour le même travail."
+        },
+        {
+          "id": "q4311",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "Chez un particulier, le compteur facture…",
+          "reponses": [
+            "l'énergie réactive",
+            "l'énergie active (kWh)",
+            "l'apparente",
+            "le cos φ"
+          ],
+          "bonne": 1,
+          "explication": "Mais l'abonnement en kVA doit couvrir l'apparente."
+        },
+        {
+          "id": "q4312",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "Les industriels paient l'énergie réactive…",
+          "reponses": [
+            "toujours",
+            "au-delà d'un seuil",
+            "jamais",
+            "seulement l'été"
+          ],
+          "bonne": 1,
+          "explication": "D'où l'intérêt de compenser."
+        },
+        {
+          "id": "q4313",
+          "fiche_id": "consequences",
+          "type": "qcm",
+          "enonce": "Un atelier avec des moteurs à vide peut disjoncter alors que…",
+          "reponses": [
+            "les kWh sont élevés",
+            "les kWh sont faibles : c'est l'apparente qui dépasse",
+            "la tension est nulle",
+            "le cos φ vaut 1"
+          ],
+          "bonne": 1,
+          "explication": "Courant élevé, travail faible."
+        },
+        {
+          "id": "q4314",
+          "fiche_id": "compensation",
+          "type": "qcm",
+          "enonce": "Pour relever le cos φ, on ajoute…",
+          "reponses": [
+            "des résistances",
+            "des condensateurs",
+            "des bobines",
+            "des fusibles"
+          ],
+          "bonne": 1,
+          "explication": "Ils fournissent le réactif que les moteurs consomment."
+        },
+        {
+          "id": "q4315",
+          "fiche_id": "compensation",
+          "type": "qcm",
+          "enonce": "Objectif courant de cos φ après compensation ?",
+          "reponses": [
+            "0,5",
+            "≥ 0,93",
+            "0,1",
+            "2"
+          ],
+          "bonne": 1,
+          "explication": "Proche de 1 sans le dépasser (surcompensation)."
+        },
+        {
+          "id": "q4316",
+          "fiche_id": "compensation",
+          "type": "qcm",
+          "enonce": "La compensation globale se place…",
+          "reponses": [
+            "à chaque prise",
+            "au tableau général",
+            "dans le compteur",
+            "dans le moteur"
+          ],
+          "bonne": 1,
+          "explication": "La locale se place près de chaque moteur."
+        },
+        {
+          "id": "q4317",
+          "fiche_id": "compensation",
+          "type": "qcm",
+          "enonce": "Un condensateur de compensation après coupure…",
+          "reponses": [
+            "est déchargé",
+            "reste chargé : attendre la décharge avant d'intervenir",
+            "est sans tension",
+            "se recharge"
+          ],
+          "bonne": 1,
+          "explication": "Résistances de décharge intégrées, mais on attend."
+        },
+        {
+          "id": "q4318",
+          "fiche_id": "compensation",
+          "type": "qcm",
+          "enonce": "Les variateurs créent…",
+          "reponses": [
+            "du réactif seulement",
+            "des harmoniques, traités par des filtres",
+            "de la lumière",
+            "du continu sur le réseau"
+          ],
+          "bonne": 1,
+          "explication": "Un autre type de perturbation."
+        },
+        {
+          "id": "q4319",
+          "fiche_id": "puissances",
+          "type": "qcm",
+          "enonce": "Une bobine seule (idéale) a un cos φ de…",
+          "reponses": [
+            "1",
+            "0",
+            "0,8",
+            "0,5"
+          ],
+          "bonne": 1,
+          "explication": "Courant déphasé de 90° : que du réactif."
+        },
+        {
+          "id": "q4320",
+          "fiche_id": "compensation",
+          "type": "ordre",
+          "enonce": "Compenser le réactif d'un atelier : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Mesurer P, Q et le cos φ actuel",
+            "Calculer la puissance de condensateurs nécessaire",
+            "Installer la batterie de condensateurs au tableau",
+            "Vérifier le nouveau cos φ",
+            "Surveiller les harmoniques"
+          ],
+          "explication": "Mesurer, calculer, installer, vérifier."
+        }
+      ],
+      "ordre": 13
+    },
+    {
+      "id": "histoire",
+      "titre": "Histoire de l'électricité",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "pionniers",
+          "titre": "Les pionniers",
+          "contenu": "• Antiquité : l'ambre frotté attire les brins de paille. « Électricité » vient du grec elektron, l'ambre.\n• 1752, Benjamin Franklin : l'éclair est électrique, invention du paratonnerre.\n• 1800, Alessandro Volta : la pile, première source de courant continu. Le volt porte son nom.\n• 1820, Hans Christian Œrsted et André-Marie Ampère : un courant crée un champ magnétique. L'ampère.\n• 1827, Georg Ohm : U = R × I. L'ohm.\n• 1831, Michael Faraday : l'induction, principe de l'alternateur et du transformateur. Le farad.",
+          "image": "pionniers.png"
+        },
+        {
+          "id": "industrialisation",
+          "titre": "L'électricité devient une industrie",
+          "contenu": "• 1879, Thomas Edison : la lampe à incandescence durable, puis la première centrale et le réseau en courant continu de New York.\n• Années 1880, Nikola Tesla et George Westinghouse : le courant alternatif et le moteur asynchrone. La « guerre des courants » est gagnée par l'alternatif, transportable à haute tension.\n• 1882, la première centrale hydraulique. 1890-1900, tramways et métros électriques.\n• En France, l'électrification des villes puis des campagnes s'étale des années 1900 aux années 1950. EDF est créée en 1946.",
+          "image": "industrialisation.png"
+        },
+        {
+          "id": "aujourdhui",
+          "titre": "D'hier à aujourd'hui",
+          "contenu": "• 1950-1980 : généralisation du chauffage électrique, développement du nucléaire en France (années 1970-1980).\n• Sécurité : la NF C 15-100 date de 1911 dans sa première version ; le différentiel 30 mA devient obligatoire dans les logements en 1991 ; l'habilitation électrique est formalisée par l'UTE C 18-510 (1988) puis la NF C 18-510 (2012).\n• Années 2000-2020 : LED, énergies renouvelables, compteurs communicants, véhicules électriques, stockage.\n\nL'histoire montre que chaque progrès a été accompagné de règles de sécurité nées d'accidents : les normes ne sont pas des contraintes abstraites.",
+          "image": "aujourdhui.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4401",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "Le mot « électricité » vient…",
+          "reponses": [
+            "du latin lux",
+            "du grec elektron, l'ambre",
+            "d'un nom de savant",
+            "du mot éclair"
+          ],
+          "bonne": 1,
+          "explication": "L'ambre frotté attire les corps légers."
+        },
+        {
+          "id": "q4402",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "Qui a inventé la pile ?",
+          "reponses": [
+            "Ampère",
+            "Volta",
+            "Edison",
+            "Tesla"
+          ],
+          "bonne": 1,
+          "explication": "En 1800, première source de courant continu."
+        },
+        {
+          "id": "q4403",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "Qui a montré que l'éclair est électrique et inventé le paratonnerre ?",
+          "reponses": [
+            "Franklin",
+            "Faraday",
+            "Ohm",
+            "Œrsted"
+          ],
+          "bonne": 0,
+          "explication": "En 1752."
+        },
+        {
+          "id": "q4404",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "La loi U = R × I est due à…",
+          "reponses": [
+            "Ampère",
+            "Ohm",
+            "Volta",
+            "Tesla"
+          ],
+          "bonne": 1,
+          "explication": "1827."
+        },
+        {
+          "id": "q4405",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "L'induction électromagnétique a été découverte par…",
+          "reponses": [
+            "Faraday",
+            "Edison",
+            "Franklin",
+            "Volta"
+          ],
+          "bonne": 0,
+          "explication": "1831 : le principe de l'alternateur et du transformateur."
+        },
+        {
+          "id": "q4406",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "Œrsted et Ampère ont montré que…",
+          "reponses": [
+            "la foudre est électrique",
+            "un courant crée un champ magnétique",
+            "la lumière est électrique",
+            "l'ambre est conducteur"
+          ],
+          "bonne": 1,
+          "explication": "1820, la naissance de l'électromagnétisme."
+        },
+        {
+          "id": "q4407",
+          "fiche_id": "pionniers",
+          "type": "qcm",
+          "enonce": "Le farad porte le nom de…",
+          "reponses": [
+            "Franklin",
+            "Faraday",
+            "Ferraris",
+            "Fermi"
+          ],
+          "bonne": 1,
+          "explication": "Unité de capacité."
+        },
+        {
+          "id": "q4408",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "Edison est connu pour…",
+          "reponses": [
+            "la pile",
+            "la lampe à incandescence durable et le premier réseau",
+            "le transformateur",
+            "le paratonnerre"
+          ],
+          "bonne": 1,
+          "explication": "1879, puis le réseau en continu de New York."
+        },
+        {
+          "id": "q4409",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "La « guerre des courants » a opposé…",
+          "reponses": [
+            "le continu d'Edison à l'alternatif de Tesla et Westinghouse",
+            "la France et l'Allemagne",
+            "le gaz et l'électricité",
+            "le nucléaire et le charbon"
+          ],
+          "bonne": 0,
+          "explication": "L'alternatif l'emporte grâce au transformateur."
+        },
+        {
+          "id": "q4410",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "Pourquoi l'alternatif a-t-il gagné ?",
+          "reponses": [
+            "Il est moins dangereux",
+            "On peut le transformer en haute tension pour le transport",
+            "Il est plus ancien",
+            "Il est moins cher à produire"
+          ],
+          "bonne": 1,
+          "explication": "Transport sur de longues distances avec peu de pertes."
+        },
+        {
+          "id": "q4411",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "Tesla a inventé…",
+          "reponses": [
+            "la pile",
+            "le moteur asynchrone",
+            "la lampe",
+            "le fusible"
+          ],
+          "bonne": 1,
+          "explication": "Le moteur le plus répandu aujourd'hui."
+        },
+        {
+          "id": "q4412",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "EDF a été créée en…",
+          "reponses": [
+            "1900",
+            "1946",
+            "1970",
+            "1990"
+          ],
+          "bonne": 1,
+          "explication": "Nationalisation après la guerre."
+        },
+        {
+          "id": "q4413",
+          "fiche_id": "industrialisation",
+          "type": "qcm",
+          "enonce": "L'électrification des campagnes françaises s'achève…",
+          "reponses": [
+            "en 1900",
+            "dans les années 1950",
+            "en 2000",
+            "en 1850"
+          ],
+          "bonne": 1,
+          "explication": "Un demi-siècle de travaux."
+        },
+        {
+          "id": "q4414",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "Le différentiel 30 mA est obligatoire dans les logements neufs depuis…",
+          "reponses": [
+            "1911",
+            "1991",
+            "2012",
+            "2020"
+          ],
+          "bonne": 1,
+          "explication": "Un tournant pour la sécurité des personnes."
+        },
+        {
+          "id": "q4415",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "La norme NF C 18-510 (habilitation) date de…",
+          "reponses": [
+            "1911",
+            "1988",
+            "2012",
+            "1946"
+          ],
+          "bonne": 2,
+          "explication": "Elle succède à l'UTE C 18-510 de 1988."
+        },
+        {
+          "id": "q4416",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "La première version de la NF C 15-100 date de…",
+          "reponses": [
+            "1911",
+            "1969",
+            "1991",
+            "2002"
+          ],
+          "bonne": 0,
+          "explication": "Plus d'un siècle de mises à jour."
+        },
+        {
+          "id": "q4417",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "Le nucléaire français s'est développé…",
+          "reponses": [
+            "dans les années 1920",
+            "dans les années 1970-1980",
+            "après 2010",
+            "en 1946"
+          ],
+          "bonne": 1,
+          "explication": "Après le choc pétrolier."
+        },
+        {
+          "id": "q4418",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "Quelle technologie d'éclairage domine depuis les années 2010 ?",
+          "reponses": [
+            "L'incandescence",
+            "La LED",
+            "Le néon",
+            "L'halogène"
+          ],
+          "bonne": 1,
+          "explication": "Rendement et durée de vie."
+        },
+        {
+          "id": "q4419",
+          "fiche_id": "aujourdhui",
+          "type": "qcm",
+          "enonce": "Les règles de sécurité électrique sont nées…",
+          "reponses": [
+            "par hasard",
+            "d'accidents et de retours d'expérience",
+            "d'une mode",
+            "des fabricants"
+          ],
+          "bonne": 1,
+          "explication": "Chaque norme a une histoire."
+        },
+        {
+          "id": "q4420",
+          "fiche_id": "pionniers",
+          "type": "ordre",
+          "enonce": "Classe ces découvertes dans l'ordre chronologique.",
+          "reponses": [
+            "La pile de Volta",
+            "Le lien courant-magnétisme d'Œrsted et Ampère",
+            "La loi d'Ohm",
+            "L'induction de Faraday",
+            "La lampe d'Edison"
+          ],
+          "explication": "1800, 1820, 1827, 1831, 1879."
+        }
+      ],
+      "ordre": 14
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 12,
+      "ordre": 15,
       "fiches": [
         {
           "id": "multimetre",
@@ -3694,7 +4618,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 13,
+      "ordre": 16,
       "fiches": [
         {
           "id": "tableau",
@@ -4304,7 +5228,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 14
+      "ordre": 17
     },
     {
       "id": "cablage",
@@ -4612,7 +5536,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 15
+      "ordre": 18
     },
     {
       "id": "parafoudre",
@@ -4919,7 +5843,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 16
+      "ordre": 19
     },
     {
       "id": "locaux_risques",
@@ -5226,7 +6150,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 17
+      "ordre": 20
     },
     {
       "id": "photovoltaique",
@@ -5533,7 +6457,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 18
+      "ordre": 21
     },
     {
       "id": "chauffage",
@@ -5840,7 +6764,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 19
+      "ordre": 22
     },
     {
       "id": "domotique",
@@ -6147,7 +7071,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 20
+      "ordre": 23
     },
     {
       "id": "vehicule_electrique",
@@ -6455,7 +7379,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 21
+      "ordre": 24
     },
     {
       "id": "plaque_signaletique",
@@ -6762,7 +7686,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 22
+      "ordre": 25
     },
     {
       "id": "ventilation",
@@ -7070,7 +7994,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 23
+      "ordre": 26
     },
     {
       "id": "lire_tableau",
@@ -7377,7 +8301,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 24
+      "ordre": 27
     },
     {
       "id": "depannage",
@@ -7685,7 +8609,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 25
+      "ordre": 28
     },
     {
       "id": "courants_faibles",
@@ -7993,7 +8917,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 26
+      "ordre": 29
     },
     {
       "id": "eclairage_exterieur",
@@ -8301,7 +9225,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 27
+      "ordre": 30
     },
     {
       "id": "alarme",
@@ -8609,12 +9533,1551 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 28
+      "ordre": 31
+    },
+    {
+      "id": "mesures_avancees",
+      "titre": "Mesures avancées : isolement et terre",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "isolement",
+          "titre": "Mesurer l'isolement",
+          "contenu": "L'isolement, c'est la résistance entre les conducteurs actifs et la terre (ou entre eux). Un bon isolant fait des mégohms (MΩ) ; un défaut d'isolement fait quelques kilohms ou moins et provoque des fuites qui font sauter le différentiel.\n\nOn mesure avec un contrôleur d'isolement (mégohmmètre), qui applique une tension continue de 500 V (installations 230 / 400 V) sur l'installation hors tension, appareils débranchés, entre chaque conducteur actif et la terre.\n\nValeur minimale acceptable : 0,5 MΩ en 230 / 400 V. En pratique, une installation saine fait plusieurs dizaines de MΩ.\n\nJamais de mesure d'isolement sur une installation sous tension ni avec des appareils électroniques raccordés.",
+          "image": "isolement.png"
+        },
+        {
+          "id": "prise_terre",
+          "titre": "Mesurer la prise de terre",
+          "contenu": "La résistance de la prise de terre doit permettre au différentiel de couper : avec un 30 mA, la norme accepte jusqu'à 100 Ω ; on vise en pratique moins de 50 Ω.\n\nMesure par la méthode des 62 % (telluromètre) : deux piquets auxiliaires plantés en ligne, la mesure se fait avec la terre déconnectée de l'installation (barrette de coupure ouverte).\n\nMesure de boucle : un contrôleur d'installation mesure l'impédance de boucle depuis une prise, installation sous tension ; plus rapide, moins précis, mais sans piquets.\n\nUne terre trop élevée : piquet supplémentaire, piquet plus long, terre en fond de fouille, terrain humide.",
+          "image": "prise_terre.png"
+        },
+        {
+          "id": "controleur",
+          "titre": "Le contrôleur d'installation",
+          "contenu": "Un contrôleur d'installation (multifonction) regroupe : isolement, continuité des conducteurs de protection (à 200 mA), impédance de boucle, résistance de terre, test des différentiels (temps et courant de déclenchement), ordre des phases en triphasé.\n\nLe test du différentiel vérifie qu'il coupe à 30 mA (entre 15 et 30 mA) et en moins de 300 ms (souvent 20 à 40 ms). Le bouton T ne vérifie que la mécanique ; le contrôleur vérifie la sensibilité réelle.\n\nCes mesures figurent dans le rapport de vérification initiale (Consuel) ou périodique (entreprises, ERP).",
+          "image": "controleur.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4001",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "Une bonne résistance d'isolement se compte en…",
+          "reponses": [
+            "ohms",
+            "kilohms",
+            "mégohms",
+            "milliohms"
+          ],
+          "bonne": 2,
+          "explication": "Plusieurs dizaines de MΩ pour une installation saine."
+        },
+        {
+          "id": "q4002",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "La tension d'essai d'un contrôleur d'isolement en 230 / 400 V est…",
+          "reponses": [
+            "12 V",
+            "500 V continu",
+            "230 V alternatif",
+            "5 000 V"
+          ],
+          "bonne": 1,
+          "explication": "Continu, pour ne pas être perturbé par les capacités."
+        },
+        {
+          "id": "q4003",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "La mesure d'isolement se fait…",
+          "reponses": [
+            "sous tension",
+            "hors tension, appareils débranchés",
+            "sur les appareils électroniques",
+            "depuis le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Les 500 V détruiraient l'électronique et fausseraient la mesure."
+        },
+        {
+          "id": "q4004",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "Valeur minimale acceptable d'isolement en 230 / 400 V ?",
+          "reponses": [
+            "0,5 Ω",
+            "0,5 MΩ",
+            "500 MΩ",
+            "50 Ω"
+          ],
+          "bonne": 1,
+          "explication": "Seuil normatif ; on trouve bien plus en pratique."
+        },
+        {
+          "id": "q4005",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "Un isolement de quelques kΩ signale…",
+          "reponses": [
+            "une installation saine",
+            "un défaut d'isolement : fuite, humidité, câble abîmé",
+            "une bonne terre",
+            "un neutre coupé"
+          ],
+          "bonne": 1,
+          "explication": "C'est la cause des différentiels qui sautent."
+        },
+        {
+          "id": "q4006",
+          "fiche_id": "isolement",
+          "type": "qcm",
+          "enonce": "Entre quoi mesure-t-on l'isolement ?",
+          "reponses": [
+            "Phase et neutre seulement",
+            "Chaque conducteur actif et la terre, et entre conducteurs",
+            "Terre et terre",
+            "Compteur et tableau"
+          ],
+          "bonne": 1,
+          "explication": "Phase-terre, neutre-terre, phase-neutre."
+        },
+        {
+          "id": "q4007",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "Valeur maximale de la prise de terre avec un différentiel 30 mA ?",
+          "reponses": [
+            "1 Ω",
+            "100 Ω",
+            "1 000 Ω",
+            "10 000 Ω"
+          ],
+          "bonne": 1,
+          "explication": "UL / IΔn = 50 V / 0,03 A ≈ 1 667 Ω en théorie, mais la norme fixe 100 Ω pour la sécurité."
+        },
+        {
+          "id": "q4008",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "Valeur visée en pratique pour une bonne terre ?",
+          "reponses": [
+            "Moins de 50 Ω",
+            "Entre 500 et 1 000 Ω",
+            "Plus de 100 Ω",
+            "Exactement 100 Ω"
+          ],
+          "bonne": 0,
+          "explication": "Plus c'est bas, mieux le différentiel fait son travail."
+        },
+        {
+          "id": "q4009",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "La méthode des 62 % utilise…",
+          "reponses": [
+            "un multimètre",
+            "un telluromètre et deux piquets auxiliaires",
+            "une pince",
+            "un VAT"
+          ],
+          "bonne": 1,
+          "explication": "Le piquet de potentiel à 62 % de la distance entre la terre et le piquet d'injection."
+        },
+        {
+          "id": "q4010",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "Pendant la mesure au telluromètre, la barrette de coupure est…",
+          "reponses": [
+            "fermée",
+            "ouverte : la terre est déconnectée de l'installation",
+            "supprimée",
+            "reliée au neutre"
+          ],
+          "bonne": 1,
+          "explication": "Sinon on mesure aussi la terre du réseau via le neutre."
+        },
+        {
+          "id": "q4011",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "La mesure de boucle se fait…",
+          "reponses": [
+            "hors tension avec piquets",
+            "sous tension depuis une prise, sans piquets",
+            "avec un ohmmètre",
+            "dans le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Rapide, pratique, un peu moins précise."
+        },
+        {
+          "id": "q4012",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "Pour améliorer une terre trop élevée, on peut…",
+          "reponses": [
+            "raccourcir le piquet",
+            "ajouter un piquet, l'allonger ou faire une terre en fond de fouille",
+            "couper le neutre",
+            "augmenter le calibre du différentiel"
+          ],
+          "bonne": 1,
+          "explication": "Plus de contact avec un sol humide."
+        },
+        {
+          "id": "q4013",
+          "fiche_id": "prise_terre",
+          "type": "qcm",
+          "enonce": "La terre en fond de fouille est…",
+          "reponses": [
+            "un piquet",
+            "un conducteur enterré autour des fondations",
+            "une boucle dans le grenier",
+            "interdite"
+          ],
+          "bonne": 1,
+          "explication": "Réalisée à la construction, très efficace."
+        },
+        {
+          "id": "q4014",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "Le contrôleur d'installation mesure…",
+          "reponses": [
+            "seulement la tension",
+            "isolement, continuité, boucle, terre, différentiels",
+            "seulement la terre",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Un appareil multifonction pour les vérifications."
+        },
+        {
+          "id": "q4015",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "Un différentiel 30 mA doit couper à un courant compris entre…",
+          "reponses": [
+            "0 et 1 mA",
+            "15 et 30 mA",
+            "30 et 60 mA",
+            "100 et 300 mA"
+          ],
+          "bonne": 1,
+          "explication": "Entre la moitié de sa sensibilité et sa sensibilité."
+        },
+        {
+          "id": "q4016",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "Temps de coupure maximal d'un différentiel 30 mA ?",
+          "reponses": [
+            "3 s",
+            "300 ms",
+            "30 s",
+            "3 min"
+          ],
+          "bonne": 1,
+          "explication": "En pratique 20 à 40 ms."
+        },
+        {
+          "id": "q4017",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "Le bouton T d'un différentiel vérifie…",
+          "reponses": [
+            "la sensibilité exacte",
+            "la mécanique de déclenchement",
+            "la terre",
+            "l'isolement"
+          ],
+          "bonne": 1,
+          "explication": "Le contrôleur mesure la sensibilité et le temps réels."
+        },
+        {
+          "id": "q4018",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "La continuité des conducteurs de protection se teste à…",
+          "reponses": [
+            "1 mA",
+            "200 mA",
+            "10 A",
+            "0,001 mA"
+          ],
+          "bonne": 1,
+          "explication": "Un courant suffisant pour révéler un mauvais contact."
+        },
+        {
+          "id": "q4019",
+          "fiche_id": "controleur",
+          "type": "qcm",
+          "enonce": "Où figurent ces mesures ?",
+          "reponses": [
+            "Nulle part",
+            "Dans le rapport de vérification initiale ou périodique",
+            "Sur le compteur",
+            "Dans le carnet de prescriptions"
+          ],
+          "bonne": 1,
+          "explication": "Consuel dans le neuf, vérifications périodiques en entreprise."
+        },
+        {
+          "id": "q4020",
+          "fiche_id": "isolement",
+          "type": "ordre",
+          "enonce": "Mesurer l'isolement d'une installation : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Mettre l'installation hors tension et le vérifier",
+            "Débrancher les appareils, surtout électroniques",
+            "Régler le contrôleur sur 500 V",
+            "Mesurer entre chaque conducteur actif et la terre",
+            "Comparer au seuil de 0,5 MΩ"
+          ],
+          "explication": "Hors tension, débrancher, régler, mesurer, comparer."
+        }
+      ],
+      "ordre": 32
+    },
+    {
+      "id": "renovation",
+      "titre": "Rénover une installation ancienne",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "etat_des_lieux",
+          "titre": "Faire l'état des lieux",
+          "contenu": "Une installation de plus de 30 ans cumule souvent : pas de terre ou terre partielle, pas de différentiel, tableau à fusibles, fils en tissu ou en plomb, sections insuffisantes, prises sans terre, salle de bains hors normes.\n\nAvant tout : couper, repérer les circuits, mesurer l'isolement et la terre, photographier le tableau.\n\nDeux stratégies : mise en sécurité (les six points essentiels) ou rénovation complète (tout refaire aux normes actuelles, avec Consuel). La mise en sécurité est un minimum ; la rénovation complète s'impose si les câbles sont dégradés.\n\nL'amiante et le plomb peuvent être présents dans les anciens bâtiments : diagnostic avant de percer.",
+          "image": "etat_des_lieux.png"
+        },
+        {
+          "id": "priorites",
+          "titre": "Les priorités",
+          "contenu": "1. La terre : créer ou améliorer la prise de terre, tirer la liaison au tableau, raccorder les masses.\n2. Le différentiel 30 mA : au moins deux, en tête de tableau.\n3. Les protections : un disjoncteur par circuit, calibré selon la section réelle des câbles existants (souvent 1,5 mm² → 10 A).\n4. La salle de bains : volumes, liaison équipotentielle, prise hors volumes.\n5. Le matériel vétuste : prises sans terre, interrupteurs cassés, boîtes ouvertes.\n6. Les conducteurs : gaines, boîtes fermées, plus de fils nus.\n\nOn n'augmente jamais un calibre pour un vieux câble : on adapte le disjoncteur au câble.",
+          "image": "priorites.png"
+        },
+        {
+          "id": "chantier_renovation",
+          "titre": "Conduire le chantier",
+          "contenu": "Nouveau tableau : le poser à côté de l'ancien, transférer les circuits un par un, chacun identifié et mesuré avant raccordement.\n\nTirage de nouveaux câbles : gaines ICTA dans les cloisons, saignées rebouchées, plinthes ou goulottes en rénovation légère. Prévoir 20 % de réserve au tableau.\n\nRaccordement au réseau : si le branchement change (puissance, triphasé), Enedis intervient ; le Consuel est obligatoire pour une rénovation totale.\n\nÀ la fin : schéma du tableau, étiquettes, test de chaque différentiel, mesure d'isolement et de terre, remise d'un dossier au propriétaire.",
+          "image": "chantier_renovation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4101",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "Défauts typiques d'une installation de plus de 30 ans ?",
+          "reponses": [
+            "Trop de différentiels",
+            "Pas de terre, pas de différentiel, fusibles, fils en tissu",
+            "Câbles trop gros",
+            "Trop de prises avec terre"
+          ],
+          "bonne": 1,
+          "explication": "Le diagnostic les relève tous."
+        },
+        {
+          "id": "q4102",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "Avant toute rénovation, on…",
+          "reponses": [
+            "coupe, repère, mesure isolement et terre, photographie",
+            "commence par la peinture",
+            "change le compteur",
+            "augmente l'abonnement"
+          ],
+          "bonne": 0,
+          "explication": "On sait d'où on part."
+        },
+        {
+          "id": "q4103",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "La mise en sécurité couvre…",
+          "reponses": [
+            "tout aux normes actuelles",
+            "les six points essentiels de sécurité",
+            "la décoration",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Un minimum pour une installation existante."
+        },
+        {
+          "id": "q4104",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "La rénovation complète s'impose quand…",
+          "reponses": [
+            "le tableau est vieux",
+            "les câbles sont dégradés (isolant cassant, fils en tissu)",
+            "il manque une prise",
+            "le propriétaire le souhaite seulement"
+          ],
+          "bonne": 1,
+          "explication": "On ne protège pas durablement un câble mort."
+        },
+        {
+          "id": "q4105",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "Avant de percer dans un bâtiment ancien, on pense…",
+          "reponses": [
+            "à la couleur",
+            "au diagnostic amiante et plomb",
+            "au wifi",
+            "à rien"
+          ],
+          "bonne": 1,
+          "explication": "Poussières toxiques en perçage."
+        },
+        {
+          "id": "q4106",
+          "fiche_id": "etat_des_lieux",
+          "type": "qcm",
+          "enonce": "Des fils sous gaine en tissu…",
+          "reponses": [
+            "sont solides",
+            "ont un isolant vieilli, souvent cassant : à remplacer",
+            "sont aux normes",
+            "sont plus sûrs"
+          ],
+          "bonne": 1,
+          "explication": "Typique des années 50 à 70."
+        },
+        {
+          "id": "q4107",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Première priorité de la rénovation ?",
+          "reponses": [
+            "Les prises design",
+            "La prise de terre et sa liaison aux masses",
+            "Le variateur",
+            "La domotique"
+          ],
+          "bonne": 1,
+          "explication": "Sans terre, le différentiel ne peut pas jouer son rôle sur les masses."
+        },
+        {
+          "id": "q4108",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Un vieux circuit en 1,5 mm² se protège par…",
+          "reponses": [
+            "16 A ou 20 A",
+            "10 A",
+            "32 A",
+            "un fusible 25 A"
+          ],
+          "bonne": 1,
+          "explication": "On adapte le disjoncteur au câble existant."
+        },
+        {
+          "id": "q4109",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Peut-on mettre un disjoncteur 20 A sur un vieux câble de 1,5 mm² ?",
+          "reponses": [
+            "Oui",
+            "Non : le câble chaufferait sans protection",
+            "Oui, temporairement",
+            "Oui, en cuisine"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur protège le câble, pas l'inverse."
+        },
+        {
+          "id": "q4110",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Combien de différentiels 30 mA au minimum ?",
+          "reponses": [
+            "Un",
+            "Deux",
+            "Aucun si terre",
+            "Cinq"
+          ],
+          "bonne": 1,
+          "explication": "Comme dans le neuf."
+        },
+        {
+          "id": "q4111",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Une prise sans terre dans une cuisine…",
+          "reponses": [
+            "est acceptable",
+            "est du matériel vétuste à remplacer par une prise 2P+T raccordée à la terre",
+            "est la norme",
+            "est réservée aux LED"
+          ],
+          "bonne": 1,
+          "explication": "Point 5 du diagnostic."
+        },
+        {
+          "id": "q4112",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "Une boîte de dérivation sans couvercle avec des fils apparents…",
+          "reponses": [
+            "est normale",
+            "est à fermer : conducteurs à protéger",
+            "améliore la ventilation",
+            "est décorative"
+          ],
+          "bonne": 1,
+          "explication": "Point 6 du diagnostic."
+        },
+        {
+          "id": "q4113",
+          "fiche_id": "priorites",
+          "type": "qcm",
+          "enonce": "La salle de bains ancienne demande souvent…",
+          "reponses": [
+            "rien",
+            "liaison équipotentielle et déplacement des prises hors volumes",
+            "une baignoire neuve",
+            "une prise dans la douche"
+          ],
+          "bonne": 1,
+          "explication": "Volumes et équipotentialité."
+        },
+        {
+          "id": "q4114",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "Pour remplacer un tableau, on…",
+          "reponses": [
+            "coupe tout et on refait en une nuit",
+            "pose le nouveau à côté et transfère les circuits un par un",
+            "garde les fusibles",
+            "attend"
+          ],
+          "bonne": 1,
+          "explication": "Chaque circuit identifié et mesuré avant raccordement."
+        },
+        {
+          "id": "q4115",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "En rénovation légère, les nouveaux câbles passent…",
+          "reponses": [
+            "nus au mur",
+            "en goulottes, plinthes ou gaines ICTA",
+            "dans les tuyaux d'eau",
+            "dans la cheminée"
+          ],
+          "bonne": 1,
+          "explication": "Sans tout casser."
+        },
+        {
+          "id": "q4116",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "Le Consuel est-il obligatoire après une rénovation totale ?",
+          "reponses": [
+            "Non",
+            "Oui",
+            "Seulement en triphasé",
+            "Seulement en location"
+          ],
+          "bonne": 1,
+          "explication": "Comme dans le neuf."
+        },
+        {
+          "id": "q4117",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "Si la puissance ou le type de branchement change…",
+          "reponses": [
+            "on le fait soi-même",
+            "Enedis intervient sur le branchement",
+            "le Consuel le fait",
+            "rien à faire"
+          ],
+          "bonne": 1,
+          "explication": "Le branchement appartient au distributeur."
+        },
+        {
+          "id": "q4118",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "À la fin du chantier, on remet…",
+          "reponses": [
+            "une facture seulement",
+            "schéma, étiquettes, mesures, dossier au propriétaire",
+            "les vieux fusibles",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Traçabilité et facilité pour le prochain intervenant."
+        },
+        {
+          "id": "q4119",
+          "fiche_id": "chantier_renovation",
+          "type": "qcm",
+          "enonce": "On prévoit au tableau…",
+          "reponses": [
+            "aucune réserve",
+            "20 % de réserve",
+            "100 % de réserve",
+            "une seule rangée"
+          ],
+          "bonne": 1,
+          "explication": "Pour les besoins futurs."
+        },
+        {
+          "id": "q4120",
+          "fiche_id": "priorites",
+          "type": "ordre",
+          "enonce": "Rénover en sécurité : remets les priorités dans l'ordre.",
+          "reponses": [
+            "Créer ou améliorer la prise de terre",
+            "Poser les différentiels 30 mA",
+            "Un disjoncteur par circuit, calibré selon le câble",
+            "Mettre la salle de bains aux règles",
+            "Remplacer le matériel vétuste et protéger les conducteurs"
+          ],
+          "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
+        }
+      ],
+      "ordre": 33
+    },
+    {
+      "id": "secours_energie",
+      "titre": "Groupes électrogènes et alimentation de secours",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "groupe",
+          "titre": "Le groupe électrogène",
+          "contenu": "Un groupe électrogène est un moteur thermique qui entraîne un alternateur. Puissance de 2 à 10 kVA pour un usage domestique, davantage en chantier.\n\nLa puissance apparente (kVA) se convertit en puissance réelle : pour des appareils simples, 1 kVA ≈ 0,8 à 1 kW. Les moteurs (pompe, frigo) demandent 3 fois leur puissance au démarrage.\n\nUn groupe « inverter » produit un courant propre, adapté à l'électronique. Un groupe classique peut abîmer les appareils sensibles.\n\nÀ l'extérieur uniquement : le monoxyde de carbone tue. Carburant stocké au frais, à l'écart.",
+          "image": "groupe.png"
+        },
+        {
+          "id": "inverseur",
+          "titre": "Raccorder un groupe à la maison",
+          "contenu": "Jamais de « câble mâle-mâle » branché sur une prise : le groupe renverrait du courant sur le réseau et électriserait les techniciens, et le groupe serait détruit au retour du réseau.\n\nLa seule méthode : un inverseur de source (manuel ou automatique) au tableau, qui isole complètement le réseau avant de connecter le groupe. Il commute phase et neutre.\n\nLe groupe alimente en général une partie de l'installation (circuits prioritaires : frigo, chaudière, éclairage, quelques prises). La terre du groupe est reliée à celle de l'installation, le régime de neutre est respecté.\n\nInstallation par un professionnel, essai régulier.",
+          "image": "inverseur.png"
+        },
+        {
+          "id": "onduleur_secours",
+          "titre": "Onduleurs et batteries de secours",
+          "contenu": "L'onduleur (UPS) alimente un appareil pendant une coupure grâce à sa batterie, et filtre les microcoupures et surtensions. Autonomie de quelques minutes (le temps d'éteindre un ordinateur) à quelques heures selon la batterie.\n\nTypes : off-line (bascule à la coupure), line-interactive (régule la tension), on-line (double conversion, l'appareil est toujours sur batterie, sans aucune coupure).\n\nUsages : informatique, box, alarme, chaudière, appareils médicaux. On choisit selon la puissance des appareils (VA) et l'autonomie voulue.\n\nLes batteries se remplacent tous les 3 à 5 ans. Un système solaire avec batterie peut aussi servir de secours si l'onduleur le permet (mode « backup »).",
+          "image": "onduleur_secours.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4201",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "Un groupe électrogène, c'est…",
+          "reponses": [
+            "une batterie",
+            "un moteur thermique qui entraîne un alternateur",
+            "un transformateur",
+            "un panneau solaire"
+          ],
+          "bonne": 1,
+          "explication": "Essence, diesel ou gaz."
+        },
+        {
+          "id": "q4202",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "Un moteur (pompe, frigo) demande au démarrage…",
+          "reponses": [
+            "sa puissance nominale",
+            "environ 3 fois sa puissance",
+            "la moitié",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Il faut dimensionner le groupe en conséquence."
+        },
+        {
+          "id": "q4203",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "Un groupe « inverter »…",
+          "reponses": [
+            "est plus bruyant",
+            "produit un courant propre adapté à l'électronique",
+            "ne fonctionne pas sans réseau",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Onduleur intégré : tension et fréquence stables."
+        },
+        {
+          "id": "q4204",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "Où fait-on fonctionner un groupe électrogène ?",
+          "reponses": [
+            "Dans le garage fermé",
+            "À l'extérieur, loin des ouvertures",
+            "Dans la cave",
+            "Dans la cuisine"
+          ],
+          "bonne": 1,
+          "explication": "Le monoxyde de carbone est mortel."
+        },
+        {
+          "id": "q4205",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "1 kVA de groupe correspond pour des appareils simples à environ…",
+          "reponses": [
+            "0,8 à 1 kW",
+            "10 kW",
+            "0,1 kW",
+            "100 W"
+          ],
+          "bonne": 0,
+          "explication": "Selon le facteur de puissance."
+        },
+        {
+          "id": "q4206",
+          "fiche_id": "groupe",
+          "type": "qcm",
+          "enonce": "Le carburant du groupe se stocke…",
+          "reponses": [
+            "près du groupe chaud",
+            "au frais, à l'écart, dans un bidon homologué",
+            "dans la maison",
+            "dans le réservoir plein en permanence"
+          ],
+          "bonne": 1,
+          "explication": "Vapeurs inflammables."
+        },
+        {
+          "id": "q4207",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "Brancher un groupe avec un câble mâle-mâle sur une prise…",
+          "reponses": [
+            "est pratique",
+            "est très dangereux : retour de courant sur le réseau",
+            "est la méthode officielle",
+            "recharge le groupe"
+          ],
+          "bonne": 1,
+          "explication": "Électrise les techniciens du réseau et détruit le groupe au retour du courant."
+        },
+        {
+          "id": "q4208",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "La bonne méthode pour raccorder un groupe ?",
+          "reponses": [
+            "Une multiprise",
+            "Un inverseur de source au tableau",
+            "Un câble mâle-mâle",
+            "Un adaptateur"
+          ],
+          "bonne": 1,
+          "explication": "Il isole le réseau avant de connecter le groupe."
+        },
+        {
+          "id": "q4209",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "L'inverseur de source commute…",
+          "reponses": [
+            "la phase seulement",
+            "la phase et le neutre",
+            "la terre",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Séparation complète du réseau."
+        },
+        {
+          "id": "q4210",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "Le groupe alimente en général…",
+          "reponses": [
+            "toute la maison",
+            "des circuits prioritaires : frigo, chaudière, éclairage",
+            "seulement le chauffe-eau",
+            "les voisins"
+          ],
+          "bonne": 1,
+          "explication": "Sa puissance est limitée."
+        },
+        {
+          "id": "q4211",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "La terre du groupe…",
+          "reponses": [
+            "est inutile",
+            "est reliée à celle de l'installation",
+            "est reliée au neutre du réseau",
+            "est un piquet séparé sans lien"
+          ],
+          "bonne": 1,
+          "explication": "Le régime de neutre reste cohérent."
+        },
+        {
+          "id": "q4212",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "Un inverseur automatique…",
+          "reponses": [
+            "demande une manœuvre manuelle",
+            "bascule seul à la coupure et démarre le groupe",
+            "n'existe pas",
+            "coupe la terre"
+          ],
+          "bonne": 1,
+          "explication": "Continuité de service sans intervention."
+        },
+        {
+          "id": "q4213",
+          "fiche_id": "inverseur",
+          "type": "qcm",
+          "enonce": "Qui installe un inverseur de source ?",
+          "reponses": [
+            "N'importe qui",
+            "Un professionnel",
+            "Le vendeur du groupe",
+            "Le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité du réseau et de l'installation."
+        },
+        {
+          "id": "q4214",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Un onduleur (UPS) sert à…",
+          "reponses": [
+            "produire de l'électricité",
+            "alimenter un appareil pendant une coupure et filtrer les perturbations",
+            "chauffer",
+            "remplacer le groupe"
+          ],
+          "bonne": 1,
+          "explication": "Le temps d'éteindre proprement ou de passer la coupure."
+        },
+        {
+          "id": "q4215",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Un onduleur on-line…",
+          "reponses": [
+            "bascule à la coupure",
+            "alimente en permanence depuis la batterie, sans aucune coupure",
+            "ne filtre rien",
+            "est le moins cher"
+          ],
+          "bonne": 1,
+          "explication": "Double conversion : la référence pour le matériel sensible."
+        },
+        {
+          "id": "q4216",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Un onduleur off-line…",
+          "reponses": [
+            "régule en permanence",
+            "bascule sur batterie quand le réseau coupe",
+            "n'a pas de batterie",
+            "fonctionne au carburant"
+          ],
+          "bonne": 1,
+          "explication": "Le plus simple, avec un temps de bascule de quelques millisecondes."
+        },
+        {
+          "id": "q4217",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Les batteries d'un onduleur se remplacent…",
+          "reponses": [
+            "jamais",
+            "tous les 3 à 5 ans",
+            "chaque mois",
+            "tous les 20 ans"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie usée ne tient plus la coupure."
+        },
+        {
+          "id": "q4218",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Pour choisir un onduleur, on regarde…",
+          "reponses": [
+            "sa couleur",
+            "la puissance des appareils (VA) et l'autonomie voulue",
+            "le prix seulement",
+            "le poids"
+          ],
+          "bonne": 1,
+          "explication": "Sous-dimensionné, il coupe en surcharge."
+        },
+        {
+          "id": "q4219",
+          "fiche_id": "onduleur_secours",
+          "type": "qcm",
+          "enonce": "Un système solaire avec batterie peut servir de secours…",
+          "reponses": [
+            "toujours",
+            "si l'onduleur a un mode backup",
+            "jamais",
+            "seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Sans ce mode, il s'arrête avec le réseau par sécurité."
+        },
+        {
+          "id": "q4220",
+          "fiche_id": "inverseur",
+          "type": "ordre",
+          "enonce": "Basculer sur le groupe électrogène (inverseur manuel) : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Sortir et démarrer le groupe à l'extérieur",
+            "Basculer l'inverseur de source du réseau vers le groupe",
+            "Vérifier que les circuits prioritaires sont alimentés",
+            "Au retour du réseau, rebasculer l'inverseur vers le réseau",
+            "Arrêter le groupe"
+          ],
+          "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
+        }
+      ],
+      "ordre": 34
+    },
+    {
+      "id": "camping_car_bateau",
+      "titre": "Électricité en camping-car et bateau",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "deux_reseaux",
+          "titre": "Deux réseaux à bord",
+          "contenu": "Un camping-car ou un bateau a deux réseaux :\n\n• 12 V (ou 24 V) continu : batterie de servitude, séparée de la batterie moteur par un coupleur-séparateur. Éclairage LED, pompe à eau, frigo, chauffage, prises USB.\n• 230 V alternatif : quand on est branché au quai ou au camping, ou via un convertisseur (onduleur) depuis les batteries.\n\nLe 12 V n'est pas dangereux pour les personnes, mais les courants sont forts : un appareil de 120 W tire 10 A en 12 V. Sections de câble importantes et fusibles sur chaque circuit, au plus près de la batterie.",
+          "image": "deux_reseaux.png"
+        },
+        {
+          "id": "branchement_quai",
+          "titre": "Le branchement 230 V",
+          "contenu": "Le câble de quai ou de camping est un câble souple H07RN-F avec une fiche bleue (CEE 16 A). Il alimente un tableau 230 V à bord avec disjoncteur et différentiel 30 mA, obligatoires.\n\nÀ bord d'un bateau, la terre 230 V est reliée à la coque ou au plan de terre ; un isolateur galvanique ou un transformateur d'isolement évite la corrosion électrolytique due au courant qui passe par la terre du quai.\n\nOn ne branche jamais une rallonge domestique ordinaire au quai, et on vérifie le bouton test du différentiel de bord à chaque branchement.",
+          "image": "branchement_quai.png"
+        },
+        {
+          "id": "energie_bord",
+          "titre": "Produire et stocker l'énergie",
+          "contenu": "Panneaux solaires sur le toit ou le pont avec un régulateur (MPPT, le plus efficace) qui charge la batterie de servitude. Alternateur moteur en roulant, chargeur de batterie au quai.\n\nBatteries de servitude : plomb AGM ou gel, ou lithium LFP (plus légères, plus de cycles, un BMS obligatoire, chargeur adapté).\n\nBilan énergétique : additionner les Wh consommés par jour, comparer à ce que produisent panneaux et alternateur. Ne pas descendre sous 50 % avec du plomb.\n\nSécurité : batteries dans un compartiment ventilé et fixé, fusible général, coupe-batterie accessible.",
+          "image": "energie_bord.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4501",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "La batterie de servitude est…",
+          "reponses": [
+            "la batterie moteur",
+            "celle qui alimente le 12 V de la cellule ou de la cabine",
+            "une pile",
+            "la batterie du quai"
+          ],
+          "bonne": 1,
+          "explication": "Séparée de la batterie moteur par un coupleur."
+        },
+        {
+          "id": "q4502",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "Le coupleur-séparateur sert à…",
+          "reponses": [
+            "chauffer",
+            "charger les deux batteries en roulant sans vider la batterie moteur à l'arrêt",
+            "couper le 230 V",
+            "remplacer le fusible"
+          ],
+          "bonne": 1,
+          "explication": "On garde toujours de quoi démarrer le moteur."
+        },
+        {
+          "id": "q4503",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "Un appareil de 120 W en 12 V tire…",
+          "reponses": [
+            "1 A",
+            "10 A",
+            "0,5 A",
+            "120 A"
+          ],
+          "bonne": 1,
+          "explication": "I = 120 / 12 = 10 A : les câbles doivent être gros."
+        },
+        {
+          "id": "q4504",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "Le 12 V est-il dangereux au contact ?",
+          "reponses": [
+            "Oui, mortel",
+            "Non, mais les forts courants peuvent chauffer et brûler",
+            "Oui, comme le 230 V",
+            "Seulement en mer"
+          ],
+          "bonne": 1,
+          "explication": "Risque d'échauffement et d'incendie, pas de choc."
+        },
+        {
+          "id": "q4505",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "Les fusibles 12 V se placent…",
+          "reponses": [
+            "loin de la batterie",
+            "au plus près de la batterie, un par circuit",
+            "nulle part",
+            "sur le 230 V"
+          ],
+          "bonne": 1,
+          "explication": "Un court-circuit sur du 12 V à forte capacité fond les câbles."
+        },
+        {
+          "id": "q4506",
+          "fiche_id": "deux_reseaux",
+          "type": "qcm",
+          "enonce": "L'éclairage à bord est de préférence…",
+          "reponses": [
+            "halogène",
+            "LED",
+            "à incandescence",
+            "au gaz"
+          ],
+          "bonne": 1,
+          "explication": "Consommation minimale sur batterie."
+        },
+        {
+          "id": "q4507",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "La fiche du câble de quai est…",
+          "reponses": [
+            "une prise domestique",
+            "une fiche bleue CEE 16 A",
+            "une fiche rouge triphasée",
+            "une USB"
+          ],
+          "bonne": 1,
+          "explication": "Standard camping et marine."
+        },
+        {
+          "id": "q4508",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "Le tableau 230 V de bord comporte obligatoirement…",
+          "reponses": [
+            "un fusible seulement",
+            "un disjoncteur et un différentiel 30 mA",
+            "un compteur",
+            "un onduleur"
+          ],
+          "bonne": 1,
+          "explication": "Même règle qu'à la maison, en plus humide."
+        },
+        {
+          "id": "q4509",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "L'isolateur galvanique sur un bateau sert à…",
+          "reponses": [
+            "isoler du bruit",
+            "éviter la corrosion électrolytique via la terre du quai",
+            "augmenter la tension",
+            "couper le 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Sinon l'hélice et les passe-coques se corrodent."
+        },
+        {
+          "id": "q4510",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "Une rallonge domestique au quai…",
+          "reponses": [
+            "convient",
+            "est à proscrire : câble H07RN-F et fiche CEE seulement",
+            "est obligatoire",
+            "est plus sûre"
+          ],
+          "bonne": 1,
+          "explication": "Humidité, mouvement, corrosion."
+        },
+        {
+          "id": "q4511",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "À chaque branchement, on teste…",
+          "reponses": [
+            "le frigo",
+            "le bouton test du différentiel de bord",
+            "la pompe",
+            "les phares"
+          ],
+          "bonne": 1,
+          "explication": "Il doit couper."
+        },
+        {
+          "id": "q4512",
+          "fiche_id": "branchement_quai",
+          "type": "qcm",
+          "enonce": "Un convertisseur (onduleur) à bord…",
+          "reponses": [
+            "charge la batterie",
+            "fabrique du 230 V à partir des batteries",
+            "refroidit",
+            "remplace la terre"
+          ],
+          "bonne": 1,
+          "explication": "Utile loin du quai, mais gourmand."
+        },
+        {
+          "id": "q4513",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Le régulateur MPPT…",
+          "reponses": [
+            "chauffe l'eau",
+            "optimise la charge depuis les panneaux",
+            "coupe le 230 V",
+            "est un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Il tire le maximum des panneaux en toutes conditions."
+        },
+        {
+          "id": "q4514",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Avantage des batteries lithium LFP à bord ?",
+          "reponses": [
+            "Plus lourdes",
+            "Plus légères, plus de cycles, décharge profonde possible",
+            "Sans électronique",
+            "Moins chères"
+          ],
+          "bonne": 1,
+          "explication": "Avec BMS et chargeur adapté."
+        },
+        {
+          "id": "q4515",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Une batterie plomb de servitude ne descend pas sous…",
+          "reponses": [
+            "90 %",
+            "50 %",
+            "10 %",
+            "0 %"
+          ],
+          "bonne": 1,
+          "explication": "Les décharges profondes la tuent."
+        },
+        {
+          "id": "q4516",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Le bilan énergétique consiste à…",
+          "reponses": [
+            "compter les kWh du quai",
+            "comparer les Wh consommés par jour à la production",
+            "mesurer la tension",
+            "peser les batteries"
+          ],
+          "bonne": 1,
+          "explication": "Pour dimensionner panneaux et batteries."
+        },
+        {
+          "id": "q4517",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Les batteries de bord sont installées…",
+          "reponses": [
+            "libres dans un coffre",
+            "fixées, dans un compartiment ventilé, avec fusible général",
+            "dans la cabine",
+            "sur le toit"
+          ],
+          "bonne": 1,
+          "explication": "Gaz, chocs, court-circuit."
+        },
+        {
+          "id": "q4518",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "Le coupe-batterie sert à…",
+          "reponses": [
+            "charger",
+            "isoler la batterie en cas d'urgence ou de stockage",
+            "mesurer",
+            "chauffer"
+          ],
+          "bonne": 1,
+          "explication": "Accessible sans outil."
+        },
+        {
+          "id": "q4519",
+          "fiche_id": "energie_bord",
+          "type": "qcm",
+          "enonce": "En roulant, la batterie de servitude est chargée par…",
+          "reponses": [
+            "les panneaux seulement",
+            "l'alternateur du moteur via le coupleur",
+            "le quai",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Booster de charge si batterie lithium."
+        },
+        {
+          "id": "q4520",
+          "fiche_id": "branchement_quai",
+          "type": "ordre",
+          "enonce": "Se brancher au quai : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Couper le disjoncteur 230 V de bord",
+            "Brancher le câble H07RN-F à bord puis au quai",
+            "Enclencher le disjoncteur de bord",
+            "Tester le différentiel de bord",
+            "Vérifier la charge des batteries"
+          ],
+          "explication": "Hors tension, brancher, enclencher, tester."
+        }
+      ],
+      "ordre": 35
+    },
+    {
+      "id": "autoconsommation",
+      "titre": "Autoconsommation avancée et stockage",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "taux",
+          "titre": "Taux d'autoconsommation et d'autoproduction",
+          "contenu": "Deux indicateurs :\n\n• Taux d'autoconsommation : part de la production consommée sur place. Le reste part sur le réseau.\n• Taux d'autoproduction : part de la consommation couverte par la production.\n\nSans stockage, un logement autoconsomme 30 à 40 % de sa production : on produit à midi, on consomme le soir.\n\nPour augmenter ces taux : déplacer les consommations en journée (lave-linge, chauffe-eau, recharge), dimensionner sans surproduire, ajouter un stockage.",
+          "image": "taux.png"
+        },
+        {
+          "id": "pilotage",
+          "titre": "Piloter les consommations",
+          "contenu": "Le routeur solaire (ou gestionnaire d'énergie) mesure le surplus et l'envoie vers le chauffe-eau par gradation, au lieu de le vendre : l'eau chaude devient le stockage le moins cher.\n\nProgrammation des appareils en journée, borne de recharge qui suit le surplus, pompe à chaleur pilotée.\n\nUn compteur d'énergie bidirectionnel ou le compteur communicant donne les kWh injectés et soutirés. Une application de suivi aide à ajuster les habitudes.",
+          "image": "pilotage.png"
+        },
+        {
+          "id": "stockage_domestique",
+          "titre": "La batterie domestique",
+          "contenu": "Batterie lithium LFP de 5 à 15 kWh, couplée à un onduleur hybride qui gère panneaux, batterie et réseau.\n\nElle stocke le surplus du jour pour le soir : le taux d'autoconsommation monte à 60-80 %. Rentabilité à calculer : prix de la batterie, nombre de cycles, prix du kWh évité.\n\nInstallation : local ventilé et sec, protections continu et alternatif, mise à la terre, coupure d'urgence, déclaration au Consuel. Mode secours (backup) seulement si l'onduleur le permet et isole le réseau.\n\nSécurité lithium : pas de choc, pas de chaleur, pas de bricolage.",
+          "image": "stockage_domestique.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4601",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Le taux d'autoconsommation est…",
+          "reponses": [
+            "la part de la consommation couverte par la production",
+            "la part de la production consommée sur place",
+            "le prix du kWh",
+            "la puissance des panneaux"
+          ],
+          "bonne": 1,
+          "explication": "Le reste est injecté sur le réseau."
+        },
+        {
+          "id": "q4602",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Le taux d'autoproduction est…",
+          "reponses": [
+            "la part de la consommation couverte par la production",
+            "la part de la production vendue",
+            "le rendement des panneaux",
+            "la puissance crête"
+          ],
+          "bonne": 0,
+          "explication": "Ce que la maison tire de son propre toit."
+        },
+        {
+          "id": "q4603",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Sans stockage, un logement autoconsomme typiquement…",
+          "reponses": [
+            "100 %",
+            "30 à 40 %",
+            "5 %",
+            "80 %"
+          ],
+          "bonne": 1,
+          "explication": "Production à midi, consommation le soir."
+        },
+        {
+          "id": "q4604",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Pour augmenter l'autoconsommation, on…",
+          "reponses": [
+            "consomme la nuit",
+            "déplace les consommations en journée",
+            "surdimensionne les panneaux",
+            "coupe le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Lave-linge, chauffe-eau, recharge à midi."
+        },
+        {
+          "id": "q4605",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Le surplus non consommé…",
+          "reponses": [
+            "est perdu",
+            "part sur le réseau, vendu ou non",
+            "chauffe les panneaux",
+            "recharge le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Contrat de vente de surplus si souhaité."
+        },
+        {
+          "id": "q4606",
+          "fiche_id": "taux",
+          "type": "qcm",
+          "enonce": "Surdimensionner les panneaux sans stockage…",
+          "reponses": [
+            "augmente le taux d'autoconsommation",
+            "augmente le surplus injecté, peu rentable",
+            "ne change rien",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Plus de production à midi ne sert pas le soir."
+        },
+        {
+          "id": "q4607",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Un routeur solaire…",
+          "reponses": [
+            "distribue le wifi",
+            "envoie le surplus vers le chauffe-eau",
+            "vend l'électricité",
+            "coupe les panneaux"
+          ],
+          "bonne": 1,
+          "explication": "L'eau chaude comme stockage bon marché."
+        },
+        {
+          "id": "q4608",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Le chauffe-eau piloté par le surplus est chauffé…",
+          "reponses": [
+            "la nuit",
+            "en journée, par gradation selon le surplus",
+            "jamais",
+            "au gaz"
+          ],
+          "bonne": 1,
+          "explication": "Sans injecter sur le réseau."
+        },
+        {
+          "id": "q4609",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Le compteur communicant indique…",
+          "reponses": [
+            "seulement les kWh consommés",
+            "les kWh soutirés et injectés",
+            "la puissance des panneaux",
+            "la météo"
+          ],
+          "bonne": 1,
+          "explication": "Deux index."
+        },
+        {
+          "id": "q4610",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Une borne de recharge « suiveur de surplus »…",
+          "reponses": [
+            "charge à pleine puissance",
+            "module sa puissance selon ce que produisent les panneaux",
+            "ne charge que la nuit",
+            "est interdite"
+          ],
+          "bonne": 1,
+          "explication": "La voiture absorbe la production."
+        },
+        {
+          "id": "q4611",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Programmer le lave-linge à midi plutôt qu'à 20 h…",
+          "reponses": [
+            "ne change rien",
+            "augmente l'autoconsommation",
+            "augmente la facture",
+            "abîme la machine"
+          ],
+          "bonne": 1,
+          "explication": "Le geste le plus simple."
+        },
+        {
+          "id": "q4612",
+          "fiche_id": "pilotage",
+          "type": "qcm",
+          "enonce": "Une application de suivi sert à…",
+          "reponses": [
+            "vendre les panneaux",
+            "ajuster ses habitudes en voyant production et consommation",
+            "mesurer l'isolement",
+            "déclarer aux impôts"
+          ],
+          "bonne": 1,
+          "explication": "Voir, c'est agir."
+        },
+        {
+          "id": "q4613",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "Capacité typique d'une batterie domestique ?",
+          "reponses": [
+            "50 Wh",
+            "5 à 15 kWh",
+            "500 kWh",
+            "1 kWh"
+          ],
+          "bonne": 1,
+          "explication": "De quoi couvrir une soirée et une nuit."
+        },
+        {
+          "id": "q4614",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "Avec batterie, le taux d'autoconsommation monte à…",
+          "reponses": [
+            "10 %",
+            "60 à 80 %",
+            "100 % toujours",
+            "30 %"
+          ],
+          "bonne": 1,
+          "explication": "Le surplus du jour sert le soir."
+        },
+        {
+          "id": "q4615",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "L'onduleur hybride gère…",
+          "reponses": [
+            "seulement les panneaux",
+            "panneaux, batterie et réseau",
+            "seulement la batterie",
+            "le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Le chef d'orchestre du système."
+        },
+        {
+          "id": "q4616",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "Pour juger la rentabilité d'une batterie, on regarde…",
+          "reponses": [
+            "sa couleur",
+            "prix, nombre de cycles, prix du kWh évité",
+            "la marque seulement",
+            "la taille"
+          ],
+          "bonne": 1,
+          "explication": "Le calcul n'est pas toujours favorable."
+        },
+        {
+          "id": "q4617",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "La batterie domestique s'installe…",
+          "reponses": [
+            "dans une chambre",
+            "dans un local ventilé et sec, avec protections et coupure d'urgence",
+            "au grenier sous les tuiles",
+            "dehors sans abri"
+          ],
+          "bonne": 1,
+          "explication": "Et déclaration au Consuel."
+        },
+        {
+          "id": "q4618",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "Le mode secours (backup) fonctionne…",
+          "reponses": [
+            "toujours",
+            "seulement si l'onduleur le permet et isole le réseau",
+            "jamais",
+            "avec un câble mâle-mâle"
+          ],
+          "bonne": 1,
+          "explication": "Sans isolement du réseau, injection dangereuse pendant une coupure."
+        },
+        {
+          "id": "q4619",
+          "fiche_id": "stockage_domestique",
+          "type": "qcm",
+          "enonce": "La technologie courante des batteries domestiques ?",
+          "reponses": [
+            "Plomb ouvert",
+            "Lithium fer phosphate (LFP)",
+            "NiMH",
+            "Alcaline"
+          ],
+          "bonne": 1,
+          "explication": "Sûre et durable."
+        },
+        {
+          "id": "q4620",
+          "fiche_id": "pilotage",
+          "type": "ordre",
+          "enonce": "Optimiser son autoconsommation : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Mesurer production et consommation heure par heure",
+            "Déplacer les consommations en journée",
+            "Installer un routeur solaire pour le chauffe-eau",
+            "Évaluer une batterie si le surplus reste important"
+          ],
+          "explication": "Mesurer, déplacer, router, stocker."
+        }
+      ],
+      "ordre": 36
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 29,
+      "ordre": 37,
       "fiches": [
         {
           "id": "dangers",
@@ -8922,7 +11385,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 30,
+      "ordre": 38,
       "fiches": [
         {
           "id": "principe",
@@ -9530,7 +11993,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 31
+      "ordre": 39
     },
     {
       "id": "epi",
@@ -9837,7 +12300,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 32
+      "ordre": 40
     },
     {
       "id": "b0_bs",
@@ -10145,7 +12608,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 33
+      "ordre": 41
     },
     {
       "id": "br",
@@ -10453,7 +12916,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 34
+      "ordre": 42
     },
     {
       "id": "secours",
@@ -10760,7 +13223,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 35
+      "ordre": 43
     },
     {
       "id": "b1_b2",
@@ -11069,7 +13532,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 36
+      "ordre": 44
     },
     {
       "id": "bc",
@@ -11377,7 +13840,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 37
+      "ordre": 45
     },
     {
       "id": "outillage",
@@ -11685,7 +14148,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 38
+      "ordre": 46
     },
     {
       "id": "normes",
@@ -11993,7 +14456,623 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 39
+      "ordre": 47
+    },
+    {
+      "id": "atex",
+      "titre": "Électricité statique et atmosphères explosives",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "statique",
+          "titre": "L'électricité statique",
+          "contenu": "Frotter deux matériaux isolants sépare des charges : la décharge qui suit (étincelle) peut atteindre plusieurs milliers de volts, pour une énergie faible. Sans danger pour le corps, mais suffisante pour détruire un composant électronique ou enflammer des vapeurs.\n\nSources : marche sur une moquette, écoulement de liquide ou de poudre dans un tuyau, courroies, vêtements synthétiques.\n\nProtection : mise à la terre des équipements, bracelet antistatique en électronique, humidité de l'air, vêtements en coton, sols et chaussures antistatiques en zone à risque.",
+          "image": "statique.png"
+        },
+        {
+          "id": "zones_atex",
+          "titre": "Les zones ATEX",
+          "contenu": "Une atmosphère explosive (ATEX) se forme avec un gaz, une vapeur ou une poussière inflammable mélangé à l'air : station-service, silo, cabine de peinture, local batteries, silo à farine, atelier de menuiserie.\n\nZones gaz : 0 (présence permanente), 1 (occasionnelle), 2 (rare et brève). Zones poussières : 20, 21, 22.\n\nDans ces zones, tout matériel électrique doit être certifié ATEX (marquage Ex) : antidéflagrant, sécurité intrinsèque… Une simple étincelle d'interrupteur, un moteur qui chauffe ou une décharge statique suffisent à déclencher l'explosion.",
+          "image": "zones_atex.png"
+        },
+        {
+          "id": "prevention_atex",
+          "titre": "Prévenir l'explosion",
+          "contenu": "Le triangle de l'explosion : combustible + air + source d'inflammation. On agit sur les trois : ventiler, limiter les fuites, supprimer les sources d'inflammation.\n\nSources électriques d'inflammation : étincelles de contact, arcs, surfaces chaudes, statique, foudre.\n\nRègles : matériel Ex adapté à la zone, mise à la terre et liaisons équipotentielles des cuves et tuyauteries, pas d'outil ni de téléphone ordinaire en zone, permis de travail et détection de gaz avant intervention, habilitation et formation ATEX pour les intervenants.",
+          "image": "prevention_atex.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4701",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "Une décharge d'électricité statique…",
+          "reponses": [
+            "est mortelle",
+            "est de haute tension mais faible énergie",
+            "est en 230 V",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Plusieurs kV, mais quelques millijoules."
+        },
+        {
+          "id": "q4702",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "La statique est dangereuse pour…",
+          "reponses": [
+            "le corps humain",
+            "l'électronique et les atmosphères inflammables",
+            "les câbles",
+            "les moteurs"
+          ],
+          "bonne": 1,
+          "explication": "Composants détruits, vapeurs enflammées."
+        },
+        {
+          "id": "q4703",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "Source fréquente de statique dans l'industrie ?",
+          "reponses": [
+            "Les LED",
+            "L'écoulement de liquides ou poudres dans les tuyaux",
+            "Les piles",
+            "Le neutre"
+          ],
+          "bonne": 1,
+          "explication": "D'où la mise à la terre des tuyauteries."
+        },
+        {
+          "id": "q4704",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "Le bracelet antistatique…",
+          "reponses": [
+            "protège du 230 V",
+            "relie l'opérateur à la terre pour évacuer les charges",
+            "mesure le pouls",
+            "est un bijou"
+          ],
+          "bonne": 1,
+          "explication": "Indispensable pour manipuler des composants."
+        },
+        {
+          "id": "q4705",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "Pour limiter la statique dans un local, on…",
+          "reponses": [
+            "assèche l'air",
+            "maintient une humidité suffisante et des sols antistatiques",
+            "chauffe",
+            "éteint la lumière"
+          ],
+          "bonne": 1,
+          "explication": "L'air sec favorise les charges."
+        },
+        {
+          "id": "q4706",
+          "fiche_id": "statique",
+          "type": "qcm",
+          "enonce": "Les vêtements synthétiques…",
+          "reponses": [
+            "évacuent la statique",
+            "favorisent la statique : coton en zone à risque",
+            "sont obligatoires",
+            "isolent du 230 V"
+          ],
+          "bonne": 1,
+          "explication": "Frottement et charges."
+        },
+        {
+          "id": "q4707",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "Une atmosphère ATEX, c'est…",
+          "reponses": [
+            "une zone humide",
+            "un mélange inflammable de gaz, vapeur ou poussière avec l'air",
+            "une zone HT",
+            "un local électrique"
+          ],
+          "bonne": 1,
+          "explication": "Station-service, silo, cabine de peinture…"
+        },
+        {
+          "id": "q4708",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "La zone 0 correspond à…",
+          "reponses": [
+            "une présence rare",
+            "une présence permanente de l'atmosphère explosive",
+            "une zone sans risque",
+            "une zone poussière"
+          ],
+          "bonne": 1,
+          "explication": "Intérieur d'une cuve, par exemple."
+        },
+        {
+          "id": "q4709",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "Les zones 20, 21, 22 concernent…",
+          "reponses": [
+            "les gaz",
+            "les poussières",
+            "les liquides",
+            "la haute tension"
+          ],
+          "bonne": 1,
+          "explication": "Silos, farines, poussières de bois."
+        },
+        {
+          "id": "q4710",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "Le matériel en zone ATEX doit être…",
+          "reponses": [
+            "ordinaire",
+            "certifié ATEX, marqué Ex",
+            "en 12 V",
+            "en plastique"
+          ],
+          "bonne": 1,
+          "explication": "Antidéflagrant, sécurité intrinsèque…"
+        },
+        {
+          "id": "q4711",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "Un interrupteur ordinaire en zone ATEX…",
+          "reponses": [
+            "est sans risque",
+            "peut provoquer l'explosion par son étincelle",
+            "est obligatoire",
+            "fonctionne mieux"
+          ],
+          "bonne": 1,
+          "explication": "D'où le matériel Ex."
+        },
+        {
+          "id": "q4712",
+          "fiche_id": "zones_atex",
+          "type": "qcm",
+          "enonce": "Une farine en suspension dans l'air…",
+          "reponses": [
+            "ne brûle pas",
+            "peut exploser",
+            "éteint le feu",
+            "est sans danger"
+          ],
+          "bonne": 1,
+          "explication": "Les poussières combustibles explosent violemment."
+        },
+        {
+          "id": "q4713",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Le triangle de l'explosion comprend…",
+          "reponses": [
+            "eau, air, feu",
+            "combustible, air, source d'inflammation",
+            "gaz, huile, courant",
+            "tension, courant, résistance"
+          ],
+          "bonne": 1,
+          "explication": "On supprime au moins un des trois."
+        },
+        {
+          "id": "q4714",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Source électrique d'inflammation ?",
+          "reponses": [
+            "Une LED froide",
+            "Étincelle, arc, surface chaude, statique",
+            "Un fil bleu",
+            "Un fusible fondu"
+          ],
+          "bonne": 1,
+          "explication": "Tout ce qui chauffe ou étincelle."
+        },
+        {
+          "id": "q4715",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Un téléphone ordinaire en zone ATEX…",
+          "reponses": [
+            "est autorisé",
+            "est interdit : il faut un modèle certifié",
+            "est obligatoire",
+            "doit être en mode avion"
+          ],
+          "bonne": 1,
+          "explication": "Sa batterie et son électronique peuvent étinceler."
+        },
+        {
+          "id": "q4716",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Avant d'intervenir en zone ATEX, on…",
+          "reponses": [
+            "fonce",
+            "obtient un permis de travail et on mesure le gaz",
+            "ventile après",
+            "coupe la terre"
+          ],
+          "bonne": 1,
+          "explication": "Détection de gaz et procédure."
+        },
+        {
+          "id": "q4717",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Les cuves et tuyauteries sont…",
+          "reponses": [
+            "isolées",
+            "reliées à la terre et entre elles (équipotentialité)",
+            "peintes",
+            "sans lien"
+          ],
+          "bonne": 1,
+          "explication": "Pas de différence de potentiel, pas d'étincelle."
+        },
+        {
+          "id": "q4718",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Ventiler une zone sert à…",
+          "reponses": [
+            "refroidir",
+            "diluer le gaz sous le seuil d'inflammabilité",
+            "chauffer",
+            "faire du bruit"
+          ],
+          "bonne": 1,
+          "explication": "On agit sur le combustible."
+        },
+        {
+          "id": "q4719",
+          "fiche_id": "prevention_atex",
+          "type": "qcm",
+          "enonce": "Les intervenants en zone ATEX ont…",
+          "reponses": [
+            "aucune formation",
+            "une formation et une habilitation ATEX",
+            "un permis de conduire",
+            "une habilitation H0 seulement"
+          ],
+          "bonne": 1,
+          "explication": "En plus de l'habilitation électrique."
+        },
+        {
+          "id": "q4720",
+          "fiche_id": "prevention_atex",
+          "type": "ordre",
+          "enonce": "Intervenir en zone ATEX : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Obtenir le permis de travail",
+            "Ventiler et mesurer le gaz",
+            "Mettre à la terre et vérifier l'équipotentialité",
+            "Utiliser uniquement du matériel certifié Ex",
+            "Intervenir sous surveillance"
+          ],
+          "explication": "Permis, mesure, terre, matériel Ex, surveillance."
+        }
+      ],
+      "ordre": 48
+    },
+    {
+      "id": "arc_tst",
+      "titre": "Arc électrique et travail sous tension",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "arc",
+          "titre": "L'arc électrique",
+          "contenu": "Un arc est un courant qui traverse l'air ionisé entre deux conducteurs : court-circuit, ouverture d'un circuit sous charge, outil qui glisse. Sa température dépasse 5 000 °C.\n\nEffets : brûlures graves par rayonnement, projection de métal en fusion, souffle (arc flash), bruit, aveuglement. L'arc blesse sans aucun contact.\n\nFacteurs : puissance de court-circuit disponible (plus élevée près du transformateur), durée de l'arc (le disjoncteur doit couper vite), distance.\n\nProtection : écran facial anti-UV, vêtements ignifugés (arc rated), gants, distance, et surtout ne pas travailler sous tension quand ce n'est pas indispensable.",
+          "image": "arc.png"
+        },
+        {
+          "id": "tst",
+          "titre": "Le travail sous tension (TST)",
+          "contenu": "Travailler sous tension est l'exception : on le fait quand couper est impossible (continuité de service, réseau public, hôpital) et selon des procédures strictes.\n\nLe TST demande une habilitation spécifique (mention TST), une formation dédiée, des outils et EPI certifiés, un mode opératoire écrit et une autorisation de travail.\n\nMéthodes : au contact avec gants isolants, à distance avec perches isolantes, ou à potentiel (HT, opérateur porté au potentiel de la ligne).\n\nLe BR peut faire des mesures et manœuvres en présence de tension, mais pas de travaux sous tension : ce n'est pas du TST.",
+          "image": "tst.png"
+        },
+        {
+          "id": "presence_tension",
+          "titre": "Opérations en présence de tension",
+          "contenu": "Certaines opérations se font sans consigner mais avec précautions : mesures, essais, recherche de défaut (BR), manœuvres (BE Manœuvre), remplacement de fusibles sous conditions.\n\nRègles : EPI (gants, écran), outillage isolé, une seule main quand c'est possible, pas de bijou, pas de point d'appui conducteur, éclairage suffisant, balisage, personne ne passe derrière.\n\nAvant : analyser le risque, se demander si la mise hors tension est possible. Elle l'est bien plus souvent qu'on ne le croit.",
+          "image": "presence_tension.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4801",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "Un arc électrique est…",
+          "reponses": [
+            "un contact direct",
+            "un courant dans l'air ionisé entre deux conducteurs",
+            "une surtension",
+            "un neutre coupé"
+          ],
+          "bonne": 1,
+          "explication": "Il jaillit sans contact."
+        },
+        {
+          "id": "q4802",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "Température d'un arc électrique ?",
+          "reponses": [
+            "100 °C",
+            "500 °C",
+            "plus de 5 000 °C",
+            "50 °C"
+          ],
+          "bonne": 2,
+          "explication": "Plus chaud que la surface du soleil."
+        },
+        {
+          "id": "q4803",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "L'arc blesse principalement par…",
+          "reponses": [
+            "le choc électrique",
+            "le rayonnement, les projections de métal en fusion et le souffle",
+            "le bruit seul",
+            "le froid"
+          ],
+          "bonne": 1,
+          "explication": "Brûlures graves sans aucun contact."
+        },
+        {
+          "id": "q4804",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "La gravité d'un arc augmente avec…",
+          "reponses": [
+            "la distance",
+            "la puissance de court-circuit et la durée de l'arc",
+            "la couleur des fils",
+            "le nombre d'opérateurs"
+          ],
+          "bonne": 1,
+          "explication": "Près du transformateur, le courant de court-circuit est énorme."
+        },
+        {
+          "id": "q4805",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "Cause fréquente d'arc dans une armoire ?",
+          "reponses": [
+            "Un fil bleu",
+            "Un outil qui glisse entre deux conducteurs",
+            "Une LED",
+            "Un neutre"
+          ],
+          "bonne": 1,
+          "explication": "D'où l'outillage isolé et la nappe."
+        },
+        {
+          "id": "q4806",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "Vêtement adapté contre l'arc ?",
+          "reponses": [
+            "Synthétique",
+            "Ignifugé, « arc rated »",
+            "Chemise fine",
+            "Cuir vernis"
+          ],
+          "bonne": 1,
+          "explication": "Le synthétique fond sur la peau."
+        },
+        {
+          "id": "q4807",
+          "fiche_id": "arc",
+          "type": "qcm",
+          "enonce": "La meilleure protection contre l'arc ?",
+          "reponses": [
+            "Un bon écran",
+            "Ne pas travailler sous tension quand ce n'est pas indispensable",
+            "Des gants épais",
+            "Fermer les yeux"
+          ],
+          "bonne": 1,
+          "explication": "Supprimer le risque avant de s'en protéger."
+        },
+        {
+          "id": "q4808",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Le travail sous tension est…",
+          "reponses": [
+            "la règle",
+            "l'exception, réservé aux cas où couper est impossible",
+            "interdit",
+            "réservé aux B0"
+          ],
+          "bonne": 1,
+          "explication": "Continuité de service, réseau public, hôpital."
+        },
+        {
+          "id": "q4809",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Le TST demande…",
+          "reponses": [
+            "une habilitation BR",
+            "une habilitation spécifique avec mention TST et formation dédiée",
+            "rien de plus",
+            "un B0"
+          ],
+          "bonne": 1,
+          "explication": "Procédures, outils et EPI certifiés."
+        },
+        {
+          "id": "q4810",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Le TST à distance utilise…",
+          "reponses": [
+            "les mains nues",
+            "des perches isolantes",
+            "des gants en tissu",
+            "un tournevis ordinaire"
+          ],
+          "bonne": 1,
+          "explication": "Méthode courante sur les lignes."
+        },
+        {
+          "id": "q4811",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Le TST « à potentiel »…",
+          "reponses": [
+            "se fait en 12 V",
+            "porte l'opérateur au potentiel de la ligne HT",
+            "est interdit",
+            "concerne les prises"
+          ],
+          "bonne": 1,
+          "explication": "Opérateur isolé du sol, au potentiel du conducteur."
+        },
+        {
+          "id": "q4812",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Le BR fait-il du travail sous tension ?",
+          "reponses": [
+            "Oui",
+            "Non : mesures et manœuvres en présence de tension, pas de travaux",
+            "Oui, en HT",
+            "Oui, sans EPI"
+          ],
+          "bonne": 1,
+          "explication": "La différence est fondamentale."
+        },
+        {
+          "id": "q4813",
+          "fiche_id": "tst",
+          "type": "qcm",
+          "enonce": "Avant un TST, il faut…",
+          "reponses": [
+            "un mode opératoire écrit et une autorisation de travail",
+            "seulement de bons gants",
+            "l'accord du client",
+            "de la chance"
+          ],
+          "bonne": 0,
+          "explication": "Rien n'est improvisé."
+        },
+        {
+          "id": "q4814",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "Remplacer un fusible peut se faire en présence de tension…",
+          "reponses": [
+            "toujours",
+            "sous conditions, avec EPI et matériel adapté",
+            "jamais",
+            "sans habilitation"
+          ],
+          "bonne": 1,
+          "explication": "Selon le type de fusible et la procédure."
+        },
+        {
+          "id": "q4815",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "La règle de la « seule main »…",
+          "reponses": [
+            "est une plaisanterie",
+            "évite un trajet main à main par le cœur",
+            "concerne le B0",
+            "s'applique en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Une main dans la poche, l'autre travaille."
+        },
+        {
+          "id": "q4816",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "Un point d'appui métallique pendant une mesure sous tension…",
+          "reponses": [
+            "est utile",
+            "est à éviter : il ferme le circuit à travers le corps",
+            "est obligatoire",
+            "isole"
+          ],
+          "bonne": 1,
+          "explication": "Pas de contact avec une masse."
+        },
+        {
+          "id": "q4817",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "Avant toute opération en présence de tension, on se demande…",
+          "reponses": [
+            "si le client regarde",
+            "si la mise hors tension est possible",
+            "s'il fait beau",
+            "si le B0 est là"
+          ],
+          "bonne": 1,
+          "explication": "Souvent, oui."
+        },
+        {
+          "id": "q4818",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "Le balisage lors d'une mesure sous tension sert à…",
+          "reponses": [
+            "décorer",
+            "éviter qu'on passe derrière l'opérateur et le bouscule",
+            "signaler le tableau",
+            "remplacer les EPI"
+          ],
+          "bonne": 1,
+          "explication": "Une bousculade suffit pour un contact."
+        },
+        {
+          "id": "q4819",
+          "fiche_id": "presence_tension",
+          "type": "qcm",
+          "enonce": "Les bijoux pendant une opération en présence de tension…",
+          "reponses": [
+            "sont autorisés",
+            "sont retirés : conducteurs, ils provoquent arcs et brûlures",
+            "isolent",
+            "sont obligatoires"
+          ],
+          "bonne": 1,
+          "explication": "Bague, montre, chaîne."
+        },
+        {
+          "id": "q4820",
+          "fiche_id": "presence_tension",
+          "type": "ordre",
+          "enonce": "Faire une mesure sous tension dans une armoire : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier que la mise hors tension est impossible ou inutile",
+            "Analyser le risque et baliser",
+            "Mettre gants isolants et écran facial",
+            "Mesurer d'une seule main, sans appui conducteur",
+            "Refermer l'armoire et retirer le balisage"
+          ],
+          "explication": "Questionner, analyser, se protéger, mesurer, ranger."
+        }
+      ],
+      "ordre": 49
     }
   ]
 }
