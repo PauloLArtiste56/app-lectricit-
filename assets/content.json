@@ -6464,9 +6464,933 @@
       "ordre": 21
     },
     {
+      "id": "aeronautique",
+      "titre": "Électricité en aéronautique et spatial",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "avion",
+          "titre": "L'électricité à bord d'un avion",
+          "contenu": "Un avion de ligne produit son électricité par des générateurs entraînés par les réacteurs : 115 V alternatif à 400 Hz (fréquence élevée pour des machines plus légères) et 28 V continu. Une batterie et un générateur de secours (turbine à air dynamique, RAT) prennent le relais en cas de panne.\n\nLes avions récents sont « plus électriques » : dégivrage, pressurisation et commandes de vol électriques remplacent l'hydraulique et le pneumatique.\n\nLa structure sert de retour de masse ; la foudre est fréquente (un impact par an et par avion) et évacuée par la peau conductrice.",
+          "image": "avion.png"
+        },
+        {
+          "id": "spatial",
+          "titre": "Satellites et fusées",
+          "contenu": "Un satellite tire son énergie de panneaux solaires et de batteries lithium pour les éclipses. Bus 28 V ou 100 V. Tout est redondant : une panne ne se répare pas.\n\nLes lanceurs utilisent des batteries pour l'avionique et la pyrotechnie (séparation des étages). Les moteurs électriques (propulsion ionique) équipent de plus en plus de satellites : faible poussée, très longue durée.\n\nContraintes : vide (pas de convection, refroidissement par rayonnement), radiations (composants durcis), cycles thermiques extrêmes.",
+          "image": "spatial.png"
+        },
+        {
+          "id": "normes_aero",
+          "titre": "Fiabilité et normes",
+          "contenu": "En aéronautique, chaque fonction critique est doublée ou triplée : générateurs, bus, calculateurs. Les câbles sont légers (aluminium, isolants fins), repérés, séparés par fonction pour qu'un incendie ne coupe pas deux systèmes.\n\nLa maintenance suit des procédures strictes : chaque intervention est tracée, chaque pièce a un numéro. Les techniciens sont licenciés (Part-66).\n\nLes principes de sécurité électrique restent les mêmes : couper, condamner, vérifier avant d'intervenir, batteries isolées, décharge des condensateurs.",
+          "image": "normes_aero.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7001",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "Le réseau alternatif d'un avion de ligne est en…",
+          "reponses": [
+            "230 V 50 Hz",
+            "115 V 400 Hz",
+            "12 V",
+            "400 V 50 Hz"
+          ],
+          "bonne": 1,
+          "explication": "Fréquence élevée = machines plus légères."
+        },
+        {
+          "id": "q7002",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "Pourquoi 400 Hz ?",
+          "reponses": [
+            "Par tradition",
+            "Des transformateurs et moteurs plus légers",
+            "C'est plus sûr",
+            "Pour la radio"
+          ],
+          "bonne": 1,
+          "explication": "Le poids est l'ennemi."
+        },
+        {
+          "id": "q7003",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "Le réseau continu d'un avion est en…",
+          "reponses": [
+            "12 V",
+            "28 V",
+            "230 V",
+            "5 V"
+          ],
+          "bonne": 1,
+          "explication": "Batterie et équipements."
+        },
+        {
+          "id": "q7004",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "La RAT est…",
+          "reponses": [
+            "une souris",
+            "une turbine à air dynamique de secours qui produit de l'électricité",
+            "un radar",
+            "un câble"
+          ],
+          "bonne": 1,
+          "explication": "Déployée en cas de perte totale."
+        },
+        {
+          "id": "q7005",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "L'avion « plus électrique » remplace…",
+          "reponses": [
+            "les réacteurs",
+            "l'hydraulique et le pneumatique par l'électrique",
+            "les pilotes",
+            "les ailes"
+          ],
+          "bonne": 1,
+          "explication": "Dégivrage, pressurisation, commandes."
+        },
+        {
+          "id": "q7006",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "La foudre frappe un avion de ligne environ…",
+          "reponses": [
+            "jamais",
+            "une fois par an",
+            "une fois par siècle",
+            "chaque vol"
+          ],
+          "bonne": 1,
+          "explication": "Évacuée par la structure conductrice."
+        },
+        {
+          "id": "q7007",
+          "fiche_id": "avion",
+          "type": "qcm",
+          "enonce": "Le retour de masse d'un avion se fait par…",
+          "reponses": [
+            "un fil dédié",
+            "la structure métallique",
+            "l'air",
+            "les pneus"
+          ],
+          "bonne": 1,
+          "explication": "Comme une voiture."
+        },
+        {
+          "id": "q7008",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "Un satellite est alimenté par…",
+          "reponses": [
+            "une pile",
+            "des panneaux solaires et des batteries",
+            "un réacteur",
+            "le vent solaire"
+          ],
+          "bonne": 1,
+          "explication": "Batteries pour les éclipses."
+        },
+        {
+          "id": "q7009",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "Pourquoi tout est redondant dans un satellite ?",
+          "reponses": [
+            "Par luxe",
+            "Une panne ne se répare pas en orbite",
+            "Pour le poids",
+            "Pour la vitesse"
+          ],
+          "bonne": 1,
+          "explication": "Fiabilité absolue."
+        },
+        {
+          "id": "q7010",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "La propulsion ionique…",
+          "reponses": [
+            "est très puissante",
+            "donne une faible poussée mais très longue durée",
+            "est chimique",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Électrique."
+        },
+        {
+          "id": "q7011",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "Dans le vide, un composant se refroidit par…",
+          "reponses": [
+            "convection",
+            "rayonnement",
+            "conduction avec l'air",
+            "l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Pas d'air."
+        },
+        {
+          "id": "q7012",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "Les composants spatiaux sont…",
+          "reponses": [
+            "ordinaires",
+            "durcis aux radiations",
+            "en bois",
+            "refroidis à l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Radiations cosmiques."
+        },
+        {
+          "id": "q7013",
+          "fiche_id": "spatial",
+          "type": "qcm",
+          "enonce": "Les batteries des lanceurs servent…",
+          "reponses": [
+            "à la propulsion principale",
+            "à l'avionique et à la pyrotechnie",
+            "à rien",
+            "au chauffage"
+          ],
+          "bonne": 1,
+          "explication": "Séparation des étages."
+        },
+        {
+          "id": "q7014",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "En aéronautique, les fonctions critiques sont…",
+          "reponses": [
+            "uniques",
+            "doublées ou triplées",
+            "facultatives",
+            "manuelles"
+          ],
+          "bonne": 1,
+          "explication": "Redondance."
+        },
+        {
+          "id": "q7015",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "Les câbles d'un avion sont séparés par fonction pour…",
+          "reponses": [
+            "la couleur",
+            "qu'un incendie ne coupe pas deux systèmes",
+            "la longueur",
+            "le prix"
+          ],
+          "bonne": 1,
+          "explication": "Ségrégation."
+        },
+        {
+          "id": "q7016",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "Les techniciens aéronautiques sont…",
+          "reponses": [
+            "sans qualification",
+            "licenciés (Part-66)",
+            "des pilotes",
+            "des ingénieurs seulement"
+          ],
+          "bonne": 1,
+          "explication": "Licence de maintenance."
+        },
+        {
+          "id": "q7017",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "Chaque pièce d'avion…",
+          "reponses": [
+            "est anonyme",
+            "a un numéro et une traçabilité",
+            "est interchangeable sans contrôle",
+            "est jetable"
+          ],
+          "bonne": 1,
+          "explication": "Historique complet."
+        },
+        {
+          "id": "q7018",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "Les câbles aéronautiques sont souvent en…",
+          "reponses": [
+            "cuivre épais",
+            "aluminium ou cuivre fin, isolant léger",
+            "fer",
+            "plastique"
+          ],
+          "bonne": 1,
+          "explication": "Gain de poids."
+        },
+        {
+          "id": "q7019",
+          "fiche_id": "normes_aero",
+          "type": "qcm",
+          "enonce": "Avant d'intervenir sur un circuit d'avion, on…",
+          "reponses": [
+            "fonce",
+            "coupe, condamne, vérifie, isole la batterie",
+            "attend le pilote",
+            "déconnecte les ailes"
+          ],
+          "bonne": 1,
+          "explication": "Mêmes principes qu'au sol."
+        },
+        {
+          "id": "q7020",
+          "fiche_id": "avion",
+          "type": "ordre",
+          "enonce": "Perte des générateurs en vol : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Panne des générateurs principaux",
+            "La batterie alimente les équipements essentiels",
+            "Déploiement de la RAT",
+            "La RAT alimente les commandes et instruments vitaux",
+            "Atterrissage en mode dégradé"
+          ],
+          "explication": "Cascade de secours."
+        }
+      ],
+      "ordre": 22
+    },
+    {
+      "id": "electrochimie",
+      "titre": "Électrochimie et galvanoplastie",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "electrolyse_metaux",
+          "titre": "L'électrolyse des métaux",
+          "contenu": "Un courant continu traversant une solution (électrolyte) provoque des réactions aux électrodes : dépôt de métal à la cathode, dissolution ou dégagement de gaz à l'anode.\n\nGalvanoplastie : chromage, nickelage, zingage, dorure. La pièce à revêtir est la cathode ; l'anode est du métal à déposer ou un matériau inerte. Épaisseur proportionnelle au courant et au temps (loi de Faraday).\n\nProduction industrielle : aluminium (électrolyse de l'alumine, très énergivore : 13 000 kWh par tonne), chlore et soude, cuivre raffiné, zinc.",
+          "image": "electrolyse_metaux.png"
+        },
+        {
+          "id": "corrosion",
+          "titre": "Corrosion et protection cathodique",
+          "contenu": "Deux métaux différents en contact dans l'humidité forment une pile : le moins noble se corrode (corrosion galvanique). Exemple : vis en acier dans de l'aluminium, cuivre et acier sur un bateau.\n\nProtection cathodique : on sacrifie une anode en zinc ou magnésium (coques de bateau, chauffe-eau) ou on impose un courant (canalisations enterrées, ouvrages d'art).\n\nEn électricité, la corrosion des contacts (cuivre-aluminium) est une cause fréquente de mauvais contacts et d'échauffement : on ne mélange jamais les deux sans borne adaptée.",
+          "image": "corrosion.png"
+        },
+        {
+          "id": "securite_bains",
+          "titre": "Sécurité des ateliers de traitement",
+          "contenu": "Bains acides ou cyanurés, dégagements d'hydrogène et de vapeurs : ventilation, EPI chimiques, douches de sécurité.\n\nÉlectrique : redresseurs de forte intensité (milliers d'ampères sous quelques volts), barres de cuivre nues à basse tension mais courants énormes, atmosphère humide et corrosive.\n\nLes courants sont faibles en tension mais un outil qui court-circuite deux barres fond instantanément. Matériel IP élevé, protection contre la corrosion, différentiels, équipotentialité des cuves.",
+          "image": "securite_bains.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7301",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "Dans une électrolyse, le métal se dépose…",
+          "reponses": [
+            "à l'anode",
+            "à la cathode",
+            "sur le fil",
+            "dans l'air"
+          ],
+          "bonne": 1,
+          "explication": "La pièce à revêtir est la cathode."
+        },
+        {
+          "id": "q7302",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "La galvanoplastie sert à…",
+          "reponses": [
+            "fondre",
+            "déposer une couche de métal sur une pièce",
+            "peindre",
+            "souder"
+          ],
+          "bonne": 1,
+          "explication": "Chromage, nickelage, zingage."
+        },
+        {
+          "id": "q7303",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "L'épaisseur déposée dépend…",
+          "reponses": [
+            "de la couleur",
+            "du courant et du temps",
+            "de la lumière",
+            "de la fréquence"
+          ],
+          "bonne": 1,
+          "explication": "Loi de Faraday."
+        },
+        {
+          "id": "q7304",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "L'électrolyse utilise du courant…",
+          "reponses": [
+            "alternatif",
+            "continu",
+            "triphasé",
+            "haute fréquence"
+          ],
+          "bonne": 1,
+          "explication": "Un sens fixe pour un dépôt."
+        },
+        {
+          "id": "q7305",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "Produire une tonne d'aluminium demande environ…",
+          "reponses": [
+            "13 kWh",
+            "13 000 kWh",
+            "1 300 000 kWh",
+            "130 kWh"
+          ],
+          "bonne": 1,
+          "explication": "D'où les usines près des barrages."
+        },
+        {
+          "id": "q7306",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "Le chlore et la soude sont produits par…",
+          "reponses": [
+            "combustion",
+            "électrolyse du sel",
+            "distillation",
+            "fusion"
+          ],
+          "bonne": 1,
+          "explication": "Industrie chlore-alcali."
+        },
+        {
+          "id": "q7307",
+          "fiche_id": "electrolyse_metaux",
+          "type": "qcm",
+          "enonce": "L'anode en galvanoplastie est…",
+          "reponses": [
+            "toujours en or",
+            "du métal à déposer ou un matériau inerte",
+            "en plastique",
+            "la pièce"
+          ],
+          "bonne": 1,
+          "explication": "Elle se dissout ou reste inerte."
+        },
+        {
+          "id": "q7308",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "Deux métaux différents en contact dans l'humidité…",
+          "reponses": [
+            "se protègent",
+            "forment une pile : le moins noble se corrode",
+            "fondent",
+            "s'isolent"
+          ],
+          "bonne": 1,
+          "explication": "Corrosion galvanique."
+        },
+        {
+          "id": "q7309",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "Une anode sacrificielle est en…",
+          "reponses": [
+            "or",
+            "zinc ou magnésium",
+            "cuivre",
+            "plastique"
+          ],
+          "bonne": 1,
+          "explication": "Elle se corrode à la place de la structure."
+        },
+        {
+          "id": "q7310",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "On trouve une anode sacrificielle dans…",
+          "reponses": [
+            "une lampe",
+            "un chauffe-eau ou une coque de bateau",
+            "un compteur",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "À remplacer périodiquement."
+        },
+        {
+          "id": "q7311",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "La protection cathodique par courant imposé sert…",
+          "reponses": [
+            "aux lampes",
+            "aux canalisations enterrées et ouvrages d'art",
+            "aux piles",
+            "aux voitures"
+          ],
+          "bonne": 1,
+          "explication": "Un redresseur impose le courant."
+        },
+        {
+          "id": "q7312",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "Cuivre et aluminium dans la même borne…",
+          "reponses": [
+            "sont compatibles",
+            "se corrodent : mauvais contact et échauffement",
+            "améliorent le contact",
+            "sont obligatoires"
+          ],
+          "bonne": 1,
+          "explication": "Borne bimétallique si nécessaire."
+        },
+        {
+          "id": "q7313",
+          "fiche_id": "corrosion",
+          "type": "qcm",
+          "enonce": "Une vis en acier dans une pièce d'aluminium à l'extérieur…",
+          "reponses": [
+            "est parfaite",
+            "provoque une corrosion galvanique",
+            "isole",
+            "rouille l'aluminium seulement"
+          ],
+          "bonne": 1,
+          "explication": "Isoler ou choisir des métaux compatibles."
+        },
+        {
+          "id": "q7314",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "Les redresseurs de galvanoplastie délivrent…",
+          "reponses": [
+            "haute tension, faible courant",
+            "quelques volts, des milliers d'ampères",
+            "230 V",
+            "du triphasé"
+          ],
+          "bonne": 1,
+          "explication": "Barres de cuivre nues."
+        },
+        {
+          "id": "q7315",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "Un outil qui court-circuite deux barres de cuivre à 6 V et 5 000 A…",
+          "reponses": [
+            "ne fait rien",
+            "fond instantanément : brûlures, projections",
+            "charge",
+            "refroidit"
+          ],
+          "bonne": 1,
+          "explication": "Faible tension, énergie énorme."
+        },
+        {
+          "id": "q7316",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "Les bains dégagent…",
+          "reponses": [
+            "de l'oxygène pur",
+            "hydrogène et vapeurs : ventilation obligatoire",
+            "du CO2 seulement",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Risque d'explosion et d'intoxication."
+        },
+        {
+          "id": "q7317",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "L'atmosphère d'un atelier de traitement est…",
+          "reponses": [
+            "sèche",
+            "humide et corrosive : matériel adapté",
+            "propre",
+            "sans risque"
+          ],
+          "bonne": 1,
+          "explication": "IP élevé, protection anticorrosion."
+        },
+        {
+          "id": "q7318",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "Les douches de sécurité servent…",
+          "reponses": [
+            "à l'hygiène",
+            "à rincer en cas de projection chimique",
+            "à refroidir les bains",
+            "à laver les pièces"
+          ],
+          "bonne": 1,
+          "explication": "Accessibles en quelques secondes."
+        },
+        {
+          "id": "q7319",
+          "fiche_id": "securite_bains",
+          "type": "qcm",
+          "enonce": "Les cuves de traitement sont…",
+          "reponses": [
+            "isolées entre elles",
+            "reliées à l'équipotentialité",
+            "en bois",
+            "sous 400 V"
+          ],
+          "bonne": 1,
+          "explication": "Pas de différence de potentiel."
+        },
+        {
+          "id": "q7320",
+          "fiche_id": "electrolyse_metaux",
+          "type": "ordre",
+          "enonce": "Nickeler une pièce : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Dégraisser et décaper la pièce",
+            "La brancher en cathode dans le bain",
+            "Anode en nickel, courant continu",
+            "Temps de dépôt selon l'épaisseur voulue",
+            "Rinçage et séchage"
+          ],
+          "explication": "Préparer, brancher, déposer, finir."
+        }
+      ],
+      "ordre": 23
+    },
+    {
+      "id": "postes_htb",
+      "titre": "Postes HTB et transport de l'énergie",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "htb_niveaux",
+          "titre": "Pourquoi monter en tension",
+          "contenu": "En France, la HTA va de 1 000 V à 50 kV et la HTB au-delà de 50 kV. Le réseau de transport (RTE) fonctionne en 63, 90, 225 et 400 kV ; la distribution (Enedis) en 20 kV puis 230/400 V.\n\nOn monte en tension pour transporter : à puissance égale, doubler la tension divise le courant par deux et les pertes Joule (R × I²) par quatre. Les grandes lignes 400 kV relient les centrales aux régions, sur des centaines de kilomètres.\n\nÀ chaque étage, un poste transforme et aiguille l'énergie : poste de transport, poste source (HTB vers HTA), poste de distribution (HTA vers BT).",
+          "image": "htb_niveaux.png"
+        },
+        {
+          "id": "htb_poste",
+          "titre": "Dans un poste HTB",
+          "contenu": "Un poste HTB rassemble des transformateurs de plusieurs centaines de tonnes, des jeux de barres (conducteurs nus qui répartissent l'énergie), des disjoncteurs et des sectionneurs.\n\nLe disjoncteur coupe le courant, même de court-circuit, en éteignant l'arc dans du SF6, sous vide ou dans l'huile. Le sectionneur, lui, isole visiblement mais ne coupe jamais en charge.\n\nLes transformateurs de mesure (TC pour le courant, TT pour la tension) alimentent les protections et le comptage. Les postes sous enveloppe métallique (PSEM) sont compacts et isolés au SF6, pour les villes.",
+          "image": "htb_poste.png"
+        },
+        {
+          "id": "htb_risques",
+          "titre": "Risques et consignation en HTB",
+          "contenu": "En HTB, pas besoin de toucher : un amorçage se produit à distance, à travers l'air. Les distances minimales d'approche se comptent en mètres. Un conducteur isolé proche d'une ligne peut être porté à une tension dangereuse par induction, d'où la mise à la terre et en court-circuit de part et d'autre de la zone de travail.\n\nLa consignation suit l'ordre habituel : séparation (disjoncteur puis sectionneurs), condamnation, identification, vérification d'absence de tension, mise à la terre et en court-circuit.\n\nLe crépitement et la lueur bleue autour des conducteurs sont l'effet couronne. Un poste est clôturé, réservé aux personnes habilitées H.",
+          "image": "htb_risques.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7501",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "En France, la HTB commence à…",
+          "reponses": [
+            "230 V",
+            "1 000 V",
+            "50 kV",
+            "400 kV"
+          ],
+          "bonne": 2,
+          "explication": "HTB au-delà de 50 kV, HTA de 1 à 50 kV."
+        },
+        {
+          "id": "q7502",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "Le réseau de transport RTE est en…",
+          "reponses": [
+            "20 kV",
+            "63 à 400 kV",
+            "230 V",
+            "1 500 V"
+          ],
+          "bonne": 1,
+          "explication": "Quatre niveaux principaux."
+        },
+        {
+          "id": "q7503",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "On monte en tension pour transporter afin de…",
+          "reponses": [
+            "réduire les pertes Joule",
+            "augmenter les pertes",
+            "économiser de la terre",
+            "faire joli"
+          ],
+          "bonne": 0,
+          "explication": "Courant plus faible pour la même puissance."
+        },
+        {
+          "id": "q7504",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "À puissance égale, doubler la tension divise les pertes Joule par…",
+          "reponses": [
+            "2",
+            "4",
+            "8",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Pertes en R × I², courant divisé par 2."
+        },
+        {
+          "id": "q7505",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "La distribution HTA d'Enedis est en général en…",
+          "reponses": [
+            "400 kV",
+            "20 kV",
+            "230 V",
+            "63 kV"
+          ],
+          "bonne": 1,
+          "explication": "Tension du réseau moyenne tension."
+        },
+        {
+          "id": "q7506",
+          "fiche_id": "htb_niveaux",
+          "type": "qcm",
+          "enonce": "Le poste source transforme…",
+          "reponses": [
+            "la BT en HTA",
+            "la HTB en HTA",
+            "le continu en alternatif",
+            "le gaz en électricité"
+          ],
+          "bonne": 1,
+          "explication": "Entrée du réseau de distribution."
+        },
+        {
+          "id": "q7507",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Le rôle principal d'un poste HTB est de…",
+          "reponses": [
+            "produire",
+            "transformer et aiguiller l'énergie entre lignes",
+            "stocker",
+            "consommer"
+          ],
+          "bonne": 1,
+          "explication": "Nœud du réseau."
+        },
+        {
+          "id": "q7508",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Le disjoncteur HTB éteint l'arc grâce à…",
+          "reponses": [
+            "l'air libre",
+            "du SF6, du vide ou de l'huile",
+            "de l'eau",
+            "du bois"
+          ],
+          "bonne": 1,
+          "explication": "Milieux isolants performants."
+        },
+        {
+          "id": "q7509",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Le sectionneur…",
+          "reponses": [
+            "coupe en charge",
+            "isole visiblement, hors charge",
+            "transforme",
+            "mesure"
+          ],
+          "bonne": 1,
+          "explication": "Jamais en charge : arc destructeur."
+        },
+        {
+          "id": "q7510",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Les jeux de barres d'un poste sont…",
+          "reponses": [
+            "des sièges",
+            "des conducteurs nus qui répartissent l'énergie",
+            "des câbles enterrés",
+            "des clôtures"
+          ],
+          "bonne": 1,
+          "explication": "Sous tension en permanence."
+        },
+        {
+          "id": "q7511",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Un poste sous enveloppe métallique (PSEM)…",
+          "reponses": [
+            "est à l'air libre",
+            "est compact et isolé au SF6",
+            "n'existe pas",
+            "est en bois"
+          ],
+          "bonne": 1,
+          "explication": "Pour les villes."
+        },
+        {
+          "id": "q7512",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Les transformateurs de mesure TC et TT servent à…",
+          "reponses": [
+            "alimenter la ville",
+            "mesurer courant et tension pour protections et comptage",
+            "chauffer",
+            "décorer"
+          ],
+          "bonne": 1,
+          "explication": "Jamais ouvrir le secondaire d'un TC en charge."
+        },
+        {
+          "id": "q7513",
+          "fiche_id": "htb_poste",
+          "type": "qcm",
+          "enonce": "Un transformateur 400/225 kV pèse typiquement…",
+          "reponses": [
+            "10 kg",
+            "plusieurs centaines de tonnes",
+            "1 tonne",
+            "100 kg"
+          ],
+          "bonne": 1,
+          "explication": "Transporté par convoi exceptionnel."
+        },
+        {
+          "id": "q7514",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "En HTB, on peut être électrisé…",
+          "reponses": [
+            "seulement par contact",
+            "sans contact, par amorçage à distance",
+            "jamais",
+            "par le bruit"
+          ],
+          "bonne": 1,
+          "explication": "L'air devient conducteur."
+        },
+        {
+          "id": "q7515",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "La distance minimale d'approche en 400 kV se compte en…",
+          "reponses": [
+            "centimètres",
+            "mètres",
+            "kilomètres",
+            "millimètres"
+          ],
+          "bonne": 1,
+          "explication": "Plusieurs mètres."
+        },
+        {
+          "id": "q7516",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "Un conducteur isolé proche d'une ligne HTB peut être…",
+          "reponses": [
+            "inerte",
+            "porté à une tension dangereuse par induction",
+            "refroidi",
+            "éteint"
+          ],
+          "bonne": 1,
+          "explication": "D'où la mise à la terre."
+        },
+        {
+          "id": "q7517",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "La mise à la terre et en court-circuit protège contre…",
+          "reponses": [
+            "la pluie",
+            "la réalimentation et l'induction",
+            "le bruit",
+            "la chaleur"
+          ],
+          "bonne": 1,
+          "explication": "De part et d'autre de la zone."
+        },
+        {
+          "id": "q7518",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "La lueur bleue et le crépitement autour des conducteurs HTB sont…",
+          "reponses": [
+            "la foudre",
+            "l'effet couronne",
+            "un court-circuit",
+            "un incendie"
+          ],
+          "bonne": 1,
+          "explication": "Ionisation de l'air."
+        },
+        {
+          "id": "q7519",
+          "fiche_id": "htb_risques",
+          "type": "qcm",
+          "enonce": "Un poste HTB est…",
+          "reponses": [
+            "ouvert au public",
+            "clôturé, accès réservé aux personnes habilitées",
+            "une aire de jeux",
+            "un parking"
+          ],
+          "bonne": 1,
+          "explication": "Habilitation H."
+        },
+        {
+          "id": "q7520",
+          "fiche_id": "htb_risques",
+          "type": "ordre",
+          "enonce": "Consignation d'une travée HTB : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Séparation par ouverture du disjoncteur puis des sectionneurs",
+            "Condamnation des organes de séparation",
+            "Identification de la travée",
+            "Vérification d'absence de tension",
+            "Mise à la terre et en court-circuit de part et d'autre"
+          ],
+          "explication": "Même logique qu'en BT, distances en plus."
+        }
+      ],
+      "ordre": 24
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 22,
+      "ordre": 25,
       "fiches": [
         {
           "id": "multimetre",
@@ -6774,7 +7698,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 23,
+      "ordre": 26,
       "fiches": [
         {
           "id": "tableau",
@@ -7384,7 +8308,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 24
+      "ordre": 27
     },
     {
       "id": "cablage",
@@ -7692,7 +8616,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 25
+      "ordre": 28
     },
     {
       "id": "parafoudre",
@@ -7999,7 +8923,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 26
+      "ordre": 29
     },
     {
       "id": "locaux_risques",
@@ -8306,7 +9230,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 27
+      "ordre": 30
     },
     {
       "id": "photovoltaique",
@@ -8613,7 +9537,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 28
+      "ordre": 31
     },
     {
       "id": "chauffage",
@@ -8920,7 +9844,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 29
+      "ordre": 32
     },
     {
       "id": "domotique",
@@ -9227,7 +10151,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 30
+      "ordre": 33
     },
     {
       "id": "vehicule_electrique",
@@ -9535,7 +10459,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 31
+      "ordre": 34
     },
     {
       "id": "plaque_signaletique",
@@ -9842,7 +10766,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 32
+      "ordre": 35
     },
     {
       "id": "ventilation",
@@ -10150,7 +11074,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 33
+      "ordre": 36
     },
     {
       "id": "lire_tableau",
@@ -10457,7 +11381,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 34
+      "ordre": 37
     },
     {
       "id": "depannage",
@@ -10765,7 +11689,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 35
+      "ordre": 38
     },
     {
       "id": "courants_faibles",
@@ -11073,7 +11997,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 36
+      "ordre": 39
     },
     {
       "id": "eclairage_exterieur",
@@ -11381,7 +12305,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 37
+      "ordre": 40
     },
     {
       "id": "alarme",
@@ -11689,7 +12613,7 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 38
+      "ordre": 41
     },
     {
       "id": "mesures_avancees",
@@ -11997,7 +12921,7 @@
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
         }
       ],
-      "ordre": 39
+      "ordre": 42
     },
     {
       "id": "renovation",
@@ -12305,7 +13229,7 @@
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
         }
       ],
-      "ordre": 40
+      "ordre": 43
     },
     {
       "id": "secours_energie",
@@ -12613,7 +13537,7 @@
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
         }
       ],
-      "ordre": 41
+      "ordre": 44
     },
     {
       "id": "camping_car_bateau",
@@ -12921,7 +13845,7 @@
           "explication": "Hors tension, brancher, enclencher, tester."
         }
       ],
-      "ordre": 42
+      "ordre": 45
     },
     {
       "id": "autoconsommation",
@@ -13228,7 +14152,7 @@
           "explication": "Mesurer, déplacer, router, stocker."
         }
       ],
-      "ordre": 43
+      "ordre": 46
     },
     {
       "id": "tertiaire_erp",
@@ -13536,7 +14460,7 @@
           "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
         }
       ],
-      "ordre": 44
+      "ordre": 47
     },
     {
       "id": "industrie",
@@ -13844,7 +14768,7 @@
           "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
         }
       ],
-      "ordre": 45
+      "ordre": 48
     },
     {
       "id": "variateurs",
@@ -14152,7 +15076,7 @@
           "explication": "Filtre, câble, blindage, séparation, réglages."
         }
       ],
-      "ordre": 46
+      "ordre": 49
     },
     {
       "id": "eclairage_public",
@@ -14460,7 +15384,7 @@
           "explication": "Baliser, couper, vérifier, intervenir, essayer."
         }
       ],
-      "ordre": 47
+      "ordre": 50
     },
     {
       "id": "portails_ascenseurs",
@@ -14768,7 +15692,7 @@
           "explication": "Alimentation, mécanique, sécurités, réglages, test."
         }
       ],
-      "ordre": 48
+      "ordre": 51
     },
     {
       "id": "pompes_eau",
@@ -15076,7 +16000,7 @@
           "explication": "Protection, câble, raccordement, sécurité, essai."
         }
       ],
-      "ordre": 49
+      "ordre": 52
     },
     {
       "id": "cabler_tableau",
@@ -15384,7 +16308,7 @@
           "explication": "Préparer, monter, équiper, raccorder, contrôler."
         }
       ],
-      "ordre": 50
+      "ordre": 53
     },
     {
       "id": "schemas_industriels",
@@ -15692,7 +16616,7 @@
           "explication": "Lire, vérifier les évidences, mesurer, contrôler, réparer."
         }
       ],
-      "ordre": 51
+      "ordre": 54
     },
     {
       "id": "soudure",
@@ -16000,7 +16924,7 @@
           "explication": "Incendie, retour de courant, EPI, fumées, puis souder."
         }
       ],
-      "ordre": 52
+      "ordre": 55
     },
     {
       "id": "agriculture",
@@ -16308,12 +17232,1552 @@
           "explication": "Équipotentialité, protection des personnes et animaux, matériel, câbles, secours."
         }
       ],
-      "ordre": 53
+      "ordre": 56
+    },
+    {
+      "id": "medical",
+      "titre": "Électricité médicale et hôpitaux",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "locaux_medicaux",
+          "titre": "Les locaux à usage médical",
+          "contenu": "La norme classe les locaux selon le risque pour le patient : groupe 0 (pas de contact avec des appareils), groupe 1 (appareils en contact externe), groupe 2 (blocs opératoires, réanimation : appareils au contact du cœur ou survie du patient).\n\nEn groupe 2, le régime de neutre est IT médical : un transformateur d'isolement par salle, un contrôleur d'isolement qui alerte au premier défaut sans couper, pour que jamais une intervention ne soit interrompue.\n\nLes seuils de courant admissibles sont bien plus bas qu'ailleurs : quelques microampères au contact du cœur suffisent à provoquer une fibrillation.",
+          "image": "locaux_medicaux.png"
+        },
+        {
+          "id": "secours_hopital",
+          "titre": "Alimentation de secours",
+          "contenu": "Un hôpital a plusieurs niveaux de secours : deux arrivées réseau, groupes électrogènes qui démarrent en moins de 15 secondes, onduleurs pour les blocs et la réanimation (sans coupure du tout), batteries dans certains appareils.\n\nLes circuits sont classés par délai de reprise admissible : 0 s (onduleur), 0,5 s, 15 s, plus de 15 s. L'éclairage des blocs est secouru sans coupure.\n\nLes essais des groupes sont mensuels, en charge réelle régulièrement.",
+          "image": "secours_hopital.png"
+        },
+        {
+          "id": "appareils_medicaux",
+          "titre": "Appareils et sécurité électrique",
+          "contenu": "Les appareils électromédicaux (norme IEC 60601) ont des parties appliquées classées B, BF ou CF selon leur isolation et leur usage (CF pour le cœur).\n\nÉquipotentialité renforcée : toutes les masses de la salle reliées à une barre d'équipotentialité, prises avec plot de terre supplémentaire.\n\nLa maintenance des appareils est tracée (biomédical) : tests de courant de fuite, de terre, avant remise en service.\n\nTechnicien en milieu hospitalier : habilitation électrique classique plus formation aux spécificités, coordination avec les soignants pour toute coupure.",
+          "image": "appareils_medicaux.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q6901",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Un bloc opératoire est un local de groupe…",
+          "reponses": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "bonne": 2,
+          "explication": "Appareils au contact du cœur ou survie du patient."
+        },
+        {
+          "id": "q6902",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Le régime de neutre en groupe 2 est…",
+          "reponses": [
+            "TT",
+            "TN",
+            "IT médical",
+            "sans neutre"
+          ],
+          "bonne": 2,
+          "explication": "Un premier défaut n'interrompt pas l'intervention."
+        },
+        {
+          "id": "q6903",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Le transformateur d'isolement médical alimente…",
+          "reponses": [
+            "tout l'hôpital",
+            "une salle (bloc, réanimation)",
+            "le parking",
+            "la cuisine"
+          ],
+          "bonne": 1,
+          "explication": "Un par salle."
+        },
+        {
+          "id": "q6904",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Au premier défaut en IT médical, le contrôleur…",
+          "reponses": [
+            "coupe tout",
+            "alerte sans couper",
+            "redémarre",
+            "appelle le 15"
+          ],
+          "bonne": 1,
+          "explication": "On corrige avant un second défaut."
+        },
+        {
+          "id": "q6905",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Au contact direct du cœur, un courant dangereux se compte en…",
+          "reponses": [
+            "ampères",
+            "milliampères",
+            "microampères",
+            "kiloampères"
+          ],
+          "bonne": 2,
+          "explication": "Micro-choc."
+        },
+        {
+          "id": "q6906",
+          "fiche_id": "locaux_medicaux",
+          "type": "qcm",
+          "enonce": "Un local de groupe 0…",
+          "reponses": [
+            "a des appareils au contact du cœur",
+            "n'a pas d'appareil au contact du patient",
+            "est un bloc",
+            "est une réanimation"
+          ],
+          "bonne": 1,
+          "explication": "Bureau, salle d'attente."
+        },
+        {
+          "id": "q6907",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "Les groupes électrogènes d'un hôpital démarrent en moins de…",
+          "reponses": [
+            "1 h",
+            "15 s",
+            "10 min",
+            "24 h"
+          ],
+          "bonne": 1,
+          "explication": "Reprise rapide."
+        },
+        {
+          "id": "q6908",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "Les blocs et la réanimation sont alimentés…",
+          "reponses": [
+            "par le réseau seul",
+            "par onduleur, sans aucune coupure",
+            "par des piles",
+            "par le soleil"
+          ],
+          "bonne": 1,
+          "explication": "Délai de reprise 0 s."
+        },
+        {
+          "id": "q6909",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "Un hôpital dispose de…",
+          "reponses": [
+            "une seule arrivée",
+            "deux arrivées réseau, groupes, onduleurs",
+            "rien",
+            "une batterie de voiture"
+          ],
+          "bonne": 1,
+          "explication": "Plusieurs niveaux de secours."
+        },
+        {
+          "id": "q6910",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "Les circuits hospitaliers sont classés par…",
+          "reponses": [
+            "couleur",
+            "délai de reprise admissible",
+            "prix",
+            "étage"
+          ],
+          "bonne": 1,
+          "explication": "0 s, 0,5 s, 15 s, plus."
+        },
+        {
+          "id": "q6911",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "Les essais des groupes de secours sont…",
+          "reponses": [
+            "annuels",
+            "mensuels, avec charge réelle régulièrement",
+            "jamais faits",
+            "hebdomadaires en pleine charge"
+          ],
+          "bonne": 1,
+          "explication": "Fiabilité."
+        },
+        {
+          "id": "q6912",
+          "fiche_id": "secours_hopital",
+          "type": "qcm",
+          "enonce": "L'éclairage d'un bloc opératoire est…",
+          "reponses": [
+            "ordinaire",
+            "secouru sans coupure",
+            "sur pile",
+            "facultatif"
+          ],
+          "bonne": 1,
+          "explication": "Une coupure en pleine opération est inacceptable."
+        },
+        {
+          "id": "q6913",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "La norme des appareils électromédicaux est…",
+          "reponses": [
+            "NF C 15-100",
+            "IEC 60601",
+            "NF C 18-510",
+            "ISO 9001"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité électrique des appareils."
+        },
+        {
+          "id": "q6914",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "Une partie appliquée CF est prévue…",
+          "reponses": [
+            "pour la peau",
+            "pour le contact direct avec le cœur",
+            "pour les enfants",
+            "pour le bureau"
+          ],
+          "bonne": 1,
+          "explication": "Isolation maximale."
+        },
+        {
+          "id": "q6915",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "La barre d'équipotentialité d'une salle…",
+          "reponses": [
+            "décore",
+            "relie toutes les masses de la salle",
+            "alimente les appareils",
+            "mesure"
+          ],
+          "bonne": 1,
+          "explication": "Aucune différence de potentiel."
+        },
+        {
+          "id": "q6916",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "Le service biomédical…",
+          "reponses": [
+            "soigne",
+            "maintient et teste les appareils médicaux",
+            "fait le ménage",
+            "gère la cuisine"
+          ],
+          "bonne": 1,
+          "explication": "Courants de fuite, terre, traçabilité."
+        },
+        {
+          "id": "q6917",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "Avant une coupure programmée dans un hôpital, on…",
+          "reponses": [
+            "coupe sans prévenir",
+            "coordonne avec les soignants",
+            "attend la nuit",
+            "coupe le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Des vies en dépendent."
+        },
+        {
+          "id": "q6918",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "Le plot de terre supplémentaire des prises médicales…",
+          "reponses": [
+            "est décoratif",
+            "renforce l'équipotentialité des appareils",
+            "alimente",
+            "mesure"
+          ],
+          "bonne": 1,
+          "explication": "Liaison de terre dédiée."
+        },
+        {
+          "id": "q6919",
+          "fiche_id": "appareils_medicaux",
+          "type": "qcm",
+          "enonce": "Le technicien en hôpital a…",
+          "reponses": [
+            "seulement l'habilitation électrique",
+            "l'habilitation plus une formation aux spécificités hospitalières",
+            "rien",
+            "un diplôme de médecin"
+          ],
+          "bonne": 1,
+          "explication": "IT médical, secours, coordination."
+        },
+        {
+          "id": "q6920",
+          "fiche_id": "secours_hopital",
+          "type": "ordre",
+          "enonce": "Coupure réseau dans un hôpital : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Perte de la première arrivée réseau",
+            "Basculement sur la seconde arrivée si disponible",
+            "Les onduleurs maintiennent blocs et réanimation sans coupure",
+            "Démarrage des groupes en moins de 15 s",
+            "Reprise des circuits par ordre de priorité"
+          ],
+          "explication": "Redondance en cascade."
+        }
+      ],
+      "ordre": 57
+    },
+    {
+      "id": "telecoms",
+      "titre": "Télécoms, antennes et radio",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "ondes",
+          "titre": "Les ondes radio",
+          "contenu": "Une antenne convertit un courant alternatif haute fréquence en onde électromagnétique, et inversement. La fréquence détermine la portée et la taille de l'antenne : la longueur d'onde vaut 300 / f (en MHz) mètres.\n\nRadio FM (100 MHz), TNT (500 MHz), 4G/5G (700 MHz à 3,5 GHz), Wi-Fi (2,4 et 5 GHz), satellites (10 à 30 GHz).\n\nLes puissances vont du milliwatt (Wi-Fi) au kilowatt (émetteurs). Les câbles coaxiaux et guides d'ondes transportent le signal avec des pertes qui augmentent avec la fréquence et la longueur.",
+          "image": "ondes.png"
+        },
+        {
+          "id": "sites_telecom",
+          "titre": "Les sites télécoms",
+          "contenu": "Un pylône ou un toit-terrasse porte les antennes ; un local technique abrite les équipements, alimentés en 48 V continu par des redresseurs et des batteries qui tiennent plusieurs heures.\n\nSécurité : rayonnement des antennes (périmètres de sécurité, balisage, extinction avant travaux à proximité), travail en hauteur, foudre (paratonnerre, parafoudres sur chaque câble), mise à la terre soignée.\n\nLes sites sont télésurveillés : température, tension batteries, alarmes d'intrusion.",
+          "image": "sites_telecom.png"
+        },
+        {
+          "id": "fibre_reseaux",
+          "titre": "Fibre, cuivre et réseaux",
+          "contenu": "Le réseau fixe passe à la fibre optique jusqu'à l'abonné (FTTH), remplaçant le cuivre téléphonique (fermeture progressive du réseau cuivre).\n\nPoint de branchement optique, prise terminale, boîtier ONT chez l'abonné, alimenté en 230 V : plus de téléphone sans électricité, d'où l'intérêt d'un petit onduleur pour les personnes dépendantes (téléassistance).\n\nLes réseaux d'entreprise utilisent cuivre (RJ45) et fibre, avec des baies alimentées par onduleur et climatisées.",
+          "image": "fibre_reseaux.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7101",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "La longueur d'onde à 100 MHz est de…",
+          "reponses": [
+            "3 m",
+            "30 m",
+            "30 cm",
+            "3 km"
+          ],
+          "bonne": 0,
+          "explication": "300 / 100 = 3 m."
+        },
+        {
+          "id": "q7102",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "Une antenne convertit…",
+          "reponses": [
+            "l'électricité en chaleur",
+            "un courant haute fréquence en onde électromagnétique, et inversement",
+            "la lumière en son",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Émission et réception."
+        },
+        {
+          "id": "q7103",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "Le Wi-Fi fonctionne à…",
+          "reponses": [
+            "100 MHz",
+            "2,4 et 5 GHz",
+            "50 Hz",
+            "700 MHz"
+          ],
+          "bonne": 1,
+          "explication": "Et 6 GHz pour le Wi-Fi 6E."
+        },
+        {
+          "id": "q7104",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "Les pertes dans un câble coaxial augmentent avec…",
+          "reponses": [
+            "la tension",
+            "la fréquence et la longueur",
+            "le froid",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "D'où les amplificateurs."
+        },
+        {
+          "id": "q7105",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "Puissance d'un émetteur Wi-Fi ?",
+          "reponses": [
+            "1 kW",
+            "de l'ordre de 100 mW",
+            "1 MW",
+            "10 W"
+          ],
+          "bonne": 1,
+          "explication": "Portée limitée volontairement."
+        },
+        {
+          "id": "q7106",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "Plus la fréquence est haute, plus l'antenne est…",
+          "reponses": [
+            "grande",
+            "petite",
+            "lourde",
+            "chère"
+          ],
+          "bonne": 1,
+          "explication": "Longueur d'onde plus courte."
+        },
+        {
+          "id": "q7107",
+          "fiche_id": "ondes",
+          "type": "qcm",
+          "enonce": "La TNT est diffusée vers…",
+          "reponses": [
+            "50 Hz",
+            "500 MHz",
+            "30 GHz",
+            "1 Hz"
+          ],
+          "bonne": 1,
+          "explication": "Bande UHF."
+        },
+        {
+          "id": "q7108",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Les équipements d'un site télécom sont alimentés en…",
+          "reponses": [
+            "230 V alternatif",
+            "48 V continu avec batteries",
+            "12 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "Redresseurs et batteries."
+        },
+        {
+          "id": "q7109",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Avant de travailler près d'antennes actives, on…",
+          "reponses": [
+            "monte directement",
+            "respecte les périmètres ou fait éteindre les émetteurs",
+            "touche l'antenne",
+            "enlève son casque"
+          ],
+          "bonne": 1,
+          "explication": "Rayonnement."
+        },
+        {
+          "id": "q7110",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Chaque câble d'antenne est protégé par…",
+          "reponses": [
+            "un fusible",
+            "un parafoudre",
+            "une lampe",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "La foudre aime les pylônes."
+        },
+        {
+          "id": "q7111",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Les batteries d'un site tiennent…",
+          "reponses": [
+            "quelques secondes",
+            "plusieurs heures",
+            "une semaine",
+            "une minute"
+          ],
+          "bonne": 1,
+          "explication": "Continuité du service."
+        },
+        {
+          "id": "q7112",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Un site télécom est…",
+          "reponses": [
+            "abandonné",
+            "télésurveillé : température, batteries, intrusion",
+            "gardé par un agent",
+            "sans alarme"
+          ],
+          "bonne": 1,
+          "explication": "Intervention sur alerte."
+        },
+        {
+          "id": "q7113",
+          "fiche_id": "sites_telecom",
+          "type": "qcm",
+          "enonce": "Le principal risque physique sur un pylône ?",
+          "reponses": [
+            "Le bruit",
+            "La chute de hauteur",
+            "La poussière",
+            "Le froid"
+          ],
+          "bonne": 1,
+          "explication": "Harnais et formation."
+        },
+        {
+          "id": "q7114",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "FTTH signifie…",
+          "reponses": [
+            "fibre jusqu'à l'abonné",
+            "fibre très haute tension",
+            "fil téléphonique",
+            "rien"
+          ],
+          "bonne": 0,
+          "explication": "Fiber To The Home."
+        },
+        {
+          "id": "q7115",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "Le réseau cuivre téléphonique…",
+          "reponses": [
+            "se développe",
+            "ferme progressivement au profit de la fibre",
+            "est éternel",
+            "est en 400 V"
+          ],
+          "bonne": 1,
+          "explication": "Plan de fermeture."
+        },
+        {
+          "id": "q7116",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "Le boîtier ONT chez l'abonné…",
+          "reponses": [
+            "fonctionne sans électricité",
+            "est alimenté en 230 V : pas de téléphone sans courant",
+            "est en 48 V du réseau",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "D'où un petit onduleur pour la téléassistance."
+        },
+        {
+          "id": "q7117",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "Avec le cuivre, le téléphone fixe fonctionnait pendant une coupure car…",
+          "reponses": [
+            "il avait une pile",
+            "la ligne était alimentée en 48 V par le central",
+            "c'était magique",
+            "il était en fibre"
+          ],
+          "bonne": 1,
+          "explication": "Ce n'est plus le cas avec la fibre."
+        },
+        {
+          "id": "q7118",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "Les baies réseau d'une entreprise sont…",
+          "reponses": [
+            "sans protection",
+            "sur onduleur et climatisées",
+            "à l'extérieur",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Chaleur et coupures."
+        },
+        {
+          "id": "q7119",
+          "fiche_id": "fibre_reseaux",
+          "type": "qcm",
+          "enonce": "La fibre optique est insensible…",
+          "reponses": [
+            "à tout",
+            "aux perturbations électromagnétiques",
+            "aux coudes serrés",
+            "à la poussière"
+          ],
+          "bonne": 1,
+          "explication": "Mais fragile mécaniquement."
+        },
+        {
+          "id": "q7120",
+          "fiche_id": "sites_telecom",
+          "type": "ordre",
+          "enonce": "Intervenir sur un site télécom : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier les autorisations et les périmètres de rayonnement",
+            "Faire éteindre ou réduire les émetteurs si nécessaire",
+            "S'équiper pour le travail en hauteur",
+            "Intervenir sur les équipements 48 V ou antennes",
+            "Remettre en service et lever l'alarme"
+          ],
+          "explication": "Rayonnement, hauteur, intervention, remise en service."
+        }
+      ],
+      "ordre": 58
+    },
+    {
+      "id": "induction_industrie",
+      "titre": "Induction, fours et procédés thermiques",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "chauffage_induction",
+          "titre": "Le chauffage par induction",
+          "contenu": "Une bobine parcourue par un courant à haute fréquence (quelques kHz à quelques centaines de kHz) induit des courants de Foucault dans une pièce métallique, qui chauffe de l'intérieur, sans contact.\n\nApplications : plaques de cuisson, trempe de pièces mécaniques, fusion de métaux (fours à induction), brasage, chauffage de tubes.\n\nAvantages : rapide, précis, propre, rendement élevé. Contraintes : générateur de puissance à découpage, refroidissement par eau de la bobine, champs magnétiques intenses à proximité (porteurs d'implants médicaux, objets métalliques).",
+          "image": "chauffage_induction.png"
+        },
+        {
+          "id": "fours_resistances",
+          "titre": "Fours à résistances et à arc",
+          "contenu": "Four à résistances : des éléments chauffants (fil résistif, carbure de silicium) chauffent par effet Joule jusqu'à 1 200 °C et plus. Régulation par thermostat ou régulateur PID, puissance commandée par contacteurs ou gradateurs à thyristors.\n\nFour à arc : un arc électrique entre des électrodes en graphite et la charge fait fondre l'acier (recyclage de ferraille). Puissances de dizaines de MW, alimentation HT, perturbations réseau (flicker) à compenser.\n\nProtection : surveillance de température, sécurité de porte, coupure en cas de surchauffe.",
+          "image": "fours_resistances.png"
+        },
+        {
+          "id": "securite_thermique",
+          "titre": "Sécurité des procédés thermiques",
+          "contenu": "Brûlures : surfaces chaudes, projections de métal en fusion. EPI ignifugés, écrans, distances.\n\nÉlectrique : fortes puissances, tensions parfois élevées, condensateurs de compensation chargés, refroidissement par eau à proximité de circuits sous tension (fuites = danger).\n\nChamps magnétiques : les personnes porteuses de stimulateur cardiaque n'approchent pas les inducteurs ; retirer bijoux et outils métalliques.\n\nVentilation des fumées, détection incendie, procédures de consignation adaptées aux temps de refroidissement.",
+          "image": "securite_thermique.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7201",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "Le chauffage par induction chauffe la pièce…",
+          "reponses": [
+            "par contact",
+            "de l'intérieur, par courants de Foucault",
+            "par flamme",
+            "par la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Sans contact."
+        },
+        {
+          "id": "q7202",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "La fréquence de l'inducteur est de l'ordre de…",
+          "reponses": [
+            "50 Hz",
+            "quelques kHz à quelques centaines de kHz",
+            "1 Hz",
+            "10 GHz"
+          ],
+          "bonne": 1,
+          "explication": "Selon la profondeur de chauffe voulue."
+        },
+        {
+          "id": "q7203",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "Application industrielle de l'induction ?",
+          "reponses": [
+            "Éclairage",
+            "Trempe et fusion de métaux",
+            "Ventilation",
+            "Pompage"
+          ],
+          "bonne": 1,
+          "explication": "Rapide et précis."
+        },
+        {
+          "id": "q7204",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "La bobine d'induction est souvent…",
+          "reponses": [
+            "en plastique",
+            "refroidie par eau",
+            "en bois",
+            "sans refroidissement"
+          ],
+          "bonne": 1,
+          "explication": "Courants énormes."
+        },
+        {
+          "id": "q7205",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "Un porteur de stimulateur cardiaque près d'un inducteur…",
+          "reponses": [
+            "est sans risque",
+            "doit rester à distance : champ magnétique intense",
+            "chauffe",
+            "est protégé par le boîtier"
+          ],
+          "bonne": 1,
+          "explication": "Consigne de sécurité."
+        },
+        {
+          "id": "q7206",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "Une plaque à induction chauffe…",
+          "reponses": [
+            "la vitre",
+            "le fond ferromagnétique de la casserole",
+            "l'air",
+            "la main"
+          ],
+          "bonne": 1,
+          "explication": "Même principe que l'industrie, en petit."
+        },
+        {
+          "id": "q7207",
+          "fiche_id": "chauffage_induction",
+          "type": "qcm",
+          "enonce": "Le générateur d'induction est…",
+          "reponses": [
+            "un transformateur 50 Hz",
+            "un convertisseur à découpage de forte puissance",
+            "une pile",
+            "un alternateur"
+          ],
+          "bonne": 1,
+          "explication": "Électronique de puissance."
+        },
+        {
+          "id": "q7208",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "Un four à résistances chauffe par…",
+          "reponses": [
+            "arc",
+            "effet Joule dans des éléments chauffants",
+            "induction",
+            "combustion"
+          ],
+          "bonne": 1,
+          "explication": "Jusqu'à 1 200 °C et plus."
+        },
+        {
+          "id": "q7209",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "La puissance d'un four à résistances est commandée par…",
+          "reponses": [
+            "un interrupteur mural",
+            "contacteurs ou gradateurs à thyristors",
+            "une pile",
+            "un variateur de vitesse"
+          ],
+          "bonne": 1,
+          "explication": "Régulation PID."
+        },
+        {
+          "id": "q7210",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "Un four à arc sert à…",
+          "reponses": [
+            "cuire du pain",
+            "fondre l'acier à partir de ferraille",
+            "chauffer l'eau",
+            "sécher"
+          ],
+          "bonne": 1,
+          "explication": "Électrodes en graphite."
+        },
+        {
+          "id": "q7211",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "Puissance d'un four à arc ?",
+          "reponses": [
+            "1 kW",
+            "dizaines de MW",
+            "100 W",
+            "1 GW"
+          ],
+          "bonne": 1,
+          "explication": "Alimentation HT."
+        },
+        {
+          "id": "q7212",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "Le flicker est…",
+          "reponses": [
+            "une lampe",
+            "une fluctuation de tension qui fait clignoter l'éclairage",
+            "un four",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Provoqué par les fours à arc."
+        },
+        {
+          "id": "q7213",
+          "fiche_id": "fours_resistances",
+          "type": "qcm",
+          "enonce": "Un régulateur PID…",
+          "reponses": [
+            "coupe le courant",
+            "maintient la température avec précision",
+            "mesure la tension",
+            "fait fondre"
+          ],
+          "bonne": 1,
+          "explication": "Proportionnel, intégral, dérivé."
+        },
+        {
+          "id": "q7214",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "Principal risque d'un four ?",
+          "reponses": [
+            "Le froid",
+            "Brûlures et projections",
+            "Le bruit",
+            "La lumière"
+          ],
+          "bonne": 1,
+          "explication": "EPI ignifugés."
+        },
+        {
+          "id": "q7215",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "Le refroidissement par eau près des circuits sous tension…",
+          "reponses": [
+            "est sans danger",
+            "est un risque : fuites d'eau sur des conducteurs",
+            "chauffe",
+            "isole"
+          ],
+          "bonne": 1,
+          "explication": "Détection de fuite."
+        },
+        {
+          "id": "q7216",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "Les condensateurs de compensation d'un four à induction…",
+          "reponses": [
+            "sont déchargés instantanément",
+            "restent chargés : décharge avant intervention",
+            "n'existent pas",
+            "sont en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Fortes énergies stockées."
+        },
+        {
+          "id": "q7217",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "Les outils métalliques près d'un inducteur…",
+          "reponses": [
+            "sont utiles",
+            "chauffent et sont attirés : à retirer",
+            "isolent",
+            "refroidissent"
+          ],
+          "bonne": 1,
+          "explication": "Comme les bijoux."
+        },
+        {
+          "id": "q7218",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "La consignation d'un four tient compte…",
+          "reponses": [
+            "du prix",
+            "du temps de refroidissement",
+            "de la couleur",
+            "du jour"
+          ],
+          "bonne": 1,
+          "explication": "Un four chaud reste dangereux hors tension."
+        },
+        {
+          "id": "q7219",
+          "fiche_id": "securite_thermique",
+          "type": "qcm",
+          "enonce": "La ventilation des fumées d'un four sert à…",
+          "reponses": [
+            "refroidir",
+            "évacuer les gaz et particules toxiques",
+            "chauffer l'atelier",
+            "économiser"
+          ],
+          "bonne": 1,
+          "explication": "Santé des opérateurs."
+        },
+        {
+          "id": "q7220",
+          "fiche_id": "chauffage_induction",
+          "type": "ordre",
+          "enonce": "Chauffage par induction : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Le générateur produit un courant haute fréquence",
+            "La bobine crée un champ magnétique variable",
+            "Des courants de Foucault naissent dans la pièce",
+            "La pièce chauffe par effet Joule",
+            "Trempe, fusion ou brasage selon le procédé"
+          ],
+          "explication": "Courant, champ, induction, chaleur, procédé."
+        }
+      ],
+      "ordre": 59
+    },
+    {
+      "id": "data_centers",
+      "titre": "Data centers et informatique",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "dc_alimentation",
+          "titre": "Alimenter un data center",
+          "contenu": "Un data center héberge des milliers de serveurs qui ne doivent jamais s'arrêter. L'alimentation est donc redondante : deux arrivées réseau, des onduleurs (batteries) qui prennent le relais sans coupure, des groupes électrogènes qui démarrent en quelques secondes et tiennent des heures grâce à leurs cuves de fioul.\n\nChaque serveur a deux alimentations branchées sur deux chaînes indépendantes, A et B. Si l'une tombe, l'autre porte toute la charge. Le niveau de redondance est classé (Tier I à IV) : un Tier III permet la maintenance sans arrêter la production.\n\nUne baie consomme 5 à 20 kW, parfois plus. Le PUE (énergie totale divisée par énergie informatique) mesure l'efficacité : 1,2 signifie 20 % consacrés au froid et aux pertes.",
+          "image": "dc_alimentation.png"
+        },
+        {
+          "id": "dc_refroidissement",
+          "titre": "Refroidir les serveurs",
+          "contenu": "Toute l'électricité consommée par un serveur finit en chaleur. Il faut l'évacuer en permanence, sinon la température monte en quelques minutes.\n\nLes salles sont organisées en allées froides et allées chaudes pour ne pas mélanger les flux d'air. Le froid arrive souvent par un plancher technique surélevé. Température de salle admise : 18 à 27 °C selon les recommandations ASHRAE.\n\nLe free cooling utilise l'air extérieur quand il est assez frais, ce qui divise la facture. Les baies très denses (calcul, intelligence artificielle) passent au refroidissement liquide direct. La chaleur récupérée peut alimenter un réseau de chaleur urbain.",
+          "image": "dc_refroidissement.png"
+        },
+        {
+          "id": "dc_securite",
+          "titre": "Intervenir en salle serveurs",
+          "contenu": "Intervenir dans un data center, c'est travailler à côté d'équipements qui ne doivent jamais s'éteindre. Avant de couper un départ, on vérifie que la charge est bien portée par l'autre chaîne. On appelle cela une maintenance concurrente.\n\nLe bouton EPO (Emergency Power Off) coupe toute la salle, onduleurs compris : il est protégé contre les appuis accidentels, on ne l'utilise qu'en cas de danger grave.\n\nLes batteries d'onduleur présentent un risque de court-circuit à très fort courant, de dégagement d'hydrogène et de brûlure chimique. L'extinction incendie se fait par gaz inerte ou inhibiteur, jamais par eau : on sort de la salle dès l'alarme.",
+          "image": "dc_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7401",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Un data center Tier III garantit…",
+          "reponses": [
+            "aucune redondance",
+            "une maintenance sans arrêter la production",
+            "une coupure par jour",
+            "une seule arrivée"
+          ],
+          "bonne": 1,
+          "explication": "Chaque élément peut être arrêté sans couper les serveurs."
+        },
+        {
+          "id": "q7402",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Le PUE d'un data center est le rapport…",
+          "reponses": [
+            "énergie totale / énergie informatique",
+            "surface / puissance",
+            "coût / kWh",
+            "chaleur / froid"
+          ],
+          "bonne": 0,
+          "explication": "Un PUE de 1,2 signifie 20 % de plus que l'informatique seule."
+        },
+        {
+          "id": "q7403",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Entre la coupure réseau et le démarrage des groupes, les serveurs sont alimentés par…",
+          "reponses": [
+            "rien",
+            "les onduleurs, sur batteries",
+            "le soleil",
+            "une pile"
+          ],
+          "bonne": 1,
+          "explication": "Aucune coupure visible."
+        },
+        {
+          "id": "q7404",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Les serveurs sont souvent alimentés par…",
+          "reponses": [
+            "une seule prise",
+            "deux alimentations sur deux chaînes A et B",
+            "un câble USB",
+            "des piles"
+          ],
+          "bonne": 1,
+          "explication": "Si une chaîne tombe, l'autre porte tout."
+        },
+        {
+          "id": "q7405",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Une baie de serveurs consomme typiquement…",
+          "reponses": [
+            "quelques watts",
+            "5 à 20 kW",
+            "1 MW",
+            "0 W"
+          ],
+          "bonne": 1,
+          "explication": "Parfois bien plus pour le calcul intensif."
+        },
+        {
+          "id": "q7406",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Les groupes électrogènes d'un data center…",
+          "reponses": [
+            "sont facultatifs",
+            "démarrent en quelques secondes et tiennent des heures",
+            "tournent en permanence",
+            "alimentent le quartier"
+          ],
+          "bonne": 1,
+          "explication": "Cuves de fioul dimensionnées pour plusieurs heures ou jours."
+        },
+        {
+          "id": "q7407",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "L'énergie consommée par un serveur finit…",
+          "reponses": [
+            "dans le vide",
+            "en chaleur, qu'il faut évacuer",
+            "en lumière",
+            "en son"
+          ],
+          "bonne": 1,
+          "explication": "Tout se transforme en chaleur."
+        },
+        {
+          "id": "q7408",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "Le free cooling consiste à…",
+          "reponses": [
+            "couper le froid",
+            "utiliser l'air extérieur quand il est assez frais",
+            "refroidir à l'eau glacée en permanence",
+            "ouvrir les portes"
+          ],
+          "bonne": 1,
+          "explication": "Grosse économie d'énergie."
+        },
+        {
+          "id": "q7409",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "Les allées chaudes et froides servent à…",
+          "reponses": [
+            "décorer",
+            "séparer les flux d'air pour ne pas les mélanger",
+            "chauffer les techniciens",
+            "ranger les câbles"
+          ],
+          "bonne": 1,
+          "explication": "L'air froid entre devant, l'air chaud sort derrière."
+        },
+        {
+          "id": "q7410",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "Le refroidissement liquide direct est utilisé pour…",
+          "reponses": [
+            "les serveurs peu denses",
+            "les baies très denses (calcul, IA)",
+            "les bureaux",
+            "les batteries"
+          ],
+          "bonne": 1,
+          "explication": "L'air ne suffit plus au-delà de quelques dizaines de kW par baie."
+        },
+        {
+          "id": "q7411",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "La chaleur d'un data center peut…",
+          "reponses": [
+            "seulement être perdue",
+            "alimenter un réseau de chaleur urbain",
+            "produire de l'électricité",
+            "être stockée sans perte"
+          ],
+          "bonne": 1,
+          "explication": "Chaleur fatale valorisée."
+        },
+        {
+          "id": "q7412",
+          "fiche_id": "dc_refroidissement",
+          "type": "qcm",
+          "enonce": "Une température de salle admise aujourd'hui est…",
+          "reponses": [
+            "10 °C",
+            "18 à 27 °C",
+            "40 °C",
+            "0 °C"
+          ],
+          "bonne": 1,
+          "explication": "Recommandations ASHRAE."
+        },
+        {
+          "id": "q7413",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "Le bouton EPO d'une salle serveurs…",
+          "reponses": [
+            "éteint la lumière",
+            "coupe toute l'alimentation, onduleurs compris",
+            "appelle les secours",
+            "redémarre les serveurs"
+          ],
+          "bonne": 1,
+          "explication": "Arrêt d'urgence, protégé contre les appuis accidentels."
+        },
+        {
+          "id": "q7414",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "Les batteries d'onduleur présentent un risque de…",
+          "reponses": [
+            "gel",
+            "court-circuit à fort courant, hydrogène, brûlure chimique",
+            "rien du tout",
+            "bruit"
+          ],
+          "bonne": 1,
+          "explication": "Outils isolés, lunettes, ventilation."
+        },
+        {
+          "id": "q7415",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "Intervenir sur la chaîne A pendant que B alimente s'appelle…",
+          "reponses": [
+            "une panne",
+            "une maintenance concurrente",
+            "un arrêt total",
+            "une coupure"
+          ],
+          "bonne": 1,
+          "explication": "Possible dès le Tier III."
+        },
+        {
+          "id": "q7416",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "L'extinction incendie en salle serveurs utilise souvent…",
+          "reponses": [
+            "de l'eau",
+            "un gaz inerte ou inhibiteur",
+            "du sable",
+            "des couvertures"
+          ],
+          "bonne": 1,
+          "explication": "L'eau détruirait les équipements."
+        },
+        {
+          "id": "q7417",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "Avant de couper un départ en data center, il faut…",
+          "reponses": [
+            "couper vite",
+            "vérifier que la charge est portée par l'autre chaîne",
+            "attendre la nuit",
+            "ne prévenir personne"
+          ],
+          "bonne": 1,
+          "explication": "Sinon des serveurs s'éteignent."
+        },
+        {
+          "id": "q7418",
+          "fiche_id": "dc_securite",
+          "type": "qcm",
+          "enonce": "Le plancher technique surélevé sert à…",
+          "reponses": [
+            "décorer",
+            "faire passer câbles et air froid",
+            "voir plus loin",
+            "isoler du bruit"
+          ],
+          "bonne": 1,
+          "explication": "Double usage."
+        },
+        {
+          "id": "q7419",
+          "fiche_id": "dc_alimentation",
+          "type": "qcm",
+          "enonce": "Un onduleur en ligne (double conversion)…",
+          "reponses": [
+            "laisse passer le réseau tel quel",
+            "reconstruit en permanence une tension propre",
+            "ne sert qu'en panne",
+            "est une batterie de voiture"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau n'atteint jamais directement les serveurs."
+        },
+        {
+          "id": "q7420",
+          "fiche_id": "dc_alimentation",
+          "type": "ordre",
+          "enonce": "Coupure réseau dans un data center : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Perte du réseau public",
+            "Les onduleurs alimentent sur batteries sans coupure",
+            "Démarrage automatique des groupes électrogènes",
+            "Bascule de l'alimentation sur les groupes",
+            "Retour du réseau, resynchronisation et arrêt des groupes"
+          ],
+          "explication": "Cascade de secours."
+        }
+      ],
+      "ordre": 60
+    },
+    {
+      "id": "maintenance_preventive",
+      "titre": "Maintenance préventive et thermographie",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "maint_types",
+          "titre": "Les types de maintenance",
+          "contenu": "La maintenance corrective intervient après la panne. La maintenance préventive systématique se fait à intervalles fixes (temps, cycles) : resserrage des connexions, nettoyage, test des différentiels. La maintenance conditionnelle, ou prédictive, se déclenche selon l'état mesuré : vibrations, température, isolement.\n\nLa GMAO (gestion de la maintenance assistée par ordinateur) planifie et trace les interventions. Le MTBF mesure le temps moyen entre pannes.\n\nEn électricité, l'ennemi principal est la connexion desserrée : elle chauffe, s'oxyde, chauffe encore plus et finit par brûler.",
+          "image": "maint_types.png"
+        },
+        {
+          "id": "maint_thermo",
+          "titre": "La thermographie infrarouge",
+          "contenu": "Une caméra thermique mesure le rayonnement infrarouge, donc la température de surface. Sur un tableau sous tension et en charge, un point chaud sur une borne signale une connexion desserrée ou oxydée, un contact usé, un déséquilibre.\n\nOn compare les phases entre elles : un écart de quelques degrés se surveille, un écart de 30 à 40 °C ou plus se corrige rapidement. L'émissivité trompe la mesure sur les métaux brillants.\n\nLa thermographie se fait capots ouverts, sous tension : habilitation adaptée et distances respectées. Beaucoup d'assureurs la demandent chaque année (rapport Q19).",
+          "image": "maint_thermo.png"
+        },
+        {
+          "id": "maint_verif",
+          "titre": "Vérifications réglementaires",
+          "contenu": "Dans un établissement recevant des travailleurs ou du public, la vérification des installations électriques est obligatoire, en général annuelle, par un organisme accrédité. Le rapport (Q18) liste les non-conformités à corriger et se conserve dans le registre de sécurité.\n\nEntre deux visites, l'exploitant entretient : test des différentiels, contrôle des BAES (éclairage de sécurité : allumage et autonomie), mesure d'isolement des moteurs au mégohmmètre hors tension, remplacement des pièces usées.\n\nChaque intervention est notée : ce qui n'est pas écrit n'a pas été fait.",
+          "image": "maint_verif.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7601",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "La maintenance corrective intervient…",
+          "reponses": [
+            "avant la panne",
+            "après la panne",
+            "jamais",
+            "chaque semaine"
+          ],
+          "bonne": 1,
+          "explication": "On répare ce qui est cassé."
+        },
+        {
+          "id": "q7602",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "La maintenance préventive systématique se fait…",
+          "reponses": [
+            "quand ça casse",
+            "à intervalles fixes",
+            "selon l'humeur",
+            "seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Temps ou cycles."
+        },
+        {
+          "id": "q7603",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "La maintenance conditionnelle se déclenche…",
+          "reponses": [
+            "à date fixe",
+            "selon l'état mesuré",
+            "après la panne",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Vibrations, température, isolement."
+        },
+        {
+          "id": "q7604",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "La GMAO est…",
+          "reponses": [
+            "un outil de mesure",
+            "un logiciel de gestion de la maintenance",
+            "une norme",
+            "un EPI"
+          ],
+          "bonne": 1,
+          "explication": "Planification et traçabilité."
+        },
+        {
+          "id": "q7605",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "Le MTBF mesure…",
+          "reponses": [
+            "le temps moyen entre pannes",
+            "le prix",
+            "la tension",
+            "la puissance"
+          ],
+          "bonne": 0,
+          "explication": "Indicateur de fiabilité."
+        },
+        {
+          "id": "q7606",
+          "fiche_id": "maint_types",
+          "type": "qcm",
+          "enonce": "Resserrer les connexions d'un tableau relève de…",
+          "reponses": [
+            "la maintenance corrective",
+            "la maintenance préventive",
+            "rien",
+            "la vente"
+          ],
+          "bonne": 1,
+          "explication": "Avant que ça chauffe."
+        },
+        {
+          "id": "q7607",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "Une caméra thermique mesure…",
+          "reponses": [
+            "le courant",
+            "le rayonnement infrarouge, donc la température de surface",
+            "la tension",
+            "l'isolement"
+          ],
+          "bonne": 1,
+          "explication": "Sans contact."
+        },
+        {
+          "id": "q7608",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "Un point chaud sur une borne signale souvent…",
+          "reponses": [
+            "une bonne connexion",
+            "une connexion desserrée ou oxydée",
+            "un câble neuf",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Résistance de contact élevée."
+        },
+        {
+          "id": "q7609",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "La thermographie d'un tableau se fait…",
+          "reponses": [
+            "hors tension",
+            "sous tension et en charge",
+            "à vide",
+            "sans ouvrir les capots"
+          ],
+          "bonne": 1,
+          "explication": "Sans courant, pas d'échauffement."
+        },
+        {
+          "id": "q7610",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "Un écart de 30 à 40 °C entre phases semblables est…",
+          "reponses": [
+            "normal",
+            "critique, intervention rapide",
+            "sans importance",
+            "impossible"
+          ],
+          "bonne": 1,
+          "explication": "Risque d'incendie."
+        },
+        {
+          "id": "q7611",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "L'émissivité influence…",
+          "reponses": [
+            "le courant",
+            "la précision de la mesure de température",
+            "la tension",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Un métal brillant paraît plus froid."
+        },
+        {
+          "id": "q7612",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "La thermographie sous tension exige…",
+          "reponses": [
+            "rien de particulier",
+            "une habilitation adaptée et le respect des distances",
+            "d'être seul",
+            "des gants en laine"
+          ],
+          "bonne": 1,
+          "explication": "Capots ouverts, pièces nues sous tension."
+        },
+        {
+          "id": "q7613",
+          "fiche_id": "maint_thermo",
+          "type": "qcm",
+          "enonce": "Beaucoup d'assureurs demandent une thermographie…",
+          "reponses": [
+            "jamais",
+            "annuelle (rapport Q19)",
+            "quotidienne",
+            "à la vente seulement"
+          ],
+          "bonne": 1,
+          "explication": "Prévention incendie."
+        },
+        {
+          "id": "q7614",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "La vérification périodique d'un établissement est…",
+          "reponses": [
+            "facultative",
+            "obligatoire, généralement annuelle",
+            "tous les 10 ans",
+            "mensuelle"
+          ],
+          "bonne": 1,
+          "explication": "Par un organisme accrédité."
+        },
+        {
+          "id": "q7615",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "Le rapport de vérification Q18 liste…",
+          "reponses": [
+            "les employés",
+            "les non-conformités à corriger",
+            "les prix",
+            "les horaires"
+          ],
+          "bonne": 1,
+          "explication": "À conserver dans le registre de sécurité."
+        },
+        {
+          "id": "q7616",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "Les différentiels doivent être testés…",
+          "reponses": [
+            "jamais",
+            "régulièrement avec le bouton test",
+            "une fois à l'installation",
+            "seulement à la vente"
+          ],
+          "bonne": 1,
+          "explication": "Un différentiel grippé ne protège plus."
+        },
+        {
+          "id": "q7617",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "Le registre de sécurité contient…",
+          "reponses": [
+            "les menus",
+            "les rapports de vérification et les interventions",
+            "les salaires",
+            "les congés"
+          ],
+          "bonne": 1,
+          "explication": "Preuve en cas de contrôle ou d'accident."
+        },
+        {
+          "id": "q7618",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "La mesure d'isolement d'un moteur se fait…",
+          "reponses": [
+            "sous tension",
+            "hors tension au mégohmmètre",
+            "au voltmètre",
+            "au sonomètre"
+          ],
+          "bonne": 1,
+          "explication": "500 ou 1 000 V continu."
+        },
+        {
+          "id": "q7619",
+          "fiche_id": "maint_verif",
+          "type": "qcm",
+          "enonce": "Un BAES se teste…",
+          "reponses": [
+            "jamais",
+            "régulièrement : allumage et autonomie",
+            "une seule fois",
+            "au marteau"
+          ],
+          "bonne": 1,
+          "explication": "Éclairage de sécurité."
+        },
+        {
+          "id": "q7620",
+          "fiche_id": "maint_thermo",
+          "type": "ordre",
+          "enonce": "Campagne de thermographie : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Planifier l'intervention en période de charge",
+            "Ouvrir les capots avec les EPI et distances requises",
+            "Balayer chaque tableau et repérer les points chauds",
+            "Mesurer les écarts et classer les anomalies",
+            "Rédiger le rapport et programmer les corrections"
+          ],
+          "explication": "De la préparation au suivi."
+        }
+      ],
+      "ordre": 61
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 54,
+      "ordre": 62,
       "fiches": [
         {
           "id": "dangers",
@@ -16621,7 +19085,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 55,
+      "ordre": 63,
       "fiches": [
         {
           "id": "principe",
@@ -17229,7 +19693,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 56
+      "ordre": 64
     },
     {
       "id": "epi",
@@ -17536,7 +20000,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 57
+      "ordre": 65
     },
     {
       "id": "b0_bs",
@@ -17844,7 +20308,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 58
+      "ordre": 66
     },
     {
       "id": "br",
@@ -18152,7 +20616,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 59
+      "ordre": 67
     },
     {
       "id": "secours",
@@ -18459,7 +20923,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 60
+      "ordre": 68
     },
     {
       "id": "b1_b2",
@@ -18768,7 +21232,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 61
+      "ordre": 69
     },
     {
       "id": "bc",
@@ -19076,7 +21540,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 62
+      "ordre": 70
     },
     {
       "id": "outillage",
@@ -19384,7 +21848,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 63
+      "ordre": 71
     },
     {
       "id": "normes",
@@ -19692,7 +22156,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 64
+      "ordre": 72
     },
     {
       "id": "atex",
@@ -20000,7 +22464,7 @@
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
         }
       ],
-      "ordre": 65
+      "ordre": 73
     },
     {
       "id": "arc_tst",
@@ -20308,7 +22772,7 @@
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
         }
       ],
-      "ordre": 66
+      "ordre": 74
     },
     {
       "id": "haute_tension",
@@ -20616,7 +23080,7 @@
           "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
         }
       ],
-      "ordre": 67
+      "ordre": 75
     },
     {
       "id": "enfants",
@@ -20924,7 +23388,7 @@
           "explication": "Prises, câbles, lampe, appareils, parole."
         }
       ],
-      "ordre": 68
+      "ordre": 76
     },
     {
       "id": "foudre",
@@ -21232,7 +23696,623 @@
           "explication": "Capter, descendre, écouler, équilibrer, limiter."
         }
       ],
-      "ordre": 69
+      "ordre": 77
+    },
+    {
+      "id": "cem_sante",
+      "titre": "Champs électromagnétiques et santé",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "cem_champs",
+          "titre": "Champs électriques et magnétiques",
+          "contenu": "Un champ électrique existe dès qu'il y a une tension, un champ magnétique dès qu'il y a un courant. À 50 Hz, on parle de champs de basse fréquence. Le champ magnétique se mesure en tesla, en pratique en microteslas (µT).\n\nSous une ligne 400 kV, on mesure quelques µT à quelques dizaines de µT ; à 100 m, presque plus rien. Le champ décroît très vite avec la distance.\n\nUn mur ou le sol atténuent le champ électrique mais presque pas le champ magnétique. Les appareils domestiques (sèche-cheveux, rasoir, plaque à induction) émettent parfois plus qu'une ligne, mais sur quelques centimètres.",
+          "image": "cem_champs.png"
+        },
+        {
+          "id": "cem_sante",
+          "titre": "Effets sur la santé",
+          "contenu": "L'effet avéré des champs 50 Hz forts est la stimulation des nerfs et des muscles. Les limites d'exposition du public (100 µT à 50 Hz en France, valeurs ICNIRP) laissent une grande marge.\n\nLe CIRC classe les champs magnétiques basse fréquence comme « peut-être cancérogènes » (2B) sur la base d'études statistiques, sans mécanisme démontré. L'électro-hypersensibilité est une souffrance réelle, mais aucun lien avec l'exposition n'a été démontré.\n\nLes porteurs de stimulateur cardiaque ou de défibrillateur doivent éviter les champs forts : soudure, induction, électrolyse, grosses machines. Pour les travailleurs, la directive européenne 2013/35/UE impose une évaluation.",
+          "image": "cem_sante.png"
+        },
+        {
+          "id": "cem_mesure",
+          "titre": "Mesurer et réduire",
+          "contenu": "Un gaussmètre ou teslamètre mesure le champ magnétique 50 Hz. On mesure aux postes de travail, dans les chambres proches d'un tableau ou d'un transformateur, sous les lignes.\n\nRéduire : la distance d'abord. Torsader ou rapprocher aller et retour (phase et neutre) annule presque tout le champ. Un blindage réduit surtout le champ électrique et les perturbations haute fréquence, très peu le champ magnétique 50 Hz.\n\nSur un lieu de travail exposé (four à induction, électrolyse, poste HTB), l'employeur évalue, zone, informe et suit les travailleurs sensibles.",
+          "image": "cem_mesure.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7701",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "Un champ électrique existe dès qu'il y a…",
+          "reponses": [
+            "du courant",
+            "une tension",
+            "de la chaleur",
+            "de la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Même sans consommation."
+        },
+        {
+          "id": "q7702",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "Un champ magnétique existe dès qu'il y a…",
+          "reponses": [
+            "une tension",
+            "un courant",
+            "du bruit",
+            "de l'ombre"
+          ],
+          "bonne": 1,
+          "explication": "Proportionnel au courant."
+        },
+        {
+          "id": "q7703",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "L'unité du champ magnétique est…",
+          "reponses": [
+            "le volt",
+            "le tesla",
+            "l'ampère",
+            "le watt"
+          ],
+          "bonne": 1,
+          "explication": "En pratique le microtesla."
+        },
+        {
+          "id": "q7704",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "Sous une ligne 400 kV, le champ magnétique est de l'ordre de…",
+          "reponses": [
+            "1 000 µT",
+            "quelques µT à quelques dizaines",
+            "10 T",
+            "0"
+          ],
+          "bonne": 1,
+          "explication": "Bien sous les limites."
+        },
+        {
+          "id": "q7705",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "Le champ magnétique d'une ligne…",
+          "reponses": [
+            "décroît très vite avec la distance",
+            "ne varie pas",
+            "augmente avec la distance",
+            "dépend de la couleur"
+          ],
+          "bonne": 0,
+          "explication": "Quasi nul à 100 m."
+        },
+        {
+          "id": "q7706",
+          "fiche_id": "cem_champs",
+          "type": "qcm",
+          "enonce": "Un mur en béton…",
+          "reponses": [
+            "arrête le champ magnétique 50 Hz",
+            "atténue le champ électrique mais peu le magnétique",
+            "arrête tout",
+            "amplifie tout"
+          ],
+          "bonne": 1,
+          "explication": "Le magnétique traverse."
+        },
+        {
+          "id": "q7707",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "La limite d'exposition du public à 50 Hz en France est…",
+          "reponses": [
+            "100 µT",
+            "1 µT",
+            "10 T",
+            "0 µT"
+          ],
+          "bonne": 0,
+          "explication": "Valeur ICNIRP reprise en droit français."
+        },
+        {
+          "id": "q7708",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "L'effet avéré des champs 50 Hz forts est…",
+          "reponses": [
+            "la stimulation des nerfs et muscles",
+            "un cancer certain",
+            "rien",
+            "la surdité"
+          ],
+          "bonne": 0,
+          "explication": "D'où les valeurs limites."
+        },
+        {
+          "id": "q7709",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "Les porteurs de stimulateur cardiaque doivent…",
+          "reponses": [
+            "éviter les champs forts",
+            "ne rien craindre",
+            "se coller aux moteurs",
+            "porter un aimant"
+          ],
+          "bonne": 0,
+          "explication": "Soudure, induction, électrolyse."
+        },
+        {
+          "id": "q7710",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "La directive 2013/35/UE concerne…",
+          "reponses": [
+            "le public",
+            "les travailleurs exposés aux champs électromagnétiques",
+            "les animaux",
+            "les bâtiments"
+          ],
+          "bonne": 1,
+          "explication": "Évaluation par l'employeur."
+        },
+        {
+          "id": "q7711",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "Le CIRC classe les champs magnétiques basse fréquence comme…",
+          "reponses": [
+            "cancérogènes avérés",
+            "peut-être cancérogènes (2B)",
+            "sans danger prouvé",
+            "interdits"
+          ],
+          "bonne": 1,
+          "explication": "Même groupe que beaucoup de substances courantes."
+        },
+        {
+          "id": "q7712",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "L'électro-hypersensibilité est…",
+          "reponses": [
+            "prouvée par mesure",
+            "une souffrance réelle sans lien démontré avec l'exposition",
+            "contagieuse",
+            "un mythe interdit"
+          ],
+          "bonne": 1,
+          "explication": "Prise en charge sans explication démontrée."
+        },
+        {
+          "id": "q7713",
+          "fiche_id": "cem_sante",
+          "type": "qcm",
+          "enonce": "Un sèche-cheveux émet…",
+          "reponses": [
+            "rien",
+            "un champ parfois élevé mais sur quelques centimètres",
+            "1 T",
+            "un champ dangereux à 10 m"
+          ],
+          "bonne": 1,
+          "explication": "Décroissance très rapide."
+        },
+        {
+          "id": "q7714",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Un champ magnétique 50 Hz se mesure avec…",
+          "reponses": [
+            "un voltmètre",
+            "un gaussmètre ou teslamètre",
+            "un ohmmètre",
+            "un thermomètre"
+          ],
+          "bonne": 1,
+          "explication": "Appareil dédié."
+        },
+        {
+          "id": "q7715",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Pour réduire le champ magnétique d'un câble, on…",
+          "reponses": [
+            "écarte phase et neutre",
+            "rapproche ou torsade aller et retour",
+            "le peint",
+            "le chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Les champs s'annulent."
+        },
+        {
+          "id": "q7716",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Le moyen le plus simple de réduire l'exposition est…",
+          "reponses": [
+            "la distance",
+            "le bruit",
+            "le chauffage",
+            "l'eau"
+          ],
+          "bonne": 0,
+          "explication": "Le champ chute très vite."
+        },
+        {
+          "id": "q7717",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Une chambre contre un tableau ou un transformateur…",
+          "reponses": [
+            "est idéale",
+            "peut être exposée à un champ plus élevé",
+            "est obligatoire",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "On mesure, on éloigne le lit."
+        },
+        {
+          "id": "q7718",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Le blindage d'un câble réduit surtout…",
+          "reponses": [
+            "le champ magnétique 50 Hz",
+            "le champ électrique et les perturbations HF",
+            "rien",
+            "le courant"
+          ],
+          "bonne": 1,
+          "explication": "Le magnétique 50 Hz traverse."
+        },
+        {
+          "id": "q7719",
+          "fiche_id": "cem_mesure",
+          "type": "qcm",
+          "enonce": "Un lieu de travail exposé doit avoir…",
+          "reponses": [
+            "rien",
+            "une évaluation des risques et un zonage",
+            "des rideaux",
+            "de la musique"
+          ],
+          "bonne": 1,
+          "explication": "Directive 2013/35/UE."
+        },
+        {
+          "id": "q7720",
+          "fiche_id": "cem_mesure",
+          "type": "ordre",
+          "enonce": "Évaluer l'exposition à un poste de travail : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Identifier les sources de champ",
+            "Mesurer aux postes de travail",
+            "Comparer aux valeurs limites",
+            "Réduire par la distance, le blindage ou l'organisation",
+            "Informer et suivre les travailleurs sensibles"
+          ],
+          "explication": "Démarche de prévention classique."
+        }
+      ],
+      "ordre": 78
+    },
+    {
+      "id": "metiers",
+      "titre": "Les métiers de l'électricité",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "metier_formations",
+          "titre": "Se former",
+          "contenu": "Le premier diplôme est le CAP électricien (2 ans). Le Bac pro MELEC (métiers de l'électricité et de ses environnements connectés) se prépare en 3 ans. Le BTS électrotechnique, en 2 ans après le bac, ouvre sur la maintenance, les études et l'encadrement. Les écoles d'ingénieurs forment en 5 ans.\n\nL'apprentissage alterne entreprise et centre de formation : on gagne un salaire et de l'expérience. En reconversion, les titres professionnels (électricien d'équipement du bâtiment, par exemple) se préparent en formation continue en quelques mois.\n\nOn apprend toute sa vie : normes, domotique, photovoltaïque, véhicules électriques.",
+          "image": "metier_formations.png"
+        },
+        {
+          "id": "metier_terrain",
+          "titre": "Les métiers de terrain",
+          "contenu": "L'électricien du bâtiment installe et dépanne dans les logements, les bureaux, les commerces. L'électricien industriel travaille sur les machines, armoires et automates d'usine. Le monteur réseaux construit et entretient les lignes aériennes et souterraines.\n\nLe technicien de maintenance prévient et répare les pannes. L'automaticien programme et met au point les automatismes. Le domoticien intègre les systèmes connectés. Le chargé d'affaires chiffre, organise et suit les chantiers.\n\nTous ont besoin d'une habilitation électrique adaptée à ce qu'ils font réellement.",
+          "image": "metier_terrain.png"
+        },
+        {
+          "id": "metier_parcours",
+          "titre": "Habilitation et parcours",
+          "contenu": "Le diplôme ne vaut pas habilitation : c'est l'employeur qui la délivre, après formation et évaluation, sur un titre d'habilitation signé. Le recyclage est recommandé tous les 3 ans. Un changement de poste ou une longue absence justifient une nouvelle évaluation.\n\nÀ son compte, l'électricien a besoin d'un statut, d'une assurance décennale et gagne à être qualifié (Qualifelec, RGE pour les aides). La qualification atteste des compétences de l'entreprise, pas d'une personne.\n\nParcours possible : exécutant, puis chargé d'intervention ou de travaux, chef d'équipe, chargé d'affaires, formateur.",
+          "image": "metier_parcours.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7801",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "Le premier diplôme d'électricien est…",
+          "reponses": [
+            "le doctorat",
+            "le CAP électricien",
+            "le BTS",
+            "le diplôme d'ingénieur"
+          ],
+          "bonne": 1,
+          "explication": "En 2 ans."
+        },
+        {
+          "id": "q7802",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "Le Bac pro de l'électricité s'appelle…",
+          "reponses": [
+            "MELEC",
+            "MEI",
+            "SN",
+            "GA"
+          ],
+          "bonne": 0,
+          "explication": "Métiers de l'électricité et de ses environnements connectés."
+        },
+        {
+          "id": "q7803",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "Le BTS électrotechnique se prépare en…",
+          "reponses": [
+            "1 an",
+            "2 ans après le bac",
+            "6 mois",
+            "5 ans"
+          ],
+          "bonne": 1,
+          "explication": "Technicien supérieur."
+        },
+        {
+          "id": "q7804",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "L'apprentissage permet…",
+          "reponses": [
+            "d'apprendre seulement à l'école",
+            "d'alterner entreprise et centre de formation",
+            "d'éviter les cours",
+            "de rester chez soi"
+          ],
+          "bonne": 1,
+          "explication": "Salaire et expérience."
+        },
+        {
+          "id": "q7805",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "En reconversion, on peut préparer…",
+          "reponses": [
+            "un titre professionnel en formation continue",
+            "rien",
+            "un CAP seulement au lycée",
+            "un doctorat"
+          ],
+          "bonne": 0,
+          "explication": "Quelques mois, souvent avec stage."
+        },
+        {
+          "id": "q7806",
+          "fiche_id": "metier_formations",
+          "type": "qcm",
+          "enonce": "Un ingénieur électrotechnique étudie…",
+          "reponses": [
+            "5 ans après le bac",
+            "1 an",
+            "3 mois",
+            "10 ans"
+          ],
+          "bonne": 0,
+          "explication": "Écoles d'ingénieurs."
+        },
+        {
+          "id": "q7807",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "L'électricien du bâtiment…",
+          "reponses": [
+            "répare les voitures",
+            "installe et dépanne logements, bureaux, commerces",
+            "conduit des trains",
+            "gère les centrales"
+          ],
+          "bonne": 1,
+          "explication": "Le plus répandu."
+        },
+        {
+          "id": "q7808",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "L'électricien industriel travaille surtout sur…",
+          "reponses": [
+            "les prises de maison",
+            "les machines, armoires et automates",
+            "les toits",
+            "les jardins"
+          ],
+          "bonne": 1,
+          "explication": "Usines."
+        },
+        {
+          "id": "q7809",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "Le monteur réseaux…",
+          "reponses": [
+            "câble les appartements",
+            "travaille sur les lignes aériennes et souterraines",
+            "vend des câbles",
+            "peint des poteaux"
+          ],
+          "bonne": 1,
+          "explication": "Travaux en hauteur, TST parfois."
+        },
+        {
+          "id": "q7810",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "Le technicien de maintenance…",
+          "reponses": [
+            "ne fait que réparer",
+            "prévient et répare les pannes",
+            "dessine seulement",
+            "facture"
+          ],
+          "bonne": 1,
+          "explication": "Préventif et correctif."
+        },
+        {
+          "id": "q7811",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "Le chargé d'affaires…",
+          "reponses": [
+            "tire des câbles",
+            "chiffre, organise et suit les chantiers",
+            "conduit",
+            "peint"
+          ],
+          "bonne": 1,
+          "explication": "Interface avec le client."
+        },
+        {
+          "id": "q7812",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "L'automaticien…",
+          "reponses": [
+            "installe des prises",
+            "programme et met au point les automatismes",
+            "vend des lampes",
+            "cuisine"
+          ],
+          "bonne": 1,
+          "explication": "Automates, supervision."
+        },
+        {
+          "id": "q7813",
+          "fiche_id": "metier_terrain",
+          "type": "qcm",
+          "enonce": "Le domoticien…",
+          "reponses": [
+            "installe et paramètre les systèmes connectés",
+            "coule du béton",
+            "conduit",
+            "peint"
+          ],
+          "bonne": 0,
+          "explication": "Maison connectée, bâtiment intelligent."
+        },
+        {
+          "id": "q7814",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "L'habilitation électrique est délivrée par…",
+          "reponses": [
+            "l'école",
+            "l'employeur, après formation et évaluation",
+            "la mairie",
+            "le fabricant"
+          ],
+          "bonne": 1,
+          "explication": "Sur titre signé."
+        },
+        {
+          "id": "q7815",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "Un diplôme d'électricien…",
+          "reponses": [
+            "vaut habilitation",
+            "ne dispense pas de l'habilitation par l'employeur",
+            "interdit de travailler",
+            "remplace la formation"
+          ],
+          "bonne": 1,
+          "explication": "Deux choses différentes."
+        },
+        {
+          "id": "q7816",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "Le recyclage de l'habilitation est recommandé tous les…",
+          "reponses": [
+            "6 mois",
+            "3 ans",
+            "10 ans",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Ou après un changement de poste."
+        },
+        {
+          "id": "q7817",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "Un électricien à son compte doit avoir…",
+          "reponses": [
+            "rien",
+            "un statut et une assurance décennale",
+            "un badge",
+            "une voiture rouge"
+          ],
+          "bonne": 1,
+          "explication": "Responsabilité pendant 10 ans."
+        },
+        {
+          "id": "q7818",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "La qualification Qualifelec…",
+          "reponses": [
+            "est un diplôme",
+            "atteste des compétences d'une entreprise",
+            "est une norme",
+            "est un EPI"
+          ],
+          "bonne": 1,
+          "explication": "Pas d'une personne."
+        },
+        {
+          "id": "q7819",
+          "fiche_id": "metier_parcours",
+          "type": "qcm",
+          "enonce": "Les habilitations d'un salarié figurent sur…",
+          "reponses": [
+            "son passeport",
+            "son titre d'habilitation signé par l'employeur",
+            "sa carte bancaire",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "À présenter sur demande."
+        },
+        {
+          "id": "q7820",
+          "fiche_id": "metier_parcours",
+          "type": "ordre",
+          "enonce": "Devenir électricien salarié : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Obtenir un diplôme ou un titre professionnel",
+            "Être embauché",
+            "Suivre la formation à l'habilitation électrique",
+            "Être évalué et recevoir son titre d'habilitation",
+            "Se recycler tous les 3 ans"
+          ],
+          "explication": "Le diplôme d'abord, l'habilitation ensuite."
+        }
+      ],
+      "ordre": 79
     }
   ]
 }

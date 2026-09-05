@@ -1,10 +1,4 @@
-"""Génère les schémas des fiches (assets/images/*.png).
-
-Étape 1 : `python3 tools/schemas/generer_schemas.py` écrit les SVG dans ce dossier.
-Étape 2 : chaque SVG est rendu en PNG 1200×750 (Chromium headless ou n'importe quel
-outil SVG → PNG), puis copié dans assets/images/.
-Les SVG sont la source : pour retoucher un schéma, modifier ce script, pas le PNG.
-"""
+# Génère les schémas des fiches en SVG (rendus ensuite en PNG par Chromium).
 import os
 W, H = 1200, 750
 OUT = os.path.dirname(os.path.abspath(__file__))
@@ -681,4 +675,42 @@ RESUMES_L = [
  ("machines_agricoles", "Machines et sécurité", "300A", [("12 V, démarreur 300 A", "court-circuit = incendie"), ("Coupe-batterie", "obligatoire"), ("Lignes aériennes", "bennes, tuyaux, moissonneuses"), ("Poussières de grain", "thermographie des armoires")], ROUGE),
 ]
 for nom, titre_s, ini, points, col in RESUMES_L:
+    carte_resume(nom, titre_s, ini, points, col)
+RESUMES_M = [
+ ("locaux_medicaux", "Locaux médicaux", "IT", [("Groupes 0, 1, 2", "bloc et réa : groupe 2"), ("IT médical", "transfo par salle, alerte sans couper"), ("Micro-choc", "microampères au cœur"), ("Jamais d'interruption", "en cours d'intervention")], ROUGE),
+ ("secours_hopital", "Secours hospitalier", "0s", [("Deux arrivées, groupes < 15 s", "onduleurs sans coupure"), ("Délais de reprise", "0 s, 0,5 s, 15 s, plus"), ("Blocs et réa", "onduleur"), ("Essais mensuels", "en charge réelle")], BLEU),
+ ("appareils_medicaux", "Appareils médicaux", "CF", [("IEC 60601", "parties B, BF, CF"), ("Barre d'équipotentialité", "plot de terre supplémentaire"), ("Biomédical", "fuite, terre, traçabilité"), ("Coordination", "avec les soignants")], VERT),
+ ("avion", "L'électricité à bord", "400Hz", [("115 V 400 Hz, 28 V DC", "générateurs sur réacteurs"), ("Batterie, RAT", "secours"), ("Avion plus électrique", "dégivrage, pressurisation"), ("Foudre : 1 par an", "structure conductrice")], BLEU),
+ ("spatial", "Satellites et fusées", "28V", [("Panneaux + batteries", "éclipses"), ("Tout redondant", "pas de réparation"), ("Propulsion ionique", "faible poussée, longue durée"), ("Vide, radiations, cycles", "composants durcis")], AMBRE),
+ ("normes_aero", "Fiabilité aéro", "×2", [("Fonctions critiques doublées", "ségrégation des câbles"), ("Câbles légers, repérés", "aluminium"), ("Traçabilité totale", "Part-66"), ("Couper, condamner, vérifier", "comme au sol")], VERT),
+ ("ondes", "Les ondes radio", "λ", [("λ = 300 / f (MHz)", "3 m à 100 MHz"), ("FM, TNT, 4G/5G, Wi-Fi, satellite", "100 MHz à 30 GHz"), ("mW à kW", "pertes avec fréquence et longueur"), ("Antenne", "courant HF ↔ onde")], BLEU),
+ ("sites_telecom", "Les sites télécoms", "48V", [("48 V continu, batteries", "plusieurs heures"), ("Rayonnement", "périmètres, extinction"), ("Hauteur, foudre", "parafoudres, terre"), ("Télésurveillance", "température, batteries, intrusion")], AMBRE),
+ ("fibre_reseaux", "Fibre et réseaux", "FTTH", [("Fibre jusqu'à l'abonné", "cuivre en fermeture"), ("ONT en 230 V", "pas de téléphone sans courant"), ("Onduleur pour téléassistance", "personnes dépendantes"), ("Baies : onduleur, clim", "RJ45 et fibre")], VERT),
+ ("chauffage_induction", "Chauffage par induction", "kHz", [("Bobine HF", "courants de Foucault dans la pièce"), ("Trempe, fusion, brasage", "rapide, propre"), ("Générateur à découpage", "bobine refroidie par eau"), ("Champs intenses", "implants, métal")], AMBRE),
+ ("fours_resistances", "Fours à résistances et à arc", "°C", [("Effet Joule, 1 200 °C", "régulation PID, thyristors"), ("Four à arc", "ferraille → acier, dizaines de MW"), ("Flicker", "perturbations réseau"), ("Surveillance température", "sécurité de porte")], ROUGE),
+ ("securite_thermique", "Sécurité thermique", "!", [("Brûlures, projections", "EPI ignifugés"), ("Eau + tension", "fuites, condensateurs chargés"), ("Champs magnétiques", "stimulateurs, bijoux"), ("Fumées, incendie", "temps de refroidissement")], ROUGE),
+ ("electrolyse_metaux", "L'électrolyse", "e⁻", [("Continu, cathode = dépôt", "anode : dissolution ou gaz"), ("Chromage, nickelage, zingage", "épaisseur ∝ courant × temps"), ("Aluminium : 13 000 kWh/t", "chlore, soude, cuivre"), ("Loi de Faraday", "quantité ∝ charge")], BLEU),
+ ("corrosion", "Corrosion galvanique", "Zn", [("Deux métaux + humidité = pile", "le moins noble se corrode"), ("Anode sacrificielle", "zinc, magnésium"), ("Courant imposé", "canalisations, ouvrages"), ("Cuivre-aluminium", "jamais dans la même borne")], VERT),
+ ("securite_bains", "Ateliers de traitement", "kA", [("Acides, cyanures, hydrogène", "ventilation, douches"), ("Quelques volts, milliers d'ampères", "barres nues"), ("Outil en court-circuit", "fond instantanément"), ("Humide et corrosif", "IP élevé, équipotentialité")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_M:
+    carte_resume(nom, titre_s, ini, points, col)
+RESUMES_N = [
+ ("dc_alimentation", "Alimenter un data center", "A/B", [("Deux arrivées, onduleurs, groupes", "jamais de coupure"), ("Chaînes A et B", "chaque serveur sur les deux"), ("Tier I à IV", "Tier III : maintenance sans arrêt"), ("PUE 1,2", "20 % pour le froid et les pertes")], BLEU),
+ ("dc_refroidissement", "Refroidir les serveurs", "27°C", [("Tout finit en chaleur", "à évacuer en permanence"), ("Allées froides et chaudes", "plancher technique"), ("Free cooling", "air extérieur quand il est frais"), ("Liquide direct, réseau de chaleur", "baies denses, chaleur valorisée")], VERT),
+ ("dc_securite", "Intervenir en salle", "EPO", [("Maintenance concurrente", "vérifier l'autre chaîne avant de couper"), ("Bouton EPO", "coupe tout, onduleurs compris"), ("Batteries", "fort courant, hydrogène, acide"), ("Gaz d'extinction", "sortir dès l'alarme")], ROUGE),
+ ("htb_niveaux", "Monter en tension", "kV", [("HTA 1 à 50 kV", "HTB au-delà de 50 kV"), ("RTE : 63, 90, 225, 400 kV", "Enedis : 20 kV"), ("Tension × 2", "pertes Joule ÷ 4"), ("Poste source", "HTB vers HTA")], BLEU),
+ ("htb_poste", "Dans un poste HTB", "SF6", [("Transformateurs", "centaines de tonnes"), ("Jeux de barres", "conducteurs nus"), ("Disjoncteur coupe", "sectionneur isole"), ("TC et TT", "protections, comptage")], VERT),
+ ("htb_risques", "Risques en HTB", "H", [("Amorçage à distance", "distances en mètres"), ("Induction", "terre et court-circuit"), ("Consignation", "séparer, condamner, identifier, VAT, MALT"), ("Effet couronne", "poste clôturé")], ROUGE),
+ ("maint_types", "Types de maintenance", "GMAO", [("Corrective", "après la panne"), ("Préventive systématique", "à intervalles fixes"), ("Conditionnelle", "selon l'état mesuré"), ("MTBF", "temps moyen entre pannes")], BLEU),
+ ("maint_thermo", "Thermographie", "IR", [("Rayonnement infrarouge", "température de surface"), ("Point chaud", "connexion desserrée"), ("Sous tension, en charge", "habilitation, distances"), ("Écart > 30 °C", "intervention rapide")], AMBRE),
+ ("maint_verif", "Vérifications", "Q18", [("Vérification annuelle", "organisme accrédité"), ("Rapport Q18", "non-conformités"), ("Différentiels, BAES", "tests réguliers"), ("Registre de sécurité", "tout est écrit")], VERT),
+ ("cem_champs", "Champs 50 Hz", "µT", [("Tension → champ électrique", "courant → champ magnétique"), ("Tesla, microtesla", "quelques µT sous une ligne"), ("Décroît très vite", "presque rien à 100 m"), ("Mur : électrique atténué", "magnétique traverse")], BLEU),
+ ("cem_sante", "Effets sur la santé", "100", [("Stimulation nerfs et muscles", "effet avéré"), ("100 µT public", "grande marge"), ("CIRC 2B", "peut-être cancérogène"), ("Stimulateur cardiaque", "éviter les champs forts")], AMBRE),
+ ("cem_mesure", "Mesurer et réduire", "d", [("Gaussmètre", "postes, chambres, lignes"), ("Distance d'abord", "chute très rapide"), ("Torsader aller et retour", "les champs s'annulent"), ("Blindage", "électrique et HF, pas 50 Hz")], VERT),
+ ("metier_formations", "Se former", "CAP", [("CAP, Bac pro MELEC", "2 et 3 ans"), ("BTS électrotechnique", "2 ans après le bac"), ("Apprentissage", "salaire et expérience"), ("Titres professionnels", "reconversion en quelques mois")], BLEU),
+ ("metier_terrain", "Les métiers", "⚡", [("Bâtiment, industriel", "logements, machines"), ("Monteur réseaux", "lignes aériennes et souterraines"), ("Maintenance, automaticien", "pannes, automates"), ("Chargé d'affaires", "chiffre et suit")], VERT),
+ ("metier_parcours", "Habilitation et parcours", "3ans", [("Délivrée par l'employeur", "pas par le diplôme"), ("Recyclage 3 ans", "changement de poste"), ("À son compte", "statut, décennale, Qualifelec"), ("Exécutant → chargé → chef", "formateur")], AMBRE),
+]
+for nom, titre_s, ini, points, col in RESUMES_N:
     carte_resume(nom, titre_s, ini, points, col)

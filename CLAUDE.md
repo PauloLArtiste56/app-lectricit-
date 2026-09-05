@@ -170,11 +170,20 @@ Modules existants (par thème) :
 67. Foudre et paratonnerre
 68. Électricité ferroviaire
 69. Électricité en agriculture
+70. Électricité médicale et hôpitaux
+71. Électricité en aéronautique et spatial
+72. Télécoms, antennes et radio
+73. Induction, fours et procédés thermiques
+74. Électrochimie et galvanoplastie
+75. Data centers et informatique
+76. Postes HTB et transport de l'énergie
+77. Maintenance préventive et thermographie
+78. Champs électromagnétiques et santé
+79. Les métiers de l'électricité
 
-Sujets à venir : électricité médicale et hôpitaux, aéronautique et spatial, télécoms et
-antennes, chauffage par induction et fours industriels, électrochimie et galvanoplastie,
-data centers, ascension de la tension (postes HTB), maintenance préventive, lecture de
-factures pro, électricité et santé (champs électromagnétiques)…
+Sujets à venir : lecture de factures pro, ascenseurs et portes automatiques, froid et
+climatisation, pompes à chaleur, bornes de recharge en copropriété, éclairage public,
+sécurité incendie (SSI), courants faibles et VDI, marine et offshore, hydrogène…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
