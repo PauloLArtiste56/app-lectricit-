@@ -17,10 +17,12 @@ void main() {
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
 
-  test('le premier module a 10 questions de type qcm', () {
-    final grandeurs = modules.first;
-    expect(grandeurs.nombreQuestions, 10);
-    expect(grandeurs.questions.every((q) => q.type == TypeQuestion.qcm), isTrue);
+  test('chaque module a des fiches et 10 questions de type qcm', () {
+    for (final module in modules) {
+      expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
+      expect(module.nombreQuestions, 10, reason: '${module.id}');
+      expect(module.questions.every((q) => q.type == TypeQuestion.qcm), isTrue);
+    }
   });
 
   test('chaque question est cohérente', () {

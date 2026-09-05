@@ -27,7 +27,12 @@
           "fiche_id": "grandeurs",
           "type": "qcm",
           "enonce": "Dans quelle unité s'exprime la tension électrique ?",
-          "reponses": ["L'ampère (A)", "Le volt (V)", "L'ohm (Ω)", "Le watt (W)"],
+          "reponses": [
+            "L'ampère (A)",
+            "Le volt (V)",
+            "L'ohm (Ω)",
+            "Le watt (W)"
+          ],
           "bonne": 1,
           "explication": "La tension U se mesure en volts (V). L'ampère mesure l'intensité, l'ohm la résistance et le watt la puissance."
         },
@@ -36,7 +41,12 @@
           "fiche_id": "grandeurs",
           "type": "qcm",
           "enonce": "Quelle grandeur se mesure en ampères ?",
-          "reponses": ["La tension", "La résistance", "L'intensité du courant", "La puissance"],
+          "reponses": [
+            "La tension",
+            "La résistance",
+            "L'intensité du courant",
+            "La puissance"
+          ],
           "bonne": 2,
           "explication": "L'ampère (A) est l'unité de l'intensité I, c'est-à-dire du débit de courant."
         },
@@ -45,7 +55,12 @@
           "fiche_id": "grandeurs",
           "type": "qcm",
           "enonce": "Quel symbole désigne la résistance ?",
-          "reponses": ["U", "I", "R", "P"],
+          "reponses": [
+            "U",
+            "I",
+            "R",
+            "P"
+          ],
           "bonne": 2,
           "explication": "R est la résistance (en ohms). U est la tension, I l'intensité et P la puissance."
         },
@@ -54,7 +69,12 @@
           "fiche_id": "ohm",
           "type": "qcm",
           "enonce": "Une résistance de 10 Ω est traversée par un courant de 2 A. Quelle est la tension à ses bornes ?",
-          "reponses": ["5 V", "20 V", "0,2 V", "12 V"],
+          "reponses": [
+            "5 V",
+            "20 V",
+            "0,2 V",
+            "12 V"
+          ],
           "bonne": 1,
           "explication": "U = R × I = 10 × 2 = 20 V"
         },
@@ -63,7 +83,12 @@
           "fiche_id": "ohm",
           "type": "qcm",
           "enonce": "Une tension de 12 V est appliquée à une résistance de 4 Ω. Quelle intensité circule ?",
-          "reponses": ["3 A", "48 A", "0,33 A", "8 A"],
+          "reponses": [
+            "3 A",
+            "48 A",
+            "0,33 A",
+            "8 A"
+          ],
           "bonne": 0,
           "explication": "I = U / R = 12 / 4 = 3 A"
         },
@@ -72,7 +97,12 @@
           "fiche_id": "ohm",
           "type": "qcm",
           "enonce": "Une lampe alimentée en 230 V est traversée par 0,5 A. Quelle est sa résistance ?",
-          "reponses": ["115 Ω", "460 Ω", "230,5 Ω", "0,002 Ω"],
+          "reponses": [
+            "115 Ω",
+            "460 Ω",
+            "230,5 Ω",
+            "0,002 Ω"
+          ],
           "bonne": 1,
           "explication": "R = U / I = 230 / 0,5 = 460 Ω"
         },
@@ -81,7 +111,12 @@
           "fiche_id": "ohm",
           "type": "qcm",
           "enonce": "À tension constante, si la résistance double, l'intensité…",
-          "reponses": ["double", "reste identique", "est divisée par deux", "devient nulle"],
+          "reponses": [
+            "double",
+            "reste identique",
+            "est divisée par deux",
+            "devient nulle"
+          ],
           "bonne": 2,
           "explication": "I = U / R : si R double, I est divisée par deux."
         },
@@ -90,7 +125,12 @@
           "fiche_id": "puissance",
           "type": "qcm",
           "enonce": "Quelle formule donne la puissance électrique ?",
-          "reponses": ["P = U × I", "P = U / I", "P = R × I", "P = U + I"],
+          "reponses": [
+            "P = U × I",
+            "P = U / I",
+            "P = R × I",
+            "P = U + I"
+          ],
           "bonne": 0,
           "explication": "La puissance est le produit de la tension par l'intensité : P = U × I."
         },
@@ -99,7 +139,12 @@
           "fiche_id": "puissance",
           "type": "qcm",
           "enonce": "Un radiateur en 230 V consomme 10 A. Quelle est sa puissance ?",
-          "reponses": ["23 W", "230 W", "2 300 W", "23 000 W"],
+          "reponses": [
+            "23 W",
+            "230 W",
+            "2 300 W",
+            "23 000 W"
+          ],
           "bonne": 2,
           "explication": "P = U × I = 230 × 10 = 2 300 W, soit 2,3 kW."
         },
@@ -108,7 +153,12 @@
           "fiche_id": "puissance",
           "type": "qcm",
           "enonce": "Un appareil de 1 150 W est branché en 230 V. Quelle intensité appelle-t-il ?",
-          "reponses": ["0,2 A", "5 A", "50 A", "264 500 A"],
+          "reponses": [
+            "0,2 A",
+            "5 A",
+            "50 A",
+            "264 500 A"
+          ],
           "bonne": 1,
           "explication": "I = P / U = 1 150 / 230 = 5 A"
         }
@@ -118,29 +168,657 @@
       "id": "courant",
       "titre": "Courant continu / alternatif",
       "ordre": 2,
-      "fiches": [],
-      "questions": []
+      "fiches": [
+        {
+          "id": "continu",
+          "titre": "Le courant continu (DC)",
+          "contenu": "En courant continu, le courant circule toujours dans le même sens et la tension reste constante.\n\nSources de courant continu : piles, batteries, panneaux photovoltaïques, chargeurs USB (5 V), batterie de voiture (12 V).\n\nOn le note DC (Direct Current) ou avec le symbole ⎓. Une source continue a une borne + et une borne −."
+        },
+        {
+          "id": "alternatif",
+          "titre": "Le courant alternatif (AC)",
+          "contenu": "En courant alternatif, le courant change de sens régulièrement : il fait des allers-retours. La tension dessine une sinusoïde.\n\nLe réseau électrique en France (et en Europe) fournit du 230 V à 50 Hz. La fréquence, en hertz (Hz), est le nombre de cycles par seconde : à 50 Hz, un cycle dure 1/50 s, soit 20 ms.\n\nOn le note AC (Alternating Current) ou avec le symbole ~. Une prise domestique a une phase (L) et un neutre (N).\n\nPourquoi l'alternatif pour le réseau ? Parce qu'on peut facilement changer sa tension avec un transformateur : on transporte l'énergie à très haute tension (moins de pertes), puis on redescend à 230 V près des habitations."
+        },
+        {
+          "id": "conversion",
+          "titre": "Passer de l'un à l'autre",
+          "contenu": "Redresseur : transforme l'alternatif en continu. Il y en a un dans chaque chargeur de téléphone et dans chaque alimentation d'ordinateur.\n\nOnduleur : transforme le continu en alternatif. C'est lui qui permet d'injecter la production de panneaux solaires sur le réseau, ou d'alimenter une maison sur batterie.\n\nTriphasé : le réseau est en réalité composé de trois phases décalées dans le temps. Entre une phase et le neutre, on mesure 230 V ; entre deux phases, 400 V. Le triphasé sert aux moteurs et aux fortes puissances."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q101",
+          "fiche_id": "continu",
+          "type": "qcm",
+          "enonce": "Quelle source fournit du courant continu ?",
+          "reponses": [
+            "Une prise murale",
+            "Une pile",
+            "Un alternateur de centrale",
+            "Un transformateur"
+          ],
+          "bonne": 1,
+          "explication": "Une pile a une borne + et une borne − : le courant circule toujours dans le même sens. La prise, l'alternateur et le transformateur fonctionnent en alternatif."
+        },
+        {
+          "id": "q102",
+          "fiche_id": "continu",
+          "type": "qcm",
+          "enonce": "Que signifie le sigle DC ?",
+          "reponses": [
+            "Double Courant",
+            "Direct Current, le courant continu",
+            "Distribution Centrale",
+            "Décharge Continue"
+          ],
+          "bonne": 1,
+          "explication": "DC = Direct Current, courant continu. AC = Alternating Current, courant alternatif."
+        },
+        {
+          "id": "q103",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Quelle est la fréquence du réseau électrique en France ?",
+          "reponses": [
+            "50 Hz",
+            "60 Hz",
+            "230 Hz",
+            "1 000 Hz"
+          ],
+          "bonne": 0,
+          "explication": "Le réseau européen est à 50 Hz, soit 50 cycles par seconde. Les États-Unis sont à 60 Hz."
+        },
+        {
+          "id": "q104",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Quelle est la tension entre phase et neutre d'une prise domestique en France ?",
+          "reponses": [
+            "12 V",
+            "110 V",
+            "230 V",
+            "400 V"
+          ],
+          "bonne": 2,
+          "explication": "Une prise domestique fournit 230 V entre la phase et le neutre. 400 V est la tension entre deux phases en triphasé."
+        },
+        {
+          "id": "q105",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "À 50 Hz, combien dure une période, c'est-à-dire un cycle complet ?",
+          "reponses": [
+            "50 ms",
+            "20 ms",
+            "2 ms",
+            "1 s"
+          ],
+          "bonne": 1,
+          "explication": "La période est l'inverse de la fréquence : T = 1 / f = 1 / 50 = 0,02 s = 20 ms."
+        },
+        {
+          "id": "q106",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Quel symbole indique un courant alternatif sur un appareil ?",
+          "reponses": [
+            "Le signe ~",
+            "Le signe ⎓ (deux traits)",
+            "Le signe +",
+            "La lettre Ω"
+          ],
+          "bonne": 0,
+          "explication": "Le signe ~ (une petite vague) désigne l'alternatif. Le signe ⎓ désigne le continu."
+        },
+        {
+          "id": "q107",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Pourquoi le réseau public distribue-t-il de l'alternatif plutôt que du continu ?",
+          "reponses": [
+            "Parce qu'il est moins dangereux",
+            "Parce qu'on peut facilement changer sa tension avec un transformateur",
+            "Parce que les piles coûtent trop cher",
+            "Parce que le continu ne peut pas alimenter une lampe"
+          ],
+          "bonne": 1,
+          "explication": "Un transformateur ne fonctionne qu'en alternatif. Il permet de transporter l'énergie à très haute tension avec peu de pertes, puis de redescendre à 230 V."
+        },
+        {
+          "id": "q108",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "Quel appareil transforme le courant alternatif en courant continu ?",
+          "reponses": [
+            "Un onduleur",
+            "Un alternateur",
+            "Un redresseur",
+            "Un disjoncteur"
+          ],
+          "bonne": 2,
+          "explication": "Le redresseur transforme l'alternatif en continu. Il y en a un dans chaque chargeur de téléphone."
+        },
+        {
+          "id": "q109",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "Un onduleur sert à…",
+          "reponses": [
+            "transformer du continu en alternatif",
+            "augmenter la fréquence du réseau",
+            "protéger contre les surcharges",
+            "mesurer la tension"
+          ],
+          "bonne": 0,
+          "explication": "L'onduleur fait l'inverse du redresseur : il transforme le continu (batterie, panneaux solaires) en alternatif utilisable sur le réseau."
+        },
+        {
+          "id": "q110",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "En triphasé, quelle est la tension entre deux phases ?",
+          "reponses": [
+            "230 V",
+            "110 V",
+            "400 V",
+            "690 V"
+          ],
+          "bonne": 2,
+          "explication": "Entre une phase et le neutre : 230 V. Entre deux phases : 400 V."
+        }
+      ]
     },
     {
       "id": "circuits",
       "titre": "Circuits série / parallèle",
       "ordre": 3,
-      "fiches": [],
-      "questions": []
+      "fiches": [
+        {
+          "id": "serie",
+          "titre": "Le montage en série",
+          "contenu": "En série, les récepteurs sont placés à la suite les uns des autres : le courant n'a qu'un seul chemin.\n\n• La même intensité traverse tous les éléments.\n• Les tensions se répartissent : U = U1 + U2 + …\n• Les résistances s'ajoutent : R = R1 + R2 + …\n\nSi un seul élément est coupé (une lampe grillée, par exemple), plus rien ne passe : tout s'éteint. C'était le défaut des anciennes guirlandes de Noël."
+        },
+        {
+          "id": "parallele",
+          "titre": "Le montage en parallèle (dérivation)",
+          "contenu": "En parallèle, chaque récepteur est sur sa propre branche, directement entre les deux bornes de la source.\n\n• Tous les éléments reçoivent la même tension.\n• Les intensités s'ajoutent : I = I1 + I2 + …\n• La résistance équivalente est plus petite que la plus petite des résistances : 1/R = 1/R1 + 1/R2 + …  Deux résistances identiques en parallèle donnent R/2.\n\nSi un élément tombe en panne, les autres continuent de fonctionner. C'est le montage de toutes les installations domestiques : chaque prise et chaque lampe reçoit 230 V indépendamment des autres."
+        },
+        {
+          "id": "application",
+          "titre": "Ce qu'il faut retenir",
+          "contenu": "Dans une maison, tout est en parallèle. Plus on branche d'appareils sur le même circuit, plus le courant total augmente. C'est pour cela que chaque circuit est protégé par un disjoncteur calibré (10 A, 16 A, 20 A…).\n\nUn interrupteur, lui, est toujours en série avec ce qu'il commande : il ouvre le seul chemin du courant.\n\nRécapitulatif :\nSérie → même I, les U s'ajoutent, les R s'ajoutent.\nParallèle → même U, les I s'ajoutent, 1/R = 1/R1 + 1/R2."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q201",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Dans un montage en série, quelle grandeur est la même dans tous les éléments ?",
+          "reponses": [
+            "La tension",
+            "L'intensité",
+            "La puissance",
+            "La résistance"
+          ],
+          "bonne": 1,
+          "explication": "Il n'y a qu'un seul chemin : le même courant traverse tous les éléments. Ce sont les tensions qui se répartissent."
+        },
+        {
+          "id": "q202",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Deux résistances de 10 Ω et 20 Ω sont montées en série. Résistance totale ?",
+          "reponses": [
+            "6,7 Ω",
+            "10 Ω",
+            "30 Ω",
+            "200 Ω"
+          ],
+          "bonne": 2,
+          "explication": "En série, les résistances s'ajoutent : 10 + 20 = 30 Ω."
+        },
+        {
+          "id": "q203",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Dans une guirlande de lampes en série, une lampe grille. Que se passe-t-il ?",
+          "reponses": [
+            "Les autres brillent plus fort",
+            "Rien ne change",
+            "Toutes les lampes s'éteignent",
+            "Seule la lampe voisine s'éteint"
+          ],
+          "bonne": 2,
+          "explication": "Le circuit est ouvert à l'endroit de la lampe grillée : plus aucun courant ne circule, tout s'éteint."
+        },
+        {
+          "id": "q204",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Trois lampes identiques sont en série sous 12 V. Tension aux bornes de chaque lampe ?",
+          "reponses": [
+            "12 V",
+            "36 V",
+            "4 V",
+            "3 V"
+          ],
+          "bonne": 2,
+          "explication": "En série, la tension se partage entre les éléments : 12 / 3 = 4 V par lampe."
+        },
+        {
+          "id": "q205",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Dans un montage en parallèle, quelle grandeur est la même pour toutes les branches ?",
+          "reponses": [
+            "La tension",
+            "L'intensité",
+            "La résistance totale",
+            "La fréquence"
+          ],
+          "bonne": 0,
+          "explication": "Chaque branche est directement reliée aux deux bornes de la source : toutes reçoivent la même tension."
+        },
+        {
+          "id": "q206",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Deux résistances de 20 Ω sont montées en parallèle. Résistance équivalente ?",
+          "reponses": [
+            "40 Ω",
+            "20 Ω",
+            "10 Ω",
+            "0 Ω"
+          ],
+          "bonne": 2,
+          "explication": "Deux résistances identiques en parallèle donnent la moitié : 20 / 2 = 10 Ω. En parallèle, la résistance équivalente est toujours plus petite que la plus petite."
+        },
+        {
+          "id": "q207",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Deux branches en parallèle : 2 A dans l'une, 3 A dans l'autre. Quel courant fournit la source ?",
+          "reponses": [
+            "1 A",
+            "2,5 A",
+            "5 A",
+            "6 A"
+          ],
+          "bonne": 2,
+          "explication": "En parallèle, les intensités s'ajoutent : 2 + 3 = 5 A."
+        },
+        {
+          "id": "q208",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Comment sont branchées les prises d'une maison ?",
+          "reponses": [
+            "En série",
+            "En parallèle",
+            "En triangle",
+            "En étoile"
+          ],
+          "bonne": 1,
+          "explication": "Chaque prise reçoit 230 V et fonctionne indépendamment des autres : c'est un montage en parallèle."
+        },
+        {
+          "id": "q209",
+          "fiche_id": "application",
+          "type": "qcm",
+          "enonce": "Plus on branche d'appareils en parallèle sur un même circuit…",
+          "reponses": [
+            "moins il y a de courant",
+            "plus la tension augmente",
+            "plus le courant total augmente",
+            "rien ne change"
+          ],
+          "bonne": 2,
+          "explication": "Les intensités s'ajoutent. C'est pour cela que chaque circuit est protégé par un disjoncteur calibré."
+        },
+        {
+          "id": "q210",
+          "fiche_id": "application",
+          "type": "qcm",
+          "enonce": "Comment un interrupteur est-il monté par rapport à la lampe qu'il commande ?",
+          "reponses": [
+            "En série",
+            "En parallèle",
+            "En dérivation",
+            "Sans lien avec la lampe"
+          ],
+          "bonne": 0,
+          "explication": "L'interrupteur est en série : en s'ouvrant, il coupe le seul chemin du courant vers la lampe."
+        }
+      ]
     },
     {
       "id": "symboles",
       "titre": "Symboles et schémas",
       "ordre": 4,
-      "fiches": [],
-      "questions": []
+      "fiches": [
+        {
+          "id": "symboles",
+          "titre": "Les symboles de base",
+          "contenu": "Un schéma électrique utilise des symboles normalisés (norme européenne IEC) :\n\n• Résistance : un rectangle.\n• Lampe : un cercle barré d'une croix.\n• Interrupteur : un trait qui s'écarte du circuit, comme une porte qui s'ouvre.\n• Pile ou générateur continu : deux traits parallèles, le long est la borne +, le court la borne −.\n• Fusible : un rectangle traversé par un trait.\n• Terre : un trait vertical terminé par trois barres horizontales de plus en plus courtes.\n• Voltmètre : un cercle avec un V. Ampèremètre : un cercle avec un A."
+        },
+        {
+          "id": "couleurs",
+          "titre": "Le code couleur des conducteurs",
+          "contenu": "Les couleurs des fils sont imposées, pour que tout le monde s'y retrouve :\n\n• Terre (PE) : vert et jaune. Cette couleur est réservée à la terre, on ne l'utilise jamais pour autre chose.\n• Neutre (N) : bleu clair.\n• Phase (L) : n'importe quelle autre couleur, en pratique rouge, marron ou noir.\n\nAttention aux anciennes installations : les couleurs n'étaient pas toujours respectées. On vérifie toujours avec un appareil de mesure."
+        },
+        {
+          "id": "schemas",
+          "titre": "Lire un schéma",
+          "contenu": "Il existe plusieurs types de schémas :\n\n• Schéma de principe : montre le fonctionnement, sans se soucier de la position réelle des éléments.\n• Schéma unifilaire : un seul trait par liaison, avec des petites barres obliques indiquant le nombre de conducteurs. Utilisé pour les plans d'installation.\n• Schéma multifilaire : tous les fils sont dessinés. Utilisé pour le câblage.\n\nRepères : L = phase, N = neutre, PE = terre (Protective Earth).\n\nMesures : un voltmètre se branche en parallèle (sur les deux bornes de l'élément), un ampèremètre en série (dans le circuit).\n\nMontages courants : simple allumage (1 interrupteur, 1 lampe), va-et-vient (2 interrupteurs pour une même lampe, par exemple en haut et en bas d'un escalier)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q301",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Sur un schéma, une lampe est représentée par…",
+          "reponses": [
+            "un rectangle",
+            "un cercle barré d'une croix",
+            "un triangle",
+            "deux traits parallèles"
+          ],
+          "bonne": 1,
+          "explication": "La lampe est un cercle avec une croix. Le rectangle est une résistance, les deux traits une pile."
+        },
+        {
+          "id": "q302",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Quel est le symbole normalisé (IEC) d'une résistance ?",
+          "reponses": [
+            "Un cercle",
+            "Un rectangle",
+            "Un triangle",
+            "Une étoile"
+          ],
+          "bonne": 1,
+          "explication": "En norme européenne, la résistance est un rectangle. Le zigzag est l'ancienne notation américaine."
+        },
+        {
+          "id": "q303",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Sur le symbole d'une pile, le trait le plus long représente…",
+          "reponses": [
+            "la borne +",
+            "la borne −",
+            "la terre",
+            "la résistance interne"
+          ],
+          "bonne": 0,
+          "explication": "Le trait long est la borne + (positive), le trait court la borne −."
+        },
+        {
+          "id": "q304",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Quel symbole représente la mise à la terre ?",
+          "reponses": [
+            "Un cercle avec un V",
+            "Un trait vertical terminé par trois barres horizontales de plus en plus courtes",
+            "Un rectangle barré",
+            "Une flèche vers le haut"
+          ],
+          "bonne": 1,
+          "explication": "La terre est représentée par un trait vertical et trois barres horizontales décroissantes. Le cercle avec un V est un voltmètre."
+        },
+        {
+          "id": "q305",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "De quelle couleur est le conducteur de terre ?",
+          "reponses": [
+            "Bleu",
+            "Rouge",
+            "Vert et jaune",
+            "Noir"
+          ],
+          "bonne": 2,
+          "explication": "Le vert et jaune est réservé à la terre (PE). On ne l'utilise jamais pour autre chose."
+        },
+        {
+          "id": "q306",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "De quelle couleur est le conducteur de neutre ?",
+          "reponses": [
+            "Bleu clair",
+            "Marron",
+            "Vert et jaune",
+            "Rouge"
+          ],
+          "bonne": 0,
+          "explication": "Le neutre est toujours bleu clair."
+        },
+        {
+          "id": "q307",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "Un conducteur de phase peut être…",
+          "reponses": [
+            "bleu",
+            "vert et jaune",
+            "rouge, marron ou noir",
+            "uniquement blanc"
+          ],
+          "bonne": 2,
+          "explication": "La phase prend n'importe quelle couleur sauf le bleu (neutre) et le vert/jaune (terre). En pratique : rouge, marron ou noir."
+        },
+        {
+          "id": "q308",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Comment branche-t-on un voltmètre pour mesurer la tension aux bornes d'une lampe ?",
+          "reponses": [
+            "En série avec la lampe",
+            "En parallèle, sur les deux bornes de la lampe",
+            "À la place de la lampe",
+            "Sur la terre"
+          ],
+          "bonne": 1,
+          "explication": "La tension se mesure entre deux points : le voltmètre se branche en parallèle, sur les deux bornes de l'élément."
+        },
+        {
+          "id": "q309",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Comment branche-t-on un ampèremètre pour mesurer le courant dans un circuit ?",
+          "reponses": [
+            "En série, dans le circuit",
+            "En parallèle",
+            "Sur le neutre uniquement",
+            "Hors du circuit"
+          ],
+          "bonne": 0,
+          "explication": "Le courant doit traverser l'ampèremètre : on l'insère en série dans le circuit."
+        },
+        {
+          "id": "q310",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Sur un schéma d'installation, que désignent les repères L, N et PE ?",
+          "reponses": [
+            "Lampe, Neutre, Prise",
+            "Phase, Neutre, Terre",
+            "Ligne, Nord, Puissance",
+            "Lumière, Numéro, Pièce"
+          ],
+          "bonne": 1,
+          "explication": "L = phase (Line), N = neutre, PE = terre (Protective Earth)."
+        }
+      ]
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
       "ordre": 5,
-      "fiches": [],
-      "questions": []
+      "fiches": [
+        {
+          "id": "dangers",
+          "titre": "Les effets du courant sur le corps",
+          "contenu": "Le corps humain conduit le courant. Ce qui blesse, c'est l'intensité qui le traverse et la durée du passage. Ordres de grandeur en alternatif 50 Hz :\n\n• 0,5 mA : seuil de perception, picotement.\n• 10 mA : seuil de non-lâcher. Les muscles se contractent, on ne peut plus lâcher le conducteur.\n• 30 mA : risque de paralysie respiratoire. C'est le seuil des différentiels qui protègent les personnes.\n• Quelques dizaines de mA et plus : risque de fibrillation cardiaque, c'est-à-dire d'arrêt du cœur.\n\nS'ajoutent les brûlures, internes et externes.\n\nFacteurs aggravants : humidité (mains mouillées, sol humide, pieds nus), durée du contact, trajet du courant à travers le cœur.\n\nTension limite de sécurité : 50 V en alternatif dans un local sec, 25 V dans un local humide. En dessous, le risque est considéré comme faible."
+        },
+        {
+          "id": "contacts",
+          "titre": "Contact direct et contact indirect",
+          "contenu": "Contact direct : toucher une partie qui est normalement sous tension. Exemples : fil dénudé, borne d'un appareil ouvert, broche d'une prise.\nProtections : isolation des conducteurs, capots, éloignement, obstacles.\n\nContact indirect : toucher une masse, c'est-à-dire une partie métallique qui n'est normalement pas sous tension mais qui l'est devenue à cause d'un défaut d'isolement. Exemple : la carcasse d'un lave-linge dont un fil de phase touche le châssis.\nProtections : mise à la terre des masses + dispositif différentiel. Le courant de défaut part vers la terre et fait déclencher le différentiel avant qu'une personne ne touche l'appareil."
+        },
+        {
+          "id": "protections",
+          "titre": "Disjoncteur, différentiel, terre et bons réflexes",
+          "contenu": "Disjoncteur : coupe le circuit en cas de surcharge (trop d'appareils) ou de court-circuit. Il protège les câbles et l'installation contre l'échauffement et l'incendie. Il ne protège pas directement les personnes.\n\nDifférentiel 30 mA : compare le courant qui part par la phase et celui qui revient par le neutre. Si la différence atteint 30 mA (une fuite vers la terre, par exemple à travers une personne), il coupe en quelques millisecondes. C'est lui qui protège les personnes.\n\nMise à la terre : relie toutes les masses métalliques à la terre. En cas de défaut, le courant s'écoule vers la terre et fait déclencher le différentiel.\n\nBons réflexes :\n• Couper le courant au tableau avant toute intervention, puis vérifier l'absence de tension.\n• Ne jamais intervenir avec les mains mouillées ou les pieds dans l'eau.\n• Feu d'origine électrique : couper le courant, ne jamais utiliser d'eau, extincteur CO2 ou poudre.\n• Personne électrisée : couper le courant ou l'écarter avec un objet isolant (bois, plastique) avant de la toucher, puis appeler le 15 ou le 112."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q401",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "À partir de quelle intensité environ une personne ne peut plus lâcher le conducteur qu'elle tient ?",
+          "reponses": [
+            "0,5 mA",
+            "10 mA",
+            "1 A",
+            "10 A"
+          ],
+          "bonne": 1,
+          "explication": "Vers 10 mA, les muscles se contractent : c'est le seuil de non-lâcher. 0,5 mA est le simple seuil de perception."
+        },
+        {
+          "id": "q402",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local sec ?",
+          "reponses": [
+            "12 V",
+            "25 V",
+            "50 V",
+            "230 V"
+          ],
+          "bonne": 2,
+          "explication": "50 V en alternatif dans un local sec, 25 V dans un local humide."
+        },
+        {
+          "id": "q403",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quel facteur augmente le danger d'une électrisation ?",
+          "reponses": [
+            "Le port de chaussures isolantes",
+            "L'humidité : mains mouillées, sol humide",
+            "Un contact très bref",
+            "Une faible tension"
+          ],
+          "bonne": 1,
+          "explication": "L'humidité diminue la résistance du corps : pour une même tension, le courant qui traverse le corps est plus élevé."
+        },
+        {
+          "id": "q404",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Toucher un fil dénudé sous tension est un…",
+          "reponses": [
+            "contact indirect",
+            "contact direct",
+            "court-circuit",
+            "défaut d'isolement"
+          ],
+          "bonne": 1,
+          "explication": "Le fil est normalement sous tension : c'est un contact direct."
+        },
+        {
+          "id": "q405",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Toucher la carcasse métallique d'un lave-linge mise sous tension par un défaut est un…",
+          "reponses": [
+            "contact direct",
+            "contact indirect",
+            "contact franc",
+            "arc électrique"
+          ],
+          "bonne": 1,
+          "explication": "La carcasse n'est pas censée être sous tension. Elle l'est à cause d'un défaut d'isolement : c'est un contact indirect."
+        },
+        {
+          "id": "q406",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Quelle protection est spécifiquement prévue contre les contacts indirects ?",
+          "reponses": [
+            "Le fusible",
+            "La mise à la terre des masses associée à un différentiel",
+            "L'interrupteur",
+            "La couleur des fils"
+          ],
+          "bonne": 1,
+          "explication": "La terre évacue le courant de défaut et le différentiel coupe le circuit avant qu'une personne ne touche la masse."
+        },
+        {
+          "id": "q407",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Quel est le rôle principal d'un disjoncteur non différentiel ?",
+          "reponses": [
+            "Protéger les personnes contre l'électrisation",
+            "Protéger l'installation contre les surcharges et les courts-circuits",
+            "Mesurer la consommation",
+            "Stabiliser la tension"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur protège les câbles et l'installation contre l'échauffement et l'incendie. Ce sont les différentiels qui protègent les personnes."
+        },
+        {
+          "id": "q408",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Un différentiel 30 mA coupe le circuit quand…",
+          "reponses": [
+            "le courant dépasse 16 A",
+            "la tension dépasse 230 V",
+            "il détecte une différence d'au moins 30 mA entre le courant qui part et celui qui revient",
+            "l'appareil est éteint"
+          ],
+          "bonne": 2,
+          "explication": "Une différence entre phase et neutre signifie qu'un courant fuit vers la terre, par exemple à travers une personne. Le différentiel coupe en quelques millisecondes."
+        },
+        {
+          "id": "q409",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Avant d'intervenir sur une prise, que faut-il faire ?",
+          "reponses": [
+            "Mettre des gants en tissu",
+            "Travailler vite",
+            "Couper le courant au tableau et vérifier l'absence de tension",
+            "Retirer seulement le fil de neutre"
+          ],
+          "bonne": 2,
+          "explication": "On coupe au tableau, puis on vérifie l'absence de tension avec un appareil adapté. On ne se fie jamais à l'interrupteur seul."
+        },
+        {
+          "id": "q410",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Une personne est en contact avec un conducteur sous tension. Que faire en premier ?",
+          "reponses": [
+            "La tirer par le bras",
+            "Lui jeter de l'eau",
+            "Couper le courant, ou l'écarter avec un objet isolant, avant de la toucher",
+            "Attendre qu'elle lâche"
+          ],
+          "bonne": 2,
+          "explication": "En la touchant directement, le sauveteur s'électrise à son tour. On coupe le courant ou on l'écarte avec un objet isolant, puis on appelle le 15 ou le 112."
+        }
+      ]
     }
   ]
 }
