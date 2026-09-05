@@ -1,8 +1,13 @@
-/// Types de question. Seul `qcm` existe en V1.
-/// Pour en ajouter un plus tard (vrai_faux, ordre, image), il suffit
-/// d'ajouter une valeur ici : le reste du code ne change pas.
+/// Types de question.
+/// Pour en ajouter un (vrai_faux, image…), ajouter une valeur ici puis
+/// gérer son affichage dans l'écran Quiz.
 enum TypeQuestion {
-  qcm('qcm');
+  /// Choix multiple : une seule bonne réponse parmi 3 ou 4.
+  qcm('qcm'),
+
+  /// Remettre des étapes dans le bon ordre. Dans `content.json`, les
+  /// `reponses` sont écrites dans le bon ordre ; l'appli les mélange.
+  ordre('ordre');
 
   const TypeQuestion(this.code);
 
@@ -25,7 +30,7 @@ class Question {
     required this.type,
     required this.enonce,
     required this.reponses,
-    required this.bonne,
+    this.bonne = 0,
     required this.explication,
   });
 
@@ -37,7 +42,8 @@ class Question {
   final String enonce;
   final List<String> reponses;
 
-  /// Index (à partir de 0) de la bonne réponse dans [reponses].
+  /// QCM : index (à partir de 0) de la bonne réponse dans [reponses].
+  /// Ignoré pour le type `ordre`.
   final int bonne;
   final String explication;
 
@@ -48,11 +54,11 @@ class Question {
       type: TypeQuestion.fromCode(json['type'] as String),
       enonce: json['enonce'] as String,
       reponses: (json['reponses'] as List<dynamic>).cast<String>(),
-      bonne: json['bonne'] as int,
+      bonne: json['bonne'] as int? ?? 0,
       explication: json['explication'] as String,
     );
   }
 
-  /// Vrai si la réponse choisie (par son index) est la bonne.
+  /// QCM : vrai si la réponse choisie (par son index) est la bonne.
   bool estBonne(int indexChoisi) => indexChoisi == bonne;
 }

@@ -9,12 +9,21 @@ import 'quiz_screen.dart';
 /// Écran Fiche : titre, texte, image optionnelle, et "Passer au quiz".
 /// Ouvrir la fiche la marque comme lue.
 class FicheScreen extends StatefulWidget {
-  const FicheScreen({super.key, required this.module, required this.index});
+  const FicheScreen({
+    super.key,
+    required this.module,
+    required this.index,
+    this.depuisQuiz = false,
+  });
 
   final Module module;
 
   /// Position de la fiche dans `module.fiches`.
   final int index;
+
+  /// Ouverte depuis une question ratée : on propose "Retour au quiz"
+  /// au lieu de "Passer au quiz".
+  final bool depuisQuiz;
 
   @override
   State<FicheScreen> createState() => _FicheScreenState();
@@ -75,19 +84,27 @@ class _FicheScreenState extends State<FicheScreen> {
           ],
           Text(fiche.contenu, style: theme.textTheme.bodyLarge),
           const SizedBox(height: 32),
-          if (!_estDerniere) ...[
-            FilledButton.tonalIcon(
-              onPressed: _ficheSuivante,
-              icon: const Icon(Icons.arrow_forward),
-              label: const Text('Fiche suivante'),
+          if (widget.depuisQuiz)
+            FilledButton.icon(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: const Icon(Icons.arrow_back),
+              label: const Text('Retour au quiz'),
+            )
+          else ...[
+            if (!_estDerniere) ...[
+              FilledButton.tonalIcon(
+                onPressed: _ficheSuivante,
+                icon: const Icon(Icons.arrow_forward),
+                label: const Text('Fiche suivante'),
+              ),
+              const SizedBox(height: 8),
+            ],
+            FilledButton.icon(
+              onPressed: _passerAuQuiz,
+              icon: const Icon(Icons.quiz),
+              label: const Text('Passer au quiz'),
             ),
-            const SizedBox(height: 8),
           ],
-          FilledButton.icon(
-            onPressed: _passerAuQuiz,
-            icon: const Icon(Icons.quiz),
-            label: const Text('Passer au quiz'),
-          ),
         ],
       ),
     );

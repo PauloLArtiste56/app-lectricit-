@@ -267,3 +267,173 @@ c += t(W/2, 610, "Disjoncteur : surcharge et court-circuit → protège l'instal
 c += t(W/2, 660, "Différentiel : fuite de 30 mA vers la terre → protège les personnes", 26, TXT)
 svg("protections", c)
 print("ok", len(os.listdir(OUT)))
+
+# ======================= Module 6 : mesures =======================
+c = titre("Le multimètre")
+# corps de l'appareil
+c += rect(120, 120, 420, 560, "white", FIL, 6, 28)
+c += rect(160, 150, 340, 110, "#E3F2FD", BLEU, 4, 12) + t(330, 220, "230.4", 56, TXT, weight="bold", extra='font-family="DejaVu Sans Mono"')
+c += cercle(330, 430, 90, "#ECEFF1", FIL, 5) + ligne(330, 430, 330, 355, ROUGE, 8)
+for ang, lab in [(-135, "V~"), (-90, "V⎓"), (-45, "Ω"), (45, "A"), (135, "OFF"), (90, "•)))")]:
+    import math as _m
+    x = 330 + 125*_m.cos(_m.radians(ang)); y = 430 + 125*_m.sin(_m.radians(ang))
+    c += t(x, y+10, lab, 26, TXT, weight="bold")
+for x, lab, col in [(220, "A", ROUGE), (330, "COM", "#212121"), (440, "V/Ω", ROUGE)]:
+    c += cercle(x, 620, 20, "white", col, 6) + t(x, 662, lab, 22, TXT)
+# légende
+items = [("V~", "tension alternative (prise)", BLEU), ("V⎓", "tension continue (pile)", BLEU), ("Ω", "résistance, hors tension", ROUGE),
+         ("A", "intensité, en série", AMBRE), ("COM", "cordon noir, référence", TXT), ("V/Ω", "cordon rouge (V et Ω)", ROUGE)]
+for i, (k, d, col) in enumerate(items):
+    y = 160 + i * 80
+    c += t(620, y, k, 32, col, "start", "bold") + t(740, y, d, 26, TXT, "start")
+c += rect(600, 620, 520, 70, "#FFF8E1", AMBRE, 4, 16) + t(860, 664, "Valeur inconnue ? Calibre le plus grand d'abord.", 24, TXT)
+svg("multimetre", c)
+
+c = titre("Tension en parallèle, intensité en série")
+# circuit gauche : voltmètre
+c += pile(180, 400) + ligne(180, 388, 180, 220) + ligne(180, 220, 480, 220) + ligne(480, 220, 480, 340) + lampe(480, 375) + ligne(480, 410, 480, 580) + ligne(480, 580, 180, 580) + ligne(180, 580, 180, 412)
+c += ligne(480, 340, 330, 340, GRIS, 4, "10 8") + ligne(480, 410, 330, 410, GRIS, 4, "10 8") + ligne(330, 340, 330, 410, GRIS, 4, "10 8") + appareil(330, 375, "V")
+c += t(330, 470, "en parallèle", 26, BLEU, weight="bold") + t(330, 505, "sur les deux bornes", 22, GRIS)
+# circuit droit : ampèremètre + pince
+c += pile(700, 400) + ligne(700, 388, 700, 220) + ligne(700, 220, 1000, 220) + ligne(1000, 220, 1000, 340) + lampe(1000, 375) + ligne(1000, 410, 1000, 580) + ligne(1000, 580, 700, 580) + ligne(700, 580, 700, 412)
+c += appareil(850, 220, "A") + t(850, 165, "en série", 26, AMBRE, weight="bold")
+c += cercle(850, 580, 42, "none", VERT, 8) + t(850, 650, "pince : un seul conducteur", 22, VERT, weight="bold")
+c += t(W/2, 710, "Résistance et continuité : toujours hors tension, composant isolé.", 24, ROUGE, weight="bold")
+svg("mesurer", c)
+
+c = titre("Le VAT : tester, vérifier, retester")
+etapes = [("1", "Tester le VAT", "sur une source, sous tension connue", VERT), ("2", "Vérifier l'ouvrage", "phase-neutre, phase-phase, chaque conducteur-terre", BLEU), ("3", "Retester le VAT", "sur la même, source connue", VERT)]
+for i, (n, l1, l2, col) in enumerate(etapes):
+    x = 80 + i * 360
+    c += rect(x, 150, 320, 300, "white", col, 6, 24) + cercle(x+160, 220, 40, col, col) + t(x+160, 236, n, 40, "white", weight="bold")
+    c += t(x+160, 310, l1, 30, TXT, weight="bold")
+    mots = l2.split(", ")
+    for j, m in enumerate(mots): c += t(x+160, 355 + j*32, m, 22, GRIS)
+    if i < 2: c += fleche(x+330, 300, x+350, 300, GRIS)
+c += rect(80, 500, 1040, 190, "white", ROUGE, 4, 20)
+c += t(W/2, 550, "Pourquoi retester ? Un VAT en panne afficherait « pas de tension » à tort.", 26, TXT)
+c += t(W/2, 600, "Un multimètre ne remplace pas un VAT (calibre, pile, cordon…).", 26, TXT)
+c += t(W/2, 655, "Obligatoire avant tout travail hors tension (NF C 18-510)", 28, ROUGE, weight="bold")
+svg("vat", c)
+
+# ======================= Module 7 : installation =======================
+c = titre("Le tableau électrique, de haut en bas")
+rangs = [("Disjoncteur de branchement", "coupe tout, limite la puissance souscrite", FIL, 1),
+         ("Interrupteurs différentiels 30 mA", "protègent les personnes (type A : plaque, lave-linge)", VERT, 2),
+         ("Disjoncteurs divisionnaires", "un par circuit, calibrés selon le câble", BLEU, 6),
+         ("Bornier de terre", "tous les fils vert/jaune → prise de terre", "#43A047", 1)]
+y = 120
+for nom, desc, col, n in rangs:
+    c += rect(80, y, 1040, 120, "white", col, 5, 18)
+    for k in range(n):
+        w = 60 if n > 1 else 120
+        c += rect(110 + k*(w+10), y+20, w, 80, "#ECEFF1", col, 3, 8) + rect(120 + k*(w+10), y+40, w-20, 16, col, col, 1, 3)
+    c += t(560, y+50, nom, 28, col, "start", "bold") + t(560, y+90, desc, 22, GRIS, "start")
+    y += 140
+svg("tableau", c)
+
+c = titre("Sections de câbles et calibres (NF C 15-100)")
+lignes = [("Éclairage", 1.5, "16 A", "8 points max", BLEU), ("Prises", 2.5, "20 A", "12 prises max", VERT),
+          ("Spécialisé (lave-linge, four)", 2.5, "20 A", "1 prise par circuit", AMBRE), ("Plaque de cuisson", 6, "32 A", "circuit dédié", ROUGE)]
+c += t(90, 150, "Usage", 24, GRIS, "start", "bold") + t(560, 150, "Section", 24, GRIS, "middle", "bold") + t(760, 150, "Disjoncteur", 24, GRIS, "middle", "bold") + t(960, 150, "Limite", 24, GRIS, "middle", "bold")
+for i, (usage, sec, cal, lim, col) in enumerate(lignes):
+    y = 210 + i * 110
+    c += rect(80, y-40, 1040, 90, "white", "#CFD8DC", 3, 14)
+    c += t(90, y+10, usage, 26, TXT, "start", "bold")
+    r = 6 + sec * 4
+    c += cercle(520, y, r, col, col) + t(560, y+10, f"{sec} mm²".replace(".", ","), 26, col, "start", "bold")
+    c += t(760, y+10, cal, 28, TXT, weight="bold") + t(960, y+10, lim, 24, GRIS)
+c += rect(80, 650, 1040, 70, "#FFEBEE", ROUGE, 4, 16) + t(W/2, 694, "Le disjoncteur protège le câble : trop gros pour le câble, c'est un risque d'incendie.", 24, TXT)
+svg("sections", c)
+
+c = titre("Salle de bains : les volumes")
+# baignoire vue de côté
+c += rect(120, 470, 420, 140, "#B3E5FC", BLEU, 5, 20) + t(330, 550, "Volume 0", 28, BLEU, weight="bold") + t(330, 585, "rien", 22, GRIS)
+c += rect(120, 150, 420, 320, "#E3F2FD", BLEU, 3, 0) + t(330, 200, "Volume 1", 28, BLEU, weight="bold") + t(330, 240, "TBTS 12 V seulement", 22, GRIS) + t(330, 270, "jusqu'à 2,25 m", 22, GRIS)
+c += rect(540, 150, 200, 460, "#F1F8E9", VERT, 3, 0) + t(640, 200, "Volume 2", 28, VERT, weight="bold") + t(640, 240, "IPX4", 22, GRIS) + t(640, 270, "classe II", 22, GRIS) + t(640, 300, "60 cm", 22, GRIS)
+c += t(900, 200, "Hors volumes", 28, TXT, weight="bold") + t(900, 240, "prises et appareils", 22, GRIS) + t(900, 270, "classiques", 22, GRIS)
+c += rect(860, 330, 80, 80, "white", FIL, 4, 10) + cercle(885, 370, 6, FIL) + cercle(915, 370, 6, FIL) + t(900, 440, "prise 230 V", 20, GRIS)
+c += ligne(120, 610, 1120, 610, FIL, 6)
+c += rect(80, 640, 1040, 80, "white", BLEU, 4, 16) + t(W/2, 672, "IP X4 : 1er chiffre = solides, 2e chiffre = eau (4 = projections)", 24, TXT) + t(W/2, 704, "Liaison équipotentielle : toutes les masses métalliques reliées à la terre", 22, GRIS)
+svg("salle_de_bain", c)
+
+# ======================= Module 8 : énergie =======================
+c = titre("Puissance et énergie : E = P × t")
+c += rect(80, 130, 480, 260, "white", BLEU, 6, 24) + t(320, 190, "Puissance P", 32, BLEU, weight="bold") + t(320, 240, "en watts (W)", 26, GRIS)
+c += t(320, 300, "ce que l'appareil consomme", 24, TXT) + t(320, 335, "à un instant donné", 24, TXT)
+c += rect(640, 130, 480, 260, "white", VERT, 6, 24) + t(880, 190, "Énergie E", 32, VERT, weight="bold") + t(880, 240, "en kilowattheures (kWh)", 26, GRIS)
+c += t(880, 300, "puissance × durée", 24, TXT) + t(880, 335, "ce que mesure le compteur", 24, TXT)
+c += rect(80, 430, 1040, 260, "white", AMBRE, 6, 24) + t(W/2, 490, "Exemple", 26, GRIS)
+c += t(W/2, 545, "Radiateur 2 000 W pendant 3 heures", 30, TXT, weight="bold")
+c += t(W/2, 600, "E = 2 kW × 3 h = 6 kWh", 40, AMBRE, weight="bold")
+c += t(W/2, 655, "1 kWh = un appareil de 1 000 W pendant 1 heure", 24, GRIS)
+svg("energie", c)
+
+c = titre("Ordres de grandeur de puissance")
+apps = [("LED", 10, BLEU), ("Télévision", 100, BLEU), ("Réfrigérateur", 150, BLEU), ("Four", 2500, AMBRE), ("Plaque induction", 7000, ROUGE)]
+maxw = 7000
+for i, (nom, p, col) in enumerate(apps):
+    y = 150 + i * 90
+    w = max(12, 760 * p / maxw)
+    c += t(250, y+10, nom, 22, TXT, "end", "bold") + f'<rect x="270" y="{y-22}" width="{w:.0f}" height="44" rx="12" fill="{col}"/>\n' + t(280 + w, y+10, f"{p:,} W".replace(",", " "), 24, TXT, "start")
+c += rect(80, 610, 1040, 100, "white", BLEU, 4, 20) + t(W/2, 650, "Puissance souscrite (6, 9, 12 kVA) = maximum utilisable en même temps", 24, TXT, weight="bold") + t(W/2, 688, "Dépassement → le disjoncteur de branchement coupe", 24, GRIS)
+svg("facture", c)
+
+c = titre("Où part l'électricité d'un logement tout électrique ?")
+parts = [("Chauffage", 0.55, ROUGE), ("Eau chaude", 0.15, AMBRE), ("Cuisson", 0.08, "#FB8C00"), ("Froid, lavage", 0.12, BLEU), ("Éclairage, TV, veilles", 0.10, VERT)]
+import math as _m
+cx, cy, r = 330, 400, 200
+ang = -90
+for nom, p, col in parts:
+    a0 = _m.radians(ang); a1 = _m.radians(ang + 360*p)
+    x0, y0 = cx + r*_m.cos(a0), cy + r*_m.sin(a0); x1, y1 = cx + r*_m.cos(a1), cy + r*_m.sin(a1)
+    grand = 1 if p > 0.5 else 0
+    c += f'<path d="M{cx},{cy} L{x0:.1f},{y0:.1f} A{r},{r} 0 {grand} 1 {x1:.1f},{y1:.1f} Z" fill="{col}" stroke="white" stroke-width="4"/>\n'
+    ang += 360*p
+for i, (nom, p, col) in enumerate(parts):
+    y = 200 + i * 70
+    c += f'<rect x="620" y="{y-20}" width="36" height="36" rx="8" fill="{col}"/>\n' + t(680, y+8, f"{nom} ~ {int(p*100)} %", 26, TXT, "start")
+c += rect(80, 620, 1040, 100, "white", VERT, 4, 20) + t(W/2, 660, "Rendement = énergie utile / énergie consommée", 26, TXT, weight="bold") + t(W/2, 698, "Veilles : peu de watts, mais 24 h/24. Heures creuses : moins cher la nuit.", 22, GRIS)
+svg("economies", c)
+
+# ======================= Module 9 : habilitation =======================
+c = titre("L'habilitation électrique : le parcours")
+etapes = [("Formation", "théorie + pratique", BLEU), ("Évaluation", "des connaissances", BLEU), ("Aptitude", "visite médicale", VERT), ("Titre", "par l'employeur", AMBRE)]
+for i, (l1, l2, col) in enumerate(etapes):
+    x = 80 + i * 270
+    c += rect(x, 170, 230, 200, "white", col, 6, 24) + cercle(x+115, 230, 34, col, col) + t(x+115, 244, str(i+1), 34, "white", weight="bold")
+    c += t(x+115, 305, l1, 28, TXT, weight="bold") + t(x+115, 340, l2, 22, GRIS)
+    if i < 3: c += fleche(x+235, 270, x+265, 270, GRIS)
+c += rect(80, 430, 1040, 260, "white", ROUGE, 4, 24)
+c += t(W/2, 480, "Ce n'est pas un diplôme", 28, ROUGE, weight="bold")
+c += t(W/2, 530, "C'est la reconnaissance, par l'employeur, de la capacité à accomplir", 24, TXT)
+c += t(W/2, 565, "en sécurité les tâches confiées (norme NF C 18-510).", 24, TXT)
+c += t(W/2, 620, "Liée à un poste et à des tâches précises", 24, GRIS) + t(W/2, 660, "Recyclage recommandé tous les 3 ans", 24, GRIS)
+svg("habilitation", c)
+
+c = titre("Lire un symbole d'habilitation")
+c += t(330, 230, "B", 150, BLEU, weight="bold") + t(520, 230, "1", 150, AMBRE, weight="bold") + t(700, 230, "V", 150, VERT, weight="bold")
+c += rect(80, 290, 320, 400, "white", BLEU, 5, 20) + t(240, 335, "Domaine de tension", 24, BLEU, weight="bold")
+c += t(240, 390, "B = basse tension", 24, TXT) + t(240, 420, "(≤ 1 000 V alternatif)", 20, GRIS) + t(240, 470, "H = haute tension", 24, TXT)
+c += rect(430, 290, 420, 400, "white", AMBRE, 5, 20) + t(640, 335, "Rôle", 24, "#F57F17", weight="bold")
+roles = ["0 : non-électricien", "1 : exécutant électricien", "2 : chargé de travaux", "R : intervention générale", "S : intervention élémentaire", "C : chargé de consignation", "E : essai, mesure, manœuvre"]
+for i, rl in enumerate(roles): c += t(450, 385 + i*42, rl, 22, TXT, "start")
+c += rect(880, 290, 240, 400, "white", VERT, 5, 20) + t(1000, 335, "Option", 24, VERT, weight="bold")
+c += t(1000, 400, "V = voisinage", 24, TXT) + t(1000, 435, "de pièces nues", 20, GRIS) + t(1000, 462, "sous tension", 20, GRIS)
+c += t(1000, 560, "Exemples :", 22, GRIS) + t(1000, 600, "B0 · BS · BR", 24, TXT, weight="bold") + t(1000, 640, "B1V · B2V · BC", 24, TXT, weight="bold")
+svg("symboles_hab", c)
+
+c = titre("La consignation : S-C-I-V")
+etapes = [("S", "Séparation", "ouvrir l'appareil", "de coupure", BLEU),
+          ("C", "Condamnation", "cadenas + pancarte", "remise impossible", ROUGE),
+          ("I", "Identification", "être sûr d'être", "sur le bon ouvrage", AMBRE),
+          ("V", "VAT", "absence de tension", "VAT testé avant / après", VERT)]
+for i, (l, nom, d1, d2, col) in enumerate(etapes):
+    x = 80 + i * 270
+    c += rect(x, 130, 230, 330, "white", col, 6, 24) + rect(x, 130, 230, 90, col, col, 6, 24) + t(x+115, 195, l, 56, "white", weight="bold")
+    c += t(x+115, 275, nom, 26, TXT, weight="bold") + t(x+115, 330, d1, 19, GRIS) + t(x+115, 360, d2, 19, GRIS)
+    if i < 3: c += fleche(x+232, 295, x+268, 295, GRIS)
+c += rect(80, 500, 1040, 200, "white", FIL, 4, 24)
+c += t(W/2, 550, "En haute tension, ou s'il y a un risque de réalimentation :", 24, TXT) + t(W/2, 585, "+ mise à la terre et en court-circuit", 26, TXT, weight="bold")
+c += t(W/2, 640, "Déconsignation : dans l'ordre inverse", 24, GRIS) + t(W/2, 675, "EPI : gants isolants, écran facial, tapis et outils isolés", 22, GRIS)
+svg("consignation", c)

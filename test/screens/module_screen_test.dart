@@ -100,11 +100,11 @@ void mainReprise() {
     expect(find.text('Lancer le quiz (3 questions)'), findsOneWidget);
 
     // On simule un quiz complet avec B et C ratées.
-    final session = QuizSession(_module3.questions);
+    final session = QuizSession(_module3.questions, melanger: false);
     session.repondre(0); session.suivante(); // A juste
     session.repondre(0); session.suivante(); // B faux
     session.repondre(0); session.suivante(); // C faux
-    await etat.enregistrerResultat(_module3, session);
+    await etat.enregistrerResultat(session, moduleComplet: _module3);
     await tester.pump();
 
     expect(find.text('Refaire uniquement les ratées (2)'), findsOneWidget);
@@ -114,7 +114,9 @@ void mainReprise() {
     await tester.tap(find.text('Refaire uniquement les ratées (2)'));
     await tester.pumpAndSettle();
     expect(find.text('Question 1 / 2'), findsOneWidget);
-    expect(find.text('Question B ?'), findsOneWidget);
+    // Les questions sont mélangées : c'est B ou C, jamais A (réussie).
+    expect(find.text('Question A ?'), findsNothing);
+    expect(find.textContaining(RegExp(r'Question [BC] \?')), findsOneWidget);
   });
 
   testWidgets('module terminé : un seul bouton "Refaire le quiz"',
@@ -124,9 +126,9 @@ void mainReprise() {
       value: etat,
       child: const MaterialApp(home: ModuleScreen(module: _module3)),
     ));
-    final session = QuizSession(_module3.questions);
+    final session = QuizSession(_module3.questions, melanger: false);
     for (final q in _module3.questions) { session.repondre(q.bonne); session.suivante(); }
-    await etat.enregistrerResultat(_module3, session);
+    await etat.enregistrerResultat(session, moduleComplet: _module3);
     await tester.pump();
 
     expect(find.text('Refaire le quiz (3 questions)'), findsOneWidget);

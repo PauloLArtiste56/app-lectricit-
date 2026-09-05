@@ -8,13 +8,17 @@ import 'quiz_screen.dart';
 class ResultatScreen extends StatelessWidget {
   const ResultatScreen({
     super.key,
-    required this.module,
+    required this.titre,
+    this.module,
     required this.score,
     required this.total,
     required this.questionsRatees,
   });
 
-  final Module module;
+  final String titre;
+
+  /// Module du quiz, `null` pour une révision multi-modules.
+  final Module? module;
   final int score;
   final int total;
   final List<Question> questionsRatees;
@@ -24,7 +28,11 @@ class ResultatScreen extends StatelessWidget {
     // pour ne pas empiler les écrans à chaque tentative.
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
-        builder: (_) => QuizScreen(module: module, questions: questionsRatees),
+        builder: (_) => QuizScreen(
+          titre: titre,
+          module: module,
+          questions: questionsRatees,
+        ),
       ),
     );
   }
@@ -33,13 +41,19 @@ class ResultatScreen extends StatelessWidget {
     Navigator.of(context).popUntil((route) => route.isFirst);
   }
 
+  /// Ce qu'il fallait répondre, en une ligne.
+  String _bonneReponse(Question q) => switch (q.type) {
+        TypeQuestion.qcm => 'Bonne réponse : ${q.reponses[q.bonne]}',
+        TypeQuestion.ordre => 'Bon ordre : ${q.reponses.join(' → ')}',
+      };
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final sansFaute = questionsRatees.isEmpty;
 
     return Scaffold(
-      appBar: AppBar(title: Text(module.titre)),
+      appBar: AppBar(title: Text(titre)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -67,9 +81,7 @@ class ResultatScreen extends StatelessWidget {
                 child: ListTile(
                   leading: const Icon(Icons.close, color: Colors.red),
                   title: Text(question.enonce),
-                  subtitle: Text(
-                    'Bonne réponse : ${question.reponses[question.bonne]}',
-                  ),
+                  subtitle: Text(_bonneReponse(question)),
                 ),
               ),
             const SizedBox(height: 16),

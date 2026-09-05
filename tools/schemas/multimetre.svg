@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Le multimètre</text>
+<rect x="120" y="120" width="420" height="560" rx="28" fill="white" stroke="#37474F" stroke-width="6"/>
+<rect x="160" y="150" width="340" height="110" rx="12" fill="#E3F2FD" stroke="#1565C0" stroke-width="4"/>
+<text x="330" y="220" font-size="56" fill="#1F2933" text-anchor="middle" font-weight="bold" font-family="DejaVu Sans Mono">230.4</text>
+<circle cx="330" cy="430" r="90" fill="#ECEFF1" stroke="#37474F" stroke-width="5"/>
+<line x1="330" y1="430" x2="330" y2="355" stroke="#E53935" stroke-width="8" stroke-linecap="round"/>
+<text x="241.61165235168158" y="351.6116523516815" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >V~</text>
+<text x="330.0" y="315.0" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >V⎓</text>
+<text x="418.3883476483185" y="351.6116523516816" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >Ω</text>
+<text x="418.3883476483185" y="528.3883476483185" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >A</text>
+<text x="241.61165235168158" y="528.3883476483185" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >OFF</text>
+<text x="330.0" y="565.0" font-size="26" fill="#1F2933" text-anchor="middle" font-weight="bold" >•)))</text>
+<circle cx="220" cy="620" r="20" fill="white" stroke="#E53935" stroke-width="6"/>
+<text x="220" y="662" font-size="22" fill="#1F2933" text-anchor="middle" font-weight="normal" >A</text>
+<circle cx="330" cy="620" r="20" fill="white" stroke="#212121" stroke-width="6"/>
+<text x="330" y="662" font-size="22" fill="#1F2933" text-anchor="middle" font-weight="normal" >COM</text>
+<circle cx="440" cy="620" r="20" fill="white" stroke="#E53935" stroke-width="6"/>
+<text x="440" y="662" font-size="22" fill="#1F2933" text-anchor="middle" font-weight="normal" >V/Ω</text>
+<text x="620" y="160" font-size="32" fill="#1565C0" text-anchor="start" font-weight="bold" >V~</text>
+<text x="740" y="160" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >tension alternative (prise)</text>
+<text x="620" y="240" font-size="32" fill="#1565C0" text-anchor="start" font-weight="bold" >V⎓</text>
+<text x="740" y="240" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >tension continue (pile)</text>
+<text x="620" y="320" font-size="32" fill="#E53935" text-anchor="start" font-weight="bold" >Ω</text>
+<text x="740" y="320" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >résistance, hors tension</text>
+<text x="620" y="400" font-size="32" fill="#FFB300" text-anchor="start" font-weight="bold" >A</text>
+<text x="740" y="400" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >intensité, en série</text>
+<text x="620" y="480" font-size="32" fill="#1F2933" text-anchor="start" font-weight="bold" >COM</text>
+<text x="740" y="480" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >cordon noir, référence</text>
+<text x="620" y="560" font-size="32" fill="#E53935" text-anchor="start" font-weight="bold" >V/Ω</text>
+<text x="740" y="560" font-size="26" fill="#1F2933" text-anchor="start" font-weight="normal" >cordon rouge (V et Ω)</text>
+<rect x="600" y="620" width="520" height="70" rx="16" fill="#FFF8E1" stroke="#FFB300" stroke-width="4"/>
+<text x="860" y="664" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >Valeur inconnue ? Calibre le plus grand d'abord.</text>
+
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Ordres de grandeur de puissance</text>
+<text x="250" y="160" font-size="22" fill="#1F2933" text-anchor="end" font-weight="bold" >LED</text>
+<rect x="270" y="128" width="12" height="44" rx="12" fill="#1565C0"/>
+<text x="292" y="160" font-size="24" fill="#1F2933" text-anchor="start" font-weight="normal" >10 W</text>
+<text x="250" y="250" font-size="22" fill="#1F2933" text-anchor="end" font-weight="bold" >Télévision</text>
+<rect x="270" y="218" width="12" height="44" rx="12" fill="#1565C0"/>
+<text x="292" y="250" font-size="24" fill="#1F2933" text-anchor="start" font-weight="normal" >100 W</text>
+<text x="250" y="340" font-size="22" fill="#1F2933" text-anchor="end" font-weight="bold" >Réfrigérateur</text>
+<rect x="270" y="308" width="16" height="44" rx="12" fill="#1565C0"/>
+<text x="296.2857142857143" y="340" font-size="24" fill="#1F2933" text-anchor="start" font-weight="normal" >150 W</text>
+<text x="250" y="430" font-size="22" fill="#1F2933" text-anchor="end" font-weight="bold" >Four</text>
+<rect x="270" y="398" width="271" height="44" rx="12" fill="#FFB300"/>
+<text x="551.4285714285714" y="430" font-size="24" fill="#1F2933" text-anchor="start" font-weight="normal" >2 500 W</text>
+<text x="250" y="520" font-size="22" fill="#1F2933" text-anchor="end" font-weight="bold" >Plaque induction</text>
+<rect x="270" y="488" width="760" height="44" rx="12" fill="#E53935"/>
+<text x="1040.0" y="520" font-size="24" fill="#1F2933" text-anchor="start" font-weight="normal" >7 000 W</text>
+<rect x="80" y="610" width="1040" height="100" rx="20" fill="white" stroke="#1565C0" stroke-width="4"/>
+<text x="600.0" y="650" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="bold" >Puissance souscrite (6, 9, 12 kVA) = maximum utilisable en même temps</text>
+<text x="600.0" y="688" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >Dépassement → le disjoncteur de branchement coupe</text>
+
+</svg>

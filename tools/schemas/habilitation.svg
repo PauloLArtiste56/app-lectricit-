@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >L'habilitation électrique : le parcours</text>
+<rect x="80" y="170" width="230" height="200" rx="24" fill="white" stroke="#1565C0" stroke-width="6"/>
+<circle cx="195" cy="230" r="34" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="195" y="244" font-size="34" fill="white" text-anchor="middle" font-weight="bold" >1</text>
+<text x="195" y="305" font-size="28" fill="#1F2933" text-anchor="middle" font-weight="bold" >Formation</text>
+<text x="195" y="340" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >théorie + pratique</text>
+<line x1="315" y1="270" x2="345" y2="270" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="345,270 325.7,280.5 325.7,259.5" fill="#78909C"/>
+<rect x="350" y="170" width="230" height="200" rx="24" fill="white" stroke="#1565C0" stroke-width="6"/>
+<circle cx="465" cy="230" r="34" fill="#1565C0" stroke="#1565C0" stroke-width="5"/>
+<text x="465" y="244" font-size="34" fill="white" text-anchor="middle" font-weight="bold" >2</text>
+<text x="465" y="305" font-size="28" fill="#1F2933" text-anchor="middle" font-weight="bold" >Évaluation</text>
+<text x="465" y="340" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >des connaissances</text>
+<line x1="585" y1="270" x2="615" y2="270" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="615,270 595.7,280.5 595.7,259.5" fill="#78909C"/>
+<rect x="620" y="170" width="230" height="200" rx="24" fill="white" stroke="#43A047" stroke-width="6"/>
+<circle cx="735" cy="230" r="34" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="735" y="244" font-size="34" fill="white" text-anchor="middle" font-weight="bold" >3</text>
+<text x="735" y="305" font-size="28" fill="#1F2933" text-anchor="middle" font-weight="bold" >Aptitude</text>
+<text x="735" y="340" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >visite médicale</text>
+<line x1="855" y1="270" x2="885" y2="270" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="885,270 865.7,280.5 865.7,259.5" fill="#78909C"/>
+<rect x="890" y="170" width="230" height="200" rx="24" fill="white" stroke="#FFB300" stroke-width="6"/>
+<circle cx="1005" cy="230" r="34" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="1005" y="244" font-size="34" fill="white" text-anchor="middle" font-weight="bold" >4</text>
+<text x="1005" y="305" font-size="28" fill="#1F2933" text-anchor="middle" font-weight="bold" >Titre</text>
+<text x="1005" y="340" font-size="22" fill="#78909C" text-anchor="middle" font-weight="normal" >par l'employeur</text>
+<rect x="80" y="430" width="1040" height="260" rx="24" fill="white" stroke="#E53935" stroke-width="4"/>
+<text x="600.0" y="480" font-size="28" fill="#E53935" text-anchor="middle" font-weight="bold" >Ce n'est pas un diplôme</text>
+<text x="600.0" y="530" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >C'est la reconnaissance, par l'employeur, de la capacité à accomplir</text>
+<text x="600.0" y="565" font-size="24" fill="#1F2933" text-anchor="middle" font-weight="normal" >en sécurité les tâches confiées (norme NF C 18-510).</text>
+<text x="600.0" y="620" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >Liée à un poste et à des tâches précises</text>
+<text x="600.0" y="660" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >Recyclage recommandé tous les 3 ans</text>
+
+</svg>

@@ -1,0 +1,32 @@
+# Vérification automatique à chaque pull request et à chaque push sur main :
+# analyse du code, tests, et compilation web pour s'assurer que tout passe.
+name: Vérifications
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  flutter:
+    name: Analyse, tests et build web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Dépendances
+        run: flutter pub get
+
+      - name: Analyse du code
+        run: flutter analyze
+
+      - name: Tests
+        run: flutter test
+
+      - name: Compilation web
+        run: flutter build web --release

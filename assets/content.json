@@ -834,6 +834,671 @@
           "explication": "En la touchant directement, le sauveteur s'électrise à son tour. On coupe le courant ou on l'écarte avec un objet isolant, puis on appelle le 15 ou le 112."
         }
       ]
+    },
+    {
+      "id": "mesures",
+      "titre": "Mesures et appareils",
+      "ordre": 6,
+      "fiches": [
+        {
+          "id": "multimetre",
+          "titre": "Le multimètre",
+          "image": "multimetre.png",
+          "contenu": "Le multimètre regroupe plusieurs appareils : voltmètre (tension), ampèremètre (intensité), ohmmètre (résistance) et testeur de continuité.\n\nLe sélecteur choisit la fonction : V~ pour une tension alternative, V⎓ pour une tension continue, Ω pour une résistance, A pour une intensité.\n\nLes bornes : COM (cordon noir) est la référence. Le cordon rouge va dans V/Ω pour la tension et la résistance, ou dans la borne A (souvent 10 A) pour l'intensité.\n\nLe calibre : quand on ne connaît pas la valeur, on part du calibre le plus grand et on descend. Les appareils « autorange » choisissent seuls."
+        },
+        {
+          "id": "mesurer",
+          "titre": "Mesurer une tension, un courant, une résistance",
+          "image": "mesurer.png",
+          "contenu": "Tension : le voltmètre se branche en parallèle, entre les deux points à mesurer, circuit sous tension. C'est la mesure la plus courante et la moins risquée pour l'appareil.\n\nIntensité : l'ampèremètre se branche en série, il faut donc ouvrir le circuit pour l'insérer. La pince ampèremétrique évite cette contrainte : on la ferme autour d'un seul conducteur. Autour du câble entier (phase + neutre), les deux courants s'annulent et la pince lit zéro.\n\nRésistance et continuité : toujours hors tension, composant isolé du reste du circuit. En mode continuité, un bip signifie que la liaison est bonne (fil non coupé, contact fermé)."
+        },
+        {
+          "id": "vat",
+          "titre": "Le VAT : vérificateur d'absence de tension",
+          "image": "vat.png",
+          "contenu": "Avant de travailler hors tension, la norme NF C 18-510 impose de vérifier l'absence de tension avec un VAT, un appareil conçu uniquement pour cela.\n\nUn multimètre ne remplace pas un VAT : mauvais calibre, pile faible ou cordon abîmé peuvent afficher « 0 V » à tort.\n\nLa méthode : on teste le VAT sur une source sous tension connue, on vérifie l'ouvrage (entre chaque phase et le neutre, entre phases, entre chaque conducteur et la terre), puis on reteste le VAT sur la source connue. Si le VAT a lâché pendant la mesure, ce second test le révèle."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q501",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Sur un multimètre, dans quelle borne branche-t-on le cordon noir ?",
+          "reponses": [
+            "V/Ω",
+            "COM",
+            "A",
+            "mA"
+          ],
+          "bonne": 1,
+          "explication": "Le cordon noir va toujours dans la borne COM (commun), la référence de toutes les mesures."
+        },
+        {
+          "id": "q502",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Quelle position du sélecteur pour mesurer la tension d'une prise domestique ?",
+          "reponses": [
+            "V⎓ (continu)",
+            "V~ (alternatif)",
+            "Ω",
+            "A"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau est en alternatif : on choisit V~. En V⎓, l'appareil afficherait une valeur fausse ou nulle."
+        },
+        {
+          "id": "q503",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "On ne connaît pas la valeur à mesurer. Quel calibre choisir au départ ?",
+          "reponses": [
+            "Le plus grand, puis on descend",
+            "Le plus petit",
+            "N'importe lequel",
+            "Le calibre Ω"
+          ],
+          "bonne": 0,
+          "explication": "Partir du calibre le plus grand évite de dépasser la capacité de l'appareil. On descend ensuite pour gagner en précision."
+        },
+        {
+          "id": "q504",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Comment mesure-t-on l'intensité avec un multimètre classique ?",
+          "reponses": [
+            "En parallèle, sans toucher au circuit",
+            "En série, en ouvrant le circuit",
+            "Entre phase et terre",
+            "Hors tension"
+          ],
+          "bonne": 1,
+          "explication": "Le courant doit traverser l'appareil : on ouvre le circuit et on insère l'ampèremètre en série."
+        },
+        {
+          "id": "q505",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Avec une pince ampèremétrique, autour de quoi ferme-t-on la pince ?",
+          "reponses": [
+            "Du câble entier (phase + neutre)",
+            "D'un seul conducteur",
+            "De la prise",
+            "Du disjoncteur"
+          ],
+          "bonne": 1,
+          "explication": "Autour du câble entier, le courant de phase et celui du neutre s'annulent : la pince lit zéro. On isole un seul conducteur."
+        },
+        {
+          "id": "q506",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer une résistance à l'ohmmètre, le circuit doit être…",
+          "reponses": [
+            "sous tension",
+            "hors tension et le composant isolé",
+            "en court-circuit",
+            "relié à la terre"
+          ],
+          "bonne": 1,
+          "explication": "L'ohmmètre envoie son propre petit courant. Sous tension, la mesure est fausse et l'appareil peut être détruit."
+        },
+        {
+          "id": "q507",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "En mode continuité, le multimètre émet un bip. Cela signifie…",
+          "reponses": [
+            "qu'il y a une tension",
+            "que la liaison est bonne, le courant peut passer",
+            "que le fil est coupé",
+            "que la pile est faible"
+          ],
+          "bonne": 1,
+          "explication": "Le bip indique une résistance quasi nulle : le fil n'est pas coupé, le contact est fermé."
+        },
+        {
+          "id": "q508",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Que signifie VAT ?",
+          "reponses": [
+            "Voltmètre À Tension",
+            "Vérificateur d'Absence de Tension",
+            "Vérification Avant Travaux",
+            "Valeur Alternative de Tension"
+          ],
+          "bonne": 1,
+          "explication": "Le VAT est l'appareil dédié à la vérification d'absence de tension avant travaux hors tension."
+        },
+        {
+          "id": "q509",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Avant et après une vérification d'absence de tension, on doit…",
+          "reponses": [
+            "changer les piles",
+            "tester le VAT sur une source sous tension connue",
+            "le laisser reposer",
+            "l'envoyer en étalonnage"
+          ],
+          "bonne": 1,
+          "explication": "Un VAT en panne afficherait « pas de tension » à tort. On le teste avant, et après pour s'assurer qu'il n'a pas lâché entre-temps."
+        },
+        {
+          "id": "q510",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Peut-on utiliser un multimètre à la place d'un VAT pour vérifier l'absence de tension ?",
+          "reponses": [
+            "Oui, c'est équivalent",
+            "Oui, si le calibre est bon",
+            "Non, seul un VAT conforme est prévu pour cela",
+            "Oui, en continu seulement"
+          ],
+          "bonne": 2,
+          "explication": "Le multimètre n'est pas conçu pour cet usage : mauvais calibre, pile faible ou cordon abîmé peuvent tromper. La norme impose un VAT."
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "titre": "Installation domestique",
+      "ordre": 7,
+      "fiches": [
+        {
+          "id": "tableau",
+          "titre": "Le tableau électrique",
+          "image": "tableau.png",
+          "contenu": "Le tableau est le point de départ de tous les circuits de la maison. De haut en bas, en général :\n\n• Le disjoncteur de branchement (près du compteur) : coupe toute l'installation et limite la puissance souscrite.\n• Les interrupteurs différentiels 30 mA : protègent les personnes. Il en faut au moins deux, dont un de type A pour la plaque de cuisson et le lave-linge.\n• Les disjoncteurs divisionnaires : un par circuit, calibrés selon la section du câble. Ils protègent le câble, pas l'appareil.\n• Le bornier de terre : rassemble tous les conducteurs vert/jaune et les relie à la prise de terre."
+        },
+        {
+          "id": "sections",
+          "titre": "Sections de câbles et calibres",
+          "image": "sections.png",
+          "contenu": "Plus un câble est gros (section en mm²), plus il supporte de courant sans chauffer. Le disjoncteur doit être choisi pour protéger le câble.\n\nRègles courantes (NF C 15-100) :\n• Éclairage : 1,5 mm², disjoncteur 16 A maximum, 8 points lumineux maximum.\n• Prises : 2,5 mm² avec disjoncteur 20 A (12 prises max), ou 1,5 mm² avec 16 A (8 prises max).\n• Circuits spécialisés (lave-linge, four, lave-vaisselle) : 2,5 mm², disjoncteur 20 A, une seule prise par circuit.\n• Plaque de cuisson : 6 mm², disjoncteur 32 A.\n\nÀ retenir : un disjoncteur trop gros sur un câble trop fin laisse le câble chauffer, c'est un risque d'incendie."
+        },
+        {
+          "id": "salle_de_bain",
+          "titre": "Salle de bains et locaux humides",
+          "image": "salle_de_bain.png",
+          "contenu": "L'eau rend l'électricité beaucoup plus dangereuse. La norme découpe la salle de bains en volumes autour de la baignoire ou de la douche :\n\n• Volume 0 : l'intérieur de la baignoire ou du receveur. Aucun appareil.\n• Volume 1 : au-dessus, jusqu'à 2,25 m. Seulement des appareils en très basse tension de sécurité (TBTS 12 V).\n• Volume 2 : 60 cm autour du volume 1. Appareils protégés contre les projections (IPX4), classe II.\n• Hors volumes : prises et appareils classiques autorisés.\n\nIndice de protection IP : le premier chiffre concerne les solides (poussière), le second l'eau. IPX4 = protégé contre les projections d'eau.\n\nLiaison équipotentielle : toutes les masses métalliques (canalisations, radiateur, baignoire métallique) sont reliées entre elles et à la terre, pour qu'aucune différence de tension ne puisse apparaître entre deux objets qu'on touche."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q601",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Dans un tableau, quel appareil placé en amont des disjoncteurs divisionnaires protège les personnes ?",
+          "reponses": [
+            "Le compteur",
+            "L'interrupteur différentiel 30 mA",
+            "Le parafoudre",
+            "Le bornier de terre"
+          ],
+          "bonne": 1,
+          "explication": "L'interrupteur différentiel 30 mA détecte les fuites de courant vers la terre et coupe : c'est lui qui protège les personnes."
+        },
+        {
+          "id": "q602",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "À quoi sert le bornier de terre du tableau ?",
+          "reponses": [
+            "À alimenter les prises",
+            "À relier tous les conducteurs de terre à la prise de terre",
+            "À couper le courant",
+            "À mesurer la consommation"
+          ],
+          "bonne": 1,
+          "explication": "Tous les fils vert/jaune de l'installation y aboutissent, et le bornier est relié à la prise de terre du bâtiment."
+        },
+        {
+          "id": "q603",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le disjoncteur divisionnaire d'un circuit protège avant tout…",
+          "reponses": [
+            "l'appareil branché",
+            "les personnes",
+            "le câble du circuit",
+            "le compteur"
+          ],
+          "bonne": 2,
+          "explication": "Le disjoncteur est calibré selon la section du câble : il le protège contre l'échauffement en cas de surcharge ou de court-circuit."
+        },
+        {
+          "id": "q604",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Quelle section de câble pour un circuit d'éclairage ?",
+          "reponses": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "6 mm²",
+            "10 mm²"
+          ],
+          "bonne": 0,
+          "explication": "L'éclairage se câble en 1,5 mm², protégé par un disjoncteur de 16 A maximum."
+        },
+        {
+          "id": "q605",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Quelle section de câble pour une plaque de cuisson protégée par un disjoncteur 32 A ?",
+          "reponses": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "6 mm²",
+            "0,75 mm²"
+          ],
+          "bonne": 2,
+          "explication": "La plaque de cuisson appelle un fort courant : 6 mm² et disjoncteur 32 A."
+        },
+        {
+          "id": "q606",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un circuit spécialisé pour un lave-linge se câble en…",
+          "reponses": [
+            "1,5 mm² avec un disjoncteur 10 A",
+            "2,5 mm² avec un disjoncteur 20 A",
+            "6 mm² avec un disjoncteur 32 A",
+            "0,75 mm² avec un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Les circuits spécialisés (lave-linge, four, lave-vaisselle) sont en 2,5 mm² sous 20 A, avec une seule prise par circuit."
+        },
+        {
+          "id": "q607",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Si on augmente la section d'un câble, le courant qu'il peut supporter…",
+          "reponses": [
+            "diminue",
+            "augmente",
+            "ne change pas",
+            "devient nul"
+          ],
+          "bonne": 1,
+          "explication": "Un câble plus gros a moins de résistance et chauffe moins : il supporte plus de courant."
+        },
+        {
+          "id": "q608",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Dans le volume 1 d'une salle de bains (au-dessus de la baignoire), que peut-on installer ?",
+          "reponses": [
+            "Une prise 230 V",
+            "Un radiateur classique",
+            "Uniquement des appareils en très basse tension de sécurité 12 V",
+            "Une lampe 230 V classique"
+          ],
+          "bonne": 2,
+          "explication": "Le volume 1 n'accepte que la très basse tension de sécurité (TBTS 12 V). Les prises 230 V sont interdites dans les volumes."
+        },
+        {
+          "id": "q609",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Que signifie IPX4 sur un luminaire ?",
+          "reponses": [
+            "Résiste à la poussière",
+            "Protégé contre les projections d'eau",
+            "Fonctionne sous l'eau",
+            "Alimenté en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Le second chiffre de l'indice IP concerne l'eau : 4 = protégé contre les projections de toutes directions."
+        },
+        {
+          "id": "q610",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "À quoi sert la liaison équipotentielle d'une salle de bains ?",
+          "reponses": [
+            "À chauffer le sol",
+            "À relier toutes les masses métalliques à la terre pour éviter une différence de tension",
+            "À alimenter le sèche-serviettes",
+            "À isoler la baignoire"
+          ],
+          "bonne": 1,
+          "explication": "Si toutes les masses sont au même potentiel, toucher deux objets métalliques en même temps ne peut pas créer de courant à travers le corps."
+        }
+      ]
+    },
+    {
+      "id": "energie",
+      "titre": "Énergie et consommation",
+      "ordre": 8,
+      "fiches": [
+        {
+          "id": "energie",
+          "titre": "Puissance et énergie",
+          "image": "energie.png",
+          "contenu": "La puissance P, en watts (W), c'est ce qu'un appareil consomme à un instant donné.\n\nL'énergie E, c'est la puissance multipliée par la durée d'utilisation :\n\nE = P × t\n\nElle se mesure en wattheures (Wh) ou en kilowattheures (kWh). 1 kWh, c'est un appareil de 1 000 W qui fonctionne pendant 1 heure.\n\nExemple : un radiateur de 2 000 W allumé 3 heures consomme 2 kW × 3 h = 6 kWh.\n\nC'est l'énergie, en kWh, que mesure le compteur et que facture le fournisseur."
+        },
+        {
+          "id": "facture",
+          "titre": "Lire sa consommation",
+          "image": "facture.png",
+          "contenu": "La facture d'électricité comporte deux parties : l'abonnement, qui dépend de la puissance souscrite, et la consommation, en kWh.\n\nLa puissance souscrite (6 kVA, 9 kVA, 12 kVA…) est la puissance maximale que l'on peut appeler en même temps. Si on la dépasse, le disjoncteur de branchement coupe. Pour une maison, 1 kVA vaut à peu près 1 kW.\n\nOrdres de grandeur de puissance :\n• Ampoule LED : 10 W\n• Télévision : 100 W\n• Réfrigérateur : 150 W (par intermittence)\n• Four : 2 500 W\n• Plaque à induction : 7 000 W\n\nUn kWh coûte de l'ordre de 0,20 à 0,30 €."
+        },
+        {
+          "id": "economies",
+          "titre": "Réduire sa consommation",
+          "image": "economies.png",
+          "contenu": "Dans un logement tout électrique, les plus gros postes sont le chauffage, l'eau chaude et la cuisson. L'éclairage en LED ne pèse presque rien.\n\nLa veille : un appareil en veille consomme un peu, mais en permanence. Multiplié par le nombre d'appareils et par les heures, ça finit par compter.\n\nLe rendement, c'est le rapport entre l'énergie utile et l'énergie consommée. Une LED transforme la majorité de l'électricité en lumière ; une ampoule à incandescence la transformait surtout en chaleur.\n\nLes heures creuses : l'électricité coûte moins cher la nuit, on y programme le chauffe-eau et les gros appareils."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q701",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Dans quelle unité le compteur mesure-t-il l'énergie consommée ?",
+          "reponses": [
+            "Le watt (W)",
+            "Le volt (V)",
+            "Le kilowattheure (kWh)",
+            "L'ampère (A)"
+          ],
+          "bonne": 2,
+          "explication": "Le compteur mesure une énergie, en kWh. Le watt est une puissance, c'est-à-dire une consommation à un instant donné."
+        },
+        {
+          "id": "q702",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Un radiateur de 2 000 W fonctionne pendant 3 heures. Énergie consommée ?",
+          "reponses": [
+            "2 kWh",
+            "6 kWh",
+            "600 kWh",
+            "0,67 kWh"
+          ],
+          "bonne": 1,
+          "explication": "E = P × t = 2 kW × 3 h = 6 kWh."
+        },
+        {
+          "id": "q703",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Quelle formule relie l'énergie, la puissance et le temps ?",
+          "reponses": [
+            "E = P / t",
+            "E = P × t",
+            "E = U × R",
+            "E = P + t"
+          ],
+          "bonne": 1,
+          "explication": "L'énergie est la puissance multipliée par la durée : E = P × t."
+        },
+        {
+          "id": "q704",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Une ampoule LED de 10 W allumée 100 heures consomme…",
+          "reponses": [
+            "10 kWh",
+            "100 kWh",
+            "1 kWh",
+            "0,1 kWh"
+          ],
+          "bonne": 2,
+          "explication": "10 W × 100 h = 1 000 Wh = 1 kWh."
+        },
+        {
+          "id": "q705",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "La puissance souscrite, par exemple 6 kVA, correspond à…",
+          "reponses": [
+            "la consommation mensuelle",
+            "la puissance maximale utilisable en même temps",
+            "la tension du réseau",
+            "le prix de l'abonnement"
+          ],
+          "bonne": 1,
+          "explication": "C'est le plafond de puissance que l'on peut appeler simultanément. Au-delà, le disjoncteur de branchement coupe."
+        },
+        {
+          "id": "q706",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "Que se passe-t-il si la puissance appelée dépasse la puissance souscrite ?",
+          "reponses": [
+            "La tension baisse",
+            "Le compteur s'arrête",
+            "Le disjoncteur de branchement coupe",
+            "Rien de particulier"
+          ],
+          "bonne": 2,
+          "explication": "Le disjoncteur de branchement est réglé sur la puissance souscrite : en cas de dépassement, il coupe toute l'installation."
+        },
+        {
+          "id": "q707",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "Lequel de ces appareils a la plus grande puissance ?",
+          "reponses": [
+            "Une ampoule LED",
+            "Une télévision",
+            "Un four",
+            "Une plaque à induction"
+          ],
+          "bonne": 3,
+          "explication": "La plaque à induction peut appeler 7 000 W, le four environ 2 500 W, la télévision 100 W, la LED 10 W."
+        },
+        {
+          "id": "q708",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Quel poste consomme généralement le plus dans un logement tout électrique ?",
+          "reponses": [
+            "L'éclairage",
+            "La télévision",
+            "Le chauffage",
+            "Le réfrigérateur"
+          ],
+          "bonne": 2,
+          "explication": "Le chauffage, puis l'eau chaude et la cuisson, représentent l'essentiel de la consommation. L'éclairage LED est négligeable."
+        },
+        {
+          "id": "q709",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Un appareil en veille…",
+          "reponses": [
+            "ne consomme rien",
+            "consomme un peu, mais en permanence",
+            "consomme autant qu'allumé",
+            "recharge sa batterie"
+          ],
+          "bonne": 1,
+          "explication": "Quelques watts en permanence, multipliés par le nombre d'appareils et par 8 760 heures par an, finissent par peser."
+        },
+        {
+          "id": "q710",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Le rendement d'un appareil, c'est…",
+          "reponses": [
+            "sa puissance en watts",
+            "le rapport entre l'énergie utile et l'énergie consommée",
+            "sa durée de vie",
+            "son prix par kWh"
+          ],
+          "bonne": 1,
+          "explication": "Un rendement de 90 % signifie que 90 % de l'énergie consommée sert vraiment, le reste est perdu, souvent en chaleur."
+        }
+      ]
+    },
+    {
+      "id": "habilitation",
+      "titre": "Habilitation électrique : premiers repères",
+      "ordre": 9,
+      "fiches": [
+        {
+          "id": "principe",
+          "titre": "Qu'est-ce que l'habilitation ?",
+          "image": "habilitation.png",
+          "contenu": "L'habilitation électrique est la reconnaissance, par l'employeur, de la capacité d'une personne à accomplir en sécurité les tâches électriques qui lui sont confiées. Elle est encadrée par la norme NF C 18-510.\n\nElle n'est pas un diplôme : elle suit une formation (théorie + pratique), une évaluation, et l'employeur délivre un titre d'habilitation. Elle est liée à un poste et à des tâches précises.\n\nUn recyclage est recommandé tous les 3 ans, ou plus tôt si les tâches ou l'installation changent."
+        },
+        {
+          "id": "symboles",
+          "titre": "Lire un symbole d'habilitation",
+          "image": "symboles_hab.png",
+          "contenu": "Un symbole d'habilitation se lit caractère par caractère.\n\n1er caractère, le domaine de tension : B = basse tension (jusqu'à 1 000 V en alternatif), H = haute tension.\n\n2e caractère, le rôle :\n• 0 : non-électricien, travaux d'ordre non électrique.\n• 1 : exécutant électricien.\n• 2 : chargé de travaux.\n• R : chargé d'intervention générale (dépannage, en basse tension).\n• S : chargé d'intervention élémentaire (remplacer un fusible, une lampe, raccorder un appareil simple).\n• C : chargé de consignation.\n• E : opérations spécifiques (essai, vérification, mesurage, manœuvre).\n\nLettre V : travaux au voisinage de pièces nues sous tension.\n\nExemples : B0, BS, BR, B1V, B2V, BC."
+        },
+        {
+          "id": "consignation",
+          "titre": "La consignation en 4 étapes",
+          "image": "consignation.png",
+          "contenu": "Pour travailler hors tension en sécurité, on consigne l'ouvrage. Quatre étapes, toujours dans cet ordre :\n\n1. Séparation : ouvrir l'appareil de coupure, sur tous les conducteurs actifs, pour isoler l'ouvrage de toute source.\n2. Condamnation : bloquer l'appareil en position ouverte (cadenas) et signaler (pancarte) pour empêcher toute remise sous tension.\n3. Identification : s'assurer que l'on est bien sur l'ouvrage concerné (repérage, schéma, étiquettes).\n4. Vérification d'absence de tension (VAT) : avec un VAT testé avant et après, sur chaque conducteur. En haute tension, ou s'il y a un risque de réalimentation, on ajoute la mise à la terre et en court-circuit.\n\nMoyen mnémotechnique : S-C-I-V. La déconsignation se fait en sens inverse. Les EPI : gants isolants, écran facial, tapis et outils isolés."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q801",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "Qui délivre le titre d'habilitation électrique ?",
+          "reponses": [
+            "L'organisme de formation",
+            "La préfecture",
+            "L'employeur",
+            "Le médecin du travail"
+          ],
+          "bonne": 2,
+          "explication": "L'organisme forme et évalue, mais c'est l'employeur qui délivre le titre, pour des tâches précises."
+        },
+        {
+          "id": "q802",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "L'habilitation électrique atteste que la personne…",
+          "reponses": [
+            "est diplômée en électricité",
+            "est reconnue capable d'accomplir en sécurité les tâches confiées",
+            "peut travailler sous tension sans protection",
+            "est électricien de métier"
+          ],
+          "bonne": 1,
+          "explication": "Ce n'est ni un diplôme ni un métier : c'est une reconnaissance de capacité, limitée aux tâches confiées."
+        },
+        {
+          "id": "q803",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "Quelle norme encadre l'habilitation électrique en France ?",
+          "reponses": [
+            "NF C 15-100",
+            "NF C 18-510",
+            "ISO 9001",
+            "NF C 14-100"
+          ],
+          "bonne": 1,
+          "explication": "La NF C 18-510 traite des opérations sur les ouvrages électriques et de l'habilitation. La NF C 15-100 concerne les installations basse tension."
+        },
+        {
+          "id": "q804",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Dans le symbole B1V, que signifie la lettre B ?",
+          "reponses": [
+            "Bâtiment",
+            "Basse tension",
+            "Bureau",
+            "Base"
+          ],
+          "bonne": 1,
+          "explication": "B = basse tension, jusqu'à 1 000 V en alternatif. H = haute tension."
+        },
+        {
+          "id": "q805",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Quelle habilitation pour un non-électricien qui effectue des travaux non électriques dans un local électrique ?",
+          "reponses": [
+            "BR",
+            "B1V",
+            "B0",
+            "BC"
+          ],
+          "bonne": 2,
+          "explication": "B0 : non-électricien, travaux d'ordre non électrique (peinture, maçonnerie…) à proximité d'installations."
+        },
+        {
+          "id": "q806",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "L'habilitation BS permet…",
+          "reponses": [
+            "de consigner une installation",
+            "des interventions élémentaires : remplacer un fusible, une lampe, raccorder un appareil simple",
+            "de diriger des travaux",
+            "de travailler sous tension"
+          ],
+          "bonne": 1,
+          "explication": "BS = chargé d'intervention élémentaire, en basse tension, sur des circuits simples et hors tension."
+        },
+        {
+          "id": "q807",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Que signifie la lettre V dans B2V ?",
+          "reponses": [
+            "Vérification",
+            "Visite",
+            "Travaux au voisinage de pièces nues sous tension",
+            "Volt"
+          ],
+          "bonne": 2,
+          "explication": "V = voisinage : la personne peut travailler à proximité de pièces nues sous tension, avec les précautions adaptées."
+        },
+        {
+          "id": "q808",
+          "fiche_id": "consignation",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les étapes de la consignation d'un ouvrage basse tension.",
+          "reponses": [
+            "Séparation de l'ouvrage",
+            "Condamnation de l'appareil de séparation",
+            "Identification de l'ouvrage",
+            "Vérification d'absence de tension"
+          ],
+          "explication": "Séparer, condamner, identifier, vérifier l'absence de tension : on retient S-C-I-V."
+        },
+        {
+          "id": "q809",
+          "fiche_id": "consignation",
+          "type": "qcm",
+          "enonce": "À quoi sert la condamnation lors d'une consignation ?",
+          "reponses": [
+            "À couper le courant",
+            "À empêcher toute remise sous tension (cadenas, pancarte)",
+            "À identifier le circuit",
+            "À mesurer la tension"
+          ],
+          "bonne": 1,
+          "explication": "Le cadenas bloque l'appareil en position ouverte, la pancarte prévient : personne ne peut remettre sous tension par erreur."
+        },
+        {
+          "id": "q810",
+          "fiche_id": "consignation",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les actions pour vérifier l'absence de tension avec un VAT.",
+          "reponses": [
+            "Tester le VAT sur une source sous tension connue",
+            "Vérifier l'absence de tension sur l'ouvrage consigné",
+            "Retester le VAT sur la source connue"
+          ],
+          "explication": "Le VAT se teste avant et après la vérification : un appareil en panne afficherait « pas de tension » à tort."
+        }
+      ]
     }
   ]
 }

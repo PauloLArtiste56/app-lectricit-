@@ -72,6 +72,6 @@ void main() {
     // Et l'accueil est bien repassé à zéro.
     await tester.tap(find.text('Accueil'));
     await tester.pumpAndSettle();
-    expect(find.text('0/10 questions réussies'), findsNWidgets(5));
+    expect(find.text('0/10 questions réussies'), findsNWidgets(9));
   });
 }
