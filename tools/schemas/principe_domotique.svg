@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Ce que fait la domotique</text>
+<circle cx="190" cy="330" r="110" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="190" y="355.92" font-size="72" fill="white" text-anchor="middle" font-weight="bold" >D</text>
+<circle cx="380" cy="192" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="200" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Capteurs</text>
+<text x="420" y="240" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >température, présence, ouverture</text>
+<circle cx="380" cy="307" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="315" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Centrale</text>
+<text x="420" y="355" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >décide selon les scénarios</text>
+<circle cx="380" cy="422" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="430" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Actionneurs</text>
+<text x="420" y="470" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >relais, modules, moteurs</text>
+<circle cx="380" cy="537" r="12" fill="#43A047" stroke="#43A047" stroke-width="5"/>
+<text x="420" y="545" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Scénarios</text>
+<text x="420" y="585" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >départ, nuit, arrivée</text>
+
+</svg>

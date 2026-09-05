@@ -125,9 +125,15 @@ Modules existants (par thème) :
 22. Magnétisme et induction
 23. Électronique de base
 24. Photovoltaïque
+25. Réseaux et distribution
+26. Chauffage électrique et eau chaude
+27. Domotique et maison connectée
+28. Véhicule électrique : la recharge
+29. Batteries et stockage
 
-Sujets à venir : domotique, véhicule électrique, réseaux et distribution, chauffage
-électrique, ventilation, batteries et stockage, éclairage extérieur, normes…
+Sujets à venir : ventilation et climatisation, éclairage extérieur, normes et diagnostic,
+outillage électroportatif, électricité et enfants, histoire de l'électricité, unités et
+préfixes, lecture d'une plaque signalétique, électricité en camping-car / bateau…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,

@@ -2462,9 +2462,624 @@
       "ordre": 8
     },
     {
+      "id": "reseaux",
+      "titre": "Réseaux et distribution",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "production",
+          "titre": "De la centrale à la prise",
+          "contenu": "L'électricité ne se stocke presque pas : elle est produite au moment où elle est consommée.\n\nProduction : centrales nucléaires, hydrauliques, thermiques, éoliennes, solaires. Les alternateurs produisent en moyenne tension (autour de 20 kV), élevée par transformateur pour le transport.\n\nTransport (RTE) : lignes très haute tension, 225 kV et 400 kV, pour limiter les pertes sur de longues distances. Plus la tension est haute, plus le courant est faible pour la même puissance, donc moins de pertes par échauffement.\n\nDistribution (Enedis) : postes sources qui abaissent à 20 kV (HTA), puis postes de transformation de quartier qui donnent le 400 V triphasé / 230 V des rues.",
+          "image": "production.png"
+        },
+        {
+          "id": "branchement",
+          "titre": "Le branchement et le compteur",
+          "contenu": "Depuis le réseau basse tension de la rue, un branchement alimente chaque logement, en monophasé (230 V) ou en triphasé (400 V) pour les grosses puissances.\n\nLe compteur communicant (Linky) mesure l'énergie, transmet les index, permet de changer la puissance souscrite à distance et de suivre sa consommation. Il coupe si la puissance appelée dépasse l'abonnement.\n\nLe disjoncteur de branchement, juste après, est la limite entre le réseau (propriété du distributeur) et l'installation privée. Il sert aussi de coupure générale.\n\nLe point de livraison (PDL) est le numéro qui identifie ton branchement.",
+          "image": "branchement.png"
+        },
+        {
+          "id": "regimes_neutre",
+          "titre": "Les régimes de neutre",
+          "contenu": "Le régime de neutre décrit comment le neutre et les masses sont reliés à la terre. Il conditionne la protection des personnes.\n\n• TT : neutre à la terre au poste, masses à la terre chez l'usager, via sa propre prise de terre. C'est le régime des habitations en France : le différentiel 30 mA est indispensable.\n• TN : masses reliées au neutre (conducteur PEN ou PE). Utilisé dans l'industrie, un défaut devient un court-circuit qui fait déclencher le disjoncteur.\n• IT : neutre isolé de la terre, un premier défaut ne coupe pas (hôpitaux, process continus) mais est signalé par un contrôleur d'isolement ; il faut le corriger avant un second défaut.",
+          "image": "regimes_neutre.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2401",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "L'électricité produite est…",
+          "reponses": [
+            "stockée dans le réseau",
+            "consommée au moment où elle est produite",
+            "gardée dans les lignes",
+            "stockée dans les transformateurs"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau doit équilibrer en permanence production et consommation."
+        },
+        {
+          "id": "q2402",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "Les lignes de transport sont en très haute tension pour…",
+          "reponses": [
+            "être plus jolies",
+            "limiter les pertes sur de longues distances",
+            "éviter les oiseaux",
+            "chauffer moins l'air"
+          ],
+          "bonne": 1,
+          "explication": "À puissance égale, tension plus haute = courant plus faible = moins de pertes par échauffement."
+        },
+        {
+          "id": "q2403",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "Tensions typiques du transport en France ?",
+          "reponses": [
+            "230 V et 400 V",
+            "20 kV",
+            "225 kV et 400 kV",
+            "12 V"
+          ],
+          "bonne": 2,
+          "explication": "RTE exploite le réseau à 225 et 400 kV."
+        },
+        {
+          "id": "q2404",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "La distribution moyenne tension (HTA) est à environ…",
+          "reponses": [
+            "400 V",
+            "20 kV",
+            "400 kV",
+            "1 000 V"
+          ],
+          "bonne": 1,
+          "explication": "20 kV entre les postes sources et les postes de quartier."
+        },
+        {
+          "id": "q2405",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "Le poste de transformation de quartier délivre…",
+          "reponses": [
+            "du 20 kV",
+            "du 400 V triphasé / 230 V",
+            "du 225 kV",
+            "du 12 V"
+          ],
+          "bonne": 1,
+          "explication": "C'est de là que partent les réseaux basse tension des rues."
+        },
+        {
+          "id": "q2406",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "Qui exploite le réseau de transport en France ?",
+          "reponses": [
+            "Enedis",
+            "RTE",
+            "EDF seulement",
+            "La mairie"
+          ],
+          "bonne": 1,
+          "explication": "RTE = transport (THT), Enedis = distribution (HTA et BT)."
+        },
+        {
+          "id": "q2407",
+          "fiche_id": "production",
+          "type": "qcm",
+          "enonce": "Quelle source produit sans alternateur tournant ?",
+          "reponses": [
+            "Nucléaire",
+            "Hydraulique",
+            "Solaire photovoltaïque",
+            "Éolien"
+          ],
+          "bonne": 2,
+          "explication": "Les panneaux produisent directement du courant continu, converti par onduleur."
+        },
+        {
+          "id": "q2408",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Un branchement monophasé fournit…",
+          "reponses": [
+            "230 V",
+            "400 V entre phases",
+            "20 kV",
+            "12 V"
+          ],
+          "bonne": 0,
+          "explication": "Une phase et un neutre : 230 V."
+        },
+        {
+          "id": "q2409",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Le triphasé domestique est utile pour…",
+          "reponses": [
+            "l'éclairage",
+            "les fortes puissances : pompe à chaleur, gros moteurs, ateliers",
+            "la télévision",
+            "le wifi"
+          ],
+          "bonne": 1,
+          "explication": "Trois phases : la puissance est répartie, les courants par phase sont plus faibles."
+        },
+        {
+          "id": "q2410",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Le compteur Linky permet de…",
+          "reponses": [
+            "produire de l'électricité",
+            "transmettre les index et changer la puissance à distance",
+            "chauffer",
+            "remplacer le disjoncteur"
+          ],
+          "bonne": 1,
+          "explication": "Plus de relevé manuel, et un suivi de consommation détaillé."
+        },
+        {
+          "id": "q2411",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Le disjoncteur de branchement marque…",
+          "reponses": [
+            "la limite entre le réseau et l'installation privée",
+            "le début du réseau HTA",
+            "la fin du compteur",
+            "la salle de bains"
+          ],
+          "bonne": 0,
+          "explication": "Avant : le distributeur. Après : l'usager."
+        },
+        {
+          "id": "q2412",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Le PDL, c'est…",
+          "reponses": [
+            "une prise de terre",
+            "le numéro qui identifie le point de livraison",
+            "un disjoncteur",
+            "une ligne"
+          ],
+          "bonne": 1,
+          "explication": "Il figure sur la facture et sert aux démarches."
+        },
+        {
+          "id": "q2413",
+          "fiche_id": "branchement",
+          "type": "qcm",
+          "enonce": "Le compteur coupe l'alimentation quand…",
+          "reponses": [
+            "il pleut",
+            "la puissance appelée dépasse la puissance souscrite",
+            "on ouvre le tableau",
+            "on change de fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Il faut alors réduire la consommation ou augmenter l'abonnement."
+        },
+        {
+          "id": "q2414",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "Le régime de neutre des habitations en France est…",
+          "reponses": [
+            "TN",
+            "TT",
+            "IT",
+            "TNC"
+          ],
+          "bonne": 1,
+          "explication": "Neutre à la terre au poste, masses à la terre chez l'usager."
+        },
+        {
+          "id": "q2415",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "En régime TT, la protection des personnes repose sur…",
+          "reponses": [
+            "le fusible",
+            "le différentiel 30 mA et la prise de terre",
+            "le compteur",
+            "le parafoudre"
+          ],
+          "bonne": 1,
+          "explication": "Le courant de défaut passe par la terre et déclenche le différentiel."
+        },
+        {
+          "id": "q2416",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "En régime TN, un défaut d'isolement…",
+          "reponses": [
+            "ne fait rien",
+            "devient un court-circuit qui fait déclencher le disjoncteur",
+            "fait exploser le compteur",
+            "augmente la tension"
+          ],
+          "bonne": 1,
+          "explication": "Les masses étant reliées au neutre, le courant de défaut est très élevé."
+        },
+        {
+          "id": "q2417",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "Le régime IT est utilisé…",
+          "reponses": [
+            "dans toutes les maisons",
+            "là où un premier défaut ne doit pas couper : hôpitaux, process continus",
+            "sur le réseau de transport",
+            "dans les piscines"
+          ],
+          "bonne": 1,
+          "explication": "Le premier défaut est signalé, pas coupé ; on le corrige avant le second."
+        },
+        {
+          "id": "q2418",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "En régime IT, quel appareil surveille l'installation ?",
+          "reponses": [
+            "Un compteur",
+            "Un contrôleur permanent d'isolement",
+            "Un fusible",
+            "Un parafoudre"
+          ],
+          "bonne": 1,
+          "explication": "Il alarme dès le premier défaut."
+        },
+        {
+          "id": "q2419",
+          "fiche_id": "regimes_neutre",
+          "type": "qcm",
+          "enonce": "La prise de terre d'une maison en TT est…",
+          "reponses": [
+            "celle du poste",
+            "la sienne, propre à l'installation",
+            "inutile",
+            "celle du voisin"
+          ],
+          "bonne": 1,
+          "explication": "Piquet ou boucle à fond de fouille : chaque installation a sa terre."
+        },
+        {
+          "id": "q2420",
+          "fiche_id": "production",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre le chemin de l'électricité jusqu'à la prise.",
+          "reponses": [
+            "Centrale : alternateur",
+            "Transformateur élévateur et transport à 400 kV",
+            "Poste source : abaissement à 20 kV",
+            "Poste de quartier : 400 V / 230 V",
+            "Branchement, compteur, tableau, prise"
+          ],
+          "explication": "Production, transport, distribution HTA, distribution BT, installation."
+        }
+      ],
+      "ordre": 9
+    },
+    {
+      "id": "batteries",
+      "titre": "Batteries et stockage",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "technologies_bat",
+          "titre": "Piles et batteries",
+          "contenu": "Une pile produit du courant par réaction chimique et ne se recharge pas. Une batterie (accumulateur) se recharge.\n\n• Plomb : voiture thermique, alimentation de secours ; lourde, robuste, 12 V (6 éléments de 2 V).\n• Nickel-métal-hydrure (NiMH) : piles rechargeables AA, 1,2 V.\n• Lithium-ion : téléphones, outils, véhicules électriques ; légère, dense, 3,6 à 3,7 V par élément ; à protéger par une électronique (BMS).\n• Lithium fer phosphate (LFP) : plus sûre et durable, 3,2 V par élément, stockage domestique.\n\nEn série, les tensions s'ajoutent ; en parallèle, les capacités.",
+          "image": "technologies_bat.png"
+        },
+        {
+          "id": "capacite",
+          "titre": "Capacité, énergie, autonomie",
+          "contenu": "La capacité se mesure en ampères-heures (Ah) : 100 Ah, c'est 100 A pendant 1 h, ou 10 A pendant 10 h.\n\nL'énergie se mesure en wattheures : E = U × capacité. Une batterie 12 V de 100 Ah stocke 1 200 Wh, soit 1,2 kWh.\n\nAutonomie = énergie disponible / puissance consommée. Un appareil de 60 W sur 1,2 kWh tient environ 20 heures, moins en pratique car on ne décharge pas une batterie à 100 %.\n\nUn cycle = une charge et une décharge. Le lithium-ion tient 500 à 2 000 cycles selon l'usage ; le LFP davantage.",
+          "image": "capacite.png"
+        },
+        {
+          "id": "securite_batteries",
+          "titre": "Charger et manipuler en sécurité",
+          "contenu": "Utiliser le chargeur prévu pour la technologie : une batterie lithium chargée avec un chargeur plomb peut s'emballer.\n\nUn court-circuit sur une batterie (clé, outil entre les bornes) provoque un courant énorme : brûlures, incendie. On protège les bornes.\n\nPlomb : dégagement d'hydrogène en charge, local ventilé, acide corrosif. Lithium : ne pas percer, ne pas exposer à la chaleur, ne pas charger une batterie gonflée ou abîmée ; stocker à moitié chargée.\n\nRecyclage obligatoire : points de collecte. Batterie domestique de stockage : local ventilé, protections, installation par un professionnel.",
+          "image": "securite_batteries.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2801",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "La différence entre une pile et une batterie ?",
+          "reponses": [
+            "La taille",
+            "La batterie se recharge, la pile non",
+            "La couleur",
+            "La tension"
+          ],
+          "bonne": 1,
+          "explication": "Pile = usage unique. Batterie = accumulateur rechargeable."
+        },
+        {
+          "id": "q2802",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "Une batterie de voiture au plomb fait…",
+          "reponses": [
+            "1,5 V",
+            "12 V : six éléments de 2 V",
+            "230 V",
+            "3,7 V"
+          ],
+          "bonne": 1,
+          "explication": "Chaque élément plomb-acide fournit environ 2 V."
+        },
+        {
+          "id": "q2803",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "La tension d'un élément lithium-ion est d'environ…",
+          "reponses": [
+            "1,2 V",
+            "2 V",
+            "3,6 à 3,7 V",
+            "12 V"
+          ],
+          "bonne": 2,
+          "explication": "D'où les packs de plusieurs éléments en série."
+        },
+        {
+          "id": "q2804",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "Une pile rechargeable AA NiMH fait…",
+          "reponses": [
+            "1,5 V",
+            "1,2 V",
+            "3,7 V",
+            "9 V"
+          ],
+          "bonne": 1,
+          "explication": "Un peu moins qu'une pile alcaline de 1,5 V."
+        },
+        {
+          "id": "q2805",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "Le BMS d'une batterie lithium sert à…",
+          "reponses": [
+            "la chauffer",
+            "surveiller et protéger les éléments (tension, courant, température)",
+            "la vendre",
+            "la recycler"
+          ],
+          "bonne": 1,
+          "explication": "Battery Management System : indispensable avec le lithium."
+        },
+        {
+          "id": "q2806",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "Le lithium fer phosphate (LFP) est apprécié pour…",
+          "reponses": [
+            "sa légèreté extrême",
+            "sa sécurité et sa durée de vie",
+            "sa tension de 12 V",
+            "son prix élevé"
+          ],
+          "bonne": 1,
+          "explication": "Moins dense que le lithium-ion classique, mais plus stable et durable."
+        },
+        {
+          "id": "q2807",
+          "fiche_id": "technologies_bat",
+          "type": "qcm",
+          "enonce": "Brancher des batteries en série…",
+          "reponses": [
+            "ajoute les capacités",
+            "ajoute les tensions",
+            "ne change rien",
+            "divise la tension"
+          ],
+          "bonne": 1,
+          "explication": "Quatre éléments LFP de 3,2 V en série : 12,8 V."
+        },
+        {
+          "id": "q2808",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "100 Ah, c'est…",
+          "reponses": [
+            "100 A pendant 1 h, ou 10 A pendant 10 h",
+            "100 W",
+            "100 V",
+            "100 kWh"
+          ],
+          "bonne": 0,
+          "explication": "La capacité est une quantité de charge, pas une énergie."
+        },
+        {
+          "id": "q2809",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "Énergie d'une batterie 12 V de 100 Ah ?",
+          "reponses": [
+            "100 Wh",
+            "1 200 Wh",
+            "12 Wh",
+            "12 kWh"
+          ],
+          "bonne": 1,
+          "explication": "E = U × Q = 12 × 100 = 1 200 Wh = 1,2 kWh."
+        },
+        {
+          "id": "q2810",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "Un appareil de 60 W sur 1,2 kWh tient en théorie…",
+          "reponses": [
+            "2 h",
+            "20 h",
+            "200 h",
+            "6 min"
+          ],
+          "bonne": 1,
+          "explication": "1 200 / 60 = 20 h, moins en pratique."
+        },
+        {
+          "id": "q2811",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "Un cycle de batterie, c'est…",
+          "reponses": [
+            "une seconde de fonctionnement",
+            "une charge et une décharge",
+            "un an",
+            "une réparation"
+          ],
+          "bonne": 1,
+          "explication": "La durée de vie se compte en cycles."
+        },
+        {
+          "id": "q2812",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "Décharger une batterie lithium à 0 % régulièrement…",
+          "reponses": [
+            "prolonge sa vie",
+            "réduit sa durée de vie",
+            "est sans effet",
+            "la recharge"
+          ],
+          "bonne": 1,
+          "explication": "Les décharges profondes usent les éléments."
+        },
+        {
+          "id": "q2813",
+          "fiche_id": "capacite",
+          "type": "qcm",
+          "enonce": "Deux batteries 12 V 100 Ah en parallèle donnent…",
+          "reponses": [
+            "24 V 100 Ah",
+            "12 V 200 Ah",
+            "12 V 100 Ah",
+            "24 V 200 Ah"
+          ],
+          "bonne": 1,
+          "explication": "En parallèle, même tension, capacités additionnées."
+        },
+        {
+          "id": "q2814",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Charger une batterie lithium avec un chargeur plomb…",
+          "reponses": [
+            "est possible",
+            "peut la faire s'emballer : chargeur adapté obligatoire",
+            "charge plus vite",
+            "est recommandé"
+          ],
+          "bonne": 1,
+          "explication": "Les profils de charge sont différents."
+        },
+        {
+          "id": "q2815",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Une clé qui touche les deux bornes d'une batterie…",
+          "reponses": [
+            "ne fait rien",
+            "crée un court-circuit : brûlures, incendie",
+            "recharge la batterie",
+            "mesure la tension"
+          ],
+          "bonne": 1,
+          "explication": "Courant de plusieurs centaines d'ampères instantanément."
+        },
+        {
+          "id": "q2816",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Une batterie au plomb en charge dégage…",
+          "reponses": [
+            "de l'oxygène pur",
+            "de l'hydrogène, inflammable : local ventilé",
+            "du CO2",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Pas de flamme ni d'étincelle près d'une batterie en charge."
+        },
+        {
+          "id": "q2817",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Une batterie lithium gonflée…",
+          "reponses": [
+            "se recharge normalement",
+            "ne doit plus être chargée ni utilisée : recyclage",
+            "se perce pour dégonfler",
+            "se met au congélateur"
+          ],
+          "bonne": 1,
+          "explication": "Le gonflement annonce un emballement possible."
+        },
+        {
+          "id": "q2818",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Pour stocker une batterie lithium longtemps, on la laisse…",
+          "reponses": [
+            "à 0 %",
+            "à moitié chargée, au frais",
+            "à 100 %",
+            "au soleil"
+          ],
+          "bonne": 1,
+          "explication": "Environ 50 %, à température modérée."
+        },
+        {
+          "id": "q2819",
+          "fiche_id": "securite_batteries",
+          "type": "qcm",
+          "enonce": "Une batterie de stockage domestique s'installe…",
+          "reponses": [
+            "dans la chambre",
+            "dans un local ventilé, avec protections, par un professionnel",
+            "au grenier sous les tuiles",
+            "dehors sans abri"
+          ],
+          "bonne": 1,
+          "explication": "Ventilation, protections, et respect des consignes du fabricant."
+        },
+        {
+          "id": "q2820",
+          "fiche_id": "capacite",
+          "type": "ordre",
+          "enonce": "Calcule l'autonomie : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Lire la tension et la capacité de la batterie (12 V, 100 Ah)",
+            "Calculer l'énergie : 12 × 100 = 1 200 Wh",
+            "Diviser par la puissance de l'appareil (60 W)",
+            "Réduire pour ne pas décharger à 100 %"
+          ],
+          "explication": "Énergie, puis division par la puissance, puis marge de sécurité."
+        }
+      ],
+      "ordre": 10
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 9,
+      "ordre": 11,
       "fiches": [
         {
           "id": "multimetre",
@@ -2772,7 +3387,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 10,
+      "ordre": 12,
       "fiches": [
         {
           "id": "tableau",
@@ -3382,7 +3997,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 11
+      "ordre": 13
     },
     {
       "id": "cablage",
@@ -3690,7 +4305,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 12
+      "ordre": 14
     },
     {
       "id": "parafoudre",
@@ -3997,7 +4612,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 13
+      "ordre": 15
     },
     {
       "id": "locaux_risques",
@@ -4304,7 +4919,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 14
+      "ordre": 16
     },
     {
       "id": "photovoltaique",
@@ -4611,12 +5226,934 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 15
+      "ordre": 17
+    },
+    {
+      "id": "chauffage",
+      "titre": "Chauffage électrique et eau chaude",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "appareils_chauffage",
+          "titre": "Les appareils de chauffage",
+          "contenu": "• Convecteur : chauffe l'air par une résistance, réactif mais peu confortable.\n• Panneau rayonnant : chauffe les surfaces et les personnes, comme le soleil.\n• Radiateur à inertie : accumule la chaleur (fonte, céramique, fluide) et la restitue doucement.\n• Plancher chauffant : câble ou film sous le sol, confort homogène.\n• Pompe à chaleur (PAC) : prend la chaleur dehors et la transfère dedans ; pour 1 kWh consommé, 3 à 4 kWh de chaleur (COP 3 à 4).\n\nUn radiateur de 1 000 W chauffe environ 10 m² dans un logement correctement isolé.",
+          "image": "appareils_chauffage.png"
+        },
+        {
+          "id": "regulation",
+          "titre": "Régulation et économies",
+          "contenu": "Le thermostat maintient la température de consigne. Un programmateur baisse la nuit et en absence : 1 °C de moins, c'est environ 7 % d'économie.\n\nLe fil pilote : un sixième fil (noir) qui transmet l'ordre confort / éco / hors gel / arrêt à chaque radiateur depuis un programmateur central.\n\nLe délestage coupe brièvement les radiateurs quand la puissance appelée approche l'abonnement, pour éviter le disjonctage.\n\nLe chauffage est protégé par ses propres circuits : 2,5 mm² et 20 A pour un groupe de radiateurs, jamais sur les prises.",
+          "image": "regulation.png"
+        },
+        {
+          "id": "eau_chaude",
+          "titre": "Le chauffe-eau",
+          "contenu": "Le chauffe-eau à accumulation (cumulus) chauffe un ballon de 100 à 300 litres avec une résistance de 1 500 à 3 000 W, souvent en heures creuses via un contacteur jour / nuit commandé par le compteur.\n\nLe thermostat le règle entre 50 et 55 °C : assez chaud contre les bactéries, pas trop pour limiter le tartre et la consommation.\n\nLe groupe de sécurité (soupape) évacue la surpression : il goutte pendant la chauffe, c'est normal.\n\nCircuit dédié : 2,5 mm², disjoncteur 20 A, différentiel 30 mA. Le chauffe-eau thermodynamique utilise une petite pompe à chaleur et consomme trois fois moins.",
+          "image": "eau_chaude.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2501",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Un convecteur chauffe…",
+          "reponses": [
+            "les murs",
+            "l'air, par une résistance",
+            "le sol",
+            "l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Réactif, mais l'air chaud monte et le confort est moyen."
+        },
+        {
+          "id": "q2502",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Un radiateur à inertie…",
+          "reponses": [
+            "chauffe instantanément puis s'arrête",
+            "accumule la chaleur et la restitue doucement",
+            "fonctionne à l'eau",
+            "est un climatiseur"
+          ],
+          "bonne": 1,
+          "explication": "Fonte, céramique ou fluide : chaleur douce et stable."
+        },
+        {
+          "id": "q2503",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Une pompe à chaleur avec un COP de 3…",
+          "reponses": [
+            "consomme 3 kWh pour 1 kWh de chaleur",
+            "fournit 3 kWh de chaleur pour 1 kWh consommé",
+            "ne chauffe pas",
+            "fonctionne au gaz"
+          ],
+          "bonne": 1,
+          "explication": "Elle déplace la chaleur au lieu de la produire : d'où son efficacité."
+        },
+        {
+          "id": "q2504",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Puissance indicative pour chauffer 10 m² bien isolés ?",
+          "reponses": [
+            "100 W",
+            "1 000 W",
+            "5 000 W",
+            "10 W"
+          ],
+          "bonne": 1,
+          "explication": "Environ 100 W par m², à adapter à l'isolation et à la région."
+        },
+        {
+          "id": "q2505",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Le panneau rayonnant chauffe…",
+          "reponses": [
+            "l'air uniquement",
+            "les surfaces et les personnes, comme le soleil",
+            "l'eau",
+            "le plafond"
+          ],
+          "bonne": 1,
+          "explication": "Sensation de chaleur rapide, même si l'air est encore frais."
+        },
+        {
+          "id": "q2506",
+          "fiche_id": "appareils_chauffage",
+          "type": "qcm",
+          "enonce": "Un plancher chauffant électrique est…",
+          "reponses": [
+            "un radiateur mural",
+            "un câble ou un film chauffant sous le sol",
+            "une pompe à chaleur",
+            "un convecteur"
+          ],
+          "bonne": 1,
+          "explication": "Chaleur homogène, sans radiateur visible."
+        },
+        {
+          "id": "q2507",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Baisser la consigne de 1 °C économise environ…",
+          "reponses": [
+            "0 %",
+            "7 %",
+            "50 %",
+            "1 %"
+          ],
+          "bonne": 1,
+          "explication": "Sur une saison de chauffe, ça compte."
+        },
+        {
+          "id": "q2508",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Le fil pilote transmet…",
+          "reponses": [
+            "le courant de chauffe",
+            "l'ordre confort / éco / hors gel / arrêt",
+            "la terre",
+            "le wifi"
+          ],
+          "bonne": 1,
+          "explication": "Sixième fil, noir, depuis un programmateur central."
+        },
+        {
+          "id": "q2509",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Le délestage sert à…",
+          "reponses": [
+            "chauffer plus",
+            "couper brièvement des radiateurs pour éviter de disjoncter",
+            "éteindre la lumière",
+            "refroidir"
+          ],
+          "bonne": 1,
+          "explication": "Il gère la puissance quand tout fonctionne en même temps."
+        },
+        {
+          "id": "q2510",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Les radiateurs se raccordent…",
+          "reponses": [
+            "sur les prises",
+            "sur des circuits dédiés en 2,5 mm² / 20 A",
+            "sur l'éclairage",
+            "sur le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Jamais sur un circuit de prises."
+        },
+        {
+          "id": "q2511",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Le mode hors gel maintient environ…",
+          "reponses": [
+            "20 °C",
+            "7 à 8 °C",
+            "0 °C",
+            "15 °C"
+          ],
+          "bonne": 1,
+          "explication": "Assez pour éviter le gel des canalisations en absence."
+        },
+        {
+          "id": "q2512",
+          "fiche_id": "regulation",
+          "type": "qcm",
+          "enonce": "Un thermostat…",
+          "reponses": [
+            "produit de la chaleur",
+            "maintient la température de consigne en coupant et relançant le chauffage",
+            "mesure la consommation",
+            "coupe le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Il compare la température mesurée à la consigne."
+        },
+        {
+          "id": "q2513",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Un chauffe-eau à accumulation chauffe…",
+          "reponses": [
+            "l'eau à la demande",
+            "un ballon d'eau stocké, souvent en heures creuses",
+            "l'air",
+            "le sol"
+          ],
+          "bonne": 1,
+          "explication": "Le contacteur jour / nuit le lance quand le kWh est moins cher."
+        },
+        {
+          "id": "q2514",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Réglage recommandé du thermostat d'un chauffe-eau ?",
+          "reponses": [
+            "30 °C",
+            "50 à 55 °C",
+            "80 °C",
+            "100 °C"
+          ],
+          "bonne": 1,
+          "explication": "Assez chaud contre les bactéries, pas trop pour le tartre et la consommation."
+        },
+        {
+          "id": "q2515",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Le groupe de sécurité goutte pendant la chauffe. C'est…",
+          "reponses": [
+            "une fuite à réparer",
+            "normal : il évacue la surpression",
+            "un défaut électrique",
+            "un signe de tartre"
+          ],
+          "bonne": 1,
+          "explication": "L'eau se dilate en chauffant, la soupape libère la surpression."
+        },
+        {
+          "id": "q2516",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Le contacteur jour / nuit est commandé par…",
+          "reponses": [
+            "le thermostat",
+            "le compteur, via le contact heures creuses",
+            "le radiateur",
+            "l'interrupteur de la salle de bains"
+          ],
+          "bonne": 1,
+          "explication": "Le compteur ferme un contact pendant les heures creuses."
+        },
+        {
+          "id": "q2517",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Un chauffe-eau thermodynamique…",
+          "reponses": [
+            "utilise une petite pompe à chaleur et consomme environ trois fois moins",
+            "chauffe au gaz",
+            "n'existe pas",
+            "est un convecteur"
+          ],
+          "bonne": 0,
+          "explication": "Il puise la chaleur dans l'air ambiant ou extérieur."
+        },
+        {
+          "id": "q2518",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Circuit d'un chauffe-eau ?",
+          "reponses": [
+            "1,5 mm² / 10 A partagé",
+            "2,5 mm² / 20 A dédié, différentiel 30 mA",
+            "6 mm² / 32 A",
+            "sur une prise"
+          ],
+          "bonne": 1,
+          "explication": "Circuit spécialisé, comme le four ou le lave-linge."
+        },
+        {
+          "id": "q2519",
+          "fiche_id": "eau_chaude",
+          "type": "qcm",
+          "enonce": "Le tartre dans un chauffe-eau…",
+          "reponses": [
+            "améliore la chauffe",
+            "isole la résistance et augmente la consommation",
+            "est sans effet",
+            "refroidit l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Détartrage périodique, surtout en eau dure."
+        },
+        {
+          "id": "q2520",
+          "fiche_id": "eau_chaude",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre le cycle d'un chauffe-eau en heures creuses.",
+          "reponses": [
+            "Le compteur ferme le contact heures creuses",
+            "Le contacteur jour / nuit s'enclenche",
+            "La résistance chauffe l'eau du ballon",
+            "Le thermostat coupe à la température réglée"
+          ],
+          "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
+        }
+      ],
+      "ordre": 18
+    },
+    {
+      "id": "domotique",
+      "titre": "Domotique et maison connectée",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "principe_domotique",
+          "titre": "Ce que fait la domotique",
+          "contenu": "La domotique automatise et pilote la maison : éclairage, volets, chauffage, prises, alarme.\n\nTrois briques : des capteurs (température, présence, luminosité, ouverture), une centrale ou box qui décide, des actionneurs (relais, modules, moteurs).\n\nScénarios : « départ » coupe les lumières et baisse le chauffage ; « nuit » ferme les volets ; un détecteur allume l'entrée. On pilote depuis un smartphone, une commande vocale ou des boutons.",
+          "image": "principe_domotique.png"
+        },
+        {
+          "id": "technologies",
+          "titre": "Filaire ou sans fil",
+          "contenu": "Filaire (bus KNX, câblage en étoile) : fiable, pour le neuf ou la rénovation lourde ; chaque point de commande est câblé vers le tableau.\n\nSans fil : Wi-Fi (simple, gourmand), Zigbee et Z-Wave (réseaux maillés basse consommation, pour capteurs sur pile), Bluetooth (proximité). Les modules se placent derrière un interrupteur ou dans le tableau.\n\nModule derrière interrupteur : il a besoin d'un neutre dans la boîte, ce qui manque souvent dans l'ancien ; il existe des modules sans neutre.\n\nInteropérabilité : le standard Matter vise à faire parler ensemble les marques.",
+          "image": "technologies.png"
+        },
+        {
+          "id": "securite_domotique",
+          "titre": "Sécurité et bon sens",
+          "contenu": "La domotique ne dispense d'aucune règle électrique : modules dans des boîtes adaptées, hors tension pour installer, sections et protections inchangées.\n\nUn module qui commande un radiateur ou un chauffe-eau doit supporter le courant : 16 A pour une prise, contacteur pour les fortes puissances.\n\nSécurité numérique : mots de passe changés, mises à jour, réseau séparé pour les objets connectés, et un mode manuel qui garde la maison utilisable si la box tombe.\n\nUn volet roulant motorisé a un fin de course et des sécurités : ne jamais forcer.",
+          "image": "securite_domotique.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2601",
+          "fiche_id": "principe_domotique",
+          "type": "qcm",
+          "enonce": "Les trois briques de la domotique sont…",
+          "reponses": [
+            "capteurs, centrale, actionneurs",
+            "fils, prises, lampes",
+            "wifi, 4G, fibre",
+            "piles, batteries, panneaux"
+          ],
+          "bonne": 0,
+          "explication": "Mesurer, décider, agir."
+        },
+        {
+          "id": "q2602",
+          "fiche_id": "principe_domotique",
+          "type": "qcm",
+          "enonce": "Un scénario « départ » peut…",
+          "reponses": [
+            "couper les lumières et baisser le chauffage",
+            "changer le fournisseur",
+            "réparer une prise",
+            "augmenter la puissance souscrite"
+          ],
+          "bonne": 0,
+          "explication": "Une seule action déclenche plusieurs commandes."
+        },
+        {
+          "id": "q2603",
+          "fiche_id": "principe_domotique",
+          "type": "qcm",
+          "enonce": "Un actionneur, c'est…",
+          "reponses": [
+            "un capteur de température",
+            "ce qui agit : relais, module, moteur",
+            "une application",
+            "une facture"
+          ],
+          "bonne": 1,
+          "explication": "Le capteur mesure, l'actionneur agit."
+        },
+        {
+          "id": "q2604",
+          "fiche_id": "principe_domotique",
+          "type": "qcm",
+          "enonce": "Un détecteur de présence est…",
+          "reponses": [
+            "un actionneur",
+            "un capteur",
+            "une centrale",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Il envoie une information : quelqu'un est là."
+        },
+        {
+          "id": "q2605",
+          "fiche_id": "principe_domotique",
+          "type": "qcm",
+          "enonce": "Quel usage courant de la domotique pour le chauffage ?",
+          "reponses": [
+            "Le rendre plus puissant",
+            "Programmer et piloter à distance selon la présence",
+            "Le remplacer",
+            "Le brancher sur une prise"
+          ],
+          "bonne": 1,
+          "explication": "Économies et confort par la programmation."
+        },
+        {
+          "id": "q2606",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Le bus KNX est…",
+          "reponses": [
+            "sans fil",
+            "filaire, pour le neuf ou la rénovation lourde",
+            "un protocole radio",
+            "une application"
+          ],
+          "bonne": 1,
+          "explication": "Fiable et durable, mais chaque point est câblé."
+        },
+        {
+          "id": "q2607",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Zigbee et Z-Wave sont…",
+          "reponses": [
+            "des réseaux maillés basse consommation",
+            "des câbles",
+            "des marques de prises",
+            "des types de lampes"
+          ],
+          "bonne": 0,
+          "explication": "Chaque module relaie le signal : la portée s'étend avec le nombre d'appareils."
+        },
+        {
+          "id": "q2608",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Un capteur sur pile utilise plutôt…",
+          "reponses": [
+            "le Wi-Fi",
+            "Zigbee ou Z-Wave",
+            "le 230 V",
+            "le KNX filaire"
+          ],
+          "bonne": 1,
+          "explication": "Le Wi-Fi vide une pile en quelques jours."
+        },
+        {
+          "id": "q2609",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Un module derrière interrupteur a souvent besoin…",
+          "reponses": [
+            "d'un neutre dans la boîte",
+            "d'une antenne extérieure",
+            "d'un compteur",
+            "d'une pile"
+          ],
+          "bonne": 0,
+          "explication": "Sans neutre, choisir un module « sans neutre »."
+        },
+        {
+          "id": "q2610",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Le standard Matter vise à…",
+          "reponses": [
+            "remplacer le 230 V",
+            "faire parler ensemble les objets de marques différentes",
+            "chiffrer le wifi",
+            "mesurer la consommation"
+          ],
+          "bonne": 1,
+          "explication": "Interopérabilité entre écosystèmes."
+        },
+        {
+          "id": "q2611",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Le Bluetooth est adapté…",
+          "reponses": [
+            "à toute la maison",
+            "à la proximité : une serrure, une lampe",
+            "au transport HT",
+            "aux capteurs éloignés"
+          ],
+          "bonne": 1,
+          "explication": "Portée courte, usage ponctuel."
+        },
+        {
+          "id": "q2612",
+          "fiche_id": "technologies",
+          "type": "qcm",
+          "enonce": "Dans le tableau, un module domotique se présente comme…",
+          "reponses": [
+            "une lampe",
+            "un module rail DIN, souvent avec relais",
+            "une prise",
+            "un compteur"
+          ],
+          "bonne": 1,
+          "explication": "Il s'insère sur le rail, comme un disjoncteur."
+        },
+        {
+          "id": "q2613",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "La domotique dispense-t-elle des règles électriques ?",
+          "reponses": [
+            "Oui",
+            "Non : boîtes, hors tension, sections et protections inchangées",
+            "Oui, en sans fil",
+            "Oui, si la box est récente"
+          ],
+          "bonne": 1,
+          "explication": "Un module est un appareil électrique comme un autre."
+        },
+        {
+          "id": "q2614",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Pour commander un chauffe-eau via la domotique, on utilise…",
+          "reponses": [
+            "un module 2 A",
+            "un contacteur commandé par le module",
+            "une prise wifi",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Le module commande, le contacteur supporte le courant."
+        },
+        {
+          "id": "q2615",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Le courant maximal d'un module prise standard est souvent…",
+          "reponses": [
+            "1 A",
+            "16 A",
+            "63 A",
+            "400 A"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà, un contacteur ou un module de puissance."
+        },
+        {
+          "id": "q2616",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Si la box domotique tombe en panne…",
+          "reponses": [
+            "toute la maison est bloquée",
+            "un mode manuel doit garder les commandes utilisables",
+            "il faut couper le compteur",
+            "on attend"
+          ],
+          "bonne": 1,
+          "explication": "Les interrupteurs physiques restent essentiels."
+        },
+        {
+          "id": "q2617",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Mesure de sécurité numérique de base ?",
+          "reponses": [
+            "Garder le mot de passe par défaut",
+            "Changer les mots de passe et faire les mises à jour",
+            "Désactiver les mises à jour",
+            "Partager la box"
+          ],
+          "bonne": 1,
+          "explication": "Les objets connectés sont des portes d'entrée sur le réseau."
+        },
+        {
+          "id": "q2618",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Un volet roulant motorisé qui bloque : on…",
+          "reponses": [
+            "force à la main",
+            "arrête et cherche la cause, sans forcer",
+            "coupe le compteur",
+            "le démonte sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Fin de course, obstacle, moteur : forcer casse le mécanisme."
+        },
+        {
+          "id": "q2619",
+          "fiche_id": "securite_domotique",
+          "type": "qcm",
+          "enonce": "Installer un module derrière un interrupteur se fait…",
+          "reponses": [
+            "sous tension, c'est petit",
+            "hors tension, disjoncteur coupé et vérifié",
+            "avec des gants en tissu",
+            "la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Même règle que pour une prise."
+        },
+        {
+          "id": "q2620",
+          "fiche_id": "principe_domotique",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre la chaîne d'un allumage automatique.",
+          "reponses": [
+            "Le détecteur repère un mouvement",
+            "La centrale reçoit l'information",
+            "La centrale décide selon le scénario",
+            "Le module relais allume la lampe"
+          ],
+          "explication": "Capteur, centrale, décision, actionneur."
+        }
+      ],
+      "ordre": 19
+    },
+    {
+      "id": "vehicule_electrique",
+      "titre": "Véhicule électrique : la recharge",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "modes_recharge",
+          "titre": "Les modes de recharge",
+          "contenu": "• Prise domestique classique : 8 à 10 A, environ 2 kW, très lent et prise sollicitée pendant des heures. Dépannage seulement.\n• Prise renforcée (type Green'up) : 16 A, 3,7 kW, sur circuit dédié.\n• Borne murale (wallbox) : 7,4 kW en monophasé 32 A, jusqu'à 11 ou 22 kW en triphasé. Une nuit suffit pour une charge complète.\n• Charge rapide en courant continu (bornes publiques) : 50 à 350 kW, le convertisseur est dans la borne.\n\nUne batterie de 60 kWh à 7,4 kW se recharge en 8 heures environ.",
+          "image": "modes_recharge.png"
+        },
+        {
+          "id": "installation_ve",
+          "titre": "Installer une borne",
+          "contenu": "Circuit dédié depuis le tableau, avec disjoncteur adapté (40 A pour 32 A de charge), différentiel 30 mA de type A avec détection 6 mA DC, ou de type F ou B.\n\nSection : 10 mm² pour 32 A sur une distance courante, plus si la borne est loin. Puissance souscrite à revoir : 7,4 kW de charge plus la maison demandent souvent 12 kVA.\n\nL'installateur doit être qualifié IRVE au-delà de 3,7 kW. Le pilotage énergétique (délestage, heures creuses) évite de disjoncter et réduit la facture. En copropriété, le droit à la prise permet de faire installer une borne.",
+          "image": "installation_ve.png"
+        },
+        {
+          "id": "securite_ve",
+          "titre": "Sécurité et bonnes pratiques",
+          "contenu": "La batterie haute tension du véhicule (400 à 800 V continu) est hors d'atteinte : jamais d'intervention dessus sans habilitation spécifique (B2VL, BCL…).\n\nLe câble de recharge se verrouille des deux côtés ; on ne le débranche pas en pleine charge sans arrêter la session.\n\nPas de rallonge ni de multiprise pour recharger. Vérifier régulièrement la prise renforcée (échauffement, noircissement).\n\nEn cas d'incendie de batterie : s'éloigner, appeler le 18, ne pas tenter d'éteindre soi-même.",
+          "image": "securite_ve.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2701",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Recharger sur une prise domestique classique, c'est…",
+          "reponses": [
+            "l'idéal au quotidien",
+            "un dépannage : lent et prise sollicitée des heures",
+            "impossible",
+            "le plus rapide"
+          ],
+          "bonne": 1,
+          "explication": "Environ 2 kW : une nuit pour quelques dizaines de kilomètres."
+        },
+        {
+          "id": "q2702",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Une prise renforcée type Green'up fournit…",
+          "reponses": [
+            "2 kW",
+            "3,7 kW (16 A)",
+            "22 kW",
+            "50 kW"
+          ],
+          "bonne": 1,
+          "explication": "Sur circuit dédié, avec des contacts prévus pour la charge prolongée."
+        },
+        {
+          "id": "q2703",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Une wallbox monophasée 32 A délivre…",
+          "reponses": [
+            "3,7 kW",
+            "7,4 kW",
+            "22 kW",
+            "100 kW"
+          ],
+          "bonne": 1,
+          "explication": "230 V × 32 A ≈ 7,4 kW."
+        },
+        {
+          "id": "q2704",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Pour 11 ou 22 kW à domicile, il faut…",
+          "reponses": [
+            "du monophasé",
+            "du triphasé",
+            "une prise classique",
+            "une batterie"
+          ],
+          "bonne": 1,
+          "explication": "Trois phases répartissent la puissance."
+        },
+        {
+          "id": "q2705",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "La charge rapide sur borne publique se fait en…",
+          "reponses": [
+            "alternatif 230 V",
+            "courant continu, le convertisseur est dans la borne",
+            "12 V",
+            "triphasé 400 V uniquement"
+          ],
+          "bonne": 1,
+          "explication": "50 à 350 kW en continu, directement dans la batterie."
+        },
+        {
+          "id": "q2706",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Une batterie de 60 kWh à 7,4 kW se recharge en environ…",
+          "reponses": [
+            "1 h",
+            "8 h",
+            "30 h",
+            "10 min"
+          ],
+          "bonne": 1,
+          "explication": "60 / 7,4 ≈ 8 heures, une nuit."
+        },
+        {
+          "id": "q2707",
+          "fiche_id": "modes_recharge",
+          "type": "qcm",
+          "enonce": "Quelle est la puissance d'une prise classique en recharge ?",
+          "reponses": [
+            "2 kW environ",
+            "7 kW",
+            "22 kW",
+            "50 kW"
+          ],
+          "bonne": 0,
+          "explication": "Limitée à 8-10 A par le câble de recharge d'urgence."
+        },
+        {
+          "id": "q2708",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Le circuit d'une borne 32 A est…",
+          "reponses": [
+            "partagé avec les prises",
+            "dédié depuis le tableau",
+            "branché sur l'éclairage",
+            "sur le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Circuit spécialisé, comme la plaque de cuisson."
+        },
+        {
+          "id": "q2709",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Quel différentiel pour une borne ?",
+          "reponses": [
+            "Type AC",
+            "Type A avec détection 6 mA DC, ou type F ou B",
+            "Aucun",
+            "Un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Le véhicule peut générer des courants de fuite continus que le type AC ne voit pas."
+        },
+        {
+          "id": "q2710",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Section indicative pour 32 A sur une distance courante ?",
+          "reponses": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "10 mm²",
+            "35 mm²"
+          ],
+          "bonne": 2,
+          "explication": "Plus si la borne est loin, pour limiter la chute de tension."
+        },
+        {
+          "id": "q2711",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Au-delà de 3,7 kW, l'installateur doit être…",
+          "reponses": [
+            "plombier",
+            "qualifié IRVE",
+            "électricien sans qualification particulière",
+            "le concessionnaire"
+          ],
+          "bonne": 1,
+          "explication": "Qualification obligatoire pour les bornes de plus de 3,7 kW."
+        },
+        {
+          "id": "q2712",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Le pilotage énergétique d'une borne sert à…",
+          "reponses": [
+            "charger plus vite",
+            "éviter de disjoncter et profiter des heures creuses",
+            "laver la voiture",
+            "mesurer la batterie"
+          ],
+          "bonne": 1,
+          "explication": "La borne module sa puissance selon ce que consomme la maison."
+        },
+        {
+          "id": "q2713",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "Avec une borne 7,4 kW, l'abonnement passe souvent à…",
+          "reponses": [
+            "3 kVA",
+            "12 kVA",
+            "6 kVA",
+            "36 kVA"
+          ],
+          "bonne": 1,
+          "explication": "7,4 kW de charge plus la maison : 6 kVA ne suffit plus."
+        },
+        {
+          "id": "q2714",
+          "fiche_id": "installation_ve",
+          "type": "qcm",
+          "enonce": "En copropriété, faire installer une borne est possible grâce…",
+          "reponses": [
+            "à rien",
+            "au droit à la prise",
+            "au syndic uniquement",
+            "à l'assurance"
+          ],
+          "bonne": 1,
+          "explication": "Le droit à la prise encadre la demande d'un occupant."
+        },
+        {
+          "id": "q2715",
+          "fiche_id": "securite_ve",
+          "type": "qcm",
+          "enonce": "La batterie de traction d'un véhicule électrique est en…",
+          "reponses": [
+            "12 V",
+            "400 à 800 V continu",
+            "230 V alternatif",
+            "5 V"
+          ],
+          "bonne": 1,
+          "explication": "Haute tension continue : intervention réservée aux habilités."
+        },
+        {
+          "id": "q2716",
+          "fiche_id": "securite_ve",
+          "type": "qcm",
+          "enonce": "Intervenir sur la batterie haute tension demande…",
+          "reponses": [
+            "un B0",
+            "une habilitation spécifique véhicule électrique (B2VL, BCL…)",
+            "un permis de conduire",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Habilitations « L » pour les véhicules et engins électriques."
+        },
+        {
+          "id": "q2717",
+          "fiche_id": "securite_ve",
+          "type": "qcm",
+          "enonce": "Recharger avec une rallonge ou une multiprise…",
+          "reponses": [
+            "est pratique",
+            "est à proscrire : échauffement et incendie",
+            "charge plus vite",
+            "est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "Le courant prolongé fait chauffer les connexions non prévues."
+        },
+        {
+          "id": "q2718",
+          "fiche_id": "securite_ve",
+          "type": "qcm",
+          "enonce": "Débrancher le câble en pleine charge…",
+          "reponses": [
+            "est normal",
+            "se fait après avoir arrêté la session, le câble est verrouillé",
+            "coupe la batterie",
+            "recharge plus vite"
+          ],
+          "bonne": 1,
+          "explication": "Le verrouillage évite justement l'arrachement sous charge."
+        },
+        {
+          "id": "q2719",
+          "fiche_id": "securite_ve",
+          "type": "qcm",
+          "enonce": "Incendie de batterie de véhicule : on…",
+          "reponses": [
+            "arrose",
+            "s'éloigne et appelle le 18",
+            "ouvre le capot",
+            "souffle dessus"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie lithium en feu est très difficile à éteindre."
+        },
+        {
+          "id": "q2720",
+          "fiche_id": "installation_ve",
+          "type": "ordre",
+          "enonce": "Installer une borne 7,4 kW : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier la puissance souscrite et l'adapter",
+            "Tirer un circuit dédié en 10 mm² depuis le tableau",
+            "Poser le disjoncteur et le différentiel type A 6 mA DC",
+            "Raccorder et paramétrer la borne (pilotage, heures creuses)",
+            "Tester la charge"
+          ],
+          "explication": "Alimentation, câblage, protections, borne, test."
+        }
+      ],
+      "ordre": 20
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 16,
+      "ordre": 21,
       "fiches": [
         {
           "id": "dangers",
@@ -4924,7 +6461,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 17,
+      "ordre": 22,
       "fiches": [
         {
           "id": "principe",
@@ -5532,7 +7069,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 18
+      "ordre": 23
     },
     {
       "id": "epi",
@@ -5839,7 +7376,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 19
+      "ordre": 24
     },
     {
       "id": "b0_bs",
@@ -6147,7 +7684,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 20
+      "ordre": 25
     },
     {
       "id": "br",
@@ -6455,7 +7992,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 21
+      "ordre": 26
     },
     {
       "id": "secours",
@@ -6762,7 +8299,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 22
+      "ordre": 27
     },
     {
       "id": "b1_b2",
@@ -7071,7 +8608,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 23
+      "ordre": 28
     },
     {
       "id": "bc",
@@ -7379,7 +8916,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 24
+      "ordre": 29
     }
   ]
 }

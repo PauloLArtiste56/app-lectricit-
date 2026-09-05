@@ -511,3 +511,22 @@ RESUMES_C = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_C:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_D = [
+ ("production", "De la centrale à la prise", "kV", [("Produite = consommée", "l'électricité ne se stocke presque pas"), ("Transport 225 / 400 kV", "RTE, pertes limitées"), ("Distribution HTA 20 kV", "Enedis, postes sources"), ("Poste de quartier", "400 V triphasé / 230 V")], BLEU),
+ ("branchement", "Branchement et compteur", "PDL", [("Monophasé 230 V ou triphasé 400 V", "selon la puissance"), ("Compteur communicant", "index, puissance à distance, suivi"), ("Disjoncteur de branchement", "limite réseau / installation"), ("Coupure si dépassement", "de la puissance souscrite")], VERT),
+ ("regimes_neutre", "Les régimes de neutre", "TT", [("TT : habitations", "différentiel 30 mA + prise de terre"), ("TN : industrie", "défaut = court-circuit, le disjoncteur coupe"), ("IT : hôpitaux, process", "premier défaut signalé, pas coupé"), ("Contrôleur d'isolement", "en IT")], AMBRE),
+ ("appareils_chauffage", "Les appareils de chauffage", "°C", [("Convecteur, rayonnant, inertie", "air, surfaces, accumulation"), ("Plancher chauffant", "confort homogène"), ("Pompe à chaleur", "COP 3 à 4"), ("≈ 100 W par m²", "logement bien isolé")], ROUGE),
+ ("regulation", "Régulation et économies", "-1°C", [("Thermostat et programmateur", "1 °C de moins ≈ 7 % d'économie"), ("Fil pilote", "confort, éco, hors gel, arrêt"), ("Délestage", "évite de disjoncter"), ("Circuits dédiés", "2,5 mm² / 20 A")], BLEU),
+ ("eau_chaude", "Le chauffe-eau", "55°C", [("Ballon 100 à 300 L", "résistance 1 500 à 3 000 W"), ("Heures creuses", "contacteur jour / nuit"), ("50 à 55 °C", "bactéries vs tartre"), ("Groupe de sécurité", "goutte à la chauffe : normal")], AMBRE),
+ ("principe_domotique", "Ce que fait la domotique", "D", [("Capteurs", "température, présence, ouverture"), ("Centrale", "décide selon les scénarios"), ("Actionneurs", "relais, modules, moteurs"), ("Scénarios", "départ, nuit, arrivée")], VERT),
+ ("technologies", "Filaire ou sans fil", "RF", [("KNX filaire", "neuf, rénovation lourde"), ("Zigbee, Z-Wave", "maillé, basse consommation"), ("Module derrière interrupteur", "neutre souvent nécessaire"), ("Matter", "interopérabilité")], BLEU),
+ ("securite_domotique", "Sécurité et bon sens", "!", [("Règles électriques inchangées", "hors tension, boîtes, sections"), ("Contacteur pour les fortes puissances", "module 16 A maximum"), ("Mots de passe, mises à jour", "réseau séparé"), ("Mode manuel", "si la box tombe")], ROUGE),
+ ("modes_recharge", "Les modes de recharge", "kW", [("Prise classique : 2 kW", "dépannage seulement"), ("Prise renforcée : 3,7 kW", "circuit dédié"), ("Wallbox : 7,4 / 11 / 22 kW", "une nuit suffit"), ("Rapide DC : 50 à 350 kW", "bornes publiques")], VERT),
+ ("installation_ve", "Installer une borne", "IRVE", [("Circuit dédié 10 mm²", "disjoncteur 40 A"), ("Différentiel type A 6 mA DC", "ou F, ou B"), ("Installateur IRVE", "au-delà de 3,7 kW"), ("Abonnement 12 kVA", "pilotage énergétique")], BLEU),
+ ("securite_ve", "Sécurité et bonnes pratiques", "800V", [("Batterie 400 à 800 V DC", "habilitation spécifique"), ("Câble verrouillé", "arrêter la session avant"), ("Ni rallonge ni multiprise", "surveiller la prise"), ("Incendie", "s'éloigner, appeler le 18")], ROUGE),
+ ("technologies_bat", "Piles et batteries", "Li", [("Pile : usage unique", "batterie : rechargeable"), ("Plomb 12 V, NiMH 1,2 V", "lithium 3,7 V, LFP 3,2 V"), ("BMS", "protège le lithium"), ("Série : tensions", "parallèle : capacités")], AMBRE),
+ ("capacite", "Capacité et autonomie", "Ah", [("Ah : quantité de charge", "100 Ah = 10 A pendant 10 h"), ("E = U × Ah", "12 V × 100 Ah = 1,2 kWh"), ("Autonomie = E / P", "1 200 Wh / 60 W ≈ 20 h"), ("Cycles", "500 à 2 000 pour le lithium")], BLEU),
+ ("securite_batteries", "Charger en sécurité", "!", [("Chargeur adapté", "à la technologie"), ("Court-circuit = incendie", "protéger les bornes"), ("Plomb : hydrogène", "lithium : ni percer ni chauffer"), ("Recyclage obligatoire", "points de collecte")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_D:
+    carte_resume(nom, titre_s, ini, points, col)
