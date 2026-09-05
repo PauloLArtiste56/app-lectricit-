@@ -2,24 +2,48 @@ import 'package:flutter/material.dart';
 
 import '../data/quiz_session.dart';
 import '../models/module.dart';
+import '../models/question.dart';
 import '../widgets/reponse_button.dart';
+import 'resultat_screen.dart';
 
 /// Écran Quiz : une question à la fois, feedback immédiat, barre de progression.
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key, required this.module});
+  /// [questions] permet de limiter le quiz à une sous-liste, par exemple
+  /// les questions ratées. Par défaut, toutes celles du module.
+  const QuizScreen({super.key, required this.module, this.questions});
 
   final Module module;
+  final List<Question>? questions;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  late final QuizSession _session = QuizSession(widget.module.questions);
+  late final QuizSession _session =
+      QuizSession(widget.questions ?? widget.module.questions);
 
   void _repondre(int index) => setState(() => _session.repondre(index));
 
-  void _suivante() => setState(() => _session.suivante());
+  void _suivante() {
+    setState(() => _session.suivante());
+    if (_session.estTerminee) _afficherResultat();
+  }
+
+  /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
+  /// résultat ramène donc à l'accueil, pas au milieu du quiz.
+  void _afficherResultat() {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(
+        builder: (_) => ResultatScreen(
+          module: widget.module,
+          score: _session.score,
+          total: _session.total,
+          questionsRatees: _session.questionsRatees,
+        ),
+      ),
+    );
+  }
 
   EtatReponse _etatDe(int index) {
     if (!_session.aRepondu) return EtatReponse.neutre;
@@ -32,7 +56,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.module.titre)),
-      body: _session.estTerminee ? _buildFin(context) : _buildQuestion(context),
+      body: _buildQuestion(context),
     );
   }
 
@@ -88,32 +112,6 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
         ],
       ],
-    );
-  }
-
-  /// Fin de quiz provisoire. L'écran Résultat complet arrive à l'étape 3.
-  Widget _buildFin(BuildContext context) {
-    final theme = Theme.of(context);
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('Quiz terminé', style: theme.textTheme.headlineSmall),
-            const SizedBox(height: 16),
-            Text(
-              'Score : ${_session.score} / ${_session.total}',
-              style: theme.textTheme.titleLarge,
-            ),
-            const SizedBox(height: 24),
-            FilledButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text("Retour à l'accueil"),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
