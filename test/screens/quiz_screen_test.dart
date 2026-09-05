@@ -59,9 +59,9 @@ void main() {
     expect(find.text('Bonne réponse !'), findsOneWidget);
 
     await tester.tap(find.text('Terminer'));
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(find.text('Quiz terminé'), findsOneWidget);
-    expect(find.text('Score : 1 / 2'), findsOneWidget);
+    expect(find.text('1 / 2'), findsOneWidget);
   });
 
   testWidgets("depuis l'accueil, un clic sur un module ouvre son quiz",
