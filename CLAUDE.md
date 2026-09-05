@@ -12,7 +12,13 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 - Commente le code en français quand ce n'est pas évident.
 
 ## Stack
-- **Flutter** (Dart), Android en priorité, iOS plus tard.
+- **Flutter** (Dart).
+- Poste de développement : **Windows**. Cible finale : **iPhone (iOS)**.
+- Contrainte : une appli iOS ne se compile que sur macOS. Stratégie :
+  - au quotidien, on teste sur Windows avec `flutter run -d chrome` (ou un émulateur Android) ;
+  - sur l'iPhone, on teste la version web ajoutée à l'écran d'accueil de Safari ;
+  - la vraie appli iOS (TestFlight / App Store) sera compilée plus tard via GitHub Actions
+    (machine macOS dans le cloud) + un compte développeur Apple.
 - Pas de backend en V1 : contenu embarqué en JSON, progression stockée en local.
 - Stockage local : `shared_preferences` pour la V1 (passer à `hive` si ça devient limitant).
 - État : `provider` ou `riverpod`, au plus simple. Pas de bloc pour le moment.
