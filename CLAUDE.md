@@ -150,11 +150,21 @@ Modules existants (par thème) :
 47. Autoconsommation avancée et stockage
 48. Électricité statique et atmosphères explosives
 49. Arc électrique et travail sous tension
+50. Tertiaire et ERP
+51. Industrie : armoires, automates, capteurs
+52. Variateurs et harmoniques
+53. Haute tension : premiers repères
+54. Électricité et enfants
+55. Éclairage public et voirie
+56. Portails, volets et ascenseurs
+57. Pompes, puits et arrosage
+58. Énergie éolienne
+59. Hydrogène et piles à combustible
 
-Sujets à venir : électricité et enfants, tertiaire et ERP (éclairage de sécurité,
-vérifications), industrie (armoires, automates, capteurs), variateurs et harmoniques,
-haute tension : premiers repères, éclairage public, ascenseurs et portails, électricité
-et eau (pompes, puits, arrosage), énergie éolienne, hydrogène et piles à combustible…
+Sujets à venir : nucléaire et centrales, hydraulique, réseaux intelligents, câblage
+d'un tableau pas à pas, lecture de schémas industriels, moteur pas à pas et servomoteurs,
+soudure électrique, chauffage par induction, électrochimie et galvanoplastie, foudre et
+paratonnerre, télécommunications, ferroviaire, aéronautique, médical, agriculture…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,

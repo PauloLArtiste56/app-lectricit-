@@ -8,8 +8,8 @@ une étape à la fois.
 
 ## État du projet
 
-✅ V1 complète et enrichie : 49 modules regroupés par thème, chacun avec 3 fiches illustrées
-et 20 questions (980 questions, dont des questions « remettre dans l'ordre »). Séance du jour
+✅ V1 complète et enrichie : 59 modules regroupés par thème, chacun avec 3 fiches illustrées
+et 20 questions (1 180 questions, dont des questions « remettre dans l'ordre »). Séance du jour
 avec révision espacée, série de jours, révision des points faibles, questions et réponses
 mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
 modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,

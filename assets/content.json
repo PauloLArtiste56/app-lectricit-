@@ -4308,9 +4308,625 @@
       "ordre": 14
     },
     {
+      "id": "eolien",
+      "titre": "Énergie éolienne",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "principe_eolien",
+          "titre": "Du vent à l'électricité",
+          "contenu": "Le vent fait tourner les pales, le rotor entraîne une génératrice, directement ou via un multiplicateur. L'électronique de puissance adapte la fréquence et la tension au réseau.\n\nLa puissance disponible varie comme le cube de la vitesse du vent : deux fois plus de vent, huit fois plus de puissance. Démarrage vers 3 m/s, puissance nominale vers 12 m/s, arrêt de sécurité au-delà de 25 m/s.\n\nUne éolienne terrestre fait 2 à 6 MW, une éolienne en mer jusqu'à 15 MW. Le facteur de charge (production réelle / production maximale) est de 25 % à terre, 40 % en mer.",
+          "image": "principe_eolien.png"
+        },
+        {
+          "id": "petit_eolien",
+          "titre": "Le petit éolien",
+          "contenu": "Éolienne domestique de 1 à 10 kW, sur mât de 12 à 30 m. Elle produit du continu ou de l'alternatif à fréquence variable, redressé puis converti par un onduleur, avec ou sans batteries.\n\nRentabilité très dépendante du site : il faut un vent moyen d'au moins 5 m/s, sans obstacle. Une étude de vent sur un an est recommandée.\n\nRaccordement comme le photovoltaïque : déclaration, Consuel, Enedis. Sécurité : frein, mise en drapeau, parafoudre et mise à la terre du mât, câbles adaptés aux vibrations.",
+          "image": "petit_eolien.png"
+        },
+        {
+          "id": "integration_reseau",
+          "titre": "Intégrer l'éolien au réseau",
+          "contenu": "L'éolien est variable : le réseau équilibre en permanence avec d'autres sources (hydraulique, gaz, nucléaire) et de plus en plus avec le stockage et l'effacement.\n\nLes parcs sont raccordés en HTA ou HTB via un poste de livraison. Les onduleurs et convertisseurs doivent respecter des codes réseau : tenue aux creux de tension, réglage de fréquence.\n\nLes éoliennes sont des installations HT : interventions réservées aux habilités H, avec risques de hauteur, de rotation et d'arc.",
+          "image": "integration_reseau.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5701",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "La puissance du vent varie comme…",
+          "reponses": [
+            "la vitesse",
+            "le carré de la vitesse",
+            "le cube de la vitesse",
+            "la racine de la vitesse"
+          ],
+          "bonne": 2,
+          "explication": "Deux fois plus de vent : huit fois plus de puissance."
+        },
+        {
+          "id": "q5702",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "Une éolienne s'arrête par sécurité au-delà de…",
+          "reponses": [
+            "5 m/s",
+            "12 m/s",
+            "25 m/s",
+            "100 m/s"
+          ],
+          "bonne": 2,
+          "explication": "Mise en drapeau des pales."
+        },
+        {
+          "id": "q5703",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "Puissance d'une éolienne terrestre récente ?",
+          "reponses": [
+            "2 kW",
+            "2 à 6 MW",
+            "200 MW",
+            "20 W"
+          ],
+          "bonne": 1,
+          "explication": "En mer, jusqu'à 15 MW."
+        },
+        {
+          "id": "q5704",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "Le facteur de charge à terre est d'environ…",
+          "reponses": [
+            "100 %",
+            "25 %",
+            "5 %",
+            "75 %"
+          ],
+          "bonne": 1,
+          "explication": "40 % en mer."
+        },
+        {
+          "id": "q5705",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "Le multiplicateur sert à…",
+          "reponses": [
+            "freiner",
+            "augmenter la vitesse de rotation pour la génératrice",
+            "orienter",
+            "stocker"
+          ],
+          "bonne": 1,
+          "explication": "Certaines machines s'en passent (entraînement direct)."
+        },
+        {
+          "id": "q5706",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "La vitesse de démarrage d'une éolienne est d'environ…",
+          "reponses": [
+            "0,5 m/s",
+            "3 m/s",
+            "12 m/s",
+            "25 m/s"
+          ],
+          "bonne": 1,
+          "explication": "Puissance nominale vers 12 m/s."
+        },
+        {
+          "id": "q5707",
+          "fiche_id": "principe_eolien",
+          "type": "qcm",
+          "enonce": "L'électronique de puissance d'une éolienne sert à…",
+          "reponses": [
+            "chauffer",
+            "adapter fréquence et tension au réseau",
+            "mesurer le vent",
+            "freiner"
+          ],
+          "bonne": 1,
+          "explication": "La vitesse du rotor varie avec le vent."
+        },
+        {
+          "id": "q5708",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Puissance d'une éolienne domestique ?",
+          "reponses": [
+            "1 à 10 kW",
+            "1 MW",
+            "10 W",
+            "100 kW"
+          ],
+          "bonne": 0,
+          "explication": "Sur mât de 12 à 30 m."
+        },
+        {
+          "id": "q5709",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Vent moyen minimal pour un petit éolien rentable ?",
+          "reponses": [
+            "1 m/s",
+            "5 m/s",
+            "15 m/s",
+            "25 m/s"
+          ],
+          "bonne": 1,
+          "explication": "Sans obstacle proche."
+        },
+        {
+          "id": "q5710",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Avant d'installer une petite éolienne, on fait…",
+          "reponses": [
+            "un achat rapide",
+            "une étude de vent sur un an",
+            "un forage",
+            "un permis de conduire"
+          ],
+          "bonne": 1,
+          "explication": "Le site fait tout."
+        },
+        {
+          "id": "q5711",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Le raccordement d'une petite éolienne ressemble à…",
+          "reponses": [
+            "celui d'un four",
+            "celui du photovoltaïque : déclaration, Consuel, Enedis",
+            "rien",
+            "celui d'un groupe"
+          ],
+          "bonne": 1,
+          "explication": "Production raccordée au réseau."
+        },
+        {
+          "id": "q5712",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Le mât d'une éolienne est…",
+          "reponses": [
+            "isolé",
+            "mis à la terre, avec parafoudre",
+            "en bois",
+            "sans protection"
+          ],
+          "bonne": 1,
+          "explication": "Structure exposée à la foudre."
+        },
+        {
+          "id": "q5713",
+          "fiche_id": "petit_eolien",
+          "type": "qcm",
+          "enonce": "Les câbles d'une éolienne doivent supporter…",
+          "reponses": [
+            "la chaleur du soleil seulement",
+            "les vibrations et la torsion",
+            "le gel seulement",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Rotation de la nacelle."
+        },
+        {
+          "id": "q5714",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "L'éolien est une source…",
+          "reponses": [
+            "constante",
+            "variable, équilibrée par d'autres moyens",
+            "stockable directement",
+            "nocturne"
+          ],
+          "bonne": 1,
+          "explication": "Hydraulique, gaz, stockage, effacement."
+        },
+        {
+          "id": "q5715",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "Un parc éolien est raccordé…",
+          "reponses": [
+            "en BT",
+            "en HTA ou HTB via un poste de livraison",
+            "sur une prise",
+            "au compteur d'une maison"
+          ],
+          "bonne": 1,
+          "explication": "Puissances de dizaines de MW."
+        },
+        {
+          "id": "q5716",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "Les codes réseau imposent aux onduleurs…",
+          "reponses": [
+            "une couleur",
+            "la tenue aux creux de tension et le réglage de fréquence",
+            "une taille",
+            "un fabricant"
+          ],
+          "bonne": 1,
+          "explication": "Stabilité du réseau."
+        },
+        {
+          "id": "q5717",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "Intervenir dans une éolienne demande…",
+          "reponses": [
+            "un B0",
+            "une habilitation H et des compétences en hauteur",
+            "rien",
+            "un permis bateau"
+          ],
+          "bonne": 1,
+          "explication": "HT, hauteur, rotation, arc."
+        },
+        {
+          "id": "q5718",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "L'effacement consiste à…",
+          "reponses": [
+            "couper une éolienne",
+            "réduire la consommation d'un client au moment d'un pic",
+            "effacer les données",
+            "arrêter le réseau"
+          ],
+          "bonne": 1,
+          "explication": "Un outil d'équilibrage."
+        },
+        {
+          "id": "q5719",
+          "fiche_id": "integration_reseau",
+          "type": "qcm",
+          "enonce": "Le stockage aide l'éolien à…",
+          "reponses": [
+            "tourner plus vite",
+            "lisser sa production variable",
+            "freiner",
+            "être moins cher"
+          ],
+          "bonne": 1,
+          "explication": "Batteries, STEP, hydrogène."
+        },
+        {
+          "id": "q5720",
+          "fiche_id": "principe_eolien",
+          "type": "ordre",
+          "enonce": "Du vent à la prise : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Le vent fait tourner les pales",
+            "Le rotor entraîne la génératrice",
+            "L'électronique adapte fréquence et tension",
+            "Le poste de livraison élève en HTA / HTB",
+            "Le réseau distribue"
+          ],
+          "explication": "Mécanique, génération, conversion, raccordement, distribution."
+        }
+      ],
+      "ordre": 15
+    },
+    {
+      "id": "hydrogene",
+      "titre": "Hydrogène et piles à combustible",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "electrolyse",
+          "titre": "Produire de l'hydrogène",
+          "contenu": "L'électrolyse sépare l'eau en hydrogène et oxygène avec de l'électricité : environ 50 kWh pour produire 1 kg d'hydrogène, qui contient 33 kWh d'énergie. Le rendement est donc de 60 à 70 %.\n\nSi l'électricité est renouvelable ou nucléaire, on parle d'hydrogène bas-carbone. Aujourd'hui, l'essentiel de l'hydrogène industriel vient encore du gaz naturel (vaporeformage).\n\nL'hydrogène se stocke comprimé (350 ou 700 bar) ou liquide (−253 °C). C'est un vecteur d'énergie, pas une source.",
+          "image": "electrolyse.png"
+        },
+        {
+          "id": "pile_combustible",
+          "titre": "La pile à combustible",
+          "contenu": "La pile à combustible fait l'inverse de l'électrolyse : hydrogène + oxygène de l'air → électricité + eau + chaleur, sans combustion. Tension d'une cellule : environ 0,7 V, empilées en stack.\n\nRendement électrique de 50 à 60 %. Applications : véhicules lourds (bus, camions, trains), chariots élévateurs, secours de sites télécoms, navires.\n\nSur le cycle complet électricité → hydrogène → électricité, on récupère 30 à 40 % : bien moins qu'une batterie (85 à 95 %), mais avec un stockage de longue durée et une recharge rapide.",
+          "image": "pile_combustible.png"
+        },
+        {
+          "id": "securite_h2",
+          "titre": "Sécurité de l'hydrogène",
+          "contenu": "L'hydrogène est inflammable sur une très large plage (4 à 75 % dans l'air) avec une énergie d'inflammation très faible : une simple étincelle statique suffit. Sa flamme est presque invisible.\n\nIl est très léger et s'échappe vers le haut : ventilation haute, détecteurs, pas de plafond fermé au-dessus des zones de stockage.\n\nInstallations classées ATEX : matériel Ex, mise à la terre, distances de sécurité, formation spécifique. Les réservoirs à 700 bar sont en composite et testés à l'éclatement.\n\nDans une pile à combustible, on retrouve aussi des tensions continues élevées : mêmes précautions que pour les véhicules électriques.",
+          "image": "securite_h2.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5801",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "L'électrolyse de l'eau produit…",
+          "reponses": [
+            "du CO2",
+            "de l'hydrogène et de l'oxygène",
+            "du méthane",
+            "de la chaleur seulement"
+          ],
+          "bonne": 1,
+          "explication": "À partir d'eau et d'électricité."
+        },
+        {
+          "id": "q5802",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "Produire 1 kg d'hydrogène par électrolyse demande environ…",
+          "reponses": [
+            "5 kWh",
+            "50 kWh",
+            "500 kWh",
+            "0,5 kWh"
+          ],
+          "bonne": 1,
+          "explication": "Pour 33 kWh contenus."
+        },
+        {
+          "id": "q5803",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "Le rendement de l'électrolyse est d'environ…",
+          "reponses": [
+            "10 %",
+            "60 à 70 %",
+            "100 %",
+            "95 %"
+          ],
+          "bonne": 1,
+          "explication": "Le reste part en chaleur."
+        },
+        {
+          "id": "q5804",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "L'hydrogène est…",
+          "reponses": [
+            "une source d'énergie",
+            "un vecteur d'énergie",
+            "un combustible fossile",
+            "un métal"
+          ],
+          "bonne": 1,
+          "explication": "Il faut de l'énergie pour le produire."
+        },
+        {
+          "id": "q5805",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "L'hydrogène bas-carbone est produit…",
+          "reponses": [
+            "à partir de gaz naturel",
+            "par électrolyse avec une électricité renouvelable ou nucléaire",
+            "par combustion",
+            "à partir de charbon"
+          ],
+          "bonne": 1,
+          "explication": "Le vaporeformage du gaz émet du CO2."
+        },
+        {
+          "id": "q5806",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "L'hydrogène comprimé pour les véhicules est stocké à…",
+          "reponses": [
+            "7 bar",
+            "350 ou 700 bar",
+            "1 bar",
+            "10 000 bar"
+          ],
+          "bonne": 1,
+          "explication": "Réservoirs composites."
+        },
+        {
+          "id": "q5807",
+          "fiche_id": "electrolyse",
+          "type": "qcm",
+          "enonce": "L'hydrogène liquide est à…",
+          "reponses": [
+            "−20 °C",
+            "−253 °C",
+            "0 °C",
+            "100 °C"
+          ],
+          "bonne": 1,
+          "explication": "Cryogénie coûteuse."
+        },
+        {
+          "id": "q5808",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "Une pile à combustible produit…",
+          "reponses": [
+            "de l'hydrogène",
+            "de l'électricité, de l'eau et de la chaleur",
+            "du CO2",
+            "du gaz"
+          ],
+          "bonne": 1,
+          "explication": "Sans combustion."
+        },
+        {
+          "id": "q5809",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "Tension d'une cellule de pile à combustible ?",
+          "reponses": [
+            "12 V",
+            "environ 0,7 V",
+            "230 V",
+            "1,5 V"
+          ],
+          "bonne": 1,
+          "explication": "Empilées en stack pour monter en tension."
+        },
+        {
+          "id": "q5810",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "Rendement électrique d'une pile à combustible ?",
+          "reponses": [
+            "10 %",
+            "50 à 60 %",
+            "100 %",
+            "95 %"
+          ],
+          "bonne": 1,
+          "explication": "Meilleur qu'un moteur thermique."
+        },
+        {
+          "id": "q5811",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "Sur le cycle électricité → hydrogène → électricité, on récupère…",
+          "reponses": [
+            "90 %",
+            "30 à 40 %",
+            "100 %",
+            "5 %"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie fait 85 à 95 %."
+        },
+        {
+          "id": "q5812",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "L'avantage de l'hydrogène face à la batterie ?",
+          "reponses": [
+            "Le rendement",
+            "Le stockage de longue durée et la recharge rapide",
+            "Le prix",
+            "La simplicité"
+          ],
+          "bonne": 1,
+          "explication": "Pour les usages lourds et la saisonnalité."
+        },
+        {
+          "id": "q5813",
+          "fiche_id": "pile_combustible",
+          "type": "qcm",
+          "enonce": "Application typique de la pile à combustible ?",
+          "reponses": [
+            "Lampe de poche",
+            "Bus, camions, trains, chariots élévateurs",
+            "Montre",
+            "Four"
+          ],
+          "bonne": 1,
+          "explication": "Usages lourds et intensifs."
+        },
+        {
+          "id": "q5814",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "L'hydrogène est inflammable entre…",
+          "reponses": [
+            "4 et 75 % dans l'air",
+            "50 et 51 %",
+            "0 et 1 %",
+            "jamais"
+          ],
+          "bonne": 0,
+          "explication": "Plage très large."
+        },
+        {
+          "id": "q5815",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "L'énergie nécessaire pour enflammer l'hydrogène est…",
+          "reponses": [
+            "énorme",
+            "très faible : une étincelle statique suffit",
+            "impossible à atteindre",
+            "de 1 kWh"
+          ],
+          "bonne": 1,
+          "explication": "D'où les précautions ATEX."
+        },
+        {
+          "id": "q5816",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "La flamme d'hydrogène est…",
+          "reponses": [
+            "rouge",
+            "presque invisible",
+            "bleue vive",
+            "noire"
+          ],
+          "bonne": 1,
+          "explication": "Danger supplémentaire."
+        },
+        {
+          "id": "q5817",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "L'hydrogène qui fuit…",
+          "reponses": [
+            "stagne au sol",
+            "monte et s'accumule sous les plafonds",
+            "se dissout",
+            "se transforme en eau"
+          ],
+          "bonne": 1,
+          "explication": "Ventilation haute et détecteurs."
+        },
+        {
+          "id": "q5818",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "Les zones hydrogène sont classées…",
+          "reponses": [
+            "BT",
+            "ATEX : matériel Ex, terre, distances",
+            "sans risque",
+            "zone 4"
+          ],
+          "bonne": 1,
+          "explication": "Comme les gaz inflammables."
+        },
+        {
+          "id": "q5819",
+          "fiche_id": "securite_h2",
+          "type": "qcm",
+          "enonce": "Dans une pile à combustible, on trouve aussi…",
+          "reponses": [
+            "du 12 V seulement",
+            "des tensions continues élevées, comme dans un véhicule électrique",
+            "du 230 V alternatif",
+            "rien d'électrique"
+          ],
+          "bonne": 1,
+          "explication": "Habilitation adaptée."
+        },
+        {
+          "id": "q5820",
+          "fiche_id": "pile_combustible",
+          "type": "ordre",
+          "enonce": "Le cycle hydrogène : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Électricité renouvelable",
+            "Électrolyse de l'eau",
+            "Stockage comprimé ou liquide",
+            "Pile à combustible",
+            "Électricité, eau et chaleur"
+          ],
+          "explication": "Produire, stocker, restituer."
+        }
+      ],
+      "ordre": 16
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 15,
+      "ordre": 17,
       "fiches": [
         {
           "id": "multimetre",
@@ -4618,7 +5234,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 16,
+      "ordre": 18,
       "fiches": [
         {
           "id": "tableau",
@@ -5228,7 +5844,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 17
+      "ordre": 19
     },
     {
       "id": "cablage",
@@ -5536,7 +6152,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 18
+      "ordre": 20
     },
     {
       "id": "parafoudre",
@@ -5843,7 +6459,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 19
+      "ordre": 21
     },
     {
       "id": "locaux_risques",
@@ -6150,7 +6766,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 20
+      "ordre": 22
     },
     {
       "id": "photovoltaique",
@@ -6457,7 +7073,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 21
+      "ordre": 23
     },
     {
       "id": "chauffage",
@@ -6764,7 +7380,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 22
+      "ordre": 24
     },
     {
       "id": "domotique",
@@ -7071,7 +7687,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 23
+      "ordre": 25
     },
     {
       "id": "vehicule_electrique",
@@ -7379,7 +7995,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 24
+      "ordre": 26
     },
     {
       "id": "plaque_signaletique",
@@ -7686,7 +8302,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 25
+      "ordre": 27
     },
     {
       "id": "ventilation",
@@ -7994,7 +8610,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 26
+      "ordre": 28
     },
     {
       "id": "lire_tableau",
@@ -8301,7 +8917,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 27
+      "ordre": 29
     },
     {
       "id": "depannage",
@@ -8609,7 +9225,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 28
+      "ordre": 30
     },
     {
       "id": "courants_faibles",
@@ -8917,7 +9533,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 29
+      "ordre": 31
     },
     {
       "id": "eclairage_exterieur",
@@ -9225,7 +9841,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 30
+      "ordre": 32
     },
     {
       "id": "alarme",
@@ -9533,7 +10149,7 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 31
+      "ordre": 33
     },
     {
       "id": "mesures_avancees",
@@ -9841,7 +10457,7 @@
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
         }
       ],
-      "ordre": 32
+      "ordre": 34
     },
     {
       "id": "renovation",
@@ -10149,7 +10765,7 @@
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
         }
       ],
-      "ordre": 33
+      "ordre": 35
     },
     {
       "id": "secours_energie",
@@ -10457,7 +11073,7 @@
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
         }
       ],
-      "ordre": 34
+      "ordre": 36
     },
     {
       "id": "camping_car_bateau",
@@ -10765,7 +11381,7 @@
           "explication": "Hors tension, brancher, enclencher, tester."
         }
       ],
-      "ordre": 35
+      "ordre": 37
     },
     {
       "id": "autoconsommation",
@@ -11072,12 +11688,1860 @@
           "explication": "Mesurer, déplacer, router, stocker."
         }
       ],
-      "ordre": 36
+      "ordre": 38
+    },
+    {
+      "id": "tertiaire_erp",
+      "titre": "Tertiaire et ERP : bureaux, commerces, écoles",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "specificites_erp",
+          "titre": "Ce qui change par rapport au logement",
+          "contenu": "Un établissement recevant du public (ERP) ou un lieu de travail obéit à des règles renforcées : le Code du travail et le règlement de sécurité des ERP s'ajoutent à la NF C 15-100.\n\nTableau général basse tension (TGBT) avec coupure générale accessible, circuits de sécurité séparés, sélectivité des protections pour qu'un défaut ne coupe qu'une zone.\n\nÉclairage de sécurité obligatoire : blocs autonomes (BAES) qui balisent les issues, et éclairage d'ambiance dans les grandes salles. Ils se testent chaque mois et sont vérifiés chaque année.\n\nLocaux techniques fermés, signalés, réservés aux personnes habilitées.",
+          "image": "specificites_erp.png"
+        },
+        {
+          "id": "verifications_periodiques",
+          "titre": "Les vérifications périodiques",
+          "contenu": "Les installations des lieux de travail et des ERP sont vérifiées par un organisme accrédité : vérification initiale à la mise en service, puis périodique, en général tous les ans.\n\nLe rapport liste les non-conformités à corriger : isolement, terre, protections, échauffements, matériel dégradé. L'employeur doit y donner suite et le tenir à disposition de l'inspection du travail.\n\nS'y ajoutent : le contrôle des BAES, la vérification des installations de sécurité incendie (SSI), et le registre de sécurité où tout est consigné.",
+          "image": "verifications_periodiques.png"
+        },
+        {
+          "id": "chantiers_tertiaire",
+          "titre": "Travailler dans un bâtiment occupé",
+          "contenu": "Interventions en présence du public ou du personnel : balisage, horaires adaptés, plan de prévention avec l'exploitant, permis de feu si travaux par points chauds.\n\nCoupures programmées et annoncées, alimentation de secours pour les postes critiques (informatique, froid, sécurité).\n\nLe chargé d'exploitation électrique de l'établissement délivre les autorisations et fournit les documents (schémas, consignes). Les intervenants extérieurs sont habilités par leur propre employeur.",
+          "image": "chantiers_tertiaire.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q4901",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "ERP signifie…",
+          "reponses": [
+            "Électricité réseau public",
+            "Établissement recevant du public",
+            "Équipement de rénovation privée",
+            "Entreprise de réparation"
+          ],
+          "bonne": 1,
+          "explication": "Magasins, écoles, salles, hôpitaux…"
+        },
+        {
+          "id": "q4902",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "Les BAES sont…",
+          "reponses": [
+            "des disjoncteurs",
+            "des blocs autonomes d'éclairage de sécurité",
+            "des batteries",
+            "des alarmes"
+          ],
+          "bonne": 1,
+          "explication": "Ils balisent les issues en cas de coupure."
+        },
+        {
+          "id": "q4903",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "Les BAES se testent…",
+          "reponses": [
+            "jamais",
+            "chaque mois, avec une vérification annuelle",
+            "tous les 10 ans",
+            "une fois à l'installation"
+          ],
+          "bonne": 1,
+          "explication": "Autonomie et fonctionnement."
+        },
+        {
+          "id": "q4904",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "La sélectivité des protections permet…",
+          "reponses": [
+            "de couper tout le bâtiment",
+            "qu'un défaut ne coupe que la zone concernée",
+            "de mesurer",
+            "de chauffer"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur le plus proche du défaut coupe en premier."
+        },
+        {
+          "id": "q4905",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "Le TGBT est…",
+          "reponses": [
+            "une prise",
+            "le tableau général basse tension",
+            "une norme",
+            "un compteur"
+          ],
+          "bonne": 1,
+          "explication": "Point de départ de la distribution du bâtiment."
+        },
+        {
+          "id": "q4906",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "Les locaux techniques électriques sont…",
+          "reponses": [
+            "ouverts à tous",
+            "fermés, signalés, réservés aux habilités",
+            "dans la salle d'attente",
+            "sans porte"
+          ],
+          "bonne": 1,
+          "explication": "LAREE."
+        },
+        {
+          "id": "q4907",
+          "fiche_id": "specificites_erp",
+          "type": "qcm",
+          "enonce": "En plus de la NF C 15-100, un ERP suit…",
+          "reponses": [
+            "le code de la route",
+            "le règlement de sécurité des ERP et le Code du travail",
+            "la NF C 14-100 seulement",
+            "rien d'autre"
+          ],
+          "bonne": 1,
+          "explication": "Règles renforcées."
+        },
+        {
+          "id": "q4908",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Les installations d'un lieu de travail sont vérifiées…",
+          "reponses": [
+            "jamais",
+            "par un organisme accrédité, en général chaque année",
+            "par le personnel",
+            "tous les 20 ans"
+          ],
+          "bonne": 1,
+          "explication": "Vérification initiale puis périodique."
+        },
+        {
+          "id": "q4909",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Le rapport de vérification liste…",
+          "reponses": [
+            "les salaires",
+            "les non-conformités à corriger",
+            "les horaires",
+            "les clients"
+          ],
+          "bonne": 1,
+          "explication": "L'employeur doit y donner suite."
+        },
+        {
+          "id": "q4910",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Le rapport est tenu à disposition…",
+          "reponses": [
+            "du public",
+            "de l'inspection du travail",
+            "des voisins",
+            "du fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Et consigné au registre de sécurité."
+        },
+        {
+          "id": "q4911",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Le registre de sécurité contient…",
+          "reponses": [
+            "les factures",
+            "les vérifications, contrôles et incidents de sécurité",
+            "les plannings",
+            "les commandes"
+          ],
+          "bonne": 1,
+          "explication": "Document de référence de l'établissement."
+        },
+        {
+          "id": "q4912",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Le SSI est…",
+          "reponses": [
+            "un système de sécurité incendie",
+            "une norme électrique",
+            "un type de câble",
+            "un fusible"
+          ],
+          "bonne": 0,
+          "explication": "Détection, alarme, désenfumage."
+        },
+        {
+          "id": "q4913",
+          "fiche_id": "verifications_periodiques",
+          "type": "qcm",
+          "enonce": "Un échauffement détecté au rapport…",
+          "reponses": [
+            "est sans suite",
+            "doit être corrigé : mauvais contact ou surcharge",
+            "est normal",
+            "disparaît seul"
+          ],
+          "bonne": 1,
+          "explication": "Souvent repéré par caméra thermique."
+        },
+        {
+          "id": "q4914",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Avant des travaux dans un bâtiment occupé, on établit…",
+          "reponses": [
+            "un devis seulement",
+            "un plan de prévention avec l'exploitant",
+            "un permis de conduire",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Analyse des risques croisés."
+        },
+        {
+          "id": "q4915",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Le permis de feu est nécessaire pour…",
+          "reponses": [
+            "toute intervention",
+            "les travaux par points chauds : soudure, meulage",
+            "l'éclairage",
+            "les mesures"
+          ],
+          "bonne": 1,
+          "explication": "Risque d'incendie."
+        },
+        {
+          "id": "q4916",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Une coupure dans un bâtiment occupé est…",
+          "reponses": [
+            "improvisée",
+            "programmée et annoncée",
+            "faite en silence",
+            "impossible"
+          ],
+          "bonne": 1,
+          "explication": "Avec secours pour les postes critiques."
+        },
+        {
+          "id": "q4917",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Qui délivre les autorisations d'accès aux installations de l'établissement ?",
+          "reponses": [
+            "Le client",
+            "Le chargé d'exploitation électrique",
+            "Le B0",
+            "Le fournisseur d'électricité"
+          ],
+          "bonne": 1,
+          "explication": "Il connaît l'installation."
+        },
+        {
+          "id": "q4918",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Les intervenants extérieurs sont habilités par…",
+          "reponses": [
+            "l'établissement",
+            "leur propre employeur",
+            "le Consuel",
+            "personne"
+          ],
+          "bonne": 1,
+          "explication": "L'habilitation suit l'employeur."
+        },
+        {
+          "id": "q4919",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "qcm",
+          "enonce": "Balisage en présence du public sert à…",
+          "reponses": [
+            "décorer",
+            "tenir le public à l'écart de la zone de travail",
+            "signaler le tableau",
+            "remplacer les EPI"
+          ],
+          "bonne": 1,
+          "explication": "Le public ne connaît pas les risques."
+        },
+        {
+          "id": "q4920",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "ordre",
+          "enonce": "Préparer une intervention dans un ERP : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Plan de prévention avec l'exploitant",
+            "Autorisation du chargé d'exploitation électrique",
+            "Annonce de la coupure et secours des postes critiques",
+            "Balisage de la zone",
+            "Intervention"
+          ],
+          "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
+        }
+      ],
+      "ordre": 39
+    },
+    {
+      "id": "industrie",
+      "titre": "Industrie : armoires, automates, capteurs",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "armoire",
+          "titre": "L'armoire industrielle",
+          "contenu": "Une armoire regroupe : l'arrivée et le sectionneur général (cadenassable), les protections, les contacteurs et variateurs qui commandent les moteurs, l'automate, l'alimentation 24 V pour la commande, les borniers.\n\nDeux circuits : la puissance (400 V triphasé, câbles de forte section) et la commande (24 V continu le plus souvent, câbles fins, boutons, voyants, capteurs).\n\nRepérage : chaque fil porte un numéro, chaque appareil un repère (KM1 contacteur, Q1 disjoncteur, F1 relais thermique). Le schéma électrique est le guide.\n\nSécurité : arrêt d'urgence, portes verrouillées, indice IP, ventilation.",
+          "image": "armoire.png"
+        },
+        {
+          "id": "automate",
+          "titre": "L'automate programmable",
+          "contenu": "L'automate (API ou PLC) remplace les relais câblés d'autrefois : il lit des entrées (capteurs, boutons), exécute un programme et pilote des sorties (contacteurs, électrovannes, voyants).\n\nEntrées tout-ou-rien en 24 V, entrées analogiques (4-20 mA, 0-10 V) pour mesurer température ou pression. Sorties à relais ou transistor.\n\nLe programme est écrit en langages normalisés (Ladder, le plus proche des schémas à relais). Un écran tactile (IHM) affiche l'état et permet de régler.\n\nLa sécurité des machines (arrêts d'urgence, barrières) passe par des relais ou automates de sécurité dédiés, pas par le programme standard.",
+          "image": "automate.png"
+        },
+        {
+          "id": "capteurs",
+          "titre": "Capteurs et actionneurs",
+          "contenu": "Capteurs tout-ou-rien : fin de course mécanique, détecteur inductif (métaux), capacitif (tous matériaux), photoélectrique (barrage, réflexion), à ultrasons.\n\nCâblage 3 fils en 24 V : + , − et signal. PNP (signal relié au +) ou NPN (signal relié au −) : il faut respecter le type attendu par l'automate.\n\nCapteurs analogiques : sonde de température Pt100, transmetteur de pression 4-20 mA (le 4 mA permet de détecter un fil coupé).\n\nActionneurs : contacteur, électrovanne, vérin, moteur avec variateur. Le retour d'information (capteur) confirme que l'action a eu lieu.",
+          "image": "capteurs.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5001",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "Le sectionneur général d'une armoire est…",
+          "reponses": [
+            "un voyant",
+            "cadenassable, pour consigner",
+            "un capteur",
+            "une prise"
+          ],
+          "bonne": 1,
+          "explication": "Point de consignation de l'armoire."
+        },
+        {
+          "id": "q5002",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "La commande d'une armoire est souvent en…",
+          "reponses": [
+            "400 V",
+            "24 V continu",
+            "12 V alternatif",
+            "230 V continu"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité et compatibilité avec l'automate."
+        },
+        {
+          "id": "q5003",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "KM1 désigne…",
+          "reponses": [
+            "un disjoncteur",
+            "un contacteur",
+            "un relais thermique",
+            "un capteur"
+          ],
+          "bonne": 1,
+          "explication": "Q pour disjoncteur, F pour relais thermique, KM pour contacteur."
+        },
+        {
+          "id": "q5004",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "Le circuit de puissance alimente…",
+          "reponses": [
+            "les voyants",
+            "les moteurs, en 400 V triphasé",
+            "l'automate",
+            "les capteurs"
+          ],
+          "bonne": 1,
+          "explication": "Câbles de forte section."
+        },
+        {
+          "id": "q5005",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "Chaque fil d'une armoire porte…",
+          "reponses": [
+            "une couleur au hasard",
+            "un numéro de repérage conforme au schéma",
+            "rien",
+            "le nom du technicien"
+          ],
+          "bonne": 1,
+          "explication": "Indispensable au dépannage."
+        },
+        {
+          "id": "q5006",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "Le document de référence pour intervenir sur une armoire ?",
+          "reponses": [
+            "Le manuel du moteur",
+            "Le schéma électrique de l'armoire",
+            "La facture",
+            "Le plan du bâtiment"
+          ],
+          "bonne": 1,
+          "explication": "Folio par folio."
+        },
+        {
+          "id": "q5007",
+          "fiche_id": "armoire",
+          "type": "qcm",
+          "enonce": "L'arrêt d'urgence d'une machine…",
+          "reponses": [
+            "passe par le programme standard",
+            "coupe la puissance par une chaîne de sécurité câblée ou un relais de sécurité",
+            "est une option",
+            "est un voyant"
+          ],
+          "bonne": 1,
+          "explication": "Indépendant du programme."
+        },
+        {
+          "id": "q5008",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "Un automate programmable…",
+          "reponses": [
+            "remplace les relais câblés par un programme",
+            "est un transformateur",
+            "est un capteur",
+            "est un variateur"
+          ],
+          "bonne": 0,
+          "explication": "Entrées, programme, sorties."
+        },
+        {
+          "id": "q5009",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "Une entrée tout-ou-rien est en général en…",
+          "reponses": [
+            "400 V",
+            "24 V",
+            "4-20 mA",
+            "230 V"
+          ],
+          "bonne": 1,
+          "explication": "Boutons, capteurs, fins de course."
+        },
+        {
+          "id": "q5010",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "Un signal 4-20 mA…",
+          "reponses": [
+            "est tout-ou-rien",
+            "est analogique, et 4 mA permet de détecter un fil coupé",
+            "alimente un moteur",
+            "est en 400 V"
+          ],
+          "bonne": 1,
+          "explication": "0 mA = défaut de ligne."
+        },
+        {
+          "id": "q5011",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "Le Ladder est…",
+          "reponses": [
+            "un type de câble",
+            "un langage d'automate proche des schémas à relais",
+            "une échelle",
+            "un capteur"
+          ],
+          "bonne": 1,
+          "explication": "Contacts et bobines dessinés."
+        },
+        {
+          "id": "q5012",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "L'IHM sert à…",
+          "reponses": [
+            "alimenter l'automate",
+            "afficher l'état et régler la machine",
+            "couper la puissance",
+            "détecter les métaux"
+          ],
+          "bonne": 1,
+          "explication": "Interface homme-machine."
+        },
+        {
+          "id": "q5013",
+          "fiche_id": "automate",
+          "type": "qcm",
+          "enonce": "La sécurité des machines (arrêts d'urgence, barrières) passe par…",
+          "reponses": [
+            "le programme standard",
+            "des relais ou automates de sécurité dédiés",
+            "les voyants",
+            "les capteurs inductifs"
+          ],
+          "bonne": 1,
+          "explication": "Fiabilité certifiée."
+        },
+        {
+          "id": "q5014",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Un détecteur inductif détecte…",
+          "reponses": [
+            "tous les matériaux",
+            "les métaux",
+            "la lumière",
+            "le son"
+          ],
+          "bonne": 1,
+          "explication": "Le capacitif détecte tous les matériaux."
+        },
+        {
+          "id": "q5015",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Un capteur PNP a son signal relié…",
+          "reponses": [
+            "au −",
+            "au +",
+            "à la terre",
+            "au 400 V"
+          ],
+          "bonne": 1,
+          "explication": "NPN : signal relié au −. À respecter selon l'automate."
+        },
+        {
+          "id": "q5016",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Le câblage 3 fils d'un capteur comporte…",
+          "reponses": [
+            "phase, neutre, terre",
+            "+, − et signal",
+            "3 phases",
+            "+ et − seulement"
+          ],
+          "bonne": 1,
+          "explication": "Alimentation et information."
+        },
+        {
+          "id": "q5017",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Une Pt100 mesure…",
+          "reponses": [
+            "la pression",
+            "la température",
+            "la vitesse",
+            "le débit"
+          ],
+          "bonne": 1,
+          "explication": "Résistance de platine, 100 Ω à 0 °C."
+        },
+        {
+          "id": "q5018",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Un capteur photoélectrique « barrage »…",
+          "reponses": [
+            "émet et reçoit dans le même boîtier",
+            "a un émetteur et un récepteur face à face",
+            "détecte les métaux",
+            "mesure la température"
+          ],
+          "bonne": 1,
+          "explication": "Objet détecté quand il coupe le faisceau."
+        },
+        {
+          "id": "q5019",
+          "fiche_id": "capteurs",
+          "type": "qcm",
+          "enonce": "Le retour d'information d'un actionneur sert à…",
+          "reponses": [
+            "décorer",
+            "confirmer que l'action a bien eu lieu",
+            "alimenter le moteur",
+            "chauffer"
+          ],
+          "bonne": 1,
+          "explication": "Fin de course sur un vérin, par exemple."
+        },
+        {
+          "id": "q5020",
+          "fiche_id": "armoire",
+          "type": "ordre",
+          "enonce": "Consigner une armoire industrielle : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Arrêter la machine et prévenir l'exploitant",
+            "Ouvrir et cadenasser le sectionneur général",
+            "Identifier l'armoire et le circuit",
+            "Vérifier l'absence de tension sur la puissance",
+            "Attendre la décharge des variateurs et condensateurs"
+          ],
+          "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
+        }
+      ],
+      "ordre": 40
+    },
+    {
+      "id": "variateurs",
+      "titre": "Variateurs et harmoniques",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "principe_variateur",
+          "titre": "Le variateur de vitesse",
+          "contenu": "Le variateur alimente un moteur asynchrone à fréquence et tension variables : redresseur, bus continu (condensateurs), onduleur à transistors qui fabrique une tension hachée.\n\nAvantages : vitesse réglable, démarrage progressif (plus de pointe de courant), économies d'énergie sur pompes et ventilateurs, freinage contrôlé.\n\nRéglages de base : fréquence mini et maxi, rampes d'accélération et de décélération, courant nominal du moteur (pour la protection thermique intégrée).\n\nLe bus continu reste chargé plusieurs minutes après coupure : attendre avant d'ouvrir.",
+          "image": "principe_variateur.png"
+        },
+        {
+          "id": "harmoniques",
+          "titre": "Les harmoniques",
+          "contenu": "Variateurs, alimentations à découpage, LED, onduleurs absorbent un courant non sinusoïdal : il contient des harmoniques, des fréquences multiples de 50 Hz (150 Hz, 250 Hz…).\n\nEffets : échauffement des câbles et transformateurs, courant dans le neutre même en triphasé équilibré (harmonique 3), déclenchements intempestifs, perturbation des appareils sensibles.\n\nMesure : analyseur de réseau, taux de distorsion harmonique (THD). Remèdes : selfs de ligne, filtres, neutre surdimensionné, variateurs à faible taux d'harmoniques, séparation des circuits perturbateurs.",
+          "image": "harmoniques.png"
+        },
+        {
+          "id": "cem",
+          "titre": "Compatibilité électromagnétique",
+          "contenu": "Un variateur rayonne des perturbations à haute fréquence : le câble moteur est une antenne. Règles CEM : câble moteur blindé, blindage raccordé aux deux extrémités sur 360°, câble le plus court possible, séparé des câbles de commande et de mesure, filtre CEM à l'entrée.\n\nMise à la terre en étoile, plaques de masse, presse-étoupes CEM.\n\nUn défaut de CEM se traduit par des capteurs qui délirent, des automates qui bugguent, des radios qui grésillent. Le remède est presque toujours dans le câblage.",
+          "image": "cem.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5101",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Un variateur fait varier la vitesse d'un moteur asynchrone en changeant…",
+          "reponses": [
+            "la résistance",
+            "la fréquence et la tension",
+            "le couplage",
+            "la couleur des fils"
+          ],
+          "bonne": 1,
+          "explication": "La vitesse suit la fréquence."
+        },
+        {
+          "id": "q5102",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Les trois étages d'un variateur ?",
+          "reponses": [
+            "Transformateur, fusible, contacteur",
+            "Redresseur, bus continu, onduleur",
+            "Pile, relais, moteur",
+            "Bobine, condensateur, lampe"
+          ],
+          "bonne": 1,
+          "explication": "Alternatif → continu → alternatif à fréquence variable."
+        },
+        {
+          "id": "q5103",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Le variateur supprime…",
+          "reponses": [
+            "le moteur",
+            "la pointe de courant au démarrage grâce à la rampe",
+            "la terre",
+            "les capteurs"
+          ],
+          "bonne": 1,
+          "explication": "Démarrage progressif."
+        },
+        {
+          "id": "q5104",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Sur une pompe, réduire la vitesse de 20 % réduit la puissance d'environ…",
+          "reponses": [
+            "20 %",
+            "50 %",
+            "0 %",
+            "100 %"
+          ],
+          "bonne": 1,
+          "explication": "La puissance varie comme le cube de la vitesse : 0,8³ ≈ 0,5."
+        },
+        {
+          "id": "q5105",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Le courant nominal du moteur réglé dans le variateur sert à…",
+          "reponses": [
+            "choisir la couleur",
+            "la protection thermique intégrée",
+            "la vitesse",
+            "la terre"
+          ],
+          "bonne": 1,
+          "explication": "Le variateur remplace le relais thermique."
+        },
+        {
+          "id": "q5106",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Après coupure, le bus continu d'un variateur…",
+          "reponses": [
+            "est déchargé",
+            "reste chargé plusieurs minutes : attendre avant d'ouvrir",
+            "est à 24 V",
+            "se recharge"
+          ],
+          "bonne": 1,
+          "explication": "Condensateurs de forte capacité."
+        },
+        {
+          "id": "q5107",
+          "fiche_id": "principe_variateur",
+          "type": "qcm",
+          "enonce": "Les rampes d'accélération et de décélération se règlent…",
+          "reponses": [
+            "sur le moteur",
+            "dans les paramètres du variateur",
+            "avec un fusible",
+            "sur le capteur"
+          ],
+          "bonne": 1,
+          "explication": "En secondes, selon la charge."
+        },
+        {
+          "id": "q5108",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Les harmoniques sont…",
+          "reponses": [
+            "des tensions continues",
+            "des fréquences multiples de 50 Hz",
+            "des pannes",
+            "des capteurs"
+          ],
+          "bonne": 1,
+          "explication": "150 Hz, 250 Hz, 350 Hz…"
+        },
+        {
+          "id": "q5109",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Qui génère des harmoniques ?",
+          "reponses": [
+            "Les radiateurs",
+            "Variateurs, alimentations à découpage, LED, onduleurs",
+            "Les lampes à incandescence",
+            "Les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Tout ce qui découpe le courant."
+        },
+        {
+          "id": "q5110",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Effet de l'harmonique 3 en triphasé ?",
+          "reponses": [
+            "Aucun",
+            "Un courant dans le neutre même équilibré",
+            "Une baisse de fréquence",
+            "Un gain d'énergie"
+          ],
+          "bonne": 1,
+          "explication": "Les harmoniques 3 des trois phases s'additionnent dans le neutre."
+        },
+        {
+          "id": "q5111",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Le THD mesure…",
+          "reponses": [
+            "la température",
+            "le taux de distorsion harmonique",
+            "la terre",
+            "la puissance"
+          ],
+          "bonne": 1,
+          "explication": "En pourcentage."
+        },
+        {
+          "id": "q5112",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Remède contre les harmoniques ?",
+          "reponses": [
+            "Plus de puissance",
+            "Selfs de ligne, filtres, neutre surdimensionné",
+            "Moins de terre",
+            "Des rallonges"
+          ],
+          "bonne": 1,
+          "explication": "Et séparation des circuits perturbateurs."
+        },
+        {
+          "id": "q5113",
+          "fiche_id": "harmoniques",
+          "type": "qcm",
+          "enonce": "Les harmoniques provoquent…",
+          "reponses": [
+            "un refroidissement",
+            "échauffements et déclenchements intempestifs",
+            "un meilleur cos φ",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Câbles et transformateurs souffrent."
+        },
+        {
+          "id": "q5114",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "Le câble moteur d'un variateur doit être…",
+          "reponses": [
+            "ordinaire",
+            "blindé, blindage raccordé aux deux extrémités",
+            "en aluminium nu",
+            "le plus long possible"
+          ],
+          "bonne": 1,
+          "explication": "Le câble rayonne sinon."
+        },
+        {
+          "id": "q5115",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "Le raccordement du blindage se fait…",
+          "reponses": [
+            "sur un fil fin",
+            "sur 360°, via presse-étoupe ou collier CEM",
+            "par un seul brin",
+            "pas du tout"
+          ],
+          "bonne": 1,
+          "explication": "Un « queue de cochon » est inefficace en haute fréquence."
+        },
+        {
+          "id": "q5116",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "Les câbles de commande et de mesure sont…",
+          "reponses": [
+            "dans la même gaine que le câble moteur",
+            "séparés du câble moteur",
+            "enroulés autour",
+            "sans importance"
+          ],
+          "bonne": 1,
+          "explication": "Sinon les capteurs délirent."
+        },
+        {
+          "id": "q5117",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "Le filtre CEM à l'entrée du variateur sert à…",
+          "reponses": [
+            "chauffer",
+            "limiter les perturbations renvoyées vers le réseau",
+            "mesurer",
+            "augmenter la vitesse"
+          ],
+          "bonne": 1,
+          "explication": "Obligatoire pour le marquage CE dans la plupart des cas."
+        },
+        {
+          "id": "q5118",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "Un automate qui bugue près d'un variateur signale souvent…",
+          "reponses": [
+            "un mauvais programme",
+            "un problème de CEM : câblage, blindage, masses",
+            "une panne d'automate",
+            "un défaut de terre du bâtiment"
+          ],
+          "bonne": 1,
+          "explication": "Le câblage est le premier suspect."
+        },
+        {
+          "id": "q5119",
+          "fiche_id": "cem",
+          "type": "qcm",
+          "enonce": "La mise à la terre pour la CEM se fait…",
+          "reponses": [
+            "en série",
+            "en étoile, avec plaques de masse",
+            "sans lien",
+            "par le neutre"
+          ],
+          "bonne": 1,
+          "explication": "Chemins courts vers une référence commune."
+        },
+        {
+          "id": "q5120",
+          "fiche_id": "cem",
+          "type": "ordre",
+          "enonce": "Câbler un variateur proprement : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Poser le filtre CEM à l'entrée",
+            "Câble moteur blindé, le plus court possible",
+            "Raccorder le blindage sur 360° aux deux extrémités",
+            "Séparer commande et mesure de la puissance",
+            "Régler courant nominal et rampes, puis essayer"
+          ],
+          "explication": "Filtre, câble, blindage, séparation, réglages."
+        }
+      ],
+      "ordre": 41
+    },
+    {
+      "id": "eclairage_public",
+      "titre": "Éclairage public et voirie",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "reseau_ep",
+          "titre": "Le réseau d'éclairage public",
+          "contenu": "Une armoire de commande alimente des départs vers les candélabres, en câble enterré ou aérien. Chaque départ est protégé par un disjoncteur ; chaque candélabre a son propre fusible ou disjoncteur en pied de mât.\n\nLa commande : horloge astronomique ou cellule photoélectrique, parfois télégestion à distance.\n\nLes mâts sont des masses métalliques : mise à la terre et différentiel obligatoires, ou matériel de classe II. Le régime de neutre est souvent TT, parfois TN pour les grands réseaux.\n\nLa LED a remplacé les lampes à décharge (sodium orange, iodures) : moitié moins de consommation, gradation nocturne possible.",
+          "image": "reseau_ep.png"
+        },
+        {
+          "id": "interventions_ep",
+          "titre": "Intervenir sur un candélabre",
+          "contenu": "Travail en hauteur en nacelle : deux risques cumulés, la chute et l'électricité. Habilitation adaptée (BR, B1V), balisage de la voirie, gilet haute visibilité, casque.\n\nAvant d'ouvrir un pied de mât : couper le départ ou le fusible du mât, vérifier l'absence de tension. Les réseaux d'éclairage restent sous tension la nuit et parfois le jour pour les essais.\n\nUn candélabre accidenté ou une trappe ouverte est un danger public : mise en sécurité immédiate, signalement au gestionnaire (commune, syndicat).\n\nLes lampes à décharge contiennent du mercure ou du sodium : recyclage obligatoire.",
+          "image": "interventions_ep.png"
+        },
+        {
+          "id": "economies_ep",
+          "titre": "Économies et nuisances",
+          "contenu": "Extinction ou gradation en milieu de nuit : la plupart des communes coupent entre 23 h et 5 h, ou réduisent à 30 %. Économies de 30 à 60 %.\n\nDétection de présence sur les chemins piétons, LED à température de couleur chaude (2 700 à 3 000 K) pour la biodiversité et le confort.\n\nLa pollution lumineuse est encadrée : pas de lumière vers le ciel, extinction des enseignes et façades la nuit.\n\nUn diagnostic du parc (âge, type de lampes, consommation) précède tout plan de rénovation.",
+          "image": "economies_ep.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5401",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "Chaque candélabre est protégé…",
+          "reponses": [
+            "par le compteur",
+            "par un fusible ou disjoncteur en pied de mât",
+            "par rien",
+            "par la lampe"
+          ],
+          "bonne": 1,
+          "explication": "Un défaut sur un mât ne coupe pas la rue."
+        },
+        {
+          "id": "q5402",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "La commande de l'éclairage public utilise…",
+          "reponses": [
+            "un interrupteur mural",
+            "une horloge astronomique ou une cellule photoélectrique",
+            "un bouton-poussoir",
+            "un variateur manuel"
+          ],
+          "bonne": 1,
+          "explication": "Allumage automatique au coucher du soleil."
+        },
+        {
+          "id": "q5403",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "Un mât métallique est…",
+          "reponses": [
+            "isolé",
+            "une masse : terre et différentiel, ou classe II",
+            "sans tension",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Le passant peut le toucher."
+        },
+        {
+          "id": "q5404",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "La LED a remplacé…",
+          "reponses": [
+            "les LED plus anciennes",
+            "les lampes à décharge (sodium, iodures)",
+            "les bougies",
+            "les néons de bureau"
+          ],
+          "bonne": 1,
+          "explication": "Moitié moins de consommation."
+        },
+        {
+          "id": "q5405",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "La télégestion permet…",
+          "reponses": [
+            "de nettoyer les lampes",
+            "de commander et surveiller l'éclairage à distance",
+            "de produire de l'électricité",
+            "de repeindre les mâts"
+          ],
+          "bonne": 1,
+          "explication": "Détection des pannes, gradation."
+        },
+        {
+          "id": "q5406",
+          "fiche_id": "reseau_ep",
+          "type": "qcm",
+          "enonce": "Les câbles d'éclairage public cheminent…",
+          "reponses": [
+            "dans les égouts",
+            "enterrés ou en aérien",
+            "dans les canalisations d'eau",
+            "dans les mâts seulement"
+          ],
+          "bonne": 1,
+          "explication": "Réseau distinct du réseau de distribution."
+        },
+        {
+          "id": "q5407",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Deux risques d'une intervention sur candélabre ?",
+          "reponses": [
+            "Bruit et poussière",
+            "Chute de hauteur et électricité",
+            "Froid et chaleur",
+            "Aucun"
+          ],
+          "bonne": 1,
+          "explication": "Nacelle et tension."
+        },
+        {
+          "id": "q5408",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Avant d'ouvrir un pied de mât, on…",
+          "reponses": [
+            "ouvre directement",
+            "coupe le départ ou le fusible du mât et vérifie l'absence de tension",
+            "attend la nuit",
+            "demande au passant"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau peut être sous tension à tout moment."
+        },
+        {
+          "id": "q5409",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Un candélabre accidenté avec la trappe ouverte…",
+          "reponses": [
+            "attend le lundi",
+            "est mis en sécurité immédiatement et signalé",
+            "est sans danger",
+            "se ferme seul"
+          ],
+          "bonne": 1,
+          "explication": "Danger public : conducteurs accessibles."
+        },
+        {
+          "id": "q5410",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Les lampes à décharge usagées…",
+          "reponses": [
+            "vont à la poubelle",
+            "sont recyclées : mercure, sodium",
+            "se jettent dans l'eau",
+            "se brûlent"
+          ],
+          "bonne": 1,
+          "explication": "Filière dédiée."
+        },
+        {
+          "id": "q5411",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Sur la voirie, l'intervenant porte…",
+          "reponses": [
+            "un short",
+            "gilet haute visibilité, casque, balisage de la zone",
+            "des lunettes de soleil seulement",
+            "rien de particulier"
+          ],
+          "bonne": 1,
+          "explication": "Le trafic est un risque de plus."
+        },
+        {
+          "id": "q5412",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Un réseau d'éclairage public peut être sous tension le jour ?",
+          "reponses": [
+            "Jamais",
+            "Oui, pour des essais ou par défaut de commande",
+            "Seulement l'hiver",
+            "Seulement en ville"
+          ],
+          "bonne": 1,
+          "explication": "On ne présume jamais l'absence de tension."
+        },
+        {
+          "id": "q5413",
+          "fiche_id": "interventions_ep",
+          "type": "qcm",
+          "enonce": "Habilitation typique pour dépanner un candélabre ?",
+          "reponses": [
+            "B0",
+            "BR ou B1V",
+            "H2",
+            "aucune"
+          ],
+          "bonne": 1,
+          "explication": "Dépannage BT."
+        },
+        {
+          "id": "q5414",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "L'extinction en milieu de nuit économise…",
+          "reponses": [
+            "1 %",
+            "30 à 60 %",
+            "100 %",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "La plus grosse économie possible."
+        },
+        {
+          "id": "q5415",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "La gradation nocturne consiste à…",
+          "reponses": [
+            "couper",
+            "réduire l'intensité, par exemple à 30 %",
+            "augmenter",
+            "changer de couleur"
+          ],
+          "bonne": 1,
+          "explication": "Possible avec les LED."
+        },
+        {
+          "id": "q5416",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "Température de couleur recommandée pour limiter l'impact sur la faune ?",
+          "reponses": [
+            "6 500 K",
+            "2 700 à 3 000 K",
+            "10 000 K",
+            "4 000 K"
+          ],
+          "bonne": 1,
+          "explication": "Lumière chaude, moins de bleu."
+        },
+        {
+          "id": "q5417",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "La pollution lumineuse est…",
+          "reponses": [
+            "libre",
+            "encadrée : pas de lumière vers le ciel, extinction des enseignes",
+            "obligatoire",
+            "sans effet"
+          ],
+          "bonne": 1,
+          "explication": "Réglementation nationale."
+        },
+        {
+          "id": "q5418",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "Avant de rénover un parc d'éclairage, on fait…",
+          "reponses": [
+            "un achat groupé",
+            "un diagnostic : âge, lampes, consommation",
+            "une fête",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Prioriser les points les plus énergivores."
+        },
+        {
+          "id": "q5419",
+          "fiche_id": "economies_ep",
+          "type": "qcm",
+          "enonce": "Un détecteur de présence sur un chemin piéton…",
+          "reponses": [
+            "éclaire en permanence",
+            "allume au passage et baisse ensuite",
+            "est interdit",
+            "coupe la rue"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité sans gaspillage."
+        },
+        {
+          "id": "q5420",
+          "fiche_id": "interventions_ep",
+          "type": "ordre",
+          "enonce": "Dépanner un candélabre : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Baliser la voirie et mettre les EPI",
+            "Couper le départ ou le fusible du mât",
+            "Vérifier l'absence de tension au pied de mât",
+            "Intervenir depuis la nacelle",
+            "Remettre sous tension et essayer"
+          ],
+          "explication": "Baliser, couper, vérifier, intervenir, essayer."
+        }
+      ],
+      "ordre": 42
+    },
+    {
+      "id": "portails_ascenseurs",
+      "titre": "Portails, volets et ascenseurs",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "portail",
+          "titre": "Le portail motorisé",
+          "contenu": "Motorisation à bras, à vérins ou coulissante, en 230 V ou 24 V. Une armoire de commande, des cellules photoélectriques, des feux clignotants, un récepteur radio.\n\nSécurité obligatoire (norme EN 12453) : détection d'obstacle (cellules, bords sensibles ou limitation de force), feu orange, coupure d'urgence, débrayage manuel pour ouvrir sans courant.\n\nAlimentation : circuit dédié, différentiel 30 mA, câble enterré vers le pilier, boîte étanche. Un portail sans détection d'obstacle peut blesser gravement un enfant.",
+          "image": "portail.png"
+        },
+        {
+          "id": "volets",
+          "titre": "Volets roulants et stores",
+          "contenu": "Moteur tubulaire 230 V dans l'axe du volet, avec fins de course réglées : le volet s'arrête en haut et en bas. Commande filaire (interrupteur à trois positions) ou radio.\n\nLe moteur a une protection thermique : après plusieurs manœuvres, il s'arrête quelques minutes pour refroidir. Ce n'est pas une panne.\n\nCâblage : 4 fils (montée, descente, neutre, terre). Ne jamais brancher deux moteurs en parallèle sur un même interrupteur sans relais de séparation.\n\nEn cas de blocage : ne pas forcer, vérifier fins de course, obstacle, alimentation.",
+          "image": "volets.png"
+        },
+        {
+          "id": "ascenseur",
+          "titre": "L'ascenseur",
+          "contenu": "L'ascenseur est une machine complexe : moteur de traction, armoire de manœuvre, freins, sécurités (parachute, limiteur de vitesse, contacts de porte).\n\nIl relève de professionnels spécialisés et d'un contrat d'entretien obligatoire, avec visite tous les 6 semaines. Un contrôle technique tous les 5 ans.\n\nL'électricien du bâtiment n'intervient pas dans la gaine ni sur la machine. Il alimente l'ascenseur par un circuit dédié depuis le TGBT, avec un interrupteur-sectionneur dans le local machine, et un éclairage de gaine et de local.\n\nPersonne bloquée : appeler l'ascensoriste ou les pompiers, ne jamais tenter de sortir soi-même de la cabine.",
+          "image": "ascenseur.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5501",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "La détection d'obstacle d'un portail est…",
+          "reponses": [
+            "une option",
+            "obligatoire (EN 12453)",
+            "interdite",
+            "réservée aux garages"
+          ],
+          "bonne": 1,
+          "explication": "Cellules, bords sensibles ou limitation de force."
+        },
+        {
+          "id": "q5502",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "Le débrayage manuel sert à…",
+          "reponses": [
+            "accélérer",
+            "ouvrir le portail sans courant",
+            "fermer à clé",
+            "couper le différentiel"
+          ],
+          "bonne": 1,
+          "explication": "Coupure de courant ou panne."
+        },
+        {
+          "id": "q5503",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "L'alimentation d'un portail est…",
+          "reponses": [
+            "prise sur l'éclairage extérieur",
+            "un circuit dédié avec différentiel 30 mA",
+            "une rallonge",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Câble enterré vers le pilier."
+        },
+        {
+          "id": "q5504",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "Les cellules photoélectriques…",
+          "reponses": [
+            "éclairent",
+            "stoppent le portail si le faisceau est coupé",
+            "comptent les voitures",
+            "chauffent"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité des personnes."
+        },
+        {
+          "id": "q5505",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "Le feu orange clignotant…",
+          "reponses": [
+            "décore",
+            "signale le mouvement du portail",
+            "allume l'allée",
+            "est facultatif partout"
+          ],
+          "bonne": 1,
+          "explication": "Prévient les piétons et véhicules."
+        },
+        {
+          "id": "q5506",
+          "fiche_id": "portail",
+          "type": "qcm",
+          "enonce": "Un portail sans détection d'obstacle…",
+          "reponses": [
+            "est sans risque",
+            "peut blesser gravement, surtout un enfant",
+            "est plus rapide",
+            "est conforme"
+          ],
+          "bonne": 1,
+          "explication": "Force de plusieurs centaines de newtons."
+        },
+        {
+          "id": "q5507",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Le moteur d'un volet roulant est…",
+          "reponses": [
+            "dans le mur",
+            "tubulaire, dans l'axe du volet",
+            "au sol",
+            "dans le coffret"
+          ],
+          "bonne": 1,
+          "explication": "Invisible, dans le tube d'enroulement."
+        },
+        {
+          "id": "q5508",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Les fins de course d'un volet servent à…",
+          "reponses": [
+            "régler la vitesse",
+            "arrêter le volet en haut et en bas",
+            "chauffer",
+            "couper le neutre"
+          ],
+          "bonne": 1,
+          "explication": "Réglage à l'installation."
+        },
+        {
+          "id": "q5509",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Le volet s'arrête après plusieurs manœuvres d'affilée…",
+          "reponses": [
+            "il est cassé",
+            "protection thermique : il refroidit quelques minutes",
+            "le neutre est coupé",
+            "la radio est en panne"
+          ],
+          "bonne": 1,
+          "explication": "Normal."
+        },
+        {
+          "id": "q5510",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Deux moteurs de volet sur un même interrupteur…",
+          "reponses": [
+            "se branchent en parallèle sans souci",
+            "demandent un relais de séparation",
+            "sont interdits",
+            "fonctionnent mieux"
+          ],
+          "bonne": 1,
+          "explication": "Sinon les condensateurs des moteurs se perturbent."
+        },
+        {
+          "id": "q5511",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Câblage d'un moteur de volet ?",
+          "reponses": [
+            "2 fils",
+            "4 fils : montée, descente, neutre, terre",
+            "3 phases",
+            "1 fil"
+          ],
+          "bonne": 1,
+          "explication": "Plus la commande radio éventuelle."
+        },
+        {
+          "id": "q5512",
+          "fiche_id": "volets",
+          "type": "qcm",
+          "enonce": "Volet bloqué : on…",
+          "reponses": [
+            "force à la main",
+            "cherche fins de course, obstacle, alimentation, sans forcer",
+            "coupe le compteur",
+            "le démonte sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Forcer casse les attaches."
+        },
+        {
+          "id": "q5513",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "Qui intervient sur un ascenseur ?",
+          "reponses": [
+            "L'électricien du bâtiment",
+            "Des ascensoristes spécialisés, sous contrat d'entretien",
+            "Le gardien",
+            "Le B0"
+          ],
+          "bonne": 1,
+          "explication": "Machine complexe et réglementée."
+        },
+        {
+          "id": "q5514",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "Fréquence des visites d'entretien d'un ascenseur ?",
+          "reponses": [
+            "Tous les 5 ans",
+            "Toutes les 6 semaines",
+            "Chaque jour",
+            "Jamais"
+          ],
+          "bonne": 1,
+          "explication": "Contrat d'entretien obligatoire."
+        },
+        {
+          "id": "q5515",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "Le contrôle technique d'un ascenseur a lieu tous les…",
+          "reponses": [
+            "6 semaines",
+            "5 ans",
+            "20 ans",
+            "mois"
+          ],
+          "bonne": 1,
+          "explication": "Par un organisme indépendant."
+        },
+        {
+          "id": "q5516",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "L'électricien du bâtiment fournit…",
+          "reponses": [
+            "la réparation du moteur",
+            "le circuit dédié depuis le TGBT et l'interrupteur-sectionneur du local machine",
+            "le parachute",
+            "les portes"
+          ],
+          "bonne": 1,
+          "explication": "Il n'entre ni dans la gaine ni sur la machine."
+        },
+        {
+          "id": "q5517",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "Personne bloquée dans la cabine : on…",
+          "reponses": [
+            "force les portes",
+            "appelle l'ascensoriste ou les pompiers, on reste dans la cabine",
+            "sort par la trappe",
+            "coupe l'électricité"
+          ],
+          "bonne": 1,
+          "explication": "Sortir seul est le principal danger."
+        },
+        {
+          "id": "q5518",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "Le parachute d'un ascenseur…",
+          "reponses": [
+            "est un airbag",
+            "bloque la cabine en cas de survitesse",
+            "freine le moteur",
+            "ouvre les portes"
+          ],
+          "bonne": 1,
+          "explication": "Déclenché par le limiteur de vitesse."
+        },
+        {
+          "id": "q5519",
+          "fiche_id": "ascenseur",
+          "type": "qcm",
+          "enonce": "L'éclairage de gaine et de local machine est…",
+          "reponses": [
+            "facultatif",
+            "obligatoire, pour la maintenance",
+            "en 12 V",
+            "interdit"
+          ],
+          "bonne": 1,
+          "explication": "Travail en sécurité."
+        },
+        {
+          "id": "q5520",
+          "fiche_id": "portail",
+          "type": "ordre",
+          "enonce": "Installer une motorisation de portail : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Tirer un circuit dédié enterré vers le pilier",
+            "Poser les moteurs et l'armoire de commande",
+            "Installer cellules, feu orange et coupure d'urgence",
+            "Régler les forces et fins de course",
+            "Tester la détection d'obstacle"
+          ],
+          "explication": "Alimentation, mécanique, sécurités, réglages, test."
+        }
+      ],
+      "ordre": 43
+    },
+    {
+      "id": "pompes_eau",
+      "titre": "Pompes, puits et arrosage",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "types_pompes",
+          "titre": "Les pompes",
+          "contenu": "Pompe de surface (jardin, surpresseur) ou pompe immergée (puits, forage, relevage). Monophasée 230 V jusqu'à 2 kW environ, triphasée au-delà.\n\nUne pompe de surface aspire jusqu'à 7-8 m ; au-delà, il faut une pompe immergée. La pompe immergée est refroidie par l'eau : elle ne doit jamais tourner à sec.\n\nProtections : disjoncteur moteur (courant de démarrage élevé), protection manque d'eau (flotteur, sonde), pressostat et réservoir à vessie pour un surpresseur.\n\nPuissance : une pompe de jardin de 1 000 W tire environ 5 A, avec une pointe de 25 A au démarrage.",
+          "image": "types_pompes.png"
+        },
+        {
+          "id": "alimentation_pompe",
+          "titre": "Alimenter une pompe",
+          "contenu": "Circuit dédié, différentiel 30 mA, câble adapté à la longueur (chute de tension sur un forage profond : section augmentée) et à l'immersion (câble spécial pour pompe immergée).\n\nBoîte de raccordement étanche hors du regard, jamais dans l'eau. La pompe est de classe I : terre obligatoire, reliée à la liaison équipotentielle.\n\nPompe de relevage (eaux usées) : alarme de niveau haut, flotteurs, entretien régulier.\n\nUn arrêt fréquent (pompage à sec, pressostat qui bat) fait chauffer et grille le moteur.",
+          "image": "alimentation_pompe.png"
+        },
+        {
+          "id": "arrosage",
+          "titre": "Arrosage automatique et bassins",
+          "contenu": "Le programmateur d'arrosage commande des électrovannes en 24 V alternatif via un transformateur : aucun danger dans le jardin.\n\nBassins et fontaines : pompe en TBTS 12 V si accessible, ou 230 V IP68 avec différentiel 30 mA et hors de portée. Éclairage du bassin en 12 V, transformateur au sec.\n\nRécupérateur d'eau de pluie : pompe immergée ou de surface avec crépine flottante, filtre, clapet anti-retour, et jamais de connexion avec le réseau d'eau potable (disconnecteur obligatoire).",
+          "image": "arrosage.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5601",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "Une pompe de surface aspire au maximum…",
+          "reponses": [
+            "1 m",
+            "7 à 8 m",
+            "30 m",
+            "100 m"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà, pompe immergée."
+        },
+        {
+          "id": "q5602",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "Une pompe immergée qui tourne à sec…",
+          "reponses": [
+            "se repose",
+            "surchauffe : elle est refroidie par l'eau",
+            "pompe de l'air utile",
+            "consomme moins"
+          ],
+          "bonne": 1,
+          "explication": "Protection manque d'eau indispensable."
+        },
+        {
+          "id": "q5603",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "Le pressostat d'un surpresseur…",
+          "reponses": [
+            "mesure la profondeur",
+            "démarre et arrête la pompe selon la pression",
+            "filtre l'eau",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Avec un réservoir à vessie pour limiter les cycles."
+        },
+        {
+          "id": "q5604",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "Une pompe de 1 000 W tire au démarrage environ…",
+          "reponses": [
+            "5 A",
+            "25 A",
+            "1 A",
+            "100 A"
+          ],
+          "bonne": 1,
+          "explication": "Pointe de 5 fois le nominal."
+        },
+        {
+          "id": "q5605",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "La protection adaptée à une pompe ?",
+          "reponses": [
+            "Un fusible d'éclairage",
+            "Un disjoncteur moteur ou courbe D",
+            "Un différentiel seul",
+            "Rien"
+          ],
+          "bonne": 1,
+          "explication": "Il tolère la pointe de démarrage."
+        },
+        {
+          "id": "q5606",
+          "fiche_id": "types_pompes",
+          "type": "qcm",
+          "enonce": "Au-delà de 2 kW environ, une pompe est souvent…",
+          "reponses": [
+            "monophasée",
+            "triphasée",
+            "en 12 V",
+            "à essence"
+          ],
+          "bonne": 1,
+          "explication": "Courants plus faibles par phase."
+        },
+        {
+          "id": "q5607",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Sur un forage profond, on augmente la section du câble pour…",
+          "reponses": [
+            "le poids",
+            "limiter la chute de tension",
+            "la couleur",
+            "la profondeur"
+          ],
+          "bonne": 1,
+          "explication": "La pompe recevrait sinon une tension trop faible."
+        },
+        {
+          "id": "q5608",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "La boîte de raccordement d'une pompe se place…",
+          "reponses": [
+            "dans l'eau",
+            "hors du regard, étanche",
+            "au fond du puits",
+            "dans la maison seulement"
+          ],
+          "bonne": 1,
+          "explication": "Jamais immergée."
+        },
+        {
+          "id": "q5609",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Une pompe est de classe…",
+          "reponses": [
+            "II",
+            "I : terre obligatoire",
+            "III",
+            "0"
+          ],
+          "bonne": 1,
+          "explication": "Masse métallique en contact avec l'eau."
+        },
+        {
+          "id": "q5610",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Une pompe de relevage doit avoir…",
+          "reponses": [
+            "une alarme de niveau haut",
+            "un variateur",
+            "une lampe",
+            "un compteur"
+          ],
+          "bonne": 0,
+          "explication": "Sinon la fosse déborde sans qu'on le sache."
+        },
+        {
+          "id": "q5611",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Un pressostat qui bat (marche-arrêt rapide)…",
+          "reponses": [
+            "est normal",
+            "fait chauffer et grille le moteur : vessie à regonfler ou réservoir défectueux",
+            "économise",
+            "est sans effet"
+          ],
+          "bonne": 1,
+          "explication": "Cycles courts = échauffement."
+        },
+        {
+          "id": "q5612",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Le câble d'une pompe immergée est…",
+          "reponses": [
+            "un câble ordinaire",
+            "un câble spécial résistant à l'immersion",
+            "du fil de fer",
+            "un câble réseau"
+          ],
+          "bonne": 1,
+          "explication": "Isolant prévu pour l'eau."
+        },
+        {
+          "id": "q5613",
+          "fiche_id": "alimentation_pompe",
+          "type": "qcm",
+          "enonce": "Le circuit d'une pompe est…",
+          "reponses": [
+            "partagé avec les prises",
+            "dédié, avec différentiel 30 mA",
+            "sur l'éclairage",
+            "sans protection"
+          ],
+          "bonne": 1,
+          "explication": "Eau et électricité."
+        },
+        {
+          "id": "q5614",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "Les électrovannes d'arrosage fonctionnent en…",
+          "reponses": [
+            "230 V",
+            "24 V alternatif",
+            "400 V",
+            "12 V continu"
+          ],
+          "bonne": 1,
+          "explication": "Sans danger dans le jardin."
+        },
+        {
+          "id": "q5615",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "Une pompe de bassin accessible aux mains est…",
+          "reponses": [
+            "en 230 V classe I",
+            "en TBTS 12 V",
+            "en 400 V",
+            "interdite"
+          ],
+          "bonne": 1,
+          "explication": "Ou 230 V IP68 hors de portée avec 30 mA."
+        },
+        {
+          "id": "q5616",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "Le transformateur de l'éclairage de bassin se place…",
+          "reponses": [
+            "dans le bassin",
+            "au sec, hors d'atteinte de l'eau",
+            "sous la pompe",
+            "dans la terre"
+          ],
+          "bonne": 1,
+          "explication": "Le 230 V reste loin de l'eau."
+        },
+        {
+          "id": "q5617",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "Un récupérateur d'eau de pluie ne doit jamais…",
+          "reponses": [
+            "avoir de pompe",
+            "être connecté au réseau d'eau potable sans disconnecteur",
+            "être filtré",
+            "avoir de crépine"
+          ],
+          "bonne": 1,
+          "explication": "Risque de contamination du réseau."
+        },
+        {
+          "id": "q5618",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "La crépine flottante d'un récupérateur…",
+          "reponses": [
+            "flotte pour décorer",
+            "aspire l'eau propre sous la surface",
+            "pompe le fond",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Évite les dépôts du fond."
+        },
+        {
+          "id": "q5619",
+          "fiche_id": "arrosage",
+          "type": "qcm",
+          "enonce": "Le clapet anti-retour sur une pompe…",
+          "reponses": [
+            "augmente le débit",
+            "empêche l'eau de redescendre et la pompe de se désamorcer",
+            "filtre",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Amorçage conservé."
+        },
+        {
+          "id": "q5620",
+          "fiche_id": "alimentation_pompe",
+          "type": "ordre",
+          "enonce": "Installer une pompe immergée de puits : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Circuit dédié avec différentiel 30 mA et disjoncteur moteur",
+            "Câble spécial immersion, section selon la profondeur",
+            "Boîte de raccordement étanche hors du regard",
+            "Protection manque d'eau (sonde ou flotteur)",
+            "Mise en service et essai"
+          ],
+          "explication": "Protection, câble, raccordement, sécurité, essai."
+        }
+      ],
+      "ordre": 44
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 37,
+      "ordre": 45,
       "fiches": [
         {
           "id": "dangers",
@@ -11385,7 +13849,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 38,
+      "ordre": 46,
       "fiches": [
         {
           "id": "principe",
@@ -11993,7 +14457,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 39
+      "ordre": 47
     },
     {
       "id": "epi",
@@ -12300,7 +14764,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 40
+      "ordre": 48
     },
     {
       "id": "b0_bs",
@@ -12608,7 +15072,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 41
+      "ordre": 49
     },
     {
       "id": "br",
@@ -12916,7 +15380,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 42
+      "ordre": 50
     },
     {
       "id": "secours",
@@ -13223,7 +15687,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 43
+      "ordre": 51
     },
     {
       "id": "b1_b2",
@@ -13532,7 +15996,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 44
+      "ordre": 52
     },
     {
       "id": "bc",
@@ -13840,7 +16304,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 45
+      "ordre": 53
     },
     {
       "id": "outillage",
@@ -14148,7 +16612,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 46
+      "ordre": 54
     },
     {
       "id": "normes",
@@ -14456,7 +16920,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 47
+      "ordre": 55
     },
     {
       "id": "atex",
@@ -14764,7 +17228,7 @@
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
         }
       ],
-      "ordre": 48
+      "ordre": 56
     },
     {
       "id": "arc_tst",
@@ -15072,7 +17536,623 @@
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
         }
       ],
-      "ordre": 49
+      "ordre": 57
+    },
+    {
+      "id": "haute_tension",
+      "titre": "Haute tension : premiers repères",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "domaines",
+          "titre": "Les domaines de tension",
+          "contenu": "La norme classe les tensions :\n\n• TBT, très basse tension : jusqu'à 50 V en alternatif (120 V en continu).\n• BT, basse tension : de 50 à 1 000 V en alternatif (120 à 1 500 V en continu). Le domaine de l'habitation, du tertiaire, de la plupart des industries.\n• HTA : de 1 000 V à 50 000 V. La distribution (20 kV), les postes de livraison des grandes entreprises.\n• HTB : au-delà de 50 000 V. Le transport (63, 90, 225, 400 kV).\n\nEn HT, les habilitations commencent par H : H0, H1, H2, HC, HE.",
+          "image": "domaines.png"
+        },
+        {
+          "id": "poste_livraison",
+          "titre": "Le poste de livraison",
+          "contenu": "Une entreprise alimentée en 20 kV possède un poste de livraison : cellules HTA (arrivée, protection, transformateur), transformateur 20 kV / 400 V, TGBT.\n\nLes cellules sont fermées, verrouillées par des clés à interverrouillage : impossible d'ouvrir un compartiment sans avoir coupé et mis à la terre.\n\nLe transformateur est dans un local ventilé, avec bac de rétention pour l'huile, ou de type sec. La protection contre les surintensités est assurée par des fusibles HTA ou un disjoncteur HTA.\n\nLes manœuvres HT ne se font qu'avec habilitation H, EPI HT (gants classe 2 ou plus, écran, tabouret ou tapis isolant) et perches.",
+          "image": "poste_livraison.png"
+        },
+        {
+          "id": "risques_ht",
+          "titre": "Les risques spécifiques",
+          "contenu": "En HT, l'arc peut jaillir à distance : on n'a pas besoin de toucher pour être électrisé. D'où la distance minimale d'approche (DMA) : 60 cm en 20 kV, davantage au-delà, et la DLVS de 3 m.\n\nLignes aériennes : engins, échelles, élagage, cerfs-volants, tout ce qui s'approche est en danger. Câbles enterrés HTA : DT-DICT avant tout terrassement.\n\nLa consignation HT ajoute la mise à la terre et en court-circuit obligatoire après la VAT, avec un détecteur HT et des perches.\n\nEn cas de véhicule ou d'engin en contact avec une ligne : rester dedans, sauter à pieds joints sans toucher l'engin si l'incendie oblige à sortir, s'éloigner à petits pas.",
+          "image": "risques_ht.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5201",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "La basse tension va, en alternatif, de…",
+          "reponses": [
+            "0 à 50 V",
+            "50 à 1 000 V",
+            "1 000 à 50 000 V",
+            "au-delà de 50 000 V"
+          ],
+          "bonne": 1,
+          "explication": "Le domaine des habitations et de la plupart des industries."
+        },
+        {
+          "id": "q5202",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "La distribution à 20 kV est en domaine…",
+          "reponses": [
+            "BT",
+            "HTA",
+            "HTB",
+            "TBT"
+          ],
+          "bonne": 1,
+          "explication": "HTA : de 1 kV à 50 kV."
+        },
+        {
+          "id": "q5203",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "Le transport à 400 kV est en domaine…",
+          "reponses": [
+            "HTA",
+            "HTB",
+            "BT",
+            "TBT"
+          ],
+          "bonne": 1,
+          "explication": "HTB : au-delà de 50 kV."
+        },
+        {
+          "id": "q5204",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "La très basse tension va jusqu'à…",
+          "reponses": [
+            "50 V alternatif",
+            "230 V",
+            "1 000 V",
+            "12 V seulement"
+          ],
+          "bonne": 0,
+          "explication": "120 V en continu."
+        },
+        {
+          "id": "q5205",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "Les habilitations haute tension commencent par…",
+          "reponses": [
+            "B",
+            "H",
+            "T",
+            "V"
+          ],
+          "bonne": 1,
+          "explication": "H0, H1, H2, HC, HE."
+        },
+        {
+          "id": "q5206",
+          "fiche_id": "domaines",
+          "type": "qcm",
+          "enonce": "1 500 V continu est en domaine…",
+          "reponses": [
+            "TBT",
+            "BT (limite)",
+            "HTA",
+            "HTB"
+          ],
+          "bonne": 1,
+          "explication": "La BT continu va jusqu'à 1 500 V (traction ferroviaire)."
+        },
+        {
+          "id": "q5207",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "Un poste de livraison comprend…",
+          "reponses": [
+            "un compteur seul",
+            "cellules HTA, transformateur, TGBT",
+            "une prise 32 A",
+            "un onduleur"
+          ],
+          "bonne": 1,
+          "explication": "Du 20 kV au 400 V."
+        },
+        {
+          "id": "q5208",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "L'interverrouillage des cellules HTA…",
+          "reponses": [
+            "est une serrure décorative",
+            "empêche d'ouvrir un compartiment sans avoir coupé et mis à la terre",
+            "ferme le bâtiment",
+            "sert au comptage"
+          ],
+          "bonne": 1,
+          "explication": "Clés prisonnières."
+        },
+        {
+          "id": "q5209",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "Un transformateur à huile est installé…",
+          "reponses": [
+            "dans le bureau",
+            "dans un local ventilé avec bac de rétention",
+            "dehors sans protection",
+            "dans la cave inondable"
+          ],
+          "bonne": 1,
+          "explication": "L'huile est inflammable et polluante."
+        },
+        {
+          "id": "q5210",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "Les manœuvres HT se font avec…",
+          "reponses": [
+            "des gants classe 0",
+            "gants classe 2 ou plus, écran, tapis ou tabouret isolant, perches",
+            "les mains nues",
+            "un multimètre"
+          ],
+          "bonne": 1,
+          "explication": "EPI HT spécifiques."
+        },
+        {
+          "id": "q5211",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "La protection surintensité côté HTA est assurée par…",
+          "reponses": [
+            "un fusible domestique",
+            "des fusibles HTA ou un disjoncteur HTA",
+            "un différentiel 30 mA",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Pouvoir de coupure adapté."
+        },
+        {
+          "id": "q5212",
+          "fiche_id": "poste_livraison",
+          "type": "qcm",
+          "enonce": "Le transformateur 20 kV / 400 V est…",
+          "reponses": [
+            "élévateur",
+            "abaisseur",
+            "d'isolement",
+            "de mesure"
+          ],
+          "bonne": 1,
+          "explication": "De la distribution vers l'usage."
+        },
+        {
+          "id": "q5213",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "En HT, peut-on être électrisé sans toucher ?",
+          "reponses": [
+            "Non",
+            "Oui, par amorçage d'un arc à distance",
+            "Seulement sous la pluie",
+            "Seulement en HTB"
+          ],
+          "bonne": 1,
+          "explication": "D'où la distance minimale d'approche."
+        },
+        {
+          "id": "q5214",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "La DMA en 20 kV est de l'ordre de…",
+          "reponses": [
+            "5 cm",
+            "60 cm",
+            "3 m",
+            "10 m"
+          ],
+          "bonne": 1,
+          "explication": "Distance à ne jamais franchir sans habilitation spécifique."
+        },
+        {
+          "id": "q5215",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "Un engin qui travaille près d'une ligne aérienne doit…",
+          "reponses": [
+            "passer vite",
+            "respecter les distances, sous surveillance",
+            "toucher la ligne pour tester",
+            "ignorer la ligne"
+          ],
+          "bonne": 1,
+          "explication": "Amorçage possible avant contact."
+        },
+        {
+          "id": "q5216",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "La consignation HT ajoute obligatoirement…",
+          "reponses": [
+            "un cadenas de plus",
+            "la mise à la terre et en court-circuit après la VAT",
+            "une pancarte rouge",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Contre les réalimentations et les charges résiduelles."
+        },
+        {
+          "id": "q5217",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "Une pelleteuse touche une ligne HT. Le conducteur…",
+          "reponses": [
+            "descend vite",
+            "reste dans la cabine et attend la coupure, sauf incendie",
+            "touche le sol et l'engin en même temps",
+            "appelle depuis le sol"
+          ],
+          "bonne": 1,
+          "explication": "L'engin est au potentiel de la ligne."
+        },
+        {
+          "id": "q5218",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "S'il doit sortir de l'engin en contact avec une ligne, il…",
+          "reponses": [
+            "descend normalement",
+            "saute à pieds joints sans toucher l'engin, puis s'éloigne à petits pas",
+            "court",
+            "marche à grands pas"
+          ],
+          "bonne": 1,
+          "explication": "Contre la tension de pas."
+        },
+        {
+          "id": "q5219",
+          "fiche_id": "risques_ht",
+          "type": "qcm",
+          "enonce": "Avant un terrassement près d'un câble HTA enterré, on…",
+          "reponses": [
+            "creuse doucement",
+            "fait une DT-DICT",
+            "demande au voisin",
+            "creuse la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Localisation obligatoire."
+        },
+        {
+          "id": "q5220",
+          "fiche_id": "risques_ht",
+          "type": "ordre",
+          "enonce": "Consignation HT : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Séparation de l'ouvrage",
+            "Condamnation",
+            "Identification",
+            "Vérification d'absence de tension avec détecteur HT",
+            "Mise à la terre et en court-circuit"
+          ],
+          "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
+        }
+      ],
+      "ordre": 58
+    },
+    {
+      "id": "enfants",
+      "titre": "Électricité et enfants",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "risques_enfants",
+          "titre": "Les risques à la maison",
+          "contenu": "Les enfants explorent avec les doigts et la bouche. Les accidents : doigt ou objet dans une prise, câble mordillé, appareil tiré par le fil, chargeur dans le bain, rallonge au sol.\n\nLa peau d'un enfant est plus fine et humide : la résistance du corps est plus faible, le courant plus fort. Les seuils de danger sont plus bas que pour un adulte.\n\nLe différentiel 30 mA protège, mais il ne fait pas tout : il faut d'abord empêcher le contact.",
+          "image": "risques_enfants.png"
+        },
+        {
+          "id": "prevention_enfants",
+          "titre": "Prévenir",
+          "contenu": "• Prises à obturateurs (obligatoires dans le neuf) ou cache-prises dans l'ancien.\n• Appareils hors de portée, câbles rangés, pas de rallonge qui traîne, multiprises fixées.\n• Rien de branché près de la baignoire ; pas de téléphone en charge dans le bain.\n• Blocs multiprises avec interrupteur, éteints quand inutilisés.\n• Lampes de chevet en 12 V ou LED tièdes.\n• Expliquer simplement : l'électricité fait mal, on ne touche pas aux prises ni aux fils.\n\nDehors : coffrets fermés, jamais grimper aux pylônes, cerf-volant loin des lignes, ne jamais ramasser un fil tombé.",
+          "image": "prevention_enfants.png"
+        },
+        {
+          "id": "apprendre",
+          "titre": "Apprendre l'électricité en s'amusant",
+          "contenu": "Dès 6 ans : circuit pile, ampoule, interrupteur avec des kits sûrs en 4,5 V. On voit que le courant a besoin d'un chemin fermé.\n\nVers 10 ans : moteur, LED avec sa résistance, buzzer, notion de série et de parallèle. Tout en TBTS, jamais avec le secteur.\n\nAdolescents : montages électroniques, microcontrôleurs, mesures au multimètre, toujours sous 24 V.\n\nRègle d'or transmise : on ne bricole jamais une prise, un tableau ou un appareil branché. L'électricien, c'est un métier, avec des règles.",
+          "image": "apprendre.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q5301",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Pourquoi un enfant est-il plus vulnérable au courant ?",
+          "reponses": [
+            "Il est plus petit",
+            "Sa peau est plus fine et humide : résistance plus faible, courant plus fort",
+            "Il ne sent rien",
+            "Il est plus lourd"
+          ],
+          "bonne": 1,
+          "explication": "Les seuils de danger sont plus bas."
+        },
+        {
+          "id": "q5302",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Accident domestique typique ?",
+          "reponses": [
+            "Foudre",
+            "Objet enfoncé dans une prise",
+            "Panne de courant",
+            "Ampoule LED"
+          ],
+          "bonne": 1,
+          "explication": "D'où les obturateurs."
+        },
+        {
+          "id": "q5303",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Un chargeur branché posé près de la baignoire…",
+          "reponses": [
+            "est sans danger",
+            "est un risque mortel",
+            "recharge plus vite",
+            "est étanche"
+          ],
+          "bonne": 1,
+          "explication": "Le 230 V tombe dans l'eau."
+        },
+        {
+          "id": "q5304",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Le différentiel 30 mA…",
+          "reponses": [
+            "dispense de toute précaution",
+            "protège, mais il faut d'abord empêcher le contact",
+            "n'existe pas",
+            "est inutile pour les enfants"
+          ],
+          "bonne": 1,
+          "explication": "Défense en profondeur."
+        },
+        {
+          "id": "q5305",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Un câble mordillé par un enfant ou un animal…",
+          "reponses": [
+            "est à laisser",
+            "est à remplacer : cuivre accessible",
+            "se répare au ruban",
+            "est décoratif"
+          ],
+          "bonne": 1,
+          "explication": "Contact direct possible."
+        },
+        {
+          "id": "q5306",
+          "fiche_id": "risques_enfants",
+          "type": "qcm",
+          "enonce": "Tirer sur le fil pour débrancher…",
+          "reponses": [
+            "est pratique",
+            "abîme le câble et la fiche : on tire sur la fiche",
+            "est obligatoire",
+            "recharge la prise"
+          ],
+          "bonne": 1,
+          "explication": "Bonne habitude à transmettre."
+        },
+        {
+          "id": "q5307",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Les prises à obturateurs sont…",
+          "reponses": [
+            "facultatives",
+            "obligatoires dans le neuf",
+            "interdites",
+            "réservées aux cuisines"
+          ],
+          "bonne": 1,
+          "explication": "Cache-prises dans l'ancien."
+        },
+        {
+          "id": "q5308",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Une multiprise au sol dans une chambre d'enfant…",
+          "reponses": [
+            "est normale",
+            "est à fixer en hauteur ou à supprimer",
+            "charge mieux",
+            "est plus sûre"
+          ],
+          "bonne": 1,
+          "explication": "Accessible et souvent surchargée."
+        },
+        {
+          "id": "q5309",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Bloc multiprise avec interrupteur : on…",
+          "reponses": [
+            "le laisse allumé",
+            "l'éteint quand inutilisé",
+            "le cache sous le tapis",
+            "le branche sur une autre multiprise"
+          ],
+          "bonne": 1,
+          "explication": "Moins de veille, moins de risque."
+        },
+        {
+          "id": "q5310",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Lampe de chevet d'enfant idéale ?",
+          "reponses": [
+            "Halogène 230 V",
+            "LED tiède, ou 12 V",
+            "Incandescence 100 W",
+            "Néon"
+          ],
+          "bonne": 1,
+          "explication": "Ni brûlure ni choc."
+        },
+        {
+          "id": "q5311",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Un fil tombé au sol dans la rue…",
+          "reponses": [
+            "se ramasse pour dégager",
+            "ne se touche jamais : on s'éloigne et on prévient",
+            "se coupe",
+            "est sans tension"
+          ],
+          "bonne": 1,
+          "explication": "Il peut être sous tension."
+        },
+        {
+          "id": "q5312",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Cerf-volant et lignes électriques…",
+          "reponses": [
+            "font bon ménage",
+            "à éloigner : le fil peut conduire",
+            "sont sans lien",
+            "le fil isole"
+          ],
+          "bonne": 1,
+          "explication": "Fil humide ou métallisé = conducteur."
+        },
+        {
+          "id": "q5313",
+          "fiche_id": "prevention_enfants",
+          "type": "qcm",
+          "enonce": "Que dire à un jeune enfant ?",
+          "reponses": [
+            "Rien",
+            "L'électricité fait mal, on ne touche ni prises ni fils",
+            "Tout le cours de physique",
+            "Les prises sont des jouets"
+          ],
+          "bonne": 1,
+          "explication": "Simple et répété."
+        },
+        {
+          "id": "q5314",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "À quel âge commencer un circuit pile-ampoule ?",
+          "reponses": [
+            "18 ans",
+            "Vers 6 ans, avec un kit sûr en 4,5 V",
+            "Jamais",
+            "Vers 2 ans"
+          ],
+          "bonne": 1,
+          "explication": "On voit le chemin fermé du courant."
+        },
+        {
+          "id": "q5315",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "Les montages d'apprentissage se font…",
+          "reponses": [
+            "sur le secteur",
+            "en très basse tension, jamais avec le secteur",
+            "en 230 V",
+            "en 400 V"
+          ],
+          "bonne": 1,
+          "explication": "TBTS uniquement."
+        },
+        {
+          "id": "q5316",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "Une LED dans un montage éducatif…",
+          "reponses": [
+            "se branche directement sur 9 V",
+            "a besoin d'une résistance en série",
+            "fonctionne en 230 V",
+            "n'a pas de sens"
+          ],
+          "bonne": 1,
+          "explication": "Sinon elle grille."
+        },
+        {
+          "id": "q5317",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "Vers 10 ans, on peut aborder…",
+          "reponses": [
+            "la haute tension",
+            "série, parallèle, moteur, buzzer",
+            "le TST",
+            "les postes HTA"
+          ],
+          "bonne": 1,
+          "explication": "Toujours sous 24 V."
+        },
+        {
+          "id": "q5318",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "La règle d'or à transmettre ?",
+          "reponses": [
+            "Réparer soi-même",
+            "Ne jamais bricoler une prise, un tableau ou un appareil branché",
+            "Tout tester",
+            "Ouvrir le compteur"
+          ],
+          "bonne": 1,
+          "explication": "L'électricien est un métier."
+        },
+        {
+          "id": "q5319",
+          "fiche_id": "apprendre",
+          "type": "qcm",
+          "enonce": "Un microcontrôleur éducatif fonctionne en…",
+          "reponses": [
+            "230 V",
+            "3,3 ou 5 V",
+            "400 V",
+            "12 000 V"
+          ],
+          "bonne": 1,
+          "explication": "Sans danger."
+        },
+        {
+          "id": "q5320",
+          "fiche_id": "prevention_enfants",
+          "type": "ordre",
+          "enonce": "Sécuriser une chambre d'enfant : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier obturateurs ou poser des cache-prises",
+            "Ranger et fixer les câbles, supprimer les rallonges au sol",
+            "Choisir une lampe LED ou 12 V",
+            "Mettre les appareils hors de portée",
+            "Expliquer les règles simples"
+          ],
+          "explication": "Prises, câbles, lampe, appareils, parole."
+        }
+      ],
+      "ordre": 59
     }
   ]
 }
