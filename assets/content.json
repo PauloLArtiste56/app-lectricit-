@@ -1848,9 +1848,623 @@
       "ordre": 6
     },
     {
+      "id": "magnetisme",
+      "titre": "Magnétisme et induction",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "aimants",
+          "titre": "Aimants et champ magnétique",
+          "contenu": "Un aimant a deux pôles, nord et sud. Les pôles opposés s'attirent, les pôles identiques se repoussent. Autour de l'aimant règne un champ magnétique, mesuré en teslas (T).\n\nUn courant électrique crée lui aussi un champ magnétique autour du conducteur (expérience d'Œrsted). En enroulant le fil en bobine autour d'un noyau de fer, on obtient un électroaimant : puissant, et qu'on peut couper.\n\nApplications : relais et contacteurs (une bobine attire un contact), serrures électriques, déclencheur magnétique du disjoncteur, aimants de levage.",
+          "image": "aimants.png"
+        },
+        {
+          "id": "induction",
+          "titre": "L'induction électromagnétique",
+          "contenu": "Découverte de Faraday : un champ magnétique qui varie à travers une bobine y induit une tension. Pas de variation, pas de tension.\n\nC'est le principe de l'alternateur : un aimant qui tourne devant des bobines produit une tension alternative. Et celui du transformateur : le champ variable du primaire induit une tension dans le secondaire.\n\nLoi de Lenz : le courant induit s'oppose à la cause qui lui a donné naissance. C'est pour cela qu'un moteur résiste quand on le freine.\n\nCourants de Foucault : courants induits dans une masse métallique, qui la chauffent. Utile dans une plaque à induction, indésirable dans le noyau d'un transformateur (d'où les tôles feuilletées).",
+          "image": "induction.png"
+        },
+        {
+          "id": "applications_mag",
+          "titre": "Applications au quotidien",
+          "contenu": "• Moteur : un conducteur parcouru par un courant dans un champ subit une force (force de Laplace). Inversement, l'alternateur transforme le mouvement en électricité.\n• Haut-parleur : une bobine mobile dans un aimant fait vibrer la membrane.\n• Plaque à induction : le champ variable chauffe directement le fond de la casserole (ferromagnétique).\n• Pince ampèremétrique : elle mesure le champ magnétique autour d'un fil pour en déduire le courant.\n• Disjoncteur magnétothermique : le déclencheur magnétique coupe instantanément en court-circuit, le thermique coupe en surcharge après un délai.",
+          "image": "applications_mag.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2101",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Deux pôles nord d'aimants placés face à face…",
+          "reponses": [
+            "s'attirent",
+            "se repoussent",
+            "ne réagissent pas",
+            "fondent"
+          ],
+          "bonne": 1,
+          "explication": "Pôles identiques : répulsion. Pôles opposés : attraction."
+        },
+        {
+          "id": "q2102",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "L'unité du champ magnétique est…",
+          "reponses": [
+            "le volt",
+            "le tesla",
+            "l'ampère",
+            "le watt"
+          ],
+          "bonne": 1,
+          "explication": "Le tesla (T). Le champ terrestre vaut environ 50 microteslas."
+        },
+        {
+          "id": "q2103",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Un courant qui traverse un fil…",
+          "reponses": [
+            "crée un champ magnétique autour du fil",
+            "crée de la lumière",
+            "supprime le magnétisme",
+            "refroidit le fil"
+          ],
+          "bonne": 0,
+          "explication": "Expérience d'Œrsted : une boussole dévie près d'un fil parcouru par un courant."
+        },
+        {
+          "id": "q2104",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Un électroaimant, c'est…",
+          "reponses": [
+            "un aimant naturel",
+            "une bobine, souvent autour d'un noyau de fer, alimentée par un courant",
+            "une pile",
+            "un condensateur"
+          ],
+          "bonne": 1,
+          "explication": "On peut le couper, le régler, l'inverser : bien plus pratique qu'un aimant permanent."
+        },
+        {
+          "id": "q2105",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Dans un relais, la bobine sert à…",
+          "reponses": [
+            "chauffer",
+            "attirer un contact pour l'ouvrir ou le fermer",
+            "mesurer",
+            "éclairer"
+          ],
+          "bonne": 1,
+          "explication": "Un petit courant dans la bobine commande un gros courant dans le contact."
+        },
+        {
+          "id": "q2106",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Le déclencheur magnétique d'un disjoncteur réagit…",
+          "reponses": [
+            "aux surcharges lentes",
+            "instantanément aux courts-circuits",
+            "à la foudre",
+            "à la température ambiante"
+          ],
+          "bonne": 1,
+          "explication": "Le courant énorme d'un court-circuit crée un champ qui actionne le déclenchement en quelques millisecondes."
+        },
+        {
+          "id": "q2107",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "Pour induire une tension dans une bobine, il faut…",
+          "reponses": [
+            "un champ magnétique constant",
+            "un champ magnétique qui varie",
+            "de la chaleur",
+            "de la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Loi de Faraday : seule la variation compte."
+        },
+        {
+          "id": "q2108",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "Un alternateur produit de l'électricité grâce à…",
+          "reponses": [
+            "une pile",
+            "un aimant qui tourne devant des bobines",
+            "une réaction chimique",
+            "la chaleur"
+          ],
+          "bonne": 1,
+          "explication": "Le champ vu par les bobines varie à chaque tour : tension alternative."
+        },
+        {
+          "id": "q2109",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "La loi de Lenz dit que le courant induit…",
+          "reponses": [
+            "renforce la cause",
+            "s'oppose à la cause qui lui donne naissance",
+            "est nul",
+            "est continu"
+          ],
+          "bonne": 1,
+          "explication": "C'est pour cela qu'un alternateur devient dur à tourner quand on lui demande du courant."
+        },
+        {
+          "id": "q2110",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "Les courants de Foucault…",
+          "reponses": [
+            "circulent dans les câbles",
+            "sont des courants induits dans une masse métallique qui la chauffent",
+            "viennent de la foudre",
+            "n'existent qu'en continu"
+          ],
+          "bonne": 1,
+          "explication": "Utile pour la plaque à induction, nuisible dans un transformateur."
+        },
+        {
+          "id": "q2111",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "Pourquoi le noyau d'un transformateur est-il en tôles feuilletées ?",
+          "reponses": [
+            "Pour le poids",
+            "Pour limiter les courants de Foucault et l'échauffement",
+            "Pour la couleur",
+            "Pour le bruit"
+          ],
+          "bonne": 1,
+          "explication": "Les tôles isolées entre elles coupent le chemin des courants induits."
+        },
+        {
+          "id": "q2112",
+          "fiche_id": "induction",
+          "type": "qcm",
+          "enonce": "Un transformateur repose sur…",
+          "reponses": [
+            "l'induction : le champ variable du primaire induit une tension au secondaire",
+            "la chaleur",
+            "la lumière",
+            "la gravité"
+          ],
+          "bonne": 0,
+          "explication": "Sans variation (continu), rien n'est induit : d'où l'alternatif obligatoire."
+        },
+        {
+          "id": "q2113",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "La force qui fait tourner un moteur s'appelle…",
+          "reponses": [
+            "la force de Laplace",
+            "la gravité",
+            "la force centrifuge",
+            "la force de frottement"
+          ],
+          "bonne": 0,
+          "explication": "Courant + champ magnétique = force sur le conducteur."
+        },
+        {
+          "id": "q2114",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "Une plaque à induction chauffe…",
+          "reponses": [
+            "l'air",
+            "directement le fond ferromagnétique de la casserole",
+            "la vitre",
+            "l'eau par micro-ondes"
+          ],
+          "bonne": 1,
+          "explication": "Le champ variable induit des courants de Foucault dans le fond de la casserole."
+        },
+        {
+          "id": "q2115",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "Quelle casserole fonctionne sur une plaque à induction ?",
+          "reponses": [
+            "En verre",
+            "En cuivre pur",
+            "En fer ou inox ferromagnétique (un aimant y tient)",
+            "En aluminium fin"
+          ],
+          "bonne": 2,
+          "explication": "Test : si un aimant colle au fond, ça marche."
+        },
+        {
+          "id": "q2116",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "La pince ampèremétrique mesure le courant…",
+          "reponses": [
+            "en coupant le fil",
+            "grâce au champ magnétique autour du fil",
+            "en chauffant",
+            "en mesurant la tension"
+          ],
+          "bonne": 1,
+          "explication": "Pas besoin d'ouvrir le circuit : le champ suffit."
+        },
+        {
+          "id": "q2117",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "Dans un disjoncteur magnétothermique, le thermique réagit…",
+          "reponses": [
+            "aux courts-circuits instantanés",
+            "aux surcharges, après un délai",
+            "à la foudre",
+            "au bruit"
+          ],
+          "bonne": 1,
+          "explication": "Un bilame chauffe et se déforme lentement sous un courant trop fort."
+        },
+        {
+          "id": "q2118",
+          "fiche_id": "applications_mag",
+          "type": "qcm",
+          "enonce": "Un haut-parleur fonctionne grâce à…",
+          "reponses": [
+            "une bobine mobile dans un aimant",
+            "un transformateur",
+            "une pile",
+            "un condensateur seul"
+          ],
+          "bonne": 0,
+          "explication": "Le courant audio dans la bobine la fait vibrer dans le champ de l'aimant."
+        },
+        {
+          "id": "q2119",
+          "fiche_id": "aimants",
+          "type": "qcm",
+          "enonce": "Une serrure électrique s'ouvre grâce à…",
+          "reponses": [
+            "un ressort",
+            "un électroaimant",
+            "une pile",
+            "un moteur diesel"
+          ],
+          "bonne": 1,
+          "explication": "La bobine attire le pêne quand on alimente."
+        },
+        {
+          "id": "q2120",
+          "fiche_id": "induction",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre le fonctionnement d'un alternateur.",
+          "reponses": [
+            "Le rotor (aimant) tourne",
+            "Le champ magnétique vu par les bobines varie",
+            "Une tension alternative est induite dans les bobines",
+            "Le courant alimente le réseau"
+          ],
+          "explication": "Mouvement → variation de champ → induction → courant."
+        }
+      ],
+      "ordre": 7
+    },
+    {
+      "id": "electronique",
+      "titre": "Électronique de base",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "composants",
+          "titre": "Les composants de base",
+          "contenu": "• Résistance : limite le courant. Sa valeur est indiquée par des anneaux de couleur ; sa puissance (1/4 W, 1 W…) indique ce qu'elle peut dissiper.\n• Condensateur : stocke une charge électrique. Unité : le farad (F), en pratique microfarads (µF) ou nanofarads (nF). Il peut rester chargé après coupure.\n• Bobine (self) : s'oppose aux variations de courant, filtre.\n• Diode : laisse passer le courant dans un seul sens, de l'anode vers la cathode, avec un seuil d'environ 0,7 V. Repère : la bague sur la cathode.\n• LED : diode qui émet de la lumière. Toujours avec une résistance en série, sinon elle grille.\n• Transistor : interrupteur ou amplificateur commandé par un petit courant.",
+          "image": "composants.png"
+        },
+        {
+          "id": "alimentation",
+          "titre": "De la prise au circuit : l'alimentation",
+          "contenu": "Une alimentation classique enchaîne quatre étages :\n\n1. Transformateur : abaisse le 230 V.\n2. Redresseur : un pont de quatre diodes transforme l'alternatif en continu pulsé.\n3. Filtrage : un gros condensateur lisse la tension.\n4. Régulateur : fixe la tension de sortie (5 V, 12 V…).\n\nLes chargeurs modernes sont des alimentations à découpage : plus petites et plus légères, elles hachent la tension à haute fréquence avant un petit transformateur.\n\nEn continu, la polarité compte : + et − ne s'inversent pas.",
+          "image": "alimentation.png"
+        },
+        {
+          "id": "securite_elec",
+          "titre": "Sécurité en électronique",
+          "contenu": "Un condensateur peut rester chargé longtemps après avoir débranché : écran, flash d'appareil photo, alimentation, variateur. On le décharge avec une résistance avant d'y toucher, jamais avec un tournevis.\n\nL'électricité statique du corps détruit les composants sensibles : bracelet antistatique, toucher une masse avant de manipuler.\n\nPiles et batteries lithium : un court-circuit provoque un échauffement violent, voire un incendie. On ne les perce pas, on ne les jette pas au feu ni à la poubelle.\n\nOn respecte les tensions maximales des composants et le sens des diodes et condensateurs polarisés.",
+          "image": "securite_elec.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2201",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Une résistance sert à…",
+          "reponses": [
+            "stocker de l'énergie",
+            "limiter le courant",
+            "produire de la lumière",
+            "inverser le courant"
+          ],
+          "bonne": 1,
+          "explication": "Loi d'Ohm : plus R est grande, moins I passe."
+        },
+        {
+          "id": "q2202",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "La valeur d'une résistance se lit…",
+          "reponses": [
+            "sur des anneaux de couleur",
+            "au poids",
+            "à la longueur",
+            "au bruit"
+          ],
+          "bonne": 0,
+          "explication": "Chaque couleur code un chiffre ; le dernier anneau donne la tolérance."
+        },
+        {
+          "id": "q2203",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Un condensateur…",
+          "reponses": [
+            "stocke une charge électrique",
+            "limite le courant",
+            "émet de la lumière",
+            "tourne"
+          ],
+          "bonne": 0,
+          "explication": "Unité : le farad, en pratique µF ou nF."
+        },
+        {
+          "id": "q2204",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Une diode laisse passer le courant…",
+          "reponses": [
+            "dans les deux sens",
+            "dans un seul sens, de l'anode vers la cathode",
+            "jamais",
+            "seulement en alternatif"
+          ],
+          "bonne": 1,
+          "explication": "La bague sur le boîtier repère la cathode."
+        },
+        {
+          "id": "q2205",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Le seuil de conduction d'une diode silicium est d'environ…",
+          "reponses": [
+            "0,07 V",
+            "0,7 V",
+            "7 V",
+            "70 V"
+          ],
+          "bonne": 1,
+          "explication": "En dessous de 0,7 V, elle ne conduit pas."
+        },
+        {
+          "id": "q2206",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Une LED se branche…",
+          "reponses": [
+            "directement sur une pile 9 V",
+            "avec une résistance en série",
+            "en alternatif 230 V",
+            "sans polarité"
+          ],
+          "bonne": 1,
+          "explication": "Sans résistance, le courant n'est pas limité : la LED grille."
+        },
+        {
+          "id": "q2207",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "Un transistor sert de…",
+          "reponses": [
+            "résistance fixe",
+            "interrupteur ou amplificateur commandé",
+            "pile",
+            "transformateur"
+          ],
+          "bonne": 1,
+          "explication": "Un petit courant de commande pilote un courant plus grand."
+        },
+        {
+          "id": "q2208",
+          "fiche_id": "composants",
+          "type": "qcm",
+          "enonce": "La puissance d'une résistance (1/4 W, 1 W) indique…",
+          "reponses": [
+            "sa valeur",
+            "ce qu'elle peut dissiper en chaleur sans griller",
+            "sa couleur",
+            "sa longueur"
+          ],
+          "bonne": 1,
+          "explication": "Une résistance sous-dimensionnée chauffe et brûle."
+        },
+        {
+          "id": "q2209",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "Le pont de diodes d'une alimentation sert à…",
+          "reponses": [
+            "abaisser la tension",
+            "transformer l'alternatif en continu pulsé",
+            "lisser la tension",
+            "fixer la tension"
+          ],
+          "bonne": 1,
+          "explication": "Quatre diodes redressent les deux alternances."
+        },
+        {
+          "id": "q2210",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "Le gros condensateur après le redresseur sert à…",
+          "reponses": [
+            "abaisser la tension",
+            "lisser la tension",
+            "redresser",
+            "protéger contre la foudre"
+          ],
+          "bonne": 1,
+          "explication": "Il se charge sur les crêtes et se décharge entre : la tension devient presque constante."
+        },
+        {
+          "id": "q2211",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "Le régulateur d'une alimentation…",
+          "reponses": [
+            "abaisse le 230 V",
+            "fixe la tension de sortie, par exemple 5 V",
+            "redresse",
+            "mesure"
+          ],
+          "bonne": 1,
+          "explication": "Quelle que soit la charge, la sortie reste à la valeur voulue."
+        },
+        {
+          "id": "q2212",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "Une alimentation à découpage est…",
+          "reponses": [
+            "plus lourde qu'une alimentation classique",
+            "plus petite et légère : elle hache la tension à haute fréquence",
+            "réservée au 400 V",
+            "interdite"
+          ],
+          "bonne": 1,
+          "explication": "C'est ce qu'il y a dans tous les chargeurs modernes."
+        },
+        {
+          "id": "q2213",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "En continu, inverser + et − sur un circuit électronique…",
+          "reponses": [
+            "ne change rien",
+            "peut détruire les composants",
+            "double la tension",
+            "améliore le rendement"
+          ],
+          "bonne": 1,
+          "explication": "Diodes, condensateurs polarisés et circuits intégrés n'aiment pas l'inversion."
+        },
+        {
+          "id": "q2214",
+          "fiche_id": "alimentation",
+          "type": "qcm",
+          "enonce": "Dans l'ordre, une alimentation classique comporte…",
+          "reponses": [
+            "régulateur, filtrage, redresseur, transformateur",
+            "transformateur, redresseur, filtrage, régulateur",
+            "filtrage, transformateur, régulateur, redresseur",
+            "redresseur seul"
+          ],
+          "bonne": 1,
+          "explication": "Abaisser, redresser, lisser, réguler."
+        },
+        {
+          "id": "q2215",
+          "fiche_id": "securite_elec",
+          "type": "qcm",
+          "enonce": "Un condensateur d'alimentation débranchée…",
+          "reponses": [
+            "est forcément déchargé",
+            "peut rester chargé et donner une décharge dangereuse",
+            "est inoffensif",
+            "se recharge tout seul"
+          ],
+          "bonne": 1,
+          "explication": "On le décharge à travers une résistance avant d'intervenir."
+        },
+        {
+          "id": "q2216",
+          "fiche_id": "securite_elec",
+          "type": "qcm",
+          "enonce": "Pour décharger un condensateur, on utilise…",
+          "reponses": [
+            "un tournevis en court-circuit",
+            "une résistance adaptée",
+            "les doigts",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Le tournevis fait une étincelle violente et peut abîmer le condensateur et l'outil."
+        },
+        {
+          "id": "q2217",
+          "fiche_id": "securite_elec",
+          "type": "qcm",
+          "enonce": "Le bracelet antistatique sert à…",
+          "reponses": [
+            "mesurer le pouls",
+            "évacuer l'électricité statique du corps pour protéger les composants",
+            "isoler du 230 V",
+            "décorer"
+          ],
+          "bonne": 1,
+          "explication": "Une décharge statique invisible suffit à détruire une puce."
+        },
+        {
+          "id": "q2218",
+          "fiche_id": "securite_elec",
+          "type": "qcm",
+          "enonce": "Une batterie lithium en court-circuit…",
+          "reponses": [
+            "se décharge doucement",
+            "chauffe violemment et peut prendre feu",
+            "se recharge",
+            "est sans danger"
+          ],
+          "bonne": 1,
+          "explication": "D'où les précautions de transport et de stockage."
+        },
+        {
+          "id": "q2219",
+          "fiche_id": "securite_elec",
+          "type": "qcm",
+          "enonce": "Que faire d'une pile ou batterie usagée ?",
+          "reponses": [
+            "La jeter à la poubelle",
+            "La déposer dans un point de collecte",
+            "La brûler",
+            "La percer"
+          ],
+          "bonne": 1,
+          "explication": "Recyclage obligatoire : métaux lourds et risque d'incendie."
+        },
+        {
+          "id": "q2220",
+          "fiche_id": "alimentation",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les étages d'une alimentation classique.",
+          "reponses": [
+            "Transformateur : abaisse le 230 V",
+            "Redresseur : pont de diodes",
+            "Filtrage : condensateur",
+            "Régulateur : tension de sortie fixe"
+          ],
+          "explication": "Abaisser, redresser, lisser, réguler."
+        }
+      ],
+      "ordre": 8
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 7,
+      "ordre": 9,
       "fiches": [
         {
           "id": "multimetre",
@@ -2158,7 +2772,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 8,
+      "ordre": 10,
       "fiches": [
         {
           "id": "tableau",
@@ -2768,7 +3382,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 9
+      "ordre": 11
     },
     {
       "id": "cablage",
@@ -3076,7 +3690,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 10
+      "ordre": 12
     },
     {
       "id": "parafoudre",
@@ -3383,7 +3997,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 11
+      "ordre": 13
     },
     {
       "id": "locaux_risques",
@@ -3690,12 +4304,319 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 12
+      "ordre": 14
+    },
+    {
+      "id": "photovoltaique",
+      "titre": "Photovoltaïque : produire son électricité",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "principe_pv",
+          "titre": "Le principe",
+          "contenu": "Une cellule photovoltaïque transforme la lumière en courant continu. Un panneau regroupe des dizaines de cellules ; les panneaux actuels font autour de 400 watts-crête (Wc), la puissance obtenue en plein soleil.\n\nEn France, 1 kWc bien orienté (plein sud, incliné à 30°) produit environ 1 000 à 1 300 kWh par an selon la région.\n\nL'onduleur transforme le continu des panneaux en alternatif 230 V. Les micro-onduleurs le font panneau par panneau, ce qui limite l'effet d'une ombre.",
+          "image": "principe_pv.png"
+        },
+        {
+          "id": "installation_pv",
+          "titre": "Installer et raccorder",
+          "contenu": "Deux usages : l'autoconsommation (on consomme ce qu'on produit, avec ou sans vente du surplus) et la vente totale.\n\nDémarches : déclaration préalable en mairie, demande de raccordement à Enedis, attestation de conformité Consuel, contrat de vente du surplus si souhaité.\n\nMatériel : câbles solaires à double isolation, sectionneur côté continu, protections côté alternatif, mise à la terre des cadres, parafoudre recommandé. Le compteur communicant mesure séparément ce qui entre et ce qui sort.",
+          "image": "installation_pv.png"
+        },
+        {
+          "id": "securite_pv",
+          "titre": "Sécurité spécifique",
+          "contenu": "Un panneau est sous tension dès qu'il reçoit de la lumière : impossible de l'éteindre. En série, la tension continue d'une chaîne atteint plusieurs centaines de volts.\n\nUn arc en courant continu ne s'éteint pas seul : ne jamais débrancher un connecteur (MC4) sous charge ; couper d'abord l'onduleur et le sectionneur.\n\nL'habilitation BP couvre les opérations sur les installations photovoltaïques. Une coupure d'urgence identifiée aide les pompiers.\n\nEt comme les panneaux sont sur le toit : le risque de chute est le premier danger.",
+          "image": "securite_pv.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2301",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "Une cellule photovoltaïque produit…",
+          "reponses": [
+            "du courant alternatif",
+            "du courant continu",
+            "de la chaleur seulement",
+            "du 230 V directement"
+          ],
+          "bonne": 1,
+          "explication": "Continu, comme une pile. L'onduleur fait la conversion."
+        },
+        {
+          "id": "q2302",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "Wc signifie…",
+          "reponses": [
+            "watt-cellule",
+            "watt-crête : puissance en plein soleil",
+            "watt-courant",
+            "watt-continu"
+          ],
+          "bonne": 1,
+          "explication": "Puissance maximale dans des conditions standard d'ensoleillement."
+        },
+        {
+          "id": "q2303",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "1 kWc bien orienté produit en France environ…",
+          "reponses": [
+            "100 kWh par an",
+            "1 000 à 1 300 kWh par an",
+            "10 000 kWh par an",
+            "1 kWh par an"
+          ],
+          "bonne": 1,
+          "explication": "Davantage dans le sud, moins dans le nord."
+        },
+        {
+          "id": "q2304",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "Orientation et inclinaison idéales en France ?",
+          "reponses": [
+            "Nord, 90°",
+            "Sud, environ 30°",
+            "Est, 0°",
+            "Ouest, 60°"
+          ],
+          "bonne": 1,
+          "explication": "Sud, autour de 30°, compromis sur l'année."
+        },
+        {
+          "id": "q2305",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "L'onduleur photovoltaïque…",
+          "reponses": [
+            "stocke l'énergie",
+            "transforme le continu des panneaux en alternatif 230 V",
+            "nettoie les panneaux",
+            "mesure la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Sans lui, rien n'est utilisable sur le réseau domestique."
+        },
+        {
+          "id": "q2306",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "Un micro-onduleur…",
+          "reponses": [
+            "est installé sous chaque panneau",
+            "est placé au compteur",
+            "remplace les panneaux",
+            "est un transformateur"
+          ],
+          "bonne": 0,
+          "explication": "Chaque panneau produit indépendamment : une ombre n'affecte que lui."
+        },
+        {
+          "id": "q2307",
+          "fiche_id": "principe_pv",
+          "type": "qcm",
+          "enonce": "La puissance d'un panneau actuel est d'environ…",
+          "reponses": [
+            "40 Wc",
+            "400 Wc",
+            "4 000 Wc",
+            "4 Wc"
+          ],
+          "bonne": 1,
+          "explication": "Autour de 400 Wc pour un panneau de 2 m²."
+        },
+        {
+          "id": "q2308",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "L'autoconsommation, c'est…",
+          "reponses": [
+            "vendre toute sa production",
+            "consommer ce qu'on produit, avec ou sans vente du surplus",
+            "ne rien produire",
+            "stocker dans le réseau"
+          ],
+          "bonne": 1,
+          "explication": "Le surplus part sur le réseau, vendu ou non."
+        },
+        {
+          "id": "q2309",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "Avant de poser des panneaux, on fait…",
+          "reponses": [
+            "rien",
+            "une déclaration préalable en mairie",
+            "une demande à la préfecture",
+            "un permis de conduire"
+          ],
+          "bonne": 1,
+          "explication": "Les panneaux modifient l'aspect du bâtiment."
+        },
+        {
+          "id": "q2310",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "Le Consuel délivre…",
+          "reponses": [
+            "le contrat de vente",
+            "l'attestation de conformité de l'installation",
+            "le compteur",
+            "les panneaux"
+          ],
+          "bonne": 1,
+          "explication": "Sans Consuel, pas de raccordement."
+        },
+        {
+          "id": "q2311",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "Le raccordement au réseau est demandé à…",
+          "reponses": [
+            "la mairie",
+            "Enedis (le gestionnaire du réseau)",
+            "l'installateur",
+            "le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Enedis gère le réseau de distribution et le compteur."
+        },
+        {
+          "id": "q2312",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "Les cadres des panneaux…",
+          "reponses": [
+            "restent isolés",
+            "sont reliés à la terre",
+            "sont peints",
+            "sont sous 230 V"
+          ],
+          "bonne": 1,
+          "explication": "Masse métallique : mise à la terre obligatoire."
+        },
+        {
+          "id": "q2313",
+          "fiche_id": "installation_pv",
+          "type": "qcm",
+          "enonce": "Les câbles côté panneaux sont…",
+          "reponses": [
+            "des câbles ordinaires",
+            "des câbles solaires à double isolation, résistants aux UV",
+            "des fils de téléphone",
+            "en aluminium nu"
+          ],
+          "bonne": 1,
+          "explication": "Exposés au soleil et à la pluie pendant 25 ans."
+        },
+        {
+          "id": "q2314",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "Un panneau photovoltaïque est sous tension…",
+          "reponses": [
+            "seulement la nuit",
+            "dès qu'il reçoit de la lumière",
+            "seulement raccordé",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "On ne peut pas l'éteindre : on le couvre ou on travaille avec les précautions BP."
+        },
+        {
+          "id": "q2315",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "Débrancher un connecteur MC4 sous charge…",
+          "reponses": [
+            "est sans danger",
+            "crée un arc continu qui ne s'éteint pas seul",
+            "recharge la batterie",
+            "est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "On coupe d'abord l'onduleur et le sectionneur continu."
+        },
+        {
+          "id": "q2316",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "Quelle habilitation pour intervenir sur une installation photovoltaïque ?",
+          "reponses": [
+            "B0",
+            "BP",
+            "BS",
+            "H0"
+          ],
+          "bonne": 1,
+          "explication": "BP : opérations photovoltaïques, en plus des habilitations BT classiques."
+        },
+        {
+          "id": "q2317",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "Une chaîne de panneaux en série peut atteindre…",
+          "reponses": [
+            "12 V",
+            "plusieurs centaines de volts continus",
+            "5 V",
+            "0 V"
+          ],
+          "bonne": 1,
+          "explication": "Les tensions s'ajoutent en série : jusqu'à 600 V et plus."
+        },
+        {
+          "id": "q2318",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "Le premier danger lors de la pose de panneaux est…",
+          "reponses": [
+            "l'électrisation",
+            "la chute depuis le toit",
+            "la foudre",
+            "le bruit"
+          ],
+          "bonne": 1,
+          "explication": "Travail en hauteur : harnais, échafaudage, garde-corps."
+        },
+        {
+          "id": "q2319",
+          "fiche_id": "securite_pv",
+          "type": "qcm",
+          "enonce": "La coupure d'urgence photovoltaïque sert…",
+          "reponses": [
+            "aux voisins",
+            "aux pompiers, pour isoler l'installation en cas d'incendie",
+            "à économiser",
+            "à nettoyer"
+          ],
+          "bonne": 1,
+          "explication": "Signalée et accessible depuis l'extérieur."
+        },
+        {
+          "id": "q2320",
+          "fiche_id": "securite_pv",
+          "type": "ordre",
+          "enonce": "Avant de déconnecter un panneau, remets les étapes dans l'ordre.",
+          "reponses": [
+            "Arrêter l'onduleur",
+            "Ouvrir le sectionneur côté continu",
+            "Vérifier l'absence de courant dans la chaîne",
+            "Déconnecter les connecteurs MC4"
+          ],
+          "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
+        }
+      ],
+      "ordre": 15
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 13,
+      "ordre": 16,
       "fiches": [
         {
           "id": "dangers",
@@ -4003,7 +4924,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 14,
+      "ordre": 17,
       "fiches": [
         {
           "id": "principe",
@@ -4611,7 +5532,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 15
+      "ordre": 18
     },
     {
       "id": "epi",
@@ -4918,7 +5839,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 16
+      "ordre": 19
     },
     {
       "id": "b0_bs",
@@ -5226,7 +6147,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 17
+      "ordre": 20
     },
     {
       "id": "br",
@@ -5534,7 +6455,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 18
+      "ordre": 21
     },
     {
       "id": "secours",
@@ -5841,7 +6762,624 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 19
+      "ordre": 22
+    },
+    {
+      "id": "b1_b2",
+      "titre": "B1V, B2V et le chargé de travaux",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "b1_exec",
+          "titre": "B1 / B1V : l'exécutant électricien",
+          "contenu": "Le B1 est un électricien qui exécute des travaux d'ordre électrique hors tension, sous la direction d'un chargé de travaux B2. Avec la lettre V, il peut travailler au voisinage renforcé (zone 4), avec les EPI.\n\nIl ne travaille pas seul : il reçoit ses instructions du chargé de travaux, respecte le balisage et les consignes, et signale tout ce qui lui paraît anormal.\n\nIl ne consigne pas, ne dirige pas, ne décide pas de remettre sous tension. Il utilise l'outillage isolé et les EPI fournis.\n\nEn haute tension, l'équivalent est H1 / H1V.",
+          "image": "b1_exec.png"
+        },
+        {
+          "id": "b2_chef",
+          "titre": "B2 / B2V : le chargé de travaux",
+          "contenu": "Le B2 dirige les travaux et il est responsable de la sécurité de son équipe.\n\nAvant : il reçoit l'attestation de consignation du chargé de consignation, ou consigne lui-même s'il est aussi BC. Il vérifie l'absence de tension dans la zone de travail, balise et délimite la zone, informe l'équipe des risques et des consignes.\n\nPendant : il surveille, fait respecter les mesures de sécurité, peut participer aux travaux.\n\nAprès : il rassemble l'équipe et l'outillage, s'assure que tout le monde est dégagé, puis remet l'avis de fin de travail au chargé de consignation. Sans cet avis, pas de déconsignation.",
+          "image": "b2_chef.png"
+        },
+        {
+          "id": "deroule_travaux",
+          "titre": "Travaux hors tension : le déroulé",
+          "contenu": "1. Préparation : ordre de travail, analyse des risques, désignation des acteurs.\n2. Consignation par le BC : séparation, condamnation, identification, VAT. Attestation de consignation remise au chargé de travaux.\n3. Le chargé de travaux vérifie l'absence de tension dans sa zone, balise, informe l'équipe et donne l'ordre de commencer.\n4. Travaux, sous la surveillance du chargé de travaux.\n5. Fin : rassemblement de l'équipe et des outils, vérification que personne n'est exposé, avis de fin de travail au BC.\n6. Déconsignation par le BC, dans l'ordre inverse, puis remise sous tension.",
+          "image": "deroule_travaux.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1901",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "Le B1 travaille…",
+          "reponses": [
+            "seul",
+            "sous la direction d'un chargé de travaux B2",
+            "sous la direction d'un B0",
+            "sans instructions"
+          ],
+          "bonne": 1,
+          "explication": "L'exécutant reçoit ses instructions du chargé de travaux."
+        },
+        {
+          "id": "q1902",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "Le B1V peut travailler…",
+          "reponses": [
+            "en haute tension",
+            "au voisinage renforcé (zone 4), avec les EPI",
+            "sous tension",
+            "sans EPI"
+          ],
+          "bonne": 1,
+          "explication": "La lettre V ouvre la zone 4, sous conditions de protection."
+        },
+        {
+          "id": "q1903",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "Le B1 peut-il consigner une installation ?",
+          "reponses": [
+            "Oui",
+            "Non",
+            "Oui, s'il est seul",
+            "Oui, en basse tension"
+          ],
+          "bonne": 1,
+          "explication": "La consignation est réservée au BC."
+        },
+        {
+          "id": "q1904",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "Le B1 remarque une anomalie pendant les travaux. Il…",
+          "reponses": [
+            "la répare lui-même sans rien dire",
+            "la signale au chargé de travaux",
+            "attend la fin",
+            "remet sous tension"
+          ],
+          "bonne": 1,
+          "explication": "Le chargé de travaux décide de la suite."
+        },
+        {
+          "id": "q1905",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "L'équivalent du B1 en haute tension est…",
+          "reponses": [
+            "H0",
+            "H1",
+            "HC",
+            "HR"
+          ],
+          "bonne": 1,
+          "explication": "H = haute tension, 1 = exécutant."
+        },
+        {
+          "id": "q1906",
+          "fiche_id": "b1_exec",
+          "type": "qcm",
+          "enonce": "Le B1 décide-t-il de la remise sous tension ?",
+          "reponses": [
+            "Oui",
+            "Non, c'est le rôle du chargé de travaux puis du BC",
+            "Oui, à la fin de sa journée",
+            "Oui, s'il a fini"
+          ],
+          "bonne": 1,
+          "explication": "La remise sous tension suit l'avis de fin de travail et la déconsignation."
+        },
+        {
+          "id": "q1907",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Le chargé de travaux B2 est responsable…",
+          "reponses": [
+            "de la facturation",
+            "de la sécurité de son équipe pendant les travaux",
+            "de la consignation de toute l'usine",
+            "des achats"
+          ],
+          "bonne": 1,
+          "explication": "Il dirige et protège : c'est sa mission première."
+        },
+        {
+          "id": "q1908",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Avant de commencer, le chargé de travaux reçoit…",
+          "reponses": [
+            "un bon de commande",
+            "l'attestation de consignation",
+            "le permis de conduire",
+            "une facture"
+          ],
+          "bonne": 1,
+          "explication": "L'attestation garantit que l'ouvrage est consigné."
+        },
+        {
+          "id": "q1909",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Dans sa zone de travail, le chargé de travaux…",
+          "reponses": [
+            "fait confiance à l'attestation sans vérifier",
+            "vérifie lui-même l'absence de tension",
+            "demande au B0",
+            "attend"
+          ],
+          "bonne": 1,
+          "explication": "Même consigné, on vérifie sur place avec un VAT."
+        },
+        {
+          "id": "q1910",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Avant les travaux, le chargé de travaux informe l'équipe…",
+          "reponses": [
+            "du menu de midi",
+            "des risques, des limites de la zone et des consignes",
+            "du planning de l'année",
+            "de rien"
+          ],
+          "bonne": 1,
+          "explication": "Chacun doit savoir où il peut aller et ce qu'il doit faire."
+        },
+        {
+          "id": "q1911",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "À la fin des travaux, le chargé de travaux remet…",
+          "reponses": [
+            "l'attestation de consignation",
+            "l'avis de fin de travail",
+            "un rapport d'intervention BR",
+            "le titre d'habilitation"
+          ],
+          "bonne": 1,
+          "explication": "L'avis de fin de travail déclenche la déconsignation."
+        },
+        {
+          "id": "q1912",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Le chargé de travaux peut-il participer aux travaux ?",
+          "reponses": [
+            "Non, jamais",
+            "Oui, tout en gardant la surveillance",
+            "Oui, à condition d'oublier la surveillance",
+            "Non, il reste au bureau"
+          ],
+          "bonne": 1,
+          "explication": "Il peut mettre la main à la pâte sans lâcher son rôle de surveillance."
+        },
+        {
+          "id": "q1913",
+          "fiche_id": "b2_chef",
+          "type": "qcm",
+          "enonce": "Le chargé de travaux B2 peut-il consigner lui-même ?",
+          "reponses": [
+            "Oui, s'il est aussi habilité BC",
+            "Oui, toujours",
+            "Non, jamais",
+            "Oui, avec un B0"
+          ],
+          "bonne": 0,
+          "explication": "Un B2 souvent titulaire de BC consigne pour ses propres travaux."
+        },
+        {
+          "id": "q1914",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "Quelle est la première étape de travaux hors tension ?",
+          "reponses": [
+            "La déconsignation",
+            "La préparation : ordre de travail, analyse des risques",
+            "La remise sous tension",
+            "Les travaux"
+          ],
+          "bonne": 1,
+          "explication": "On planifie et on analyse avant d'agir."
+        },
+        {
+          "id": "q1915",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "Qui consigne l'ouvrage avant les travaux ?",
+          "reponses": [
+            "Le B0",
+            "Le chargé de consignation BC",
+            "Le B1",
+            "Le client"
+          ],
+          "bonne": 1,
+          "explication": "Le BC réalise les quatre étapes et remet l'attestation."
+        },
+        {
+          "id": "q1916",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "La déconsignation se fait…",
+          "reponses": [
+            "dès que le B1 a fini",
+            "après réception de l'avis de fin de travail",
+            "avant les travaux",
+            "à midi"
+          ],
+          "bonne": 1,
+          "explication": "Sans avis de fin de travail, l'ouvrage reste consigné."
+        },
+        {
+          "id": "q1917",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "Avant l'avis de fin de travail, le chargé de travaux…",
+          "reponses": [
+            "rassemble l'équipe et l'outillage et vérifie que personne n'est exposé",
+            "rentre chez lui",
+            "remet sous tension",
+            "déconsigne"
+          ],
+          "bonne": 0,
+          "explication": "Remettre sous tension avec quelqu'un encore sur l'ouvrage serait dramatique."
+        },
+        {
+          "id": "q1918",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "Pendant les travaux, qui surveille la sécurité ?",
+          "reponses": [
+            "Personne",
+            "Le chargé de travaux",
+            "Le B0",
+            "Le fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Le chargé de travaux, éventuellement aidé d'un surveillant de sécurité électrique."
+        },
+        {
+          "id": "q1919",
+          "fiche_id": "deroule_travaux",
+          "type": "qcm",
+          "enonce": "L'ordre de commencer les travaux est donné par…",
+          "reponses": [
+            "le B1",
+            "le chargé de travaux, après ses vérifications",
+            "le BC",
+            "le B0"
+          ],
+          "bonne": 1,
+          "explication": "Après attestation, VAT, balisage et information de l'équipe."
+        },
+        {
+          "id": "q1920",
+          "fiche_id": "deroule_travaux",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les étapes de travaux hors tension.",
+          "reponses": [
+            "Préparation et analyse des risques",
+            "Consignation par le BC et attestation",
+            "Vérification, balisage et information de l'équipe par le chargé de travaux",
+            "Travaux",
+            "Avis de fin de travail",
+            "Déconsignation et remise sous tension"
+          ],
+          "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
+        }
+      ],
+      "ordre": 23
+    },
+    {
+      "id": "bc",
+      "titre": "Chargé de consignation et documents",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "bc_role",
+          "titre": "BC : le chargé de consignation",
+          "contenu": "Le BC réalise les consignations et les déconsignations. Il est désigné par l'employeur. En haute tension : HC.\n\nConsignation en une étape : le BC fait les quatre opérations (séparation, condamnation, identification, VAT) et remet l'attestation de consignation.\n\nConsignation en deux étapes : le BC fait la séparation et la condamnation, remet une attestation de première étape ; le chargé de travaux fait ensuite l'identification et la VAT dans sa zone.\n\nLe BC ne déconsigne qu'après avoir reçu l'avis de fin de travail. Il s'assure que tout le monde est dégagé, retire les mises à la terre éventuelles, décondamne, puis remet sous tension.",
+          "image": "bc_role.png"
+        },
+        {
+          "id": "documents",
+          "titre": "Les documents de l'habilitation",
+          "contenu": "• Titre d'habilitation : délivré par l'employeur, indique les symboles, le domaine, les tâches.\n• Ordre de travail ou autorisation de travail : décrit les travaux à réaliser.\n• Attestation de consignation (en une ou deux étapes) : preuve écrite que l'ouvrage est consigné.\n• Avis de fin de travail : signé par le chargé de travaux, il autorise la déconsignation.\n• Instruction de sécurité : consignes particulières pour une opération.\n• Carnet de prescriptions : le recueil des règles de sécurité remis à chaque habilité.\n\nCes documents se conservent : ils tracent qui a fait quoi, et quand.",
+          "image": "documents.png"
+        },
+        {
+          "id": "acteurs",
+          "titre": "Les acteurs d'un chantier",
+          "contenu": "• L'employeur : forme, habilite, fournit les EPI.\n• Le chargé d'exploitation électrique (CEE) : gère l'accès aux ouvrages, délivre les autorisations, décide des manœuvres.\n• Le chargé de consignation (BC) : consigne et déconsigne.\n• Le chargé de travaux (B2) : dirige les travaux et la sécurité de l'équipe.\n• Les exécutants (B1) : réalisent les travaux.\n• Le chargé de chantier (B0) : dirige les travaux non électriques.\n• Le surveillant de sécurité électrique : veille au risque électrique pendant l'opération.\n\nUne même personne peut cumuler plusieurs rôles si elle a les habilitations, mais chaque rôle garde ses responsabilités.",
+          "image": "acteurs.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q2001",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "Le BC réalise…",
+          "reponses": [
+            "les travaux",
+            "les consignations et déconsignations",
+            "les mesures",
+            "la peinture"
+          ],
+          "bonne": 1,
+          "explication": "C'est son rôle exclusif."
+        },
+        {
+          "id": "q2002",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "En consignation en deux étapes, le BC fait…",
+          "reponses": [
+            "identification et VAT",
+            "séparation et condamnation",
+            "seulement la VAT",
+            "tout"
+          ],
+          "bonne": 1,
+          "explication": "Le chargé de travaux termine par l'identification et la VAT dans sa zone."
+        },
+        {
+          "id": "q2003",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "Le document remis après la première étape s'appelle…",
+          "reponses": [
+            "l'avis de fin de travail",
+            "l'attestation de première étape de consignation",
+            "le titre",
+            "l'ordre de travail"
+          ],
+          "bonne": 1,
+          "explication": "Il indique que l'ouvrage est séparé et condamné, pas encore vérifié."
+        },
+        {
+          "id": "q2004",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "Le BC déconsigne…",
+          "reponses": [
+            "quand il veut",
+            "après réception de l'avis de fin de travail",
+            "avant les travaux",
+            "à la demande du B1"
+          ],
+          "bonne": 1,
+          "explication": "L'avis de fin de travail est sa garantie que l'équipe est dégagée."
+        },
+        {
+          "id": "q2005",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "Avant de remettre sous tension, le BC…",
+          "reponses": [
+            "appelle le client",
+            "s'assure que tout le monde est dégagé et retire les mises à la terre",
+            "refait la VAT",
+            "remet l'attestation"
+          ],
+          "bonne": 1,
+          "explication": "Déconsignation dans l'ordre inverse de la consignation."
+        },
+        {
+          "id": "q2006",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "L'équivalent du BC en haute tension est…",
+          "reponses": [
+            "H0",
+            "H1",
+            "HC",
+            "H2"
+          ],
+          "bonne": 2,
+          "explication": "C = chargé de consignation."
+        },
+        {
+          "id": "q2007",
+          "fiche_id": "bc_role",
+          "type": "qcm",
+          "enonce": "Le BC est désigné par…",
+          "reponses": [
+            "le client",
+            "l'employeur",
+            "le B1",
+            "le fournisseur d'électricité"
+          ],
+          "bonne": 1,
+          "explication": "Comme toute habilitation, c'est l'employeur qui désigne."
+        },
+        {
+          "id": "q2008",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "Le titre d'habilitation indique…",
+          "reponses": [
+            "le salaire",
+            "les symboles, le domaine de tension et les tâches autorisées",
+            "les horaires",
+            "les congés"
+          ],
+          "bonne": 1,
+          "explication": "C'est la carte d'identité électrique du salarié."
+        },
+        {
+          "id": "q2009",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "L'attestation de consignation est…",
+          "reponses": [
+            "orale",
+            "écrite, signée par le BC et le chargé de travaux",
+            "facultative",
+            "remplacée par un SMS"
+          ],
+          "bonne": 1,
+          "explication": "Écrite et signée : elle engage les deux parties."
+        },
+        {
+          "id": "q2010",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "L'avis de fin de travail est signé par…",
+          "reponses": [
+            "le B0",
+            "le chargé de travaux",
+            "le B1",
+            "l'employeur"
+          ],
+          "bonne": 1,
+          "explication": "Il atteste que les travaux sont finis et l'équipe dégagée."
+        },
+        {
+          "id": "q2011",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "Le carnet de prescriptions est…",
+          "reponses": [
+            "un cahier de commandes",
+            "le recueil des règles de sécurité remis à chaque habilité",
+            "un carnet de santé",
+            "un livre de recettes"
+          ],
+          "bonne": 1,
+          "explication": "Chaque habilité doit l'avoir reçu et le connaître."
+        },
+        {
+          "id": "q2012",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "L'instruction de sécurité…",
+          "reponses": [
+            "est une sanction",
+            "donne des consignes particulières pour une opération",
+            "remplace le titre",
+            "est un test"
+          ],
+          "bonne": 1,
+          "explication": "Adaptée à une opération précise."
+        },
+        {
+          "id": "q2013",
+          "fiche_id": "documents",
+          "type": "qcm",
+          "enonce": "Pourquoi conserver ces documents ?",
+          "reponses": [
+            "Pour le recyclage",
+            "Pour tracer qui a fait quoi et quand",
+            "Pour la décoration",
+            "Ce n'est pas nécessaire"
+          ],
+          "bonne": 1,
+          "explication": "En cas d'accident ou de contrôle, la traçabilité est essentielle."
+        },
+        {
+          "id": "q2014",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Le chargé d'exploitation électrique (CEE)…",
+          "reponses": [
+            "exécute les travaux",
+            "gère l'accès aux ouvrages et délivre les autorisations",
+            "peint les locaux",
+            "vend l'électricité"
+          ],
+          "bonne": 1,
+          "explication": "Il est le responsable de l'installation côté exploitant."
+        },
+        {
+          "id": "q2015",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Qui fournit les EPI et habilite ?",
+          "reponses": [
+            "L'employeur",
+            "Le B1",
+            "Le client",
+            "Le BC"
+          ],
+          "bonne": 0,
+          "explication": "Obligation de l'employeur."
+        },
+        {
+          "id": "q2016",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Le surveillant de sécurité électrique…",
+          "reponses": [
+            "fait les travaux",
+            "veille uniquement au risque électrique pendant l'opération",
+            "consigne",
+            "rédige l'ordre de travail"
+          ],
+          "bonne": 1,
+          "explication": "Une seule tâche : surveiller."
+        },
+        {
+          "id": "q2017",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Une même personne peut-elle être BC et B2 ?",
+          "reponses": [
+            "Non, jamais",
+            "Oui, si elle a les deux habilitations",
+            "Oui, sans habilitation",
+            "Non, sauf en HT"
+          ],
+          "bonne": 1,
+          "explication": "Fréquent sur les petits chantiers, chaque rôle gardant ses responsabilités."
+        },
+        {
+          "id": "q2018",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Le chargé de chantier dirige…",
+          "reponses": [
+            "les travaux électriques",
+            "les travaux non électriques",
+            "la consignation",
+            "les mesures"
+          ],
+          "bonne": 1,
+          "explication": "Maçons, peintres, plombiers…"
+        },
+        {
+          "id": "q2019",
+          "fiche_id": "acteurs",
+          "type": "qcm",
+          "enonce": "Qui décide des manœuvres d'exploitation sur un ouvrage ?",
+          "reponses": [
+            "Le B1",
+            "Le chargé d'exploitation électrique",
+            "Le B0",
+            "Le client final"
+          ],
+          "bonne": 1,
+          "explication": "Le CEE coordonne ce qui se passe sur l'installation."
+        },
+        {
+          "id": "q2020",
+          "fiche_id": "bc_role",
+          "type": "ordre",
+          "enonce": "Déconsignation : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Recevoir l'avis de fin de travail",
+            "S'assurer que tout le monde est dégagé",
+            "Retirer les mises à la terre éventuelles",
+            "Décondamner l'appareil de séparation",
+            "Remettre sous tension"
+          ],
+          "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
+        }
+      ],
+      "ordre": 24
     }
   ]
 }

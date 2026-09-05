@@ -120,10 +120,14 @@ Modules existants (par thème) :
 17. Habilitations B0 et BS en détail
 18. Habilitation BR : les interventions
 19. Premiers secours et incendie électrique
+20. B1V, B2V et le chargé de travaux
+21. Chargé de consignation et documents
+22. Magnétisme et induction
+23. Électronique de base
+24. Photovoltaïque
 
-Sujets à venir : B1V/B2V et chargé de travaux, chargé de consignation BC, magnétisme,
-électronique de base, photovoltaïque, domotique, véhicule électrique, réseaux et
-distribution, normes et documents…
+Sujets à venir : domotique, véhicule électrique, réseaux et distribution, chauffage
+électrique, ventilation, batteries et stockage, éclairage extérieur, normes…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
