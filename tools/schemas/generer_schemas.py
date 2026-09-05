@@ -752,3 +752,44 @@ RESUMES_P = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_P:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_Q = [
+ ("ml_batterie", "La batterie du VAE", "Wh", [("36 ou 48 V, 400 à 750 Wh", "50 à 120 km"), ("Cellules série / parallèle", "BMS : équilibre, protège"), ("500 à 1 000 cycles", "-20 à 30 %"), ("Stockage 30 à 60 %", "au frais")], BLEU),
+ ("ml_moteur", "Moteur et assistance", "25", [("Brushless moyeu ou pédalier", "contrôleur triphasé"), ("250 W, coupure à 25 km/h", "VAE légal"), ("Speed bike 45 km/h", "cyclomoteur"), ("Trottinette 25 km/h", "assurance, pas de trottoir")], VERT),
+ ("ml_securite", "Charger en sécurité", "!", [("Chargeur d'origine", "surface non combustible"), ("Batterie gonflée, choquée", "ne plus charger"), ("Feu lithium", "sortir, fermer, pompiers"), ("Point de collecte", "jamais à la poubelle")], ROUGE),
+ ("sp_distribution", "Distribuer sur site", "kVA", [("Armoire, prises 16 à 125 A", "H07RN-F, bretelles"), ("Réseau, provisoire ou groupe", "source"), ("Son, lumière, vidéo séparés", "terre commune"), ("Centaines de kVA", "poste par poste")], BLEU),
+ ("sp_securite_site", "Sécurité sur site", "30mA", [("Passe-câbles", "jamais en travers des issues"), ("30 mA, IP44 dehors", "public et techniciens"), ("Élingues, terre des ponts", "groupe sur piquet"), ("Habilités, plan de prévention", "commission de sécurité")], ROUGE),
+ ("sp_montage", "Monter et démonter", "1→3", [("Distribution hors tension", "puis mise sous tension progressive"), ("Différentiels, ordre des phases", "treuils"), ("Régisseur, réserve", "groupes surveillés"), ("Couper à la source", "contrôler les câbles")], VERT),
+ ("phy_seuils", "Seuils de courant", "mA", [("0,5 mA perception", "10 mA non-lâcher"), ("30 mA", "paralysie respiratoire"), ("75 à 100 mA", "fibrillation"), ("Continu", "seuils plus hauts, brûlures")], ROUGE),
+ ("phy_impedance", "Corps et tension limite", "50V", [("1 000 à 3 000 Ω sec", "centaines d'ohms mouillé"), ("50 V sec, 25 V mouillé", "12 V immergé"), ("Trajet par le cœur", "main-main, main-pied"), ("Tension de pas", "chute")], AMBRE),
+ ("phy_lesions", "Lésions et suites", "24h", [("Brûlures profondes", "entrée, sortie, trajet"), ("Arc : brûlures, UV", "chute"), ("Troubles du rythme", "jusqu'à 24 h"), ("Toujours consulter", "électrocution = décès")], ROUGE),
+ ("auto_reseau", "Le réseau 12 V", "12V", [("Batterie plomb 40 à 100 Ah", "démarreur 200 à 600 A"), ("Alternateur 14 V", "recharge en marche"), ("Carrosserie = masse", "un seul fil aller"), ("48 V hybride", "400 / 800 V traction")], BLEU),
+ ("auto_circuits", "Fusibles et calculateurs", "CAN", [("Fusible : couleur = calibre", "boîtes"), ("Relais", "petit courant pilote gros"), ("Bus CAN, prise OBD", "diagnostic"), ("Schéma constructeur", "couleurs des fils")], VERT),
+ ("auto_securite", "Dépanner en sécurité", "-", [("Moins d'abord", "plus en dernier au remontage"), ("Court-circuit 12 V", "outil fondu, acide"), ("Câbles : noir sur masse moteur", "ordre"), ("Orange = haute tension", "B2VL, BCL")], ROUGE),
+ ("mat_conducteurs", "Les conducteurs", "Cu", [("Cuivre : référence", "argent, or pour les contacts"), ("Aluminium : 1,6 × section", "3 × plus léger"), ("R = ρ × L / S", "+0,4 % par degré"), ("Bornes spéciales alu", "fluage, oxydation")], BLEU),
+ ("mat_isolants", "Les isolants", "kV/mm", [("Rigidité diélectrique", "kV par mm"), ("PVC, PR 90 °C, caoutchouc", "verre, huile, SF6, air"), ("Vieillissement", "chaleur, UV, humidité"), ("Classes I, II, III", "terre, double isolation, TBTS")], VERT),
+ ("mat_speciaux", "Matériaux spéciaux", "SiC", [("SiC, GaN", "électronique de puissance"), ("Supraconducteurs", "résistance nulle"), ("Tôles, ferrites, néodyme", "magnétiques"), ("Contacts argent, graphite", "câbles CR1")], AMBRE),
+]
+for nom, titre_s, ini, points, col in RESUMES_Q:
+    carte_resume(nom, titre_s, ini, points, col)
+RESUMES_R = [
+ ("calc_kirchhoff", "Lois de Kirchhoff", "ΣI", [("Nœuds : entrants = sortants", "rien ne s'accumule"), ("Mailles : somme des tensions nulle", "boucle fermée"), ("Avec la loi d'Ohm", "tout circuit se résout"), ("Simplifier d'abord", "série, parallèle")], BLEU),
+ ("calc_diviseurs", "Diviseurs", "R2/R", [("Tension : U × R2 / (R1 + R2)", "potentiomètre, capteur"), ("Courant : I × R2 / (R1 + R2)", "la branche la moins résistante"), ("Charge branchée", "modifie la tension"), ("Charge très résistante", "diviseur peu perturbé")], VERT),
+ ("calc_pratique", "Calculs du quotidien", "3%", [("ΔU = 2 ρ L I / S", "3 % éclairage, 5 % autres"), ("P = R × I²", "courant × 2 = pertes × 4"), ("Courant admissible", "selon la pose"), ("Le plus contraignant gagne", "section")], AMBRE),
+ ("osc_principe", "Voir le signal", "V/t", [("Tension en fonction du temps", "la forme du signal"), ("V/div, s/div", "trigger"), ("Crête, période", "f = 1 / T"), ("Numérique", "mémorise, capture")], BLEU),
+ ("osc_signaux", "Formes de signaux", "√2", [("Sinus : 230 V eff = 325 V crête", "réseau"), ("Carré, triangle, impulsions", "logique, MLI"), ("Rapport cyclique", "puissance moyenne"), ("Déformations", "saturation, ondulation, pics")], VERT),
+ ("osc_securite", "Mesurer sans danger", "CAT", [("Masse de sonde = terre", "court-circuit sur le secteur"), ("Sonde différentielle", "oscilloscope isolé"), ("Sonde × 10", "à compenser"), ("CAT II, III", "habilitation, EPI")], ROUGE),
+ ("gtb_principe", "La GTB", "GTB", [("Chauffage, ventilation, éclairage", "stores, accès, comptage"), ("KNX, BACnet, Modbus, DALI", "protocoles ouverts"), ("Automates, capteurs, actionneurs", "poste central"), ("Décret BACS", "2025, 2027")], BLEU),
+ ("gtb_energie", "Économiser", "-20%", [("Programmation horaire", "zones, présence"), ("Gradation, CO₂", "lumière du jour, ventilation"), ("Sous-comptage", "éco-énergie tertiaire"), ("Alarmes techniques", "gaspillages qui durent")], VERT),
+ ("gtb_installation", "Installer et exploiter", "24V", [("Armoires, 24 V", "bus séparé des courants forts"), ("Adressage", "réseau IP"), ("Cybersécurité", "réseau séparé, mots de passe"), ("Suivi annuel", "sinon dérive")], AMBRE),
+ ("rec_deee", "Les DEEE", "♻", [("Poubelle barrée", "jamais aux ordures"), ("Reprise un pour un", "éco-organismes"), ("Éco-participation", "collecte et traitement"), ("Réemploi, réparation", "indice de réparabilité")], VERT),
+ ("rec_filieres", "Filières", "Li", [("Piles, batteries", "collecte dédiée, risque incendie"), ("Lampes", "mercure des fluo"), ("Câbles", "cuivre et alu rachetés"), ("SF6, huile PCB, panneaux", "gros matériel")], AMBRE),
+ ("rec_chantier", "Sur le chantier", "REP", [("Tri : câbles, appareillage", "gaines, luminaires"), ("Diagnostic déchets", "bordereaux"), ("REP bâtiment", "reprise depuis 2023"), ("Éco-conception", "réparable, durable")], BLEU),
+ ("doc_devis", "Le devis", "€", [("Postes, matériel, délai", "TVA 10 % ou 20 %"), ("Visite et métré", "avenant si imprévu"), ("Signé = contrat", "validité"), ("Décennale, identité", "mentions obligatoires")], BLEU),
+ ("doc_attestations", "Attestations et garanties", "10", [("Consuel", "neuf ou rénovation totale"), ("Attestation de fin de travaux", "rénovation partielle"), ("1 an, 2 ans, 10 ans", "garanties"), ("RGE", "aides")], VERT),
+ ("doc_reception", "DOE et réception", "DOE", [("Schémas à jour, notices", "mesures, certificats"), ("Réception", "avec ou sans réserves"), ("Fait partir les garanties", "délai de levée"), ("Schéma faux", "pire qu'absent")], AMBRE),
+ ("en_geothermie", "La géothermie", "°C", [("Très basse : PAC", "quelques mètres"), ("Basse : réseaux de chaleur", "1 à 2 km, 60-90 °C"), ("Haute : électricité", "zones volcaniques"), ("Jour et nuit", "sismicité induite")], BLEU),
+ ("en_biomasse", "Biomasse et biogaz", "CH4", [("Bois-énergie", "1re renouvelable en France"), ("Cogénération", "chaleur + électricité"), ("Méthanisation", "biogaz, biométhane"), ("Ressource durable", "ATEX")], VERT),
+ ("en_marines", "Énergies marines", "~", [("Rance : 240 MW, 1966", "marémotrice"), ("Hydroliennes", "Raz Blanchard"), ("Éolien flottant", "eaux profondes"), ("Corrosion, tempêtes", "maintenance en mer")], AMBRE),
+]
+for nom, titre_s, ini, points, col in RESUMES_R:
+    carte_resume(nom, titre_s, ini, points, col)
