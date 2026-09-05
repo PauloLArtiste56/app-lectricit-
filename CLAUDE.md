@@ -7,6 +7,8 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 
 **Important pour Claude Code :** je veux comprendre ce qui est fait.
 - Explique brièvement chaque choix technique avant de coder.
+- Reste au niveau de la structure et du fonctionnement général (quel fichier fait quoi,
+  comment les pièces s'assemblent). Pas d'explication ligne par ligne du code.
 - Avance par petites étapes, une feature à la fois, et attends ma validation entre chaque.
 - Ne génère pas toute l'appli d'un coup.
 - Commente le code en français quand ce n'est pas évident.
