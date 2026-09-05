@@ -13,7 +13,7 @@ void main() {
   );
 
   test('les modules sont présents, avec un thème', () {
-    expect(modules.length, 69);
+    expect(modules.length, 79);
     expect(modules.every((m) => m.theme.isNotEmpty), isTrue);
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
