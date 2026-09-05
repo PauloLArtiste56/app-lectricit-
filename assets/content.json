@@ -7073,9 +7073,1548 @@
       "ordre": 23
     },
     {
+      "id": "lire_tableau",
+      "titre": "Lire et repérer un tableau",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "organisation_tableau",
+          "titre": "Comment un tableau est organisé",
+          "contenu": "Le tableau se lit rangée par rangée. En tête de chaque rangée, un interrupteur différentiel 30 mA protège tous les disjoncteurs de la rangée. Un peigne d'alimentation relie les appareils entre eux.\n\nRègle de répartition : les circuits d'une même pièce sont répartis sur des différentiels différents, pour ne pas tout perdre d'un coup. La plaque de cuisson et le lave-linge sont sous un différentiel de type A.\n\nLe tableau comporte 20 % d'emplacements libres pour les extensions futures. Un bornier de terre, un bornier de neutre par rangée, et parfois un parafoudre en tête.",
+          "image": "organisation_tableau.png"
+        },
+        {
+          "id": "reperage",
+          "titre": "Le repérage des circuits",
+          "contenu": "Chaque disjoncteur porte une étiquette : « Prises cuisine », « Éclairage étage », « Four ». Sans étiquettes, un dépannage devient une chasse au trésor.\n\nMéthode pour repérer : on branche une lampe ou un testeur sur la prise, on coupe les disjoncteurs un par un, on note. Pour l'éclairage, même chose lampe allumée.\n\nUn schéma unifilaire du tableau, collé dans la porte, indique pour chaque circuit son calibre, sa section et sa fonction. Il est obligatoire dans le neuf.\n\nLes repères normalisés : L1, L2, L3 pour les phases, N pour le neutre, PE pour la terre.",
+          "image": "reperage.png"
+        },
+        {
+          "id": "calibres_lecture",
+          "titre": "Lire un disjoncteur",
+          "contenu": "Sur la face d'un disjoncteur : le calibre (16 A), la courbe (C, la plus courante ; B plus sensible ; D pour les moteurs à fort démarrage), le pouvoir de coupure (3 000 ou 4 500 A : le court-circuit maximal qu'il peut couper), la tension.\n\nManette en haut : enclenché. En bas : déclenché ou coupé. Certains modèles ont un voyant qui distingue le déclenchement sur défaut de la coupure manuelle.\n\nUn différentiel indique sa sensibilité (30 mA), son type (AC, A, F, B) et son calibre (40 ou 63 A). Le bouton T teste son déclenchement.",
+          "image": "calibres_lecture.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3401",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "En tête de chaque rangée d'un tableau, on trouve…",
+          "reponses": [
+            "un fusible",
+            "un interrupteur différentiel 30 mA",
+            "le compteur",
+            "une prise"
+          ],
+          "bonne": 1,
+          "explication": "Il protège tous les circuits de la rangée."
+        },
+        {
+          "id": "q3402",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "Le peigne d'alimentation sert à…",
+          "reponses": [
+            "se coiffer",
+            "relier électriquement les appareils d'une rangée",
+            "mesurer",
+            "isoler"
+          ],
+          "bonne": 1,
+          "explication": "Il remplace les ponts en fil entre disjoncteurs."
+        },
+        {
+          "id": "q3403",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "Les circuits d'une même pièce sont…",
+          "reponses": [
+            "tous sur le même différentiel",
+            "répartis sur des différentiels différents",
+            "sans différentiel",
+            "sur le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Si un différentiel déclenche, la pièce garde de la lumière ou des prises."
+        },
+        {
+          "id": "q3404",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "Le tableau doit garder…",
+          "reponses": [
+            "aucune place libre",
+            "20 % d'emplacements libres",
+            "50 % de place",
+            "un seul emplacement"
+          ],
+          "bonne": 1,
+          "explication": "Pour les extensions futures."
+        },
+        {
+          "id": "q3405",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "La plaque de cuisson est sous un différentiel de type…",
+          "reponses": [
+            "AC",
+            "A",
+            "F seulement",
+            "aucun"
+          ],
+          "bonne": 1,
+          "explication": "Type A : détecte les courants de défaut à composante continue."
+        },
+        {
+          "id": "q3406",
+          "fiche_id": "organisation_tableau",
+          "type": "qcm",
+          "enonce": "Le bornier de neutre d'une rangée regroupe…",
+          "reponses": [
+            "les terres",
+            "les neutres des circuits de la rangée",
+            "les phases",
+            "les câbles de terre du jardin"
+          ],
+          "bonne": 1,
+          "explication": "Chaque rangée a son bornier de neutre relié au différentiel."
+        },
+        {
+          "id": "q3407",
+          "fiche_id": "reperage",
+          "type": "qcm",
+          "enonce": "Sans étiquettes sur les disjoncteurs…",
+          "reponses": [
+            "tout va bien",
+            "un dépannage devient long et risqué",
+            "le tableau est plus joli",
+            "c'est la norme"
+          ],
+          "bonne": 1,
+          "explication": "Repérer avant d'intervenir, sinon on coupe au hasard."
+        },
+        {
+          "id": "q3408",
+          "fiche_id": "reperage",
+          "type": "qcm",
+          "enonce": "Pour repérer le disjoncteur d'une prise, on…",
+          "reponses": [
+            "devine",
+            "branche une lampe et coupe les disjoncteurs un par un",
+            "démonte la prise",
+            "appelle le fournisseur"
+          ],
+          "bonne": 1,
+          "explication": "Méthode simple et sûre."
+        },
+        {
+          "id": "q3409",
+          "fiche_id": "reperage",
+          "type": "qcm",
+          "enonce": "Le schéma unifilaire collé dans le tableau…",
+          "reponses": [
+            "est facultatif dans le neuf",
+            "est obligatoire dans le neuf et décrit chaque circuit",
+            "n'existe pas",
+            "est réservé aux usines"
+          ],
+          "bonne": 1,
+          "explication": "Calibre, section, fonction de chaque circuit."
+        },
+        {
+          "id": "q3410",
+          "fiche_id": "reperage",
+          "type": "qcm",
+          "enonce": "Les repères L1, L2, L3 désignent…",
+          "reponses": [
+            "les lampes",
+            "les trois phases",
+            "les lignes de terre",
+            "les niveaux"
+          ],
+          "bonne": 1,
+          "explication": "N pour le neutre, PE pour la terre."
+        },
+        {
+          "id": "q3411",
+          "fiche_id": "reperage",
+          "type": "qcm",
+          "enonce": "Repérer un circuit d'éclairage se fait…",
+          "reponses": [
+            "lampe éteinte",
+            "lampe allumée, en coupant les disjoncteurs un par un",
+            "avec un VAT seulement",
+            "en démontant le plafonnier"
+          ],
+          "bonne": 1,
+          "explication": "La lampe qui s'éteint indique le bon disjoncteur."
+        },
+        {
+          "id": "q3412",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Sur un disjoncteur, « C16 » signifie…",
+          "reponses": [
+            "classe 16",
+            "courbe C, calibre 16 A",
+            "16 circuits",
+            "16 V"
+          ],
+          "bonne": 1,
+          "explication": "C est la courbe standard, 16 A le calibre."
+        },
+        {
+          "id": "q3413",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "La courbe D d'un disjoncteur est prévue pour…",
+          "reponses": [
+            "l'éclairage",
+            "les moteurs à fort courant de démarrage",
+            "les prises",
+            "les LED"
+          ],
+          "bonne": 1,
+          "explication": "Elle tolère les pointes de démarrage sans déclencher."
+        },
+        {
+          "id": "q3414",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Le pouvoir de coupure (3 000 A) indique…",
+          "reponses": [
+            "le calibre",
+            "le court-circuit maximal que le disjoncteur peut couper",
+            "la tension",
+            "la fuite admise"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà, le disjoncteur pourrait être détruit."
+        },
+        {
+          "id": "q3415",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Manette d'un disjoncteur en bas : il est…",
+          "reponses": [
+            "enclenché",
+            "déclenché ou coupé",
+            "en test",
+            "en surcharge"
+          ],
+          "bonne": 1,
+          "explication": "On le réarme en remontant la manette."
+        },
+        {
+          "id": "q3416",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Sur un différentiel, « 30 mA » est…",
+          "reponses": [
+            "le calibre",
+            "la sensibilité",
+            "la tension",
+            "la courbe"
+          ],
+          "bonne": 1,
+          "explication": "Il coupe dès qu'une fuite de 30 mA est détectée."
+        },
+        {
+          "id": "q3417",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Le calibre d'un interrupteur différentiel (40 ou 63 A) doit être…",
+          "reponses": [
+            "inférieur à la somme des disjoncteurs",
+            "au moins égal au courant que peut appeler la rangée",
+            "de 10 A",
+            "sans importance"
+          ],
+          "bonne": 1,
+          "explication": "Sinon le différentiel chauffe."
+        },
+        {
+          "id": "q3418",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "Le bouton T d'un différentiel…",
+          "reponses": [
+            "teste le déclenchement",
+            "coupe le compteur",
+            "réarme",
+            "mesure la fuite"
+          ],
+          "bonne": 0,
+          "explication": "À actionner régulièrement."
+        },
+        {
+          "id": "q3419",
+          "fiche_id": "calibres_lecture",
+          "type": "qcm",
+          "enonce": "La courbe B d'un disjoncteur déclenche…",
+          "reponses": [
+            "plus tard que la C",
+            "plus tôt que la C (plus sensible aux courts-circuits)",
+            "jamais",
+            "seulement en surcharge"
+          ],
+          "bonne": 1,
+          "explication": "Utile sur les lignes longues où le court-circuit est faible."
+        },
+        {
+          "id": "q3420",
+          "fiche_id": "reperage",
+          "type": "ordre",
+          "enonce": "Repérer le disjoncteur d'une prise : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Brancher une lampe allumée sur la prise",
+            "Couper les disjoncteurs un par un",
+            "Noter celui qui éteint la lampe",
+            "Étiqueter le disjoncteur"
+          ],
+          "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
+        }
+      ],
+      "ordre": 24
+    },
+    {
+      "id": "depannage",
+      "titre": "Dépannage pas à pas",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "methode",
+          "titre": "La méthode",
+          "contenu": "Un dépannage suit toujours la même logique :\n\n1. Observer : qu'est-ce qui ne marche pas, depuis quand, dans quelles conditions ?\n2. Localiser : une seule prise ? une pièce ? toute la maison ?\n3. Vérifier le plus simple d'abord : disjoncteur déclenché, ampoule grillée, appareil en cause.\n4. Isoler : débrancher les appareils, couper les circuits un par un.\n5. Mesurer, hors tension autant que possible.\n6. Réparer, puis tester.\n\nOn ne remplace jamais une protection par une plus grosse pour « faire tenir ».",
+          "image": "methode.png"
+        },
+        {
+          "id": "pannes_courantes",
+          "titre": "Les pannes courantes",
+          "contenu": "• Le différentiel saute : un appareil en fuite. Débrancher tout, réarmer, rebrancher un par un. Souvent : lave-linge, chauffe-eau, appareil extérieur.\n• Un disjoncteur saute quand on allume un appareil : surcharge ou court-circuit dans l'appareil.\n• Une prise ne marche plus : disjoncteur, puis connexion desserrée dans la prise ou la boîte de dérivation amont.\n• Une lampe clignote : mauvais contact, LED non compatible avec le variateur.\n• Tout est coupé : disjoncteur de branchement (dépassement de puissance) ou coupure réseau, vérifier chez les voisins.\n• Odeur de brûlé, prise chaude : couper le circuit, ne pas réutiliser, faire intervenir.",
+          "image": "pannes_courantes.png"
+        },
+        {
+          "id": "mesures_depannage",
+          "titre": "Mesurer pour comprendre",
+          "contenu": "Hors tension : la continuité (bip) vérifie qu'un fil n'est pas coupé, qu'un fusible est bon, qu'un interrupteur ferme. L'ohmmètre mesure une résistance de chauffe (un radiateur de 1 000 W fait environ 50 Ω).\n\nSous tension, avec les précautions BR : la tension entre phase et neutre (230 V), entre phase et terre (230 V), entre neutre et terre (proche de 0 V). Une tension anormale entre neutre et terre signale un neutre coupé ou une mauvaise terre.\n\nLa pince ampèremétrique montre ce que consomme un appareil, et repère un circuit qui tire trop.\n\nLe testeur de prise indique en un coup d'œil si phase, neutre et terre sont bien câblés.",
+          "image": "mesures_depannage.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3501",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "La première étape d'un dépannage est…",
+          "reponses": [
+            "remplacer le disjoncteur",
+            "observer : quoi, depuis quand, dans quelles conditions",
+            "démonter le tableau",
+            "appeler le 18"
+          ],
+          "bonne": 1,
+          "explication": "Les symptômes orientent tout le reste."
+        },
+        {
+          "id": "q3502",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "Après avoir localisé la panne, on vérifie d'abord…",
+          "reponses": [
+            "le compteur du voisin",
+            "le plus simple : disjoncteur, ampoule, appareil",
+            "la résistance de terre",
+            "la facture"
+          ],
+          "bonne": 1,
+          "explication": "Neuf pannes sur dix ont une cause simple."
+        },
+        {
+          "id": "q3503",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "Isoler la panne consiste à…",
+          "reponses": [
+            "couper toute la rue",
+            "débrancher les appareils et couper les circuits un par un",
+            "tout démonter",
+            "attendre"
+          ],
+          "bonne": 1,
+          "explication": "On réduit le périmètre jusqu'à trouver."
+        },
+        {
+          "id": "q3504",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "Un disjoncteur saute souvent. On le remplace par un plus gros ?",
+          "reponses": [
+            "Oui",
+            "Non, jamais : on cherche la cause",
+            "Oui, une fois",
+            "Oui, en été"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur protège le câble : plus gros = risque d'incendie."
+        },
+        {
+          "id": "q3505",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "Après réparation, on…",
+          "reponses": [
+            "range les outils",
+            "teste le fonctionnement",
+            "attend le lendemain",
+            "remplace le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Une réparation non testée n'est pas finie."
+        },
+        {
+          "id": "q3506",
+          "fiche_id": "methode",
+          "type": "qcm",
+          "enonce": "Les mesures se font de préférence…",
+          "reponses": [
+            "sous tension",
+            "hors tension, autant que possible",
+            "les yeux fermés",
+            "avec un tournevis"
+          ],
+          "bonne": 1,
+          "explication": "Continuité et résistance hors tension ; tension seulement avec les précautions."
+        },
+        {
+          "id": "q3507",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Le différentiel saute. Première chose à faire ?",
+          "reponses": [
+            "Le shunter",
+            "Débrancher tout, réarmer, rebrancher un par un",
+            "Changer le compteur",
+            "Appeler Enedis"
+          ],
+          "bonne": 1,
+          "explication": "Le coupable est l'appareil qui fait resauter."
+        },
+        {
+          "id": "q3508",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Quels appareils font souvent sauter le différentiel ?",
+          "reponses": [
+            "Les LED",
+            "Lave-linge, chauffe-eau, appareils extérieurs",
+            "Les télécommandes",
+            "Les horloges"
+          ],
+          "bonne": 1,
+          "explication": "Humidité et résistances chauffantes vieillissantes."
+        },
+        {
+          "id": "q3509",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Un disjoncteur saute dès qu'on allume un appareil précis. C'est…",
+          "reponses": [
+            "le disjoncteur qui est mauvais",
+            "un court-circuit ou une surcharge dans l'appareil",
+            "la foudre",
+            "normal"
+          ],
+          "bonne": 1,
+          "explication": "L'appareil est en cause, pas la protection."
+        },
+        {
+          "id": "q3510",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Une prise ne marche plus, le disjoncteur est enclenché. On regarde…",
+          "reponses": [
+            "le compteur",
+            "une connexion desserrée dans la prise ou la boîte amont",
+            "la terre du jardin",
+            "le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Les connexions desserrées sont la panne la plus fréquente."
+        },
+        {
+          "id": "q3511",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Une LED clignote sur un variateur…",
+          "reponses": [
+            "est normale",
+            "signale une LED non dimmable ou incompatible",
+            "va s'arranger",
+            "augmente la durée de vie"
+          ],
+          "bonne": 1,
+          "explication": "Remplacer par une LED dimmable compatible."
+        },
+        {
+          "id": "q3512",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Tout est coupé, y compris chez les voisins. C'est…",
+          "reponses": [
+            "ton disjoncteur",
+            "une coupure réseau : attendre ou signaler à Enedis",
+            "le compteur",
+            "le chauffe-eau"
+          ],
+          "bonne": 1,
+          "explication": "Rien à faire dans l'installation."
+        },
+        {
+          "id": "q3513",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Tout est coupé, seulement chez toi, le disjoncteur de branchement est baissé. Cause probable ?",
+          "reponses": [
+            "Coupure réseau",
+            "Dépassement de la puissance souscrite ou défaut général",
+            "La foudre",
+            "Le voisin"
+          ],
+          "bonne": 1,
+          "explication": "On réduit la consommation et on réarme."
+        },
+        {
+          "id": "q3514",
+          "fiche_id": "pannes_courantes",
+          "type": "qcm",
+          "enonce": "Une prise chaude qui sent le brûlé…",
+          "reponses": [
+            "est normale",
+            "impose de couper le circuit et de ne plus l'utiliser",
+            "se refroidit toute seule",
+            "est due au wifi"
+          ],
+          "bonne": 1,
+          "explication": "Mauvais contact : risque d'incendie."
+        },
+        {
+          "id": "q3515",
+          "fiche_id": "mesures_depannage",
+          "type": "qcm",
+          "enonce": "La continuité (bip) sert à…",
+          "reponses": [
+            "mesurer la tension",
+            "vérifier qu'un fil n'est pas coupé, qu'un fusible est bon",
+            "mesurer la puissance",
+            "tester le différentiel"
+          ],
+          "bonne": 1,
+          "explication": "Hors tension uniquement."
+        },
+        {
+          "id": "q3516",
+          "fiche_id": "mesures_depannage",
+          "type": "qcm",
+          "enonce": "Un radiateur de 1 000 W a une résistance d'environ…",
+          "reponses": [
+            "5 Ω",
+            "50 Ω",
+            "500 Ω",
+            "5 000 Ω"
+          ],
+          "bonne": 1,
+          "explication": "R = U² / P = 230² / 1 000 ≈ 53 Ω."
+        },
+        {
+          "id": "q3517",
+          "fiche_id": "mesures_depannage",
+          "type": "qcm",
+          "enonce": "Entre neutre et terre, on doit mesurer…",
+          "reponses": [
+            "230 V",
+            "proche de 0 V",
+            "400 V",
+            "12 V"
+          ],
+          "bonne": 1,
+          "explication": "Une tension notable signale un neutre coupé ou une terre défaillante."
+        },
+        {
+          "id": "q3518",
+          "fiche_id": "mesures_depannage",
+          "type": "qcm",
+          "enonce": "Entre phase et terre, on mesure normalement…",
+          "reponses": [
+            "0 V",
+            "230 V",
+            "400 V",
+            "12 V"
+          ],
+          "bonne": 1,
+          "explication": "Comme entre phase et neutre : la terre et le neutre sont au même potentiel."
+        },
+        {
+          "id": "q3519",
+          "fiche_id": "mesures_depannage",
+          "type": "qcm",
+          "enonce": "Un testeur de prise indique…",
+          "reponses": [
+            "la consommation",
+            "si phase, neutre et terre sont bien câblés",
+            "la puissance souscrite",
+            "l'heure"
+          ],
+          "bonne": 1,
+          "explication": "Trois voyants, un diagnostic immédiat."
+        },
+        {
+          "id": "q3520",
+          "fiche_id": "pannes_courantes",
+          "type": "ordre",
+          "enonce": "Le différentiel saute : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Débrancher tous les appareils de la rangée",
+            "Réarmer le différentiel",
+            "Rebrancher les appareils un par un",
+            "Identifier celui qui fait sauter",
+            "Le faire réparer ou le remplacer"
+          ],
+          "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
+        }
+      ],
+      "ordre": 25
+    },
+    {
+      "id": "courants_faibles",
+      "titre": "Courants faibles : téléphone, réseau, TV",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "definition_cf",
+          "titre": "Courants forts, courants faibles",
+          "contenu": "Les courants forts alimentent en énergie : 230 V, prises, éclairage, chauffage.\n\nLes courants faibles transportent de l'information : téléphone, internet, télévision, interphone, alarme, domotique. Tensions faibles, courants de quelques milliampères.\n\nRègle de séparation : les câbles courants faibles et courants forts cheminent dans des gaines séparées, et se croisent à angle droit, pour éviter les perturbations. Dans le tableau, un coffret de communication distinct.\n\nLes courants faibles ne sont pas dangereux pour les personnes, mais on respecte les mêmes règles de propreté et de repérage.",
+          "image": "definition_cf.png"
+        },
+        {
+          "id": "coffret_com",
+          "titre": "Le coffret de communication",
+          "contenu": "La norme impose dans le neuf un coffret de communication : arrivée opérateur (fibre ou cuivre), box, et un panneau de brassage où aboutissent les câbles RJ45 de chaque pièce.\n\nCâble réseau : catégorie 5e (1 Gbit/s), 6 ou 6A (10 Gbit/s), en paires torsadées. Longueur maximale 100 m. Prises RJ45 murales, brassées vers la box ou un switch.\n\nLa télévision : antenne ou satellite en câble coaxial, ou par la box via le réseau.\n\nLe coffret est relié à la terre. Un parafoudre sur la ligne opérateur protège la box.",
+          "image": "coffret_com.png"
+        },
+        {
+          "id": "fibre_reseau",
+          "titre": "Fibre, Wi-Fi et bonnes pratiques",
+          "contenu": "La fibre optique transporte la lumière : pas d'électricité, pas de perturbation, mais une fibre est fragile (rayon de courbure) et ne se raccorde qu'avec un outillage spécifique.\n\nLe Wi-Fi remplace le câble pour la mobilité, mais le câble RJ45 reste plus stable et plus rapide pour les postes fixes et la télévision.\n\nBonnes pratiques : repérer chaque câble aux deux extrémités, ne pas dépasser le rayon de courbure, ne pas écraser les câbles avec des agrafes, tester chaque prise RJ45 avec un testeur de câble.\n\nUn câble RJ45 peut aussi alimenter un appareil (PoE : caméra, borne Wi-Fi) en 48 V.",
+          "image": "fibre_reseau.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3601",
+          "fiche_id": "definition_cf",
+          "type": "qcm",
+          "enonce": "Les courants faibles transportent…",
+          "reponses": [
+            "de l'énergie",
+            "de l'information : téléphone, internet, TV",
+            "du chauffage",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Tensions et courants faibles, pas de danger pour les personnes."
+        },
+        {
+          "id": "q3602",
+          "fiche_id": "definition_cf",
+          "type": "qcm",
+          "enonce": "Câbles courants forts et faibles cheminent…",
+          "reponses": [
+            "dans la même gaine",
+            "dans des gaines séparées, croisements à angle droit",
+            "enroulés ensemble",
+            "sans règle"
+          ],
+          "bonne": 1,
+          "explication": "Pour éviter les perturbations électromagnétiques."
+        },
+        {
+          "id": "q3603",
+          "fiche_id": "definition_cf",
+          "type": "qcm",
+          "enonce": "Le 230 V des prises relève…",
+          "reponses": [
+            "des courants faibles",
+            "des courants forts",
+            "des deux",
+            "de la fibre"
+          ],
+          "bonne": 1,
+          "explication": "Énergie = courants forts."
+        },
+        {
+          "id": "q3604",
+          "fiche_id": "definition_cf",
+          "type": "qcm",
+          "enonce": "Un interphone est…",
+          "reponses": [
+            "un courant fort",
+            "un courant faible",
+            "une ligne HT",
+            "un chauffage"
+          ],
+          "bonne": 1,
+          "explication": "Information et basse tension."
+        },
+        {
+          "id": "q3605",
+          "fiche_id": "definition_cf",
+          "type": "qcm",
+          "enonce": "Les courants faibles sont-ils dangereux au contact ?",
+          "reponses": [
+            "Oui, mortels",
+            "Non, en général sans danger, mais on garde les règles de propreté",
+            "Oui, comme le 230 V",
+            "Seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Quelques volts et milliampères."
+        },
+        {
+          "id": "q3606",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Le coffret de communication regroupe…",
+          "reponses": [
+            "les disjoncteurs",
+            "l'arrivée opérateur, la box et le panneau de brassage",
+            "le chauffe-eau",
+            "les compteurs"
+          ],
+          "bonne": 1,
+          "explication": "Obligatoire dans le neuf."
+        },
+        {
+          "id": "q3607",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Un câble réseau catégorie 6 permet…",
+          "reponses": [
+            "100 Mbit/s",
+            "jusqu'à 10 Gbit/s sur des longueurs limitées",
+            "seulement le téléphone",
+            "la TV par satellite"
+          ],
+          "bonne": 1,
+          "explication": "5e : 1 Gbit/s, 6 et 6A : 10 Gbit/s."
+        },
+        {
+          "id": "q3608",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Longueur maximale d'un câble RJ45 ?",
+          "reponses": [
+            "10 m",
+            "100 m",
+            "1 km",
+            "1 m"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà, le signal se dégrade."
+        },
+        {
+          "id": "q3609",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Le panneau de brassage sert à…",
+          "reponses": [
+            "protéger contre la foudre",
+            "relier les prises RJ45 des pièces à la box ou au switch",
+            "chauffer",
+            "compter"
+          ],
+          "bonne": 1,
+          "explication": "Chaque prise murale y aboutit."
+        },
+        {
+          "id": "q3610",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "La TV par antenne utilise un câble…",
+          "reponses": [
+            "RJ45",
+            "coaxial",
+            "de terre",
+            "à fibre optique"
+          ],
+          "bonne": 1,
+          "explication": "Le coaxial transporte le signal antenne ou satellite."
+        },
+        {
+          "id": "q3611",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Le coffret de communication est…",
+          "reponses": [
+            "isolé de la terre",
+            "relié à la terre",
+            "sous 230 V",
+            "sans protection"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité et qualité du signal."
+        },
+        {
+          "id": "q3612",
+          "fiche_id": "coffret_com",
+          "type": "qcm",
+          "enonce": "Un parafoudre sur la ligne opérateur protège…",
+          "reponses": [
+            "le chauffe-eau",
+            "la box et les équipements réseau",
+            "la terre",
+            "les lampes"
+          ],
+          "bonne": 1,
+          "explication": "Les surtensions arrivent aussi par la ligne téléphonique."
+        },
+        {
+          "id": "q3613",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "La fibre optique transporte…",
+          "reponses": [
+            "de l'électricité",
+            "de la lumière",
+            "de l'eau",
+            "du 48 V"
+          ],
+          "bonne": 1,
+          "explication": "Aucune perturbation électromagnétique."
+        },
+        {
+          "id": "q3614",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Le point faible d'une fibre ?",
+          "reponses": [
+            "Le poids",
+            "Sa fragilité : rayon de courbure, raccordement spécifique",
+            "La foudre",
+            "La chaleur"
+          ],
+          "bonne": 1,
+          "explication": "Pliée trop serré, elle casse ou perd le signal."
+        },
+        {
+          "id": "q3615",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Pour un poste fixe ou une TV, on préfère…",
+          "reponses": [
+            "le Wi-Fi",
+            "le câble RJ45, plus stable et rapide",
+            "le Bluetooth",
+            "la 4G"
+          ],
+          "bonne": 1,
+          "explication": "Le Wi-Fi sert à la mobilité."
+        },
+        {
+          "id": "q3616",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Écraser un câble RJ45 avec des agrafes…",
+          "reponses": [
+            "est sans effet",
+            "dégrade le signal",
+            "améliore la tenue",
+            "est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "Les paires déformées perturbent la transmission."
+        },
+        {
+          "id": "q3617",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Le PoE permet…",
+          "reponses": [
+            "de téléphoner",
+            "d'alimenter un appareil (caméra, borne Wi-Fi) par le câble réseau en 48 V",
+            "de chauffer",
+            "de brancher un four"
+          ],
+          "bonne": 1,
+          "explication": "Un seul câble pour les données et l'énergie."
+        },
+        {
+          "id": "q3618",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Après avoir posé une prise RJ45, on…",
+          "reponses": [
+            "la peint",
+            "la teste avec un testeur de câble",
+            "la laisse sans vérifier",
+            "l'agrafe"
+          ],
+          "bonne": 1,
+          "explication": "Le testeur vérifie chaque paire."
+        },
+        {
+          "id": "q3619",
+          "fiche_id": "fibre_reseau",
+          "type": "qcm",
+          "enonce": "Repérer un câble réseau se fait…",
+          "reponses": [
+            "à une extrémité",
+            "aux deux extrémités",
+            "jamais",
+            "au coffret seulement"
+          ],
+          "bonne": 1,
+          "explication": "Sinon on ne sait plus quelle prise correspond à quel port."
+        },
+        {
+          "id": "q3620",
+          "fiche_id": "coffret_com",
+          "type": "ordre",
+          "enonce": "Câbler une prise RJ45 : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Tirer le câble catégorie 6 dans une gaine dédiée",
+            "Raccorder la prise murale et le panneau de brassage",
+            "Tester avec un testeur de câble",
+            "Repérer aux deux extrémités",
+            "Brasser vers la box ou le switch"
+          ],
+          "explication": "Tirer, raccorder, tester, repérer, brasser."
+        }
+      ],
+      "ordre": 26
+    },
+    {
+      "id": "eclairage_exterieur",
+      "titre": "Éclairage extérieur et jardin",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "choix_ext",
+          "titre": "Choisir l'éclairage extérieur",
+          "contenu": "Matériel IP44 minimum, IP65 pour les spots au sol ou exposés, IP67 ou IP68 pour les luminaires enterrés ou immergés.\n\nLED partout : consommation faible, longue durée, allumage instantané. Température de couleur 2 700 à 3 000 K pour une ambiance chaleureuse, 4 000 K pour la sécurité et le garage.\n\nCommandes : détecteur de mouvement pour l'entrée, horloge astronomique ou détecteur crépusculaire pour le jardin, télérupteur ou domotique pour plusieurs points.\n\nAttention à la pollution lumineuse : orienter vers le bas, limiter les horaires.",
+          "image": "choix_ext.png"
+        },
+        {
+          "id": "cablage_ext",
+          "titre": "Câbler dehors",
+          "contenu": "Circuit dédié, différentiel 30 mA, disjoncteur 10 ou 16 A. Câble U-1000 R2V, en gaine TPC rouge enterrée à 50 cm minimum, avec grillage avertisseur, ou en apparent protégé.\n\nBoîtes de dérivation étanches (IP55 ou plus), presse-étoupes serrés, entrées de câble par le bas pour que l'eau ne rentre pas.\n\nLes luminaires de classe I sont reliés à la terre ; les classe II n'en ont pas besoin. Les spots 12 V utilisent un transformateur ou un driver placé au sec.\n\nÉclairage de piscine : voir les volumes, TBTS 12 V dans l'eau.",
+          "image": "cablage_ext.png"
+        },
+        {
+          "id": "solaire_ext",
+          "titre": "Solaire, basse tension et entretien",
+          "contenu": "Les luminaires solaires autonomes évitent tout câblage : panneau, batterie, LED, détecteur. Suffisants pour un balisage, insuffisants pour éclairer vraiment.\n\nLes systèmes 12 V ou 24 V (TBTS) permettent de poser des spots de jardin sans risque, avec un transformateur de sécurité au sec et des câbles adaptés. La chute de tension compte : sections plus grosses sur les longues distances.\n\nEntretien : nettoyer les optiques, vérifier les joints et presse-étoupes, contrôler que le différentiel déclenche (bouton T). Un luminaire qui se remplit d'eau se remplace.",
+          "image": "solaire_ext.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3701",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "IP minimal pour un luminaire extérieur ?",
+          "reponses": [
+            "IP20",
+            "IP44",
+            "IP00",
+            "IP10"
+          ],
+          "bonne": 1,
+          "explication": "IP65 s'il est exposé, IP67 / 68 enterré ou immergé."
+        },
+        {
+          "id": "q3702",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Un spot enterré dans une allée demande…",
+          "reponses": [
+            "IP44",
+            "IP67 ou IP68",
+            "IP20",
+            "IP40"
+          ],
+          "bonne": 1,
+          "explication": "Il baigne dans l'eau de pluie."
+        },
+        {
+          "id": "q3703",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Température de couleur pour une terrasse conviviale ?",
+          "reponses": [
+            "6 500 K",
+            "2 700 à 3 000 K",
+            "10 000 K",
+            "4 000 K"
+          ],
+          "bonne": 1,
+          "explication": "Blanc chaud pour l'ambiance, neutre pour la sécurité."
+        },
+        {
+          "id": "q3704",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Pour allumer le jardin au coucher du soleil sans intervention, on utilise…",
+          "reponses": [
+            "un interrupteur",
+            "un détecteur crépusculaire ou une horloge astronomique",
+            "un fusible",
+            "un variateur"
+          ],
+          "bonne": 1,
+          "explication": "L'horloge astronomique connaît l'heure du coucher chaque jour."
+        },
+        {
+          "id": "q3705",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Le détecteur de mouvement convient…",
+          "reponses": [
+            "à la façade et à l'entrée",
+            "aux spots enterrés",
+            "à la piscine",
+            "au coffret"
+          ],
+          "bonne": 0,
+          "explication": "Il allume au passage, dissuasif et économe."
+        },
+        {
+          "id": "q3706",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Contre la pollution lumineuse, on…",
+          "reponses": [
+            "éclaire vers le ciel",
+            "oriente vers le bas et limite les horaires",
+            "laisse allumé toute la nuit",
+            "augmente la puissance"
+          ],
+          "bonne": 1,
+          "explication": "Moins de gêne pour les voisins et la faune."
+        },
+        {
+          "id": "q3707",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Un circuit d'éclairage extérieur est protégé par…",
+          "reponses": [
+            "un fusible seul",
+            "un différentiel 30 mA et un disjoncteur 10 ou 16 A",
+            "le parafoudre",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Circuit dédié."
+        },
+        {
+          "id": "q3708",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Le câble extérieur enterré passe…",
+          "reponses": [
+            "directement dans la terre",
+            "dans une gaine TPC rouge à 50 cm, avec grillage avertisseur",
+            "dans une gaine ICTA grise",
+            "dans un tuyau d'arrosage"
+          ],
+          "bonne": 1,
+          "explication": "TPC rouge = électricité, repérable au terrassement."
+        },
+        {
+          "id": "q3709",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Les entrées de câble d'une boîte étanche se font…",
+          "reponses": [
+            "par le haut",
+            "par le bas, pour que l'eau ne rentre pas",
+            "par les côtés uniquement",
+            "sans presse-étoupe"
+          ],
+          "bonne": 1,
+          "explication": "Presse-étoupes serrés."
+        },
+        {
+          "id": "q3710",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Un luminaire extérieur de classe I…",
+          "reponses": [
+            "n'a pas de terre",
+            "est relié à la terre",
+            "fonctionne en 12 V",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Classe II : pas de terre nécessaire."
+        },
+        {
+          "id": "q3711",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Le transformateur des spots 12 V se place…",
+          "reponses": [
+            "dans le spot",
+            "au sec, dans une boîte ou à l'intérieur",
+            "dans la terre",
+            "dans la piscine"
+          ],
+          "bonne": 1,
+          "explication": "Le 230 V reste au sec."
+        },
+        {
+          "id": "q3712",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Une boîte de dérivation extérieure doit être au moins…",
+          "reponses": [
+            "IP20",
+            "IP55",
+            "IP00",
+            "IP30"
+          ],
+          "bonne": 1,
+          "explication": "Étanche aux jets d'eau."
+        },
+        {
+          "id": "q3713",
+          "fiche_id": "solaire_ext",
+          "type": "qcm",
+          "enonce": "Un luminaire solaire autonome convient…",
+          "reponses": [
+            "pour éclairer un atelier",
+            "pour un balisage d'allée",
+            "pour la piscine",
+            "pour une lampe de bureau"
+          ],
+          "bonne": 1,
+          "explication": "Peu de lumière, mais zéro câblage."
+        },
+        {
+          "id": "q3714",
+          "fiche_id": "solaire_ext",
+          "type": "qcm",
+          "enonce": "Les systèmes 12 V de jardin sont intéressants car…",
+          "reponses": [
+            "plus puissants",
+            "sans risque de choc électrique (TBTS)",
+            "sans transformateur",
+            "plus chers"
+          ],
+          "bonne": 1,
+          "explication": "Poser un spot 12 V est sans danger."
+        },
+        {
+          "id": "q3715",
+          "fiche_id": "solaire_ext",
+          "type": "qcm",
+          "enonce": "Sur une longue ligne 12 V, on augmente la section pour…",
+          "reponses": [
+            "le poids",
+            "limiter la chute de tension",
+            "la couleur",
+            "le prix"
+          ],
+          "bonne": 1,
+          "explication": "En 12 V, la moindre résistance de câble fait baisser la tension."
+        },
+        {
+          "id": "q3716",
+          "fiche_id": "solaire_ext",
+          "type": "qcm",
+          "enonce": "Entretien d'un éclairage extérieur ?",
+          "reponses": [
+            "Aucun",
+            "Nettoyer les optiques, vérifier joints et presse-étoupes, tester le différentiel",
+            "Repeindre",
+            "Changer le câble chaque année"
+          ],
+          "bonne": 1,
+          "explication": "L'eau est l'ennemi principal."
+        },
+        {
+          "id": "q3717",
+          "fiche_id": "solaire_ext",
+          "type": "qcm",
+          "enonce": "Un luminaire qui se remplit d'eau…",
+          "reponses": [
+            "se vide et se garde",
+            "se remplace",
+            "fonctionne mieux",
+            "se sèche au four"
+          ],
+          "bonne": 1,
+          "explication": "L'étanchéité est perdue."
+        },
+        {
+          "id": "q3718",
+          "fiche_id": "choix_ext",
+          "type": "qcm",
+          "enonce": "Avantage principal de la LED dehors ?",
+          "reponses": [
+            "Elle chauffe",
+            "Faible consommation, longue durée, allumage instantané",
+            "Elle attire moins les insectes que l'obscurité",
+            "Elle est étanche par nature"
+          ],
+          "bonne": 1,
+          "explication": "Fini les ampoules à changer en haut de l'échelle."
+        },
+        {
+          "id": "q3719",
+          "fiche_id": "cablage_ext",
+          "type": "qcm",
+          "enonce": "Profondeur minimale d'un câble enterré au jardin ?",
+          "reponses": [
+            "10 cm",
+            "50 cm",
+            "2 m",
+            "5 cm"
+          ],
+          "bonne": 1,
+          "explication": "85 cm sous une voie carrossable."
+        },
+        {
+          "id": "q3720",
+          "fiche_id": "cablage_ext",
+          "type": "ordre",
+          "enonce": "Poser un spot de jardin 230 V : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Tirer un circuit dédié protégé par différentiel 30 mA",
+            "Enterrer le câble R2V en gaine TPC à 50 cm avec grillage",
+            "Raccorder dans une boîte étanche, entrées par le bas",
+            "Fixer le spot IP65 et le relier à la terre s'il est de classe I",
+            "Tester le fonctionnement et le différentiel"
+          ],
+          "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
+        }
+      ],
+      "ordre": 27
+    },
+    {
+      "id": "alarme",
+      "titre": "Alarme et vidéosurveillance",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "alarme_intrusion",
+          "titre": "L'alarme intrusion",
+          "contenu": "Une centrale reçoit les informations de détecteurs : d'ouverture (contact sur porte ou fenêtre), de mouvement (infrarouge, avec immunité aux animaux), de bris de vitre. Elle déclenche une sirène intérieure et extérieure, et envoie une alerte (téléphone, application, télésurveillance).\n\nFilaire (fiable, pour le neuf) ou radio (pose facile, piles à surveiller). La centrale est alimentée en 230 V avec une batterie de secours.\n\nOn active en mode total (absence) ou partiel (nuit, seuls les détecteurs du rez-de-chaussée). Un code, un badge ou une télécommande arme et désarme.",
+          "image": "alarme_intrusion.png"
+        },
+        {
+          "id": "video",
+          "titre": "La vidéosurveillance",
+          "contenu": "Caméras filaires (PoE : un seul câble RJ45 pour l'image et l'alimentation) ou Wi-Fi. Enregistreur (NVR) ou stockage sur carte ou en ligne.\n\nExtérieur : caméra IP66, vision nocturne infrarouge, hauteur 2,5 à 3 m, à l'abri des manipulations.\n\nRègle légale chez un particulier : on peut filmer sa propriété, pas la voie publique ni le voisin. Une personne employée à domicile doit être informée. En entreprise, déclaration et affichage obligatoires.\n\nSécurité numérique : mots de passe forts, mises à jour, pas de caméra exposée directement sur internet sans protection.",
+          "image": "video.png"
+        },
+        {
+          "id": "installation_alarme",
+          "titre": "Installer et entretenir",
+          "contenu": "La centrale et la sirène intérieure se placent hors de portée, hors de vue de l'entrée. La sirène extérieure en hauteur, avec autoprotection.\n\nDétecteurs de mouvement : dans les angles, à 2,2 m, pas face à une fenêtre ni au-dessus d'un radiateur. Contacts d'ouverture sur les accès principaux.\n\nAlimentation : circuit dédié ou circuit d'éclairage protégé, batterie de secours changée tous les 3 à 5 ans, piles des détecteurs radio selon les alertes.\n\nTester tout le système à l'installation, puis régulièrement. Un système d'alarme peut se coupler à la domotique (simulation de présence, volets).",
+          "image": "installation_alarme.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q3801",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "Un détecteur d'ouverture est…",
+          "reponses": [
+            "un capteur infrarouge",
+            "un contact sur une porte ou une fenêtre",
+            "une caméra",
+            "une sirène"
+          ],
+          "bonne": 1,
+          "explication": "Aimant et contact : ouverture = alerte."
+        },
+        {
+          "id": "q3802",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "Le détecteur de mouvement infrarouge détecte…",
+          "reponses": [
+            "le bruit",
+            "la chaleur d'un corps qui bouge",
+            "la lumière",
+            "les vibrations"
+          ],
+          "bonne": 1,
+          "explication": "Avec immunité aux animaux pour éviter les fausses alertes."
+        },
+        {
+          "id": "q3803",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "La centrale d'alarme est alimentée…",
+          "reponses": [
+            "par piles seulement",
+            "en 230 V avec une batterie de secours",
+            "par le compteur",
+            "par la sirène"
+          ],
+          "bonne": 1,
+          "explication": "Elle continue de fonctionner en cas de coupure."
+        },
+        {
+          "id": "q3804",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "Le mode partiel sert à…",
+          "reponses": [
+            "couper la sirène",
+            "surveiller une partie du logement, par exemple la nuit",
+            "tester",
+            "économiser les piles"
+          ],
+          "bonne": 1,
+          "explication": "On dort à l'étage, le rez-de-chaussée est protégé."
+        },
+        {
+          "id": "q3805",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "Une alarme radio…",
+          "reponses": [
+            "est plus fiable qu'une filaire",
+            "se pose facilement mais ses piles sont à surveiller",
+            "n'a pas besoin de centrale",
+            "fonctionne sans détecteurs"
+          ],
+          "bonne": 1,
+          "explication": "Le filaire reste la référence dans le neuf."
+        },
+        {
+          "id": "q3806",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "La sirène extérieure sert à…",
+          "reponses": [
+            "prévenir l'intrus qu'il est repéré et alerter le voisinage",
+            "éclairer",
+            "enregistrer",
+            "appeler la police seule"
+          ],
+          "bonne": 0,
+          "explication": "Dissuasion et alerte."
+        },
+        {
+          "id": "q3807",
+          "fiche_id": "alarme_intrusion",
+          "type": "qcm",
+          "enonce": "On arme l'alarme avec…",
+          "reponses": [
+            "un fusible",
+            "un code, un badge ou une télécommande",
+            "un interrupteur d'éclairage",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Et souvent une application."
+        },
+        {
+          "id": "q3808",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Une caméra PoE reçoit…",
+          "reponses": [
+            "l'image seulement",
+            "l'image et l'alimentation par un seul câble RJ45",
+            "le 230 V",
+            "le Wi-Fi"
+          ],
+          "bonne": 1,
+          "explication": "48 V sur le câble réseau."
+        },
+        {
+          "id": "q3809",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Une caméra extérieure doit être au moins…",
+          "reponses": [
+            "IP20",
+            "IP66",
+            "IP44",
+            "IP10"
+          ],
+          "bonne": 1,
+          "explication": "Pluie, poussière, gel."
+        },
+        {
+          "id": "q3810",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Hauteur de pose recommandée d'une caméra extérieure ?",
+          "reponses": [
+            "1 m",
+            "2,5 à 3 m",
+            "5 m",
+            "30 cm"
+          ],
+          "bonne": 1,
+          "explication": "Hors de portée, mais assez bas pour reconnaître un visage."
+        },
+        {
+          "id": "q3811",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Chez un particulier, on peut filmer…",
+          "reponses": [
+            "la rue",
+            "sa propriété uniquement",
+            "le jardin du voisin",
+            "tout"
+          ],
+          "bonne": 1,
+          "explication": "La voie publique et les voisins sont interdits."
+        },
+        {
+          "id": "q3812",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Une personne employée à domicile…",
+          "reponses": [
+            "ne doit pas savoir qu'elle est filmée",
+            "doit être informée de la présence de caméras",
+            "n'est jamais filmée",
+            "choisit l'emplacement"
+          ],
+          "bonne": 1,
+          "explication": "Information obligatoire, et jamais dans les lieux privés."
+        },
+        {
+          "id": "q3813",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Un enregistreur NVR sert à…",
+          "reponses": [
+            "alimenter les caméras",
+            "stocker et relire les images",
+            "chauffer",
+            "détecter"
+          ],
+          "bonne": 1,
+          "explication": "Enregistrement local, en continu ou sur détection."
+        },
+        {
+          "id": "q3814",
+          "fiche_id": "video",
+          "type": "qcm",
+          "enonce": "Pour la sécurité numérique des caméras, on…",
+          "reponses": [
+            "garde le mot de passe d'usine",
+            "utilise des mots de passe forts et fait les mises à jour",
+            "expose la caméra sur internet sans protection",
+            "désactive le chiffrement"
+          ],
+          "bonne": 1,
+          "explication": "Une caméra piratée est une caméra retournée contre soi."
+        },
+        {
+          "id": "q3815",
+          "fiche_id": "installation_alarme",
+          "type": "qcm",
+          "enonce": "La centrale se place…",
+          "reponses": [
+            "à l'entrée, bien visible",
+            "hors de vue et hors de portée de l'entrée",
+            "dehors",
+            "dans la boîte aux lettres"
+          ],
+          "bonne": 1,
+          "explication": "L'intrus ne doit pas pouvoir l'atteindre avant l'alerte."
+        },
+        {
+          "id": "q3816",
+          "fiche_id": "installation_alarme",
+          "type": "qcm",
+          "enonce": "Un détecteur de mouvement se pose…",
+          "reponses": [
+            "face à une fenêtre",
+            "dans un angle, à environ 2,2 m, loin des radiateurs",
+            "au sol",
+            "au-dessus du radiateur"
+          ],
+          "bonne": 1,
+          "explication": "Soleil et chaleur créent des fausses alertes."
+        },
+        {
+          "id": "q3817",
+          "fiche_id": "installation_alarme",
+          "type": "qcm",
+          "enonce": "La batterie de secours se change…",
+          "reponses": [
+            "jamais",
+            "tous les 3 à 5 ans",
+            "chaque mois",
+            "tous les 20 ans"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie usée ne tient pas la coupure."
+        },
+        {
+          "id": "q3818",
+          "fiche_id": "installation_alarme",
+          "type": "qcm",
+          "enonce": "L'autoprotection d'une sirène…",
+          "reponses": [
+            "l'éteint",
+            "déclenche l'alerte si on tente de l'ouvrir ou de l'arracher",
+            "la recharge",
+            "la protège de la pluie"
+          ],
+          "bonne": 1,
+          "explication": "Contact d'ouverture et d'arrachement."
+        },
+        {
+          "id": "q3819",
+          "fiche_id": "installation_alarme",
+          "type": "qcm",
+          "enonce": "Coupler l'alarme à la domotique permet…",
+          "reponses": [
+            "de la désactiver",
+            "la simulation de présence : lumières et volets",
+            "de filmer la rue",
+            "de couper le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Une maison qui vit dissuade."
+        },
+        {
+          "id": "q3820",
+          "fiche_id": "installation_alarme",
+          "type": "ordre",
+          "enonce": "Installer une alarme : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Définir les accès et zones à protéger",
+            "Poser la centrale hors de vue avec son alimentation et sa batterie",
+            "Poser détecteurs et contacts d'ouverture",
+            "Poser les sirènes avec autoprotection",
+            "Paramétrer les modes et tester tout le système"
+          ],
+          "explication": "Analyse, centrale, détecteurs, sirènes, test."
+        }
+      ],
+      "ordre": 28
+    },
+    {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 24,
+      "ordre": 29,
       "fiches": [
         {
           "id": "dangers",
@@ -7383,7 +8922,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 25,
+      "ordre": 30,
       "fiches": [
         {
           "id": "principe",
@@ -7991,7 +9530,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 26
+      "ordre": 31
     },
     {
       "id": "epi",
@@ -8298,7 +9837,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 27
+      "ordre": 32
     },
     {
       "id": "b0_bs",
@@ -8606,7 +10145,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 28
+      "ordre": 33
     },
     {
       "id": "br",
@@ -8914,7 +10453,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 29
+      "ordre": 34
     },
     {
       "id": "secours",
@@ -9221,7 +10760,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 30
+      "ordre": 35
     },
     {
       "id": "b1_b2",
@@ -9530,7 +11069,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 31
+      "ordre": 36
     },
     {
       "id": "bc",
@@ -9838,7 +11377,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 32
+      "ordre": 37
     },
     {
       "id": "outillage",
@@ -10146,7 +11685,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 33
+      "ordre": 38
     },
     {
       "id": "normes",
@@ -10454,7 +11993,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 34
+      "ordre": 39
     }
   ]
 }
