@@ -4,6 +4,7 @@ import '../models/entree_historique.dart';
 import '../models/module.dart';
 import '../models/progression.dart';
 import '../models/progression_module.dart';
+import '../models/question.dart';
 import 'content_loader.dart';
 import 'progression_store.dart';
 import 'quiz_session.dart';
@@ -47,6 +48,12 @@ class AppState extends ChangeNotifier {
   int questionsReussies(Module module) {
     final reussies = progressionDe(module).questionsReussies;
     return module.questions.where((q) => reussies.contains(q.id)).length;
+  }
+
+  /// Questions du module pas encore réussies (ratées ou jamais faites).
+  List<Question> questionsARevoir(Module module) {
+    final reussies = progressionDe(module).questionsReussies;
+    return module.questions.where((q) => !reussies.contains(q.id)).toList();
   }
 
   bool moduleTermine(Module module) =>
