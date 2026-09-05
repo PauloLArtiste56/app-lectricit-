@@ -17,10 +17,10 @@ void main() {
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
 
-  test('chaque module a des fiches et 10 questions', () {
+  test('chaque module a des fiches et 20 questions', () {
     for (final module in modules) {
       expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
-      expect(module.nombreQuestions, 10, reason: module.id);
+      expect(module.nombreQuestions, 20, reason: module.id);
     }
   });
 

@@ -164,6 +164,146 @@
           ],
           "bonne": 1,
           "explication": "I = P / U = 1 150 / 230 = 5 A"
+        },
+        {
+          "id": "q011",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "Quel appareil mesure la tension ?",
+          "reponses": [
+            "Un ampèremètre",
+            "Un voltmètre",
+            "Un ohmmètre",
+            "Un wattmètre"
+          ],
+          "bonne": 1,
+          "explication": "Le voltmètre mesure la tension en volts. L'ampèremètre mesure l'intensité, l'ohmmètre la résistance."
+        },
+        {
+          "id": "q012",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "1 kilovolt (kV) vaut…",
+          "reponses": [
+            "10 V",
+            "100 V",
+            "1 000 V",
+            "0,001 V"
+          ],
+          "bonne": 2,
+          "explication": "Le préfixe kilo signifie mille : 1 kV = 1 000 V."
+        },
+        {
+          "id": "q013",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "1 milliampère (mA) vaut…",
+          "reponses": [
+            "0,001 A",
+            "0,01 A",
+            "1 000 A",
+            "0,1 A"
+          ],
+          "bonne": 0,
+          "explication": "Le préfixe milli signifie un millième : 1 mA = 0,001 A. Les seuils de danger pour le corps se comptent en mA."
+        },
+        {
+          "id": "q014",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "Quelle grandeur représente le débit de courant qui circule ?",
+          "reponses": [
+            "La tension",
+            "L'intensité",
+            "La résistance",
+            "La fréquence"
+          ],
+          "bonne": 1,
+          "explication": "L'intensité I, en ampères, est le débit de charges électriques, comme un débit d'eau dans un tuyau."
+        },
+        {
+          "id": "q015",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Une résistance de 100 Ω est alimentée en 5 V. Quelle intensité la traverse ?",
+          "reponses": [
+            "500 A",
+            "20 A",
+            "0,05 A (50 mA)",
+            "0,5 A"
+          ],
+          "bonne": 2,
+          "explication": "I = U / R = 5 / 100 = 0,05 A, soit 50 mA."
+        },
+        {
+          "id": "q016",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Un fil de 0,5 Ω est traversé par 10 A. Quelle tension perd-on à ses bornes ?",
+          "reponses": [
+            "20 V",
+            "5 V",
+            "0,05 V",
+            "50 V"
+          ],
+          "bonne": 1,
+          "explication": "U = R × I = 0,5 × 10 = 5 V. C'est la chute de tension dans le câble."
+        },
+        {
+          "id": "q017",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Pour une même tension, un récepteur de forte résistance laisse passer…",
+          "reponses": [
+            "plus de courant",
+            "moins de courant",
+            "autant de courant",
+            "le courant en sens inverse"
+          ],
+          "bonne": 1,
+          "explication": "I = U / R : plus R est grand, plus I est petit."
+        },
+        {
+          "id": "q018",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Quelle est la résistance d'un récepteur qui absorbe 2 A sous 24 V ?",
+          "reponses": [
+            "48 Ω",
+            "12 Ω",
+            "0,08 Ω",
+            "26 Ω"
+          ],
+          "bonne": 1,
+          "explication": "R = U / I = 24 / 2 = 12 Ω."
+        },
+        {
+          "id": "q019",
+          "fiche_id": "puissance",
+          "type": "qcm",
+          "enonce": "Un appareil absorbe 3 A sous 400 V. Quelle est sa puissance ?",
+          "reponses": [
+            "133 W",
+            "1 200 W",
+            "403 W",
+            "12 000 W"
+          ],
+          "bonne": 1,
+          "explication": "P = U × I = 400 × 3 = 1 200 W."
+        },
+        {
+          "id": "q020",
+          "fiche_id": "puissance",
+          "type": "qcm",
+          "enonce": "1 kW vaut…",
+          "reponses": [
+            "100 W",
+            "1 000 W",
+            "10 W",
+            "1 000 000 W"
+          ],
+          "bonne": 1,
+          "explication": "Kilo = mille : 1 kW = 1 000 W. Un radiateur de 2 kW fait 2 000 W."
         }
       ]
     },
@@ -331,6 +471,146 @@
           ],
           "bonne": 2,
           "explication": "Entre une phase et le neutre : 230 V. Entre deux phases : 400 V."
+        },
+        {
+          "id": "q111",
+          "fiche_id": "continu",
+          "type": "qcm",
+          "enonce": "Quelle tension délivre une batterie de voiture ?",
+          "reponses": [
+            "1,5 V",
+            "12 V",
+            "230 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie de voiture fournit 12 V en courant continu. Une pile classique : 1,5 V."
+        },
+        {
+          "id": "q112",
+          "fiche_id": "continu",
+          "type": "qcm",
+          "enonce": "Un panneau photovoltaïque produit…",
+          "reponses": [
+            "du courant continu",
+            "du courant alternatif 50 Hz",
+            "du triphasé",
+            "du 230 V directement"
+          ],
+          "bonne": 0,
+          "explication": "Le panneau produit du continu. Un onduleur le transforme ensuite en alternatif pour la maison ou le réseau."
+        },
+        {
+          "id": "q113",
+          "fiche_id": "continu",
+          "type": "qcm",
+          "enonce": "Sur une source continue, inverser les bornes + et − …",
+          "reponses": [
+            "ne change rien",
+            "inverse le sens du courant",
+            "double la tension",
+            "annule la tension"
+          ],
+          "bonne": 1,
+          "explication": "En continu, le courant a un sens : l'inverser peut bloquer ou endommager certains appareils (électronique, LED)."
+        },
+        {
+          "id": "q114",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Aux États-Unis, la fréquence du réseau est de…",
+          "reponses": [
+            "50 Hz",
+            "60 Hz",
+            "100 Hz",
+            "230 Hz"
+          ],
+          "bonne": 1,
+          "explication": "L'Amérique du Nord est à 60 Hz et 120 V, l'Europe à 50 Hz et 230 V."
+        },
+        {
+          "id": "q115",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "La valeur 230 V d'une prise est une valeur…",
+          "reponses": [
+            "de crête",
+            "efficace",
+            "moyenne",
+            "minimale"
+          ],
+          "bonne": 1,
+          "explication": "230 V est la valeur efficace, celle qui produit le même échauffement qu'un continu de 230 V. La crête est d'environ 325 V."
+        },
+        {
+          "id": "q116",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "Un courant à 50 Hz change de sens…",
+          "reponses": [
+            "50 fois par seconde",
+            "100 fois par seconde",
+            "20 fois par seconde",
+            "une fois par seconde"
+          ],
+          "bonne": 1,
+          "explication": "Il change de sens deux fois par période : 2 × 50 = 100 fois par seconde."
+        },
+        {
+          "id": "q117",
+          "fiche_id": "alternatif",
+          "type": "qcm",
+          "enonce": "En principe, quel est le potentiel du neutre par rapport à la terre ?",
+          "reponses": [
+            "230 V",
+            "400 V",
+            "Proche de 0 V",
+            "12 V"
+          ],
+          "bonne": 2,
+          "explication": "Le neutre est relié à la terre au poste de distribution : son potentiel est proche de 0 V. La phase est à 230 V."
+        },
+        {
+          "id": "q118",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "Quel appareil permet d'élever ou d'abaisser une tension alternative ?",
+          "reponses": [
+            "Un redresseur",
+            "Un onduleur",
+            "Un transformateur",
+            "Un disjoncteur"
+          ],
+          "bonne": 2,
+          "explication": "Le transformateur ne fonctionne qu'en alternatif. C'est lui qui permet le transport à haute tension."
+        },
+        {
+          "id": "q119",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "Un chargeur de téléphone fournit du…",
+          "reponses": [
+            "230 V alternatif",
+            "5 V continu",
+            "12 V alternatif",
+            "400 V continu"
+          ],
+          "bonne": 1,
+          "explication": "Le chargeur contient un redresseur : il transforme le 230 V alternatif en 5 V continu (USB)."
+        },
+        {
+          "id": "q120",
+          "fiche_id": "conversion",
+          "type": "qcm",
+          "enonce": "Entre une phase et le neutre d'un réseau triphasé 400 V, on mesure…",
+          "reponses": [
+            "400 V",
+            "230 V",
+            "690 V",
+            "110 V"
+          ],
+          "bonne": 1,
+          "explication": "400 V entre phases, 230 V entre une phase et le neutre : c'est le même réseau."
         }
       ]
     },
@@ -498,6 +778,146 @@
           ],
           "bonne": 0,
           "explication": "L'interrupteur est en série : en s'ouvrant, il coupe le seul chemin du courant vers la lampe."
+        },
+        {
+          "id": "q211",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Trois résistances de 5 Ω en série. Résistance totale ?",
+          "reponses": [
+            "1,67 Ω",
+            "5 Ω",
+            "15 Ω",
+            "125 Ω"
+          ],
+          "bonne": 2,
+          "explication": "En série, les résistances s'ajoutent : 5 + 5 + 5 = 15 Ω."
+        },
+        {
+          "id": "q212",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Dans un circuit série, l'élément qui a la plus grande résistance a, à ses bornes, une tension…",
+          "reponses": [
+            "plus petite",
+            "plus grande",
+            "identique aux autres",
+            "nulle"
+          ],
+          "bonne": 1,
+          "explication": "Même intensité partout et U = R × I : plus R est grand, plus U est grand."
+        },
+        {
+          "id": "q213",
+          "fiche_id": "serie",
+          "type": "qcm",
+          "enonce": "Un ampèremètre placé n'importe où dans un circuit série indique…",
+          "reponses": [
+            "des valeurs différentes selon la position",
+            "la même valeur partout",
+            "zéro",
+            "la tension"
+          ],
+          "bonne": 1,
+          "explication": "Un seul chemin pour le courant : l'intensité est la même en tout point du circuit série."
+        },
+        {
+          "id": "q214",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Trois résistances de 30 Ω en parallèle. Résistance équivalente ?",
+          "reponses": [
+            "90 Ω",
+            "30 Ω",
+            "10 Ω",
+            "0,1 Ω"
+          ],
+          "bonne": 2,
+          "explication": "Trois résistances identiques en parallèle : R / 3 = 30 / 3 = 10 Ω."
+        },
+        {
+          "id": "q215",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "En parallèle, ajouter une branche…",
+          "reponses": [
+            "augmente la résistance totale",
+            "diminue la résistance totale",
+            "ne change rien",
+            "coupe les autres branches"
+          ],
+          "bonne": 1,
+          "explication": "Une branche de plus, c'est un chemin de plus pour le courant : la résistance équivalente diminue et le courant total augmente."
+        },
+        {
+          "id": "q216",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Deux lampes en parallèle sur 230 V : chacune reçoit…",
+          "reponses": [
+            "115 V",
+            "230 V",
+            "460 V",
+            "0 V"
+          ],
+          "bonne": 1,
+          "explication": "En parallèle, chaque branche reçoit la tension de la source : 230 V."
+        },
+        {
+          "id": "q217",
+          "fiche_id": "parallele",
+          "type": "qcm",
+          "enonce": "Résistances de 10 Ω et 40 Ω en parallèle. Résistance équivalente ?",
+          "reponses": [
+            "50 Ω",
+            "25 Ω",
+            "8 Ω",
+            "4 Ω"
+          ],
+          "bonne": 2,
+          "explication": "1/R = 1/10 + 1/40 = 5/40, donc R = 8 Ω. Toujours plus petit que la plus petite (10 Ω)."
+        },
+        {
+          "id": "q218",
+          "fiche_id": "application",
+          "type": "qcm",
+          "enonce": "Pourquoi ne branche-t-on pas les appareils d'une maison en série ?",
+          "reponses": [
+            "Ce serait trop cher",
+            "Chaque appareil n'aurait pas 230 V et une panne couperait tout",
+            "Le courant serait trop fort",
+            "Les fournisseurs l'interdisent"
+          ],
+          "bonne": 1,
+          "explication": "En série, la tension se partagerait et un appareil éteint couperait tous les autres. En parallèle, chacun a 230 V et est indépendant."
+        },
+        {
+          "id": "q219",
+          "fiche_id": "application",
+          "type": "qcm",
+          "enonce": "Une multiprise avec 5 appareils branchés : ils sont…",
+          "reponses": [
+            "en série",
+            "en parallèle",
+            "en triangle",
+            "alternés"
+          ],
+          "bonne": 1,
+          "explication": "Chaque appareil est directement entre phase et neutre : montage en parallèle. Les intensités s'ajoutent, attention à la limite de la multiprise."
+        },
+        {
+          "id": "q220",
+          "fiche_id": "application",
+          "type": "qcm",
+          "enonce": "Un court-circuit, c'est…",
+          "reponses": [
+            "une résistance très grande",
+            "un chemin de résistance quasi nulle entre deux conducteurs",
+            "une coupure de fil",
+            "une baisse de tension"
+          ],
+          "bonne": 1,
+          "explication": "Résistance quasi nulle donc courant énorme : c'est le disjoncteur qui doit couper immédiatement."
         }
       ]
     },
@@ -665,6 +1085,146 @@
           ],
           "bonne": 1,
           "explication": "L = phase (Line), N = neutre, PE = terre (Protective Earth)."
+        },
+        {
+          "id": "q311",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Quel est le symbole d'un fusible ?",
+          "reponses": [
+            "Un cercle barré d'une croix",
+            "Un rectangle traversé par un trait",
+            "Deux traits parallèles",
+            "Un triangle"
+          ],
+          "bonne": 1,
+          "explication": "Le fusible est un rectangle traversé par un trait dans sa longueur. Le cercle barré est une lampe."
+        },
+        {
+          "id": "q312",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Le symbole d'un interrupteur ouvert ressemble à…",
+          "reponses": [
+            "un trait qui s'écarte du circuit, comme une porte ouverte",
+            "un cercle",
+            "un rectangle plein",
+            "une croix"
+          ],
+          "bonne": 0,
+          "explication": "Le trait qui s'écarte montre que le circuit est coupé. Fermé, il rejoint le circuit."
+        },
+        {
+          "id": "q313",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Un cercle contenant la lettre A représente…",
+          "reponses": [
+            "un alternateur",
+            "un ampèremètre",
+            "une antenne",
+            "un aimant"
+          ],
+          "bonne": 1,
+          "explication": "Cercle avec A : ampèremètre. Cercle avec V : voltmètre."
+        },
+        {
+          "id": "q314",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Un cercle contenant la lettre V représente…",
+          "reponses": [
+            "un ventilateur",
+            "un voltmètre",
+            "une vanne",
+            "un variateur"
+          ],
+          "bonne": 1,
+          "explication": "Cercle avec V : voltmètre, l'appareil qui mesure la tension."
+        },
+        {
+          "id": "q315",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "Un fil bleu clair dans une installation neuve est…",
+          "reponses": [
+            "une phase",
+            "le neutre",
+            "la terre",
+            "un fil de commande"
+          ],
+          "bonne": 1,
+          "explication": "Le bleu clair est réservé au neutre."
+        },
+        {
+          "id": "q316",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "Peut-on utiliser un fil vert/jaune comme phase ?",
+          "reponses": [
+            "Oui, si on le repère",
+            "Oui, en 12 V",
+            "Non, jamais : il est réservé à la terre",
+            "Oui, en continu"
+          ],
+          "bonne": 2,
+          "explication": "Le vert/jaune ne sert qu'à la terre. L'utiliser autrement peut faire croire qu'un fil sous tension est une terre."
+        },
+        {
+          "id": "q317",
+          "fiche_id": "couleurs",
+          "type": "qcm",
+          "enonce": "Dans une ancienne installation, un fil rouge est…",
+          "reponses": [
+            "forcément la terre",
+            "forcément le neutre",
+            "probablement une phase, à vérifier avec un appareil",
+            "forcément hors tension"
+          ],
+          "bonne": 2,
+          "explication": "Le rouge est en général une phase, mais dans l'ancien on ne se fie jamais à la couleur : on vérifie."
+        },
+        {
+          "id": "q318",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Un schéma unifilaire représente…",
+          "reponses": [
+            "tous les fils un par un",
+            "chaque liaison par un seul trait, avec le nombre de conducteurs indiqué",
+            "uniquement la terre",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Un trait par liaison, et des petites barres obliques pour le nombre de conducteurs. C'est le schéma des plans d'installation."
+        },
+        {
+          "id": "q319",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Un va-et-vient permet de…",
+          "reponses": [
+            "allumer plusieurs lampes à la fois",
+            "commander une lampe depuis deux endroits",
+            "faire varier la lumière",
+            "temporiser l'éclairage"
+          ],
+          "bonne": 1,
+          "explication": "Deux interrupteurs pour une même lampe, par exemple en haut et en bas d'un escalier."
+        },
+        {
+          "id": "q320",
+          "fiche_id": "schemas",
+          "type": "qcm",
+          "enonce": "Pour commander une lampe depuis trois endroits ou plus, on utilise…",
+          "reponses": [
+            "deux va-et-vient",
+            "un télérupteur (ou un permutateur)",
+            "un fusible",
+            "une prise commandée"
+          ],
+          "bonne": 1,
+          "explication": "Le télérupteur, dans le tableau, est commandé par des boutons-poussoirs en nombre illimité."
         }
       ]
     },
@@ -832,6 +1392,146 @@
           ],
           "bonne": 2,
           "explication": "En la touchant directement, le sauveteur s'électrise à son tour. On coupe le courant ou on l'écarte avec un objet isolant, puis on appelle le 15 ou le 112."
+        },
+        {
+          "id": "q411",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "L'électrisation, c'est…",
+          "reponses": [
+            "un décès par électricité",
+            "le passage du courant dans le corps, avec ses effets",
+            "une brûlure par arc",
+            "un incendie"
+          ],
+          "bonne": 1,
+          "explication": "Électrisation : le courant traverse le corps. Électrocution : le décès qui peut en résulter."
+        },
+        {
+          "id": "q412",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quel trajet du courant dans le corps est le plus dangereux ?",
+          "reponses": [
+            "Pied à pied",
+            "Main à main, ou main à pied : le courant passe par le cœur",
+            "Doigt à doigt d'une même main",
+            "Aucun trajet n'est dangereux"
+          ],
+          "bonne": 1,
+          "explication": "Quand le trajet passe par le cœur, le risque de fibrillation est maximal."
+        },
+        {
+          "id": "q413",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local humide ?",
+          "reponses": [
+            "50 V",
+            "25 V",
+            "12 V",
+            "230 V"
+          ],
+          "bonne": 1,
+          "explication": "25 V en alternatif dans un local humide, contre 50 V en local sec."
+        },
+        {
+          "id": "q414",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "En courant continu, la tension limite de sécurité en local sec est de…",
+          "reponses": [
+            "50 V",
+            "120 V",
+            "25 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "120 V en continu dans un local sec (60 V en local humide). Le continu est un peu moins dangereux que l'alternatif à tension égale."
+        },
+        {
+          "id": "q415",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Quelle mesure protège en premier contre les contacts directs ?",
+          "reponses": [
+            "Le différentiel seul",
+            "L'isolation des conducteurs et les capots",
+            "La mise à la terre",
+            "Le fusible"
+          ],
+          "bonne": 1,
+          "explication": "On empêche d'abord l'accès aux parties sous tension : isolation, capots, éloignement. Le différentiel 30 mA vient en complément."
+        },
+        {
+          "id": "q416",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Un appareil de classe II (double isolation, symbole du carré dans un carré)…",
+          "reponses": [
+            "doit être relié à la terre",
+            "n'a pas besoin de conducteur de terre",
+            "fonctionne en 12 V",
+            "est interdit en salle de bains"
+          ],
+          "bonne": 1,
+          "explication": "La double isolation remplace la terre : sa fiche n'a pas de broche de terre."
+        },
+        {
+          "id": "q417",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Un appareil de classe I…",
+          "reponses": [
+            "a sa carcasse métallique reliée à la terre",
+            "n'a pas de terre",
+            "fonctionne uniquement en continu",
+            "est à double isolation"
+          ],
+          "bonne": 0,
+          "explication": "Classe I : les masses sont reliées à la terre. En cas de défaut, le différentiel coupe."
+        },
+        {
+          "id": "q418",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Le bouton « test » d'un différentiel sert à…",
+          "reponses": [
+            "couper le courant en cas d'urgence",
+            "vérifier qu'il déclenche bien, à faire régulièrement",
+            "le réarmer",
+            "mesurer la fuite"
+          ],
+          "bonne": 1,
+          "explication": "Le bouton simule une fuite : le différentiel doit couper. On le teste par exemple une fois par mois."
+        },
+        {
+          "id": "q419",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Un différentiel déclenche sans raison apparente. Que faire ?",
+          "reponses": [
+            "Le shunter",
+            "Chercher le défaut, par exemple un appareil en fuite, et ne jamais le neutraliser",
+            "Le remplacer par un fusible",
+            "Augmenter son calibre"
+          ],
+          "bonne": 1,
+          "explication": "Un déclenchement signale une fuite vers la terre. On isole les appareils un par un pour trouver le coupable."
+        },
+        {
+          "id": "q420",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Quel extincteur pour un feu d'origine électrique ?",
+          "reponses": [
+            "À eau",
+            "À mousse",
+            "Au CO2 (ou à poudre)",
+            "Un seau de sable uniquement"
+          ],
+          "bonne": 2,
+          "explication": "Jamais d'eau sur un feu électrique. On coupe le courant et on utilise du CO2 ou de la poudre."
         }
       ]
     },
@@ -999,6 +1699,146 @@
           ],
           "bonne": 2,
           "explication": "Le multimètre n'est pas conçu pour cet usage : mauvais calibre, pile faible ou cordon abîmé peuvent tromper. La norme impose un VAT."
+        },
+        {
+          "id": "q511",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Dans quelle borne va le cordon rouge pour mesurer 5 A ?",
+          "reponses": [
+            "COM",
+            "V/Ω",
+            "A (calibre 10 A)",
+            "mA uniquement"
+          ],
+          "bonne": 2,
+          "explication": "Les fortes intensités passent par la borne A, souvent 10 A, protégée par un fusible interne."
+        },
+        {
+          "id": "q512",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "En mesure de résistance, le multimètre affiche « OL » ou « 1 ». Cela signifie…",
+          "reponses": [
+            "résistance nulle",
+            "résistance infinie : circuit ouvert ou hors calibre",
+            "pile faible",
+            "court-circuit"
+          ],
+          "bonne": 1,
+          "explication": "OL = overload, dépassement : la résistance est trop grande pour le calibre, ou le circuit est ouvert."
+        },
+        {
+          "id": "q513",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Mesurer une tension de 230 V avec le sélecteur sur Ω…",
+          "reponses": [
+            "donne la bonne valeur",
+            "peut détruire l'appareil",
+            "affiche 0",
+            "est sans risque"
+          ],
+          "bonne": 1,
+          "explication": "En mode Ω, l'appareil injecte un petit courant et n'est pas prévu pour recevoir 230 V : risque de destruction."
+        },
+        {
+          "id": "q514",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Le calibre 200 mA est réglé et on mesure 3 A. Conséquence ?",
+          "reponses": [
+            "Rien",
+            "Le fusible interne grille, ou l'appareil est endommagé",
+            "La valeur est juste",
+            "L'appareil s'éteint"
+          ],
+          "bonne": 1,
+          "explication": "Le calibre mA a un fusible faible : 3 A le font griller. D'où la règle du grand calibre d'abord."
+        },
+        {
+          "id": "q515",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer la tension d'une pile, on place les pointes…",
+          "reponses": [
+            "en série avec la pile",
+            "sur les deux bornes de la pile, en parallèle",
+            "sur une seule borne",
+            "sur la terre"
+          ],
+          "bonne": 1,
+          "explication": "La tension se mesure entre deux points : la borne + et la borne −."
+        },
+        {
+          "id": "q516",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "On veut vérifier qu'un fusible est bon, hors tension. Quel mode ?",
+          "reponses": [
+            "V~",
+            "A",
+            "Continuité (bip) ou Ω",
+            "Hz"
+          ],
+          "bonne": 2,
+          "explication": "Un fusible bon a une résistance quasi nulle : bip en continuité. Coupé : OL."
+        },
+        {
+          "id": "q517",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer le courant d'un appareil avec une pince ampèremétrique, on l'enserre autour…",
+          "reponses": [
+            "du cordon entier",
+            "d'un seul fil, la phase par exemple",
+            "de la prise",
+            "de la terre"
+          ],
+          "bonne": 1,
+          "explication": "Il faut isoler un conducteur. Un cordon adaptateur permet de séparer la phase sans ouvrir le câble."
+        },
+        {
+          "id": "q518",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Un voltmètre branché par erreur en série dans un circuit…",
+          "reponses": [
+            "mesure l'intensité",
+            "a une résistance très grande : le circuit ne fonctionne plus et il affiche la tension de la source",
+            "grille",
+            "mesure la puissance"
+          ],
+          "bonne": 1,
+          "explication": "Le voltmètre est conçu pour ne laisser passer presque aucun courant. En série, il bloque le circuit."
+        },
+        {
+          "id": "q519",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Le VAT doit être vérifié sur une source connue…",
+          "reponses": [
+            "une fois par an",
+            "avant et après chaque vérification d'absence de tension",
+            "seulement avant",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Avant, pour être sûr qu'il fonctionne. Après, pour être sûr qu'il n'a pas lâché pendant la mesure."
+        },
+        {
+          "id": "q520",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Sur une installation triphasée, la vérification d'absence de tension se fait…",
+          "reponses": [
+            "sur une phase seulement",
+            "entre chaque phase et le neutre, entre phases, et entre chaque conducteur et la terre",
+            "sur le neutre seulement",
+            "sur la terre seulement"
+          ],
+          "bonne": 1,
+          "explication": "Tous les conducteurs actifs sont vérifiés, entre eux et par rapport à la terre."
         }
       ]
     },
@@ -1166,6 +2006,146 @@
           ],
           "bonne": 1,
           "explication": "Si toutes les masses sont au même potentiel, toucher deux objets métalliques en même temps ne peut pas créer de courant à travers le corps."
+        },
+        {
+          "id": "q611",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Combien d'interrupteurs différentiels 30 mA au minimum dans un logement ?",
+          "reponses": [
+            "1",
+            "2",
+            "4",
+            "Aucun si on a des disjoncteurs"
+          ],
+          "bonne": 1,
+          "explication": "Au moins deux, pour répartir les circuits : si l'un déclenche, tout le logement n'est pas dans le noir."
+        },
+        {
+          "id": "q612",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Un interrupteur différentiel de type A est obligatoire pour…",
+          "reponses": [
+            "l'éclairage",
+            "la plaque de cuisson et le lave-linge",
+            "les prises du salon",
+            "la sonnette"
+          ],
+          "bonne": 1,
+          "explication": "Ces appareils peuvent créer des courants de défaut avec une composante continue, que seul le type A détecte."
+        },
+        {
+          "id": "q613",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le disjoncteur de branchement est réglé sur…",
+          "reponses": [
+            "10 A",
+            "la puissance souscrite, par exemple 30 A pour 6 kVA",
+            "100 A toujours",
+            "63 A toujours"
+          ],
+          "bonne": 1,
+          "explication": "Le fournisseur le règle selon l'abonnement : 6 kVA en monophasé correspond à 30 A."
+        },
+        {
+          "id": "q614",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le parafoudre protège…",
+          "reponses": [
+            "les personnes",
+            "l'installation et les appareils contre les surtensions, notamment la foudre",
+            "contre les surcharges",
+            "contre les fuites de courant"
+          ],
+          "bonne": 1,
+          "explication": "Il écoule les surtensions vers la terre avant qu'elles n'abîment les appareils électroniques."
+        },
+        {
+          "id": "q615",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un circuit de prises en 1,5 mm² se protège par un disjoncteur de…",
+          "reponses": [
+            "10 A",
+            "16 A",
+            "20 A",
+            "32 A"
+          ],
+          "bonne": 1,
+          "explication": "1,5 mm² → 16 A maximum, 8 prises maximum. Pour 20 A, il faut du 2,5 mm²."
+        },
+        {
+          "id": "q616",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Combien de points lumineux au maximum sur un circuit d'éclairage ?",
+          "reponses": [
+            "4",
+            "8",
+            "12",
+            "20"
+          ],
+          "bonne": 1,
+          "explication": "8 points lumineux maximum par circuit d'éclairage."
+        },
+        {
+          "id": "q617",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un câble de 2,5 mm² protégé par un disjoncteur 32 A, c'est…",
+          "reponses": [
+            "correct",
+            "dangereux : le câble peut chauffer sans que le disjoncteur coupe",
+            "obligatoire pour un four",
+            "sans importance"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur doit être adapté au câble. 32 A demande du 6 mm²."
+        },
+        {
+          "id": "q618",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Un sèche-serviettes classe II IPX4 peut être installé…",
+          "reponses": [
+            "dans le volume 0",
+            "dans le volume 1",
+            "dans le volume 2 ou hors volumes",
+            "nulle part en salle de bains"
+          ],
+          "bonne": 2,
+          "explication": "IPX4 et classe II sont les conditions du volume 2. Volume 1 : TBTS 12 V seulement."
+        },
+        {
+          "id": "q619",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Un luminaire IP20 est adapté…",
+          "reponses": [
+            "dans la douche",
+            "dans le volume 2",
+            "hors volumes, dans une pièce sèche",
+            "en extérieur"
+          ],
+          "bonne": 2,
+          "explication": "Le 0 en second chiffre signifie aucune protection contre l'eau : pièces sèches uniquement."
+        },
+        {
+          "id": "q620",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "IP44 signifie…",
+          "reponses": [
+            "étanche à l'immersion",
+            "protégé contre les corps solides de plus de 1 mm et contre les projections d'eau",
+            "non protégé",
+            "protégé contre les solides uniquement"
+          ],
+          "bonne": 1,
+          "explication": "Premier 4 : solides > 1 mm. Second 4 : projections d'eau de toutes directions."
         }
       ]
     },
@@ -1333,6 +2313,146 @@
           ],
           "bonne": 1,
           "explication": "Un rendement de 90 % signifie que 90 % de l'énergie consommée sert vraiment, le reste est perdu, souvent en chaleur."
+        },
+        {
+          "id": "q711",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Un chauffe-eau de 2 000 W fonctionne 6 heures par nuit. Consommation par nuit ?",
+          "reponses": [
+            "2 kWh",
+            "12 kWh",
+            "333 kWh",
+            "0,33 kWh"
+          ],
+          "bonne": 1,
+          "explication": "E = 2 kW × 6 h = 12 kWh."
+        },
+        {
+          "id": "q712",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "Un appareil de 500 W allumé 2 heures consomme…",
+          "reponses": [
+            "250 Wh",
+            "1 kWh",
+            "1 000 kWh",
+            "100 Wh"
+          ],
+          "bonne": 1,
+          "explication": "500 W × 2 h = 1 000 Wh = 1 kWh."
+        },
+        {
+          "id": "q713",
+          "fiche_id": "energie",
+          "type": "qcm",
+          "enonce": "1 kWh correspond à…",
+          "reponses": [
+            "1 000 W",
+            "1 000 W pendant 1 heure, soit 3 600 000 joules",
+            "1 000 V",
+            "60 W pendant 1 minute"
+          ],
+          "bonne": 1,
+          "explication": "Le joule est l'unité officielle d'énergie : 1 000 W × 3 600 s = 3 600 000 J."
+        },
+        {
+          "id": "q714",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "Un abonnement 9 kVA en monophasé correspond à un disjoncteur de branchement d'environ…",
+          "reponses": [
+            "15 A",
+            "45 A",
+            "90 A",
+            "9 A"
+          ],
+          "bonne": 1,
+          "explication": "I = P / U = 9 000 / 230 ≈ 39 A, réglé à 45 A par le fournisseur."
+        },
+        {
+          "id": "q715",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "Avec 6 kVA, peut-on faire fonctionner en même temps une plaque de 7 000 W et un four de 2 500 W ?",
+          "reponses": [
+            "Oui",
+            "Non, ça disjoncte : 9 500 W dépassent 6 000 W",
+            "Oui, la nuit",
+            "Oui, si le four est en 2,5 mm²"
+          ],
+          "bonne": 1,
+          "explication": "La puissance appelée dépasse la puissance souscrite : le disjoncteur de branchement coupe."
+        },
+        {
+          "id": "q716",
+          "fiche_id": "facture",
+          "type": "qcm",
+          "enonce": "10 kWh à 0,25 € le kWh coûtent…",
+          "reponses": [
+            "0,25 €",
+            "2,50 €",
+            "25 €",
+            "4 €"
+          ],
+          "bonne": 1,
+          "explication": "10 × 0,25 = 2,50 €."
+        },
+        {
+          "id": "q717",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Remplacer une halogène de 50 W par une LED de 6 W, allumée 4 h par jour, économise chaque jour…",
+          "reponses": [
+            "176 Wh",
+            "44 Wh",
+            "1,76 kWh",
+            "Rien"
+          ],
+          "bonne": 0,
+          "explication": "(50 − 6) W × 4 h = 176 Wh par jour, soit environ 64 kWh par an pour une seule ampoule."
+        },
+        {
+          "id": "q718",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Le rendement d'une LED est meilleur que celui d'une ampoule à incandescence car…",
+          "reponses": [
+            "elle est plus chère",
+            "elle transforme plus d'électricité en lumière et moins en chaleur",
+            "elle éclaire plus fort",
+            "elle consomme plus"
+          ],
+          "bonne": 1,
+          "explication": "L'incandescence perd 90 % de l'énergie en chaleur. La LED en convertit la majorité en lumière."
+        },
+        {
+          "id": "q719",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Les heures creuses servent à…",
+          "reponses": [
+            "éclairer moins",
+            "faire fonctionner les gros consommateurs quand le kWh est moins cher",
+            "couper le compteur",
+            "réduire la puissance souscrite"
+          ],
+          "bonne": 1,
+          "explication": "Chauffe-eau, lave-linge, lave-vaisselle : programmés la nuit, ils coûtent moins cher."
+        },
+        {
+          "id": "q720",
+          "fiche_id": "economies",
+          "type": "qcm",
+          "enonce": "Pour connaître la consommation réelle d'un appareil, on utilise…",
+          "reponses": [
+            "un voltmètre",
+            "un wattmètre ou une prise-compteur (kWh)",
+            "un ohmmètre",
+            "un VAT"
+          ],
+          "bonne": 1,
+          "explication": "La prise-compteur s'intercale entre la prise et l'appareil et affiche les watts et les kWh cumulés."
         }
       ]
     },
@@ -1497,6 +2617,146 @@
             "Retester le VAT sur la source connue"
           ],
           "explication": "Le VAT se teste avant et après la vérification : un appareil en panne afficherait « pas de tension » à tort."
+        },
+        {
+          "id": "q811",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "L'habilitation est valable…",
+          "reponses": [
+            "à vie",
+            "dans toute entreprise",
+            "pour les tâches et le poste définis, chez l'employeur qui l'a délivrée",
+            "pour tout type de tension"
+          ],
+          "bonne": 2,
+          "explication": "Elle est liée à un employeur, un poste et des tâches. Changer d'employeur impose une nouvelle habilitation."
+        },
+        {
+          "id": "q812",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "Avant de délivrer l'habilitation, l'employeur s'assure aussi…",
+          "reponses": [
+            "que la personne a 25 ans",
+            "de son aptitude médicale",
+            "qu'elle a une voiture",
+            "qu'elle a un diplôme d'ingénieur"
+          ],
+          "bonne": 1,
+          "explication": "L'aptitude médicale au poste fait partie des conditions, avec la formation et l'évaluation."
+        },
+        {
+          "id": "q813",
+          "fiche_id": "principe",
+          "type": "qcm",
+          "enonce": "Le recyclage de l'habilitation est recommandé tous les…",
+          "reponses": [
+            "ans",
+            "3 ans",
+            "10 ans",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Tous les 3 ans, ou plus tôt si le poste, les tâches ou l'installation changent."
+        },
+        {
+          "id": "q814",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Quelle habilitation pour un électricien qui dépanne une installation basse tension ?",
+          "reponses": [
+            "B0",
+            "BR",
+            "H0",
+            "B1"
+          ],
+          "bonne": 1,
+          "explication": "BR = chargé d'intervention générale : dépannage, recherche de défaut, en basse tension."
+        },
+        {
+          "id": "q815",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "La lettre H dans un symbole signifie…",
+          "reponses": [
+            "habilité",
+            "haute tension",
+            "hors tension",
+            "horaire"
+          ],
+          "bonne": 1,
+          "explication": "H = haute tension (au-delà de 1 000 V en alternatif). B = basse tension."
+        },
+        {
+          "id": "q816",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Le chargé de consignation est habilité…",
+          "reponses": [
+            "BS",
+            "B0",
+            "BC",
+            "BE"
+          ],
+          "bonne": 2,
+          "explication": "BC = chargé de consignation. Il réalise les quatre étapes et remet l'attestation."
+        },
+        {
+          "id": "q817",
+          "fiche_id": "symboles",
+          "type": "qcm",
+          "enonce": "Le chiffre 2, par exemple dans B2, désigne…",
+          "reponses": [
+            "un exécutant",
+            "un chargé de travaux",
+            "un non-électricien",
+            "un chargé d'essai"
+          ],
+          "bonne": 1,
+          "explication": "1 = exécutant, 2 = chargé de travaux, celui qui dirige et organise le chantier."
+        },
+        {
+          "id": "q818",
+          "fiche_id": "consignation",
+          "type": "qcm",
+          "enonce": "Après la consignation, le document remis au chargé de travaux s'appelle…",
+          "reponses": [
+            "l'ordre de mission",
+            "l'attestation de consignation",
+            "le permis de feu",
+            "le bon de commande"
+          ],
+          "bonne": 1,
+          "explication": "L'attestation de consignation garantit par écrit que l'ouvrage est consigné."
+        },
+        {
+          "id": "q819",
+          "fiche_id": "consignation",
+          "type": "qcm",
+          "enonce": "La déconsignation se fait…",
+          "reponses": [
+            "dans le même ordre que la consignation",
+            "dans l'ordre inverse de la consignation",
+            "sans ordre précis",
+            "uniquement par l'exécutant"
+          ],
+          "bonne": 1,
+          "explication": "On retire les mises à la terre, on décondamne, puis on remet sous tension, après avoir vérifié que tout le monde est dégagé."
+        },
+        {
+          "id": "q820",
+          "fiche_id": "consignation",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre les actions du chargé de consignation (ouvrage basse tension).",
+          "reponses": [
+            "Séparer l'ouvrage de toute source",
+            "Condamner en position ouverte",
+            "Identifier l'ouvrage sur place",
+            "Vérifier l'absence de tension",
+            "Remettre l'attestation de consignation"
+          ],
+          "explication": "S-C-I-V, puis l'attestation de consignation remise au chargé de travaux."
         }
       ]
     }

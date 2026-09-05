@@ -91,7 +91,7 @@ void main() {
     await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Question 1 / 10'), findsOneWidget);
+    expect(find.text('Question 1 / 20'), findsOneWidget);
   });
 
   testWidgets('une mauvaise réponse propose "Revoir la fiche"', (tester) async {
