@@ -1,0 +1,146 @@
+{
+  "modules": [
+    {
+      "id": "grandeurs",
+      "titre": "Grandeurs électriques et loi d'Ohm",
+      "ordre": 1,
+      "fiches": [
+        {
+          "id": "grandeurs",
+          "titre": "Les quatre grandeurs de base",
+          "contenu": "La tension U se mesure en volts (V) : c'est la « pression » qui pousse le courant.\nL'intensité I se mesure en ampères (A) : c'est le débit de courant qui circule.\nLa résistance R se mesure en ohms (Ω) : c'est ce qui freine le courant.\nLa puissance P se mesure en watts (W) : c'est l'énergie consommée chaque seconde."
+        },
+        {
+          "id": "ohm",
+          "titre": "La loi d'Ohm",
+          "contenu": "La loi d'Ohm relie tension, résistance et intensité :\n\nU = R × I\n\nOn peut la retourner selon ce qu'on cherche :\nI = U / R\nR = U / I\n\nExemple : une résistance de 10 Ω traversée par 2 A a une tension de 10 × 2 = 20 V à ses bornes."
+        },
+        {
+          "id": "puissance",
+          "titre": "La puissance électrique",
+          "contenu": "La puissance est le produit de la tension par l'intensité :\n\nP = U × I\n\nExemple : un radiateur en 230 V qui consomme 10 A a une puissance de 230 × 10 = 2 300 W, soit 2,3 kW.\n\nÀ l'inverse, I = P / U permet de trouver l'intensité appelée par un appareil dont on connaît la puissance."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q001",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "Dans quelle unité s'exprime la tension électrique ?",
+          "reponses": ["L'ampère (A)", "Le volt (V)", "L'ohm (Ω)", "Le watt (W)"],
+          "bonne": 1,
+          "explication": "La tension U se mesure en volts (V). L'ampère mesure l'intensité, l'ohm la résistance et le watt la puissance."
+        },
+        {
+          "id": "q002",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "Quelle grandeur se mesure en ampères ?",
+          "reponses": ["La tension", "La résistance", "L'intensité du courant", "La puissance"],
+          "bonne": 2,
+          "explication": "L'ampère (A) est l'unité de l'intensité I, c'est-à-dire du débit de courant."
+        },
+        {
+          "id": "q003",
+          "fiche_id": "grandeurs",
+          "type": "qcm",
+          "enonce": "Quel symbole désigne la résistance ?",
+          "reponses": ["U", "I", "R", "P"],
+          "bonne": 2,
+          "explication": "R est la résistance (en ohms). U est la tension, I l'intensité et P la puissance."
+        },
+        {
+          "id": "q004",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Une résistance de 10 Ω est traversée par un courant de 2 A. Quelle est la tension à ses bornes ?",
+          "reponses": ["5 V", "20 V", "0,2 V", "12 V"],
+          "bonne": 1,
+          "explication": "U = R × I = 10 × 2 = 20 V"
+        },
+        {
+          "id": "q005",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Une tension de 12 V est appliquée à une résistance de 4 Ω. Quelle intensité circule ?",
+          "reponses": ["3 A", "48 A", "0,33 A", "8 A"],
+          "bonne": 0,
+          "explication": "I = U / R = 12 / 4 = 3 A"
+        },
+        {
+          "id": "q006",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "Une lampe alimentée en 230 V est traversée par 0,5 A. Quelle est sa résistance ?",
+          "reponses": ["115 Ω", "460 Ω", "230,5 Ω", "0,002 Ω"],
+          "bonne": 1,
+          "explication": "R = U / I = 230 / 0,5 = 460 Ω"
+        },
+        {
+          "id": "q007",
+          "fiche_id": "ohm",
+          "type": "qcm",
+          "enonce": "À tension constante, si la résistance double, l'intensité…",
+          "reponses": ["double", "reste identique", "est divisée par deux", "devient nulle"],
+          "bonne": 2,
+          "explication": "I = U / R : si R double, I est divisée par deux."
+        },
+        {
+          "id": "q008",
+          "fiche_id": "puissance",
+          "type": "qcm",
+          "enonce": "Quelle formule donne la puissance électrique ?",
+          "reponses": ["P = U × I", "P = U / I", "P = R × I", "P = U + I"],
+          "bonne": 0,
+          "explication": "La puissance est le produit de la tension par l'intensité : P = U × I."
+        },
+        {
+          "id": "q009",
+          "fiche_id": "puissance",
+          "type": "qcm",
+          "enonce": "Un radiateur en 230 V consomme 10 A. Quelle est sa puissance ?",
+          "reponses": ["23 W", "230 W", "2 300 W", "23 000 W"],
+          "bonne": 2,
+          "explication": "P = U × I = 230 × 10 = 2 300 W, soit 2,3 kW."
+        },
+        {
+          "id": "q010",
+          "fiche_id": "puissance",
+          "type": "qcm",
+          "enonce": "Un appareil de 1 150 W est branché en 230 V. Quelle intensité appelle-t-il ?",
+          "reponses": ["0,2 A", "5 A", "50 A", "264 500 A"],
+          "bonne": 1,
+          "explication": "I = P / U = 1 150 / 230 = 5 A"
+        }
+      ]
+    },
+    {
+      "id": "courant",
+      "titre": "Courant continu / alternatif",
+      "ordre": 2,
+      "fiches": [],
+      "questions": []
+    },
+    {
+      "id": "circuits",
+      "titre": "Circuits série / parallèle",
+      "ordre": 3,
+      "fiches": [],
+      "questions": []
+    },
+    {
+      "id": "symboles",
+      "titre": "Symboles et schémas",
+      "ordre": 4,
+      "fiches": [],
+      "questions": []
+    },
+    {
+      "id": "securite",
+      "titre": "Dangers et sécurité de base",
+      "ordre": 5,
+      "fiches": [],
+      "questions": []
+    }
+  ]
+}
