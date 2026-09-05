@@ -1,4 +1,5 @@
 import 'package:elecapp/data/app_state.dart';
+import 'package:elecapp/data/quiz_session.dart';
 import 'package:elecapp/models/fiche.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
@@ -36,6 +37,7 @@ Widget _app() => ChangeNotifierProvider(
 
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
+  mainReprise();
 
   testWidgets('liste les fiches et le bouton quiz', (tester) async {
     await tester.pumpWidget(_app());
@@ -72,5 +74,62 @@ void main() {
     await tester.tap(find.text('Passer au quiz'));
     await tester.pumpAndSettle();
     expect(find.text('Question 1 / 1'), findsOneWidget);
+  });
+}
+
+const _module3 = Module(
+  id: 'test3',
+  titre: 'Module trois questions',
+  ordre: 1,
+  fiches: [],
+  questions: [
+    Question(id: 'a', ficheId: 'f', type: TypeQuestion.qcm, enonce: 'Question A ?', reponses: ['x', 'y', 'z'], bonne: 0, explication: '.'),
+    Question(id: 'b', ficheId: 'f', type: TypeQuestion.qcm, enonce: 'Question B ?', reponses: ['x', 'y', 'z'], bonne: 1, explication: '.'),
+    Question(id: 'c', ficheId: 'f', type: TypeQuestion.qcm, enonce: 'Question C ?', reponses: ['x', 'y', 'z'], bonne: 2, explication: '.'),
+  ],
+);
+
+void mainReprise() {
+  testWidgets('module commencé : choix entre les ratées et tout refaire',
+      (tester) async {
+    final etat = AppState();
+    await tester.pumpWidget(ChangeNotifierProvider.value(
+      value: etat,
+      child: const MaterialApp(home: ModuleScreen(module: _module3)),
+    ));
+    expect(find.text('Lancer le quiz (3 questions)'), findsOneWidget);
+
+    // On simule un quiz complet avec B et C ratées.
+    final session = QuizSession(_module3.questions);
+    session.repondre(0); session.suivante(); // A juste
+    session.repondre(0); session.suivante(); // B faux
+    session.repondre(0); session.suivante(); // C faux
+    await etat.enregistrerResultat(_module3, session);
+    await tester.pump();
+
+    expect(find.text('Refaire uniquement les ratées (2)'), findsOneWidget);
+    expect(find.text('Recommencer depuis le début (3 questions)'), findsOneWidget);
+
+    // Le quiz des ratées ne contient que B et C.
+    await tester.tap(find.text('Refaire uniquement les ratées (2)'));
+    await tester.pumpAndSettle();
+    expect(find.text('Question 1 / 2'), findsOneWidget);
+    expect(find.text('Question B ?'), findsOneWidget);
+  });
+
+  testWidgets('module terminé : un seul bouton "Refaire le quiz"',
+      (tester) async {
+    final etat = AppState();
+    await tester.pumpWidget(ChangeNotifierProvider.value(
+      value: etat,
+      child: const MaterialApp(home: ModuleScreen(module: _module3)),
+    ));
+    final session = QuizSession(_module3.questions);
+    for (final q in _module3.questions) { session.repondre(q.bonne); session.suivante(); }
+    await etat.enregistrerResultat(_module3, session);
+    await tester.pump();
+
+    expect(find.text('Refaire le quiz (3 questions)'), findsOneWidget);
+    expect(find.textContaining('ratées'), findsNothing);
   });
 }

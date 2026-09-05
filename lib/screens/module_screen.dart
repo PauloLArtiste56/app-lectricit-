@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../models/module.dart';
+import '../models/question.dart';
 import 'fiche_screen.dart';
 import 'quiz_screen.dart';
 
@@ -21,9 +22,12 @@ class ModuleScreen extends StatelessWidget {
     );
   }
 
-  void _lancerQuiz(BuildContext context) {
+  /// [questions] limite le quiz à une sous-liste (les ratées) ; sinon tout.
+  void _lancerQuiz(BuildContext context, {List<Question>? questions}) {
     Navigator.of(context).push(
-      MaterialPageRoute<void>(builder: (_) => QuizScreen(module: module)),
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(module: module, questions: questions),
+      ),
     );
   }
 
@@ -33,6 +37,9 @@ class ModuleScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final reussies = etat.questionsReussies(module);
     final meilleur = etat.progressionDe(module).meilleurScore;
+    final aRevoir = etat.questionsARevoir(module);
+    // Module déjà commencé mais pas terminé : on propose les deux options.
+    final commence = reussies > 0 && aRevoir.isNotEmpty;
 
     return Scaffold(
       appBar: AppBar(title: Text(module.titre)),
@@ -83,11 +90,30 @@ class ModuleScreen extends StatelessWidget {
               ),
             ),
           const SizedBox(height: 24),
-          FilledButton.icon(
-            onPressed: () => _lancerQuiz(context),
-            icon: const Icon(Icons.quiz),
-            label: Text('Lancer le quiz (${module.nombreQuestions} questions)'),
-          ),
+          if (commence) ...[
+            FilledButton.icon(
+              onPressed: () => _lancerQuiz(context, questions: aRevoir),
+              icon: const Icon(Icons.replay),
+              label: Text('Refaire uniquement les ratées (${aRevoir.length})'),
+            ),
+            const SizedBox(height: 8),
+            FilledButton.tonalIcon(
+              onPressed: () => _lancerQuiz(context),
+              icon: const Icon(Icons.restart_alt),
+              label: Text(
+                'Recommencer depuis le début (${module.nombreQuestions} questions)',
+              ),
+            ),
+          ] else
+            FilledButton.icon(
+              onPressed: () => _lancerQuiz(context),
+              icon: const Icon(Icons.quiz),
+              label: Text(
+                reussies == 0
+                    ? 'Lancer le quiz (${module.nombreQuestions} questions)'
+                    : 'Refaire le quiz (${module.nombreQuestions} questions)',
+              ),
+            ),
         ],
       ),
     );
