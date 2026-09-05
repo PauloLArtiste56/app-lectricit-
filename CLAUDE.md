@@ -140,11 +140,21 @@ Modules existants (par thème) :
 37. Courants faibles : téléphone, réseau, TV
 38. Éclairage extérieur et jardin
 39. Alarme et vidéosurveillance
+40. Le triphasé en pratique
+41. Mesures avancées : isolement et terre
+42. Rénover une installation ancienne
+43. Groupes électrogènes et alimentation de secours
+44. Énergie réactive et cos φ
+45. Histoire de l'électricité
+46. Électricité en camping-car et bateau
+47. Autoconsommation avancée et stockage
+48. Électricité statique et atmosphères explosives
+49. Arc électrique et travail sous tension
 
-Sujets à venir : histoire de l'électricité, camping-car et bateau, autoconsommation
-avancée, triphasé en pratique, mesures avancées (isolement, terre), rénovation d'une
-installation ancienne, électricité et enfants, énergie réactive et cos φ, groupes
-électrogènes et onduleurs de secours, électricité statique et ATEX…
+Sujets à venir : électricité et enfants, tertiaire et ERP (éclairage de sécurité,
+vérifications), industrie (armoires, automates, capteurs), variateurs et harmoniques,
+haute tension : premiers repères, éclairage public, ascenseurs et portails, électricité
+et eau (pompes, puits, arrosage), énergie éolienne, hydrogène et piles à combustible…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
