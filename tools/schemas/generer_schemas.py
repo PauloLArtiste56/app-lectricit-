@@ -530,3 +530,22 @@ RESUMES_D = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_D:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_E = [
+ ("unites_si", "Les unités", "V A Ω", [("V, A, Ω, W", "tension, intensité, résistance, puissance"), ("Wh, J", "énergie"), ("Hz, F, Ah, T", "fréquence, capacité, batterie, champ"), ("lm, lx", "flux lumineux, éclairement")], BLEU),
+ ("prefixes", "Les préfixes", "k m", [("méga M : × 1 000 000", "kilo k : × 1 000"), ("milli m : ÷ 1 000", "micro µ : ÷ 1 000 000"), ("M ≠ m", "un milliard d'écart"), ("2 300 W = 2,3 kW", "0,5 A = 500 mA")], AMBRE),
+ ("ordres_grandeur", "Ordres de grandeur", "≈", [("1,5 V · 12 V · 230 V · 400 V", "pile, voiture, prise, triphasé"), ("10 W · 100 W · 2 500 W · 7 000 W", "LED, TV, four, plaque"), ("0,5 mA · 10 mA · 30 mA", "perception, non-lâcher, différentiel"), ("50 Hz · 20 ms", "réseau, période")], VERT),
+ ("marquages", "Les marquages", "CE", [("230 V~ 50 Hz", "tension, fréquence, puissance"), ("Classe I ⏚ · II ▣ · III", "terre, double isolation, TBTS"), ("IP", "solides, eau"), ("CE, poubelle barrée", "conformité, recyclage")], BLEU),
+ ("plaque_moteur", "La plaque d'un moteur", "Δ Y", [("230 V Δ / 400 V Y", "étoile sur 400 V"), ("kW = puissance utile", "absorbée = utile / rendement"), ("1 450 tr/min", "4 pôles à 50 Hz"), ("cos φ, η, IP, S1", "facteur de puissance, rendement, service")], AMBRE),
+ ("classes_ip", "Classes et IP", "IP44", [("Classe I", "terre, fiche à broche"), ("Classe II", "double isolation, sans terre"), ("Classe III", "TBTS 12 / 24 V"), ("IP20 · IP44 · IP65 · IP68", "sec, dehors, exposé, immergé")], VERT),
+ ("vmc", "La VMC", "VMC", [("Renouvelle l'air", "extrait l'humidité"), ("Autoréglable, hygroréglable", "débit fixe ou selon l'humidité"), ("Double flux", "récupère la chaleur"), ("24 h/24, circuit dédié", "20 à 80 W")], BLEU),
+ ("climatisation", "La climatisation", "kW", [("Pompe à chaleur inversée", "réversible : chauffe aussi"), ("Split", "unité extérieure + intérieures"), ("≈ 100 W frigorifiques par m²", "2,5 kW pour 25 m²"), ("Fluide", "professionnel attesté")], VERT),
+ ("raccordement_clim", "Raccorder et entretenir", "30mA", [("Circuit dédié", "différentiel 30 mA"), ("Unité extérieure", "antivibratile, interrupteur de proximité"), ("Condensats", "à évacuer"), ("Filtres tous les mois", "étanchéité périodique")], AMBRE),
+ ("outils_electro", "Outils électroportatifs", "18V", [("Secteur : classe II", "câble et fiche vérifiés"), ("Batterie 18 V", "attention au lithium"), ("Câble abîmé", "on remplace"), ("EPI selon l'outil", "lunettes, gants, auditif")], BLEU),
+ ("chantier", "L'électricité sur un chantier", "RCD", [("Coffret 30 mA", "rallonges H07RN-F déroulées"), ("RCD portable", "sans coffret"), ("Cuve, fosse : TBTS 24 V", "jamais de 230 V"), ("DT-DICT, lignes aériennes", "avant de creuser, distances")], ROUGE),
+ ("bonnes_pratiques", "Bonnes pratiques", "✓", [("Débrancher avant de changer un accessoire", "jamais d'interrupteur bloqué"), ("Deux mains, pas de vêtements flottants", "poussière : aspiration ou masque"), ("Batteries au sec, à l'ombre", "contrôles périodiques"), ("Picotement, odeur, chauffe", "on arrête")], VERT),
+ ("les_normes", "Les normes", "NF C", [("NF C 15-100", "installations BT"), ("NF C 18-510", "opérations et habilitation"), ("NF C 14-100", "branchement"), ("Version en vigueur", "à la date des travaux")], BLEU),
+ ("consuel", "Consuel et conformité", "OK", [("Attestation visée", "avant mise sous tension"), ("Sans visa, pas de raccordement", "neuf ou rénovation totale"), ("Mise en conformité", "tout aux normes, neuf"), ("Mise en sécurité", "points essentiels, existant")], AMBRE),
+ ("diagnostic", "Le diagnostic électrique", "15ans", [("Vente et location", "installation de plus de 15 ans"), ("Validité 3 ans / 6 ans", "vente / location"), ("6 points de sécurité", "AGCP, différentiel, protections, SdB, vétuste, conducteurs"), ("Informe", "n'oblige pas, mais engage")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_E:
+    carte_resume(nom, titre_s, ini, points, col)

@@ -130,10 +130,15 @@ Modules existants (par thème) :
 27. Domotique et maison connectée
 28. Véhicule électrique : la recharge
 29. Batteries et stockage
+30. Unités et préfixes
+31. Lire une plaque signalétique
+32. Ventilation et climatisation
+33. Outillage électroportatif et chantier
+34. Normes et diagnostic électrique
 
-Sujets à venir : ventilation et climatisation, éclairage extérieur, normes et diagnostic,
-outillage électroportatif, électricité et enfants, histoire de l'électricité, unités et
-préfixes, lecture d'une plaque signalétique, électricité en camping-car / bateau…
+Sujets à venir : histoire de l'électricité, électricité en camping-car / bateau, éclairage
+extérieur et jardin, alarme et vidéosurveillance, tableau : lecture et repérage, dépannage
+pas à pas, courants faibles (téléphone, réseau, TV), énergie : autoconsommation avancée…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
