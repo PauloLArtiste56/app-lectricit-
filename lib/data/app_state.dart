@@ -6,6 +6,7 @@ import '../models/module.dart';
 import '../models/progression.dart';
 import '../models/progression_module.dart';
 import '../models/question.dart';
+import '../models/revision_question.dart';
 import 'content_loader.dart';
 import 'progression_store.dart';
 import 'quiz_session.dart';
@@ -14,12 +15,22 @@ import 'quiz_session.dart';
 /// Les écrans lisent ici et appellent les méthodes ci-dessous ; ils ne
 /// touchent jamais directement au stockage.
 class AppState extends ChangeNotifier {
-  AppState({ContentLoader? loader, ProgressionStore? store})
-      : _loader = loader ?? ContentLoader(),
-        _store = store ?? ProgressionStore();
+  AppState({
+    ContentLoader? loader,
+    ProgressionStore? store,
+    DateTime Function()? horloge,
+  })  : _loader = loader ?? ContentLoader(),
+        _store = store ?? ProgressionStore(),
+        _horloge = horloge ?? DateTime.now;
 
   final ContentLoader _loader;
   final ProgressionStore _store;
+
+  /// Injectable dans les tests pour simuler le passage des jours.
+  final DateTime Function() _horloge;
+
+  /// Nombre de questions d'une séance du jour.
+  static const int tailleSeance = 10;
 
   /// Identifiant utilisé dans l'historique pour une séance de révision
   /// (questions de plusieurs modules).
@@ -118,6 +129,62 @@ class AppState extends ChangeNotifier {
   int get nombreARevoir => modulesAvecContenu.fold(
       0, (n, m) => n + progressionDe(m).questionsARevoir.length);
 
+  // --- Séance du jour (révision espacée) --------------------------------
+
+  /// Questions dont la date de révision est arrivée (ou dépassée).
+  List<Question> questionsDues() {
+    final aujourdhui = _aujourdhui();
+    final dues = <(String, Question)>[];
+    for (final m in modulesAvecContenu) {
+      final p = progressionDe(m);
+      for (final q in m.questions) {
+        final r = p.revisions[q.id];
+        if (r != null && r.prochaine.compareTo(aujourdhui) <= 0) {
+          dues.add((r.prochaine, q));
+        }
+      }
+    }
+    // Les plus en retard d'abord.
+    dues.sort((a, b) => a.$1.compareTo(b.$1));
+    return [for (final d in dues) d.$2];
+  }
+
+  int get nombreDues => questionsDues().length;
+
+  /// Questions jamais faites, tous modules, dans l'ordre des modules.
+  List<Question> questionsJamaisFaites() {
+    return [
+      for (final m in modulesAvecContenu)
+        for (final q in m.questions)
+          if (!progressionDe(m).revisions.containsKey(q.id)) q,
+    ];
+  }
+
+  /// La séance du jour : d'abord ce qui est à revoir aujourd'hui, puis des
+  /// questions jamais faites, jusqu'à [tailleSeance].
+  List<Question> questionsDuJour() {
+    final dues = questionsDues().take(tailleSeance).toList();
+    final nouvelles = questionsJamaisFaites()..shuffle();
+    return [...dues, ...nouvelles.take(tailleSeance - dues.length)];
+  }
+
+  /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins
+  /// un quiz. 0 si la série est cassée.
+  int get serieJours {
+    final jours = _progression.historique.map((e) => e.date).toSet();
+    var jour = _horloge();
+    if (!jours.contains(_formater(jour))) {
+      jour = jour.subtract(const Duration(days: 1));
+      if (!jours.contains(_formater(jour))) return 0;
+    }
+    var serie = 0;
+    while (jours.contains(_formater(jour))) {
+      serie++;
+      jour = jour.subtract(const Duration(days: 1));
+    }
+    return serie;
+  }
+
   bool moduleTermine(Module module) =>
       module.nombreQuestions > 0 &&
       questionsReussies(module) == module.nombreQuestions;
@@ -142,11 +209,19 @@ class AppState extends ChangeNotifier {
       final module = moduleDe(q) ?? moduleComplet;
       if (module == null) continue;
       final p = progressionDe(module);
+      final niveauActuel = p.revisions[q.id]?.niveau ?? 0;
       if (ratees.contains(q.id)) {
         p.questionsARevoir.add(q.id);
+        // Retour au niveau 0 : à revoir dès demain.
+        p.revisions[q.id] = RevisionQuestion(niveau: 0, prochaine: _dansJours(1));
       } else {
         p.questionsReussies.add(q.id);
         p.questionsARevoir.remove(q.id);
+        final niveau = niveauActuel + 1;
+        p.revisions[q.id] = RevisionQuestion(
+          niveau: niveau,
+          prochaine: _dansJours(RevisionQuestion.intervallePour(niveau)),
+        );
       }
     }
     if (moduleComplet != null &&
@@ -192,8 +267,11 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  static String _aujourdhui() {
-    final d = DateTime.now();
+  String _aujourdhui() => _formater(_horloge());
+
+  String _dansJours(int n) => _formater(_horloge().add(Duration(days: n)));
+
+  static String _formater(DateTime d) {
     String deux(int n) => n.toString().padLeft(2, '0');
     return '${d.year}-${deux(d.month)}-${deux(d.day)}';
   }

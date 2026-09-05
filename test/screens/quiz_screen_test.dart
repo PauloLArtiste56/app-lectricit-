@@ -153,14 +153,14 @@ void main() {
     expect(find.byIcon(Icons.check_circle), findsNWidgets(3));
   });
 
-  testWidgets('la carte de révision lance un quiz "Révision"', (tester) async {
+  testWidgets("la carte d'entraînement lance la séance du jour", (tester) async {
     _ecranHaut(tester);
     await tester.pumpWidget(const ElecApp());
     await tester.pumpAndSettle();
-    expect(find.text('Réviser mes points faibles'), findsOneWidget);
-    await tester.tap(find.text('Réviser mes points faibles'));
+    expect(find.text('Ma séance du jour'), findsOneWidget);
+    await tester.tap(find.textContaining('Lancer la séance'));
     await tester.pumpAndSettle();
-    expect(find.text('Révision'), findsOneWidget);
-    expect(find.text('Question 1 / ${AppState.tailleRevision}'), findsOneWidget);
+    expect(find.text('Séance du jour'), findsOneWidget);
+    expect(find.text('Question 1 / ${AppState.tailleSeance}'), findsOneWidget);
   });
 }
