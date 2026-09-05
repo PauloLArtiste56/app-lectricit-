@@ -62,6 +62,6 @@ flutter run
 
 ## Organisation du dépôt
 
-- Branche par défaut : `lapausecle`.
+- Branche par défaut : `Main`.
 - Une branche par fonctionnalité, fusionnée via pull request.
 - Textes de l'interface et commentaires en français.
