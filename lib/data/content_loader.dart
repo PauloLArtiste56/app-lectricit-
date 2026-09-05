@@ -14,7 +14,9 @@ class ContentLoader {
   static const String cheminContenu = 'assets/content.json';
 
   Future<List<Module>> chargerModules() async {
-    final texte = await _bundle.loadString(cheminContenu);
+    // `cache: false` : le contenu n'est lu qu'une fois au démarrage, et le
+    // cache de Flutter pose problème quand plusieurs tests rechargent l'appli.
+    final texte = await _bundle.loadString(cheminContenu, cache: false);
     return parserModules(texte);
   }
 

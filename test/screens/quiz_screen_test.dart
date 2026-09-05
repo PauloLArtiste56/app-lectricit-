@@ -1,9 +1,12 @@
+import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:elecapp/screens/quiz_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final _module = Module(
   id: 'test',
@@ -33,9 +36,14 @@ final _module = Module(
 );
 
 void main() {
+  setUp(() => SharedPreferences.setMockInitialValues({}));
+
   testWidgets('feedback immédiat puis passage à la question suivante',
       (tester) async {
-    await tester.pumpWidget(MaterialApp(home: QuizScreen(module: _module)));
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: MaterialApp(home: QuizScreen(module: _module)),
+    ));
 
     expect(find.text('Question 1 / 2'), findsOneWidget);
     expect(find.text('Unité de la tension ?'), findsOneWidget);
@@ -64,12 +72,14 @@ void main() {
     expect(find.text('1 / 2'), findsOneWidget);
   });
 
-  testWidgets("depuis l'accueil, un clic sur un module ouvre son quiz",
+  testWidgets("depuis l'accueil, module puis \"Lancer le quiz\" ouvre le quiz",
       (tester) async {
     await tester.pumpWidget(const ElecApp());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text("Grandeurs électriques et loi d'Ohm"));
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
     expect(find.text('Question 1 / 10'), findsOneWidget);

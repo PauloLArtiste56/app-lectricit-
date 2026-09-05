@@ -1,71 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import '../data/content_loader.dart';
-import '../models/module.dart';
+import '../data/app_state.dart';
 import '../widgets/module_card.dart';
-import 'quiz_screen.dart';
+import 'module_screen.dart';
 
 /// Écran d'accueil : la liste des modules avec leur progression.
-class AccueilScreen extends StatefulWidget {
-  /// [loader] permet d'injecter un chargeur de contenu dans les tests.
-  const AccueilScreen({super.key, this.loader});
-
-  final ContentLoader? loader;
-
-  @override
-  State<AccueilScreen> createState() => _AccueilScreenState();
-}
-
-class _AccueilScreenState extends State<AccueilScreen> {
-  // Le Future est créé une seule fois (dans initState) pour ne pas
-  // recharger le JSON à chaque reconstruction du widget.
-  late final Future<List<Module>> _modules;
-
-  @override
-  void initState() {
-    super.initState();
-    _modules = (widget.loader ?? ContentLoader()).chargerModules();
-  }
+class AccueilScreen extends StatelessWidget {
+  const AccueilScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // `watch` : l'écran se redessine dès que la progression change.
+    final etat = context.watch<AppState>();
+
     return Scaffold(
       appBar: AppBar(title: const Text('ElecApp')),
-      body: FutureBuilder<List<Module>>(
-        future: _modules,
-        builder: (context, snapshot) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Text('Impossible de charger le contenu :\n${snapshot.error}'),
-              ),
-            );
-          }
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          final modules = snapshot.data!;
-          return ListView.builder(
+      body: switch (etat) {
+        AppState(erreur: final e?) => Center(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Text('Impossible de charger le contenu :\n$e'),
+            ),
+          ),
+        AppState(pret: false) =>
+          const Center(child: CircularProgressIndicator()),
+        _ => ListView.builder(
             padding: const EdgeInsets.all(12),
-            itemCount: modules.length,
+            itemCount: etat.modules.length,
             itemBuilder: (context, index) {
-              final module = modules[index];
+              final module = etat.modules[index];
               return ModuleCard(
                 module: module,
-                // La progression réelle arrivera à l'étape 4 (sauvegarde locale).
-                questionsReussies: 0,
-                // Étape 5 : passer par les fiches avant le quiz.
+                questionsReussies: etat.questionsReussies(module),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (_) => QuizScreen(module: module),
+                    builder: (_) => ModuleScreen(module: module),
                   ),
                 ),
               );
             },
-          );
-        },
-      ),
+          ),
+      },
     );
   }
 }
