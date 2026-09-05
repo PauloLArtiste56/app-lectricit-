@@ -39,7 +39,7 @@ final _module = Module(
 
 /// Écran de test assez haut pour afficher tout l'accueil sans défiler.
 void _ecranHaut(WidgetTester tester) {
-  tester.view.physicalSize = const Size(480, 2000);
+  tester.view.physicalSize = const Size(480, 3200);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }

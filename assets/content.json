@@ -305,7 +305,8 @@
           "bonne": 1,
           "explication": "Kilo = mille : 1 kW = 1 000 W. Un radiateur de 2 kW fait 2 000 W."
         }
-      ]
+      ],
+      "theme": "Les bases"
     },
     {
       "id": "courant",
@@ -612,7 +613,8 @@
           "bonne": 1,
           "explication": "400 V entre phases, 230 V entre une phase et le neutre : c'est le même réseau."
         }
-      ]
+      ],
+      "theme": "Les bases"
     },
     {
       "id": "circuits",
@@ -919,7 +921,8 @@
           "bonne": 1,
           "explication": "Résistance quasi nulle donc courant énorme : c'est le disjoncteur qui doit couper immédiatement."
         }
-      ]
+      ],
+      "theme": "Les bases"
     },
     {
       "id": "symboles",
@@ -1226,933 +1229,13 @@
           "bonne": 1,
           "explication": "Le télérupteur, dans le tableau, est commandé par des boutons-poussoirs en nombre illimité."
         }
-      ]
-    },
-    {
-      "id": "securite",
-      "titre": "Dangers et sécurité de base",
-      "ordre": 5,
-      "fiches": [
-        {
-          "id": "dangers",
-          "titre": "Les effets du courant sur le corps",
-          "contenu": "Le corps humain conduit le courant. Ce qui blesse, c'est l'intensité qui le traverse et la durée du passage. Ordres de grandeur en alternatif 50 Hz :\n\n• 0,5 mA : seuil de perception, picotement.\n• 10 mA : seuil de non-lâcher. Les muscles se contractent, on ne peut plus lâcher le conducteur.\n• 30 mA : risque de paralysie respiratoire. C'est le seuil des différentiels qui protègent les personnes.\n• Quelques dizaines de mA et plus : risque de fibrillation cardiaque, c'est-à-dire d'arrêt du cœur.\n\nS'ajoutent les brûlures, internes et externes.\n\nFacteurs aggravants : humidité (mains mouillées, sol humide, pieds nus), durée du contact, trajet du courant à travers le cœur.\n\nTension limite de sécurité : 50 V en alternatif dans un local sec, 25 V dans un local humide. En dessous, le risque est considéré comme faible.",
-          "image": "seuils.png"
-        },
-        {
-          "id": "contacts",
-          "titre": "Contact direct et contact indirect",
-          "contenu": "Contact direct : toucher une partie qui est normalement sous tension. Exemples : fil dénudé, borne d'un appareil ouvert, broche d'une prise.\nProtections : isolation des conducteurs, capots, éloignement, obstacles.\n\nContact indirect : toucher une masse, c'est-à-dire une partie métallique qui n'est normalement pas sous tension mais qui l'est devenue à cause d'un défaut d'isolement. Exemple : la carcasse d'un lave-linge dont un fil de phase touche le châssis.\nProtections : mise à la terre des masses + dispositif différentiel. Le courant de défaut part vers la terre et fait déclencher le différentiel avant qu'une personne ne touche l'appareil.",
-          "image": "contacts.png"
-        },
-        {
-          "id": "protections",
-          "titre": "Disjoncteur, différentiel, terre et bons réflexes",
-          "contenu": "Disjoncteur : coupe le circuit en cas de surcharge (trop d'appareils) ou de court-circuit. Il protège les câbles et l'installation contre l'échauffement et l'incendie. Il ne protège pas directement les personnes.\n\nDifférentiel 30 mA : compare le courant qui part par la phase et celui qui revient par le neutre. Si la différence atteint 30 mA (une fuite vers la terre, par exemple à travers une personne), il coupe en quelques millisecondes. C'est lui qui protège les personnes.\n\nMise à la terre : relie toutes les masses métalliques à la terre. En cas de défaut, le courant s'écoule vers la terre et fait déclencher le différentiel.\n\nBons réflexes :\n• Couper le courant au tableau avant toute intervention, puis vérifier l'absence de tension.\n• Ne jamais intervenir avec les mains mouillées ou les pieds dans l'eau.\n• Feu d'origine électrique : couper le courant, ne jamais utiliser d'eau, extincteur CO2 ou poudre.\n• Personne électrisée : couper le courant ou l'écarter avec un objet isolant (bois, plastique) avant de la toucher, puis appeler le 15 ou le 112.",
-          "image": "protections.png"
-        }
       ],
-      "questions": [
-        {
-          "id": "q401",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "À partir de quelle intensité environ une personne ne peut plus lâcher le conducteur qu'elle tient ?",
-          "reponses": [
-            "0,5 mA",
-            "10 mA",
-            "1 A",
-            "10 A"
-          ],
-          "bonne": 1,
-          "explication": "Vers 10 mA, les muscles se contractent : c'est le seuil de non-lâcher. 0,5 mA est le simple seuil de perception."
-        },
-        {
-          "id": "q402",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local sec ?",
-          "reponses": [
-            "12 V",
-            "25 V",
-            "50 V",
-            "230 V"
-          ],
-          "bonne": 2,
-          "explication": "50 V en alternatif dans un local sec, 25 V dans un local humide."
-        },
-        {
-          "id": "q403",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "Quel facteur augmente le danger d'une électrisation ?",
-          "reponses": [
-            "Le port de chaussures isolantes",
-            "L'humidité : mains mouillées, sol humide",
-            "Un contact très bref",
-            "Une faible tension"
-          ],
-          "bonne": 1,
-          "explication": "L'humidité diminue la résistance du corps : pour une même tension, le courant qui traverse le corps est plus élevé."
-        },
-        {
-          "id": "q404",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Toucher un fil dénudé sous tension est un…",
-          "reponses": [
-            "contact indirect",
-            "contact direct",
-            "court-circuit",
-            "défaut d'isolement"
-          ],
-          "bonne": 1,
-          "explication": "Le fil est normalement sous tension : c'est un contact direct."
-        },
-        {
-          "id": "q405",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Toucher la carcasse métallique d'un lave-linge mise sous tension par un défaut est un…",
-          "reponses": [
-            "contact direct",
-            "contact indirect",
-            "contact franc",
-            "arc électrique"
-          ],
-          "bonne": 1,
-          "explication": "La carcasse n'est pas censée être sous tension. Elle l'est à cause d'un défaut d'isolement : c'est un contact indirect."
-        },
-        {
-          "id": "q406",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Quelle protection est spécifiquement prévue contre les contacts indirects ?",
-          "reponses": [
-            "Le fusible",
-            "La mise à la terre des masses associée à un différentiel",
-            "L'interrupteur",
-            "La couleur des fils"
-          ],
-          "bonne": 1,
-          "explication": "La terre évacue le courant de défaut et le différentiel coupe le circuit avant qu'une personne ne touche la masse."
-        },
-        {
-          "id": "q407",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Quel est le rôle principal d'un disjoncteur non différentiel ?",
-          "reponses": [
-            "Protéger les personnes contre l'électrisation",
-            "Protéger l'installation contre les surcharges et les courts-circuits",
-            "Mesurer la consommation",
-            "Stabiliser la tension"
-          ],
-          "bonne": 1,
-          "explication": "Le disjoncteur protège les câbles et l'installation contre l'échauffement et l'incendie. Ce sont les différentiels qui protègent les personnes."
-        },
-        {
-          "id": "q408",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Un différentiel 30 mA coupe le circuit quand…",
-          "reponses": [
-            "le courant dépasse 16 A",
-            "la tension dépasse 230 V",
-            "il détecte une différence d'au moins 30 mA entre le courant qui part et celui qui revient",
-            "l'appareil est éteint"
-          ],
-          "bonne": 2,
-          "explication": "Une différence entre phase et neutre signifie qu'un courant fuit vers la terre, par exemple à travers une personne. Le différentiel coupe en quelques millisecondes."
-        },
-        {
-          "id": "q409",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Avant d'intervenir sur une prise, que faut-il faire ?",
-          "reponses": [
-            "Mettre des gants en tissu",
-            "Travailler vite",
-            "Couper le courant au tableau et vérifier l'absence de tension",
-            "Retirer seulement le fil de neutre"
-          ],
-          "bonne": 2,
-          "explication": "On coupe au tableau, puis on vérifie l'absence de tension avec un appareil adapté. On ne se fie jamais à l'interrupteur seul."
-        },
-        {
-          "id": "q410",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Une personne est en contact avec un conducteur sous tension. Que faire en premier ?",
-          "reponses": [
-            "La tirer par le bras",
-            "Lui jeter de l'eau",
-            "Couper le courant, ou l'écarter avec un objet isolant, avant de la toucher",
-            "Attendre qu'elle lâche"
-          ],
-          "bonne": 2,
-          "explication": "En la touchant directement, le sauveteur s'électrise à son tour. On coupe le courant ou on l'écarte avec un objet isolant, puis on appelle le 15 ou le 112."
-        },
-        {
-          "id": "q411",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "L'électrisation, c'est…",
-          "reponses": [
-            "un décès par électricité",
-            "le passage du courant dans le corps, avec ses effets",
-            "une brûlure par arc",
-            "un incendie"
-          ],
-          "bonne": 1,
-          "explication": "Électrisation : le courant traverse le corps. Électrocution : le décès qui peut en résulter."
-        },
-        {
-          "id": "q412",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "Quel trajet du courant dans le corps est le plus dangereux ?",
-          "reponses": [
-            "Pied à pied",
-            "Main à main, ou main à pied : le courant passe par le cœur",
-            "Doigt à doigt d'une même main",
-            "Aucun trajet n'est dangereux"
-          ],
-          "bonne": 1,
-          "explication": "Quand le trajet passe par le cœur, le risque de fibrillation est maximal."
-        },
-        {
-          "id": "q413",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local humide ?",
-          "reponses": [
-            "50 V",
-            "25 V",
-            "12 V",
-            "230 V"
-          ],
-          "bonne": 1,
-          "explication": "25 V en alternatif dans un local humide, contre 50 V en local sec."
-        },
-        {
-          "id": "q414",
-          "fiche_id": "dangers",
-          "type": "qcm",
-          "enonce": "En courant continu, la tension limite de sécurité en local sec est de…",
-          "reponses": [
-            "50 V",
-            "120 V",
-            "25 V",
-            "400 V"
-          ],
-          "bonne": 1,
-          "explication": "120 V en continu dans un local sec (60 V en local humide). Le continu est un peu moins dangereux que l'alternatif à tension égale."
-        },
-        {
-          "id": "q415",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Quelle mesure protège en premier contre les contacts directs ?",
-          "reponses": [
-            "Le différentiel seul",
-            "L'isolation des conducteurs et les capots",
-            "La mise à la terre",
-            "Le fusible"
-          ],
-          "bonne": 1,
-          "explication": "On empêche d'abord l'accès aux parties sous tension : isolation, capots, éloignement. Le différentiel 30 mA vient en complément."
-        },
-        {
-          "id": "q416",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Un appareil de classe II (double isolation, symbole du carré dans un carré)…",
-          "reponses": [
-            "doit être relié à la terre",
-            "n'a pas besoin de conducteur de terre",
-            "fonctionne en 12 V",
-            "est interdit en salle de bains"
-          ],
-          "bonne": 1,
-          "explication": "La double isolation remplace la terre : sa fiche n'a pas de broche de terre."
-        },
-        {
-          "id": "q417",
-          "fiche_id": "contacts",
-          "type": "qcm",
-          "enonce": "Un appareil de classe I…",
-          "reponses": [
-            "a sa carcasse métallique reliée à la terre",
-            "n'a pas de terre",
-            "fonctionne uniquement en continu",
-            "est à double isolation"
-          ],
-          "bonne": 0,
-          "explication": "Classe I : les masses sont reliées à la terre. En cas de défaut, le différentiel coupe."
-        },
-        {
-          "id": "q418",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Le bouton « test » d'un différentiel sert à…",
-          "reponses": [
-            "couper le courant en cas d'urgence",
-            "vérifier qu'il déclenche bien, à faire régulièrement",
-            "le réarmer",
-            "mesurer la fuite"
-          ],
-          "bonne": 1,
-          "explication": "Le bouton simule une fuite : le différentiel doit couper. On le teste par exemple une fois par mois."
-        },
-        {
-          "id": "q419",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Un différentiel déclenche sans raison apparente. Que faire ?",
-          "reponses": [
-            "Le shunter",
-            "Chercher le défaut, par exemple un appareil en fuite, et ne jamais le neutraliser",
-            "Le remplacer par un fusible",
-            "Augmenter son calibre"
-          ],
-          "bonne": 1,
-          "explication": "Un déclenchement signale une fuite vers la terre. On isole les appareils un par un pour trouver le coupable."
-        },
-        {
-          "id": "q420",
-          "fiche_id": "protections",
-          "type": "qcm",
-          "enonce": "Quel extincteur pour un feu d'origine électrique ?",
-          "reponses": [
-            "À eau",
-            "À mousse",
-            "Au CO2 (ou à poudre)",
-            "Un seau de sable uniquement"
-          ],
-          "bonne": 2,
-          "explication": "Jamais d'eau sur un feu électrique. On coupe le courant et on utilise du CO2 ou de la poudre."
-        }
-      ]
-    },
-    {
-      "id": "mesures",
-      "titre": "Mesures et appareils",
-      "ordre": 6,
-      "fiches": [
-        {
-          "id": "multimetre",
-          "titre": "Le multimètre",
-          "image": "multimetre.png",
-          "contenu": "Le multimètre regroupe plusieurs appareils : voltmètre (tension), ampèremètre (intensité), ohmmètre (résistance) et testeur de continuité.\n\nLe sélecteur choisit la fonction : V~ pour une tension alternative, V⎓ pour une tension continue, Ω pour une résistance, A pour une intensité.\n\nLes bornes : COM (cordon noir) est la référence. Le cordon rouge va dans V/Ω pour la tension et la résistance, ou dans la borne A (souvent 10 A) pour l'intensité.\n\nLe calibre : quand on ne connaît pas la valeur, on part du calibre le plus grand et on descend. Les appareils « autorange » choisissent seuls."
-        },
-        {
-          "id": "mesurer",
-          "titre": "Mesurer une tension, un courant, une résistance",
-          "image": "mesurer.png",
-          "contenu": "Tension : le voltmètre se branche en parallèle, entre les deux points à mesurer, circuit sous tension. C'est la mesure la plus courante et la moins risquée pour l'appareil.\n\nIntensité : l'ampèremètre se branche en série, il faut donc ouvrir le circuit pour l'insérer. La pince ampèremétrique évite cette contrainte : on la ferme autour d'un seul conducteur. Autour du câble entier (phase + neutre), les deux courants s'annulent et la pince lit zéro.\n\nRésistance et continuité : toujours hors tension, composant isolé du reste du circuit. En mode continuité, un bip signifie que la liaison est bonne (fil non coupé, contact fermé)."
-        },
-        {
-          "id": "vat",
-          "titre": "Le VAT : vérificateur d'absence de tension",
-          "image": "vat.png",
-          "contenu": "Avant de travailler hors tension, la norme NF C 18-510 impose de vérifier l'absence de tension avec un VAT, un appareil conçu uniquement pour cela.\n\nUn multimètre ne remplace pas un VAT : mauvais calibre, pile faible ou cordon abîmé peuvent afficher « 0 V » à tort.\n\nLa méthode : on teste le VAT sur une source sous tension connue, on vérifie l'ouvrage (entre chaque phase et le neutre, entre phases, entre chaque conducteur et la terre), puis on reteste le VAT sur la source connue. Si le VAT a lâché pendant la mesure, ce second test le révèle."
-        }
-      ],
-      "questions": [
-        {
-          "id": "q501",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "Sur un multimètre, dans quelle borne branche-t-on le cordon noir ?",
-          "reponses": [
-            "V/Ω",
-            "COM",
-            "A",
-            "mA"
-          ],
-          "bonne": 1,
-          "explication": "Le cordon noir va toujours dans la borne COM (commun), la référence de toutes les mesures."
-        },
-        {
-          "id": "q502",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "Quelle position du sélecteur pour mesurer la tension d'une prise domestique ?",
-          "reponses": [
-            "V⎓ (continu)",
-            "V~ (alternatif)",
-            "Ω",
-            "A"
-          ],
-          "bonne": 1,
-          "explication": "Le réseau est en alternatif : on choisit V~. En V⎓, l'appareil afficherait une valeur fausse ou nulle."
-        },
-        {
-          "id": "q503",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "On ne connaît pas la valeur à mesurer. Quel calibre choisir au départ ?",
-          "reponses": [
-            "Le plus grand, puis on descend",
-            "Le plus petit",
-            "N'importe lequel",
-            "Le calibre Ω"
-          ],
-          "bonne": 0,
-          "explication": "Partir du calibre le plus grand évite de dépasser la capacité de l'appareil. On descend ensuite pour gagner en précision."
-        },
-        {
-          "id": "q504",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Comment mesure-t-on l'intensité avec un multimètre classique ?",
-          "reponses": [
-            "En parallèle, sans toucher au circuit",
-            "En série, en ouvrant le circuit",
-            "Entre phase et terre",
-            "Hors tension"
-          ],
-          "bonne": 1,
-          "explication": "Le courant doit traverser l'appareil : on ouvre le circuit et on insère l'ampèremètre en série."
-        },
-        {
-          "id": "q505",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Avec une pince ampèremétrique, autour de quoi ferme-t-on la pince ?",
-          "reponses": [
-            "Du câble entier (phase + neutre)",
-            "D'un seul conducteur",
-            "De la prise",
-            "Du disjoncteur"
-          ],
-          "bonne": 1,
-          "explication": "Autour du câble entier, le courant de phase et celui du neutre s'annulent : la pince lit zéro. On isole un seul conducteur."
-        },
-        {
-          "id": "q506",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Pour mesurer une résistance à l'ohmmètre, le circuit doit être…",
-          "reponses": [
-            "sous tension",
-            "hors tension et le composant isolé",
-            "en court-circuit",
-            "relié à la terre"
-          ],
-          "bonne": 1,
-          "explication": "L'ohmmètre envoie son propre petit courant. Sous tension, la mesure est fausse et l'appareil peut être détruit."
-        },
-        {
-          "id": "q507",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "En mode continuité, le multimètre émet un bip. Cela signifie…",
-          "reponses": [
-            "qu'il y a une tension",
-            "que la liaison est bonne, le courant peut passer",
-            "que le fil est coupé",
-            "que la pile est faible"
-          ],
-          "bonne": 1,
-          "explication": "Le bip indique une résistance quasi nulle : le fil n'est pas coupé, le contact est fermé."
-        },
-        {
-          "id": "q508",
-          "fiche_id": "vat",
-          "type": "qcm",
-          "enonce": "Que signifie VAT ?",
-          "reponses": [
-            "Voltmètre À Tension",
-            "Vérificateur d'Absence de Tension",
-            "Vérification Avant Travaux",
-            "Valeur Alternative de Tension"
-          ],
-          "bonne": 1,
-          "explication": "Le VAT est l'appareil dédié à la vérification d'absence de tension avant travaux hors tension."
-        },
-        {
-          "id": "q509",
-          "fiche_id": "vat",
-          "type": "qcm",
-          "enonce": "Avant et après une vérification d'absence de tension, on doit…",
-          "reponses": [
-            "changer les piles",
-            "tester le VAT sur une source sous tension connue",
-            "le laisser reposer",
-            "l'envoyer en étalonnage"
-          ],
-          "bonne": 1,
-          "explication": "Un VAT en panne afficherait « pas de tension » à tort. On le teste avant, et après pour s'assurer qu'il n'a pas lâché entre-temps."
-        },
-        {
-          "id": "q510",
-          "fiche_id": "vat",
-          "type": "qcm",
-          "enonce": "Peut-on utiliser un multimètre à la place d'un VAT pour vérifier l'absence de tension ?",
-          "reponses": [
-            "Oui, c'est équivalent",
-            "Oui, si le calibre est bon",
-            "Non, seul un VAT conforme est prévu pour cela",
-            "Oui, en continu seulement"
-          ],
-          "bonne": 2,
-          "explication": "Le multimètre n'est pas conçu pour cet usage : mauvais calibre, pile faible ou cordon abîmé peuvent tromper. La norme impose un VAT."
-        },
-        {
-          "id": "q511",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "Dans quelle borne va le cordon rouge pour mesurer 5 A ?",
-          "reponses": [
-            "COM",
-            "V/Ω",
-            "A (calibre 10 A)",
-            "mA uniquement"
-          ],
-          "bonne": 2,
-          "explication": "Les fortes intensités passent par la borne A, souvent 10 A, protégée par un fusible interne."
-        },
-        {
-          "id": "q512",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "En mesure de résistance, le multimètre affiche « OL » ou « 1 ». Cela signifie…",
-          "reponses": [
-            "résistance nulle",
-            "résistance infinie : circuit ouvert ou hors calibre",
-            "pile faible",
-            "court-circuit"
-          ],
-          "bonne": 1,
-          "explication": "OL = overload, dépassement : la résistance est trop grande pour le calibre, ou le circuit est ouvert."
-        },
-        {
-          "id": "q513",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "Mesurer une tension de 230 V avec le sélecteur sur Ω…",
-          "reponses": [
-            "donne la bonne valeur",
-            "peut détruire l'appareil",
-            "affiche 0",
-            "est sans risque"
-          ],
-          "bonne": 1,
-          "explication": "En mode Ω, l'appareil injecte un petit courant et n'est pas prévu pour recevoir 230 V : risque de destruction."
-        },
-        {
-          "id": "q514",
-          "fiche_id": "multimetre",
-          "type": "qcm",
-          "enonce": "Le calibre 200 mA est réglé et on mesure 3 A. Conséquence ?",
-          "reponses": [
-            "Rien",
-            "Le fusible interne grille, ou l'appareil est endommagé",
-            "La valeur est juste",
-            "L'appareil s'éteint"
-          ],
-          "bonne": 1,
-          "explication": "Le calibre mA a un fusible faible : 3 A le font griller. D'où la règle du grand calibre d'abord."
-        },
-        {
-          "id": "q515",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Pour mesurer la tension d'une pile, on place les pointes…",
-          "reponses": [
-            "en série avec la pile",
-            "sur les deux bornes de la pile, en parallèle",
-            "sur une seule borne",
-            "sur la terre"
-          ],
-          "bonne": 1,
-          "explication": "La tension se mesure entre deux points : la borne + et la borne −."
-        },
-        {
-          "id": "q516",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "On veut vérifier qu'un fusible est bon, hors tension. Quel mode ?",
-          "reponses": [
-            "V~",
-            "A",
-            "Continuité (bip) ou Ω",
-            "Hz"
-          ],
-          "bonne": 2,
-          "explication": "Un fusible bon a une résistance quasi nulle : bip en continuité. Coupé : OL."
-        },
-        {
-          "id": "q517",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Pour mesurer le courant d'un appareil avec une pince ampèremétrique, on l'enserre autour…",
-          "reponses": [
-            "du cordon entier",
-            "d'un seul fil, la phase par exemple",
-            "de la prise",
-            "de la terre"
-          ],
-          "bonne": 1,
-          "explication": "Il faut isoler un conducteur. Un cordon adaptateur permet de séparer la phase sans ouvrir le câble."
-        },
-        {
-          "id": "q518",
-          "fiche_id": "mesurer",
-          "type": "qcm",
-          "enonce": "Un voltmètre branché par erreur en série dans un circuit…",
-          "reponses": [
-            "mesure l'intensité",
-            "a une résistance très grande : le circuit ne fonctionne plus et il affiche la tension de la source",
-            "grille",
-            "mesure la puissance"
-          ],
-          "bonne": 1,
-          "explication": "Le voltmètre est conçu pour ne laisser passer presque aucun courant. En série, il bloque le circuit."
-        },
-        {
-          "id": "q519",
-          "fiche_id": "vat",
-          "type": "qcm",
-          "enonce": "Le VAT doit être vérifié sur une source connue…",
-          "reponses": [
-            "une fois par an",
-            "avant et après chaque vérification d'absence de tension",
-            "seulement avant",
-            "jamais"
-          ],
-          "bonne": 1,
-          "explication": "Avant, pour être sûr qu'il fonctionne. Après, pour être sûr qu'il n'a pas lâché pendant la mesure."
-        },
-        {
-          "id": "q520",
-          "fiche_id": "vat",
-          "type": "qcm",
-          "enonce": "Sur une installation triphasée, la vérification d'absence de tension se fait…",
-          "reponses": [
-            "sur une phase seulement",
-            "entre chaque phase et le neutre, entre phases, et entre chaque conducteur et la terre",
-            "sur le neutre seulement",
-            "sur la terre seulement"
-          ],
-          "bonne": 1,
-          "explication": "Tous les conducteurs actifs sont vérifiés, entre eux et par rapport à la terre."
-        }
-      ]
-    },
-    {
-      "id": "installation",
-      "titre": "Installation domestique",
-      "ordre": 7,
-      "fiches": [
-        {
-          "id": "tableau",
-          "titre": "Le tableau électrique",
-          "image": "tableau.png",
-          "contenu": "Le tableau est le point de départ de tous les circuits de la maison. De haut en bas, en général :\n\n• Le disjoncteur de branchement (près du compteur) : coupe toute l'installation et limite la puissance souscrite.\n• Les interrupteurs différentiels 30 mA : protègent les personnes. Il en faut au moins deux, dont un de type A pour la plaque de cuisson et le lave-linge.\n• Les disjoncteurs divisionnaires : un par circuit, calibrés selon la section du câble. Ils protègent le câble, pas l'appareil.\n• Le bornier de terre : rassemble tous les conducteurs vert/jaune et les relie à la prise de terre."
-        },
-        {
-          "id": "sections",
-          "titre": "Sections de câbles et calibres",
-          "image": "sections.png",
-          "contenu": "Plus un câble est gros (section en mm²), plus il supporte de courant sans chauffer. Le disjoncteur doit être choisi pour protéger le câble.\n\nRègles courantes (NF C 15-100) :\n• Éclairage : 1,5 mm², disjoncteur 16 A maximum, 8 points lumineux maximum.\n• Prises : 2,5 mm² avec disjoncteur 20 A (12 prises max), ou 1,5 mm² avec 16 A (8 prises max).\n• Circuits spécialisés (lave-linge, four, lave-vaisselle) : 2,5 mm², disjoncteur 20 A, une seule prise par circuit.\n• Plaque de cuisson : 6 mm², disjoncteur 32 A.\n\nÀ retenir : un disjoncteur trop gros sur un câble trop fin laisse le câble chauffer, c'est un risque d'incendie."
-        },
-        {
-          "id": "salle_de_bain",
-          "titre": "Salle de bains et locaux humides",
-          "image": "salle_de_bain.png",
-          "contenu": "L'eau rend l'électricité beaucoup plus dangereuse. La norme découpe la salle de bains en volumes autour de la baignoire ou de la douche :\n\n• Volume 0 : l'intérieur de la baignoire ou du receveur. Aucun appareil.\n• Volume 1 : au-dessus, jusqu'à 2,25 m. Seulement des appareils en très basse tension de sécurité (TBTS 12 V).\n• Volume 2 : 60 cm autour du volume 1. Appareils protégés contre les projections (IPX4), classe II.\n• Hors volumes : prises et appareils classiques autorisés.\n\nIndice de protection IP : le premier chiffre concerne les solides (poussière), le second l'eau. IPX4 = protégé contre les projections d'eau.\n\nLiaison équipotentielle : toutes les masses métalliques (canalisations, radiateur, baignoire métallique) sont reliées entre elles et à la terre, pour qu'aucune différence de tension ne puisse apparaître entre deux objets qu'on touche."
-        }
-      ],
-      "questions": [
-        {
-          "id": "q601",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Dans un tableau, quel appareil placé en amont des disjoncteurs divisionnaires protège les personnes ?",
-          "reponses": [
-            "Le compteur",
-            "L'interrupteur différentiel 30 mA",
-            "Le parafoudre",
-            "Le bornier de terre"
-          ],
-          "bonne": 1,
-          "explication": "L'interrupteur différentiel 30 mA détecte les fuites de courant vers la terre et coupe : c'est lui qui protège les personnes."
-        },
-        {
-          "id": "q602",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "À quoi sert le bornier de terre du tableau ?",
-          "reponses": [
-            "À alimenter les prises",
-            "À relier tous les conducteurs de terre à la prise de terre",
-            "À couper le courant",
-            "À mesurer la consommation"
-          ],
-          "bonne": 1,
-          "explication": "Tous les fils vert/jaune de l'installation y aboutissent, et le bornier est relié à la prise de terre du bâtiment."
-        },
-        {
-          "id": "q603",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Le disjoncteur divisionnaire d'un circuit protège avant tout…",
-          "reponses": [
-            "l'appareil branché",
-            "les personnes",
-            "le câble du circuit",
-            "le compteur"
-          ],
-          "bonne": 2,
-          "explication": "Le disjoncteur est calibré selon la section du câble : il le protège contre l'échauffement en cas de surcharge ou de court-circuit."
-        },
-        {
-          "id": "q604",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Quelle section de câble pour un circuit d'éclairage ?",
-          "reponses": [
-            "1,5 mm²",
-            "2,5 mm²",
-            "6 mm²",
-            "10 mm²"
-          ],
-          "bonne": 0,
-          "explication": "L'éclairage se câble en 1,5 mm², protégé par un disjoncteur de 16 A maximum."
-        },
-        {
-          "id": "q605",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Quelle section de câble pour une plaque de cuisson protégée par un disjoncteur 32 A ?",
-          "reponses": [
-            "1,5 mm²",
-            "2,5 mm²",
-            "6 mm²",
-            "0,75 mm²"
-          ],
-          "bonne": 2,
-          "explication": "La plaque de cuisson appelle un fort courant : 6 mm² et disjoncteur 32 A."
-        },
-        {
-          "id": "q606",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Un circuit spécialisé pour un lave-linge se câble en…",
-          "reponses": [
-            "1,5 mm² avec un disjoncteur 10 A",
-            "2,5 mm² avec un disjoncteur 20 A",
-            "6 mm² avec un disjoncteur 32 A",
-            "0,75 mm² avec un fusible"
-          ],
-          "bonne": 1,
-          "explication": "Les circuits spécialisés (lave-linge, four, lave-vaisselle) sont en 2,5 mm² sous 20 A, avec une seule prise par circuit."
-        },
-        {
-          "id": "q607",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Si on augmente la section d'un câble, le courant qu'il peut supporter…",
-          "reponses": [
-            "diminue",
-            "augmente",
-            "ne change pas",
-            "devient nul"
-          ],
-          "bonne": 1,
-          "explication": "Un câble plus gros a moins de résistance et chauffe moins : il supporte plus de courant."
-        },
-        {
-          "id": "q608",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "Dans le volume 1 d'une salle de bains (au-dessus de la baignoire), que peut-on installer ?",
-          "reponses": [
-            "Une prise 230 V",
-            "Un radiateur classique",
-            "Uniquement des appareils en très basse tension de sécurité 12 V",
-            "Une lampe 230 V classique"
-          ],
-          "bonne": 2,
-          "explication": "Le volume 1 n'accepte que la très basse tension de sécurité (TBTS 12 V). Les prises 230 V sont interdites dans les volumes."
-        },
-        {
-          "id": "q609",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "Que signifie IPX4 sur un luminaire ?",
-          "reponses": [
-            "Résiste à la poussière",
-            "Protégé contre les projections d'eau",
-            "Fonctionne sous l'eau",
-            "Alimenté en 12 V"
-          ],
-          "bonne": 1,
-          "explication": "Le second chiffre de l'indice IP concerne l'eau : 4 = protégé contre les projections de toutes directions."
-        },
-        {
-          "id": "q610",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "À quoi sert la liaison équipotentielle d'une salle de bains ?",
-          "reponses": [
-            "À chauffer le sol",
-            "À relier toutes les masses métalliques à la terre pour éviter une différence de tension",
-            "À alimenter le sèche-serviettes",
-            "À isoler la baignoire"
-          ],
-          "bonne": 1,
-          "explication": "Si toutes les masses sont au même potentiel, toucher deux objets métalliques en même temps ne peut pas créer de courant à travers le corps."
-        },
-        {
-          "id": "q611",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Combien d'interrupteurs différentiels 30 mA au minimum dans un logement ?",
-          "reponses": [
-            "1",
-            "2",
-            "4",
-            "Aucun si on a des disjoncteurs"
-          ],
-          "bonne": 1,
-          "explication": "Au moins deux, pour répartir les circuits : si l'un déclenche, tout le logement n'est pas dans le noir."
-        },
-        {
-          "id": "q612",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Un interrupteur différentiel de type A est obligatoire pour…",
-          "reponses": [
-            "l'éclairage",
-            "la plaque de cuisson et le lave-linge",
-            "les prises du salon",
-            "la sonnette"
-          ],
-          "bonne": 1,
-          "explication": "Ces appareils peuvent créer des courants de défaut avec une composante continue, que seul le type A détecte."
-        },
-        {
-          "id": "q613",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Le disjoncteur de branchement est réglé sur…",
-          "reponses": [
-            "10 A",
-            "la puissance souscrite, par exemple 30 A pour 6 kVA",
-            "100 A toujours",
-            "63 A toujours"
-          ],
-          "bonne": 1,
-          "explication": "Le fournisseur le règle selon l'abonnement : 6 kVA en monophasé correspond à 30 A."
-        },
-        {
-          "id": "q614",
-          "fiche_id": "tableau",
-          "type": "qcm",
-          "enonce": "Le parafoudre protège…",
-          "reponses": [
-            "les personnes",
-            "l'installation et les appareils contre les surtensions, notamment la foudre",
-            "contre les surcharges",
-            "contre les fuites de courant"
-          ],
-          "bonne": 1,
-          "explication": "Il écoule les surtensions vers la terre avant qu'elles n'abîment les appareils électroniques."
-        },
-        {
-          "id": "q615",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Un circuit de prises en 1,5 mm² se protège par un disjoncteur de…",
-          "reponses": [
-            "10 A",
-            "16 A",
-            "20 A",
-            "32 A"
-          ],
-          "bonne": 1,
-          "explication": "1,5 mm² → 16 A maximum, 8 prises maximum. Pour 20 A, il faut du 2,5 mm²."
-        },
-        {
-          "id": "q616",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Combien de points lumineux au maximum sur un circuit d'éclairage ?",
-          "reponses": [
-            "4",
-            "8",
-            "12",
-            "20"
-          ],
-          "bonne": 1,
-          "explication": "8 points lumineux maximum par circuit d'éclairage."
-        },
-        {
-          "id": "q617",
-          "fiche_id": "sections",
-          "type": "qcm",
-          "enonce": "Un câble de 2,5 mm² protégé par un disjoncteur 32 A, c'est…",
-          "reponses": [
-            "correct",
-            "dangereux : le câble peut chauffer sans que le disjoncteur coupe",
-            "obligatoire pour un four",
-            "sans importance"
-          ],
-          "bonne": 1,
-          "explication": "Le disjoncteur doit être adapté au câble. 32 A demande du 6 mm²."
-        },
-        {
-          "id": "q618",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "Un sèche-serviettes classe II IPX4 peut être installé…",
-          "reponses": [
-            "dans le volume 0",
-            "dans le volume 1",
-            "dans le volume 2 ou hors volumes",
-            "nulle part en salle de bains"
-          ],
-          "bonne": 2,
-          "explication": "IPX4 et classe II sont les conditions du volume 2. Volume 1 : TBTS 12 V seulement."
-        },
-        {
-          "id": "q619",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "Un luminaire IP20 est adapté…",
-          "reponses": [
-            "dans la douche",
-            "dans le volume 2",
-            "hors volumes, dans une pièce sèche",
-            "en extérieur"
-          ],
-          "bonne": 2,
-          "explication": "Le 0 en second chiffre signifie aucune protection contre l'eau : pièces sèches uniquement."
-        },
-        {
-          "id": "q620",
-          "fiche_id": "salle_de_bain",
-          "type": "qcm",
-          "enonce": "IP44 signifie…",
-          "reponses": [
-            "étanche à l'immersion",
-            "protégé contre les corps solides de plus de 1 mm et contre les projections d'eau",
-            "non protégé",
-            "protégé contre les solides uniquement"
-          ],
-          "bonne": 1,
-          "explication": "Premier 4 : solides > 1 mm. Second 4 : projections d'eau de toutes directions."
-        }
-      ]
+      "theme": "Les bases"
     },
     {
       "id": "energie",
       "titre": "Énergie et consommation",
-      "ordre": 8,
+      "ordre": 5,
       "fiches": [
         {
           "id": "energie",
@@ -2454,12 +1537,1859 @@
           "bonne": 1,
           "explication": "La prise-compteur s'intercale entre la prise et l'appareil et affiche les watts et les kWh cumulés."
         }
-      ]
+      ],
+      "theme": "Les bases"
+    },
+    {
+      "id": "moteurs",
+      "titre": "Moteurs et transformateurs",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "principe_moteur",
+          "titre": "Le moteur électrique",
+          "contenu": "Un moteur transforme l'énergie électrique en énergie mécanique grâce au magnétisme : un conducteur parcouru par un courant, placé dans un champ magnétique, subit une force.\n\nDeux parties : le stator (fixe) et le rotor (tournant).\n\nLe moteur asynchrone triphasé est le plus répandu dans l'industrie : robuste, sans balais, peu d'entretien. Le moteur à courant continu se règle facilement en vitesse mais use ses balais.\n\nLa plaque signalétique indique la tension, le courant, la puissance, la vitesse en tours par minute (tr/min) et le facteur de puissance cos φ.",
+          "image": "principe_moteur.png"
+        },
+        {
+          "id": "demarrage",
+          "titre": "Démarrage et protection des moteurs",
+          "contenu": "Au démarrage, un moteur asynchrone appelle 5 à 8 fois son courant nominal pendant quelques secondes.\n\nProtection : un disjoncteur moteur (magnéto-thermique) contre les courts-circuits, et un relais thermique contre les surcharges (échauffement).\n\nCommande : un contacteur, piloté par des boutons Marche / Arrêt, avec un contact d'auto-maintien qui garde la bobine alimentée une fois le bouton relâché.\n\nCouplage : un moteur marqué 230 / 400 V se couple en étoile sur un réseau 400 V entre phases, en triangle sur 230 V. Le démarrage étoile-triangle réduit le courant de démarrage. Pour inverser le sens : permuter deux phases. Un variateur fait varier la vitesse en changeant la fréquence.",
+          "image": "demarrage.png"
+        },
+        {
+          "id": "transformateur",
+          "titre": "Le transformateur",
+          "contenu": "Deux bobinages, le primaire et le secondaire, sur un noyau de fer. Il ne fonctionne qu'en alternatif.\n\nRapport de transformation : m = U2 / U1 = N2 / N1 (N = nombre de spires). Si m < 1, il est abaisseur ; si m > 1, élévateur.\n\nLa puissance est conservée (aux pertes près) : U1 × I1 ≈ U2 × I2. Quand la tension baisse, le courant monte d'autant.\n\nTransformateur de séparation (isolement) : le secondaire n'est plus lié à la terre, un contact avec un seul conducteur ne fait pas circuler de courant (prise rasoir). Transformateur de sécurité : fournit la TBTS 12 V ou 24 V.",
+          "image": "transformateur.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q901",
+          "fiche_id": "principe_moteur",
+          "type": "qcm",
+          "enonce": "Un moteur électrique transforme…",
+          "reponses": [
+            "l'énergie mécanique en électricité",
+            "l'énergie électrique en énergie mécanique",
+            "la chaleur en électricité",
+            "la lumière en mouvement"
+          ],
+          "bonne": 1,
+          "explication": "C'est l'inverse d'un alternateur : le moteur reçoit de l'électricité et produit un mouvement."
+        },
+        {
+          "id": "q902",
+          "fiche_id": "principe_moteur",
+          "type": "qcm",
+          "enonce": "La partie fixe d'un moteur s'appelle…",
+          "reponses": [
+            "le rotor",
+            "le stator",
+            "le collecteur",
+            "l'arbre"
+          ],
+          "bonne": 1,
+          "explication": "Stator = statique (fixe). Rotor = rotation (tournant)."
+        },
+        {
+          "id": "q903",
+          "fiche_id": "principe_moteur",
+          "type": "qcm",
+          "enonce": "La partie tournante d'un moteur s'appelle…",
+          "reponses": [
+            "le rotor",
+            "le stator",
+            "la carcasse",
+            "le bobinage fixe"
+          ],
+          "bonne": 0,
+          "explication": "Le rotor entraîne l'arbre de sortie."
+        },
+        {
+          "id": "q904",
+          "fiche_id": "principe_moteur",
+          "type": "qcm",
+          "enonce": "Le moteur le plus répandu dans l'industrie est…",
+          "reponses": [
+            "le moteur à courant continu à balais",
+            "le moteur asynchrone triphasé",
+            "le moteur pas à pas",
+            "le moteur universel"
+          ],
+          "bonne": 1,
+          "explication": "Robuste, simple, sans balais : l'asynchrone triphasé équipe pompes, ventilateurs, convoyeurs…"
+        },
+        {
+          "id": "q905",
+          "fiche_id": "principe_moteur",
+          "type": "qcm",
+          "enonce": "Sur une plaque signalétique, « 1 450 tr/min » indique…",
+          "reponses": [
+            "le courant",
+            "la vitesse de rotation",
+            "la puissance",
+            "la tension"
+          ],
+          "bonne": 1,
+          "explication": "tr/min = tours par minute. Un moteur asynchrone 4 pôles à 50 Hz tourne un peu sous 1 500 tr/min."
+        },
+        {
+          "id": "q906",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Le courant de démarrage d'un moteur asynchrone vaut environ…",
+          "reponses": [
+            "la moitié du courant nominal",
+            "le courant nominal",
+            "5 à 8 fois le courant nominal",
+            "100 fois le courant nominal"
+          ],
+          "bonne": 2,
+          "explication": "D'où la nécessité de protections adaptées et, pour les gros moteurs, d'un démarrage étoile-triangle ou d'un variateur."
+        },
+        {
+          "id": "q907",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Le relais thermique protège le moteur contre…",
+          "reponses": [
+            "les courts-circuits",
+            "les surcharges (échauffement)",
+            "la foudre",
+            "les fuites à la terre"
+          ],
+          "bonne": 1,
+          "explication": "Il mesure le courant dans le temps : un moteur qui force trop longtemps est arrêté avant de griller."
+        },
+        {
+          "id": "q908",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Le contacteur sert à…",
+          "reponses": [
+            "mesurer le courant",
+            "établir ou couper l'alimentation du moteur à distance, via des boutons",
+            "régler la vitesse",
+            "protéger contre les surcharges"
+          ],
+          "bonne": 1,
+          "explication": "Sa bobine, alimentée par le circuit de commande, ferme les contacts de puissance."
+        },
+        {
+          "id": "q909",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Un moteur 230 / 400 V sur un réseau 400 V entre phases se couple en…",
+          "reponses": [
+            "triangle",
+            "étoile",
+            "série",
+            "parallèle"
+          ],
+          "bonne": 1,
+          "explication": "En étoile, chaque enroulement voit 230 V (400 / √3). En triangle, il verrait 400 V : trop."
+        },
+        {
+          "id": "q910",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Le démarrage étoile-triangle sert à…",
+          "reponses": [
+            "augmenter la vitesse",
+            "réduire le courant de démarrage",
+            "inverser le sens de rotation",
+            "protéger contre la foudre"
+          ],
+          "bonne": 1,
+          "explication": "On démarre en étoile (courant divisé par 3), puis on passe en triangle une fois lancé."
+        },
+        {
+          "id": "q911",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Pour inverser le sens de rotation d'un moteur asynchrone triphasé…",
+          "reponses": [
+            "on inverse les trois phases",
+            "on permute deux phases",
+            "on change le neutre",
+            "on inverse + et −"
+          ],
+          "bonne": 1,
+          "explication": "Permuter deux phases inverse le sens du champ tournant, donc du rotor."
+        },
+        {
+          "id": "q912",
+          "fiche_id": "demarrage",
+          "type": "qcm",
+          "enonce": "Un variateur de vitesse fait varier…",
+          "reponses": [
+            "la tension seulement",
+            "la fréquence (et la tension)",
+            "la résistance",
+            "le couplage"
+          ],
+          "bonne": 1,
+          "explication": "La vitesse d'un asynchrone dépend de la fréquence : le variateur la fait varier de 0 à 50 Hz et plus."
+        },
+        {
+          "id": "q913",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Un transformateur fonctionne…",
+          "reponses": [
+            "en continu",
+            "uniquement en alternatif",
+            "en continu et en alternatif",
+            "sans tension"
+          ],
+          "bonne": 1,
+          "explication": "Il faut un champ magnétique variable pour induire une tension au secondaire : seul l'alternatif le permet."
+        },
+        {
+          "id": "q914",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Un transformateur 230 V / 12 V est…",
+          "reponses": [
+            "élévateur",
+            "abaisseur",
+            "d'isolement",
+            "de mesure"
+          ],
+          "bonne": 1,
+          "explication": "La tension au secondaire (12 V) est plus faible qu'au primaire (230 V)."
+        },
+        {
+          "id": "q915",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Primaire 1 000 spires, secondaire 100 spires, 230 V au primaire. Tension au secondaire ?",
+          "reponses": [
+            "2 300 V",
+            "23 V",
+            "230 V",
+            "2,3 V"
+          ],
+          "bonne": 1,
+          "explication": "m = 100 / 1 000 = 0,1 → U2 = 230 × 0,1 = 23 V."
+        },
+        {
+          "id": "q916",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Dans un transformateur idéal, si la tension est divisée par 10, le courant est…",
+          "reponses": [
+            "divisé par 10",
+            "multiplié par 10",
+            "inchangé",
+            "nul"
+          ],
+          "bonne": 1,
+          "explication": "La puissance est conservée : U × I reste le même, donc I est multiplié par 10."
+        },
+        {
+          "id": "q917",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Le transformateur de séparation (isolement) sert à…",
+          "reponses": [
+            "élever la tension",
+            "isoler l'utilisateur du réseau : le secondaire n'est plus lié à la terre",
+            "mesurer le courant",
+            "réduire la fréquence"
+          ],
+          "bonne": 1,
+          "explication": "Toucher un seul conducteur du secondaire ne fait pas circuler de courant par la terre. C'est le principe de la prise rasoir."
+        },
+        {
+          "id": "q918",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "La TBTS 12 V d'une salle de bains est produite par…",
+          "reponses": [
+            "un redresseur",
+            "un transformateur de sécurité",
+            "une pile",
+            "un onduleur"
+          ],
+          "bonne": 1,
+          "explication": "Le transformateur de sécurité isole et abaisse à 12 V : aucun danger même en cas de contact."
+        },
+        {
+          "id": "q919",
+          "fiche_id": "transformateur",
+          "type": "qcm",
+          "enonce": "Le rapport de transformation m vaut…",
+          "reponses": [
+            "U1 / U2",
+            "U2 / U1 = N2 / N1",
+            "N1 × N2",
+            "I2 / U2"
+          ],
+          "bonne": 1,
+          "explication": "Le rapport des tensions est égal au rapport des nombres de spires."
+        },
+        {
+          "id": "q920",
+          "fiche_id": "demarrage",
+          "type": "ordre",
+          "enonce": "Démarrage d'un moteur par contacteur : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Appui sur le bouton Marche",
+            "La bobine du contacteur est alimentée",
+            "Les contacts de puissance et d'auto-maintien se ferment",
+            "Le moteur tourne, même bouton relâché"
+          ],
+          "explication": "Le contact d'auto-maintien garde la bobine alimentée : c'est le bouton Arrêt qui coupera."
+        }
+      ],
+      "ordre": 6
+    },
+    {
+      "id": "mesures",
+      "titre": "Mesures et appareils",
+      "ordre": 7,
+      "fiches": [
+        {
+          "id": "multimetre",
+          "titre": "Le multimètre",
+          "image": "multimetre.png",
+          "contenu": "Le multimètre regroupe plusieurs appareils : voltmètre (tension), ampèremètre (intensité), ohmmètre (résistance) et testeur de continuité.\n\nLe sélecteur choisit la fonction : V~ pour une tension alternative, V⎓ pour une tension continue, Ω pour une résistance, A pour une intensité.\n\nLes bornes : COM (cordon noir) est la référence. Le cordon rouge va dans V/Ω pour la tension et la résistance, ou dans la borne A (souvent 10 A) pour l'intensité.\n\nLe calibre : quand on ne connaît pas la valeur, on part du calibre le plus grand et on descend. Les appareils « autorange » choisissent seuls."
+        },
+        {
+          "id": "mesurer",
+          "titre": "Mesurer une tension, un courant, une résistance",
+          "image": "mesurer.png",
+          "contenu": "Tension : le voltmètre se branche en parallèle, entre les deux points à mesurer, circuit sous tension. C'est la mesure la plus courante et la moins risquée pour l'appareil.\n\nIntensité : l'ampèremètre se branche en série, il faut donc ouvrir le circuit pour l'insérer. La pince ampèremétrique évite cette contrainte : on la ferme autour d'un seul conducteur. Autour du câble entier (phase + neutre), les deux courants s'annulent et la pince lit zéro.\n\nRésistance et continuité : toujours hors tension, composant isolé du reste du circuit. En mode continuité, un bip signifie que la liaison est bonne (fil non coupé, contact fermé)."
+        },
+        {
+          "id": "vat",
+          "titre": "Le VAT : vérificateur d'absence de tension",
+          "image": "vat.png",
+          "contenu": "Avant de travailler hors tension, la norme NF C 18-510 impose de vérifier l'absence de tension avec un VAT, un appareil conçu uniquement pour cela.\n\nUn multimètre ne remplace pas un VAT : mauvais calibre, pile faible ou cordon abîmé peuvent afficher « 0 V » à tort.\n\nLa méthode : on teste le VAT sur une source sous tension connue, on vérifie l'ouvrage (entre chaque phase et le neutre, entre phases, entre chaque conducteur et la terre), puis on reteste le VAT sur la source connue. Si le VAT a lâché pendant la mesure, ce second test le révèle."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q501",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Sur un multimètre, dans quelle borne branche-t-on le cordon noir ?",
+          "reponses": [
+            "V/Ω",
+            "COM",
+            "A",
+            "mA"
+          ],
+          "bonne": 1,
+          "explication": "Le cordon noir va toujours dans la borne COM (commun), la référence de toutes les mesures."
+        },
+        {
+          "id": "q502",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Quelle position du sélecteur pour mesurer la tension d'une prise domestique ?",
+          "reponses": [
+            "V⎓ (continu)",
+            "V~ (alternatif)",
+            "Ω",
+            "A"
+          ],
+          "bonne": 1,
+          "explication": "Le réseau est en alternatif : on choisit V~. En V⎓, l'appareil afficherait une valeur fausse ou nulle."
+        },
+        {
+          "id": "q503",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "On ne connaît pas la valeur à mesurer. Quel calibre choisir au départ ?",
+          "reponses": [
+            "Le plus grand, puis on descend",
+            "Le plus petit",
+            "N'importe lequel",
+            "Le calibre Ω"
+          ],
+          "bonne": 0,
+          "explication": "Partir du calibre le plus grand évite de dépasser la capacité de l'appareil. On descend ensuite pour gagner en précision."
+        },
+        {
+          "id": "q504",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Comment mesure-t-on l'intensité avec un multimètre classique ?",
+          "reponses": [
+            "En parallèle, sans toucher au circuit",
+            "En série, en ouvrant le circuit",
+            "Entre phase et terre",
+            "Hors tension"
+          ],
+          "bonne": 1,
+          "explication": "Le courant doit traverser l'appareil : on ouvre le circuit et on insère l'ampèremètre en série."
+        },
+        {
+          "id": "q505",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Avec une pince ampèremétrique, autour de quoi ferme-t-on la pince ?",
+          "reponses": [
+            "Du câble entier (phase + neutre)",
+            "D'un seul conducteur",
+            "De la prise",
+            "Du disjoncteur"
+          ],
+          "bonne": 1,
+          "explication": "Autour du câble entier, le courant de phase et celui du neutre s'annulent : la pince lit zéro. On isole un seul conducteur."
+        },
+        {
+          "id": "q506",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer une résistance à l'ohmmètre, le circuit doit être…",
+          "reponses": [
+            "sous tension",
+            "hors tension et le composant isolé",
+            "en court-circuit",
+            "relié à la terre"
+          ],
+          "bonne": 1,
+          "explication": "L'ohmmètre envoie son propre petit courant. Sous tension, la mesure est fausse et l'appareil peut être détruit."
+        },
+        {
+          "id": "q507",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "En mode continuité, le multimètre émet un bip. Cela signifie…",
+          "reponses": [
+            "qu'il y a une tension",
+            "que la liaison est bonne, le courant peut passer",
+            "que le fil est coupé",
+            "que la pile est faible"
+          ],
+          "bonne": 1,
+          "explication": "Le bip indique une résistance quasi nulle : le fil n'est pas coupé, le contact est fermé."
+        },
+        {
+          "id": "q508",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Que signifie VAT ?",
+          "reponses": [
+            "Voltmètre À Tension",
+            "Vérificateur d'Absence de Tension",
+            "Vérification Avant Travaux",
+            "Valeur Alternative de Tension"
+          ],
+          "bonne": 1,
+          "explication": "Le VAT est l'appareil dédié à la vérification d'absence de tension avant travaux hors tension."
+        },
+        {
+          "id": "q509",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Avant et après une vérification d'absence de tension, on doit…",
+          "reponses": [
+            "changer les piles",
+            "tester le VAT sur une source sous tension connue",
+            "le laisser reposer",
+            "l'envoyer en étalonnage"
+          ],
+          "bonne": 1,
+          "explication": "Un VAT en panne afficherait « pas de tension » à tort. On le teste avant, et après pour s'assurer qu'il n'a pas lâché entre-temps."
+        },
+        {
+          "id": "q510",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Peut-on utiliser un multimètre à la place d'un VAT pour vérifier l'absence de tension ?",
+          "reponses": [
+            "Oui, c'est équivalent",
+            "Oui, si le calibre est bon",
+            "Non, seul un VAT conforme est prévu pour cela",
+            "Oui, en continu seulement"
+          ],
+          "bonne": 2,
+          "explication": "Le multimètre n'est pas conçu pour cet usage : mauvais calibre, pile faible ou cordon abîmé peuvent tromper. La norme impose un VAT."
+        },
+        {
+          "id": "q511",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Dans quelle borne va le cordon rouge pour mesurer 5 A ?",
+          "reponses": [
+            "COM",
+            "V/Ω",
+            "A (calibre 10 A)",
+            "mA uniquement"
+          ],
+          "bonne": 2,
+          "explication": "Les fortes intensités passent par la borne A, souvent 10 A, protégée par un fusible interne."
+        },
+        {
+          "id": "q512",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "En mesure de résistance, le multimètre affiche « OL » ou « 1 ». Cela signifie…",
+          "reponses": [
+            "résistance nulle",
+            "résistance infinie : circuit ouvert ou hors calibre",
+            "pile faible",
+            "court-circuit"
+          ],
+          "bonne": 1,
+          "explication": "OL = overload, dépassement : la résistance est trop grande pour le calibre, ou le circuit est ouvert."
+        },
+        {
+          "id": "q513",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Mesurer une tension de 230 V avec le sélecteur sur Ω…",
+          "reponses": [
+            "donne la bonne valeur",
+            "peut détruire l'appareil",
+            "affiche 0",
+            "est sans risque"
+          ],
+          "bonne": 1,
+          "explication": "En mode Ω, l'appareil injecte un petit courant et n'est pas prévu pour recevoir 230 V : risque de destruction."
+        },
+        {
+          "id": "q514",
+          "fiche_id": "multimetre",
+          "type": "qcm",
+          "enonce": "Le calibre 200 mA est réglé et on mesure 3 A. Conséquence ?",
+          "reponses": [
+            "Rien",
+            "Le fusible interne grille, ou l'appareil est endommagé",
+            "La valeur est juste",
+            "L'appareil s'éteint"
+          ],
+          "bonne": 1,
+          "explication": "Le calibre mA a un fusible faible : 3 A le font griller. D'où la règle du grand calibre d'abord."
+        },
+        {
+          "id": "q515",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer la tension d'une pile, on place les pointes…",
+          "reponses": [
+            "en série avec la pile",
+            "sur les deux bornes de la pile, en parallèle",
+            "sur une seule borne",
+            "sur la terre"
+          ],
+          "bonne": 1,
+          "explication": "La tension se mesure entre deux points : la borne + et la borne −."
+        },
+        {
+          "id": "q516",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "On veut vérifier qu'un fusible est bon, hors tension. Quel mode ?",
+          "reponses": [
+            "V~",
+            "A",
+            "Continuité (bip) ou Ω",
+            "Hz"
+          ],
+          "bonne": 2,
+          "explication": "Un fusible bon a une résistance quasi nulle : bip en continuité. Coupé : OL."
+        },
+        {
+          "id": "q517",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Pour mesurer le courant d'un appareil avec une pince ampèremétrique, on l'enserre autour…",
+          "reponses": [
+            "du cordon entier",
+            "d'un seul fil, la phase par exemple",
+            "de la prise",
+            "de la terre"
+          ],
+          "bonne": 1,
+          "explication": "Il faut isoler un conducteur. Un cordon adaptateur permet de séparer la phase sans ouvrir le câble."
+        },
+        {
+          "id": "q518",
+          "fiche_id": "mesurer",
+          "type": "qcm",
+          "enonce": "Un voltmètre branché par erreur en série dans un circuit…",
+          "reponses": [
+            "mesure l'intensité",
+            "a une résistance très grande : le circuit ne fonctionne plus et il affiche la tension de la source",
+            "grille",
+            "mesure la puissance"
+          ],
+          "bonne": 1,
+          "explication": "Le voltmètre est conçu pour ne laisser passer presque aucun courant. En série, il bloque le circuit."
+        },
+        {
+          "id": "q519",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Le VAT doit être vérifié sur une source connue…",
+          "reponses": [
+            "une fois par an",
+            "avant et après chaque vérification d'absence de tension",
+            "seulement avant",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Avant, pour être sûr qu'il fonctionne. Après, pour être sûr qu'il n'a pas lâché pendant la mesure."
+        },
+        {
+          "id": "q520",
+          "fiche_id": "vat",
+          "type": "qcm",
+          "enonce": "Sur une installation triphasée, la vérification d'absence de tension se fait…",
+          "reponses": [
+            "sur une phase seulement",
+            "entre chaque phase et le neutre, entre phases, et entre chaque conducteur et la terre",
+            "sur le neutre seulement",
+            "sur la terre seulement"
+          ],
+          "bonne": 1,
+          "explication": "Tous les conducteurs actifs sont vérifiés, entre eux et par rapport à la terre."
+        }
+      ],
+      "theme": "Installation et pratique"
+    },
+    {
+      "id": "installation",
+      "titre": "Installation domestique",
+      "ordre": 8,
+      "fiches": [
+        {
+          "id": "tableau",
+          "titre": "Le tableau électrique",
+          "image": "tableau.png",
+          "contenu": "Le tableau est le point de départ de tous les circuits de la maison. De haut en bas, en général :\n\n• Le disjoncteur de branchement (près du compteur) : coupe toute l'installation et limite la puissance souscrite.\n• Les interrupteurs différentiels 30 mA : protègent les personnes. Il en faut au moins deux, dont un de type A pour la plaque de cuisson et le lave-linge.\n• Les disjoncteurs divisionnaires : un par circuit, calibrés selon la section du câble. Ils protègent le câble, pas l'appareil.\n• Le bornier de terre : rassemble tous les conducteurs vert/jaune et les relie à la prise de terre."
+        },
+        {
+          "id": "sections",
+          "titre": "Sections de câbles et calibres",
+          "image": "sections.png",
+          "contenu": "Plus un câble est gros (section en mm²), plus il supporte de courant sans chauffer. Le disjoncteur doit être choisi pour protéger le câble.\n\nRègles courantes (NF C 15-100) :\n• Éclairage : 1,5 mm², disjoncteur 16 A maximum, 8 points lumineux maximum.\n• Prises : 2,5 mm² avec disjoncteur 20 A (12 prises max), ou 1,5 mm² avec 16 A (8 prises max).\n• Circuits spécialisés (lave-linge, four, lave-vaisselle) : 2,5 mm², disjoncteur 20 A, une seule prise par circuit.\n• Plaque de cuisson : 6 mm², disjoncteur 32 A.\n\nÀ retenir : un disjoncteur trop gros sur un câble trop fin laisse le câble chauffer, c'est un risque d'incendie."
+        },
+        {
+          "id": "salle_de_bain",
+          "titre": "Salle de bains et locaux humides",
+          "image": "salle_de_bain.png",
+          "contenu": "L'eau rend l'électricité beaucoup plus dangereuse. La norme découpe la salle de bains en volumes autour de la baignoire ou de la douche :\n\n• Volume 0 : l'intérieur de la baignoire ou du receveur. Aucun appareil.\n• Volume 1 : au-dessus, jusqu'à 2,25 m. Seulement des appareils en très basse tension de sécurité (TBTS 12 V).\n• Volume 2 : 60 cm autour du volume 1. Appareils protégés contre les projections (IPX4), classe II.\n• Hors volumes : prises et appareils classiques autorisés.\n\nIndice de protection IP : le premier chiffre concerne les solides (poussière), le second l'eau. IPX4 = protégé contre les projections d'eau.\n\nLiaison équipotentielle : toutes les masses métalliques (canalisations, radiateur, baignoire métallique) sont reliées entre elles et à la terre, pour qu'aucune différence de tension ne puisse apparaître entre deux objets qu'on touche."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q601",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Dans un tableau, quel appareil placé en amont des disjoncteurs divisionnaires protège les personnes ?",
+          "reponses": [
+            "Le compteur",
+            "L'interrupteur différentiel 30 mA",
+            "Le parafoudre",
+            "Le bornier de terre"
+          ],
+          "bonne": 1,
+          "explication": "L'interrupteur différentiel 30 mA détecte les fuites de courant vers la terre et coupe : c'est lui qui protège les personnes."
+        },
+        {
+          "id": "q602",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "À quoi sert le bornier de terre du tableau ?",
+          "reponses": [
+            "À alimenter les prises",
+            "À relier tous les conducteurs de terre à la prise de terre",
+            "À couper le courant",
+            "À mesurer la consommation"
+          ],
+          "bonne": 1,
+          "explication": "Tous les fils vert/jaune de l'installation y aboutissent, et le bornier est relié à la prise de terre du bâtiment."
+        },
+        {
+          "id": "q603",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le disjoncteur divisionnaire d'un circuit protège avant tout…",
+          "reponses": [
+            "l'appareil branché",
+            "les personnes",
+            "le câble du circuit",
+            "le compteur"
+          ],
+          "bonne": 2,
+          "explication": "Le disjoncteur est calibré selon la section du câble : il le protège contre l'échauffement en cas de surcharge ou de court-circuit."
+        },
+        {
+          "id": "q604",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Quelle section de câble pour un circuit d'éclairage ?",
+          "reponses": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "6 mm²",
+            "10 mm²"
+          ],
+          "bonne": 0,
+          "explication": "L'éclairage se câble en 1,5 mm², protégé par un disjoncteur de 16 A maximum."
+        },
+        {
+          "id": "q605",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Quelle section de câble pour une plaque de cuisson protégée par un disjoncteur 32 A ?",
+          "reponses": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "6 mm²",
+            "0,75 mm²"
+          ],
+          "bonne": 2,
+          "explication": "La plaque de cuisson appelle un fort courant : 6 mm² et disjoncteur 32 A."
+        },
+        {
+          "id": "q606",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un circuit spécialisé pour un lave-linge se câble en…",
+          "reponses": [
+            "1,5 mm² avec un disjoncteur 10 A",
+            "2,5 mm² avec un disjoncteur 20 A",
+            "6 mm² avec un disjoncteur 32 A",
+            "0,75 mm² avec un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Les circuits spécialisés (lave-linge, four, lave-vaisselle) sont en 2,5 mm² sous 20 A, avec une seule prise par circuit."
+        },
+        {
+          "id": "q607",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Si on augmente la section d'un câble, le courant qu'il peut supporter…",
+          "reponses": [
+            "diminue",
+            "augmente",
+            "ne change pas",
+            "devient nul"
+          ],
+          "bonne": 1,
+          "explication": "Un câble plus gros a moins de résistance et chauffe moins : il supporte plus de courant."
+        },
+        {
+          "id": "q608",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Dans le volume 1 d'une salle de bains (au-dessus de la baignoire), que peut-on installer ?",
+          "reponses": [
+            "Une prise 230 V",
+            "Un radiateur classique",
+            "Uniquement des appareils en très basse tension de sécurité 12 V",
+            "Une lampe 230 V classique"
+          ],
+          "bonne": 2,
+          "explication": "Le volume 1 n'accepte que la très basse tension de sécurité (TBTS 12 V). Les prises 230 V sont interdites dans les volumes."
+        },
+        {
+          "id": "q609",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Que signifie IPX4 sur un luminaire ?",
+          "reponses": [
+            "Résiste à la poussière",
+            "Protégé contre les projections d'eau",
+            "Fonctionne sous l'eau",
+            "Alimenté en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Le second chiffre de l'indice IP concerne l'eau : 4 = protégé contre les projections de toutes directions."
+        },
+        {
+          "id": "q610",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "À quoi sert la liaison équipotentielle d'une salle de bains ?",
+          "reponses": [
+            "À chauffer le sol",
+            "À relier toutes les masses métalliques à la terre pour éviter une différence de tension",
+            "À alimenter le sèche-serviettes",
+            "À isoler la baignoire"
+          ],
+          "bonne": 1,
+          "explication": "Si toutes les masses sont au même potentiel, toucher deux objets métalliques en même temps ne peut pas créer de courant à travers le corps."
+        },
+        {
+          "id": "q611",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Combien d'interrupteurs différentiels 30 mA au minimum dans un logement ?",
+          "reponses": [
+            "1",
+            "2",
+            "4",
+            "Aucun si on a des disjoncteurs"
+          ],
+          "bonne": 1,
+          "explication": "Au moins deux, pour répartir les circuits : si l'un déclenche, tout le logement n'est pas dans le noir."
+        },
+        {
+          "id": "q612",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Un interrupteur différentiel de type A est obligatoire pour…",
+          "reponses": [
+            "l'éclairage",
+            "la plaque de cuisson et le lave-linge",
+            "les prises du salon",
+            "la sonnette"
+          ],
+          "bonne": 1,
+          "explication": "Ces appareils peuvent créer des courants de défaut avec une composante continue, que seul le type A détecte."
+        },
+        {
+          "id": "q613",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le disjoncteur de branchement est réglé sur…",
+          "reponses": [
+            "10 A",
+            "la puissance souscrite, par exemple 30 A pour 6 kVA",
+            "100 A toujours",
+            "63 A toujours"
+          ],
+          "bonne": 1,
+          "explication": "Le fournisseur le règle selon l'abonnement : 6 kVA en monophasé correspond à 30 A."
+        },
+        {
+          "id": "q614",
+          "fiche_id": "tableau",
+          "type": "qcm",
+          "enonce": "Le parafoudre protège…",
+          "reponses": [
+            "les personnes",
+            "l'installation et les appareils contre les surtensions, notamment la foudre",
+            "contre les surcharges",
+            "contre les fuites de courant"
+          ],
+          "bonne": 1,
+          "explication": "Il écoule les surtensions vers la terre avant qu'elles n'abîment les appareils électroniques."
+        },
+        {
+          "id": "q615",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un circuit de prises en 1,5 mm² se protège par un disjoncteur de…",
+          "reponses": [
+            "10 A",
+            "16 A",
+            "20 A",
+            "32 A"
+          ],
+          "bonne": 1,
+          "explication": "1,5 mm² → 16 A maximum, 8 prises maximum. Pour 20 A, il faut du 2,5 mm²."
+        },
+        {
+          "id": "q616",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Combien de points lumineux au maximum sur un circuit d'éclairage ?",
+          "reponses": [
+            "4",
+            "8",
+            "12",
+            "20"
+          ],
+          "bonne": 1,
+          "explication": "8 points lumineux maximum par circuit d'éclairage."
+        },
+        {
+          "id": "q617",
+          "fiche_id": "sections",
+          "type": "qcm",
+          "enonce": "Un câble de 2,5 mm² protégé par un disjoncteur 32 A, c'est…",
+          "reponses": [
+            "correct",
+            "dangereux : le câble peut chauffer sans que le disjoncteur coupe",
+            "obligatoire pour un four",
+            "sans importance"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur doit être adapté au câble. 32 A demande du 6 mm²."
+        },
+        {
+          "id": "q618",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Un sèche-serviettes classe II IPX4 peut être installé…",
+          "reponses": [
+            "dans le volume 0",
+            "dans le volume 1",
+            "dans le volume 2 ou hors volumes",
+            "nulle part en salle de bains"
+          ],
+          "bonne": 2,
+          "explication": "IPX4 et classe II sont les conditions du volume 2. Volume 1 : TBTS 12 V seulement."
+        },
+        {
+          "id": "q619",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "Un luminaire IP20 est adapté…",
+          "reponses": [
+            "dans la douche",
+            "dans le volume 2",
+            "hors volumes, dans une pièce sèche",
+            "en extérieur"
+          ],
+          "bonne": 2,
+          "explication": "Le 0 en second chiffre signifie aucune protection contre l'eau : pièces sèches uniquement."
+        },
+        {
+          "id": "q620",
+          "fiche_id": "salle_de_bain",
+          "type": "qcm",
+          "enonce": "IP44 signifie…",
+          "reponses": [
+            "étanche à l'immersion",
+            "protégé contre les corps solides de plus de 1 mm et contre les projections d'eau",
+            "non protégé",
+            "protégé contre les solides uniquement"
+          ],
+          "bonne": 1,
+          "explication": "Premier 4 : solides > 1 mm. Second 4 : projections d'eau de toutes directions."
+        }
+      ],
+      "theme": "Installation et pratique"
+    },
+    {
+      "id": "eclairage",
+      "titre": "Éclairage et commandes",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "lampes",
+          "titre": "Les types de lampes",
+          "contenu": "L'incandescence et l'halogène sont retirées de la vente : elles chauffent plus qu'elles n'éclairent. Le tube fluorescent a besoin d'un ballast et d'un starter. La LED domine : rendement élevé, durée de vie de 15 000 à 50 000 heures.\n\nCulots courants : E27 (gros culot à vis), E14 (petit culot à vis), GU10 (spot 230 V), GU5.3 (spot 12 V, nécessite un transformateur), G9.\n\nLire une boîte de lampe : les lumens (lm) donnent la quantité de lumière, les watts la consommation. Une LED de 10 W (800 lm) remplace une incandescence de 60 à 75 W.\n\nTempérature de couleur en kelvin : 2 700 K chaud (jaune-orangé), 4 000 K neutre, 6 500 K froid (blanc bleuté).",
+          "image": "lampes.png"
+        },
+        {
+          "id": "commandes",
+          "titre": "Simple allumage, va-et-vient, télérupteur",
+          "contenu": "Simple allumage : un interrupteur commande une lampe. L'interrupteur coupe toujours la phase, jamais le neutre.\n\nDouble allumage : un interrupteur double commande deux lampes ou deux groupes.\n\nVa-et-vient : deux interrupteurs commandent la même lampe, reliés par deux fils appelés navettes. Typique d'un couloir ou d'un escalier.\n\nTélérupteur : pour trois points de commande ou plus. Des boutons-poussoirs envoient une impulsion à un relais dans le tableau qui bascule allumé / éteint.\n\nMinuterie : éteint automatiquement après un délai réglable. Détecteur de présence : allume au passage.\n\nCircuit d'éclairage : 1,5 mm², disjoncteur 16 A maximum, 8 points lumineux maximum.",
+          "image": "commandes.png"
+        },
+        {
+          "id": "variation",
+          "titre": "Variateurs, détecteurs et pièges des LED",
+          "contenu": "Variateur (gradateur) : uniquement avec des lampes « dimmables ». Une LED non dimmable sur un variateur clignote ou grille.\n\nDétecteur crépusculaire : allume quand la lumière du jour baisse. Détecteur de mouvement : allume au passage, souvent combiné à une minuterie.\n\nUne LED qui reste faiblement allumée interrupteur éteint : c'est en général un courant de fuite, par exemple à travers le voyant lumineux de l'interrupteur. Un interrupteur qui coupe le neutre au lieu de la phase donne le même symptôme, et c'est dangereux.\n\nLes spots 12 V ont besoin d'un transformateur ou d'un driver adapté à la puissance totale.",
+          "image": "variation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1001",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Le lumen mesure…",
+          "reponses": [
+            "la consommation",
+            "la quantité de lumière émise",
+            "la température de couleur",
+            "la durée de vie"
+          ],
+          "bonne": 1,
+          "explication": "Les lumens (lm) disent combien ça éclaire, les watts (W) combien ça consomme."
+        },
+        {
+          "id": "q1002",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "2 700 K correspond à une lumière…",
+          "reponses": [
+            "froide, bleutée",
+            "chaude, jaune-orangé",
+            "verte",
+            "ultraviolette"
+          ],
+          "bonne": 1,
+          "explication": "Plus le nombre de kelvins est bas, plus la lumière est chaude. 2 700 K, c'est l'ambiance salon."
+        },
+        {
+          "id": "q1003",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Le culot E27 est…",
+          "reponses": [
+            "un culot à vis de 27 mm",
+            "une baïonnette",
+            "un spot 12 V",
+            "un tube"
+          ],
+          "bonne": 0,
+          "explication": "E = Edison, culot à vis. 27 = diamètre en mm. E14 est le petit modèle."
+        },
+        {
+          "id": "q1004",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Un spot GU5.3 fonctionne en…",
+          "reponses": [
+            "230 V",
+            "12 V, via un transformateur",
+            "400 V",
+            "5 V"
+          ],
+          "bonne": 1,
+          "explication": "GU5.3 = 12 V avec transformateur. GU10 = 230 V directement."
+        },
+        {
+          "id": "q1005",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Une LED de 10 W (800 lm) remplace une incandescence d'environ…",
+          "reponses": [
+            "10 W",
+            "25 W",
+            "60 à 75 W",
+            "200 W"
+          ],
+          "bonne": 2,
+          "explication": "À lumière égale, la LED consomme 6 à 8 fois moins."
+        },
+        {
+          "id": "q1006",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "La durée de vie d'une LED est de l'ordre de…",
+          "reponses": [
+            "1 000 h",
+            "2 000 h",
+            "15 000 à 50 000 h",
+            "200 h"
+          ],
+          "bonne": 2,
+          "explication": "Contre environ 1 000 h pour une incandescence."
+        },
+        {
+          "id": "q1007",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "6 500 K correspond à une lumière…",
+          "reponses": [
+            "chaude",
+            "froide, blanc bleuté",
+            "jaune",
+            "rouge"
+          ],
+          "bonne": 1,
+          "explication": "Lumière « lumière du jour », adaptée aux ateliers et garages."
+        },
+        {
+          "id": "q1008",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Un tube fluorescent classique a besoin de…",
+          "reponses": [
+            "un transformateur 12 V",
+            "un ballast et un starter",
+            "une pile",
+            "un redresseur"
+          ],
+          "bonne": 1,
+          "explication": "Le starter amorce, le ballast limite le courant. Les tubes LED s'en passent."
+        },
+        {
+          "id": "q1009",
+          "fiche_id": "lampes",
+          "type": "qcm",
+          "enonce": "Un spot GU10 fonctionne en…",
+          "reponses": [
+            "12 V",
+            "230 V",
+            "24 V",
+            "5 V"
+          ],
+          "bonne": 1,
+          "explication": "GU10 se branche directement en 230 V, sans transformateur."
+        },
+        {
+          "id": "q1010",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Le va-et-vient utilise…",
+          "reponses": [
+            "deux interrupteurs simples",
+            "deux interrupteurs va-et-vient reliés par deux navettes",
+            "un bouton-poussoir",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Chaque interrupteur bascule entre les deux navettes : quelle que soit la position de l'autre, on peut allumer ou éteindre."
+        },
+        {
+          "id": "q1011",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Le télérupteur est commandé par…",
+          "reponses": [
+            "des interrupteurs va-et-vient",
+            "des boutons-poussoirs",
+            "un variateur",
+            "une horloge"
+          ],
+          "bonne": 1,
+          "explication": "Une impulsion sur un poussoir fait basculer le télérupteur. On peut mettre autant de poussoirs qu'on veut."
+        },
+        {
+          "id": "q1012",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "La minuterie…",
+          "reponses": [
+            "allume à heure fixe",
+            "éteint automatiquement après un délai réglable",
+            "fait varier la lumière",
+            "détecte la présence"
+          ],
+          "bonne": 1,
+          "explication": "Typique des cages d'escalier : on appuie, la lumière s'éteint seule quelques minutes plus tard."
+        },
+        {
+          "id": "q1013",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Un interrupteur doit couper…",
+          "reponses": [
+            "le neutre",
+            "la phase",
+            "la terre",
+            "phase et neutre obligatoirement"
+          ],
+          "bonne": 1,
+          "explication": "Couper la phase met la lampe hors tension. Couper le neutre laisse la phase présente sur la douille : danger."
+        },
+        {
+          "id": "q1014",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Combien de navettes entre deux interrupteurs de va-et-vient ?",
+          "reponses": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "bonne": 1,
+          "explication": "Deux navettes, plus l'arrivée de phase sur le premier et le départ vers la lampe sur le second."
+        },
+        {
+          "id": "q1015",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Le double allumage…",
+          "reponses": [
+            "commande une lampe depuis deux endroits",
+            "commande deux lampes ou deux groupes depuis un même point",
+            "éteint après un délai",
+            "varie l'intensité"
+          ],
+          "bonne": 1,
+          "explication": "Un seul boîtier, deux touches, deux circuits d'éclairage."
+        },
+        {
+          "id": "q1016",
+          "fiche_id": "commandes",
+          "type": "qcm",
+          "enonce": "Un circuit d'éclairage en 1,5 mm² se protège par un disjoncteur de…",
+          "reponses": [
+            "10 ou 16 A",
+            "20 A",
+            "32 A",
+            "2 A"
+          ],
+          "bonne": 0,
+          "explication": "16 A maximum pour du 1,5 mm². 10 A est courant pour l'éclairage."
+        },
+        {
+          "id": "q1017",
+          "fiche_id": "variation",
+          "type": "qcm",
+          "enonce": "Une LED non dimmable sur un variateur…",
+          "reponses": [
+            "fonctionne parfaitement",
+            "clignote ou grille",
+            "éclaire plus fort",
+            "devient chaude"
+          ],
+          "bonne": 1,
+          "explication": "Le variateur hache la tension ; l'électronique d'une LED non prévue pour ne le supporte pas."
+        },
+        {
+          "id": "q1018",
+          "fiche_id": "variation",
+          "type": "qcm",
+          "enonce": "Une LED reste faiblement allumée interrupteur éteint. Cause probable ?",
+          "reponses": [
+            "LED défectueuse",
+            "Un courant de fuite, par exemple via le voyant lumineux de l'interrupteur",
+            "Tension trop forte",
+            "Mauvaise terre"
+          ],
+          "bonne": 1,
+          "explication": "Le voyant laisse passer quelques milliampères, assez pour une LED. Ou bien l'interrupteur coupe le neutre au lieu de la phase."
+        },
+        {
+          "id": "q1019",
+          "fiche_id": "variation",
+          "type": "qcm",
+          "enonce": "Le détecteur crépusculaire…",
+          "reponses": [
+            "détecte le mouvement",
+            "allume quand la lumière du jour baisse",
+            "coupe en cas de fuite",
+            "mesure la consommation"
+          ],
+          "bonne": 1,
+          "explication": "Idéal pour un éclairage extérieur qui s'allume seul le soir."
+        },
+        {
+          "id": "q1020",
+          "fiche_id": "commandes",
+          "type": "ordre",
+          "enonce": "Remets dans l'ordre le chemin du courant dans un simple allumage.",
+          "reponses": [
+            "Phase, depuis le disjoncteur 16 A du tableau",
+            "Interrupteur",
+            "Lampe",
+            "Retour par le neutre au tableau"
+          ],
+          "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
+        }
+      ],
+      "ordre": 9
+    },
+    {
+      "id": "cablage",
+      "titre": "Prises, interrupteurs et câblage pratique",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "prises",
+          "titre": "Prises de courant",
+          "contenu": "La prise domestique standard est une 16 A 2P+T : deux pôles (phase et neutre) plus la terre. Elle comporte des obturateurs qui empêchent d'introduire un objet dans les alvéoles.\n\nHauteur minimale par rapport au sol fini : 5 cm pour une prise 16 A, 12 cm pour une prise 32 A.\n\nUne multiprise 16 A supporte au maximum environ 3 500 W (230 V × 16 A). Un radiateur et une bouilloire dessus, c'est trop.\n\nPrise commandée : alimentée via un interrupteur, pour une lampe de salon. Prise 32 A ou sortie de câble : pour la plaque de cuisson.",
+          "image": "prises.png"
+        },
+        {
+          "id": "raccordement",
+          "titre": "Raccorder proprement",
+          "contenu": "Toujours hors tension : couper le disjoncteur du circuit, vérifier l'absence de tension.\n\nDénuder 10 à 12 mm. Aucun cuivre ne doit dépasser de la borne. Dans une borne à vis, serrer fermement ; les fils souples reçoivent un embout. Les bornes automatiques (type Wago) acceptent des sections précises, indiquées dessus.\n\nDans une même borne : des conducteurs de même nature (jamais cuivre et aluminium mélangés).\n\nSur une prise : L = phase, N = neutre, ⏚ = terre (vert/jaune). Les boîtes de dérivation doivent rester accessibles.\n\nAprès raccordement : remettre sous tension et tester.",
+          "image": "raccordement.png"
+        },
+        {
+          "id": "cables",
+          "titre": "Fils, câbles et gaines",
+          "contenu": "Un fil est un conducteur isolé (H07V-U rigide, un seul brin ; H07V-K souple, multibrins). Un câble regroupe plusieurs conducteurs sous une gaine (U-1000 R2V, utilisable en extérieur et enterré).\n\nEn encastré ou apparent, les fils passent dans une gaine ICTA qui les protège.\n\nCâble enterré : profondeur 50 cm (85 cm sous une voie), avec un grillage avertisseur rouge posé au-dessus pour prévenir lors d'un terrassement.\n\nRègle d'or : la section du câble détermine le calibre du disjoncteur, jamais l'inverse.",
+          "image": "cables.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1101",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Une prise domestique standard est une prise…",
+          "reponses": [
+            "10 A 2P",
+            "16 A 2P+T",
+            "32 A",
+            "6 A"
+          ],
+          "bonne": 1,
+          "explication": "2P+T = deux pôles plus terre, 16 A."
+        },
+        {
+          "id": "q1102",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Hauteur minimale d'une prise 16 A par rapport au sol fini ?",
+          "reponses": [
+            "0 cm",
+            "5 cm",
+            "30 cm",
+            "1 m"
+          ],
+          "bonne": 1,
+          "explication": "5 cm minimum, pour éviter l'eau de lavage des sols."
+        },
+        {
+          "id": "q1103",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Une prise 32 A doit être à au moins…",
+          "reponses": [
+            "5 cm",
+            "12 cm",
+            "50 cm",
+            "1,20 m"
+          ],
+          "bonne": 1,
+          "explication": "12 cm pour une prise 32 A (plaque de cuisson)."
+        },
+        {
+          "id": "q1104",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Une multiprise 16 A supporte au maximum environ…",
+          "reponses": [
+            "1 000 W",
+            "3 500 W",
+            "7 000 W",
+            "500 W"
+          ],
+          "bonne": 1,
+          "explication": "230 V × 16 A ≈ 3 700 W. Au-delà, elle chauffe."
+        },
+        {
+          "id": "q1105",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Les obturateurs d'une prise…",
+          "reponses": [
+            "améliorent le contact",
+            "empêchent d'introduire un objet dans les alvéoles",
+            "réduisent la consommation",
+            "isolent de la terre"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité enfants : les alvéoles ne s'ouvrent que si les deux broches entrent en même temps."
+        },
+        {
+          "id": "q1106",
+          "fiche_id": "prises",
+          "type": "qcm",
+          "enonce": "Une prise commandée…",
+          "reponses": [
+            "est toujours sous tension",
+            "est alimentée via un interrupteur, pour une lampe par exemple",
+            "est en 12 V",
+            "est une prise 32 A"
+          ],
+          "bonne": 1,
+          "explication": "Pratique pour allumer une lampe de salon depuis l'entrée."
+        },
+        {
+          "id": "q1107",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Longueur de dénudage pour une borne classique ?",
+          "reponses": [
+            "2 mm",
+            "10 à 12 mm",
+            "3 cm",
+            "5 cm"
+          ],
+          "bonne": 1,
+          "explication": "Assez pour un bon contact, pas trop pour que le cuivre ne dépasse pas."
+        },
+        {
+          "id": "q1108",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Une borne automatique (type Wago)…",
+          "reponses": [
+            "ne convient qu'au fil souple",
+            "permet de connecter sans vis, en respectant la section admise",
+            "est interdite",
+            "doit être soudée"
+          ],
+          "bonne": 1,
+          "explication": "Rapide et fiable, à condition d'utiliser les sections indiquées sur la borne."
+        },
+        {
+          "id": "q1109",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Du cuivre visible à la sortie d'une borne, c'est…",
+          "reponses": [
+            "normal",
+            "à corriger : risque de contact et d'arc",
+            "bon pour la conduction",
+            "obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "On raccourcit le dénudage ou on ré-enfonce le fil."
+        },
+        {
+          "id": "q1110",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Une boîte de dérivation doit être…",
+          "reponses": [
+            "murée",
+            "accessible",
+            "sous tension",
+            "en métal"
+          ],
+          "bonne": 1,
+          "explication": "On doit pouvoir y intervenir sans casser le mur."
+        },
+        {
+          "id": "q1111",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Dans une même borne, on connecte…",
+          "reponses": [
+            "n'importe quelles sections",
+            "des conducteurs de même nature, de section adaptée à la borne",
+            "cuivre et aluminium mélangés",
+            "jusqu'à dix fils"
+          ],
+          "bonne": 1,
+          "explication": "Cuivre et aluminium ensemble se corrodent : mauvais contact et échauffement."
+        },
+        {
+          "id": "q1112",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Un embout sur un fil souple sert à…",
+          "reponses": [
+            "rassembler les brins pour une connexion sûre",
+            "isoler",
+            "mesurer",
+            "colorer"
+          ],
+          "bonne": 0,
+          "explication": "Sans embout, des brins s'échappent et le serrage est mauvais."
+        },
+        {
+          "id": "q1113",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Avant de raccorder une prise…",
+          "reponses": [
+            "on met des gants en tissu",
+            "on coupe le circuit et on vérifie l'absence de tension",
+            "on serre le neutre en premier",
+            "rien de particulier"
+          ],
+          "bonne": 1,
+          "explication": "Toujours hors tension, et on vérifie : un interrupteur ou un disjoncteur peut être mal repéré."
+        },
+        {
+          "id": "q1114",
+          "fiche_id": "raccordement",
+          "type": "qcm",
+          "enonce": "Sur une prise, le conducteur vert/jaune se connecte…",
+          "reponses": [
+            "sur L",
+            "sur N",
+            "sur la borne de terre ⏚",
+            "nulle part"
+          ],
+          "bonne": 2,
+          "explication": "La terre relie la broche centrale de la prise au bornier de terre du tableau."
+        },
+        {
+          "id": "q1115",
+          "fiche_id": "cables",
+          "type": "qcm",
+          "enonce": "Le fil H07V-U est…",
+          "reponses": [
+            "souple",
+            "rigide, un seul brin",
+            "un câble multiconducteur",
+            "réservé à l'extérieur"
+          ],
+          "bonne": 1,
+          "explication": "U = rigide (un brin). K = souple (multibrins)."
+        },
+        {
+          "id": "q1116",
+          "fiche_id": "cables",
+          "type": "qcm",
+          "enonce": "Le fil H07V-K est…",
+          "reponses": [
+            "rigide",
+            "souple, multibrins",
+            "un câble enterré",
+            "en aluminium"
+          ],
+          "bonne": 1,
+          "explication": "Utilisé dans les tableaux et là où il faut de la souplesse."
+        },
+        {
+          "id": "q1117",
+          "fiche_id": "cables",
+          "type": "qcm",
+          "enonce": "Le câble U-1000 R2V est utilisé…",
+          "reponses": [
+            "uniquement en intérieur sec",
+            "en extérieur et enterré",
+            "pour les prises rasoir",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Sa gaine résiste aux intempéries et à l'enfouissement."
+        },
+        {
+          "id": "q1118",
+          "fiche_id": "cables",
+          "type": "qcm",
+          "enonce": "La gaine ICTA sert à…",
+          "reponses": [
+            "isoler thermiquement",
+            "protéger et guider les conducteurs",
+            "refroidir",
+            "mettre à la terre"
+          ],
+          "bonne": 1,
+          "explication": "Elle permet aussi de tirer de nouveaux fils plus tard."
+        },
+        {
+          "id": "q1119",
+          "fiche_id": "cables",
+          "type": "qcm",
+          "enonce": "Un câble enterré est signalé par…",
+          "reponses": [
+            "une peinture",
+            "un grillage avertisseur rouge posé au-dessus",
+            "un cône",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Le terrassier qui tombe sur le grillage sait qu'un câble est en dessous."
+        },
+        {
+          "id": "q1120",
+          "fiche_id": "raccordement",
+          "type": "ordre",
+          "enonce": "Remplacer une prise : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Couper le disjoncteur du circuit",
+            "Vérifier l'absence de tension",
+            "Déconnecter et déposer l'ancienne prise",
+            "Raccorder L, N et terre sur la nouvelle",
+            "Remettre sous tension et tester"
+          ],
+          "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
+        }
+      ],
+      "ordre": 10
+    },
+    {
+      "id": "securite",
+      "titre": "Dangers et sécurité de base",
+      "ordre": 11,
+      "fiches": [
+        {
+          "id": "dangers",
+          "titre": "Les effets du courant sur le corps",
+          "contenu": "Le corps humain conduit le courant. Ce qui blesse, c'est l'intensité qui le traverse et la durée du passage. Ordres de grandeur en alternatif 50 Hz :\n\n• 0,5 mA : seuil de perception, picotement.\n• 10 mA : seuil de non-lâcher. Les muscles se contractent, on ne peut plus lâcher le conducteur.\n• 30 mA : risque de paralysie respiratoire. C'est le seuil des différentiels qui protègent les personnes.\n• Quelques dizaines de mA et plus : risque de fibrillation cardiaque, c'est-à-dire d'arrêt du cœur.\n\nS'ajoutent les brûlures, internes et externes.\n\nFacteurs aggravants : humidité (mains mouillées, sol humide, pieds nus), durée du contact, trajet du courant à travers le cœur.\n\nTension limite de sécurité : 50 V en alternatif dans un local sec, 25 V dans un local humide. En dessous, le risque est considéré comme faible.",
+          "image": "seuils.png"
+        },
+        {
+          "id": "contacts",
+          "titre": "Contact direct et contact indirect",
+          "contenu": "Contact direct : toucher une partie qui est normalement sous tension. Exemples : fil dénudé, borne d'un appareil ouvert, broche d'une prise.\nProtections : isolation des conducteurs, capots, éloignement, obstacles.\n\nContact indirect : toucher une masse, c'est-à-dire une partie métallique qui n'est normalement pas sous tension mais qui l'est devenue à cause d'un défaut d'isolement. Exemple : la carcasse d'un lave-linge dont un fil de phase touche le châssis.\nProtections : mise à la terre des masses + dispositif différentiel. Le courant de défaut part vers la terre et fait déclencher le différentiel avant qu'une personne ne touche l'appareil.",
+          "image": "contacts.png"
+        },
+        {
+          "id": "protections",
+          "titre": "Disjoncteur, différentiel, terre et bons réflexes",
+          "contenu": "Disjoncteur : coupe le circuit en cas de surcharge (trop d'appareils) ou de court-circuit. Il protège les câbles et l'installation contre l'échauffement et l'incendie. Il ne protège pas directement les personnes.\n\nDifférentiel 30 mA : compare le courant qui part par la phase et celui qui revient par le neutre. Si la différence atteint 30 mA (une fuite vers la terre, par exemple à travers une personne), il coupe en quelques millisecondes. C'est lui qui protège les personnes.\n\nMise à la terre : relie toutes les masses métalliques à la terre. En cas de défaut, le courant s'écoule vers la terre et fait déclencher le différentiel.\n\nBons réflexes :\n• Couper le courant au tableau avant toute intervention, puis vérifier l'absence de tension.\n• Ne jamais intervenir avec les mains mouillées ou les pieds dans l'eau.\n• Feu d'origine électrique : couper le courant, ne jamais utiliser d'eau, extincteur CO2 ou poudre.\n• Personne électrisée : couper le courant ou l'écarter avec un objet isolant (bois, plastique) avant de la toucher, puis appeler le 15 ou le 112.",
+          "image": "protections.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q401",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "À partir de quelle intensité environ une personne ne peut plus lâcher le conducteur qu'elle tient ?",
+          "reponses": [
+            "0,5 mA",
+            "10 mA",
+            "1 A",
+            "10 A"
+          ],
+          "bonne": 1,
+          "explication": "Vers 10 mA, les muscles se contractent : c'est le seuil de non-lâcher. 0,5 mA est le simple seuil de perception."
+        },
+        {
+          "id": "q402",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local sec ?",
+          "reponses": [
+            "12 V",
+            "25 V",
+            "50 V",
+            "230 V"
+          ],
+          "bonne": 2,
+          "explication": "50 V en alternatif dans un local sec, 25 V dans un local humide."
+        },
+        {
+          "id": "q403",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quel facteur augmente le danger d'une électrisation ?",
+          "reponses": [
+            "Le port de chaussures isolantes",
+            "L'humidité : mains mouillées, sol humide",
+            "Un contact très bref",
+            "Une faible tension"
+          ],
+          "bonne": 1,
+          "explication": "L'humidité diminue la résistance du corps : pour une même tension, le courant qui traverse le corps est plus élevé."
+        },
+        {
+          "id": "q404",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Toucher un fil dénudé sous tension est un…",
+          "reponses": [
+            "contact indirect",
+            "contact direct",
+            "court-circuit",
+            "défaut d'isolement"
+          ],
+          "bonne": 1,
+          "explication": "Le fil est normalement sous tension : c'est un contact direct."
+        },
+        {
+          "id": "q405",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Toucher la carcasse métallique d'un lave-linge mise sous tension par un défaut est un…",
+          "reponses": [
+            "contact direct",
+            "contact indirect",
+            "contact franc",
+            "arc électrique"
+          ],
+          "bonne": 1,
+          "explication": "La carcasse n'est pas censée être sous tension. Elle l'est à cause d'un défaut d'isolement : c'est un contact indirect."
+        },
+        {
+          "id": "q406",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Quelle protection est spécifiquement prévue contre les contacts indirects ?",
+          "reponses": [
+            "Le fusible",
+            "La mise à la terre des masses associée à un différentiel",
+            "L'interrupteur",
+            "La couleur des fils"
+          ],
+          "bonne": 1,
+          "explication": "La terre évacue le courant de défaut et le différentiel coupe le circuit avant qu'une personne ne touche la masse."
+        },
+        {
+          "id": "q407",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Quel est le rôle principal d'un disjoncteur non différentiel ?",
+          "reponses": [
+            "Protéger les personnes contre l'électrisation",
+            "Protéger l'installation contre les surcharges et les courts-circuits",
+            "Mesurer la consommation",
+            "Stabiliser la tension"
+          ],
+          "bonne": 1,
+          "explication": "Le disjoncteur protège les câbles et l'installation contre l'échauffement et l'incendie. Ce sont les différentiels qui protègent les personnes."
+        },
+        {
+          "id": "q408",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Un différentiel 30 mA coupe le circuit quand…",
+          "reponses": [
+            "le courant dépasse 16 A",
+            "la tension dépasse 230 V",
+            "il détecte une différence d'au moins 30 mA entre le courant qui part et celui qui revient",
+            "l'appareil est éteint"
+          ],
+          "bonne": 2,
+          "explication": "Une différence entre phase et neutre signifie qu'un courant fuit vers la terre, par exemple à travers une personne. Le différentiel coupe en quelques millisecondes."
+        },
+        {
+          "id": "q409",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Avant d'intervenir sur une prise, que faut-il faire ?",
+          "reponses": [
+            "Mettre des gants en tissu",
+            "Travailler vite",
+            "Couper le courant au tableau et vérifier l'absence de tension",
+            "Retirer seulement le fil de neutre"
+          ],
+          "bonne": 2,
+          "explication": "On coupe au tableau, puis on vérifie l'absence de tension avec un appareil adapté. On ne se fie jamais à l'interrupteur seul."
+        },
+        {
+          "id": "q410",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Une personne est en contact avec un conducteur sous tension. Que faire en premier ?",
+          "reponses": [
+            "La tirer par le bras",
+            "Lui jeter de l'eau",
+            "Couper le courant, ou l'écarter avec un objet isolant, avant de la toucher",
+            "Attendre qu'elle lâche"
+          ],
+          "bonne": 2,
+          "explication": "En la touchant directement, le sauveteur s'électrise à son tour. On coupe le courant ou on l'écarte avec un objet isolant, puis on appelle le 15 ou le 112."
+        },
+        {
+          "id": "q411",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "L'électrisation, c'est…",
+          "reponses": [
+            "un décès par électricité",
+            "le passage du courant dans le corps, avec ses effets",
+            "une brûlure par arc",
+            "un incendie"
+          ],
+          "bonne": 1,
+          "explication": "Électrisation : le courant traverse le corps. Électrocution : le décès qui peut en résulter."
+        },
+        {
+          "id": "q412",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quel trajet du courant dans le corps est le plus dangereux ?",
+          "reponses": [
+            "Pied à pied",
+            "Main à main, ou main à pied : le courant passe par le cœur",
+            "Doigt à doigt d'une même main",
+            "Aucun trajet n'est dangereux"
+          ],
+          "bonne": 1,
+          "explication": "Quand le trajet passe par le cœur, le risque de fibrillation est maximal."
+        },
+        {
+          "id": "q413",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "Quelle est la tension limite de sécurité en alternatif dans un local humide ?",
+          "reponses": [
+            "50 V",
+            "25 V",
+            "12 V",
+            "230 V"
+          ],
+          "bonne": 1,
+          "explication": "25 V en alternatif dans un local humide, contre 50 V en local sec."
+        },
+        {
+          "id": "q414",
+          "fiche_id": "dangers",
+          "type": "qcm",
+          "enonce": "En courant continu, la tension limite de sécurité en local sec est de…",
+          "reponses": [
+            "50 V",
+            "120 V",
+            "25 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "120 V en continu dans un local sec (60 V en local humide). Le continu est un peu moins dangereux que l'alternatif à tension égale."
+        },
+        {
+          "id": "q415",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Quelle mesure protège en premier contre les contacts directs ?",
+          "reponses": [
+            "Le différentiel seul",
+            "L'isolation des conducteurs et les capots",
+            "La mise à la terre",
+            "Le fusible"
+          ],
+          "bonne": 1,
+          "explication": "On empêche d'abord l'accès aux parties sous tension : isolation, capots, éloignement. Le différentiel 30 mA vient en complément."
+        },
+        {
+          "id": "q416",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Un appareil de classe II (double isolation, symbole du carré dans un carré)…",
+          "reponses": [
+            "doit être relié à la terre",
+            "n'a pas besoin de conducteur de terre",
+            "fonctionne en 12 V",
+            "est interdit en salle de bains"
+          ],
+          "bonne": 1,
+          "explication": "La double isolation remplace la terre : sa fiche n'a pas de broche de terre."
+        },
+        {
+          "id": "q417",
+          "fiche_id": "contacts",
+          "type": "qcm",
+          "enonce": "Un appareil de classe I…",
+          "reponses": [
+            "a sa carcasse métallique reliée à la terre",
+            "n'a pas de terre",
+            "fonctionne uniquement en continu",
+            "est à double isolation"
+          ],
+          "bonne": 0,
+          "explication": "Classe I : les masses sont reliées à la terre. En cas de défaut, le différentiel coupe."
+        },
+        {
+          "id": "q418",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Le bouton « test » d'un différentiel sert à…",
+          "reponses": [
+            "couper le courant en cas d'urgence",
+            "vérifier qu'il déclenche bien, à faire régulièrement",
+            "le réarmer",
+            "mesurer la fuite"
+          ],
+          "bonne": 1,
+          "explication": "Le bouton simule une fuite : le différentiel doit couper. On le teste par exemple une fois par mois."
+        },
+        {
+          "id": "q419",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Un différentiel déclenche sans raison apparente. Que faire ?",
+          "reponses": [
+            "Le shunter",
+            "Chercher le défaut, par exemple un appareil en fuite, et ne jamais le neutraliser",
+            "Le remplacer par un fusible",
+            "Augmenter son calibre"
+          ],
+          "bonne": 1,
+          "explication": "Un déclenchement signale une fuite vers la terre. On isole les appareils un par un pour trouver le coupable."
+        },
+        {
+          "id": "q420",
+          "fiche_id": "protections",
+          "type": "qcm",
+          "enonce": "Quel extincteur pour un feu d'origine électrique ?",
+          "reponses": [
+            "À eau",
+            "À mousse",
+            "Au CO2 (ou à poudre)",
+            "Un seau de sable uniquement"
+          ],
+          "bonne": 2,
+          "explication": "Jamais d'eau sur un feu électrique. On coupe le courant et on utilise du CO2 ou de la poudre."
+        }
+      ],
+      "theme": "Sécurité et habilitation"
     },
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 9,
+      "ordre": 12,
       "fiches": [
         {
           "id": "principe",
@@ -2758,7 +3688,623 @@
           ],
           "explication": "S-C-I-V, puis l'attestation de consignation remise au chargé de travaux."
         }
-      ]
+      ],
+      "theme": "Sécurité et habilitation"
+    },
+    {
+      "id": "voisinage",
+      "titre": "Le voisinage : zones et distances",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "zones",
+          "titre": "Les zones autour d'une pièce nue sous tension",
+          "contenu": "Une pièce nue sous tension est une partie conductrice accessible, sous tension, sans isolation : barre, borne, fil dénudé.\n\nEn basse tension, la norme NF C 18-510 définit des zones autour d'elle :\n\n• Zone 4, voisinage renforcé : de 0 à 30 cm (DLVR, distance limite de voisinage renforcé).\n• Zone 1, voisinage simple : de 30 cm à 3 m (DLVS, distance limite de voisinage simple).\n• Zone 0 : au-delà de 3 m, hors voisinage.\n\nEn haute tension, la DLVS est aussi de 3 m (jusqu'à 50 kV) et il existe une distance minimale d'approche (DMA) à ne jamais franchir sans habilitation spécifique.\n\nUne armoire fermée, capots en place : les pièces nues sont hors de portée, il n'y a pas de voisinage tant qu'on n'ouvre pas.",
+          "image": "zones.png"
+        },
+        {
+          "id": "hors_portee",
+          "titre": "Mettre hors de portée",
+          "contenu": "Le plus sûr est de travailler hors tension. Sinon, on met les pièces nues hors de portée :\n\n• Éloignement : rester en dehors des zones.\n• Obstacle : écran, capot, protecteur.\n• Isolation : nappe isolante posée sur les pièces nues.\n\nUne fois hors de portée, on n'est plus au voisinage. On balise la zone de travail pour empêcher l'accès des personnes non concernées.\n\nLes locaux d'accès réservé aux électriciens (LAREE) sont signalés et fermés à clé ou verrouillés.",
+          "image": "hors_portee.png"
+        },
+        {
+          "id": "qui_peut",
+          "titre": "Qui peut faire quoi au voisinage",
+          "contenu": "Zone 1 (voisinage simple) : un B0 peut y réaliser des travaux non électriques, sous la direction d'un chargé de chantier.\n\nZone 4 (voisinage renforcé) : réservée aux habilités avec la lettre V (B1V, B2V, BR…), avec les EPI. Un B0 ne peut y travailler que si les pièces sont mises hors de portée.\n\nLe surveillant de sécurité électrique veille en permanence à la sécurité des opérateurs vis-à-vis du risque électrique.\n\nRéflexe : travailler au voisinage n'est jamais une facilité, c'est un risque. On privilégie toujours la mise hors tension.",
+          "image": "qui_peut.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1201",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "En basse tension, la zone de voisinage renforcé (zone 4) s'étend jusqu'à…",
+          "reponses": [
+            "3 m",
+            "30 cm",
+            "1 m",
+            "10 cm"
+          ],
+          "bonne": 1,
+          "explication": "DLVR = 30 cm en BT. En deçà, il faut la lettre V et les EPI."
+        },
+        {
+          "id": "q1202",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "La distance limite de voisinage simple (DLVS) en basse tension est de…",
+          "reponses": [
+            "30 cm",
+            "1 m",
+            "3 m",
+            "5 m"
+          ],
+          "bonne": 2,
+          "explication": "De 30 cm à 3 m : zone 1, voisinage simple."
+        },
+        {
+          "id": "q1203",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "Au-delà de 3 m d'une pièce nue sous tension BT, on est…",
+          "reponses": [
+            "en zone 4",
+            "en zone 1",
+            "hors zone de voisinage (zone 0)",
+            "en zone 2"
+          ],
+          "bonne": 2,
+          "explication": "Plus de contrainte liée au voisinage, mais on reste vigilant."
+        },
+        {
+          "id": "q1204",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "Une pièce nue sous tension, c'est…",
+          "reponses": [
+            "un fil isolé",
+            "une partie conductrice accessible et sous tension, sans isolation",
+            "une prise fermée",
+            "une masse reliée à la terre"
+          ],
+          "bonne": 1,
+          "explication": "Jeu de barres, borne de disjoncteur, fil dénudé…"
+        },
+        {
+          "id": "q1205",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "Une armoire électrique fermée, capots en place : les pièces nues sont…",
+          "reponses": [
+            "en zone 4",
+            "hors de portée : pas de voisinage tant qu'elle est fermée",
+            "en zone 1",
+            "consignées"
+          ],
+          "bonne": 1,
+          "explication": "Le voisinage commence quand on ouvre l'armoire ou qu'on retire un capot."
+        },
+        {
+          "id": "q1206",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "Un ouvrier peint un mur à 2 m d'un jeu de barres nu sous tension. Il est en…",
+          "reponses": [
+            "zone 4",
+            "zone 1, voisinage simple",
+            "zone 0",
+            "zone 3"
+          ],
+          "bonne": 1,
+          "explication": "Entre 30 cm et 3 m : voisinage simple. Un B0 encadré peut y travailler."
+        },
+        {
+          "id": "q1207",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "La DMA, distance minimale d'approche, concerne…",
+          "reponses": [
+            "la basse tension uniquement",
+            "la haute tension : distance à ne jamais franchir sans habilitation spécifique",
+            "les échelles",
+            "le balisage"
+          ],
+          "bonne": 1,
+          "explication": "En HT, un arc peut se former à distance : la DMA protège de l'amorçage."
+        },
+        {
+          "id": "q1208",
+          "fiche_id": "zones",
+          "type": "qcm",
+          "enonce": "En haute tension, la zone de voisinage simple s'étend jusqu'à…",
+          "reponses": [
+            "30 cm",
+            "1 m",
+            "3 m au moins",
+            "10 cm"
+          ],
+          "bonne": 2,
+          "explication": "3 m jusqu'à 50 kV, davantage au-delà."
+        },
+        {
+          "id": "q1209",
+          "fiche_id": "hors_portee",
+          "type": "qcm",
+          "enonce": "Une nappe isolante posée sur des pièces nues sous tension…",
+          "reponses": [
+            "ne change rien",
+            "supprime le voisinage : les pièces sont mises hors de portée",
+            "remplace la consignation",
+            "est interdite"
+          ],
+          "bonne": 1,
+          "explication": "C'est une mise hors de portée par isolation. Elle ne remplace pas une consignation pour travailler dessus."
+        },
+        {
+          "id": "q1210",
+          "fiche_id": "hors_portee",
+          "type": "qcm",
+          "enonce": "Le balisage de la zone de travail sert à…",
+          "reponses": [
+            "décorer",
+            "délimiter la zone et empêcher l'accès des personnes non concernées",
+            "remplacer la VAT",
+            "signaler le compteur"
+          ],
+          "bonne": 1,
+          "explication": "Rubans, barrières, pancartes : personne d'autre n'entre."
+        },
+        {
+          "id": "q1211",
+          "fiche_id": "hors_portee",
+          "type": "qcm",
+          "enonce": "Un local d'accès réservé aux électriciens (LAREE) doit être…",
+          "reponses": [
+            "ouvert à tous",
+            "signalé et fermé à clé ou verrouillé",
+            "sans éclairage",
+            "en extérieur"
+          ],
+          "bonne": 1,
+          "explication": "Seules les personnes habilitées ou accompagnées y entrent."
+        },
+        {
+          "id": "q1212",
+          "fiche_id": "hors_portee",
+          "type": "qcm",
+          "enonce": "Un écran de protection posé entre l'opérateur et les pièces nues…",
+          "reponses": [
+            "est inutile",
+            "met hors de portée : on n'est plus au voisinage",
+            "remplace la VAT",
+            "augmente le risque"
+          ],
+          "bonne": 1,
+          "explication": "Mise hors de portée par obstacle."
+        },
+        {
+          "id": "q1213",
+          "fiche_id": "hors_portee",
+          "type": "qcm",
+          "enonce": "Travailler au voisinage sans y être obligé…",
+          "reponses": [
+            "est normal",
+            "doit être évité : on privilégie la mise hors tension",
+            "est réservé aux B0",
+            "est plus rapide donc préférable"
+          ],
+          "bonne": 1,
+          "explication": "Le voisinage est une situation à risque, jamais une facilité."
+        },
+        {
+          "id": "q1214",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "La lettre V d'une habilitation autorise à travailler…",
+          "reponses": [
+            "hors tension uniquement",
+            "en zone de voisinage renforcé (zone 4)",
+            "sur le réseau HT",
+            "de nuit"
+          ],
+          "bonne": 1,
+          "explication": "B1V, B2V : exécutant ou chargé de travaux pouvant travailler à moins de 30 cm de pièces nues sous tension, avec EPI."
+        },
+        {
+          "id": "q1215",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "Un B0 peut-il travailler en zone 4 (moins de 30 cm de pièces nues sous tension) ?",
+          "reponses": [
+            "Oui, librement",
+            "Non, sauf si les pièces sont mises hors de portée (nappe, écran)",
+            "Oui, avec des gants en cuir",
+            "Oui, la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Le B0 n'est pas électricien : la zone 4 lui est interdite tant que le risque existe."
+        },
+        {
+          "id": "q1216",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "Le surveillant de sécurité électrique…",
+          "reponses": [
+            "remplace le chargé de travaux",
+            "veille en permanence à la sécurité des opérateurs vis-à-vis du risque électrique",
+            "fait les mesures",
+            "consigne l'ouvrage"
+          ],
+          "bonne": 1,
+          "explication": "Il ne fait rien d'autre que surveiller : c'est sa seule tâche."
+        },
+        {
+          "id": "q1217",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "En zone 4, un B1V doit porter…",
+          "reponses": [
+            "des gants en tissu",
+            "des EPI adaptés : gants isolants, écran facial",
+            "un casque de chantier seulement",
+            "rien de particulier"
+          ],
+          "bonne": 1,
+          "explication": "Le voisinage renforcé impose les EPI contre le contact et l'arc."
+        },
+        {
+          "id": "q1218",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "Le chargé de chantier (B0)…",
+          "reponses": [
+            "réalise des travaux électriques",
+            "dirige des travaux non électriques à proximité d'installations",
+            "consigne",
+            "dépanne"
+          ],
+          "bonne": 1,
+          "explication": "Peinture, maçonnerie, plomberie… près d'installations électriques."
+        },
+        {
+          "id": "q1219",
+          "fiche_id": "qui_peut",
+          "type": "qcm",
+          "enonce": "Avant d'ouvrir une armoire pour un dépannage, un BR doit…",
+          "reponses": [
+            "couper toute l'usine",
+            "évaluer le risque, baliser, porter les EPI ou mettre hors tension",
+            "appeler un B0",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "L'analyse du risque précède toute intervention."
+        },
+        {
+          "id": "q1220",
+          "fiche_id": "hors_portee",
+          "type": "ordre",
+          "enonce": "Avant un travail à proximité de pièces nues sous tension, remets les étapes dans l'ordre.",
+          "reponses": [
+            "Analyser le risque et identifier les pièces sous tension",
+            "Mettre hors tension si possible, sinon hors de portée (nappe, écran)",
+            "Baliser la zone de travail",
+            "Porter les EPI adaptés",
+            "Commencer le travail sous surveillance"
+          ],
+          "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
+        }
+      ],
+      "ordre": 13
+    },
+    {
+      "id": "epi",
+      "titre": "EPI et outillage isolé",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "epi_liste",
+          "titre": "Les équipements de protection individuelle",
+          "contenu": "Les EPI sont fournis gratuitement par l'employeur.\n\n• Gants isolants : classe 00 jusqu'à 500 V, classe 0 jusqu'à 1 000 V (puis classes 1 à 4 pour la HT). À vérifier avant chaque usage : contrôle visuel et gonflage pour détecter un trou. Rangés dans leur boîte, à l'abri de la lumière et des objets coupants.\n• Écran facial anti-UV : protège des projections et du rayonnement d'un arc électrique.\n• Casque isolant : chute d'objets et contact avec la tête.\n• Vêtements en fibres non fondantes (coton), sans pièces métalliques apparentes. Chaussures de sécurité isolantes.\n\nPas de montre, bague, chaîne : le métal conduit et brûle.",
+          "image": "epi_liste.png"
+        },
+        {
+          "id": "epc",
+          "titre": "Protections collectives et outillage",
+          "contenu": "Équipements de protection collective : tapis isolant au sol devant le tableau, nappe isolante sur les pièces nues, écrans, balisage, cadenas de consignation et pancartes.\n\nOutillage isolé 1 000 V : marquage « 1000 V » avec le symbole du double triangle (norme IEC 60900). Tournevis, pinces, clés. Un isolant fendu = outil à jeter.\n\nVAT : l'appareil dédié à la vérification d'absence de tension. Perche isolante : pour manœuvrer ou dégager une victime à distance.\n\nÉchelle : isolante (bois, fibre), jamais métallique près de lignes.",
+          "image": "epc.png"
+        },
+        {
+          "id": "verifier",
+          "titre": "Vérifier avant d'utiliser",
+          "contenu": "Une protection abîmée ne protège plus.\n\nGants : date de contrôle, classe adaptée à la tension, contrôle visuel, gonflage. Au moindre doute, on remplace.\n\nOutils : marquage 1 000 V présent, isolant intact sur toute la longueur.\n\nVAT : test sur une source connue avant et après chaque vérification.\n\nÉcran facial : propre, sans rayures. Casque : coque sans fissure, date de fabrication.\n\nLe contrôle périodique des EPI est tracé (registre). Un EPI est personnel : on ne le prête pas.",
+          "image": "verifier.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1301",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Des gants isolants de classe 0 sont prévus jusqu'à…",
+          "reponses": [
+            "50 V",
+            "1 000 V",
+            "500 V",
+            "10 000 V"
+          ],
+          "bonne": 1,
+          "explication": "Classe 0 : 1 000 V, la classe standard en basse tension."
+        },
+        {
+          "id": "q1302",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Des gants isolants de classe 00 sont prévus jusqu'à…",
+          "reponses": [
+            "500 V",
+            "1 000 V",
+            "7 500 V",
+            "50 V"
+          ],
+          "bonne": 0,
+          "explication": "Classe 00 : 500 V. Suffisant pour du 230 / 400 V."
+        },
+        {
+          "id": "q1303",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Avant chaque utilisation, les gants isolants…",
+          "reponses": [
+            "se lavent",
+            "se vérifient visuellement et par gonflage",
+            "se poudrent",
+            "se chauffent"
+          ],
+          "bonne": 1,
+          "explication": "Un trou invisible se révèle en gonflant le gant : l'air s'échappe."
+        },
+        {
+          "id": "q1304",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Les gants isolants se rangent…",
+          "reponses": [
+            "dans la poche",
+            "dans leur boîte, à l'abri de la lumière et des objets coupants",
+            "sur le tableau",
+            "en vrac dans le camion"
+          ],
+          "bonne": 1,
+          "explication": "Le caoutchouc vieillit à la lumière et se perce facilement."
+        },
+        {
+          "id": "q1305",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "L'écran facial protège…",
+          "reponses": [
+            "du bruit",
+            "des projections et des UV d'un arc électrique",
+            "de la pluie",
+            "de la poussière seulement"
+          ],
+          "bonne": 1,
+          "explication": "Un arc électrique projette du métal en fusion et un rayonnement intense."
+        },
+        {
+          "id": "q1306",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Les vêtements de travail de l'électricien doivent être…",
+          "reponses": [
+            "synthétiques et moulants",
+            "en fibres non fondantes (coton), sans pièces métalliques apparentes",
+            "réfléchissants uniquement",
+            "en cuir"
+          ],
+          "bonne": 1,
+          "explication": "Le synthétique fond sur la peau en cas d'arc. Le métal conduit."
+        },
+        {
+          "id": "q1307",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Une montre ou une bague métallique…",
+          "reponses": [
+            "est sans risque",
+            "doit être retirée : conductrice, elle peut provoquer un court-circuit ou une brûlure",
+            "est obligatoire",
+            "isole"
+          ],
+          "bonne": 1,
+          "explication": "Une bague qui court-circuite une batterie chauffe au rouge en une seconde."
+        },
+        {
+          "id": "q1308",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Le casque isolant est utile…",
+          "reponses": [
+            "uniquement en haute tension",
+            "contre la chute d'objets et le contact de la tête avec des pièces sous tension",
+            "jamais",
+            "en salle de bains"
+          ],
+          "bonne": 1,
+          "explication": "Dans une armoire ou sous un plafond technique, la tête est exposée."
+        },
+        {
+          "id": "q1309",
+          "fiche_id": "epi_liste",
+          "type": "qcm",
+          "enonce": "Qui fournit les EPI ?",
+          "reponses": [
+            "Le salarié",
+            "L'employeur, gratuitement",
+            "L'organisme de formation",
+            "Le fournisseur d'électricité"
+          ],
+          "bonne": 1,
+          "explication": "C'est une obligation de l'employeur. Le salarié doit les porter et en prendre soin."
+        },
+        {
+          "id": "q1310",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "Un outil isolé conforme porte le marquage…",
+          "reponses": [
+            "CE seulement",
+            "1000 V avec le symbole du double triangle",
+            "230 V",
+            "une étoile"
+          ],
+          "bonne": 1,
+          "explication": "Norme IEC 60900 : le double triangle garantit l'isolation testée à 10 000 V."
+        },
+        {
+          "id": "q1311",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "Un tournevis isolé dont la gaine est fendue…",
+          "reponses": [
+            "reste utilisable",
+            "doit être mis au rebut",
+            "se répare avec du ruban",
+            "est réservé au 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Le ruban adhésif n'est pas un isolant certifié. On remplace."
+        },
+        {
+          "id": "q1312",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "Le tapis isolant est…",
+          "reponses": [
+            "un EPI",
+            "une protection collective posée au sol devant le tableau",
+            "un outil de mesure",
+            "un balisage"
+          ],
+          "bonne": 1,
+          "explication": "Il isole l'opérateur du sol pendant une intervention sur un tableau."
+        },
+        {
+          "id": "q1313",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "La nappe isolante sert à…",
+          "reponses": [
+            "s'asseoir",
+            "recouvrir des pièces nues sous tension pour les mettre hors de portée",
+            "essuyer",
+            "mesurer"
+          ],
+          "bonne": 1,
+          "explication": "Protection collective : elle protège tous ceux qui travaillent à proximité."
+        },
+        {
+          "id": "q1314",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "Près de lignes électriques, une échelle…",
+          "reponses": [
+            "métallique est idéale",
+            "doit être isolante (bois, fibre)",
+            "n'est jamais utilisée",
+            "en aluminium est obligatoire"
+          ],
+          "bonne": 1,
+          "explication": "Une échelle en aluminium qui touche une ligne électrise celui qui la tient."
+        },
+        {
+          "id": "q1315",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "Le cadenas de consignation…",
+          "reponses": [
+            "est un EPI",
+            "empêche la remise sous tension, chaque intervenant a le sien",
+            "sert à fermer le camion",
+            "est facultatif"
+          ],
+          "bonne": 1,
+          "explication": "Plusieurs équipes : plusieurs cadenas sur le même appareil, personne ne peut remettre sous tension seul."
+        },
+        {
+          "id": "q1316",
+          "fiche_id": "epc",
+          "type": "qcm",
+          "enonce": "La perche isolante sert à…",
+          "reponses": [
+            "balayer",
+            "manœuvrer ou dégager une victime à distance",
+            "mesurer la tension",
+            "ranger les gants"
+          ],
+          "bonne": 1,
+          "explication": "Dégager une personne collée à un conducteur sans se mettre soi-même en danger."
+        },
+        {
+          "id": "q1317",
+          "fiche_id": "verifier",
+          "type": "qcm",
+          "enonce": "Un EPI abîmé…",
+          "reponses": [
+            "protège encore un peu",
+            "ne protège plus : on le remplace",
+            "est recyclé en outil",
+            "se prête"
+          ],
+          "bonne": 1,
+          "explication": "Il donne une fausse impression de sécurité, c'est pire que rien."
+        },
+        {
+          "id": "q1318",
+          "fiche_id": "verifier",
+          "type": "qcm",
+          "enonce": "Une pancarte « ne pas manœuvrer »…",
+          "reponses": [
+            "remplace le cadenas",
+            "complète le cadenas pour prévenir",
+            "est décorative",
+            "remplace la VAT"
+          ],
+          "bonne": 1,
+          "explication": "Le cadenas bloque, la pancarte explique pourquoi et qui a consigné."
+        },
+        {
+          "id": "q1319",
+          "fiche_id": "verifier",
+          "type": "qcm",
+          "enonce": "Un EPI est…",
+          "reponses": [
+            "collectif",
+            "personnel : on ne le prête pas",
+            "à usage unique",
+            "facultatif"
+          ],
+          "bonne": 1,
+          "explication": "Ajusté à la personne et suivi individuellement."
+        },
+        {
+          "id": "q1320",
+          "fiche_id": "verifier",
+          "type": "ordre",
+          "enonce": "Avant de mettre des gants isolants, remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier la date de contrôle et la classe",
+            "Contrôle visuel : ni trou ni fissure",
+            "Gonfler pour vérifier l'étanchéité",
+            "Enfiler, avec sous-gants et surgants si prévus"
+          ],
+          "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
+        }
+      ],
+      "ordre": 14
     }
   ]
 }

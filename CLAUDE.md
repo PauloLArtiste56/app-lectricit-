@@ -95,6 +95,12 @@ tard sans casser la structure.
 ```
 
 ## Modules de contenu
+Objectif de Paulo : beaucoup de modules (jusqu'à 100) pour ne jamais en faire le tour.
+Chaque module : un `theme` (section de l'accueil), 3 fiches illustrées, 20 questions
+(qcm et ordre). Les fiches sont illustrées par un schéma dessiné ou par une « carte résumé »
+générée (`tools/schemas/generer_schemas.py`, fonction `carte_resume`).
+
+Modules existants (par thème) :
 1. Grandeurs (U, I, R, P) et loi d'Ohm
 2. Courant continu / alternatif
 3. Circuits série / parallèle
@@ -104,8 +110,17 @@ tard sans casser la structure.
 7. Installation domestique (tableau, sections et calibres, salle de bains)
 8. Énergie et consommation (kWh, puissance souscrite, économies)
 9. Habilitation électrique : premiers repères (NF C 18-510, symboles, consignation)
+10. Moteurs et transformateurs
+11. Éclairage et commandes
+12. Prises, interrupteurs et câblage pratique
+13. Le voisinage : zones et distances
+14. EPI et outillage isolé
 
-Environ 10 questions par module. Paulo fait confiance à Claude Code pour rédiger les
+Sujets à venir : parafoudre, locaux à risques (extérieur, garage, piscine), habilitation B0/BS
+en détail, BR, B1V/B2V, premiers secours, incendie électrique, magnétisme, électronique de
+base, photovoltaïque, domotique, véhicule électrique…
+
+20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
 NF C 18-510) pour choisir les sujets, mais ne jamais reprendre de QCM (questionnaires à
 choix multiples) existants d'organismes de formation. Paulo relit et corrige si besoin.

@@ -32,7 +32,7 @@ Future<void> _ouvrirStats(WidgetTester tester) async {
 
 /// Écran de test assez haut pour afficher les 5 modules sans défiler.
 void _ecranHaut(WidgetTester tester) {
-  tester.view.physicalSize = const Size(480, 2000);
+  tester.view.physicalSize = const Size(480, 3200);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }
@@ -72,6 +72,6 @@ void main() {
     // Et l'accueil est bien repassé à zéro.
     await tester.tap(find.text('Accueil'));
     await tester.pumpAndSettle();
-    expect(find.text('0/20 questions réussies'), findsNWidgets(9));
+    expect(find.text('0/20 questions réussies'), findsNWidgets(14));
   });
 }

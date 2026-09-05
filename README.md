@@ -8,9 +8,11 @@ une étape à la fois.
 
 ## État du projet
 
-✅ V1 complète et enrichie : 9 modules, chacun avec 3 fiches illustrées et 10 questions
-(90 questions au total, dont des questions « remettre dans l'ordre »). Révision ciblée des
-points faibles, questions et réponses mélangées, bouton « Revoir la fiche » après une erreur. Le cadrage complet (périmètre, modèle de données,
+✅ V1 complète et enrichie : 14 modules regroupés par thème, chacun avec 3 fiches illustrées
+et 20 questions (280 questions, dont des questions « remettre dans l'ordre »). Séance du jour
+avec révision espacée, série de jours, révision des points faibles, questions et réponses
+mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
+modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,
 conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
 Parcours : Accueil → Module → Fiches → Quiz (feedback immédiat) → Résultat (« Refaire les
@@ -29,21 +31,23 @@ développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
 ## Contenu
 
-1. Grandeurs électriques et loi d'Ohm
-2. Courant continu / alternatif
-3. Circuits série / parallèle
-4. Symboles et schémas
-5. Dangers et sécurité de base
-6. Mesures et appareils (multimètre, pince, VAT)
-7. Installation domestique (tableau, sections, salle de bains)
-8. Énergie et consommation
-9. Habilitation électrique : premiers repères (NF C 18-510, symboles, consignation)
+Les bases : grandeurs et loi d'Ohm · continu / alternatif · série / parallèle · symboles et
+schémas · énergie et consommation · moteurs et transformateurs.
+
+Installation et pratique : mesures et appareils · installation domestique · éclairage et
+commandes · prises, interrupteurs et câblage.
+
+Sécurité et habilitation : dangers et sécurité de base · habilitation (premiers repères) ·
+voisinage (zones et distances) · EPI et outillage isolé.
 
 Tout le contenu est dans `assets/content.json` : pour ajouter ou corriger une fiche ou une
 question, c'est le seul fichier à modifier. Les tests vérifient sa cohérence.
 
 Deux types de question : `qcm` (une bonne réponse parmi 3 ou 4) et `ordre` (les `reponses`
 sont écrites dans le bon ordre, l'appli les mélange et l'utilisateur les remet en place).
+Chaque module a un `theme` qui sert de section sur l'accueil. Les fiches sont illustrées soit
+par un schéma dessiné, soit par une « carte résumé » générée à partir de points clés
+(`tools/schemas/generer_schemas.py`).
 
 ## Vérification automatique
 

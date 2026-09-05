@@ -29,12 +29,16 @@ class AccueilScreen extends StatelessWidget {
           const Center(child: CircularProgressIndicator()),
         _ => ListView.builder(
             padding: const EdgeInsets.all(12),
-            // Première ligne : la carte de révision ; ensuite les modules.
+            // Première ligne : la carte d'entraînement ; ensuite les modules,
+            // avec un titre de section à chaque changement de thème.
             itemCount: etat.modules.length + 1,
             itemBuilder: (context, index) {
               if (index == 0) return const _CarteEntrainement();
               final module = etat.modules[index - 1];
-              return ModuleCard(
+              final precedent = index >= 2 ? etat.modules[index - 2] : null;
+              final nouveauTheme =
+                  module.theme.isNotEmpty && module.theme != precedent?.theme;
+              final carte = ModuleCard(
                 module: module,
                 questionsReussies: etat.questionsReussies(module),
                 onTap: () => Navigator.of(context).push(
@@ -42,6 +46,22 @@ class AccueilScreen extends StatelessWidget {
                     builder: (_) => ModuleScreen(module: module),
                   ),
                 ),
+              );
+              if (!nouveauTheme) return carte;
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(4, 16, 4, 6),
+                    child: Text(
+                      module.theme,
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                    ),
+                  ),
+                  carte,
+                ],
               );
             },
           ),

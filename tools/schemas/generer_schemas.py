@@ -437,3 +437,38 @@ c += rect(80, 500, 1040, 200, "white", FIL, 4, 24)
 c += t(W/2, 550, "En haute tension, ou s'il y a un risque de réalimentation :", 24, TXT) + t(W/2, 585, "+ mise à la terre et en court-circuit", 26, TXT, weight="bold")
 c += t(W/2, 640, "Déconsignation : dans l'ordre inverse", 24, GRIS) + t(W/2, 675, "EPI : gants isolants, écran facial, tapis et outils isolés", 22, GRIS)
 svg("consignation", c)
+
+# ======================= Gabarit "fiche résumé" =======================
+# Pour illustrer une fiche sans dessin spécifique : titre, pictogramme
+# (initiales), 3 à 4 points clés.
+def carte_resume(nom, titre_s, initiales, points, col):
+    c = titre(titre_s)
+    taille = 72 if len(initiales) <= 2 else (56 if len(initiales) <= 3 else 40)
+    c += cercle(190, 330, 110, col, col) + t(190, 330 + taille * 0.36, initiales, taille, "white", weight="bold")
+    y0 = 200 if len(points) > 3 else 240
+    for i, (gras, detail) in enumerate(points):
+        y = y0 + i * 115
+        c += cercle(380, y - 8, 12, col, col)
+        c += t(420, y, gras, 30, TXT, "start", "bold")
+        c += t(420, y + 40, detail, 24, GRIS, "start")
+    svg(nom, c)
+
+RESUMES = [
+ ("principe_moteur", "Le moteur électrique", "M", [("Électrique → mécanique", "un courant dans un champ magnétique subit une force"), ("Stator fixe, rotor tournant", "l'arbre de sortie est sur le rotor"), ("Asynchrone triphasé", "le plus répandu : robuste, sans balais"), ("Plaque signalétique", "tension, courant, puissance, tr/min, cos φ")], BLEU),
+ ("demarrage", "Démarrer et protéger un moteur", "5×", [("Courant de démarrage", "5 à 8 × le courant nominal"), ("Disjoncteur moteur + relais thermique", "court-circuit + surcharge"), ("Contacteur et auto-maintien", "Marche / Arrêt à distance"), ("Étoile sur 400 V, triangle sur 230 V", "permuter 2 phases = sens inverse")], AMBRE),
+ ("transformateur", "Le transformateur", "U2/U1", [("Alternatif uniquement", "primaire et secondaire sur un noyau de fer"), ("m = U2 / U1 = N2 / N1", "abaisseur si m < 1"), ("Puissance conservée", "tension ÷ 10 → courant × 10"), ("Séparation et sécurité", "prise rasoir, TBTS 12 V")], VERT),
+ ("lampes", "Les types de lampes", "LED", [("Lumens = lumière, watts = conso", "LED 10 W ≈ 800 lm ≈ incandescence 60-75 W"), ("Culots", "E27, E14 à vis · GU10 230 V · GU5.3 12 V"), ("Température de couleur", "2 700 K chaud · 4 000 K neutre · 6 500 K froid"), ("Durée de vie LED", "15 000 à 50 000 heures")], AMBRE),
+ ("commandes", "Commander l'éclairage", "VV", [("Simple allumage", "1 interrupteur, coupe la phase"), ("Va-et-vient", "2 interrupteurs, 2 navettes"), ("Télérupteur", "boutons-poussoirs, points illimités"), ("Minuterie, détecteur", "extinction auto, allumage au passage")], BLEU),
+ ("variation", "Variateurs et pièges des LED", "~", [("Variateur", "lampes dimmables seulement"), ("LED qui reste allumée", "courant de fuite : voyant, neutre coupé"), ("Détecteurs", "crépusculaire, mouvement"), ("Spots 12 V", "transformateur ou driver adapté")], VERT),
+ ("prises", "Prises de courant", "16A", [("Prise 16 A 2P+T", "phase, neutre, terre, obturateurs"), ("Hauteur mini", "5 cm (16 A), 12 cm (32 A)"), ("Multiprise 16 A", "3 500 W maximum"), ("Prise commandée", "via un interrupteur, pour une lampe")], BLEU),
+ ("raccordement", "Raccorder proprement", "⏚", [("Hors tension, vérifiée", "couper le disjoncteur, VAT"), ("Dénuder 10 à 12 mm", "aucun cuivre apparent"), ("L, N, ⏚", "phase, neutre, terre vert/jaune"), ("Bornes", "à vis serrées, ou automatiques (section admise)")], VERT),
+ ("cables", "Fils, câbles et gaines", "R2V", [("H07V-U rigide, H07V-K souple", "fils isolés"), ("U-1000 R2V", "câble extérieur et enterré"), ("Gaine ICTA", "protège et guide les conducteurs"), ("Enterré : 50 cm", "grillage avertisseur rouge au-dessus")], AMBRE),
+ ("zones", "Zones de voisinage (BT)", "30cm", [("Zone 4 : 0 à 30 cm", "voisinage renforcé, lettre V + EPI"), ("Zone 1 : 30 cm à 3 m", "voisinage simple"), ("Zone 0 : au-delà de 3 m", "hors voisinage"), ("Armoire fermée", "pas de voisinage tant que fermée")], ROUGE),
+ ("hors_portee", "Mettre hors de portée", "STOP", [("Éloignement", "rester hors des zones"), ("Obstacle", "écran, capot, protecteur"), ("Isolation", "nappe isolante sur les pièces nues"), ("Balisage et LAREE", "zone délimitée, local verrouillé")], AMBRE),
+ ("qui_peut", "Qui peut faire quoi", "B0", [("Zone 1", "B0 encadré : travaux non électriques"), ("Zone 4", "habilités avec V, EPI obligatoires"), ("Surveillant de sécurité", "veille en permanence"), ("Réflexe", "privilégier la mise hors tension")], BLEU),
+ ("epi_liste", "Les EPI", "EPI", [("Gants isolants", "classe 00 : 500 V · classe 0 : 1 000 V"), ("Écran facial", "projections et UV de l'arc"), ("Casque, chaussures isolantes", "vêtements coton, sans métal"), ("Ni montre ni bague", "le métal conduit et brûle")], ROUGE),
+ ("epc", "Protections collectives et outils", "1000V", [("Tapis, nappe, écran", "protègent tout le monde"), ("Outils isolés 1 000 V", "double triangle, IEC 60900"), ("Cadenas + pancarte", "personne ne remet sous tension"), ("Échelle isolante", "jamais métallique près des lignes")], VERT),
+ ("verifier", "Vérifier avant d'utiliser", "✓", [("Gants", "date, classe, visuel, gonflage"), ("Outils", "marquage 1000 V, isolant intact"), ("VAT", "test avant et après"), ("EPI abîmé", "ne protège plus : on remplace")], BLEU),
+]
+for nom, titre_s, ini, points, col in RESUMES:
+    carte_resume(nom, titre_s, ini, points, col)
