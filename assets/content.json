@@ -8620,9 +8620,2165 @@
       "ordre": 28
     },
     {
+      "id": "mobilite_legere",
+      "titre": "Vélos, trottinettes et mobilité légère",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "ml_batterie",
+          "titre": "La batterie du vélo électrique",
+          "contenu": "Un vélo à assistance électrique (VAE) embarque une batterie lithium-ion de 36 ou 48 V, 400 à 750 Wh, soit 50 à 120 km selon le mode. Une trottinette : 36 à 60 V, 250 à 1 000 Wh.\n\nLa batterie contient des dizaines de cellules 18650 ou 21700 assemblées en série et en parallèle, surveillées par un BMS (système de gestion) qui équilibre, limite la charge et la décharge, coupe en cas de température anormale.\n\nUne batterie vieillit : 500 à 1 000 cycles complets avant de perdre 20 à 30 % de capacité. Stockage idéal : entre 30 et 60 %, au frais.",
+          "image": "ml_batterie.png"
+        },
+        {
+          "id": "ml_moteur",
+          "titre": "Moteur et assistance",
+          "contenu": "Le moteur est un brushless : dans le moyeu (roue avant ou arrière) ou au pédalier (moteur central, plus cher, meilleure gestion). Puissance légale en Europe pour un VAE : 250 W nominal, assistance coupée à 25 km/h.\n\nUn contrôleur convertit le continu de la batterie en triphasé pour le moteur, selon le capteur de pédalage (cadence ou couple). Les speed bikes (45 km/h) sont des cyclomoteurs : immatriculation, casque, assurance.\n\nLes trottinettes sont limitées à 25 km/h, interdites sur les trottoirs, avec assurance obligatoire.",
+          "image": "ml_moteur.png"
+        },
+        {
+          "id": "ml_securite",
+          "titre": "Charger et stocker en sécurité",
+          "contenu": "Les incendies de batteries de trottinettes et vélos se multiplient : chargeur non d'origine, batterie choquée ou modifiée, charge sur un tapis, dans un couloir, la nuit sans surveillance.\n\nRègles : chargeur d'origine, surface non combustible, pièce ventilée, loin des issues, jamais de charge d'une batterie gonflée, percutée ou mouillée. Un feu de lithium ne s'éteint pas à l'eau facilement : sortir, fermer la porte, appeler les pompiers.\n\nLes batteries usagées vont en point de collecte, jamais à la poubelle : une cellule écrasée dans un camion-benne s'enflamme.",
+          "image": "ml_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8901",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "La batterie d'un VAE est typiquement en…",
+          "reponses": [
+            "12 V",
+            "36 ou 48 V",
+            "230 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "Lithium-ion."
+        },
+        {
+          "id": "q8902",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "Une batterie de 500 Wh donne environ…",
+          "reponses": [
+            "5 km",
+            "50 à 100 km",
+            "500 km",
+            "1 km"
+          ],
+          "bonne": 1,
+          "explication": "Selon le mode d'assistance."
+        },
+        {
+          "id": "q8903",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "Le BMS d'une batterie…",
+          "reponses": [
+            "chauffe",
+            "surveille, équilibre et protège les cellules",
+            "charge plus vite",
+            "est un moteur"
+          ],
+          "bonne": 1,
+          "explication": "Coupe en cas d'anomalie."
+        },
+        {
+          "id": "q8904",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "Une batterie lithium fait environ…",
+          "reponses": [
+            "10 cycles",
+            "500 à 1 000 cycles avant de perdre 20 à 30 %",
+            "1 million de cycles",
+            "1 cycle"
+          ],
+          "bonne": 1,
+          "explication": "Vieillissement normal."
+        },
+        {
+          "id": "q8905",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "Pour un stockage long, on laisse la batterie…",
+          "reponses": [
+            "vide",
+            "entre 30 et 60 %, au frais",
+            "pleine au soleil",
+            "dans l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Moins de vieillissement."
+        },
+        {
+          "id": "q8906",
+          "fiche_id": "ml_batterie",
+          "type": "qcm",
+          "enonce": "Les cellules d'une batterie sont assemblées…",
+          "reponses": [
+            "une seule",
+            "en série et en parallèle",
+            "en triangle",
+            "en étoile"
+          ],
+          "bonne": 1,
+          "explication": "Tension et capacité."
+        },
+        {
+          "id": "q8907",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "La puissance légale d'un VAE en Europe est…",
+          "reponses": [
+            "250 W nominal",
+            "1 000 W",
+            "50 W",
+            "5 kW"
+          ],
+          "bonne": 0,
+          "explication": "Assistance coupée à 25 km/h."
+        },
+        {
+          "id": "q8908",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "L'assistance d'un VAE se coupe à…",
+          "reponses": [
+            "10 km/h",
+            "25 km/h",
+            "45 km/h",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà : cyclomoteur."
+        },
+        {
+          "id": "q8909",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "Le moteur d'un VAE est…",
+          "reponses": [
+            "à balais",
+            "brushless",
+            "à vapeur",
+            "thermique"
+          ],
+          "bonne": 1,
+          "explication": "Moyeu ou pédalier."
+        },
+        {
+          "id": "q8910",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "Le contrôleur…",
+          "reponses": [
+            "freine",
+            "convertit le continu en triphasé pour le moteur",
+            "charge la batterie",
+            "pédale"
+          ],
+          "bonne": 1,
+          "explication": "Selon le capteur de pédalage."
+        },
+        {
+          "id": "q8911",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "Un speed bike 45 km/h est…",
+          "reponses": [
+            "un vélo",
+            "un cyclomoteur : immatriculation, casque, assurance",
+            "interdit",
+            "une trottinette"
+          ],
+          "bonne": 1,
+          "explication": "Réglementation différente."
+        },
+        {
+          "id": "q8912",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "Un moteur central (au pédalier)…",
+          "reponses": [
+            "est moins cher",
+            "gère mieux l'assistance",
+            "est dans la roue",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Capteur de couple."
+        },
+        {
+          "id": "q8913",
+          "fiche_id": "ml_moteur",
+          "type": "qcm",
+          "enonce": "Une trottinette électrique est limitée à…",
+          "reponses": [
+            "6 km/h",
+            "25 km/h",
+            "50 km/h",
+            "100 km/h"
+          ],
+          "bonne": 1,
+          "explication": "Interdite sur les trottoirs."
+        },
+        {
+          "id": "q8914",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "La cause fréquente d'incendie de trottinette est…",
+          "reponses": [
+            "le froid",
+            "chargeur non d'origine ou batterie abîmée",
+            "le pneu",
+            "la sonnette"
+          ],
+          "bonne": 1,
+          "explication": "Charge sans surveillance."
+        },
+        {
+          "id": "q8915",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "On charge une batterie de VAE…",
+          "reponses": [
+            "sur un tapis",
+            "sur une surface non combustible, pièce ventilée",
+            "dans le couloir d'évacuation",
+            "sous un lit"
+          ],
+          "bonne": 1,
+          "explication": "Loin des issues."
+        },
+        {
+          "id": "q8916",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "Une batterie gonflée ou percutée…",
+          "reponses": [
+            "se charge normalement",
+            "ne doit plus être chargée ni utilisée",
+            "se répare au ruban adhésif",
+            "est plus puissante"
+          ],
+          "bonne": 1,
+          "explication": "Risque d'emballement thermique."
+        },
+        {
+          "id": "q8917",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "En cas de feu de batterie lithium…",
+          "reponses": [
+            "on l'éteint à la main",
+            "on sort, on ferme la porte, on appelle les pompiers",
+            "on la met dans l'évier",
+            "on souffle dessus"
+          ],
+          "bonne": 1,
+          "explication": "Fumées toxiques, réallumage."
+        },
+        {
+          "id": "q8918",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "Une batterie usagée va…",
+          "reponses": [
+            "à la poubelle",
+            "en point de collecte",
+            "dans la nature",
+            "au composteur"
+          ],
+          "bonne": 1,
+          "explication": "Une cellule écrasée s'enflamme."
+        },
+        {
+          "id": "q8919",
+          "fiche_id": "ml_securite",
+          "type": "qcm",
+          "enonce": "Modifier une batterie pour aller plus vite…",
+          "reponses": [
+            "est conseillé",
+            "est dangereux et illégal",
+            "est gratuit",
+            "ne change rien"
+          ],
+          "bonne": 1,
+          "explication": "BMS contourné."
+        },
+        {
+          "id": "q8920",
+          "fiche_id": "ml_securite",
+          "type": "ordre",
+          "enonce": "Charger un VAE en sécurité : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier l'état de la batterie (pas de choc, pas de gonflement)",
+            "Poser sur une surface non combustible, dans une pièce ventilée",
+            "Brancher avec le chargeur d'origine",
+            "Surveiller et débrancher en fin de charge",
+            "Ranger la batterie au frais"
+          ],
+          "explication": "Routine de sécurité."
+        }
+      ],
+      "ordre": 29
+    },
+    {
+      "id": "automobile",
+      "titre": "Réseau de bord automobile",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "auto_reseau",
+          "titre": "Batterie, alternateur, démarreur",
+          "contenu": "Une voiture thermique fonctionne en 12 V continu (24 V pour les poids lourds). La batterie au plomb (40 à 100 Ah) démarre le moteur : le démarreur appelle 200 à 600 A pendant une seconde. L'alternateur, entraîné par la courroie, recharge la batterie et alimente le véhicule en marche (13,8 à 14,4 V).\n\nLa carrosserie sert de retour (masse) : un seul fil aller pour chaque consommateur. Un mauvais contact de masse est la cause de nombreuses pannes bizarres.\n\nLes véhicules récents ajoutent un réseau 48 V (hybridation légère) et, sur les électriques, un réseau 400 ou 800 V pour la traction.",
+          "image": "auto_reseau.png"
+        },
+        {
+          "id": "auto_circuits",
+          "titre": "Fusibles, relais et calculateurs",
+          "contenu": "Chaque circuit a son fusible (couleur = calibre) dans une ou plusieurs boîtes. Les relais permettent à un petit courant de commande de piloter les gros consommateurs (phares, ventilateur, démarreur).\n\nLes calculateurs communiquent par bus CAN : deux fils torsadés, quelques dizaines de capteurs et actionneurs. La prise OBD permet de lire les défauts avec une valise.\n\nLes faisceaux sont repérés par couleur ; le schéma électrique du constructeur est indispensable pour dépanner sans deviner.",
+          "image": "auto_circuits.png"
+        },
+        {
+          "id": "auto_securite",
+          "titre": "Dépanner en sécurité",
+          "contenu": "Débrancher la batterie : la borne négative d'abord (pour éviter un court-circuit entre la clé et la carrosserie), la positive en dernier au remontage. Un court-circuit sur une batterie 12 V fait fondre un outil et projette de l'acide.\n\nBooster ou câbles de démarrage : rouge sur le plus, noir sur une masse du moteur loin de la batterie, dans le bon ordre, moteur donneur en marche.\n\nSur un véhicule hybride ou électrique, le réseau haute tension (câbles orange) est réservé aux personnes habilitées B2VL, B2XL ou BCL : consignation par le connecteur de service, gants isolants.",
+          "image": "auto_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9201",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "Le réseau d'une voiture thermique est en…",
+          "reponses": [
+            "230 V",
+            "12 V continu",
+            "400 V",
+            "5 V"
+          ],
+          "bonne": 1,
+          "explication": "24 V pour les poids lourds."
+        },
+        {
+          "id": "q9202",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "Le démarreur appelle pendant une seconde…",
+          "reponses": [
+            "2 A",
+            "200 à 600 A",
+            "20 A",
+            "1 000 A en continu"
+          ],
+          "bonne": 1,
+          "explication": "D'où les gros câbles."
+        },
+        {
+          "id": "q9203",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "L'alternateur…",
+          "reponses": [
+            "démarre le moteur",
+            "recharge la batterie et alimente en marche",
+            "freine",
+            "chauffe l'habitacle"
+          ],
+          "bonne": 1,
+          "explication": "13,8 à 14,4 V."
+        },
+        {
+          "id": "q9204",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "Le retour de courant d'une voiture passe par…",
+          "reponses": [
+            "un second fil",
+            "la carrosserie (masse)",
+            "l'air",
+            "les pneus"
+          ],
+          "bonne": 1,
+          "explication": "Un seul fil aller."
+        },
+        {
+          "id": "q9205",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "Une panne bizarre et intermittente vient souvent…",
+          "reponses": [
+            "du carburant",
+            "d'un mauvais contact de masse",
+            "des pneus",
+            "de la radio"
+          ],
+          "bonne": 1,
+          "explication": "Corrosion, cosse desserrée."
+        },
+        {
+          "id": "q9206",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "Le réseau 48 V sert…",
+          "reponses": [
+            "à l'éclairage",
+            "à l'hybridation légère",
+            "aux essuie-glaces",
+            "aux vitres"
+          ],
+          "bonne": 1,
+          "explication": "Alterno-démarreur."
+        },
+        {
+          "id": "q9207",
+          "fiche_id": "auto_reseau",
+          "type": "qcm",
+          "enonce": "La tension de traction d'une voiture électrique est de…",
+          "reponses": [
+            "12 V",
+            "400 ou 800 V",
+            "48 V",
+            "230 V"
+          ],
+          "bonne": 1,
+          "explication": "Câbles orange."
+        },
+        {
+          "id": "q9208",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "La couleur d'un fusible automobile indique…",
+          "reponses": [
+            "la marque",
+            "son calibre",
+            "le circuit",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Rouge 10 A, bleu 15 A, jaune 20 A…"
+        },
+        {
+          "id": "q9209",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "Un relais permet…",
+          "reponses": [
+            "de mesurer",
+            "à un petit courant de piloter un gros consommateur",
+            "de charger",
+            "de freiner"
+          ],
+          "bonne": 1,
+          "explication": "Commande et puissance séparées."
+        },
+        {
+          "id": "q9210",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "Le bus CAN…",
+          "reponses": [
+            "est un tuyau",
+            "fait communiquer les calculateurs sur deux fils torsadés",
+            "charge la batterie",
+            "est un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Réseau du véhicule."
+        },
+        {
+          "id": "q9211",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "La prise OBD permet…",
+          "reponses": [
+            "de charger",
+            "de lire les défauts avec une valise",
+            "de démarrer",
+            "de brancher un téléphone"
+          ],
+          "bonne": 1,
+          "explication": "Diagnostic."
+        },
+        {
+          "id": "q9212",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "Pour dépanner un faisceau, on utilise…",
+          "reponses": [
+            "l'intuition",
+            "le schéma électrique du constructeur",
+            "la couleur seule",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Repères et couleurs."
+        },
+        {
+          "id": "q9213",
+          "fiche_id": "auto_circuits",
+          "type": "qcm",
+          "enonce": "Un fusible grillé remplacé par un plus gros…",
+          "reponses": [
+            "est une bonne idée",
+            "risque un incendie de faisceau",
+            "répare la panne",
+            "ne change rien"
+          ],
+          "bonne": 1,
+          "explication": "Le fusible protège le câble."
+        },
+        {
+          "id": "q9214",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "On débranche la batterie en commençant par…",
+          "reponses": [
+            "le plus",
+            "le moins",
+            "les deux ensemble",
+            "le milieu"
+          ],
+          "bonne": 1,
+          "explication": "Évite le court-circuit par la clé."
+        },
+        {
+          "id": "q9215",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "Un court-circuit sur une batterie 12 V…",
+          "reponses": [
+            "ne fait rien",
+            "fait fondre l'outil et projette de l'acide",
+            "allume une lampe",
+            "recharge"
+          ],
+          "bonne": 1,
+          "explication": "Centaines d'ampères."
+        },
+        {
+          "id": "q9216",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "Avec des câbles de démarrage, le noir se branche…",
+          "reponses": [
+            "sur le moins de la batterie vide",
+            "sur une masse du moteur loin de la batterie",
+            "sur le plus",
+            "n'importe où"
+          ],
+          "bonne": 1,
+          "explication": "Étincelle loin de l'hydrogène."
+        },
+        {
+          "id": "q9217",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "Les câbles orange d'un véhicule électrique signalent…",
+          "reponses": [
+            "le son",
+            "la haute tension",
+            "le chauffage",
+            "la radio"
+          ],
+          "bonne": 1,
+          "explication": "Réservé aux habilités."
+        },
+        {
+          "id": "q9218",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "Intervenir sur la haute tension d'un véhicule électrique demande…",
+          "reponses": [
+            "un permis",
+            "une habilitation B2VL, B2XL ou BCL",
+            "rien",
+            "un casque"
+          ],
+          "bonne": 1,
+          "explication": "Norme NF C 18-550."
+        },
+        {
+          "id": "q9219",
+          "fiche_id": "auto_securite",
+          "type": "qcm",
+          "enonce": "La consignation d'un véhicule électrique passe par…",
+          "reponses": [
+            "la clé",
+            "le connecteur de service",
+            "le frein à main",
+            "la radio"
+          ],
+          "bonne": 1,
+          "explication": "Puis vérification d'absence de tension."
+        },
+        {
+          "id": "q9220",
+          "fiche_id": "auto_securite",
+          "type": "ordre",
+          "enonce": "Démarrer avec des câbles : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Rouge sur le plus de la batterie vide",
+            "Rouge sur le plus de la batterie donneuse",
+            "Noir sur le moins de la batterie donneuse",
+            "Noir sur une masse du moteur en panne",
+            "Démarrer le véhicule donneur puis le véhicule en panne"
+          ],
+          "explication": "Ordre qui limite les étincelles près de la batterie."
+        }
+      ],
+      "ordre": 30
+    },
+    {
+      "id": "materiaux",
+      "titre": "Conducteurs, isolants et matériaux",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "mat_conducteurs",
+          "titre": "Les conducteurs",
+          "contenu": "Le cuivre est le conducteur de référence : bonne conductivité, souple, soudable. L'aluminium conduit moins bien (il faut 1,6 fois la section) mais pèse trois fois moins et coûte moins cher : lignes aériennes, gros câbles. Il fluue sous les vis et s'oxyde : connexions spéciales.\n\nL'argent conduit un peu mieux que le cuivre (contacts), l'or ne s'oxyde pas (connecteurs). Le fer et l'acier conduisent mal mais résistent : rails, âme des câbles aériens.\n\nLa résistance d'un conducteur : R = ρ × L / S. Elle augmente avec la température (environ 0,4 % par degré pour le cuivre).",
+          "image": "mat_conducteurs.png"
+        },
+        {
+          "id": "mat_isolants",
+          "titre": "Les isolants",
+          "contenu": "Un isolant s'oppose au passage du courant jusqu'à une certaine tension : sa rigidité diélectrique (kV par mm). PVC (souple, bon marché, fumées toxiques au feu), polyéthylène réticulé PR (température 90 °C, câbles R2V), caoutchouc (câbles souples), silicone (haute température), verre et porcelaine (isolateurs de lignes), huile et SF6 (transformateurs, disjoncteurs), air.\n\nLes isolants vieillissent : chaleur, UV, ozone, humidité, contraintes mécaniques. Un isolant craquelé ou durci ne protège plus.\n\nClasses d'isolation des appareils : classe I (avec terre), II (double isolation), III (TBTS).",
+          "image": "mat_isolants.png"
+        },
+        {
+          "id": "mat_speciaux",
+          "titre": "Matériaux spéciaux",
+          "contenu": "Semi-conducteurs : silicium, carbure de silicium, nitrure de gallium (électronique de puissance rapide). Supraconducteurs : résistance nulle sous une température critique, utilisés en IRM et en recherche, câbles urbains expérimentaux.\n\nMatériaux magnétiques : tôles à grains orientés des transformateurs, ferrites, aimants néodyme des moteurs modernes (terres rares).\n\nContacts : argent-nickel, argent-oxyde d'étain pour les contacteurs ; le graphite des balais. Les câbles résistant au feu (CR1) gardent leur fonction pendant l'incendie pour les circuits de sécurité.",
+          "image": "mat_speciaux.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9301",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "Le conducteur de référence en électricité est…",
+          "reponses": [
+            "l'aluminium",
+            "le cuivre",
+            "le fer",
+            "l'or"
+          ],
+          "bonne": 1,
+          "explication": "Conductivité, souplesse."
+        },
+        {
+          "id": "q9302",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "À courant égal, l'aluminium demande une section…",
+          "reponses": [
+            "identique",
+            "environ 1,6 fois plus grande",
+            "2 fois plus petite",
+            "10 fois plus grande"
+          ],
+          "bonne": 1,
+          "explication": "Mais trois fois plus léger."
+        },
+        {
+          "id": "q9303",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "L'aluminium est surtout utilisé pour…",
+          "reponses": [
+            "les prises",
+            "les lignes aériennes et les gros câbles",
+            "les circuits imprimés",
+            "les piles"
+          ],
+          "bonne": 1,
+          "explication": "Poids et coût."
+        },
+        {
+          "id": "q9304",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "Une connexion aluminium demande…",
+          "reponses": [
+            "une vis ordinaire",
+            "des bornes spéciales (fluage, oxydation)",
+            "de la colle",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Graisse de contact, bimétal."
+        },
+        {
+          "id": "q9305",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "L'or est utilisé dans les connecteurs parce qu'il…",
+          "reponses": [
+            "conduit le mieux",
+            "ne s'oxyde pas",
+            "est lourd",
+            "est magnétique"
+          ],
+          "bonne": 1,
+          "explication": "Contact fiable dans le temps."
+        },
+        {
+          "id": "q9306",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "La résistance d'un conducteur se calcule par…",
+          "reponses": [
+            "R = ρ × L / S",
+            "R = S / L",
+            "R = U × I",
+            "R = L × S"
+          ],
+          "bonne": 0,
+          "explication": "Résistivité, longueur, section."
+        },
+        {
+          "id": "q9307",
+          "fiche_id": "mat_conducteurs",
+          "type": "qcm",
+          "enonce": "Quand la température monte, la résistance du cuivre…",
+          "reponses": [
+            "baisse",
+            "augmente (0,4 % par degré)",
+            "ne change pas",
+            "s'annule"
+          ],
+          "bonne": 1,
+          "explication": "Un câble chaud perd plus."
+        },
+        {
+          "id": "q9308",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "La rigidité diélectrique mesure…",
+          "reponses": [
+            "la souplesse",
+            "la tension maximale supportée par mm d'isolant",
+            "le poids",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "kV par mm."
+        },
+        {
+          "id": "q9309",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "Le PR (polyéthylène réticulé) supporte…",
+          "reponses": [
+            "50 °C",
+            "90 °C",
+            "500 °C",
+            "0 °C"
+          ],
+          "bonne": 1,
+          "explication": "Câbles R2V."
+        },
+        {
+          "id": "q9310",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "Au feu, le PVC…",
+          "reponses": [
+            "ne brûle pas",
+            "dégage des fumées toxiques",
+            "améliore l'isolation",
+            "fond sans fumée"
+          ],
+          "bonne": 1,
+          "explication": "Chlore."
+        },
+        {
+          "id": "q9311",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "Les isolateurs des lignes aériennes sont en…",
+          "reponses": [
+            "PVC",
+            "verre ou porcelaine",
+            "bois",
+            "cuivre"
+          ],
+          "bonne": 1,
+          "explication": "Ou composite silicone."
+        },
+        {
+          "id": "q9312",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "Un isolant vieillit sous l'effet…",
+          "reponses": [
+            "du courant seulement",
+            "de la chaleur, des UV, de l'humidité",
+            "du silence",
+            "de la lumière visible"
+          ],
+          "bonne": 1,
+          "explication": "Craquelures, durcissement."
+        },
+        {
+          "id": "q9313",
+          "fiche_id": "mat_isolants",
+          "type": "qcm",
+          "enonce": "Un appareil de classe II…",
+          "reponses": [
+            "a une prise de terre",
+            "a une double isolation",
+            "fonctionne en 12 V",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Symbole double carré."
+        },
+        {
+          "id": "q9314",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Le carbure de silicium et le nitrure de gallium servent…",
+          "reponses": [
+            "aux câbles",
+            "à l'électronique de puissance rapide",
+            "aux isolateurs",
+            "aux piles"
+          ],
+          "bonne": 1,
+          "explication": "Moins de pertes, plus haute fréquence."
+        },
+        {
+          "id": "q9315",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Un supraconducteur…",
+          "reponses": [
+            "a une résistance nulle sous une température critique",
+            "conduit mal",
+            "est un isolant",
+            "chauffe beaucoup"
+          ],
+          "bonne": 0,
+          "explication": "IRM, recherche."
+        },
+        {
+          "id": "q9316",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Les aimants néodyme sont utilisés dans…",
+          "reponses": [
+            "les isolateurs",
+            "les moteurs modernes",
+            "les fusibles",
+            "les prises"
+          ],
+          "bonne": 1,
+          "explication": "Terres rares."
+        },
+        {
+          "id": "q9317",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Les tôles des transformateurs sont…",
+          "reponses": [
+            "en cuivre",
+            "à grains orientés, en acier au silicium",
+            "en aluminium",
+            "en plastique"
+          ],
+          "bonne": 1,
+          "explication": "Réduisent les pertes fer."
+        },
+        {
+          "id": "q9318",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Les balais d'un moteur à collecteur sont en…",
+          "reponses": [
+            "cuivre pur",
+            "graphite",
+            "fer",
+            "or"
+          ],
+          "bonne": 1,
+          "explication": "Glissent sur le collecteur."
+        },
+        {
+          "id": "q9319",
+          "fiche_id": "mat_speciaux",
+          "type": "qcm",
+          "enonce": "Un câble CR1…",
+          "reponses": [
+            "brûle vite",
+            "garde sa fonction pendant l'incendie",
+            "est un câble réseau",
+            "est en aluminium"
+          ],
+          "bonne": 1,
+          "explication": "Circuits de sécurité."
+        },
+        {
+          "id": "q9320",
+          "fiche_id": "mat_conducteurs",
+          "type": "ordre",
+          "enonce": "Classe ces matériaux du meilleur conducteur au moins bon.",
+          "reponses": [
+            "Argent",
+            "Cuivre",
+            "Aluminium",
+            "Fer",
+            "Verre (isolant)"
+          ],
+          "explication": "Conductivité décroissante."
+        }
+      ],
+      "ordre": 31
+    },
+    {
+      "id": "calculs_circuits",
+      "titre": "Calculs de circuits : Kirchhoff et diviseurs",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "calc_kirchhoff",
+          "titre": "Les lois de Kirchhoff",
+          "contenu": "Loi des nœuds : la somme des courants qui arrivent à un nœud égale la somme de ceux qui en partent. Rien ne se perd, rien ne s'accumule.\n\nLoi des mailles : en parcourant une boucle fermée, la somme des tensions est nulle. Ce que la source fournit, les récepteurs le consomment.\n\nAvec ces deux lois et la loi d'Ohm, on résout n'importe quel circuit de résistances : on nomme les courants, on écrit les équations, on résout. En pratique, on simplifie d'abord les associations série et parallèle.",
+          "image": "calc_kirchhoff.png"
+        },
+        {
+          "id": "calc_diviseurs",
+          "titre": "Diviseurs de tension et de courant",
+          "contenu": "Diviseur de tension : deux résistances en série sous U. La tension aux bornes de R2 vaut U × R2 / (R1 + R2). C'est le principe du potentiomètre, du capteur résistif, du pont de mesure.\n\nDiviseur de courant : deux résistances en parallèle traversées par I. Le courant dans R1 vaut I × R2 / (R1 + R2) : le courant préfère la branche la moins résistante.\n\nPiège : brancher une charge sur un diviseur de tension modifie la tension, sauf si la charge est très résistante par rapport au diviseur.",
+          "image": "calc_diviseurs.png"
+        },
+        {
+          "id": "calc_pratique",
+          "titre": "Calculs du quotidien",
+          "contenu": "Chute de tension dans un câble : ΔU = 2 × ρ × L × I / S en monophasé (aller et retour). Limite courante : 3 % pour l'éclairage, 5 % pour les autres usages. Un câble trop long ou trop fin fait chauffer et perdre.\n\nPuissance dissipée dans un conducteur : P = R × I². Doubler le courant quadruple les pertes.\n\nSection minimale : on part du courant d'emploi, on lit le tableau des courants admissibles selon la pose, puis on vérifie la chute de tension sur la longueur réelle. Le plus contraignant des deux gagne.",
+          "image": "calc_pratique.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9401",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "La loi des nœuds dit que…",
+          "reponses": [
+            "les tensions s'annulent",
+            "la somme des courants entrants égale la somme des sortants",
+            "le courant s'accumule",
+            "la résistance est nulle"
+          ],
+          "bonne": 1,
+          "explication": "Conservation de la charge."
+        },
+        {
+          "id": "q9402",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "La loi des mailles dit que…",
+          "reponses": [
+            "les courants s'annulent",
+            "la somme des tensions sur une boucle fermée est nulle",
+            "la tension est infinie",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Conservation de l'énergie."
+        },
+        {
+          "id": "q9403",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "Trois courants arrivent à un nœud : 2 A, 3 A et un troisième repart avec 5 A. Le bilan est…",
+          "reponses": [
+            "faux",
+            "cohérent : 2 + 3 = 5",
+            "impossible",
+            "10 A"
+          ],
+          "bonne": 1,
+          "explication": "Loi des nœuds."
+        },
+        {
+          "id": "q9404",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "Une pile de 12 V alimente deux résistances en série de 4 V et 8 V. La somme…",
+          "reponses": [
+            "ne vaut rien",
+            "fait 12 V, la loi des mailles est respectée",
+            "dépasse 12 V",
+            "est nulle"
+          ],
+          "bonne": 1,
+          "explication": "4 + 8 = 12."
+        },
+        {
+          "id": "q9405",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "Pour résoudre un circuit, on commence par…",
+          "reponses": [
+            "deviner",
+            "simplifier les associations série et parallèle",
+            "couper le courant",
+            "mesurer la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Puis Kirchhoff si nécessaire."
+        },
+        {
+          "id": "q9406",
+          "fiche_id": "calc_kirchhoff",
+          "type": "qcm",
+          "enonce": "Deux résistances de 6 Ω en parallèle valent…",
+          "reponses": [
+            "12 Ω",
+            "3 Ω",
+            "6 Ω",
+            "0 Ω"
+          ],
+          "bonne": 1,
+          "explication": "Produit sur somme."
+        },
+        {
+          "id": "q9407",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Dans un diviseur de tension R1 = R2 sous 12 V, la tension sur R2 est…",
+          "reponses": [
+            "12 V",
+            "6 V",
+            "3 V",
+            "24 V"
+          ],
+          "bonne": 1,
+          "explication": "Moitié."
+        },
+        {
+          "id": "q9408",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Un potentiomètre est…",
+          "reponses": [
+            "un moteur",
+            "un diviseur de tension réglable",
+            "un fusible",
+            "un condensateur"
+          ],
+          "bonne": 1,
+          "explication": "Curseur mobile."
+        },
+        {
+          "id": "q9409",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Dans un diviseur de courant, le courant préfère…",
+          "reponses": [
+            "la branche la plus résistante",
+            "la branche la moins résistante",
+            "aucune",
+            "les deux à égalité toujours"
+          ],
+          "bonne": 1,
+          "explication": "Inversement proportionnel."
+        },
+        {
+          "id": "q9410",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Brancher une charge sur un diviseur de tension…",
+          "reponses": [
+            "ne change rien",
+            "modifie la tension, sauf si la charge est très résistante",
+            "double la tension",
+            "coupe le circuit"
+          ],
+          "bonne": 1,
+          "explication": "Piège classique."
+        },
+        {
+          "id": "q9411",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "R1 = 1 kΩ et R2 = 3 kΩ en série sous 8 V : la tension sur R2 vaut…",
+          "reponses": [
+            "2 V",
+            "6 V",
+            "8 V",
+            "4 V"
+          ],
+          "bonne": 1,
+          "explication": "8 × 3 / 4."
+        },
+        {
+          "id": "q9412",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Un capteur résistif (thermistance) se lit souvent avec…",
+          "reponses": [
+            "un moteur",
+            "un diviseur de tension",
+            "un transformateur",
+            "une bobine"
+          ],
+          "bonne": 1,
+          "explication": "Tension image de la résistance."
+        },
+        {
+          "id": "q9413",
+          "fiche_id": "calc_diviseurs",
+          "type": "qcm",
+          "enonce": "Deux résistances 10 Ω et 30 Ω en parallèle sous 4 A : le courant dans la 10 Ω est…",
+          "reponses": [
+            "1 A",
+            "3 A",
+            "4 A",
+            "2 A"
+          ],
+          "bonne": 1,
+          "explication": "4 × 30 / 40."
+        },
+        {
+          "id": "q9414",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "La chute de tension admise pour l'éclairage est d'environ…",
+          "reponses": [
+            "3 %",
+            "10 %",
+            "50 %",
+            "0 %"
+          ],
+          "bonne": 0,
+          "explication": "5 % pour les autres usages."
+        },
+        {
+          "id": "q9415",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "Doubler le courant dans un câble…",
+          "reponses": [
+            "double les pertes",
+            "quadruple les pertes",
+            "ne change rien",
+            "divise les pertes"
+          ],
+          "bonne": 1,
+          "explication": "P = R × I²."
+        },
+        {
+          "id": "q9416",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "Un câble trop long et trop fin…",
+          "reponses": [
+            "améliore la tension",
+            "fait chuter la tension et chauffe",
+            "est plus sûr",
+            "coûte plus"
+          ],
+          "bonne": 1,
+          "explication": "Chute de tension."
+        },
+        {
+          "id": "q9417",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "Pour choisir une section, on regarde…",
+          "reponses": [
+            "seulement le prix",
+            "le courant admissible et la chute de tension",
+            "la couleur",
+            "la marque"
+          ],
+          "bonne": 1,
+          "explication": "Le plus contraignant gagne."
+        },
+        {
+          "id": "q9418",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "En monophasé, la chute de tension compte la longueur…",
+          "reponses": [
+            "aller seulement",
+            "aller et retour",
+            "au carré",
+            "divisée par deux"
+          ],
+          "bonne": 1,
+          "explication": "Facteur 2 dans la formule."
+        },
+        {
+          "id": "q9419",
+          "fiche_id": "calc_pratique",
+          "type": "qcm",
+          "enonce": "Un radiateur de 2 000 W sous 230 V appelle environ…",
+          "reponses": [
+            "2 A",
+            "8,7 A",
+            "20 A",
+            "0,5 A"
+          ],
+          "bonne": 1,
+          "explication": "I = P / U."
+        },
+        {
+          "id": "q9420",
+          "fiche_id": "calc_pratique",
+          "type": "ordre",
+          "enonce": "Dimensionner un câble : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Calculer le courant d'emploi",
+            "Lire la section admissible selon la pose",
+            "Calculer la chute de tension sur la longueur réelle",
+            "Augmenter la section si la chute dépasse la limite",
+            "Choisir la protection adaptée à la section"
+          ],
+          "explication": "Méthode."
+        }
+      ],
+      "ordre": 32
+    },
+    {
+      "id": "oscilloscope",
+      "titre": "Oscilloscope et signaux",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "osc_principe",
+          "titre": "Voir le signal",
+          "contenu": "Un oscilloscope trace la tension en fonction du temps : on voit la forme du signal, pas seulement sa valeur. Réglages de base : volts par division (vertical), secondes par division (horizontal), déclenchement (trigger) pour stabiliser l'image.\n\nOn lit l'amplitude crête, la valeur crête à crête, la période, donc la fréquence (f = 1 / T). Un multimètre donne la valeur efficace ; l'oscilloscope montre pourquoi elle vaut ce qu'elle vaut.\n\nLes modèles numériques mémorisent, mesurent automatiquement, capturent un événement unique.",
+          "image": "osc_principe.png"
+        },
+        {
+          "id": "osc_signaux",
+          "titre": "Les formes de signaux",
+          "contenu": "Sinusoïde : le réseau, valeur efficace = crête / √2 (230 V efficaces = 325 V crête). Carré : logique, horloges, découpage. Triangle et dents de scie : balayage, modulation. Impulsions : commande de puissance, MLI (modulation de largeur d'impulsion) des variateurs.\n\nUn signal déformé révèle un problème : sinusoïde aplatie (saturation), pics (commutations), ondulation résiduelle sur un continu (filtrage insuffisant), harmoniques.\n\nLe rapport cyclique d'un signal carré est le temps haut sur la période : la MLI fait varier une puissance moyenne en jouant dessus.",
+          "image": "osc_signaux.png"
+        },
+        {
+          "id": "osc_securite",
+          "titre": "Mesurer sans danger",
+          "contenu": "La masse de la sonde d'un oscilloscope de table est reliée à la terre : la brancher sur un point sous tension crée un court-circuit et un choc. Sur le secteur, on utilise une sonde différentielle ou un oscilloscope isolé sur batterie.\n\nSondes atténuatrices (× 10) : moins de charge sur le circuit, tension admissible plus élevée, à compenser avant usage. Vérifier la catégorie de mesure (CAT II, III) et la tension maximale.\n\nEn atelier : mains derrière la garde des sondes, pas de mesure sur un tableau sans habilitation et EPI.",
+          "image": "osc_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9501",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Un oscilloscope affiche…",
+          "reponses": [
+            "la puissance",
+            "la tension en fonction du temps",
+            "la résistance",
+            "la température"
+          ],
+          "bonne": 1,
+          "explication": "Forme du signal."
+        },
+        {
+          "id": "q9502",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Le réglage vertical est en…",
+          "reponses": [
+            "secondes par division",
+            "volts par division",
+            "ohms",
+            "hertz"
+          ],
+          "bonne": 1,
+          "explication": "Amplitude."
+        },
+        {
+          "id": "q9503",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Le réglage horizontal est en…",
+          "reponses": [
+            "volts par division",
+            "secondes par division",
+            "ampères",
+            "watts"
+          ],
+          "bonne": 1,
+          "explication": "Base de temps."
+        },
+        {
+          "id": "q9504",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Le trigger sert à…",
+          "reponses": [
+            "couper le courant",
+            "stabiliser l'image en synchronisant le balayage",
+            "charger la batterie",
+            "mesurer la résistance"
+          ],
+          "bonne": 1,
+          "explication": "Déclenchement."
+        },
+        {
+          "id": "q9505",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Un signal de période 20 ms a une fréquence de…",
+          "reponses": [
+            "20 Hz",
+            "50 Hz",
+            "500 Hz",
+            "5 Hz"
+          ],
+          "bonne": 1,
+          "explication": "f = 1 / T."
+        },
+        {
+          "id": "q9506",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Le multimètre donne…",
+          "reponses": [
+            "la forme du signal",
+            "la valeur efficace",
+            "la fréquence seulement",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "L'oscilloscope montre la forme."
+        },
+        {
+          "id": "q9507",
+          "fiche_id": "osc_principe",
+          "type": "qcm",
+          "enonce": "Un oscilloscope numérique peut…",
+          "reponses": [
+            "seulement afficher",
+            "mémoriser et capturer un événement unique",
+            "chauffer",
+            "produire du courant"
+          ],
+          "bonne": 1,
+          "explication": "Mesures automatiques."
+        },
+        {
+          "id": "q9508",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "230 V efficaces correspondent à une crête de…",
+          "reponses": [
+            "230 V",
+            "325 V",
+            "115 V",
+            "460 V"
+          ],
+          "bonne": 1,
+          "explication": "× √2."
+        },
+        {
+          "id": "q9509",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "Un signal carré est typique…",
+          "reponses": [
+            "du réseau",
+            "de la logique et du découpage",
+            "du chauffage",
+            "des piles"
+          ],
+          "bonne": 1,
+          "explication": "Horloges, MLI."
+        },
+        {
+          "id": "q9510",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "La MLI (PWM) fait varier…",
+          "reponses": [
+            "la fréquence du réseau",
+            "le rapport cyclique pour régler une puissance moyenne",
+            "la couleur",
+            "la résistance"
+          ],
+          "bonne": 1,
+          "explication": "Variateurs, LED."
+        },
+        {
+          "id": "q9511",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "Le rapport cyclique est…",
+          "reponses": [
+            "le temps haut divisé par la période",
+            "la tension crête",
+            "la fréquence",
+            "le courant"
+          ],
+          "bonne": 0,
+          "explication": "En pourcentage."
+        },
+        {
+          "id": "q9512",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "Une sinusoïde aplatie en haut révèle…",
+          "reponses": [
+            "une bonne qualité",
+            "une saturation",
+            "une fréquence double",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Amplificateur ou transformateur saturé."
+        },
+        {
+          "id": "q9513",
+          "fiche_id": "osc_signaux",
+          "type": "qcm",
+          "enonce": "Une ondulation sur une tension continue signale…",
+          "reponses": [
+            "un filtrage insuffisant",
+            "une pile neuve",
+            "une résistance",
+            "un bon redressement"
+          ],
+          "bonne": 0,
+          "explication": "Condensateur trop petit ou usé."
+        },
+        {
+          "id": "q9514",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "La masse d'une sonde d'oscilloscope de table est reliée…",
+          "reponses": [
+            "à rien",
+            "à la terre",
+            "au plus",
+            "à la batterie"
+          ],
+          "bonne": 1,
+          "explication": "Danger sur le secteur."
+        },
+        {
+          "id": "q9515",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "Brancher la masse de la sonde sur un point sous tension provoque…",
+          "reponses": [
+            "une belle image",
+            "un court-circuit et un risque de choc",
+            "rien",
+            "une mesure précise"
+          ],
+          "bonne": 1,
+          "explication": "Court-circuit par la terre."
+        },
+        {
+          "id": "q9516",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "Pour mesurer sur le secteur, on utilise…",
+          "reponses": [
+            "une sonde ordinaire",
+            "une sonde différentielle ou un oscilloscope isolé",
+            "un fil nu",
+            "un multimètre seulement"
+          ],
+          "bonne": 1,
+          "explication": "Isolation."
+        },
+        {
+          "id": "q9517",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "Une sonde × 10…",
+          "reponses": [
+            "amplifie",
+            "atténue et charge moins le circuit",
+            "chauffe",
+            "est interdite"
+          ],
+          "bonne": 1,
+          "explication": "À compenser."
+        },
+        {
+          "id": "q9518",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "La catégorie de mesure CAT III concerne…",
+          "reponses": [
+            "les piles",
+            "les tableaux et la distribution",
+            "les circuits électroniques",
+            "les jouets"
+          ],
+          "bonne": 1,
+          "explication": "Surtensions plus fortes."
+        },
+        {
+          "id": "q9519",
+          "fiche_id": "osc_securite",
+          "type": "qcm",
+          "enonce": "Mesurer sur un tableau sous tension demande…",
+          "reponses": [
+            "rien",
+            "habilitation et EPI",
+            "un tournevis",
+            "de la chance"
+          ],
+          "bonne": 1,
+          "explication": "Comme toute mesure sous tension."
+        },
+        {
+          "id": "q9520",
+          "fiche_id": "osc_principe",
+          "type": "ordre",
+          "enonce": "Faire une mesure à l'oscilloscope : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Vérifier sonde, catégorie et tension maximale",
+            "Brancher la masse sur un point de référence sûr",
+            "Toucher le point à mesurer avec la sonde",
+            "Régler volts et secondes par division",
+            "Régler le trigger et lire amplitude et période"
+          ],
+          "explication": "Méthode de mesure."
+        }
+      ],
+      "ordre": 33
+    },
+    {
+      "id": "recyclage",
+      "titre": "Recyclage et fin de vie des équipements",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "rec_deee",
+          "titre": "Les DEEE",
+          "contenu": "Les déchets d'équipements électriques et électroniques (DEEE) contiennent des métaux précieux, des plastiques, mais aussi des polluants : plomb, mercure, cadmium, gaz frigorigènes, retardateurs de flamme. Ils ne vont jamais à la poubelle ordinaire.\n\nLe symbole de la poubelle barrée signale un DEEE. Les distributeurs reprennent gratuitement (un pour un, ou un pour zéro pour les petits appareils). Les éco-organismes (Ecosystem, Ecologic) organisent la collecte et le traitement, financés par l'éco-participation.\n\nOn réemploie avant de recycler : reconditionnement, pièces détachées, réparation (indice de réparabilité).",
+          "image": "rec_deee.png"
+        },
+        {
+          "id": "rec_filieres",
+          "titre": "Piles, batteries, lampes, câbles",
+          "contenu": "Piles et batteries : collecte dédiée (Corepile, Screlec), jamais à la poubelle ni au feu. Les batteries lithium se recyclent (cobalt, nickel, lithium) et sont un risque incendie en centre de tri.\n\nLampes : les LED et fluocompactes vont en point de collecte (mercure pour les fluo). Les câbles : cuivre et aluminium se rachètent, la gaine est séparée par broyage.\n\nGros matériel : transformateurs (huile, PCB dans les anciens), disjoncteurs SF6 (gaz à très fort effet de serre, à récupérer), panneaux photovoltaïques (Soren).",
+          "image": "rec_filieres.png"
+        },
+        {
+          "id": "rec_chantier",
+          "titre": "Sur le chantier",
+          "contenu": "L'électricien trie : chutes de câbles, appareillage déposé, luminaires, gaines. Le diagnostic déchets avant démolition liste ce qui sera produit. Les bordereaux de suivi tracent les déchets dangereux.\n\nLa REP bâtiment (responsabilité élargie du producteur) finance depuis 2023 la reprise des déchets du bâtiment, avec des points de collecte gratuits sous conditions de tri.\n\nÉco-conception : choisir du matériel réparable, durable, avec pièces disponibles ; dimensionner juste ; éviter les mises au rebut prématurées.",
+          "image": "rec_chantier.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9701",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "DEEE signifie…",
+          "reponses": [
+            "déchets d'équipements électriques et électroniques",
+            "dispositif d'économie d'énergie",
+            "directive européenne",
+            "déchets d'emballage"
+          ],
+          "bonne": 0,
+          "explication": "Poubelle barrée."
+        },
+        {
+          "id": "q9702",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "Un appareil électrique usagé va…",
+          "reponses": [
+            "à la poubelle ordinaire",
+            "en collecte dédiée ou reprise par le distributeur",
+            "dans la nature",
+            "au composteur"
+          ],
+          "bonne": 1,
+          "explication": "Polluants et métaux à récupérer."
+        },
+        {
+          "id": "q9703",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "Le symbole de la poubelle barrée signifie…",
+          "reponses": [
+            "fragile",
+            "ne pas jeter avec les ordures ménagères",
+            "recyclé",
+            "inflammable"
+          ],
+          "bonne": 1,
+          "explication": "DEEE."
+        },
+        {
+          "id": "q9704",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "La reprise « un pour un » signifie que…",
+          "reponses": [
+            "on paie deux fois",
+            "le vendeur reprend l'ancien appareil à l'achat d'un neuf",
+            "on rend un appareil sans achat",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Un pour zéro pour les petits."
+        },
+        {
+          "id": "q9705",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "L'éco-participation finance…",
+          "reponses": [
+            "les vendeurs",
+            "la collecte et le traitement des DEEE",
+            "les impôts",
+            "la publicité"
+          ],
+          "bonne": 1,
+          "explication": "Éco-organismes."
+        },
+        {
+          "id": "q9706",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "Avant de recycler, on privilégie…",
+          "reponses": [
+            "la destruction",
+            "le réemploi et la réparation",
+            "l'enfouissement",
+            "l'incinération"
+          ],
+          "bonne": 1,
+          "explication": "Hiérarchie des déchets."
+        },
+        {
+          "id": "q9707",
+          "fiche_id": "rec_deee",
+          "type": "qcm",
+          "enonce": "L'indice de réparabilité informe sur…",
+          "reponses": [
+            "le prix",
+            "la facilité de réparer un appareil",
+            "la couleur",
+            "la consommation"
+          ],
+          "bonne": 1,
+          "explication": "Note sur 10."
+        },
+        {
+          "id": "q9708",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Les piles et batteries usagées vont…",
+          "reponses": [
+            "à la poubelle",
+            "en collecte dédiée",
+            "au feu",
+            "dans l'évier"
+          ],
+          "bonne": 1,
+          "explication": "Corepile, Screlec."
+        },
+        {
+          "id": "q9709",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Une batterie lithium en centre de tri est…",
+          "reponses": [
+            "inoffensive",
+            "un risque d'incendie",
+            "recyclée automatiquement",
+            "jetée"
+          ],
+          "bonne": 1,
+          "explication": "D'où la collecte séparée."
+        },
+        {
+          "id": "q9710",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Les lampes fluocompactes contiennent…",
+          "reponses": [
+            "du plomb",
+            "du mercure",
+            "de l'or",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Collecte dédiée."
+        },
+        {
+          "id": "q9711",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Les chutes de câbles…",
+          "reponses": [
+            "sont jetées",
+            "se recyclent : cuivre et aluminium rachetés",
+            "sont brûlées",
+            "vont au composteur"
+          ],
+          "bonne": 1,
+          "explication": "Broyage, séparation."
+        },
+        {
+          "id": "q9712",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Le SF6 des disjoncteurs est…",
+          "reponses": [
+            "inoffensif",
+            "un gaz à très fort effet de serre, à récupérer",
+            "de l'air",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Récupération obligatoire."
+        },
+        {
+          "id": "q9713",
+          "fiche_id": "rec_filieres",
+          "type": "qcm",
+          "enonce": "Les anciens transformateurs peuvent contenir…",
+          "reponses": [
+            "de l'eau",
+            "de l'huile aux PCB",
+            "du sable",
+            "du gaz"
+          ],
+          "bonne": 1,
+          "explication": "Polluant persistant."
+        },
+        {
+          "id": "q9714",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "Sur un chantier, l'électricien…",
+          "reponses": [
+            "mélange tout",
+            "trie câbles, appareillage, luminaires, gaines",
+            "brûle les déchets",
+            "laisse sur place"
+          ],
+          "bonne": 1,
+          "explication": "Tri à la source."
+        },
+        {
+          "id": "q9715",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "Le diagnostic déchets avant démolition…",
+          "reponses": [
+            "est un devis",
+            "liste les déchets qui seront produits",
+            "est facultatif partout",
+            "est une facture"
+          ],
+          "bonne": 1,
+          "explication": "Anticiper les filières."
+        },
+        {
+          "id": "q9716",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "Les déchets dangereux sont tracés par…",
+          "reponses": [
+            "un mail",
+            "un bordereau de suivi",
+            "rien",
+            "une photo"
+          ],
+          "bonne": 1,
+          "explication": "Traçabilité."
+        },
+        {
+          "id": "q9717",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "La REP bâtiment finance…",
+          "reponses": [
+            "les salaires",
+            "la reprise des déchets du bâtiment",
+            "les outils",
+            "les camions"
+          ],
+          "bonne": 1,
+          "explication": "Depuis 2023."
+        },
+        {
+          "id": "q9718",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "L'éco-conception consiste à…",
+          "reponses": [
+            "acheter le moins cher",
+            "choisir réparable, durable, avec pièces disponibles",
+            "surdimensionner",
+            "jeter vite"
+          ],
+          "bonne": 1,
+          "explication": "Durée de vie."
+        },
+        {
+          "id": "q9719",
+          "fiche_id": "rec_chantier",
+          "type": "qcm",
+          "enonce": "Les panneaux photovoltaïques en fin de vie sont pris en charge par…",
+          "reponses": [
+            "personne",
+            "Soren",
+            "le voisin",
+            "la mairie"
+          ],
+          "bonne": 1,
+          "explication": "Éco-organisme dédié."
+        },
+        {
+          "id": "q9720",
+          "fiche_id": "rec_deee",
+          "type": "ordre",
+          "enonce": "Hiérarchie des déchets, de la meilleure option à la pire : remets dans l'ordre.",
+          "reponses": [
+            "Réduire à la source",
+            "Réemployer ou réparer",
+            "Recycler la matière",
+            "Valoriser en énergie",
+            "Éliminer (enfouir)"
+          ],
+          "explication": "Prévention d'abord."
+        }
+      ],
+      "ordre": 34
+    },
+    {
+      "id": "energies_diverses",
+      "titre": "Géothermie, biomasse et énergies marines",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "en_geothermie",
+          "titre": "La géothermie",
+          "contenu": "La chaleur de la Terre augmente avec la profondeur. Géothermie très basse énergie : quelques mètres, pour les pompes à chaleur. Basse énergie : 1 à 2 km, eau à 60-90 °C pour les réseaux de chaleur (Bassin parisien). Haute énergie : zones volcaniques, vapeur pour produire de l'électricité (Guadeloupe, Islande, Italie).\n\nUne centrale géothermique électrique fonctionne comme une centrale thermique, avec de la vapeur gratuite, disponible jour et nuit.\n\nRisques : sismicité induite par les forages profonds, corrosion et dépôts dans les circuits.",
+          "image": "en_geothermie.png"
+        },
+        {
+          "id": "en_biomasse",
+          "titre": "Biomasse et biogaz",
+          "contenu": "La biomasse (bois, déchets agricoles, ordures) se brûle dans des chaudières pour produire chaleur et électricité (cogénération). Le bois-énergie est la première énergie renouvelable en France, surtout pour la chaleur.\n\nLe biogaz naît de la fermentation (méthanisation) de déchets organiques : il alimente un moteur-alternateur ou, épuré en biométhane, le réseau de gaz. Les stations d'épuration et les décharges en produisent aussi.\n\nPoints de vigilance : ressource locale et durable, filtration des fumées, ATEX sur les sites de méthanisation.",
+          "image": "en_biomasse.png"
+        },
+        {
+          "id": "en_marines",
+          "titre": "Énergies marines",
+          "contenu": "Marémotrice : l'usine de la Rance (240 MW, 1966) turbine la marée dans les deux sens. Hydrolienne : hélice sous-marine dans les courants (Raz Blanchard). Houlomotrice : le mouvement des vagues, encore expérimental.\n\nÉolien flottant : éoliennes sur plateformes ancrées en eaux profondes, fermes pilotes en Méditerranée et en Bretagne. Énergie thermique des mers : différence de température entre surface et profondeur, outre-mer.\n\nContraintes : corrosion, tempêtes, maintenance en mer, câbles sous-marins, cohabitation avec la pêche.",
+          "image": "en_marines.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9901",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "La géothermie très basse énergie sert…",
+          "reponses": [
+            "à produire de l'électricité",
+            "aux pompes à chaleur",
+            "aux volcans",
+            "à rien"
+          ],
+          "bonne": 1,
+          "explication": "Quelques mètres de profondeur."
+        },
+        {
+          "id": "q9902",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "Les réseaux de chaleur géothermiques du Bassin parisien puisent à…",
+          "reponses": [
+            "10 m",
+            "1 à 2 km",
+            "100 km",
+            "la surface"
+          ],
+          "bonne": 1,
+          "explication": "Eau à 60-90 °C."
+        },
+        {
+          "id": "q9903",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "La géothermie haute énergie produit de l'électricité…",
+          "reponses": [
+            "partout",
+            "en zones volcaniques",
+            "dans les plaines",
+            "en mer"
+          ],
+          "bonne": 1,
+          "explication": "Guadeloupe, Islande."
+        },
+        {
+          "id": "q9904",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "Une centrale géothermique électrique utilise…",
+          "reponses": [
+            "du charbon",
+            "de la vapeur naturelle",
+            "du vent",
+            "des panneaux"
+          ],
+          "bonne": 1,
+          "explication": "Turbine et alternateur."
+        },
+        {
+          "id": "q9905",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "L'avantage de la géothermie est…",
+          "reponses": [
+            "l'intermittence",
+            "une disponibilité jour et nuit",
+            "le bruit",
+            "le coût nul du forage"
+          ],
+          "bonne": 1,
+          "explication": "Énergie de base."
+        },
+        {
+          "id": "q9906",
+          "fiche_id": "en_geothermie",
+          "type": "qcm",
+          "enonce": "Un risque des forages géothermiques profonds est…",
+          "reponses": [
+            "la neige",
+            "la sismicité induite",
+            "le vent",
+            "l'ombre"
+          ],
+          "bonne": 1,
+          "explication": "Surveillance."
+        },
+        {
+          "id": "q9907",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "La première énergie renouvelable en France est…",
+          "reponses": [
+            "le solaire",
+            "le bois-énergie",
+            "l'éolien",
+            "la marée"
+          ],
+          "bonne": 1,
+          "explication": "Surtout pour la chaleur."
+        },
+        {
+          "id": "q9908",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "La cogénération produit…",
+          "reponses": [
+            "seulement de l'électricité",
+            "chaleur et électricité ensemble",
+            "seulement du gaz",
+            "du froid"
+          ],
+          "bonne": 1,
+          "explication": "Meilleur rendement global."
+        },
+        {
+          "id": "q9909",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "Le biogaz naît de…",
+          "reponses": [
+            "la combustion",
+            "la fermentation de déchets organiques",
+            "l'électrolyse",
+            "le vent"
+          ],
+          "bonne": 1,
+          "explication": "Méthanisation."
+        },
+        {
+          "id": "q9910",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "Le biométhane est…",
+          "reponses": [
+            "du biogaz épuré injecté dans le réseau de gaz",
+            "du charbon",
+            "de l'hydrogène",
+            "de l'essence"
+          ],
+          "bonne": 0,
+          "explication": "Qualité gaz naturel."
+        },
+        {
+          "id": "q9911",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "Un site de méthanisation est concerné par…",
+          "reponses": [
+            "la neige",
+            "le risque ATEX",
+            "les marées",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Méthane explosif."
+        },
+        {
+          "id": "q9912",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "Un point de vigilance de la biomasse est…",
+          "reponses": [
+            "le bruit",
+            "une ressource locale et durable",
+            "la marée",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Ne pas déforester."
+        },
+        {
+          "id": "q9913",
+          "fiche_id": "en_biomasse",
+          "type": "qcm",
+          "enonce": "Les décharges produisent…",
+          "reponses": [
+            "de l'électricité directement",
+            "du biogaz",
+            "de l'eau",
+            "du vent"
+          ],
+          "bonne": 1,
+          "explication": "Captage du méthane."
+        },
+        {
+          "id": "q9914",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "L'usine marémotrice de la Rance date de…",
+          "reponses": [
+            "1966",
+            "2010",
+            "1900",
+            "2020"
+          ],
+          "bonne": 0,
+          "explication": "240 MW."
+        },
+        {
+          "id": "q9915",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "Une hydrolienne est…",
+          "reponses": [
+            "une éolienne",
+            "une hélice sous-marine dans les courants",
+            "un barrage",
+            "un panneau"
+          ],
+          "bonne": 1,
+          "explication": "Raz Blanchard."
+        },
+        {
+          "id": "q9916",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "L'éolien flottant permet…",
+          "reponses": [
+            "d'aller en eaux profondes",
+            "de flotter dans l'air",
+            "de rester à terre",
+            "de nager"
+          ],
+          "bonne": 0,
+          "explication": "Plateformes ancrées."
+        },
+        {
+          "id": "q9917",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "L'énergie houlomotrice utilise…",
+          "reponses": [
+            "la marée",
+            "le mouvement des vagues",
+            "le sel",
+            "le vent"
+          ],
+          "bonne": 1,
+          "explication": "Encore expérimental."
+        },
+        {
+          "id": "q9918",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "L'énergie thermique des mers exploite…",
+          "reponses": [
+            "la différence de température surface / profondeur",
+            "les vagues",
+            "le sel",
+            "les poissons"
+          ],
+          "bonne": 0,
+          "explication": "Outre-mer."
+        },
+        {
+          "id": "q9919",
+          "fiche_id": "en_marines",
+          "type": "qcm",
+          "enonce": "Une contrainte majeure des énergies marines est…",
+          "reponses": [
+            "le manque d'eau",
+            "la corrosion et la maintenance en mer",
+            "le bruit",
+            "l'ombre"
+          ],
+          "bonne": 1,
+          "explication": "Milieu hostile."
+        },
+        {
+          "id": "q9920",
+          "fiche_id": "en_biomasse",
+          "type": "ordre",
+          "enonce": "De la matière organique à l'électricité : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Collecte des déchets organiques",
+            "Méthanisation dans un digesteur",
+            "Production de biogaz",
+            "Combustion dans un moteur-alternateur",
+            "Injection de l'électricité et valorisation de la chaleur"
+          ],
+          "explication": "Chaîne du biogaz."
+        }
+      ],
+      "ordre": 35
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 29,
+      "ordre": 36,
       "fiches": [
         {
           "id": "multimetre",
@@ -8930,7 +11086,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 30,
+      "ordre": 37,
       "fiches": [
         {
           "id": "tableau",
@@ -9540,7 +11696,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 31
+      "ordre": 38
     },
     {
       "id": "cablage",
@@ -9848,7 +12004,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 32
+      "ordre": 39
     },
     {
       "id": "parafoudre",
@@ -10155,7 +12311,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 33
+      "ordre": 40
     },
     {
       "id": "locaux_risques",
@@ -10462,7 +12618,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 34
+      "ordre": 41
     },
     {
       "id": "photovoltaique",
@@ -10769,7 +12925,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 35
+      "ordre": 42
     },
     {
       "id": "chauffage",
@@ -11076,7 +13232,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 36
+      "ordre": 43
     },
     {
       "id": "domotique",
@@ -11383,7 +13539,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 37
+      "ordre": 44
     },
     {
       "id": "vehicule_electrique",
@@ -11691,7 +13847,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 38
+      "ordre": 45
     },
     {
       "id": "plaque_signaletique",
@@ -11998,7 +14154,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 39
+      "ordre": 46
     },
     {
       "id": "ventilation",
@@ -12306,7 +14462,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 40
+      "ordre": 47
     },
     {
       "id": "lire_tableau",
@@ -12613,7 +14769,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 41
+      "ordre": 48
     },
     {
       "id": "depannage",
@@ -12921,7 +15077,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 42
+      "ordre": 49
     },
     {
       "id": "courants_faibles",
@@ -13229,7 +15385,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 43
+      "ordre": 50
     },
     {
       "id": "eclairage_exterieur",
@@ -13537,7 +15693,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 44
+      "ordre": 51
     },
     {
       "id": "alarme",
@@ -13845,7 +16001,7 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 45
+      "ordre": 52
     },
     {
       "id": "mesures_avancees",
@@ -14153,7 +16309,7 @@
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
         }
       ],
-      "ordre": 46
+      "ordre": 53
     },
     {
       "id": "renovation",
@@ -14461,7 +16617,7 @@
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
         }
       ],
-      "ordre": 47
+      "ordre": 54
     },
     {
       "id": "secours_energie",
@@ -14769,7 +16925,7 @@
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
         }
       ],
-      "ordre": 48
+      "ordre": 55
     },
     {
       "id": "camping_car_bateau",
@@ -15077,7 +17233,7 @@
           "explication": "Hors tension, brancher, enclencher, tester."
         }
       ],
-      "ordre": 49
+      "ordre": 56
     },
     {
       "id": "autoconsommation",
@@ -15384,7 +17540,7 @@
           "explication": "Mesurer, déplacer, router, stocker."
         }
       ],
-      "ordre": 50
+      "ordre": 57
     },
     {
       "id": "tertiaire_erp",
@@ -15692,7 +17848,7 @@
           "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
         }
       ],
-      "ordre": 51
+      "ordre": 58
     },
     {
       "id": "industrie",
@@ -16000,7 +18156,7 @@
           "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
         }
       ],
-      "ordre": 52
+      "ordre": 59
     },
     {
       "id": "variateurs",
@@ -16308,7 +18464,7 @@
           "explication": "Filtre, câble, blindage, séparation, réglages."
         }
       ],
-      "ordre": 53
+      "ordre": 60
     },
     {
       "id": "eclairage_public",
@@ -16616,7 +18772,7 @@
           "explication": "Baliser, couper, vérifier, intervenir, essayer."
         }
       ],
-      "ordre": 54
+      "ordre": 61
     },
     {
       "id": "portails_ascenseurs",
@@ -16924,7 +19080,7 @@
           "explication": "Alimentation, mécanique, sécurités, réglages, test."
         }
       ],
-      "ordre": 55
+      "ordre": 62
     },
     {
       "id": "pompes_eau",
@@ -17232,7 +19388,7 @@
           "explication": "Protection, câble, raccordement, sécurité, essai."
         }
       ],
-      "ordre": 56
+      "ordre": 63
     },
     {
       "id": "cabler_tableau",
@@ -17540,7 +19696,7 @@
           "explication": "Préparer, monter, équiper, raccorder, contrôler."
         }
       ],
-      "ordre": 57
+      "ordre": 64
     },
     {
       "id": "schemas_industriels",
@@ -17848,7 +20004,7 @@
           "explication": "Lire, vérifier les évidences, mesurer, contrôler, réparer."
         }
       ],
-      "ordre": 58
+      "ordre": 65
     },
     {
       "id": "soudure",
@@ -18156,7 +20312,7 @@
           "explication": "Incendie, retour de courant, EPI, fumées, puis souder."
         }
       ],
-      "ordre": 59
+      "ordre": 66
     },
     {
       "id": "agriculture",
@@ -18464,7 +20620,7 @@
           "explication": "Équipotentialité, protection des personnes et animaux, matériel, câbles, secours."
         }
       ],
-      "ordre": 60
+      "ordre": 67
     },
     {
       "id": "medical",
@@ -18772,7 +20928,7 @@
           "explication": "Redondance en cascade."
         }
       ],
-      "ordre": 61
+      "ordre": 68
     },
     {
       "id": "telecoms",
@@ -19080,7 +21236,7 @@
           "explication": "Rayonnement, hauteur, intervention, remise en service."
         }
       ],
-      "ordre": 62
+      "ordre": 69
     },
     {
       "id": "induction_industrie",
@@ -19388,7 +21544,7 @@
           "explication": "Courant, champ, induction, chaleur, procédé."
         }
       ],
-      "ordre": 63
+      "ordre": 70
     },
     {
       "id": "data_centers",
@@ -19696,7 +21852,7 @@
           "explication": "Cascade de secours."
         }
       ],
-      "ordre": 64
+      "ordre": 71
     },
     {
       "id": "maintenance_preventive",
@@ -20004,7 +22160,7 @@
           "explication": "De la préparation au suivi."
         }
       ],
-      "ordre": 65
+      "ordre": 72
     },
     {
       "id": "pac",
@@ -20312,7 +22468,7 @@
           "explication": "Boucle fermée."
         }
       ],
-      "ordre": 66
+      "ordre": 73
     },
     {
       "id": "selectivite",
@@ -20620,7 +22776,7 @@
           "explication": "Méthode de dimensionnement."
         }
       ],
-      "ordre": 67
+      "ordre": 74
     },
     {
       "id": "cuisines_pro",
@@ -20928,12 +23084,936 @@
           "explication": "L'eau projette l'huile en feu."
         }
       ],
-      "ordre": 68
+      "ordre": 75
+    },
+    {
+      "id": "spectacle",
+      "titre": "Spectacle et événementiel",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "sp_distribution",
+          "titre": "Distribuer l'énergie sur un site",
+          "contenu": "Un concert ou un salon a besoin d'une distribution temporaire : armoire de chantier ou de spectacle, prises industrielles 16 A à 125 A, câbles souples H07RN-F, boîtiers de répartition (« bretelles »).\n\nSource : le réseau du lieu, un branchement provisoire ou un groupe électrogène. On sépare son (sensible aux perturbations), lumière (gradateurs) et vidéo, souvent sur des départs distincts, avec un point de terre commun.\n\nLes puissances se calculent poste par poste : la lumière LED a fait chuter les besoins, mais un gros plateau reste en centaines de kVA.",
+          "image": "sp_distribution.png"
+        },
+        {
+          "id": "sp_securite_site",
+          "titre": "Sécurité sur site",
+          "contenu": "Câbles au sol : passe-câbles, chemins protégés, jamais sous un tapis en travers des issues. Différentiels 30 mA sur les prises accessibles au public et aux techniciens. Matériel IP44 minimum dehors, plus si pluie.\n\nStructures et ponts : mise à la terre, hauteur des projecteurs, élingues de sécurité. Les groupes électrogènes sont mis à la terre avec un piquet et raccordés par un électricien.\n\nLes intervenants sont habilités (BS, BR ou B1 selon la tâche). Le plan de prévention coordonne les entreprises ; la commission de sécurité visite les grands événements.",
+          "image": "sp_securite_site.png"
+        },
+        {
+          "id": "sp_montage",
+          "titre": "Monter, exploiter, démonter",
+          "contenu": "Montage : distribution d'abord, hors tension, puis mise sous tension progressive, essais des différentiels, vérification des phases sur les gradateurs et moteurs (sens de rotation des treuils).\n\nExploitation : un régisseur veille, une réserve de puissance est prévue, les groupes sont surveillés (carburant, température).\n\nDémontage : couper à la source, débrancher dans l'ordre inverse, enrouler proprement, contrôler l'état des câbles et prises avant le prochain événement.",
+          "image": "sp_montage.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9001",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "Les câbles utilisés en spectacle sont…",
+          "reponses": [
+            "rigides H07V-U",
+            "souples H07RN-F",
+            "en aluminium nu",
+            "des rallonges domestiques"
+          ],
+          "bonne": 1,
+          "explication": "Résistants aux chocs et à l'humidité."
+        },
+        {
+          "id": "q9002",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "Les prises de forte puissance d'une distribution événementielle sont…",
+          "reponses": [
+            "domestiques",
+            "industrielles, 16 à 125 A",
+            "USB",
+            "absentes"
+          ],
+          "bonne": 1,
+          "explication": "CEE rouges ou bleues."
+        },
+        {
+          "id": "q9003",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "Son, lumière et vidéo sont…",
+          "reponses": [
+            "sur la même prise",
+            "souvent sur des départs séparés",
+            "sans terre",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Perturbations des gradateurs."
+        },
+        {
+          "id": "q9004",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "Le point de terre est…",
+          "reponses": [
+            "multiple",
+            "commun pour tout le site",
+            "absent",
+            "facultatif"
+          ],
+          "bonne": 1,
+          "explication": "Évite les boucles de masse et les ronflements."
+        },
+        {
+          "id": "q9005",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "Un gros plateau peut appeler…",
+          "reponses": [
+            "1 kW",
+            "des centaines de kVA",
+            "1 W",
+            "10 MW"
+          ],
+          "bonne": 1,
+          "explication": "Calcul poste par poste."
+        },
+        {
+          "id": "q9006",
+          "fiche_id": "sp_distribution",
+          "type": "qcm",
+          "enonce": "La lumière LED a…",
+          "reponses": [
+            "augmenté les besoins",
+            "fait chuter les besoins en puissance",
+            "supprimé les câbles",
+            "interdit les gradateurs"
+          ],
+          "bonne": 1,
+          "explication": "Moins de chaleur aussi."
+        },
+        {
+          "id": "q9007",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Un câble au sol en travers d'un passage est…",
+          "reponses": [
+            "laissé tel quel",
+            "protégé par un passe-câbles",
+            "caché sous un tapis",
+            "suspendu à hauteur de visage"
+          ],
+          "bonne": 1,
+          "explication": "Chutes et écrasement."
+        },
+        {
+          "id": "q9008",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Les prises accessibles au public sont protégées par…",
+          "reponses": [
+            "rien",
+            "un différentiel 30 mA",
+            "un fusible seul",
+            "une clé"
+          ],
+          "bonne": 1,
+          "explication": "Milieu humide, public."
+        },
+        {
+          "id": "q9009",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "En extérieur, le matériel est au minimum…",
+          "reponses": [
+            "IP20",
+            "IP44",
+            "IP00",
+            "IP10"
+          ],
+          "bonne": 1,
+          "explication": "Plus si pluie."
+        },
+        {
+          "id": "q9010",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Un groupe électrogène sur site est…",
+          "reponses": [
+            "posé sans terre",
+            "mis à la terre avec un piquet",
+            "dans la salle",
+            "sur le toit"
+          ],
+          "bonne": 1,
+          "explication": "Raccordé par un électricien."
+        },
+        {
+          "id": "q9011",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Les projecteurs sur un pont sont retenus par…",
+          "reponses": [
+            "la gravité",
+            "des élingues de sécurité",
+            "du ruban",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "En cas de rupture du crochet."
+        },
+        {
+          "id": "q9012",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Le plan de prévention sert à…",
+          "reponses": [
+            "décorer",
+            "coordonner les entreprises et les risques",
+            "vendre des billets",
+            "choisir la musique"
+          ],
+          "bonne": 1,
+          "explication": "Obligatoire dès que plusieurs entreprises."
+        },
+        {
+          "id": "q9013",
+          "fiche_id": "sp_securite_site",
+          "type": "qcm",
+          "enonce": "Les techniciens qui branchent la distribution sont…",
+          "reponses": [
+            "bénévoles sans formation",
+            "habilités selon la tâche",
+            "des artistes",
+            "le public"
+          ],
+          "bonne": 1,
+          "explication": "BS, BR ou B1."
+        },
+        {
+          "id": "q9014",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Le montage commence par…",
+          "reponses": [
+            "la mise sous tension",
+            "la distribution hors tension",
+            "les artistes",
+            "le démontage"
+          ],
+          "bonne": 1,
+          "explication": "Puis mise sous tension progressive."
+        },
+        {
+          "id": "q9015",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Avant d'utiliser un treuil, on vérifie…",
+          "reponses": [
+            "la couleur",
+            "le sens de rotation (ordre des phases)",
+            "le prix",
+            "le poids du public"
+          ],
+          "bonne": 1,
+          "explication": "Inversion de phases = charge qui descend."
+        },
+        {
+          "id": "q9016",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Pendant l'exploitation…",
+          "reponses": [
+            "personne ne surveille",
+            "un régisseur veille et une réserve est prévue",
+            "on coupe tout",
+            "on change les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Groupes surveillés."
+        },
+        {
+          "id": "q9017",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Le démontage commence par…",
+          "reponses": [
+            "débrancher les projecteurs",
+            "couper à la source",
+            "enrouler les câbles sous tension",
+            "tirer sur les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Puis ordre inverse."
+        },
+        {
+          "id": "q9018",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Un câble abîmé repéré au démontage est…",
+          "reponses": [
+            "réutilisé",
+            "mis de côté pour réparation ou rebut",
+            "caché",
+            "coupé en deux"
+          ],
+          "bonne": 1,
+          "explication": "Contrôle avant le prochain événement."
+        },
+        {
+          "id": "q9019",
+          "fiche_id": "sp_montage",
+          "type": "qcm",
+          "enonce": "Les différentiels sont testés…",
+          "reponses": [
+            "jamais",
+            "à la mise sous tension",
+            "après le concert",
+            "une fois par an"
+          ],
+          "bonne": 1,
+          "explication": "Bouton test."
+        },
+        {
+          "id": "q9020",
+          "fiche_id": "sp_montage",
+          "type": "ordre",
+          "enonce": "Mettre en service une distribution de spectacle : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Installer la distribution hors tension",
+            "Mettre sous tension depuis la source",
+            "Tester les différentiels",
+            "Vérifier l'ordre des phases sur gradateurs et treuils",
+            "Mettre en service poste par poste"
+          ],
+          "explication": "Progressif."
+        }
+      ],
+      "ordre": 76
+    },
+    {
+      "id": "gtb",
+      "titre": "GTB et bâtiment intelligent",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "gtb_principe",
+          "titre": "Qu'est-ce qu'une GTB",
+          "contenu": "La gestion technique du bâtiment (GTB) supervise chauffage, ventilation, climatisation, éclairage, stores, accès et comptage depuis un poste central. Des automates et des capteurs remontent l'état, des actionneurs exécutent.\n\nProtocoles ouverts : KNX (bus filaire), BACnet (réseau IP), Modbus (compteurs, variateurs), DALI (éclairage), LonWorks. L'interopérabilité évite de dépendre d'un seul fabricant.\n\nLe décret BACS impose une GTB dans les bâtiments tertiaires dont les systèmes dépassent une certaine puissance, avec des échéances 2025 et 2027.",
+          "image": "gtb_principe.png"
+        },
+        {
+          "id": "gtb_energie",
+          "titre": "Économiser avec la GTB",
+          "contenu": "Une GTB bien réglée fait économiser 10 à 30 % : programmation horaire (chauffer quand il y a quelqu'un), régulation par zone, détection de présence, gradation de l'éclairage selon la lumière naturelle, ventilation selon le CO₂.\n\nLe sous-comptage par usage (éclairage, CVC, prises, process) montre où va l'énergie, et alimente le suivi imposé par le dispositif éco-énergie tertiaire.\n\nLes alarmes techniques (défaut de chaudière, dérive de température, dépassement de puissance) évitent les gaspillages qui durent.",
+          "image": "gtb_energie.png"
+        },
+        {
+          "id": "gtb_installation",
+          "titre": "Installer et exploiter",
+          "contenu": "Côté électricien : armoires d'automates, alimentation 24 V, câblage des bus (paire torsadée dédiée, séparée des courants forts), capteurs et actionneurs adressés, réseau IP pour la supervision.\n\nCybersécurité : une GTB sur le réseau est une cible. Réseau séparé, mots de passe changés, mises à jour, accès distant sécurisé.\n\nUne GTB s'exploite : sans suivi, les réglages dérivent et les économies disparaissent. Formation des exploitants, revue annuelle des programmations.",
+          "image": "gtb_installation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9601",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "La GTB supervise…",
+          "reponses": [
+            "seulement l'éclairage",
+            "chauffage, ventilation, éclairage, stores, comptage",
+            "le réseau électrique public",
+            "les ordinateurs"
+          ],
+          "bonne": 1,
+          "explication": "Poste central."
+        },
+        {
+          "id": "q9602",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "KNX est…",
+          "reponses": [
+            "un moteur",
+            "un bus filaire pour le bâtiment",
+            "un fusible",
+            "une norme de câble"
+          ],
+          "bonne": 1,
+          "explication": "Protocole ouvert."
+        },
+        {
+          "id": "q9603",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "BACnet fonctionne…",
+          "reponses": [
+            "sur réseau IP",
+            "sur piles",
+            "par radio seulement",
+            "par courrier"
+          ],
+          "bonne": 0,
+          "explication": "Supervision."
+        },
+        {
+          "id": "q9604",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "DALI concerne…",
+          "reponses": [
+            "le chauffage",
+            "l'éclairage",
+            "les stores",
+            "l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Adressage des luminaires."
+        },
+        {
+          "id": "q9605",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "L'interopérabilité des protocoles évite…",
+          "reponses": [
+            "les économies",
+            "de dépendre d'un seul fabricant",
+            "les capteurs",
+            "les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Choix libre des équipements."
+        },
+        {
+          "id": "q9606",
+          "fiche_id": "gtb_principe",
+          "type": "qcm",
+          "enonce": "Le décret BACS impose une GTB…",
+          "reponses": [
+            "aux maisons",
+            "aux bâtiments tertiaires au-delà d'une certaine puissance",
+            "aux voitures",
+            "à personne"
+          ],
+          "bonne": 1,
+          "explication": "Échéances 2025 et 2027."
+        },
+        {
+          "id": "q9607",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "Une GTB bien réglée économise environ…",
+          "reponses": [
+            "1 %",
+            "10 à 30 %",
+            "90 %",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Selon l'état de départ."
+        },
+        {
+          "id": "q9608",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "La programmation horaire consiste à…",
+          "reponses": [
+            "chauffer en permanence",
+            "chauffer et éclairer quand le bâtiment est occupé",
+            "couper les alarmes",
+            "changer l'heure"
+          ],
+          "bonne": 1,
+          "explication": "Occupation réelle."
+        },
+        {
+          "id": "q9609",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "La ventilation pilotée par sonde CO₂…",
+          "reponses": [
+            "ventile toujours au maximum",
+            "ventile selon l'occupation réelle",
+            "coupe la ventilation",
+            "mesure la température"
+          ],
+          "bonne": 1,
+          "explication": "Qualité d'air et économies."
+        },
+        {
+          "id": "q9610",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "La gradation selon la lumière naturelle…",
+          "reponses": [
+            "éteint tout",
+            "réduit l'éclairage artificiel quand le jour suffit",
+            "allume la nuit",
+            "ne sert à rien"
+          ],
+          "bonne": 1,
+          "explication": "Capteur de luminosité."
+        },
+        {
+          "id": "q9611",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "Le sous-comptage par usage sert à…",
+          "reponses": [
+            "payer plus",
+            "savoir où va l'énergie",
+            "doubler les factures",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Suivi éco-énergie tertiaire."
+        },
+        {
+          "id": "q9612",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "Une alarme de dérive de température évite…",
+          "reponses": [
+            "le chauffage",
+            "un gaspillage qui dure",
+            "les capteurs",
+            "la ventilation"
+          ],
+          "bonne": 1,
+          "explication": "Réaction rapide."
+        },
+        {
+          "id": "q9613",
+          "fiche_id": "gtb_energie",
+          "type": "qcm",
+          "enonce": "Le dispositif éco-énergie tertiaire impose…",
+          "reponses": [
+            "rien",
+            "de réduire et de déclarer les consommations",
+            "de couper le chauffage",
+            "de fermer les bâtiments"
+          ],
+          "bonne": 1,
+          "explication": "Objectifs 2030, 2040, 2050."
+        },
+        {
+          "id": "q9614",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "Les bus de GTB sont câblés…",
+          "reponses": [
+            "avec les courants forts",
+            "en paire torsadée dédiée, séparée",
+            "en 230 V",
+            "sans câble"
+          ],
+          "bonne": 1,
+          "explication": "CEM."
+        },
+        {
+          "id": "q9615",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "Les automates de GTB sont souvent alimentés en…",
+          "reponses": [
+            "400 V",
+            "24 V",
+            "12 kV",
+            "5 V USB"
+          ],
+          "bonne": 1,
+          "explication": "Alimentation dédiée."
+        },
+        {
+          "id": "q9616",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "Une GTB connectée à Internet…",
+          "reponses": [
+            "est sans risque",
+            "est une cible : réseau séparé, mots de passe, mises à jour",
+            "doit être publique",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Cybersécurité."
+        },
+        {
+          "id": "q9617",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "Sans suivi, une GTB…",
+          "reponses": [
+            "reste parfaite",
+            "voit ses réglages dériver et les économies disparaître",
+            "se règle seule",
+            "s'éteint"
+          ],
+          "bonne": 1,
+          "explication": "Exploitation nécessaire."
+        },
+        {
+          "id": "q9618",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "Les capteurs et actionneurs d'un bus sont…",
+          "reponses": [
+            "anonymes",
+            "adressés individuellement",
+            "tous identiques",
+            "en 230 V"
+          ],
+          "bonne": 1,
+          "explication": "Mise en service par adressage."
+        },
+        {
+          "id": "q9619",
+          "fiche_id": "gtb_installation",
+          "type": "qcm",
+          "enonce": "La revue des programmations se fait…",
+          "reponses": [
+            "jamais",
+            "au moins chaque année",
+            "chaque heure",
+            "à la vente"
+          ],
+          "bonne": 1,
+          "explication": "Changements d'usage."
+        },
+        {
+          "id": "q9620",
+          "fiche_id": "gtb_installation",
+          "type": "ordre",
+          "enonce": "Mettre en service une GTB : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Câbler bus, capteurs et actionneurs",
+            "Adresser et paramétrer les équipements",
+            "Programmer horaires et consignes",
+            "Tester chaque fonction",
+            "Former les exploitants et suivre les consommations"
+          ],
+          "explication": "De l'installation à l'exploitation."
+        }
+      ],
+      "ordre": 77
+    },
+    {
+      "id": "devis_documents",
+      "titre": "Devis, documents et réception",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "doc_devis",
+          "titre": "Le devis",
+          "contenu": "Un devis décrit précisément les travaux : postes, quantités, matériel (marque, référence), main-d'œuvre, délai, conditions de paiement, TVA (10 % en rénovation de logement de plus de 2 ans, 20 % sinon). Signé, il devient un contrat.\n\nLe devis s'appuie sur une visite et un métré. Les imprévus (câbles non conformes découverts, murs pleins) font l'objet d'un avenant, pas d'une surprise sur la facture.\n\nMentions obligatoires : identité de l'entreprise, assurance décennale, durée de validité, date de début et durée des travaux.",
+          "image": "doc_devis.png"
+        },
+        {
+          "id": "doc_attestations",
+          "titre": "Consuel, attestations et garanties",
+          "contenu": "Pour une installation neuve ou rénovée en totalité, le Consuel délivre l'attestation de conformité (jaune pour les logements) après visa, parfois après visite : sans elle, pas de mise en service par le distributeur.\n\nEn rénovation partielle, l'électricien remet une attestation de fin de travaux et un récapitulatif. Les garanties : parfait achèvement (1 an), bon fonctionnement (2 ans), décennale (10 ans) pour ce qui touche à la solidité ou à l'habitabilité.\n\nLes aides (rénovation énergétique) exigent une entreprise RGE et des factures détaillées.",
+          "image": "doc_attestations.png"
+        },
+        {
+          "id": "doc_reception",
+          "titre": "DOE et réception",
+          "contenu": "À la fin des travaux, le dossier des ouvrages exécutés (DOE) rassemble schémas à jour, plans de tableaux, notices, fiches techniques, résultats des mesures (terre, isolement, différentiels), certificats.\n\nLa réception est un acte : le client constate la conformité, avec ou sans réserves à lever dans un délai fixé. Elle fait partir les garanties.\n\nLes schémas doivent correspondre à ce qui est réellement posé : un schéma faux est pire qu'absent pour celui qui interviendra dans dix ans.",
+          "image": "doc_reception.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9801",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "Un devis signé devient…",
+          "reponses": [
+            "un souvenir",
+            "un contrat",
+            "une facture",
+            "une garantie"
+          ],
+          "bonne": 1,
+          "explication": "Engagement des deux parties."
+        },
+        {
+          "id": "q9802",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "La TVA en rénovation d'un logement de plus de 2 ans est de…",
+          "reponses": [
+            "5,5 %",
+            "10 %",
+            "20 %",
+            "0 %"
+          ],
+          "bonne": 1,
+          "explication": "20 % pour le neuf ou les locaux pro."
+        },
+        {
+          "id": "q9803",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "Un devis s'appuie sur…",
+          "reponses": [
+            "une estimation par téléphone",
+            "une visite et un métré",
+            "le prix du voisin",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Précision."
+        },
+        {
+          "id": "q9804",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "Un imprévu découvert en cours de chantier fait l'objet…",
+          "reponses": [
+            "d'une surprise sur la facture",
+            "d'un avenant signé",
+            "de rien",
+            "d'une remise"
+          ],
+          "bonne": 1,
+          "explication": "Accord écrit."
+        },
+        {
+          "id": "q9805",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "Un devis mentionne obligatoirement…",
+          "reponses": [
+            "la couleur du camion",
+            "l'assurance décennale et la durée de validité",
+            "l'âge du client",
+            "la météo"
+          ],
+          "bonne": 1,
+          "explication": "Mentions légales."
+        },
+        {
+          "id": "q9806",
+          "fiche_id": "doc_devis",
+          "type": "qcm",
+          "enonce": "Le matériel dans un devis est décrit par…",
+          "reponses": [
+            "un mot",
+            "marque, référence, quantité",
+            "le prix seul",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Pas de substitution surprise."
+        },
+        {
+          "id": "q9807",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "L'attestation Consuel est nécessaire pour…",
+          "reponses": [
+            "changer une prise",
+            "une installation neuve ou entièrement rénovée",
+            "peindre",
+            "un devis"
+          ],
+          "bonne": 1,
+          "explication": "Mise en service."
+        },
+        {
+          "id": "q9808",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "Sans attestation Consuel, le distributeur…",
+          "reponses": [
+            "met en service quand même",
+            "refuse la mise en service",
+            "envoie un cadeau",
+            "coupe le gaz"
+          ],
+          "bonne": 1,
+          "explication": "Obligation légale."
+        },
+        {
+          "id": "q9809",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "La garantie de parfait achèvement dure…",
+          "reponses": [
+            "1 an",
+            "2 ans",
+            "10 ans",
+            "1 mois"
+          ],
+          "bonne": 0,
+          "explication": "Défauts signalés à la réception ou dans l'année."
+        },
+        {
+          "id": "q9810",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "La garantie décennale couvre…",
+          "reponses": [
+            "les ampoules",
+            "ce qui touche à la solidité ou à l'habitabilité",
+            "les rayures",
+            "la peinture"
+          ],
+          "bonne": 1,
+          "explication": "10 ans."
+        },
+        {
+          "id": "q9811",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "La garantie de bon fonctionnement dure…",
+          "reponses": [
+            "1 an",
+            "2 ans",
+            "10 ans",
+            "20 ans"
+          ],
+          "bonne": 1,
+          "explication": "Équipements dissociables."
+        },
+        {
+          "id": "q9812",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "Les aides à la rénovation énergétique exigent une entreprise…",
+          "reponses": [
+            "quelconque",
+            "RGE",
+            "étrangère",
+            "sans assurance"
+          ],
+          "bonne": 1,
+          "explication": "Reconnu garant de l'environnement."
+        },
+        {
+          "id": "q9813",
+          "fiche_id": "doc_attestations",
+          "type": "qcm",
+          "enonce": "En rénovation partielle, l'électricien remet…",
+          "reponses": [
+            "rien",
+            "une attestation de fin de travaux",
+            "un Consuel",
+            "un plan de maison"
+          ],
+          "bonne": 1,
+          "explication": "Et un récapitulatif."
+        },
+        {
+          "id": "q9814",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "Le DOE contient…",
+          "reponses": [
+            "les factures seulement",
+            "schémas à jour, notices, mesures, certificats",
+            "le devis",
+            "la publicité"
+          ],
+          "bonne": 1,
+          "explication": "Dossier des ouvrages exécutés."
+        },
+        {
+          "id": "q9815",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "La réception des travaux…",
+          "reponses": [
+            "est facultative",
+            "constate la conformité et fait partir les garanties",
+            "est un paiement",
+            "est un devis"
+          ],
+          "bonne": 1,
+          "explication": "Avec ou sans réserves."
+        },
+        {
+          "id": "q9816",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "Les réserves à la réception sont…",
+          "reponses": [
+            "des remises",
+            "des défauts à corriger dans un délai fixé",
+            "interdites",
+            "des cadeaux"
+          ],
+          "bonne": 1,
+          "explication": "Levée des réserves."
+        },
+        {
+          "id": "q9817",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "Les mesures remises au client comprennent…",
+          "reponses": [
+            "la météo",
+            "terre, isolement, essais des différentiels",
+            "le poids du tableau",
+            "le prix du cuivre"
+          ],
+          "bonne": 1,
+          "explication": "Preuve de conformité."
+        },
+        {
+          "id": "q9818",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "Un schéma qui ne correspond pas à l'installation…",
+          "reponses": [
+            "est acceptable",
+            "est pire qu'absent",
+            "est joli",
+            "est normal"
+          ],
+          "bonne": 1,
+          "explication": "Danger pour le prochain intervenant."
+        },
+        {
+          "id": "q9819",
+          "fiche_id": "doc_reception",
+          "type": "qcm",
+          "enonce": "Le plan du tableau indique…",
+          "reponses": [
+            "les meubles",
+            "le repérage de chaque circuit",
+            "le prix",
+            "la couleur des murs"
+          ],
+          "bonne": 1,
+          "explication": "Étiquetage."
+        },
+        {
+          "id": "q9820",
+          "fiche_id": "doc_devis",
+          "type": "ordre",
+          "enonce": "De la demande du client à la garantie : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Visite et métré",
+            "Devis signé",
+            "Travaux et avenants si imprévus",
+            "Réception avec DOE et attestations",
+            "Garanties : 1, 2 et 10 ans"
+          ],
+          "explication": "Cycle d'un chantier."
+        }
+      ],
+      "ordre": 78
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 69,
+      "ordre": 79,
       "fiches": [
         {
           "id": "dangers",
@@ -21241,7 +24321,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 70,
+      "ordre": 80,
       "fiches": [
         {
           "id": "principe",
@@ -21849,7 +24929,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 71
+      "ordre": 81
     },
     {
       "id": "epi",
@@ -22156,7 +25236,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 72
+      "ordre": 82
     },
     {
       "id": "b0_bs",
@@ -22464,7 +25544,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 73
+      "ordre": 83
     },
     {
       "id": "br",
@@ -22772,7 +25852,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 74
+      "ordre": 84
     },
     {
       "id": "secours",
@@ -23079,7 +26159,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 75
+      "ordre": 85
     },
     {
       "id": "b1_b2",
@@ -23388,7 +26468,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 76
+      "ordre": 86
     },
     {
       "id": "bc",
@@ -23696,7 +26776,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 77
+      "ordre": 87
     },
     {
       "id": "outillage",
@@ -24004,7 +27084,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 78
+      "ordre": 88
     },
     {
       "id": "normes",
@@ -24312,7 +27392,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 79
+      "ordre": 89
     },
     {
       "id": "atex",
@@ -24620,7 +27700,7 @@
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
         }
       ],
-      "ordre": 80
+      "ordre": 90
     },
     {
       "id": "arc_tst",
@@ -24928,7 +28008,7 @@
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
         }
       ],
-      "ordre": 81
+      "ordre": 91
     },
     {
       "id": "haute_tension",
@@ -25236,7 +28316,7 @@
           "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
         }
       ],
-      "ordre": 82
+      "ordre": 92
     },
     {
       "id": "enfants",
@@ -25544,7 +28624,7 @@
           "explication": "Prises, câbles, lampe, appareils, parole."
         }
       ],
-      "ordre": 83
+      "ordre": 93
     },
     {
       "id": "foudre",
@@ -25852,7 +28932,7 @@
           "explication": "Capter, descendre, écouler, équilibrer, limiter."
         }
       ],
-      "ordre": 84
+      "ordre": 94
     },
     {
       "id": "cem_sante",
@@ -26160,7 +29240,7 @@
           "explication": "Démarche de prévention classique."
         }
       ],
-      "ordre": 85
+      "ordre": 95
     },
     {
       "id": "metiers",
@@ -26468,7 +29548,7 @@
           "explication": "Le diplôme d'abord, l'habilitation ensuite."
         }
       ],
-      "ordre": 86
+      "ordre": 96
     },
     {
       "id": "ssi",
@@ -26776,7 +29856,7 @@
           "explication": "Chaîne de mise en sécurité."
         }
       ],
-      "ordre": 87
+      "ordre": 97
     },
     {
       "id": "regimes_neutre",
@@ -27084,7 +30164,7 @@
           "explication": "Le second défaut ne doit pas arriver."
         }
       ],
-      "ordre": 88
+      "ordre": 98
     },
     {
       "id": "securite_machines",
@@ -27392,7 +30472,315 @@
           "explication": "Toutes les énergies, pas seulement l'électricité."
         }
       ],
-      "ordre": 89
+      "ordre": 99
+    },
+    {
+      "id": "physiologie",
+      "titre": "Effets du courant sur le corps",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "phy_seuils",
+          "titre": "Les seuils de courant",
+          "contenu": "Ce n'est pas la tension qui tue, c'est le courant qui traverse le corps, et sa durée. À 50 Hz : 0,5 mA seuil de perception, 10 mA seuil de non-lâcher (les muscles se contractent, on ne peut plus lâcher), 30 mA seuil de paralysie respiratoire, 75 à 100 mA fibrillation ventriculaire possible en une seconde.\n\nLa fibrillation, désorganisation du cœur, est la première cause de décès par électrisation. Au-delà de quelques ampères : arrêt cardiaque, brûlures internes profondes.\n\nLe courant continu est un peu moins dangereux à intensité égale (seuils plus élevés), mais provoque des brûlures électrolytiques.",
+          "image": "phy_seuils.png"
+        },
+        {
+          "id": "phy_impedance",
+          "titre": "Impédance du corps et tension limite",
+          "contenu": "Le corps est une résistance : 1 000 à 3 000 Ω main à main ou main à pied, peau sèche ; quelques centaines d'ohms si la peau est mouillée ou blessée. Sous 230 V, peau mouillée : plus de 500 mA.\n\nLa tension limite conventionnelle est de 50 V en alternatif dans les locaux secs, 25 V dans les locaux mouillés, 12 V immergé. En dessous, le courant reste sous le seuil dangereux dans la plupart des cas.\n\nLe trajet compte : main gauche vers pied droit traverse le cœur ; main vers main aussi. Pied à pied (tension de pas) est moins grave mais peut faire tomber.",
+          "image": "phy_impedance.png"
+        },
+        {
+          "id": "phy_lesions",
+          "titre": "Lésions et suites",
+          "contenu": "Brûlures : au point d'entrée et de sortie (petites, profondes), internes le long du trajet, et par arc (brûlures thermiques étendues, UV). Une petite marque en surface peut cacher des dégâts musculaires importants.\n\nAutres effets : chute (travail en hauteur), tétanisation, troubles du rythme cardiaque retardés jusqu'à 24 heures, atteintes rénales par destruction musculaire, séquelles neurologiques.\n\nToute personne électrisée consulte, même sans symptôme. L'électrocution est le décès par électrisation.",
+          "image": "phy_lesions.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q9101",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "Ce qui tue lors d'une électrisation est…",
+          "reponses": [
+            "la tension seule",
+            "le courant qui traverse le corps et sa durée",
+            "la couleur du fil",
+            "le bruit"
+          ],
+          "bonne": 1,
+          "explication": "Intensité × temps × trajet."
+        },
+        {
+          "id": "q9102",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "Le seuil de perception à 50 Hz est d'environ…",
+          "reponses": [
+            "0,5 mA",
+            "10 mA",
+            "1 A",
+            "100 mA"
+          ],
+          "bonne": 0,
+          "explication": "Picotement."
+        },
+        {
+          "id": "q9103",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "Le seuil de non-lâcher est d'environ…",
+          "reponses": [
+            "0,5 mA",
+            "10 mA",
+            "1 A",
+            "5 A"
+          ],
+          "bonne": 1,
+          "explication": "Contraction des muscles fléchisseurs."
+        },
+        {
+          "id": "q9104",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "À 30 mA…",
+          "reponses": [
+            "rien ne se passe",
+            "paralysie respiratoire possible",
+            "c'est agréable",
+            "on parle"
+          ],
+          "bonne": 1,
+          "explication": "D'où les différentiels 30 mA."
+        },
+        {
+          "id": "q9105",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "La fibrillation ventriculaire peut apparaître dès…",
+          "reponses": [
+            "1 mA",
+            "75 à 100 mA pendant une seconde",
+            "10 A",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Première cause de décès."
+        },
+        {
+          "id": "q9106",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "La fibrillation est…",
+          "reponses": [
+            "un arrêt du cœur",
+            "une désorganisation des contractions du cœur",
+            "une brûlure",
+            "une chute"
+          ],
+          "bonne": 1,
+          "explication": "Le cœur ne pompe plus."
+        },
+        {
+          "id": "q9107",
+          "fiche_id": "phy_seuils",
+          "type": "qcm",
+          "enonce": "Le courant continu, à intensité égale…",
+          "reponses": [
+            "est plus dangereux",
+            "est un peu moins dangereux mais brûle",
+            "est inoffensif",
+            "n'existe pas dans le corps"
+          ],
+          "bonne": 1,
+          "explication": "Seuils plus élevés, brûlures électrolytiques."
+        },
+        {
+          "id": "q9108",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "La résistance du corps, peau sèche, est d'environ…",
+          "reponses": [
+            "10 Ω",
+            "1 000 à 3 000 Ω",
+            "1 MΩ",
+            "0 Ω"
+          ],
+          "bonne": 1,
+          "explication": "Chute fortement si mouillé."
+        },
+        {
+          "id": "q9109",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "Sous 230 V avec la peau mouillée, le courant peut dépasser…",
+          "reponses": [
+            "1 mA",
+            "500 mA",
+            "0,1 mA",
+            "1 µA"
+          ],
+          "bonne": 1,
+          "explication": "Largement mortel."
+        },
+        {
+          "id": "q9110",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "La tension limite conventionnelle en local sec est…",
+          "reponses": [
+            "230 V",
+            "50 V alternatif",
+            "12 V",
+            "400 V"
+          ],
+          "bonne": 1,
+          "explication": "25 V en local mouillé."
+        },
+        {
+          "id": "q9111",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "En milieu immergé, la tension limite est…",
+          "reponses": [
+            "50 V",
+            "25 V",
+            "12 V",
+            "230 V"
+          ],
+          "bonne": 2,
+          "explication": "Piscines, bassins."
+        },
+        {
+          "id": "q9112",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "Le trajet le plus dangereux passe…",
+          "reponses": [
+            "de pied à pied",
+            "par le cœur (main à main, main à pied)",
+            "par le doigt",
+            "par le nez"
+          ],
+          "bonne": 1,
+          "explication": "Trajet cardiaque."
+        },
+        {
+          "id": "q9113",
+          "fiche_id": "phy_impedance",
+          "type": "qcm",
+          "enonce": "La tension de pas…",
+          "reponses": [
+            "est sans effet",
+            "est moins grave mais peut faire tomber",
+            "traverse le cœur",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Près d'un défaut au sol."
+        },
+        {
+          "id": "q9114",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "Les brûlures électriques sont…",
+          "reponses": [
+            "superficielles seulement",
+            "souvent profondes le long du trajet",
+            "toujours visibles",
+            "inexistantes"
+          ],
+          "bonne": 1,
+          "explication": "Points d'entrée et de sortie."
+        },
+        {
+          "id": "q9115",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "L'arc électrique provoque…",
+          "reponses": [
+            "du froid",
+            "des brûlures thermiques étendues et des UV",
+            "une chute de tension",
+            "un choc léger"
+          ],
+          "bonne": 1,
+          "explication": "Coup d'arc."
+        },
+        {
+          "id": "q9116",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "Après une électrisation, des troubles du rythme peuvent survenir…",
+          "reponses": [
+            "immédiatement seulement",
+            "jusqu'à 24 heures après",
+            "jamais",
+            "un an après"
+          ],
+          "bonne": 1,
+          "explication": "Surveillance médicale."
+        },
+        {
+          "id": "q9117",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "La destruction musculaire après électrisation peut atteindre…",
+          "reponses": [
+            "les cheveux",
+            "les reins",
+            "les ongles",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Rhabdomyolyse."
+        },
+        {
+          "id": "q9118",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "Une personne électrisée sans symptôme…",
+          "reponses": [
+            "reprend le travail",
+            "consulte quand même",
+            "boit de l'eau",
+            "ne fait rien"
+          ],
+          "bonne": 1,
+          "explication": "Troubles retardés."
+        },
+        {
+          "id": "q9119",
+          "fiche_id": "phy_lesions",
+          "type": "qcm",
+          "enonce": "L'électrocution est…",
+          "reponses": [
+            "un choc léger",
+            "le décès par électrisation",
+            "une brûlure",
+            "une chute"
+          ],
+          "bonne": 1,
+          "explication": "Différence de vocabulaire importante."
+        },
+        {
+          "id": "q9120",
+          "fiche_id": "phy_seuils",
+          "type": "ordre",
+          "enonce": "Classe ces seuils de courant à 50 Hz du plus faible au plus fort.",
+          "reponses": [
+            "Perception : environ 0,5 mA",
+            "Non-lâcher : environ 10 mA",
+            "Paralysie respiratoire : environ 30 mA",
+            "Fibrillation possible : 75 à 100 mA",
+            "Arrêt cardiaque, brûlures internes : plusieurs ampères"
+          ],
+          "explication": "Courbes de la norme IEC 60479."
+        }
+      ],
+      "ordre": 100
     }
   ]
 }

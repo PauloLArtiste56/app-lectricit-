@@ -95,7 +95,7 @@ tard sans casser la structure.
 ```
 
 ## Modules de contenu
-Objectif de Paulo : beaucoup de modules (jusqu'à 100) pour ne jamais en faire le tour.
+Objectif de Paulo : beaucoup de modules (100 atteints) pour ne jamais en faire le tour.
 Chaque module : un `theme` (section de l'accueil), 3 fiches illustrées, 20 questions
 (qcm et ordre). Les fiches sont illustrées par un schéma dessiné ou par une « carte résumé »
 générée (`tools/schemas/generer_schemas.py`, fonction `carte_resume`).
@@ -190,11 +190,20 @@ Modules existants (par thème) :
 87. Sécurité des machines
 88. Compatibilité électromagnétique (CEM)
 89. Cuisines professionnelles
+90. Vélos, trottinettes et mobilité légère
+91. Spectacle et événementiel
+92. Effets du courant sur le corps
+93. Réseau de bord automobile
+94. Conducteurs, isolants et matériaux
+95. Calculs de circuits : Kirchhoff et diviseurs
+96. Oscilloscope et signaux
+97. GTB et bâtiment intelligent
+98. Recyclage et fin de vie des équipements
+99. Devis, documents et réception
+100. Géothermie, biomasse et énergies marines
 
-Sujets à venir : mobilité légère (vélos, trottinettes), spectacle et événementiel, effets
-physiologiques du courant, réseau de bord automobile, matériaux conducteurs et isolants,
-calculs de circuits, oscilloscope et signaux, GTB, recyclage et DEEE, devis et documents,
-géothermie et biomasse…
+Objectif des 100 modules atteint. Idées pour la suite : approfondir les modules existants
+(nouvelles questions), questions de type `image`, mode examen chronométré.
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
