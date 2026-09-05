@@ -92,9 +92,10 @@ Le champ `type` vaut `qcm` en V1. Prévoir dans les classes Dart de pouvoir ajou
 4. Symboles et schémas
 5. Dangers et sécurité de base (contact direct/indirect, disjoncteur, différentiel)
 
-Environ 10 questions par module. Le contenu est rédigé par moi ; Claude Code peut
-proposer des questions mais je valide chaque module. Ne jamais reprendre de QCM
-(questionnaires à choix multiples) existants d'organismes de formation.
+Environ 10 questions par module. Paulo fait confiance à Claude Code pour rédiger les
+questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
+NF C 18-510) pour choisir les sujets, mais ne jamais reprendre de QCM (questionnaires à
+choix multiples) existants d'organismes de formation. Paulo relit et corrige si besoin.
 
 ## Structure du projet
 ```

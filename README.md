@@ -8,8 +8,8 @@ une étape à la fois.
 
 ## État du projet
 
-🚧 Étape 1 faite : squelette Flutter, chargement de `assets/content.json`, écran Accueil
-avec la liste des modules. Le cadrage complet (périmètre, modèle de données, ordre de
+🚧 Étapes 1 et 2 faites : squelette Flutter, chargement de `assets/content.json`, écran
+Accueil avec la liste des modules, écran Quiz avec feedback immédiat. Le cadrage complet (périmètre, modèle de données, ordre de
 développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
 ## Stack prévue

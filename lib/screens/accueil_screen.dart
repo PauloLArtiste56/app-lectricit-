@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/content_loader.dart';
 import '../models/module.dart';
 import '../widgets/module_card.dart';
+import 'quiz_screen.dart';
 
 /// Écran d'accueil : la liste des modules avec leur progression.
 class AccueilScreen extends StatefulWidget {
@@ -54,9 +55,12 @@ class _AccueilScreenState extends State<AccueilScreen> {
                 module: module,
                 // La progression réelle arrivera à l'étape 4 (sauvegarde locale).
                 questionsReussies: 0,
-                onTap: () {
-                  // Étape 2 : ouvrir le module (fiches puis quiz).
-                },
+                // Étape 5 : passer par les fiches avant le quiz.
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => QuizScreen(module: module),
+                  ),
+                ),
               );
             },
           );
