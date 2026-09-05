@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Courant continu (DC) : toujours le même sens</text>
+<line x1="120" y1="520" x2="120" y2="160" stroke="#78909C" stroke-width="4" stroke-linecap="round"/>
+<line x1="120" y1="520" x2="740" y2="520" stroke="#78909C" stroke-width="4" stroke-linecap="round"/>
+<text x="104" y="170" font-size="28" fill="#78909C" text-anchor="end" font-weight="normal" >U</text>
+<text x="740" y="560" font-size="28" fill="#78909C" text-anchor="end" font-weight="normal" >temps</text>
+<line x1="120" y1="300" x2="740" y2="300" stroke="#1565C0" stroke-width="8" stroke-linecap="round"/>
+<text x="430" y="270" font-size="28" fill="#1565C0" text-anchor="middle" font-weight="normal" >tension constante</text>
+<line x1="120" y1="340" x2="740" y2="340" stroke="#78909C" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 12"/>
+<text x="100" y="350" font-size="26" fill="#78909C" text-anchor="end" font-weight="normal" >0</text>
+<line x1="940" y1="308" x2="1020" y2="308" stroke="#37474F" stroke-width="6" stroke-linecap="round"/>
+<line x1="962" y1="332" x2="998" y2="332" stroke="#37474F" stroke-width="10" stroke-linecap="round"/>
+<text x="1042" y="312" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >+</text>
+<text x="1042" y="346" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >−</text>
+<text x="980" y="420" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >pile, batterie,</text>
+<text x="980" y="456" font-size="28" fill="#78909C" text-anchor="middle" font-weight="normal" >panneau solaire</text>
+<text x="980" y="190" font-size="44" fill="#1565C0" text-anchor="middle" font-weight="bold" >⎓  DC</text>
+<text x="600.0" y="650" font-size="28" fill="#1F2933" text-anchor="middle" font-weight="normal" >Une borne +, une borne − : le courant circule toujours dans le même sens.</text>
+
+</svg>

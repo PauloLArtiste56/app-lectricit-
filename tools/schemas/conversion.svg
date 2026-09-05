@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Passer de l'un à l'autre</text>
+<text x="180" y="235" font-size="44" fill="#1565C0" text-anchor="middle" font-weight="bold" >~ AC</text>
+<text x="180" y="275" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >réseau 230 V</text>
+<line x1="280" y1="220" x2="400" y2="220" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="400,220 380.7,230.5 380.7,209.5" fill="#78909C"/>
+<rect x="410" y="160" width="340" height="120" rx="20" fill="white" stroke="#FFB300" stroke-width="6"/>
+<text x="580.0" y="232.0" font-size="34" fill="#FFB300" text-anchor="middle" font-weight="bold" >Redresseur</text>
+<line x1="760" y1="220" x2="880" y2="220" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="880,220 860.7,230.5 860.7,209.5" fill="#78909C"/>
+<text x="1000" y="235" font-size="44" fill="#1565C0" text-anchor="middle" font-weight="bold" >⎓ DC</text>
+<text x="1000" y="275" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >chargeur, PC, LED</text>
+<text x="180" y="445" font-size="44" fill="#1565C0" text-anchor="middle" font-weight="bold" >⎓ DC</text>
+<text x="180" y="485" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >batterie, solaire</text>
+<line x1="280" y1="430" x2="400" y2="430" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="400,430 380.7,440.5 380.7,419.5" fill="#78909C"/>
+<rect x="410" y="370" width="340" height="120" rx="20" fill="white" stroke="#43A047" stroke-width="6"/>
+<text x="580.0" y="442.0" font-size="34" fill="#43A047" text-anchor="middle" font-weight="bold" >Onduleur</text>
+<line x1="760" y1="430" x2="880" y2="430" stroke="#78909C" stroke-width="6" stroke-linecap="round"/>
+<polygon points="880,430 860.7,440.5 860.7,419.5" fill="#78909C"/>
+<text x="1000" y="445" font-size="44" fill="#1565C0" text-anchor="middle" font-weight="bold" >~ AC</text>
+<text x="1000" y="485" font-size="24" fill="#78909C" text-anchor="middle" font-weight="normal" >réseau, maison</text>
+<rect x="120" y="560" width="960" height="130" rx="20" fill="white" stroke="#1565C0" stroke-width="4"/>
+<text x="600.0" y="610" font-size="32" fill="#1565C0" text-anchor="middle" font-weight="bold" >Triphasé : 3 phases décalées</text>
+<text x="380" y="660" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >phase ↔ neutre : 230 V</text>
+<text x="820" y="660" font-size="30" fill="#1F2933" text-anchor="middle" font-weight="normal" >phase ↔ phase : 400 V</text>
+
+</svg>
