@@ -492,3 +492,22 @@ RESUMES_B = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_B:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_C = [
+ ("b1_exec", "B1 / B1V : l'exécutant", "B1", [("Travaux hors tension", "sous la direction d'un B2"), ("V : zone 4 avec EPI", "voisinage renforcé"), ("Ne consigne pas, ne dirige pas", "signale toute anomalie"), ("H1 en haute tension", "même rôle")], BLEU),
+ ("b2_chef", "B2 / B2V : le chargé de travaux", "B2", [("Responsable de la sécurité", "de son équipe"), ("Reçoit l'attestation de consignation", "vérifie l'absence de tension, balise"), ("Informe, surveille", "peut participer"), ("Avis de fin de travail", "sans lui, pas de déconsignation")], VERT),
+ ("deroule_travaux", "Travaux hors tension : le déroulé", "1→6", [("Préparation", "ordre de travail, analyse"), ("Consignation par le BC", "attestation"), ("Vérification, balisage, travaux", "sous surveillance du B2"), ("Avis de fin de travail", "puis déconsignation")], AMBRE),
+ ("bc_role", "BC : le chargé de consignation", "BC", [("Consigne et déconsigne", "désigné par l'employeur"), ("Une étape", "S-C-I-V + attestation"), ("Deux étapes", "S-C par le BC, I-V par le B2"), ("Déconsigne après l'avis de fin de travail", "tout le monde dégagé")], ROUGE),
+ ("documents", "Les documents", "DOC", [("Titre d'habilitation", "symboles, domaine, tâches"), ("Ordre de travail, attestation de consignation", "écrits et signés"), ("Avis de fin de travail", "signé par le chargé de travaux"), ("Carnet de prescriptions", "les règles, remises à chacun")], BLEU),
+ ("acteurs", "Les acteurs d'un chantier", "CEE", [("Employeur", "forme, habilite, fournit les EPI"), ("Chargé d'exploitation électrique", "accès et autorisations"), ("BC · B2 · B1", "consigne · dirige · exécute"), ("Chargé de chantier, surveillant", "non électrique · risque électrique")], VERT),
+ ("aimants", "Aimants et champ magnétique", "N·S", [("Pôles nord et sud", "opposés s'attirent, identiques se repoussent"), ("Un courant crée un champ", "expérience d'Œrsted"), ("Électroaimant", "bobine + noyau de fer, coupable"), ("Relais, contacteur, serrure", "déclencheur magnétique")], BLEU),
+ ("induction", "L'induction", "Φ", [("Champ variable → tension induite", "loi de Faraday"), ("Alternateur, transformateur", "les deux reposent dessus"), ("Loi de Lenz", "le courant induit s'oppose à la cause"), ("Courants de Foucault", "chauffent : induction, tôles feuilletées")], AMBRE),
+ ("applications_mag", "Applications", "F", [("Moteur", "force de Laplace"), ("Plaque à induction", "chauffe le fond ferromagnétique"), ("Pince ampèremétrique", "mesure le champ autour du fil"), ("Disjoncteur magnétothermique", "magnétique = court-circuit, thermique = surcharge")], VERT),
+ ("composants", "Les composants", "Ω F", [("Résistance, condensateur, bobine", "limite, stocke, filtre"), ("Diode : un seul sens", "seuil 0,7 V, bague = cathode"), ("LED", "toujours avec une résistance"), ("Transistor", "interrupteur ou amplificateur commandé")], BLEU),
+ ("alimentation", "L'alimentation", "5V", [("Transformateur", "abaisse le 230 V"), ("Redresseur", "pont de diodes"), ("Filtrage", "condensateur"), ("Régulateur", "tension de sortie fixe")], VERT),
+ ("securite_elec", "Sécurité en électronique", "!", [("Condensateurs chargés", "décharger avec une résistance"), ("Électricité statique", "bracelet antistatique"), ("Batteries lithium", "court-circuit = incendie"), ("Polarité et tensions maximales", "à respecter")], ROUGE),
+ ("principe_pv", "Le photovoltaïque", "Wc", [("Lumière → courant continu", "panneau ≈ 400 Wc"), ("1 kWc ≈ 1 000 à 1 300 kWh / an", "sud, incliné à 30°"), ("Onduleur", "continu → alternatif 230 V"), ("Micro-onduleurs", "un par panneau")], AMBRE),
+ ("installation_pv", "Installer et raccorder", "PV", [("Autoconsommation ou vente", "surplus vendu ou non"), ("Mairie, Enedis, Consuel", "déclaration, raccordement, conformité"), ("Câbles solaires, sectionneur DC", "protections AC"), ("Cadres à la terre", "parafoudre recommandé")], BLEU),
+ ("securite_pv", "Sécurité photovoltaïque", "BP", [("Sous tension dès la lumière", "impossible d'éteindre"), ("Arc continu", "jamais de MC4 sous charge"), ("Habilitation BP", "coupure d'urgence pompiers"), ("Chute", "le premier danger sur un toit")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_C:
+    carte_resume(nom, titre_s, ini, points, col)

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Liberation Sans, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="36" fill="#F7F9FC"/>
+<text x="600.0" y="70" font-size="40" fill="#1565C0" text-anchor="middle" font-weight="bold" >Le photovoltaïque</text>
+<circle cx="190" cy="330" r="110" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="190" y="355.92" font-size="72" fill="white" text-anchor="middle" font-weight="bold" >Wc</text>
+<circle cx="380" cy="192" r="12" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="420" y="200" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Lumière → courant continu</text>
+<text x="420" y="240" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >panneau ≈ 400 Wc</text>
+<circle cx="380" cy="307" r="12" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="420" y="315" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >1 kWc ≈ 1 000 à 1 300 kWh / an</text>
+<text x="420" y="355" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >sud, incliné à 30°</text>
+<circle cx="380" cy="422" r="12" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="420" y="430" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Onduleur</text>
+<text x="420" y="470" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >continu → alternatif 230 V</text>
+<circle cx="380" cy="537" r="12" fill="#FFB300" stroke="#FFB300" stroke-width="5"/>
+<text x="420" y="545" font-size="30" fill="#1F2933" text-anchor="start" font-weight="bold" >Micro-onduleurs</text>
+<text x="420" y="585" font-size="24" fill="#78909C" text-anchor="start" font-weight="normal" >un par panneau</text>
+
+</svg>
