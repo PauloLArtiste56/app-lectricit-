@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../models/module.dart';
+import 'module_icon.dart';
 
-/// Carte d'un module sur l'écran d'accueil : titre + progression "3/10".
+/// Carte d'un module sur l'écran d'accueil : icône, titre, progression "3/10".
 class ModuleCard extends StatelessWidget {
   const ModuleCard({
     super.key,
@@ -19,29 +20,60 @@ class ModuleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final total = module.nombreQuestions;
     final enPreparation = total == 0;
+    final termine = !enPreparation && questionsReussies == total;
     final progression = enPreparation ? 0.0 : questionsReussies / total;
 
     return Card(
-      child: ListTile(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
         onTap: enPreparation ? null : onTap,
-        leading: CircleAvatar(child: Text('${module.ordre}')),
-        title: Text(module.titre),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 4),
-            Text(
-              enPreparation
-                  ? 'Contenu à venir'
-                  : '$questionsReussies/$total questions réussies',
-            ),
-            const SizedBox(height: 6),
-            LinearProgressIndicator(value: progression),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 26,
+                backgroundColor:
+                    termine ? Colors.green.shade600 : scheme.primaryContainer,
+                foregroundColor:
+                    termine ? Colors.white : scheme.onPrimaryContainer,
+                child: Icon(termine ? Icons.check : iconePourModule(module.id)),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      module.titre,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      enPreparation
+                          ? 'Contenu à venir'
+                          : '$questionsReussies/$total questions réussies',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 8),
+                    LinearProgressIndicator(
+                      value: progression,
+                      minHeight: 6,
+                      color: termine ? Colors.green.shade600 : null,
+                    ),
+                  ],
+                ),
+              ),
+              if (!enPreparation) ...[
+                const SizedBox(width: 8),
+                Icon(Icons.chevron_right, color: scheme.outline),
+              ],
+            ],
+          ),
         ),
-        trailing: enPreparation ? null : const Icon(Icons.chevron_right),
       ),
     );
   }

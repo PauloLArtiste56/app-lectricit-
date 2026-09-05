@@ -8,12 +8,16 @@ une étape à la fois.
 
 ## État du projet
 
-🚧 Étapes 1 à 3 faites : squelette Flutter, chargement de `assets/content.json`, écran
-Accueil avec la liste des modules, écran Quiz avec feedback immédiat, écran Résultat avec
-« Refaire les ratées ». Le cadrage complet (périmètre, modèle de données, ordre de
+✅ V1 complète : les 7 étapes de l'ordre de développement sont faites, et les 5 modules
+ont chacun 3 fiches et 10 questions. Le cadrage complet (périmètre, modèle de données,
+conventions) est dans [`CLAUDE.md`](CLAUDE.md).
+
+Parcours : Accueil → Module → Fiches → Quiz (feedback immédiat) → Résultat (« Refaire les
+ratées ») → Accueil. La progression est sauvegardée sur l'appareil et l'onglet Stats montre
+le score global, les modules terminés et l'historique. Le cadrage complet (périmètre, modèle de données, ordre de
 développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
-## Stack prévue
+## Stack
 
 - Flutter (Dart). Développement sur Windows, cible finale iPhone.
 - Une appli iOS ne se compile que sur macOS : au quotidien on teste sur Windows avec Chrome,
@@ -22,40 +26,35 @@ développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 - Stockage local : `shared_preferences` (passer à `hive` si besoin).
 - État : `provider` ou `riverpod`, au plus simple.
 
-## Périmètre V1
+## Contenu V1
 
-1. Accueil : liste des modules avec progression.
-2. Fiche de cours : titre, texte court, image optionnelle, bouton "Passer au quiz".
-3. Quiz : une question à la fois, feedback immédiat, barre de progression.
-4. Résultat : score, questions ratées, bouton "Refaire les ratées".
-5. Stats : score global, modules terminés, historique.
+1. Grandeurs électriques et loi d'Ohm
+2. Courant continu / alternatif
+3. Circuits série / parallèle
+4. Symboles et schémas
+5. Dangers et sécurité de base
 
-Modules de contenu V1 : grandeurs électriques et loi d'Ohm, courant continu / alternatif,
-circuits série / parallèle, symboles et schémas, dangers et sécurité de base.
+Tout le contenu est dans `assets/content.json` : pour ajouter ou corriger une fiche ou une
+question, c'est le seul fichier à modifier. Les tests vérifient sa cohérence.
 
-## Structure cible
+## Structure
 
 ```
 lib/
-  main.dart
-  models/        # Module, Fiche, Question, Progression
-  data/          # chargement du JSON, service de stockage local
+  main.dart      # démarrage, thème, état partagé
+  theme.dart     # couleurs et formes (clair / sombre)
+  models/        # Module, Fiche, Question, Progression…
+  data/          # chargement du JSON, stockage local, état partagé, déroulé du quiz
   screens/       # accueil, module, fiche, quiz, resultat, stats
-  widgets/       # composants réutilisables
+  widgets/       # composants réutilisables (carte module, bouton réponse…)
 assets/
-  content.json
-  images/
+  content.json   # tout le contenu pédagogique
+  images/        # images des fiches (optionnel)
+test/            # tests automatiques (flutter test)
 ```
 
-## Ordre de développement
-
-1. Squelette Flutter + chargement de `content.json` + écran Accueil.
-2. Écran Quiz avec feedback immédiat.
-3. Écran Résultat.
-4. Sauvegarde locale de la progression + affichage sur l'Accueil.
-5. Fiches de cours.
-6. Écran Stats.
-7. Polish (thème, icônes, images).
+Règle : les écrans ne font qu'afficher. La lecture du contenu, la sauvegarde et le calcul
+des scores sont dans `data/`.
 
 ## Lancer le projet sur Windows
 

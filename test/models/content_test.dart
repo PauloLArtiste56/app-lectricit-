@@ -20,7 +20,7 @@ void main() {
   test('chaque module a des fiches et 10 questions de type qcm', () {
     for (final module in modules) {
       expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
-      expect(module.nombreQuestions, 10, reason: '${module.id}');
+      expect(module.nombreQuestions, 10, reason: module.id);
       expect(module.questions.every((q) => q.type == TypeQuestion.qcm), isTrue);
     }
   });
