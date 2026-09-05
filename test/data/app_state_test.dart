@@ -30,13 +30,13 @@ void main() {
     final etat = await etatCharge();
     final module = etat.modules.first;
 
-    final session = QuizSession(module.questions);
+    final session = QuizSession(module.questions, melanger: false);
     for (final q in module.questions) {
       // On rate volontairement la première question.
       session.repondre(q == module.questions.first ? (q.bonne + 1) % q.reponses.length : q.bonne);
       session.suivante();
     }
-    await etat.enregistrerResultat(module, session);
+    await etat.enregistrerResultat(session, moduleComplet: module);
 
     expect(etat.questionsReussies(module), module.nombreQuestions - 1);
     expect(etat.progressionDe(module).meilleurScore, module.nombreQuestions - 1);
@@ -51,17 +51,17 @@ void main() {
     final module = etat.modules.first;
     final ratee = module.questions.first;
 
-    final complet = QuizSession(module.questions);
+    final complet = QuizSession(module.questions, melanger: false);
     for (final q in module.questions) {
       complet.repondre(q == ratee ? (q.bonne + 1) % q.reponses.length : q.bonne);
       complet.suivante();
     }
-    await etat.enregistrerResultat(module, complet);
+    await etat.enregistrerResultat(complet, moduleComplet: module);
 
-    final rattrapage = QuizSession([ratee]);
+    final rattrapage = QuizSession([ratee], melanger: false);
     rattrapage.repondre(ratee.bonne);
     rattrapage.suivante();
-    await etat.enregistrerResultat(module, rattrapage);
+    await etat.enregistrerResultat(rattrapage, moduleComplet: module);
 
     expect(etat.questionsReussies(module), module.nombreQuestions);
     expect(etat.moduleTermine(module), isTrue);
@@ -83,5 +83,45 @@ void main() {
     final etat3 = AppState();
     await etat3.charger();
     expect(etat3.ficheLue(etat3.modules.first, 'ohm'), isFalse);
+  });
+
+  test('révision ciblée : les ratées reviennent jusqu\'à être réussies', () async {
+    final etat = await etatCharge();
+    final module = etat.modules.first;
+    final ratee = module.questions.first;
+
+    final complet = QuizSession(module.questions, melanger: false);
+    for (final q in module.questions) {
+      complet.repondre(q == ratee ? (q.bonne + 1) % q.reponses.length : q.bonne);
+      complet.suivante();
+    }
+    await etat.enregistrerResultat(complet, moduleComplet: module);
+
+    expect(etat.nombreARevoir, 1);
+    expect(etat.questionsARevoir(module).map((q) => q.id), [ratee.id]);
+    // La révision commence par les ratées.
+    expect(etat.questionsPourRevision().first.id, ratee.id);
+    expect(etat.questionsPourRevision().length, AppState.tailleRevision);
+
+    // Séance de révision (sans module) : la ratée est réussie.
+    final revision = QuizSession([ratee], melanger: false);
+    revision.repondre(ratee.bonne);
+    revision.suivante();
+    await etat.enregistrerResultat(revision);
+
+    expect(etat.nombreARevoir, 0);
+    expect(etat.moduleTermine(module), isTrue);
+    expect(etat.historique.last.moduleId, AppState.idRevision);
+    // Le meilleur score du module n'a pas bougé (ce n'était pas un quiz complet).
+    expect(etat.progressionDe(module).meilleurScore, module.nombreQuestions - 1);
+  });
+
+  test('ficheDe retrouve la fiche et le module d\'une question', () async {
+    final etat = await etatCharge();
+    final q = etat.modules.first.questions.first;
+    final cible = etat.ficheDe(q);
+    expect(cible, isNotNull);
+    expect(cible!.module.id, 'grandeurs');
+    expect(cible.fiche.id, q.ficheId);
   });
 }

@@ -42,6 +42,7 @@ void main() {
       create: (_) => AppState(),
       child: const MaterialApp(
       home: ResultatScreen(
+        titre: 'Module test',
         module: _module,
         score: 1,
         total: 2,
@@ -62,6 +63,7 @@ void main() {
       create: (_) => AppState(),
       child: const MaterialApp(
       home: ResultatScreen(
+        titre: 'Module test',
         module: _module,
         score: 2,
         total: 2,
@@ -81,6 +83,7 @@ void main() {
       create: (_) => AppState(),
       child: const MaterialApp(
       home: ResultatScreen(
+        titre: 'Module test',
         module: _module,
         score: 1,
         total: 2,

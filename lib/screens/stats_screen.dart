@@ -140,7 +140,9 @@ class _LigneHistorique extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final etat = context.read<AppState>();
-    final titre = etat.moduleParId(entree.moduleId)?.titre ?? entree.moduleId;
+    final titre = entree.moduleId == AppState.idRevision
+        ? 'Révision'
+        : etat.moduleParId(entree.moduleId)?.titre ?? entree.moduleId;
     final reussi = entree.score == entree.total;
     return Card(
       child: ListTile(
