@@ -12,15 +12,16 @@ void main() {
     File('assets/content.json').readAsStringSync(),
   );
 
-  test('les 5 modules V1 sont présents et triés par ordre', () {
-    expect(modules.map((m) => m.ordre), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  test('les modules sont présents, avec un thème', () {
+    expect(modules.length, 14);
+    expect(modules.every((m) => m.theme.isNotEmpty), isTrue);
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
 
-  test('chaque module a des fiches et 10 questions', () {
+  test('chaque module a des fiches et 20 questions', () {
     for (final module in modules) {
       expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
-      expect(module.nombreQuestions, 10, reason: module.id);
+      expect(module.nombreQuestions, 20, reason: module.id);
     }
   });
 

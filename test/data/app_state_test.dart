@@ -2,6 +2,7 @@ import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
 import 'package:elecapp/data/quiz_session.dart';
+import 'package:elecapp/models/question.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,6 +10,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   setUp(() => SharedPreferences.setMockInitialValues({}));
+  mainRevisionEspacee();
 
   Future<AppState> etatCharge() async {
     final etat = AppState();
@@ -123,5 +125,96 @@ void main() {
     expect(cible, isNotNull);
     expect(cible!.module.id, 'grandeurs');
     expect(cible.fiche.id, q.ficheId);
+  });
+}
+
+/// Tests de la révision espacée, avec une horloge simulée.
+void mainRevisionEspacee() {
+  DateTime maintenant = DateTime(2026, 9, 5);
+  Future<AppState> etatCharge() async {
+    final etat = AppState(horloge: () => maintenant);
+    await etat.charger();
+    expect(etat.pret, isTrue, reason: '${etat.erreur}');
+    return etat;
+  }
+
+  Future<void> jouer(AppState etat, Question q, {required bool juste}) async {
+    final s = QuizSession([q], melanger: false);
+    s.repondre(juste ? q.bonne : (q.bonne + 1) % q.reponses.length);
+    s.suivante();
+    await etat.enregistrerResultat(s);
+  }
+
+  test('réussite : la question revient plus tard, échec : dès demain', () async {
+    maintenant = DateTime(2026, 9, 5);
+    final etat = await etatCharge();
+    final module = etat.modules.first;
+    final q = module.questions.first;
+
+    await jouer(etat, q, juste: true);
+    var r = etat.progressionDe(module).revisions[q.id]!;
+    expect(r.niveau, 1);
+    expect(r.prochaine, '2026-09-06');
+    expect(etat.questionsDues(), isEmpty);
+
+    maintenant = DateTime(2026, 9, 6);
+    expect(etat.questionsDues().map((x) => x.id), [q.id]);
+    await jouer(etat, q, juste: true);
+    r = etat.progressionDe(module).revisions[q.id]!;
+    expect(r.niveau, 2);
+    expect(r.prochaine, '2026-09-09'); // 3 jours au niveau 2
+
+    maintenant = DateTime(2026, 9, 9);
+    await jouer(etat, q, juste: true);
+    r = etat.progressionDe(module).revisions[q.id]!;
+    expect(r.niveau, 3);
+    expect(r.prochaine, '2026-09-16'); // 7 jours au niveau 3
+
+    maintenant = DateTime(2026, 9, 16);
+    await jouer(etat, q, juste: false);
+    r = etat.progressionDe(module).revisions[q.id]!;
+    expect(r.niveau, 0);
+    expect(r.prochaine, '2026-09-17'); // échec : dès demain
+  });
+
+  test('la séance du jour : les dues d\'abord, puis des nouvelles, 10 max', () async {
+    maintenant = DateTime(2026, 9, 5);
+    final etat = await etatCharge();
+    expect(etat.questionsDuJour().length, AppState.tailleSeance);
+    expect(etat.nombreDues, 0);
+
+    final q = etat.modules.first.questions.first;
+    await jouer(etat, q, juste: false);
+    maintenant = DateTime(2026, 9, 6);
+    final seance = etat.questionsDuJour();
+    expect(seance.first.id, q.id);
+    expect(seance.length, AppState.tailleSeance);
+    expect(etat.questionsJamaisFaites(), isNot(contains(q)));
+  });
+
+  test('série de jours consécutifs', () async {
+    maintenant = DateTime(2026, 9, 5);
+    final etat = await etatCharge();
+    final q = etat.modules.first.questions.first;
+    expect(etat.serieJours, 0);
+
+    await jouer(etat, q, juste: true);
+    expect(etat.serieJours, 1);
+    maintenant = DateTime(2026, 9, 6);
+    expect(etat.serieJours, 1); // hier : la série tient encore
+    await jouer(etat, q, juste: true);
+    expect(etat.serieJours, 2);
+    maintenant = DateTime(2026, 9, 8);
+    expect(etat.serieJours, 0); // un jour sauté : série cassée
+  });
+
+  test('la progression survit à un redémarrage (révisions incluses)', () async {
+    maintenant = DateTime(2026, 9, 5);
+    final etat = await etatCharge();
+    final q = etat.modules.first.questions.first;
+    await jouer(etat, q, juste: true);
+    final etat2 = AppState(horloge: () => maintenant);
+    await etat2.charger();
+    expect(etat2.progressionDe(etat2.modules.first).revisions[q.id]?.prochaine, '2026-09-06');
   });
 }

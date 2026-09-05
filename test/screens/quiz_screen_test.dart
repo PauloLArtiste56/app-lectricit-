@@ -39,7 +39,7 @@ final _module = Module(
 
 /// Écran de test assez haut pour afficher tout l'accueil sans défiler.
 void _ecranHaut(WidgetTester tester) {
-  tester.view.physicalSize = const Size(480, 2000);
+  tester.view.physicalSize = const Size(480, 3200);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }
@@ -91,7 +91,7 @@ void main() {
     await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Question 1 / 10'), findsOneWidget);
+    expect(find.text('Question 1 / 20'), findsOneWidget);
   });
 
   testWidgets('une mauvaise réponse propose "Revoir la fiche"', (tester) async {
@@ -153,14 +153,14 @@ void main() {
     expect(find.byIcon(Icons.check_circle), findsNWidgets(3));
   });
 
-  testWidgets('la carte de révision lance un quiz "Révision"', (tester) async {
+  testWidgets("la carte d'entraînement lance la séance du jour", (tester) async {
     _ecranHaut(tester);
     await tester.pumpWidget(const ElecApp());
     await tester.pumpAndSettle();
-    expect(find.text('Réviser mes points faibles'), findsOneWidget);
-    await tester.tap(find.text('Réviser mes points faibles'));
+    expect(find.text('Ma séance du jour'), findsOneWidget);
+    await tester.tap(find.textContaining('Lancer la séance'));
     await tester.pumpAndSettle();
-    expect(find.text('Révision'), findsOneWidget);
-    expect(find.text('Question 1 / ${AppState.tailleRevision}'), findsOneWidget);
+    expect(find.text('Séance du jour'), findsOneWidget);
+    expect(find.text('Question 1 / ${AppState.tailleSeance}'), findsOneWidget);
   });
 }
