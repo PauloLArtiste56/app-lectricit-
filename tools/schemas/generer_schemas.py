@@ -714,3 +714,41 @@ RESUMES_N = [
 ]
 for nom, titre_s, ini, points, col in RESUMES_N:
     carte_resume(nom, titre_s, ini, points, col)
+RESUMES_O = [
+ ("fac_structure", "La facture pro", "€", [("Abonnement, consommation, taxes", "trois blocs"), ("TURPE", "le réseau, un tiers de la facture"), ("Accise, CTA, TVA", "taxes et contributions"), ("Fourniture négociée", "fixe ou indexé")], BLEU),
+ ("fac_puissance", "Puissance souscrite", "kVA", [("Trop faible", "coupures, dépassements"), ("Trop forte", "abonnement inutile"), ("HP / HC, pointe", "décaler les charges"), ("Réactif facturé en HTA", "cos φ trop bas")], AMBRE),
+ ("fac_optimiser", "Réduire la facture", "-20%", [("Puissance, cos φ, horaires", "sans travaux"), ("LED, régulation, veilles", "sous-comptage"), ("Effacement, autoconsommation", "achat groupé"), ("Audit énergétique", "les priorités")], VERT),
+ ("pac_principe", "La pompe à chaleur", "COP", [("Déplace la chaleur", "évaporateur, compresseur, condenseur"), ("COP 3 à 4", "baisse par grand froid"), ("Air/air, air/eau, géothermie", "selon l'émetteur"), ("Inverter", "vitesse adaptée")], BLEU),
+ ("pac_raccordement", "Raccorder une PAC", "D", [("Circuit dédié, courbe D", "différentiel A ou F"), ("Thermique ÷ 3", "12 kW → 3 à 4 kW"), ("Appoint électrique", "vérifier l'abonnement"), ("Sectionneur extérieur", "fluide par pro attesté")], AMBRE),
+ ("pac_exploitation", "Faire durer une PAC", "°C", [("Dégivrage", "vapeur normale"), ("Bruit", "emplacement, plots"), ("Loi d'eau", "plutôt que le thermostat"), ("Entretien, étanchéité", "ballon tampon")], VERT),
+ ("ssi_composants", "Le SSI", "A→E", [("Détecteurs, déclencheurs", "centrale, diffuseurs"), ("Catégories A à E", "selon l'établissement"), ("Courants faibles", "alimentation secourue"), ("Détecter, alerter", "mettre en sécurité")], ROUGE),
+ ("ssi_dispositifs", "Mise en sécurité", "DAS", [("Portes coupe-feu", "ventouses"), ("Désenfumage, ventilation", "ascenseurs au niveau d'évacuation"), ("BAES, EAE", "éclairage et énergie de sécurité"), ("Sécurité positive", "sans courant = en sécurité")], AMBRE),
+ ("ssi_maintenance", "Vérifier le SSI", "25%", [("Essais réguliers", "registre de sécurité"), ("Commission de sécurité", "ERP"), ("Coordinateur SSI", "modifications répercutées"), ("Un quart des incendies", "origine électrique")], BLEU),
+ ("hvdc_principe", "Le continu haute tension", "DC", [("Câble long : le continu gagne", "au-delà de 50 à 100 km"), ("Stations de conversion", "redresseur, onduleur"), ("320 à 800 kV", "très haute tension"), ("Réseaux différents reliés", "fréquence, phase")], BLEU),
+ ("hvdc_liaisons", "Les grandes liaisons", "GW", [("Manche : IFA, IFA2, ElecLink", "Espagne, Italie"), ("Éolien en mer lointain", "plate-forme de conversion"), ("Chine : 3 000 km", "plusieurs GW"), ("Câbles enfouis", "ancres, chaluts")], VERT),
+ ("hvdc_securite", "Risques du continu", "!", [("Pas de passage par zéro", "arc difficile à couper"), ("Condensateurs chargés", "décharge, mise à la terre"), ("Thyristors, IGBT, filtres", "harmoniques"), ("Corrosion continue", "structures surveillées")], ROUGE),
+ ("cond_principe", "Le condensateur", "µF", [("Charge entre deux plaques", "farads"), ("τ = R × C", "5 τ : 99 %"), ("Bloque le continu", "passe l'alternatif"), ("Moteurs, filtrage, cos φ", "supercondensateurs")], BLEU),
+ ("cond_bobine", "La bobine", "L", [("Énergie magnétique", "henrys"), ("S'oppose aux variations", "surtension à la coupure"), ("Freine les hautes fréquences", "l'inverse du condensateur"), ("Diode de roue libre", "relais, contacteurs")], VERT),
+ ("cond_dangers", "Dangers", "5min", [("Reste chargé", "variateur, micro-ondes, flash"), ("Décharger par résistance", "pas de court-circuit direct"), ("Électrolytique à l'envers", "gonfle, explose"), ("Bobine coupée", "arc")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_O:
+    carte_resume(nom, titre_s, ini, points, col)
+RESUMES_P = [
+ ("sel_courbes", "Courbes et coupure", "B C D", [("Thermique : surcharge", "magnétique : court-circuit"), ("B 3-5 ×, C 5-10 ×, D 10-20 ×", "D pour moteurs et transfos"), ("Pouvoir de coupure > Icc", "3 à 10 kA et plus"), ("Icc max près du transfo", "diminue avec la longueur")], BLEU),
+ ("sel_selectivite", "La sélectivité", "1er", [("Seul le plus proche déclenche", "continuité de service"), ("Ampèremétrique", "calibres décroissants"), ("Chronométrique", "amont temporisé"), ("Différentielle", "300 mA S en tête, 30 mA en aval")], VERT),
+ ("sel_filiation", "Filiation et choix", "Icc", [("Filiation", "aval plus faible, couples validés"), ("Courant d'emploi, section", "courant admissible"), ("Calibre, courbe, coupure", "sélectivité"), ("Longueur protégée", "note de calcul")], AMBRE),
+ ("rn_principe", "Régimes de neutre", "TT", [("Neutre et masses à la terre", "1re lettre neutre, 2e masses"), ("TT : maisons", "TN : industrie"), ("IT : continuité", "hôpitaux, process"), ("Premier défaut", "ce qui se passe")], BLEU),
+ ("rn_tt_tn", "TT et TN", "TN-S", [("TT : courant faible par la terre", "différentiel obligatoire"), ("TN : défaut = court-circuit", "impédance de boucle"), ("TN-S préféré", "TN-C interdit < 10 mm²"), ("Coupure au 1er défaut", "obligatoire")], VERT),
+ ("rn_it", "Le régime IT", "IT", [("Neutre isolé", "1er défaut : pas de danger"), ("CPI signale", "chercher et réparer"), ("2e défaut = court-circuit", "coupure"), ("Maintenance réactive", "limiteur de surtension")], AMBRE),
+ ("sm_reglementation", "Directive machines", "CE", [("Marquage CE, notice", "analyse des risques"), ("Employeur : maintien en conformité", "obligation permanente"), ("ISO 13849 : PL a à e", "IEC 62061 : SIL"), ("Modification importante", "nouveau fabricant")], BLEU),
+ ("sm_dispositifs", "Dispositifs de sécurité", "STOP", [("Arrêt d'urgence", "rouge sur jaune, relais de sécurité"), ("Catégorie 0 ou 1", "immédiat ou contrôlé"), ("Protecteurs, barrières, bimanuelle", "ouvert = arrêt"), ("Cobots", "force et vitesse limitées")], ROUGE),
+ ("sm_consignation", "Consigner une machine", "LOTO", [("Toutes les énergies", "air, huile, ressorts, charges"), ("Un cadenas par intervenant", "étiquetage"), ("Purger, décharger, caler", "essai de démarrage"), ("Mode réglage", "vitesse réduite, commande maintenue")], AMBRE),
+ ("cemp_principe", "La CEM", "CEM", [("Émission et immunité", "directive CEM, marquage CE"), ("Conduction, rayonnement", "deux chemins"), ("Variateurs, découpage, foudre", "sources"), ("Automates qui plantent", "capteurs faux")], BLEU),
+ ("cemp_installation", "Installer proprement", "90°", [("Séparer forts et faibles", "croiser à angle droit"), ("Paires torsadées, blindage", "câble moteur blindé"), ("Blindage sur 360°", "deux extrémités en HF"), ("Masses maillées", "pas en étoile")], VERT),
+ ("cemp_diagnostic", "Diagnostiquer", "?", [("Quand, où, par quel chemin", "corréler"), ("Oscilloscope, spectre, pince HF", "courants de mode commun"), ("Filtre, ferrite, blindage", "séparation"), ("Maillage des masses", "remède de fond")], AMBRE),
+ ("cp_puissance", "Puissances en cuisine", "kW", [("30 à 100 kW", "fours, induction, friteuses"), ("Triphasé", "coefficient de simultanéité"), ("Circuit dédié par appareil", "sectionneur de proximité"), ("Prises industrielles", "16 ou 32 A")], BLEU),
+ ("cp_environnement", "Chaleur, graisse, eau", "IP65", [("IP44 mini, IP65 au lavage", "inox, presse-étoupes"), ("Câbles résistants à la chaleur", "derrière les fours"), ("30 mA partout", "équipotentialité des inox"), ("Hottes", "ventilation, extinction auto")], AMBRE),
+ ("cp_securite", "Coupure et sécurité", "F", [("Arrêt d'urgence général", "sauf froid et éclairage"), ("Gaz et électricité distincts", "signalés"), ("Mains mouillées, sol gras", "pas de multiprise"), ("Feu de friteuse", "jamais d'eau, classe F")], ROUGE),
+]
+for nom, titre_s, ini, points, col in RESUMES_P:
+    carte_resume(nom, titre_s, ini, points, col)

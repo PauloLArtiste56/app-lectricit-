@@ -180,10 +180,21 @@ Modules existants (par thème) :
 77. Maintenance préventive et thermographie
 78. Champs électromagnétiques et santé
 79. Les métiers de l'électricité
+80. Factures et contrats professionnels
+81. Pompes à chaleur
+82. Sécurité incendie : le SSI
+83. Courant continu haute tension et interconnexions
+84. Condensateurs et bobines
+85. Sélectivité et coordination des protections
+86. Régimes de neutre TT, TN, IT
+87. Sécurité des machines
+88. Compatibilité électromagnétique (CEM)
+89. Cuisines professionnelles
 
-Sujets à venir : lecture de factures pro, ascenseurs et portes automatiques, froid et
-climatisation, pompes à chaleur, bornes de recharge en copropriété, éclairage public,
-sécurité incendie (SSI), courants faibles et VDI, marine et offshore, hydrogène…
+Sujets à venir : mobilité légère (vélos, trottinettes), spectacle et événementiel, effets
+physiologiques du courant, réseau de bord automobile, matériaux conducteurs et isolants,
+calculs de circuits, oscilloscope et signaux, GTB, recyclage et DEEE, devis et documents,
+géothermie et biomasse…
 
 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,

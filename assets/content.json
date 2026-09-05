@@ -7388,9 +7388,1241 @@
       "ordre": 24
     },
     {
+      "id": "factures_pro",
+      "titre": "Factures et contrats professionnels",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "fac_structure",
+          "titre": "Ce que contient une facture pro",
+          "contenu": "Une facture professionnelle se lit en trois blocs : l'abonnement (lié à la puissance souscrite), la consommation (les kWh, souvent à plusieurs prix selon l'heure) et les taxes et contributions : accise sur l'électricité, CTA, TVA.\n\nLe TURPE, tarif d'utilisation du réseau, rémunère RTE et Enedis. Il est inclus dans le prix ou détaillé selon le contrat. Il représente un tiers de la facture environ.\n\nDepuis la fin des tarifs réglementés pour les gros clients, la fourniture se négocie : prix fixe ou indexé sur le marché, durée d'engagement.",
+          "image": "fac_structure.png"
+        },
+        {
+          "id": "fac_puissance",
+          "titre": "Puissance souscrite et dépassements",
+          "contenu": "La puissance souscrite se compte en kVA (BT) ou en kW (HTA). Trop faible, elle provoque des coupures ou des dépassements facturés ; trop forte, on paie un abonnement inutile.\n\nLes plages horaires (heures pleines, heures creuses, pointe en hiver) permettent d'adapter le prix : décaler une production ou une charge la nuit fait baisser la facture.\n\nLe compteur enregistre la puissance maximale atteinte chaque mois : c'est la base pour ajuster la souscription. En HTA, l'énergie réactive est facturée si le cos φ est trop bas.",
+          "image": "fac_puissance.png"
+        },
+        {
+          "id": "fac_optimiser",
+          "titre": "Réduire la facture",
+          "contenu": "Premières actions : ajuster la puissance souscrite, corriger le cos φ (batterie de condensateurs), déplacer les charges vers les heures creuses.\n\nEnsuite : chasser les veilles, remplacer l'éclairage par des LED, réguler le chauffage et le froid, suivre la consommation avec un sous-comptage.\n\nEnfin : contrats d'effacement (être payé pour réduire en période de pointe), autoconsommation photovoltaïque, achat groupé. Un audit énergétique donne l'ordre des priorités.",
+          "image": "fac_optimiser.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q7901",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "Les trois blocs d'une facture professionnelle sont…",
+          "reponses": [
+            "abonnement, consommation, taxes",
+            "prix, remise, cadeau",
+            "jour, nuit, week-end",
+            "bleu, blanc, rouge"
+          ],
+          "bonne": 0,
+          "explication": "Structure classique."
+        },
+        {
+          "id": "q7902",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "Le TURPE rémunère…",
+          "reponses": [
+            "le fournisseur",
+            "le réseau (RTE et Enedis)",
+            "l'État seulement",
+            "le voisin"
+          ],
+          "bonne": 1,
+          "explication": "Environ un tiers de la facture."
+        },
+        {
+          "id": "q7903",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "Le TURPE représente environ…",
+          "reponses": [
+            "1 % de la facture",
+            "un tiers",
+            "90 %",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Acheminement de l'énergie."
+        },
+        {
+          "id": "q7904",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "L'accise sur l'électricité est…",
+          "reponses": [
+            "une taxe",
+            "un bonus",
+            "un tarif de nuit",
+            "un câble"
+          ],
+          "bonne": 0,
+          "explication": "Ex-TICFE."
+        },
+        {
+          "id": "q7905",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "Un prix indexé sur le marché…",
+          "reponses": [
+            "ne change jamais",
+            "suit les cours de l'électricité",
+            "est gratuit",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Risque et opportunité."
+        },
+        {
+          "id": "q7906",
+          "fiche_id": "fac_structure",
+          "type": "qcm",
+          "enonce": "Les gros clients professionnels…",
+          "reponses": [
+            "ont un tarif réglementé",
+            "négocient leur fourniture",
+            "ne paient pas",
+            "paient au poids"
+          ],
+          "bonne": 1,
+          "explication": "Fin des tarifs réglementés."
+        },
+        {
+          "id": "q7907",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "En BT, la puissance souscrite se compte en…",
+          "reponses": [
+            "kVA",
+            "kWh",
+            "V",
+            "Ω"
+          ],
+          "bonne": 0,
+          "explication": "Puissance apparente."
+        },
+        {
+          "id": "q7908",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "Une puissance souscrite trop faible provoque…",
+          "reponses": [
+            "une remise",
+            "des coupures ou des dépassements facturés",
+            "rien",
+            "une baisse de tension"
+          ],
+          "bonne": 1,
+          "explication": "Il faut ajuster."
+        },
+        {
+          "id": "q7909",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "Une puissance souscrite trop forte…",
+          "reponses": [
+            "ne coûte rien",
+            "fait payer un abonnement inutile",
+            "abîme le compteur",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Vérifier la puissance maximale atteinte."
+        },
+        {
+          "id": "q7910",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "Décaler une charge la nuit…",
+          "reponses": [
+            "coûte plus cher",
+            "profite des heures creuses",
+            "est interdit",
+            "n'a aucun effet"
+          ],
+          "bonne": 1,
+          "explication": "Prix plus bas."
+        },
+        {
+          "id": "q7911",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "La pointe tarifaire se situe…",
+          "reponses": [
+            "l'été à midi",
+            "les jours froids d'hiver",
+            "la nuit",
+            "le dimanche"
+          ],
+          "bonne": 1,
+          "explication": "Quand le réseau est le plus sollicité."
+        },
+        {
+          "id": "q7912",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "En HTA, un cos φ trop bas entraîne…",
+          "reponses": [
+            "une remise",
+            "la facturation de l'énergie réactive",
+            "une coupure",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "À corriger par condensateurs."
+        },
+        {
+          "id": "q7913",
+          "fiche_id": "fac_puissance",
+          "type": "qcm",
+          "enonce": "Le compteur enregistre chaque mois…",
+          "reponses": [
+            "la météo",
+            "la puissance maximale atteinte",
+            "le nombre d'employés",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Base d'ajustement."
+        },
+        {
+          "id": "q7914",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "La première action pour réduire une facture pro est…",
+          "reponses": [
+            "changer de fournisseur",
+            "ajuster la puissance et le cos φ, décaler les charges",
+            "repeindre",
+            "couper le chauffage"
+          ],
+          "bonne": 1,
+          "explication": "Actions sans travaux lourds."
+        },
+        {
+          "id": "q7915",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "Une batterie de condensateurs sert à…",
+          "reponses": [
+            "stocker l'énergie",
+            "corriger le cos φ",
+            "chauffer",
+            "éclairer"
+          ],
+          "bonne": 1,
+          "explication": "Compense le réactif."
+        },
+        {
+          "id": "q7916",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "Un contrat d'effacement…",
+          "reponses": [
+            "paie pour réduire la consommation en pointe",
+            "coupe sans prévenir",
+            "est gratuit",
+            "interdit de consommer"
+          ],
+          "bonne": 0,
+          "explication": "Flexibilité rémunérée."
+        },
+        {
+          "id": "q7917",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "Le sous-comptage sert à…",
+          "reponses": [
+            "payer deux fois",
+            "savoir quel poste consomme",
+            "décorer",
+            "doubler la puissance"
+          ],
+          "bonne": 1,
+          "explication": "Mesurer pour agir."
+        },
+        {
+          "id": "q7918",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "Un audit énergétique…",
+          "reponses": [
+            "est inutile",
+            "classe les actions par priorité",
+            "remplace les travaux",
+            "est un impôt"
+          ],
+          "bonne": 1,
+          "explication": "Souvent obligatoire pour les grandes entreprises."
+        },
+        {
+          "id": "q7919",
+          "fiche_id": "fac_optimiser",
+          "type": "qcm",
+          "enonce": "Remplacer l'éclairage par des LED…",
+          "reponses": [
+            "augmente la facture",
+            "réduit fortement la consommation d'éclairage",
+            "est interdit",
+            "ne change rien"
+          ],
+          "bonne": 1,
+          "explication": "Jusqu'à 70 % d'économie."
+        },
+        {
+          "id": "q7920",
+          "fiche_id": "fac_optimiser",
+          "type": "ordre",
+          "enonce": "Démarche d'optimisation : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Analyser les factures et la courbe de charge",
+            "Ajuster la puissance souscrite",
+            "Corriger le cos φ et décaler les charges",
+            "Réduire les consommations (LED, régulation)",
+            "Négocier le contrat et envisager l'autoconsommation"
+          ],
+          "explication": "Du gratuit vers l'investissement."
+        }
+      ],
+      "ordre": 25
+    },
+    {
+      "id": "hvdc",
+      "titre": "Courant continu haute tension et interconnexions",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "hvdc_principe",
+          "titre": "Pourquoi du continu à haute tension",
+          "contenu": "Sur de longues distances, surtout en câble sous-marin, l'alternatif perd de l'énergie à charger et décharger la capacité du câble. Le continu n'a pas ce problème : au-delà de 50 à 100 km de câble, le HVDC (courant continu haute tension) devient plus rentable.\n\nUne station de conversion transforme l'alternatif en continu (redresseur) à une extrémité, et l'inverse à l'autre (onduleur). Tensions typiques : 320 à 800 kV.\n\nAvantage supplémentaire : deux réseaux de fréquences ou de phases différentes peuvent être reliés.",
+          "image": "hvdc_principe.png"
+        },
+        {
+          "id": "hvdc_liaisons",
+          "titre": "Les grandes liaisons",
+          "contenu": "La France est reliée à l'Angleterre par plusieurs câbles sous-marins HVDC (IFA, IFA2, ElecLink dans le tunnel), à l'Espagne par une liaison souterraine à travers les Pyrénées, à l'Italie par le Piémont.\n\nLes parcs éoliens en mer lointains sont raccordés en HVDC via une plate-forme de conversion en mer. En Chine, des lignes de 3 000 km transportent plusieurs gigawatts.\n\nLes câbles sous-marins sont posés par des navires spécialisés, enfouis pour les protéger des ancres et chaluts.",
+          "image": "hvdc_liaisons.png"
+        },
+        {
+          "id": "hvdc_securite",
+          "titre": "Risques particuliers du continu",
+          "contenu": "Le continu ne passe pas par zéro : couper un arc est beaucoup plus difficile, les disjoncteurs continus haute tension sont récents et complexes.\n\nLes stations de conversion contiennent des convertisseurs à thyristors ou IGBT, des filtres et des condensateurs qui restent chargés après la coupure : décharge et mise à la terre systématiques.\n\nL'électrolyse et la corrosion des structures proches (canalisations, armatures) sont surveillées, car un courant continu de fuite corrode en continu, toujours dans le même sens.",
+          "image": "hvdc_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8201",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "HVDC signifie…",
+          "reponses": [
+            "haute vitesse",
+            "courant continu haute tension",
+            "haute densité",
+            "hydraulique"
+          ],
+          "bonne": 1,
+          "explication": "High Voltage Direct Current."
+        },
+        {
+          "id": "q8202",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "Sur un long câble sous-marin, l'alternatif…",
+          "reponses": [
+            "est parfait",
+            "perd de l'énergie à charger la capacité du câble",
+            "est plus rentable",
+            "est interdit"
+          ],
+          "bonne": 1,
+          "explication": "Courant capacitif."
+        },
+        {
+          "id": "q8203",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "Le HVDC devient rentable en câble au-delà de…",
+          "reponses": [
+            "1 km",
+            "50 à 100 km",
+            "10 000 km",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Coût des stations compensé."
+        },
+        {
+          "id": "q8204",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "Une station de conversion…",
+          "reponses": [
+            "stocke l'énergie",
+            "transforme alternatif en continu et inversement",
+            "produit",
+            "refroidit"
+          ],
+          "bonne": 1,
+          "explication": "Redresseur et onduleur."
+        },
+        {
+          "id": "q8205",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "Les tensions HVDC typiques sont de…",
+          "reponses": [
+            "230 V",
+            "320 à 800 kV",
+            "12 V",
+            "20 kV"
+          ],
+          "bonne": 1,
+          "explication": "Très haute tension."
+        },
+        {
+          "id": "q8206",
+          "fiche_id": "hvdc_principe",
+          "type": "qcm",
+          "enonce": "Le HVDC permet de relier deux réseaux…",
+          "reponses": [
+            "de même fréquence seulement",
+            "de fréquences ou de phases différentes",
+            "jamais",
+            "par radio"
+          ],
+          "bonne": 1,
+          "explication": "Découplage."
+        },
+        {
+          "id": "q8207",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "La France est reliée à l'Angleterre par…",
+          "reponses": [
+            "rien",
+            "des câbles sous-marins HVDC",
+            "des lignes aériennes",
+            "un pont"
+          ],
+          "bonne": 1,
+          "explication": "IFA, IFA2, ElecLink."
+        },
+        {
+          "id": "q8208",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "La liaison France-Espagne à travers les Pyrénées est…",
+          "reponses": [
+            "aérienne",
+            "souterraine en continu",
+            "sous-marine",
+            "inexistante"
+          ],
+          "bonne": 1,
+          "explication": "Tunnel technique."
+        },
+        {
+          "id": "q8209",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "Les parcs éoliens en mer lointains sont raccordés…",
+          "reponses": [
+            "en alternatif toujours",
+            "en HVDC via une plate-forme de conversion",
+            "par batteries",
+            "par bateau"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà de quelques dizaines de km."
+        },
+        {
+          "id": "q8210",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "Les câbles sous-marins sont…",
+          "reponses": [
+            "posés à même le fond",
+            "enfouis pour les protéger",
+            "suspendus",
+            "flottants"
+          ],
+          "bonne": 1,
+          "explication": "Ancres et chaluts."
+        },
+        {
+          "id": "q8211",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "Les lignes HVDC chinoises transportent…",
+          "reponses": [
+            "quelques kW",
+            "plusieurs gigawatts sur 3 000 km",
+            "rien",
+            "de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Records mondiaux."
+        },
+        {
+          "id": "q8212",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "Les interconnexions servent à…",
+          "reponses": [
+            "isoler les pays",
+            "échanger l'énergie et sécuriser les réseaux",
+            "vendre des câbles",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Solidarité européenne."
+        },
+        {
+          "id": "q8213",
+          "fiche_id": "hvdc_liaisons",
+          "type": "qcm",
+          "enonce": "ElecLink passe…",
+          "reponses": [
+            "sous la Manche par le tunnel",
+            "par avion",
+            "par bateau",
+            "par l'Espagne"
+          ],
+          "bonne": 0,
+          "explication": "Dans le tunnel ferroviaire."
+        },
+        {
+          "id": "q8214",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Couper un arc en continu est…",
+          "reponses": [
+            "plus facile qu'en alternatif",
+            "plus difficile, pas de passage par zéro",
+            "impossible",
+            "identique"
+          ],
+          "bonne": 1,
+          "explication": "Disjoncteurs continus récents."
+        },
+        {
+          "id": "q8215",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Après coupure d'une station, les condensateurs…",
+          "reponses": [
+            "sont vides",
+            "restent chargés",
+            "chauffent",
+            "disparaissent"
+          ],
+          "bonne": 1,
+          "explication": "Décharge et mise à la terre."
+        },
+        {
+          "id": "q8216",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Les convertisseurs HVDC utilisent…",
+          "reponses": [
+            "des lampes",
+            "des thyristors ou IGBT",
+            "des relais",
+            "des fusibles"
+          ],
+          "bonne": 1,
+          "explication": "Électronique de puissance."
+        },
+        {
+          "id": "q8217",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Un courant continu de fuite dans le sol…",
+          "reponses": [
+            "ne fait rien",
+            "corrode toujours dans le même sens",
+            "refroidit",
+            "est bénéfique"
+          ],
+          "bonne": 1,
+          "explication": "Surveillance des structures."
+        },
+        {
+          "id": "q8218",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Avant d'intervenir dans une station de conversion, on…",
+          "reponses": [
+            "entre directement",
+            "consigne, décharge et met à la terre",
+            "attend la pluie",
+            "coupe le Wi-Fi"
+          ],
+          "bonne": 1,
+          "explication": "Procédure spécifique."
+        },
+        {
+          "id": "q8219",
+          "fiche_id": "hvdc_securite",
+          "type": "qcm",
+          "enonce": "Les filtres d'une station HVDC servent à…",
+          "reponses": [
+            "filtrer l'eau",
+            "supprimer les harmoniques créés par la conversion",
+            "chauffer",
+            "stocker"
+          ],
+          "bonne": 1,
+          "explication": "Qualité de l'énergie."
+        },
+        {
+          "id": "q8220",
+          "fiche_id": "hvdc_principe",
+          "type": "ordre",
+          "enonce": "Trajet de l'énergie sur une liaison HVDC : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Réseau alternatif de départ",
+            "Station de conversion : redressement en continu",
+            "Transport par câble ou ligne en continu",
+            "Station de conversion : retour en alternatif",
+            "Réseau alternatif d'arrivée"
+          ],
+          "explication": "Deux conversions."
+        }
+      ],
+      "ordre": 26
+    },
+    {
+      "id": "condensateurs",
+      "titre": "Condensateurs et bobines",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "cond_principe",
+          "titre": "Le condensateur",
+          "contenu": "Un condensateur stocke de l'énergie sous forme de charge électrique entre deux plaques séparées par un isolant. Sa capacité se mesure en farads, en pratique en microfarads (µF) ou moins.\n\nIl se charge et se décharge avec une constante de temps τ = R × C : après 5 τ, on est à 99 %. En continu, une fois chargé, il ne laisse plus passer le courant ; en alternatif, il laisse passer d'autant mieux que la fréquence est élevée.\n\nUsages : démarrage et marche des moteurs monophasés, filtrage des alimentations, correction du cos φ, flashs, stockage rapide (supercondensateurs).",
+          "image": "cond_principe.png"
+        },
+        {
+          "id": "cond_bobine",
+          "titre": "La bobine",
+          "contenu": "Une bobine (inductance, en henrys) stocke l'énergie dans son champ magnétique. Elle s'oppose aux variations de courant : au démarrage elle freine, à la coupure elle produit une surtension qui peut faire un arc.\n\nEn alternatif, elle freine d'autant plus que la fréquence est élevée : c'est l'inverse du condensateur. Les deux ensemble forment un circuit résonant, base des filtres et de la radio.\n\nUsages : transformateurs, moteurs, relais, ballasts, filtres, selfs de lissage. La diode de roue libre protège les composants de la surtension à la coupure d'une bobine.",
+          "image": "cond_bobine.png"
+        },
+        {
+          "id": "cond_dangers",
+          "titre": "Dangers et précautions",
+          "contenu": "Un condensateur reste chargé après la coupure : variateur, alimentation à découpage, four à micro-ondes, flash, batterie de condensateurs. On décharge avec une résistance adaptée, jamais en court-circuit direct sur les gros modèles.\n\nUn condensateur électrolytique branché à l'envers ou sous une tension trop forte gonfle et peut exploser. Les batteries de compensation ont des résistances de décharge internes : attendre le délai indiqué (souvent 1 à 5 minutes) avant d'y toucher.\n\nLa coupure d'une bobine sous courant produit un arc : couper les circuits inductifs avec des appareils prévus pour.",
+          "image": "cond_dangers.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8301",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "Un condensateur stocke l'énergie sous forme de…",
+          "reponses": [
+            "chaleur",
+            "charge électrique entre deux plaques",
+            "champ magnétique",
+            "lumière"
+          ],
+          "bonne": 1,
+          "explication": "Isolant entre les plaques."
+        },
+        {
+          "id": "q8302",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "L'unité de capacité est…",
+          "reponses": [
+            "le henry",
+            "le farad",
+            "l'ohm",
+            "le volt"
+          ],
+          "bonne": 1,
+          "explication": "En pratique le microfarad."
+        },
+        {
+          "id": "q8303",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "La constante de temps d'un circuit RC est…",
+          "reponses": [
+            "R / C",
+            "R × C",
+            "R + C",
+            "C / R"
+          ],
+          "bonne": 1,
+          "explication": "En secondes."
+        },
+        {
+          "id": "q8304",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "Après 5 τ, un condensateur est chargé à…",
+          "reponses": [
+            "50 %",
+            "99 %",
+            "10 %",
+            "0 %"
+          ],
+          "bonne": 1,
+          "explication": "Pratiquement plein."
+        },
+        {
+          "id": "q8305",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "En continu, un condensateur chargé…",
+          "reponses": [
+            "laisse passer le courant",
+            "bloque le courant",
+            "chauffe",
+            "explose"
+          ],
+          "bonne": 1,
+          "explication": "Circuit ouvert."
+        },
+        {
+          "id": "q8306",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "En alternatif, plus la fréquence monte, plus le condensateur…",
+          "reponses": [
+            "bloque",
+            "laisse passer",
+            "chauffe",
+            "s'annule"
+          ],
+          "bonne": 1,
+          "explication": "Impédance en 1 / (Cω)."
+        },
+        {
+          "id": "q8307",
+          "fiche_id": "cond_principe",
+          "type": "qcm",
+          "enonce": "Un condensateur sur un moteur monophasé sert…",
+          "reponses": [
+            "à freiner",
+            "au démarrage et à la marche",
+            "à mesurer",
+            "à rien"
+          ],
+          "bonne": 1,
+          "explication": "Déphasage pour créer le champ tournant."
+        },
+        {
+          "id": "q8308",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "Une bobine stocke l'énergie dans…",
+          "reponses": [
+            "une charge",
+            "son champ magnétique",
+            "la chaleur",
+            "l'isolant"
+          ],
+          "bonne": 1,
+          "explication": "Inductance en henrys."
+        },
+        {
+          "id": "q8309",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "À la coupure, une bobine produit…",
+          "reponses": [
+            "rien",
+            "une surtension et parfois un arc",
+            "du froid",
+            "un court-circuit"
+          ],
+          "bonne": 1,
+          "explication": "Elle s'oppose à la variation du courant."
+        },
+        {
+          "id": "q8310",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "En alternatif, plus la fréquence monte, plus la bobine…",
+          "reponses": [
+            "laisse passer",
+            "freine le courant",
+            "chauffe moins",
+            "s'annule"
+          ],
+          "bonne": 1,
+          "explication": "Impédance en Lω."
+        },
+        {
+          "id": "q8311",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "Un circuit résonant associe…",
+          "reponses": [
+            "deux résistances",
+            "une bobine et un condensateur",
+            "deux bobines",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Filtres, radio."
+        },
+        {
+          "id": "q8312",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "La diode de roue libre protège…",
+          "reponses": [
+            "la bobine du courant",
+            "les composants de la surtension à la coupure",
+            "le condensateur",
+            "la lampe"
+          ],
+          "bonne": 1,
+          "explication": "Sur les relais et contacteurs en continu."
+        },
+        {
+          "id": "q8313",
+          "fiche_id": "cond_bobine",
+          "type": "qcm",
+          "enonce": "Une self de lissage sert à…",
+          "reponses": [
+            "chauffer",
+            "lisser un courant ondulé",
+            "couper",
+            "mesurer"
+          ],
+          "bonne": 1,
+          "explication": "Filtrage."
+        },
+        {
+          "id": "q8314",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "Un condensateur après la coupure…",
+          "reponses": [
+            "est vide",
+            "peut rester chargé",
+            "est froid",
+            "est inoffensif"
+          ],
+          "bonne": 1,
+          "explication": "Décharger avant de toucher."
+        },
+        {
+          "id": "q8315",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "On décharge un gros condensateur…",
+          "reponses": [
+            "avec un tournevis",
+            "avec une résistance adaptée",
+            "avec la main",
+            "avec de l'eau"
+          ],
+          "bonne": 1,
+          "explication": "Le court-circuit direct l'abîme et projette."
+        },
+        {
+          "id": "q8316",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "Un condensateur électrolytique à l'envers…",
+          "reponses": [
+            "fonctionne",
+            "gonfle et peut exploser",
+            "se décharge",
+            "se répare"
+          ],
+          "bonne": 1,
+          "explication": "Respecter la polarité."
+        },
+        {
+          "id": "q8317",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "Avant de toucher une batterie de condensateurs, on attend…",
+          "reponses": [
+            "rien",
+            "le délai de décharge indiqué (1 à 5 min)",
+            "une heure",
+            "la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Résistances de décharge internes."
+        },
+        {
+          "id": "q8318",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "Les appareils qui gardent une charge dangereuse sont…",
+          "reponses": [
+            "les lampes",
+            "variateurs, alimentations à découpage, micro-ondes",
+            "les prises",
+            "les interrupteurs"
+          ],
+          "bonne": 1,
+          "explication": "Même débranchés."
+        },
+        {
+          "id": "q8319",
+          "fiche_id": "cond_dangers",
+          "type": "qcm",
+          "enonce": "Couper un circuit inductif se fait…",
+          "reponses": [
+            "à la main",
+            "avec un appareil prévu pour l'arc",
+            "avec un fil",
+            "jamais"
+          ],
+          "bonne": 1,
+          "explication": "Contacteur, disjoncteur adapté."
+        },
+        {
+          "id": "q8320",
+          "fiche_id": "cond_dangers",
+          "type": "ordre",
+          "enonce": "Intervenir sur un variateur : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Couper et condamner l'alimentation",
+            "Attendre le délai de décharge indiqué par le fabricant",
+            "Vérifier l'absence de tension sur le bus continu",
+            "Décharger si nécessaire avec une résistance",
+            "Intervenir"
+          ],
+          "explication": "Le bus continu reste dangereux plusieurs minutes."
+        }
+      ],
+      "ordre": 27
+    },
+    {
+      "id": "cem_perturbations",
+      "titre": "Compatibilité électromagnétique (CEM)",
+      "theme": "Les bases",
+      "fiches": [
+        {
+          "id": "cemp_principe",
+          "titre": "Émission et immunité",
+          "contenu": "La CEM, c'est la capacité d'un appareil à fonctionner sans perturber les autres (émission) et sans être perturbé (immunité). Le marquage CE inclut la directive CEM.\n\nLes perturbations se propagent par conduction (par les câbles) ou par rayonnement (dans l'air). Sources typiques : variateurs, alimentations à découpage, moteurs à balais, contacteurs, foudre, décharges électrostatiques.\n\nSymptômes : automates qui plantent, capteurs qui mentent, radio parasitée, compteurs faux, écrans qui tremblent.",
+          "image": "cemp_principe.png"
+        },
+        {
+          "id": "cemp_installation",
+          "titre": "Installer proprement",
+          "contenu": "Règles de câblage : séparer courants forts et faibles (chemins de câbles distincts ou séparateur), croiser à angle droit quand c'est inévitable, torsader les paires, utiliser du câble blindé pour les signaux et les moteurs sous variateur.\n\nLe blindage se raccorde à la masse sur 360° (collier), aux deux extrémités pour les hautes fréquences. Les masses sont maillées : un réseau de masse en étoile ne suffit pas en HF.\n\nLes variateurs ont des filtres d'entrée et des longueurs de câble moteur maximales.",
+          "image": "cemp_installation.png"
+        },
+        {
+          "id": "cemp_diagnostic",
+          "titre": "Diagnostiquer une perturbation",
+          "contenu": "Méthode : quand ça arrive (à la mise en marche d'un appareil ?), où (quel équipement perturbé ?), par quel chemin (câble commun, proximité).\n\nOutils : oscilloscope, analyseur de spectre, pince de courant HF pour voir les courants de mode commun sur les blindages et les terres.\n\nRemèdes : filtre, ferrite sur le câble, reprise du blindage, séparation des chemins, amélioration du maillage des masses, alimentation séparée ou isolée.",
+          "image": "cemp_diagnostic.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8701",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "La CEM concerne…",
+          "reponses": [
+            "la couleur des câbles",
+            "émission et immunité aux perturbations",
+            "le prix",
+            "la chaleur"
+          ],
+          "bonne": 1,
+          "explication": "Ne pas perturber, ne pas être perturbé."
+        },
+        {
+          "id": "q8702",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "Les perturbations se propagent…",
+          "reponses": [
+            "seulement par l'air",
+            "par conduction et par rayonnement",
+            "seulement par les câbles",
+            "par le sol seulement"
+          ],
+          "bonne": 1,
+          "explication": "Deux voies."
+        },
+        {
+          "id": "q8703",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "Une source typique de perturbation est…",
+          "reponses": [
+            "une lampe à incandescence",
+            "un variateur de vitesse",
+            "un fil de terre",
+            "une pile"
+          ],
+          "bonne": 1,
+          "explication": "Découpage à haute fréquence."
+        },
+        {
+          "id": "q8704",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "Le marquage CE d'un appareil inclut…",
+          "reponses": [
+            "la directive CEM",
+            "la couleur",
+            "le poids",
+            "la garantie"
+          ],
+          "bonne": 0,
+          "explication": "Émission et immunité testées."
+        },
+        {
+          "id": "q8705",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "Un automate qui plante quand un moteur démarre est un symptôme de…",
+          "reponses": [
+            "bonne CEM",
+            "perturbation électromagnétique",
+            "surcharge",
+            "panne de réseau"
+          ],
+          "bonne": 1,
+          "explication": "Chercher le chemin."
+        },
+        {
+          "id": "q8706",
+          "fiche_id": "cemp_principe",
+          "type": "qcm",
+          "enonce": "Une décharge électrostatique…",
+          "reponses": [
+            "est sans effet",
+            "peut perturber ou détruire l'électronique",
+            "améliore le contact",
+            "est une source d'énergie"
+          ],
+          "bonne": 1,
+          "explication": "Immunité testée."
+        },
+        {
+          "id": "q8707",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Courants forts et faibles doivent être…",
+          "reponses": [
+            "dans la même gaine",
+            "séparés sur des chemins distincts",
+            "torsadés ensemble",
+            "croisés en parallèle"
+          ],
+          "bonne": 1,
+          "explication": "Ou séparateur métallique."
+        },
+        {
+          "id": "q8708",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Quand un croisement est inévitable, on croise…",
+          "reponses": [
+            "en parallèle",
+            "à angle droit",
+            "en diagonale",
+            "en spirale"
+          ],
+          "bonne": 1,
+          "explication": "Couplage minimal."
+        },
+        {
+          "id": "q8709",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Le câble moteur sous variateur est…",
+          "reponses": [
+            "ordinaire",
+            "blindé",
+            "en aluminium nu",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Rayonnement du découpage."
+        },
+        {
+          "id": "q8710",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Le blindage se raccorde à la masse…",
+          "reponses": [
+            "par un fil de 20 cm",
+            "sur 360° avec un collier",
+            "jamais",
+            "par la terre du bâtiment seulement"
+          ],
+          "bonne": 1,
+          "explication": "La queue de cochon est un mauvais raccordement en HF."
+        },
+        {
+          "id": "q8711",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "En haute fréquence, un réseau de masse doit être…",
+          "reponses": [
+            "en étoile",
+            "maillé",
+            "absent",
+            "en série"
+          ],
+          "bonne": 1,
+          "explication": "Faible impédance partout."
+        },
+        {
+          "id": "q8712",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Torsader une paire de signaux…",
+          "reponses": [
+            "augmente les perturbations",
+            "réduit le couplage magnétique",
+            "ne sert à rien",
+            "allonge le câble"
+          ],
+          "bonne": 1,
+          "explication": "Surfaces de boucle annulées."
+        },
+        {
+          "id": "q8713",
+          "fiche_id": "cemp_installation",
+          "type": "qcm",
+          "enonce": "Un variateur a…",
+          "reponses": [
+            "un câble moteur illimité",
+            "une longueur de câble moteur maximale",
+            "pas de filtre",
+            "une seule sortie"
+          ],
+          "bonne": 1,
+          "explication": "Sinon surtensions et rayonnement."
+        },
+        {
+          "id": "q8714",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "La première question pour diagnostiquer est…",
+          "reponses": [
+            "quel prix",
+            "quand et où ça se produit",
+            "quelle couleur",
+            "quel fabricant"
+          ],
+          "bonne": 1,
+          "explication": "Corrélation avec un événement."
+        },
+        {
+          "id": "q8715",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "Une pince de courant HF permet de voir…",
+          "reponses": [
+            "la tension",
+            "les courants de mode commun sur blindages et terres",
+            "la température",
+            "la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Chemins de perturbation."
+        },
+        {
+          "id": "q8716",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "Une ferrite sur un câble…",
+          "reponses": [
+            "augmente le bruit",
+            "atténue les courants HF de mode commun",
+            "coupe le courant",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Remède simple."
+        },
+        {
+          "id": "q8717",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "L'analyseur de spectre montre…",
+          "reponses": [
+            "le temps",
+            "les fréquences présentes",
+            "la puissance active",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Identifier la source."
+        },
+        {
+          "id": "q8718",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "Un filtre secteur sert à…",
+          "reponses": [
+            "bloquer les perturbations conduites",
+            "refroidir",
+            "augmenter la tension",
+            "mesurer"
+          ],
+          "bonne": 0,
+          "explication": "À l'entrée de l'appareil."
+        },
+        {
+          "id": "q8719",
+          "fiche_id": "cemp_diagnostic",
+          "type": "qcm",
+          "enonce": "Améliorer le maillage des masses…",
+          "reponses": [
+            "aggrave",
+            "réduit les différences de potentiel HF",
+            "est inutile",
+            "coûte trop"
+          ],
+          "bonne": 1,
+          "explication": "Remède de fond."
+        },
+        {
+          "id": "q8720",
+          "fiche_id": "cemp_diagnostic",
+          "type": "ordre",
+          "enonce": "Diagnostiquer une perturbation : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Noter quand et où le problème apparaît",
+            "Identifier la source probable",
+            "Trouver le chemin de couplage",
+            "Appliquer un remède (filtre, ferrite, blindage, séparation)",
+            "Vérifier que le problème a disparu"
+          ],
+          "explication": "Méthode d'enquête."
+        }
+      ],
+      "ordre": 28
+    },
+    {
       "id": "mesures",
       "titre": "Mesures et appareils",
-      "ordre": 25,
+      "ordre": 29,
       "fiches": [
         {
           "id": "multimetre",
@@ -7698,7 +8930,7 @@
     {
       "id": "installation",
       "titre": "Installation domestique",
-      "ordre": 26,
+      "ordre": 30,
       "fiches": [
         {
           "id": "tableau",
@@ -8308,7 +9540,7 @@
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
         }
       ],
-      "ordre": 27
+      "ordre": 31
     },
     {
       "id": "cablage",
@@ -8616,7 +9848,7 @@
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
         }
       ],
-      "ordre": 28
+      "ordre": 32
     },
     {
       "id": "parafoudre",
@@ -8923,7 +10155,7 @@
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
         }
       ],
-      "ordre": 29
+      "ordre": 33
     },
     {
       "id": "locaux_risques",
@@ -9230,7 +10462,7 @@
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
         }
       ],
-      "ordre": 30
+      "ordre": 34
     },
     {
       "id": "photovoltaique",
@@ -9537,7 +10769,7 @@
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
         }
       ],
-      "ordre": 31
+      "ordre": 35
     },
     {
       "id": "chauffage",
@@ -9844,7 +11076,7 @@
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
         }
       ],
-      "ordre": 32
+      "ordre": 36
     },
     {
       "id": "domotique",
@@ -10151,7 +11383,7 @@
           "explication": "Capteur, centrale, décision, actionneur."
         }
       ],
-      "ordre": 33
+      "ordre": 37
     },
     {
       "id": "vehicule_electrique",
@@ -10459,7 +11691,7 @@
           "explication": "Alimentation, câblage, protections, borne, test."
         }
       ],
-      "ordre": 34
+      "ordre": 38
     },
     {
       "id": "plaque_signaletique",
@@ -10766,7 +11998,7 @@
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
         }
       ],
-      "ordre": 35
+      "ordre": 39
     },
     {
       "id": "ventilation",
@@ -11074,7 +12306,7 @@
           "explication": "Alimentation, unités, fluide, mise en service."
         }
       ],
-      "ordre": 36
+      "ordre": 40
     },
     {
       "id": "lire_tableau",
@@ -11381,7 +12613,7 @@
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
         }
       ],
-      "ordre": 37
+      "ordre": 41
     },
     {
       "id": "depannage",
@@ -11689,7 +12921,7 @@
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
         }
       ],
-      "ordre": 38
+      "ordre": 42
     },
     {
       "id": "courants_faibles",
@@ -11997,7 +13229,7 @@
           "explication": "Tirer, raccorder, tester, repérer, brasser."
         }
       ],
-      "ordre": 39
+      "ordre": 43
     },
     {
       "id": "eclairage_exterieur",
@@ -12305,7 +13537,7 @@
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
         }
       ],
-      "ordre": 40
+      "ordre": 44
     },
     {
       "id": "alarme",
@@ -12613,7 +13845,7 @@
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
         }
       ],
-      "ordre": 41
+      "ordre": 45
     },
     {
       "id": "mesures_avancees",
@@ -12921,7 +14153,7 @@
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
         }
       ],
-      "ordre": 42
+      "ordre": 46
     },
     {
       "id": "renovation",
@@ -13229,7 +14461,7 @@
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
         }
       ],
-      "ordre": 43
+      "ordre": 47
     },
     {
       "id": "secours_energie",
@@ -13537,7 +14769,7 @@
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
         }
       ],
-      "ordre": 44
+      "ordre": 48
     },
     {
       "id": "camping_car_bateau",
@@ -13845,7 +15077,7 @@
           "explication": "Hors tension, brancher, enclencher, tester."
         }
       ],
-      "ordre": 45
+      "ordre": 49
     },
     {
       "id": "autoconsommation",
@@ -14152,7 +15384,7 @@
           "explication": "Mesurer, déplacer, router, stocker."
         }
       ],
-      "ordre": 46
+      "ordre": 50
     },
     {
       "id": "tertiaire_erp",
@@ -14460,7 +15692,7 @@
           "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
         }
       ],
-      "ordre": 47
+      "ordre": 51
     },
     {
       "id": "industrie",
@@ -14768,7 +16000,7 @@
           "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
         }
       ],
-      "ordre": 48
+      "ordre": 52
     },
     {
       "id": "variateurs",
@@ -15076,7 +16308,7 @@
           "explication": "Filtre, câble, blindage, séparation, réglages."
         }
       ],
-      "ordre": 49
+      "ordre": 53
     },
     {
       "id": "eclairage_public",
@@ -15384,7 +16616,7 @@
           "explication": "Baliser, couper, vérifier, intervenir, essayer."
         }
       ],
-      "ordre": 50
+      "ordre": 54
     },
     {
       "id": "portails_ascenseurs",
@@ -15692,7 +16924,7 @@
           "explication": "Alimentation, mécanique, sécurités, réglages, test."
         }
       ],
-      "ordre": 51
+      "ordre": 55
     },
     {
       "id": "pompes_eau",
@@ -16000,7 +17232,7 @@
           "explication": "Protection, câble, raccordement, sécurité, essai."
         }
       ],
-      "ordre": 52
+      "ordre": 56
     },
     {
       "id": "cabler_tableau",
@@ -16308,7 +17540,7 @@
           "explication": "Préparer, monter, équiper, raccorder, contrôler."
         }
       ],
-      "ordre": 53
+      "ordre": 57
     },
     {
       "id": "schemas_industriels",
@@ -16616,7 +17848,7 @@
           "explication": "Lire, vérifier les évidences, mesurer, contrôler, réparer."
         }
       ],
-      "ordre": 54
+      "ordre": 58
     },
     {
       "id": "soudure",
@@ -16924,7 +18156,7 @@
           "explication": "Incendie, retour de courant, EPI, fumées, puis souder."
         }
       ],
-      "ordre": 55
+      "ordre": 59
     },
     {
       "id": "agriculture",
@@ -17232,7 +18464,7 @@
           "explication": "Équipotentialité, protection des personnes et animaux, matériel, câbles, secours."
         }
       ],
-      "ordre": 56
+      "ordre": 60
     },
     {
       "id": "medical",
@@ -17540,7 +18772,7 @@
           "explication": "Redondance en cascade."
         }
       ],
-      "ordre": 57
+      "ordre": 61
     },
     {
       "id": "telecoms",
@@ -17848,7 +19080,7 @@
           "explication": "Rayonnement, hauteur, intervention, remise en service."
         }
       ],
-      "ordre": 58
+      "ordre": 62
     },
     {
       "id": "induction_industrie",
@@ -18156,7 +19388,7 @@
           "explication": "Courant, champ, induction, chaleur, procédé."
         }
       ],
-      "ordre": 59
+      "ordre": 63
     },
     {
       "id": "data_centers",
@@ -18464,7 +19696,7 @@
           "explication": "Cascade de secours."
         }
       ],
-      "ordre": 60
+      "ordre": 64
     },
     {
       "id": "maintenance_preventive",
@@ -18772,12 +20004,936 @@
           "explication": "De la préparation au suivi."
         }
       ],
-      "ordre": 61
+      "ordre": 65
+    },
+    {
+      "id": "pac",
+      "titre": "Pompes à chaleur",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "pac_principe",
+          "titre": "Comment ça marche",
+          "contenu": "Une pompe à chaleur ne produit pas de chaleur : elle la déplace. Un fluide frigorigène capte les calories dehors (air, sol, eau), le compresseur élève sa température, et le condenseur les cède au logement.\n\nLe COP (coefficient de performance) est le rapport entre chaleur fournie et électricité consommée : 3 à 4 en conditions normales. Il baisse quand il fait très froid.\n\nAir/air (climatisation réversible), air/eau (radiateurs, plancher chauffant), géothermie (sol ou nappe, plus stable mais plus chère). L'inverter adapte la vitesse du compresseur à la demande.",
+          "image": "pac_principe.png"
+        },
+        {
+          "id": "pac_raccordement",
+          "titre": "Raccorder une pompe à chaleur",
+          "contenu": "Une PAC est un moteur : circuit dédié, section adaptée, disjoncteur souvent courbe D pour le démarrage, différentiel 30 mA, type A ou F pour un inverter. Les modèles puissants sont en triphasé.\n\nLa puissance électrique est le tiers de la puissance thermique environ : une PAC de 12 kW thermiques appelle 3 à 4 kW. L'appoint électrique (résistance) peut doubler cela : vérifier la puissance souscrite.\n\nL'unité extérieure est raccordée par câble adapté à l'extérieur, avec un sectionneur de proximité. Le fluide frigorigène est manipulé par un professionnel attesté.",
+          "image": "pac_raccordement.png"
+        },
+        {
+          "id": "pac_exploitation",
+          "titre": "Faire durer une PAC",
+          "contenu": "Le dégivrage inverse le cycle quelques minutes : de la vapeur sort de l'unité extérieure, c'est normal. Le bruit se maîtrise par l'emplacement et les plots antivibratiles : la réglementation limite les émergences chez le voisin.\n\nRégler la loi d'eau (température de départ selon l'extérieur) plutôt que de pousser le thermostat. Entretien : filtres, échangeur extérieur, contrôle d'étanchéité annuel obligatoire au-delà d'une certaine charge de fluide.\n\nUn ballon tampon ou un volume d'eau suffisant évite les cycles courts qui usent le compresseur.",
+          "image": "pac_exploitation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8001",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "Une pompe à chaleur…",
+          "reponses": [
+            "crée de la chaleur",
+            "déplace la chaleur de l'extérieur vers l'intérieur",
+            "brûle du gaz",
+            "refroidit uniquement"
+          ],
+          "bonne": 1,
+          "explication": "Cycle frigorifique inversé."
+        },
+        {
+          "id": "q8002",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "Le COP d'une PAC est…",
+          "reponses": [
+            "la chaleur fournie divisée par l'électricité consommée",
+            "le prix",
+            "le poids",
+            "la pression"
+          ],
+          "bonne": 0,
+          "explication": "3 à 4 en conditions normales."
+        },
+        {
+          "id": "q8003",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "Quand il fait très froid, le COP…",
+          "reponses": [
+            "monte",
+            "baisse",
+            "ne change pas",
+            "devient nul"
+          ],
+          "bonne": 1,
+          "explication": "Moins de calories disponibles."
+        },
+        {
+          "id": "q8004",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "Une PAC air/eau alimente…",
+          "reponses": [
+            "des ventilo-convecteurs seulement",
+            "radiateurs ou plancher chauffant",
+            "une piscine seulement",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Circuit d'eau."
+        },
+        {
+          "id": "q8005",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "La géothermie est…",
+          "reponses": [
+            "moins stable",
+            "plus stable mais plus chère à installer",
+            "interdite",
+            "sans compresseur"
+          ],
+          "bonne": 1,
+          "explication": "Sol à température constante."
+        },
+        {
+          "id": "q8006",
+          "fiche_id": "pac_principe",
+          "type": "qcm",
+          "enonce": "L'inverter…",
+          "reponses": [
+            "fait démarrer à fond",
+            "adapte la vitesse du compresseur à la demande",
+            "chauffe l'eau",
+            "est une résistance"
+          ],
+          "bonne": 1,
+          "explication": "Moins de cycles, meilleur rendement."
+        },
+        {
+          "id": "q8007",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "La protection d'une PAC est souvent en courbe…",
+          "reponses": [
+            "A",
+            "B",
+            "D",
+            "Z"
+          ],
+          "bonne": 2,
+          "explication": "Courant de démarrage élevé."
+        },
+        {
+          "id": "q8008",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "Une PAC de 12 kW thermiques appelle environ…",
+          "reponses": [
+            "12 kW",
+            "3 à 4 kW",
+            "30 kW",
+            "0,5 kW"
+          ],
+          "bonne": 1,
+          "explication": "COP de 3 à 4."
+        },
+        {
+          "id": "q8009",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "L'appoint électrique d'une PAC…",
+          "reponses": [
+            "est gratuit",
+            "peut doubler la puissance appelée",
+            "n'existe pas",
+            "remplace le compresseur"
+          ],
+          "bonne": 1,
+          "explication": "Vérifier l'abonnement."
+        },
+        {
+          "id": "q8010",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "Un inverter demande un différentiel de type…",
+          "reponses": [
+            "AC",
+            "A ou F",
+            "aucun",
+            "B seulement"
+          ],
+          "bonne": 1,
+          "explication": "Courants avec composante continue."
+        },
+        {
+          "id": "q8011",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "L'unité extérieure a…",
+          "reponses": [
+            "un sectionneur de proximité",
+            "une prise 16 A",
+            "une rallonge",
+            "rien"
+          ],
+          "bonne": 0,
+          "explication": "Pour intervenir en sécurité."
+        },
+        {
+          "id": "q8012",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "Le fluide frigorigène est manipulé par…",
+          "reponses": [
+            "n'importe qui",
+            "un professionnel avec attestation de capacité",
+            "le client",
+            "le facteur"
+          ],
+          "bonne": 1,
+          "explication": "Réglementation sur les fluides."
+        },
+        {
+          "id": "q8013",
+          "fiche_id": "pac_raccordement",
+          "type": "qcm",
+          "enonce": "Les PAC puissantes sont raccordées en…",
+          "reponses": [
+            "12 V",
+            "triphasé",
+            "USB",
+            "continu"
+          ],
+          "bonne": 1,
+          "explication": "Répartition des courants."
+        },
+        {
+          "id": "q8014",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "La vapeur qui sort de l'unité extérieure par grand froid est…",
+          "reponses": [
+            "une fuite",
+            "le dégivrage, normal",
+            "un incendie",
+            "une panne"
+          ],
+          "bonne": 1,
+          "explication": "Cycle inversé quelques minutes."
+        },
+        {
+          "id": "q8015",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "Le bruit d'une PAC se maîtrise par…",
+          "reponses": [
+            "rien",
+            "l'emplacement et les plots antivibratiles",
+            "le volume du thermostat",
+            "la couleur"
+          ],
+          "bonne": 1,
+          "explication": "Émergence limitée chez le voisin."
+        },
+        {
+          "id": "q8016",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "La loi d'eau règle…",
+          "reponses": [
+            "le prix",
+            "la température de départ selon l'extérieur",
+            "le débit",
+            "la pression"
+          ],
+          "bonne": 1,
+          "explication": "Confort et rendement."
+        },
+        {
+          "id": "q8017",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "Les cycles courts…",
+          "reponses": [
+            "sont bons",
+            "usent le compresseur",
+            "économisent",
+            "chauffent mieux"
+          ],
+          "bonne": 1,
+          "explication": "Ballon tampon."
+        },
+        {
+          "id": "q8018",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "Le contrôle d'étanchéité du fluide est…",
+          "reponses": [
+            "facultatif",
+            "obligatoire chaque année au-delà d'une certaine charge",
+            "mensuel",
+            "interdit"
+          ],
+          "bonne": 1,
+          "explication": "Gaz à effet de serre."
+        },
+        {
+          "id": "q8019",
+          "fiche_id": "pac_exploitation",
+          "type": "qcm",
+          "enonce": "L'entretien d'une PAC comprend…",
+          "reponses": [
+            "rien",
+            "filtres, échangeur extérieur, contrôles",
+            "repeindre",
+            "changer le fluide chaque mois"
+          ],
+          "bonne": 1,
+          "explication": "Rendement et durée de vie."
+        },
+        {
+          "id": "q8020",
+          "fiche_id": "pac_principe",
+          "type": "ordre",
+          "enonce": "Cycle d'une pompe à chaleur en chauffage : remets les étapes dans l'ordre.",
+          "reponses": [
+            "L'évaporateur extérieur capte les calories",
+            "Le compresseur élève pression et température",
+            "Le condenseur cède la chaleur au logement",
+            "Le détendeur abaisse la pression",
+            "Le fluide repart vers l'évaporateur"
+          ],
+          "explication": "Boucle fermée."
+        }
+      ],
+      "ordre": 66
+    },
+    {
+      "id": "selectivite",
+      "titre": "Sélectivité et coordination des protections",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "sel_courbes",
+          "titre": "Courbes et pouvoir de coupure",
+          "contenu": "Un disjoncteur a deux déclencheurs : thermique (surcharge, lent) et magnétique (court-circuit, instantané). La courbe fixe le seuil magnétique : B (3 à 5 × In), C (5 à 10 ×), D (10 à 20 ×) pour les moteurs et transformateurs qui appellent fort au démarrage.\n\nLe pouvoir de coupure (3, 4,5, 6, 10 kA…) doit dépasser le courant de court-circuit (Icc) au point d'installation. L'Icc est maximal près du transformateur et diminue avec la longueur des câbles.\n\nUn disjoncteur trop faible face à l'Icc peut ne pas couper, se souder ou exploser.",
+          "image": "sel_courbes.png"
+        },
+        {
+          "id": "sel_selectivite",
+          "titre": "La sélectivité",
+          "contenu": "La sélectivité, c'est que seul le disjoncteur le plus proche du défaut déclenche : un court-circuit sur une prise ne doit pas couper tout l'immeuble.\n\nSélectivité ampèremétrique : les calibres décroissent de l'amont vers l'aval. Chronométrique : l'amont est temporisé. Différentielle : un 300 mA sélectif (type S) en tête, des 30 mA instantanés en aval.\n\nLes fabricants publient des tableaux de sélectivité entre leurs appareils : totale (jusqu'à l'Icc) ou partielle (jusqu'à une certaine valeur).",
+          "image": "sel_selectivite.png"
+        },
+        {
+          "id": "sel_filiation",
+          "titre": "Filiation et choix",
+          "contenu": "La filiation permet d'installer en aval un disjoncteur de pouvoir de coupure inférieur à l'Icc, parce que le disjoncteur amont limite le courant : économie, mais uniquement avec des couples validés par le fabricant.\n\nChoisir une protection : le courant d'emploi, la section du câble (courant admissible), l'Icc, la courbe selon la charge, la sélectivité avec l'amont, la longueur maximale protégée contre les contacts indirects.\n\nUn logiciel de calcul (ou les tableaux des fabricants) vérifie tout cela. Le résultat va dans la note de calcul de l'installation.",
+          "image": "sel_filiation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8401",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "Le déclencheur thermique d'un disjoncteur réagit…",
+          "reponses": [
+            "au court-circuit",
+            "à la surcharge, lentement",
+            "à la tension",
+            "à la lumière"
+          ],
+          "bonne": 1,
+          "explication": "Bilame."
+        },
+        {
+          "id": "q8402",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "Le déclencheur magnétique réagit…",
+          "reponses": [
+            "à la surcharge",
+            "au court-circuit, instantanément",
+            "au temps",
+            "à l'humidité"
+          ],
+          "bonne": 1,
+          "explication": "Seuil selon la courbe."
+        },
+        {
+          "id": "q8403",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "La courbe C déclenche au magnétique entre…",
+          "reponses": [
+            "3 et 5 × In",
+            "5 et 10 × In",
+            "10 et 20 × In",
+            "1 et 2 × In"
+          ],
+          "bonne": 1,
+          "explication": "Usage général."
+        },
+        {
+          "id": "q8404",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "La courbe D est prévue pour…",
+          "reponses": [
+            "l'éclairage",
+            "les moteurs et transformateurs à fort appel",
+            "les prises",
+            "les circuits longs"
+          ],
+          "bonne": 1,
+          "explication": "10 à 20 × In."
+        },
+        {
+          "id": "q8405",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "Le pouvoir de coupure doit être…",
+          "reponses": [
+            "inférieur à l'Icc",
+            "supérieur à l'Icc au point d'installation",
+            "égal au calibre",
+            "sans importance"
+          ],
+          "bonne": 1,
+          "explication": "Sinon il peut ne pas couper."
+        },
+        {
+          "id": "q8406",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "L'Icc est maximal…",
+          "reponses": [
+            "au bout de la ligne",
+            "près du transformateur",
+            "sur les prises",
+            "dans le jardin"
+          ],
+          "bonne": 1,
+          "explication": "Faible impédance."
+        },
+        {
+          "id": "q8407",
+          "fiche_id": "sel_courbes",
+          "type": "qcm",
+          "enonce": "Un disjoncteur avec un pouvoir de coupure trop faible…",
+          "reponses": [
+            "coupe mieux",
+            "peut ne pas couper, se souder ou exploser",
+            "déclenche trop",
+            "est moins cher et suffisant"
+          ],
+          "bonne": 1,
+          "explication": "Danger."
+        },
+        {
+          "id": "q8408",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "La sélectivité signifie que…",
+          "reponses": [
+            "tout coupe en même temps",
+            "seul le disjoncteur le plus proche du défaut déclenche",
+            "rien ne coupe",
+            "le disjoncteur principal coupe d'abord"
+          ],
+          "bonne": 1,
+          "explication": "Continuité de service."
+        },
+        {
+          "id": "q8409",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "La sélectivité ampèremétrique repose sur…",
+          "reponses": [
+            "des calibres décroissants de l'amont vers l'aval",
+            "le temps",
+            "la couleur",
+            "la longueur"
+          ],
+          "bonne": 0,
+          "explication": "Amont plus gros."
+        },
+        {
+          "id": "q8410",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "La sélectivité chronométrique…",
+          "reponses": [
+            "temporise l'amont",
+            "temporise l'aval",
+            "supprime les temporisations",
+            "n'existe pas"
+          ],
+          "bonne": 0,
+          "explication": "L'aval coupe le premier."
+        },
+        {
+          "id": "q8411",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "Un différentiel type S en tête est…",
+          "reponses": [
+            "instantané",
+            "sélectif, légèrement retardé",
+            "interdit",
+            "30 mA"
+          ],
+          "bonne": 1,
+          "explication": "300 mA sélectif."
+        },
+        {
+          "id": "q8412",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "La sélectivité totale est garantie…",
+          "reponses": [
+            "jusqu'à 10 A",
+            "jusqu'à l'Icc",
+            "jamais",
+            "seulement la nuit"
+          ],
+          "bonne": 1,
+          "explication": "Tableaux fabricants."
+        },
+        {
+          "id": "q8413",
+          "fiche_id": "sel_selectivite",
+          "type": "qcm",
+          "enonce": "Sans sélectivité, un défaut sur une prise…",
+          "reponses": [
+            "ne coupe rien",
+            "peut couper tout l'immeuble",
+            "coupe la prise seulement",
+            "fait du bruit"
+          ],
+          "bonne": 1,
+          "explication": "Déclenchement en cascade."
+        },
+        {
+          "id": "q8414",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "La filiation permet…",
+          "reponses": [
+            "d'augmenter l'Icc",
+            "un aval de pouvoir de coupure inférieur grâce à la limitation de l'amont",
+            "de supprimer l'amont",
+            "de doubler les câbles"
+          ],
+          "bonne": 1,
+          "explication": "Couples validés par le fabricant."
+        },
+        {
+          "id": "q8415",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "La filiation n'est valable que…",
+          "reponses": [
+            "avec n'importe quels appareils",
+            "avec des couples validés par le fabricant",
+            "en triphasé",
+            "en 12 V"
+          ],
+          "bonne": 1,
+          "explication": "Tableaux de filiation."
+        },
+        {
+          "id": "q8416",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "Le courant admissible d'un câble dépend…",
+          "reponses": [
+            "de sa couleur",
+            "de sa section, son isolant et sa pose",
+            "du prix",
+            "du fabricant seulement"
+          ],
+          "bonne": 1,
+          "explication": "Tableaux de la norme."
+        },
+        {
+          "id": "q8417",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "La longueur maximale protégée concerne…",
+          "reponses": [
+            "la protection contre les contacts indirects",
+            "le prix",
+            "l'esthétique",
+            "la tension"
+          ],
+          "bonne": 0,
+          "explication": "L'Icc en bout doit encore déclencher le magnétique."
+        },
+        {
+          "id": "q8418",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "La note de calcul d'une installation…",
+          "reponses": [
+            "est facultative",
+            "justifie les choix de câbles et protections",
+            "est un devis",
+            "est un plan"
+          ],
+          "bonne": 1,
+          "explication": "Document technique."
+        },
+        {
+          "id": "q8419",
+          "fiche_id": "sel_filiation",
+          "type": "qcm",
+          "enonce": "Le calibre d'un disjoncteur doit être…",
+          "reponses": [
+            "supérieur au courant admissible du câble",
+            "entre le courant d'emploi et le courant admissible du câble",
+            "le plus gros possible",
+            "le plus petit possible"
+          ],
+          "bonne": 1,
+          "explication": "Protège le câble."
+        },
+        {
+          "id": "q8420",
+          "fiche_id": "sel_filiation",
+          "type": "ordre",
+          "enonce": "Choisir une protection : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Déterminer le courant d'emploi",
+            "Choisir la section du câble",
+            "Calculer l'Icc au point d'installation",
+            "Choisir calibre, courbe et pouvoir de coupure",
+            "Vérifier sélectivité et longueur protégée"
+          ],
+          "explication": "Méthode de dimensionnement."
+        }
+      ],
+      "ordre": 67
+    },
+    {
+      "id": "cuisines_pro",
+      "titre": "Cuisines professionnelles",
+      "theme": "Installation et pratique",
+      "fiches": [
+        {
+          "id": "cp_puissance",
+          "titre": "Des puissances élevées",
+          "contenu": "Une cuisine de restaurant appelle 30 à 100 kW : fours mixtes 10 à 20 kW, plaques à induction 5 kW par foyer, friteuses, lave-vaisselle à capot 10 kW, chambres froides. Le triphasé est la règle, avec une puissance souscrite calculée avec un coefficient de simultanéité.\n\nChaque appareil puissant a son circuit dédié, sa protection et son sectionneur de proximité. Les prises sont en 16 A ou 32 A, souvent industrielles (IP44 ou IP67).\n\nLe foisonnement : tout ne chauffe pas en même temps, mais le coup de feu de midi s'en approche.",
+          "image": "cp_puissance.png"
+        },
+        {
+          "id": "cp_environnement",
+          "titre": "Chaleur, graisse et eau",
+          "contenu": "Milieu hostile : chaleur, vapeur, graisse, nettoyage au jet. Matériel IP44 minimum, IP65 en zone de lavage, boîtiers inox ou polyester, presse-étoupes, câbles résistants à la chaleur derrière les fours.\n\nLes différentiels 30 mA protègent tous les circuits ; les hottes ont leur ventilation motorisée et souvent une extinction automatique. Le nettoyage au jet direct sur les prises et interrupteurs est à proscrire : on prévoit des prises protégées et une hauteur de pose adaptée.\n\nLa liaison équipotentielle relie inox des plans de travail, hottes et appareils.",
+          "image": "cp_environnement.png"
+        },
+        {
+          "id": "cp_securite",
+          "titre": "Coupure et sécurité",
+          "contenu": "Un arrêt d'urgence général coupe la cuisine (hors froid et éclairage) : obligatoire dans les ERP, à portée du personnel, repéré. La coupure gaz et la coupure électrique sont distinctes et signalées.\n\nLe personnel a les mains mouillées, les sols sont gras : électrisation et glissade se combinent. Les rallonges et multiprises sont à bannir. Les appareils mobiles sont raccordés par câble souple adapté (H07RN-F).\n\nEntretien : filtres de hotte (incendie), contrôle des câbles derrière les appareils (chaleur, rongeurs), test des différentiels, vérification annuelle.",
+          "image": "cp_securite.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8801",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "Une cuisine de restaurant appelle typiquement…",
+          "reponses": [
+            "3 kW",
+            "30 à 100 kW",
+            "1 MW",
+            "500 W"
+          ],
+          "bonne": 1,
+          "explication": "Fours, induction, froid."
+        },
+        {
+          "id": "q8802",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "Un foyer à induction professionnel consomme environ…",
+          "reponses": [
+            "50 W",
+            "5 kW",
+            "50 kW",
+            "0,5 kW"
+          ],
+          "bonne": 1,
+          "explication": "Chauffe très rapide."
+        },
+        {
+          "id": "q8803",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "L'alimentation d'une cuisine pro est en général en…",
+          "reponses": [
+            "12 V",
+            "triphasé",
+            "monophasé 10 A",
+            "continu"
+          ],
+          "bonne": 1,
+          "explication": "Puissance répartie."
+        },
+        {
+          "id": "q8804",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "Le coefficient de simultanéité tient compte…",
+          "reponses": [
+            "du nombre de cuisiniers",
+            "du fait que tout ne fonctionne pas en même temps",
+            "du prix",
+            "de la surface"
+          ],
+          "bonne": 1,
+          "explication": "Foisonnement."
+        },
+        {
+          "id": "q8805",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "Chaque appareil puissant a…",
+          "reponses": [
+            "une multiprise",
+            "son circuit dédié et un sectionneur de proximité",
+            "une rallonge",
+            "une prise partagée"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité et maintenance."
+        },
+        {
+          "id": "q8806",
+          "fiche_id": "cp_puissance",
+          "type": "qcm",
+          "enonce": "Les prises de forte puissance sont souvent…",
+          "reponses": [
+            "domestiques",
+            "industrielles IP44 ou IP67",
+            "USB",
+            "absentes"
+          ],
+          "bonne": 1,
+          "explication": "16 ou 32 A."
+        },
+        {
+          "id": "q8807",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "En zone de lavage au jet, l'indice de protection minimal est…",
+          "reponses": [
+            "IP20",
+            "IP65",
+            "IP44",
+            "IP00"
+          ],
+          "bonne": 1,
+          "explication": "Jets d'eau."
+        },
+        {
+          "id": "q8808",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "Derrière un four, les câbles doivent être…",
+          "reponses": [
+            "ordinaires",
+            "résistants à la chaleur",
+            "en plastique fin",
+            "enroulés"
+          ],
+          "bonne": 1,
+          "explication": "Isolant adapté."
+        },
+        {
+          "id": "q8809",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "Les hottes de cuisine pro ont souvent…",
+          "reponses": [
+            "une simple grille",
+            "une ventilation motorisée et une extinction automatique",
+            "rien",
+            "un ventilateur de bureau"
+          ],
+          "bonne": 1,
+          "explication": "Risque incendie de graisse."
+        },
+        {
+          "id": "q8810",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "Nettoyer au jet direct les prises et interrupteurs est…",
+          "reponses": [
+            "conseillé",
+            "à proscrire",
+            "obligatoire",
+            "sans risque"
+          ],
+          "bonne": 1,
+          "explication": "Même avec IP élevé."
+        },
+        {
+          "id": "q8811",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "La liaison équipotentielle relie…",
+          "reponses": [
+            "les cuisiniers",
+            "les inox, hottes et appareils",
+            "les casseroles",
+            "les tables en bois"
+          ],
+          "bonne": 1,
+          "explication": "Pas de différence de potentiel."
+        },
+        {
+          "id": "q8812",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "Les circuits d'une cuisine pro sont protégés par différentiel…",
+          "reponses": [
+            "300 mA",
+            "30 mA",
+            "aucun",
+            "1 A"
+          ],
+          "bonne": 1,
+          "explication": "Milieu humide."
+        },
+        {
+          "id": "q8813",
+          "fiche_id": "cp_environnement",
+          "type": "qcm",
+          "enonce": "Les boîtiers en cuisine sont…",
+          "reponses": [
+            "en carton",
+            "en inox ou polyester avec presse-étoupes",
+            "en bois",
+            "ouverts"
+          ],
+          "bonne": 1,
+          "explication": "Étanchéité."
+        },
+        {
+          "id": "q8814",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "L'arrêt d'urgence général d'une cuisine coupe…",
+          "reponses": [
+            "tout, froid compris",
+            "la cuisine sauf froid et éclairage",
+            "le gaz seulement",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Le froid garde les denrées."
+        },
+        {
+          "id": "q8815",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "La coupure gaz et la coupure électrique sont…",
+          "reponses": [
+            "confondues",
+            "distinctes et signalées",
+            "absentes",
+            "cachées"
+          ],
+          "bonne": 1,
+          "explication": "Deux organes."
+        },
+        {
+          "id": "q8816",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "Mains mouillées et sol gras…",
+          "reponses": [
+            "n'ont aucun effet",
+            "aggravent le risque d'électrisation et de chute",
+            "sont rares",
+            "protègent"
+          ],
+          "bonne": 1,
+          "explication": "Résistance du corps réduite."
+        },
+        {
+          "id": "q8817",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "Les multiprises en cuisine pro sont…",
+          "reponses": [
+            "conseillées",
+            "à bannir",
+            "obligatoires",
+            "sans risque"
+          ],
+          "bonne": 1,
+          "explication": "Surcharge, eau."
+        },
+        {
+          "id": "q8818",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "Un appareil mobile est raccordé par…",
+          "reponses": [
+            "un fil rigide",
+            "un câble souple adapté (H07RN-F)",
+            "une rallonge domestique",
+            "un fil dénudé"
+          ],
+          "bonne": 1,
+          "explication": "Résistant aux chocs et à l'huile."
+        },
+        {
+          "id": "q8819",
+          "fiche_id": "cp_securite",
+          "type": "qcm",
+          "enonce": "Les filtres de hotte encrassés…",
+          "reponses": [
+            "améliorent l'aspiration",
+            "sont un risque d'incendie",
+            "refroidissent",
+            "ne changent rien"
+          ],
+          "bonne": 1,
+          "explication": "Graisse inflammable."
+        },
+        {
+          "id": "q8820",
+          "fiche_id": "cp_securite",
+          "type": "ordre",
+          "enonce": "Départ de feu sur une friteuse : remets les actions dans l'ordre.",
+          "reponses": [
+            "Couper l'appareil et l'arrêt d'urgence",
+            "Couvrir la friteuse (couvercle, couverture anti-feu)",
+            "Ne jamais utiliser d'eau",
+            "Alerter et faire évacuer si le feu persiste",
+            "Utiliser l'extincteur adapté (classe F)"
+          ],
+          "explication": "L'eau projette l'huile en feu."
+        }
+      ],
+      "ordre": 68
     },
     {
       "id": "securite",
       "titre": "Dangers et sécurité de base",
-      "ordre": 62,
+      "ordre": 69,
       "fiches": [
         {
           "id": "dangers",
@@ -19085,7 +21241,7 @@
     {
       "id": "habilitation",
       "titre": "Habilitation électrique : premiers repères",
-      "ordre": 63,
+      "ordre": 70,
       "fiches": [
         {
           "id": "principe",
@@ -19693,7 +21849,7 @@
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
         }
       ],
-      "ordre": 64
+      "ordre": 71
     },
     {
       "id": "epi",
@@ -20000,7 +22156,7 @@
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
         }
       ],
-      "ordre": 65
+      "ordre": 72
     },
     {
       "id": "b0_bs",
@@ -20308,7 +22464,7 @@
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
         }
       ],
-      "ordre": 66
+      "ordre": 73
     },
     {
       "id": "br",
@@ -20616,7 +22772,7 @@
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
         }
       ],
-      "ordre": 67
+      "ordre": 74
     },
     {
       "id": "secours",
@@ -20923,7 +23079,7 @@
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
         }
       ],
-      "ordre": 68
+      "ordre": 75
     },
     {
       "id": "b1_b2",
@@ -21232,7 +23388,7 @@
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
         }
       ],
-      "ordre": 69
+      "ordre": 76
     },
     {
       "id": "bc",
@@ -21540,7 +23696,7 @@
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
         }
       ],
-      "ordre": 70
+      "ordre": 77
     },
     {
       "id": "outillage",
@@ -21848,7 +24004,7 @@
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
         }
       ],
-      "ordre": 71
+      "ordre": 78
     },
     {
       "id": "normes",
@@ -22156,7 +24312,7 @@
           "explication": "Norme, attestation, visa, mise en service."
         }
       ],
-      "ordre": 72
+      "ordre": 79
     },
     {
       "id": "atex",
@@ -22464,7 +24620,7 @@
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
         }
       ],
-      "ordre": 73
+      "ordre": 80
     },
     {
       "id": "arc_tst",
@@ -22772,7 +24928,7 @@
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
         }
       ],
-      "ordre": 74
+      "ordre": 81
     },
     {
       "id": "haute_tension",
@@ -23080,7 +25236,7 @@
           "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
         }
       ],
-      "ordre": 75
+      "ordre": 82
     },
     {
       "id": "enfants",
@@ -23388,7 +25544,7 @@
           "explication": "Prises, câbles, lampe, appareils, parole."
         }
       ],
-      "ordre": 76
+      "ordre": 83
     },
     {
       "id": "foudre",
@@ -23696,7 +25852,7 @@
           "explication": "Capter, descendre, écouler, équilibrer, limiter."
         }
       ],
-      "ordre": 77
+      "ordre": 84
     },
     {
       "id": "cem_sante",
@@ -24004,7 +26160,7 @@
           "explication": "Démarche de prévention classique."
         }
       ],
-      "ordre": 78
+      "ordre": 85
     },
     {
       "id": "metiers",
@@ -24312,7 +26468,931 @@
           "explication": "Le diplôme d'abord, l'habilitation ensuite."
         }
       ],
-      "ordre": 79
+      "ordre": 86
+    },
+    {
+      "id": "ssi",
+      "titre": "Sécurité incendie : le SSI",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "ssi_composants",
+          "titre": "Le système de sécurité incendie",
+          "contenu": "Un SSI détecte, alerte et met en sécurité. Il comprend des détecteurs automatiques (fumée, chaleur), des déclencheurs manuels (boîtiers rouges), une centrale (équipement de contrôle et de signalisation) et des diffuseurs sonores et lumineux.\n\nLes SSI sont classés de A (le plus complet, détection automatique généralisée) à E (le plus simple). La catégorie dépend du type d'établissement et de son effectif.\n\nL'installation est en courants faibles mais alimentée par des sources secourues : l'alarme doit fonctionner même sans réseau.",
+          "image": "ssi_composants.png"
+        },
+        {
+          "id": "ssi_dispositifs",
+          "titre": "Mettre en sécurité",
+          "contenu": "La centrale commande des dispositifs actionnés de sécurité (DAS) : fermeture des portes coupe-feu (ventouses qui lâchent), ouverture du désenfumage, arrêt de la ventilation, retour des ascenseurs au niveau d'évacuation, déverrouillage des issues.\n\nL'éclairage de sécurité (BAES) balise l'évacuation. L'alimentation électrique de sécurité (EAE) garantit l'énergie des DAS et de l'alarme pendant la durée requise.\n\nLes DAS sont en sécurité positive : une perte d'alimentation les met en position de sécurité.",
+          "image": "ssi_dispositifs.png"
+        },
+        {
+          "id": "ssi_maintenance",
+          "titre": "Vérifier et entretenir",
+          "contenu": "Un SSI se vérifie régulièrement : essais des détecteurs, des déclencheurs, des DAS, des batteries. Tout est consigné dans le registre de sécurité. Les ERP reçoivent la commission de sécurité.\n\nLe coordinateur SSI suit la conception et la réception. Toute modification (cloison, porte) doit être répercutée.\n\nUn quart des incendies de bâtiments a une origine électrique : surcharge, connexion desserrée, appareil défaillant. La prévention électrique fait partie de la sécurité incendie.",
+          "image": "ssi_maintenance.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8101",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "Un SSI sert à…",
+          "reponses": [
+            "chauffer",
+            "détecter, alerter et mettre en sécurité",
+            "éclairer",
+            "refroidir"
+          ],
+          "bonne": 1,
+          "explication": "Trois fonctions."
+        },
+        {
+          "id": "q8102",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "Les boîtiers rouges sur les murs sont…",
+          "reponses": [
+            "des prises",
+            "des déclencheurs manuels",
+            "des interrupteurs",
+            "des compteurs"
+          ],
+          "bonne": 1,
+          "explication": "Alarme à la main."
+        },
+        {
+          "id": "q8103",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "Le SSI le plus complet est de catégorie…",
+          "reponses": [
+            "A",
+            "C",
+            "E",
+            "Z"
+          ],
+          "bonne": 0,
+          "explication": "Détection automatique généralisée."
+        },
+        {
+          "id": "q8104",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "La catégorie du SSI dépend…",
+          "reponses": [
+            "du prix",
+            "du type d'établissement et de l'effectif",
+            "de la couleur",
+            "de la saison"
+          ],
+          "bonne": 1,
+          "explication": "Réglementation ERP."
+        },
+        {
+          "id": "q8105",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "La centrale de détection…",
+          "reponses": [
+            "produit de la fumée",
+            "reçoit les alarmes et commande la mise en sécurité",
+            "est un extincteur",
+            "éclaire"
+          ],
+          "bonne": 1,
+          "explication": "Cœur du système."
+        },
+        {
+          "id": "q8106",
+          "fiche_id": "ssi_composants",
+          "type": "qcm",
+          "enonce": "L'alimentation d'un SSI est…",
+          "reponses": [
+            "sur une simple prise",
+            "secourue par batteries",
+            "facultative",
+            "solaire"
+          ],
+          "bonne": 1,
+          "explication": "Doit fonctionner sans réseau."
+        },
+        {
+          "id": "q8107",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "Les DAS sont…",
+          "reponses": [
+            "des détecteurs",
+            "des dispositifs actionnés de sécurité",
+            "des câbles",
+            "des alarmes"
+          ],
+          "bonne": 1,
+          "explication": "Portes, désenfumage, ventilation."
+        },
+        {
+          "id": "q8108",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "Une porte coupe-feu à ventouse…",
+          "reponses": [
+            "reste ouverte sans courant",
+            "se ferme quand l'alimentation est coupée",
+            "s'ouvre à l'alarme",
+            "est verrouillée"
+          ],
+          "bonne": 1,
+          "explication": "Sécurité positive."
+        },
+        {
+          "id": "q8109",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "Le désenfumage…",
+          "reponses": [
+            "crée de la fumée",
+            "évacue les fumées pour dégager l'évacuation",
+            "éteint le feu",
+            "chauffe"
+          ],
+          "bonne": 1,
+          "explication": "Naturel ou mécanique."
+        },
+        {
+          "id": "q8110",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "À l'alarme, les ascenseurs…",
+          "reponses": [
+            "montent",
+            "reviennent au niveau d'évacuation",
+            "s'arrêtent entre deux étages",
+            "accélèrent"
+          ],
+          "bonne": 1,
+          "explication": "Puis se bloquent."
+        },
+        {
+          "id": "q8111",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "La sécurité positive signifie que…",
+          "reponses": [
+            "tout marche à l'électricité",
+            "la perte d'alimentation met en position de sécurité",
+            "rien ne bouge",
+            "on appuie sur un bouton"
+          ],
+          "bonne": 1,
+          "explication": "Fiabilité."
+        },
+        {
+          "id": "q8112",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "L'EAE garantit…",
+          "reponses": [
+            "l'eau",
+            "l'énergie des DAS et de l'alarme",
+            "le chauffage",
+            "le Wi-Fi"
+          ],
+          "bonne": 1,
+          "explication": "Alimentation électrique de sécurité."
+        },
+        {
+          "id": "q8113",
+          "fiche_id": "ssi_dispositifs",
+          "type": "qcm",
+          "enonce": "Les BAES…",
+          "reponses": [
+            "balisent l'évacuation",
+            "détectent la fumée",
+            "ferment les portes",
+            "éteignent le feu"
+          ],
+          "bonne": 0,
+          "explication": "Éclairage de sécurité."
+        },
+        {
+          "id": "q8114",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "Les essais d'un SSI sont consignés dans…",
+          "reponses": [
+            "un carnet de bord",
+            "le registre de sécurité",
+            "un mail",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Preuve pour la commission."
+        },
+        {
+          "id": "q8115",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "La commission de sécurité visite…",
+          "reponses": [
+            "les maisons",
+            "les ERP",
+            "les voitures",
+            "les usines seulement"
+          ],
+          "bonne": 1,
+          "explication": "Périodicité selon la catégorie."
+        },
+        {
+          "id": "q8116",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "Le coordinateur SSI…",
+          "reponses": [
+            "éteint les feux",
+            "suit la conception et la réception du système",
+            "vend des extincteurs",
+            "peint"
+          ],
+          "bonne": 1,
+          "explication": "Mission obligatoire pour les SSI A et B."
+        },
+        {
+          "id": "q8117",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "Une nouvelle cloison dans un bâtiment…",
+          "reponses": [
+            "ne change rien",
+            "doit être répercutée sur le SSI",
+            "est interdite",
+            "éteint les détecteurs"
+          ],
+          "bonne": 1,
+          "explication": "Détection et évacuation modifiées."
+        },
+        {
+          "id": "q8118",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "La part des incendies d'origine électrique est d'environ…",
+          "reponses": [
+            "1 %",
+            "un quart",
+            "90 %",
+            "0"
+          ],
+          "bonne": 1,
+          "explication": "Surcharge, connexions, appareils."
+        },
+        {
+          "id": "q8119",
+          "fiche_id": "ssi_maintenance",
+          "type": "qcm",
+          "enonce": "Une connexion desserrée…",
+          "reponses": [
+            "refroidit",
+            "chauffe et peut enflammer",
+            "améliore le contact",
+            "est normale"
+          ],
+          "bonne": 1,
+          "explication": "Prévention électrique."
+        },
+        {
+          "id": "q8120",
+          "fiche_id": "ssi_dispositifs",
+          "type": "ordre",
+          "enonce": "Déclenchement d'une alarme incendie : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Un détecteur ou un déclencheur manuel signale",
+            "La centrale confirme et déclenche l'alarme",
+            "Les DAS se mettent en sécurité (portes, désenfumage)",
+            "Les occupants évacuent vers les issues balisées",
+            "Les secours sont alertés et prennent le relais"
+          ],
+          "explication": "Chaîne de mise en sécurité."
+        }
+      ],
+      "ordre": 87
+    },
+    {
+      "id": "regimes_neutre",
+      "titre": "Régimes de neutre TT, TN, IT",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "rn_principe",
+          "titre": "À quoi sert le régime de neutre",
+          "contenu": "Le régime de neutre (ou schéma des liaisons à la terre) décrit comment le neutre du transformateur et les masses sont reliés à la terre. Il détermine ce qui se passe au premier défaut d'isolement et comment on protège les personnes.\n\nDeux lettres : la première pour le neutre (T relié à la terre, I isolé), la seconde pour les masses (T à une terre propre, N au neutre).\n\nTT : les maisons. TN : l'industrie et le tertiaire. IT : là où la continuité est vitale (hôpitaux, process).",
+          "image": "rn_principe.png"
+        },
+        {
+          "id": "rn_tt_tn",
+          "titre": "TT et TN",
+          "contenu": "En TT, le neutre est à la terre côté distributeur et les masses à la terre de l'installation. Un défaut crée un courant faible qui passe par la terre : seul le différentiel peut le détecter. Différentiel obligatoire, terre de bonne qualité.\n\nEn TN, les masses sont reliées au neutre : un défaut d'isolement devient un court-circuit franc, coupé par le disjoncteur. Il faut des impédances de boucle faibles, vérifiées par calcul ou mesure. TN-S (neutre et PE séparés) est préféré ; TN-C (PEN commun) est interdit sous 10 mm² et dans les locaux à risque.\n\nDans les deux cas, la coupure au premier défaut est obligatoire.",
+          "image": "rn_tt_tn.png"
+        },
+        {
+          "id": "rn_it",
+          "titre": "IT : continuer malgré un défaut",
+          "contenu": "En IT, le neutre est isolé de la terre (ou relié par une forte impédance). Au premier défaut, le courant est très faible : pas de danger, pas de coupure. Un contrôleur permanent d'isolement (CPI) signale le défaut, et on doit le chercher et l'éliminer rapidement.\n\nAu second défaut sur une autre phase, on est en court-circuit : les protections coupent comme en TN ou TT.\n\nL'IT exige un service de maintenance réactif, des limiteurs de surtension et une recherche de défaut organisée. C'est le régime des hôpitaux (blocs), des salles de contrôle, de certains process.",
+          "image": "rn_it.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8501",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "Le régime de neutre décrit…",
+          "reponses": [
+            "la couleur des fils",
+            "la liaison du neutre et des masses à la terre",
+            "la tension",
+            "le prix du kWh"
+          ],
+          "bonne": 1,
+          "explication": "Schéma des liaisons à la terre."
+        },
+        {
+          "id": "q8502",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "La première lettre (T ou I) concerne…",
+          "reponses": [
+            "les masses",
+            "le neutre du transformateur",
+            "le câble",
+            "le disjoncteur"
+          ],
+          "bonne": 1,
+          "explication": "T terre, I isolé."
+        },
+        {
+          "id": "q8503",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "La seconde lettre (T ou N) concerne…",
+          "reponses": [
+            "le neutre",
+            "les masses",
+            "la phase",
+            "le compteur"
+          ],
+          "bonne": 1,
+          "explication": "T terre propre, N au neutre."
+        },
+        {
+          "id": "q8504",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "Le régime des maisons en France est…",
+          "reponses": [
+            "TN",
+            "TT",
+            "IT",
+            "TN-C"
+          ],
+          "bonne": 1,
+          "explication": "Différentiel obligatoire."
+        },
+        {
+          "id": "q8505",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "Le régime fréquent dans l'industrie est…",
+          "reponses": [
+            "TT",
+            "TN",
+            "IT partout",
+            "aucun"
+          ],
+          "bonne": 1,
+          "explication": "Défaut = court-circuit."
+        },
+        {
+          "id": "q8506",
+          "fiche_id": "rn_principe",
+          "type": "qcm",
+          "enonce": "Le régime où la continuité est prioritaire est…",
+          "reponses": [
+            "TT",
+            "TN",
+            "IT",
+            "TN-C"
+          ],
+          "bonne": 2,
+          "explication": "Hôpitaux, process."
+        },
+        {
+          "id": "q8507",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "En TT, un défaut d'isolement crée…",
+          "reponses": [
+            "un court-circuit franc",
+            "un courant faible par la terre",
+            "rien",
+            "une surtension"
+          ],
+          "bonne": 1,
+          "explication": "Seul le différentiel le voit."
+        },
+        {
+          "id": "q8508",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "En TT, la protection des personnes repose sur…",
+          "reponses": [
+            "le disjoncteur seul",
+            "le différentiel et une bonne terre",
+            "le fusible",
+            "le neutre"
+          ],
+          "bonne": 1,
+          "explication": "Indispensable."
+        },
+        {
+          "id": "q8509",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "En TN, un défaut d'isolement devient…",
+          "reponses": [
+            "un courant faible",
+            "un court-circuit coupé par le disjoncteur",
+            "invisible",
+            "un bruit"
+          ],
+          "bonne": 1,
+          "explication": "Impédance de boucle faible."
+        },
+        {
+          "id": "q8510",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "TN-S signifie…",
+          "reponses": [
+            "neutre et PE confondus",
+            "neutre et PE séparés",
+            "sans neutre",
+            "sans terre"
+          ],
+          "bonne": 1,
+          "explication": "Préféré."
+        },
+        {
+          "id": "q8511",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "Le TN-C (PEN commun) est interdit…",
+          "reponses": [
+            "partout",
+            "sous 10 mm² cuivre et dans les locaux à risque",
+            "en industrie",
+            "en 400 V"
+          ],
+          "bonne": 1,
+          "explication": "Rupture du PEN dangereuse."
+        },
+        {
+          "id": "q8512",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "En TN, on vérifie…",
+          "reponses": [
+            "la couleur",
+            "les impédances de boucle",
+            "le prix",
+            "la hauteur"
+          ],
+          "bonne": 1,
+          "explication": "Par calcul ou mesure."
+        },
+        {
+          "id": "q8513",
+          "fiche_id": "rn_tt_tn",
+          "type": "qcm",
+          "enonce": "En TT comme en TN, au premier défaut…",
+          "reponses": [
+            "on continue",
+            "la coupure est obligatoire",
+            "on attend",
+            "on change de régime"
+          ],
+          "bonne": 1,
+          "explication": "Protection des personnes."
+        },
+        {
+          "id": "q8514",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "En IT, le neutre est…",
+          "reponses": [
+            "à la terre",
+            "isolé ou relié par une forte impédance",
+            "au PE",
+            "absent"
+          ],
+          "bonne": 1,
+          "explication": "Courant de défaut très faible."
+        },
+        {
+          "id": "q8515",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "Au premier défaut en IT…",
+          "reponses": [
+            "tout coupe",
+            "rien ne coupe, le CPI signale",
+            "le transformateur brûle",
+            "on est en court-circuit"
+          ],
+          "bonne": 1,
+          "explication": "Continuité."
+        },
+        {
+          "id": "q8516",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "Le CPI est…",
+          "reponses": [
+            "un compteur",
+            "un contrôleur permanent d'isolement",
+            "un câble",
+            "un différentiel"
+          ],
+          "bonne": 1,
+          "explication": "Surveille en permanence."
+        },
+        {
+          "id": "q8517",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "Au second défaut en IT…",
+          "reponses": [
+            "rien",
+            "court-circuit, les protections coupent",
+            "le CPI se tait",
+            "on rebranche"
+          ],
+          "bonne": 1,
+          "explication": "Comme en TN ou TT."
+        },
+        {
+          "id": "q8518",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "L'IT exige…",
+          "reponses": [
+            "rien",
+            "une maintenance réactive pour éliminer le premier défaut",
+            "des câbles rouges",
+            "un fusible"
+          ],
+          "bonne": 1,
+          "explication": "Sinon le second défaut arrive."
+        },
+        {
+          "id": "q8519",
+          "fiche_id": "rn_it",
+          "type": "qcm",
+          "enonce": "Un limiteur de surtension en IT protège…",
+          "reponses": [
+            "le compteur",
+            "l'installation en cas de défaut HT/BT dans le transformateur",
+            "le CPI",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Obligatoire."
+        },
+        {
+          "id": "q8520",
+          "fiche_id": "rn_it",
+          "type": "ordre",
+          "enonce": "Premier défaut en IT : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Le CPI détecte la baisse d'isolement et alerte",
+            "L'exploitation continue sans coupure",
+            "La maintenance localise le départ en défaut",
+            "Le défaut est réparé",
+            "L'isolement revient à la normale"
+          ],
+          "explication": "Le second défaut ne doit pas arriver."
+        }
+      ],
+      "ordre": 88
+    },
+    {
+      "id": "securite_machines",
+      "titre": "Sécurité des machines",
+      "theme": "Sécurité et habilitation",
+      "fiches": [
+        {
+          "id": "sm_reglementation",
+          "titre": "Directive machines et normes",
+          "contenu": "Toute machine mise sur le marché en Europe respecte la directive (bientôt règlement) machines : analyse des risques, marquage CE, notice, déclaration de conformité. L'employeur maintient ensuite la machine en état de conformité.\n\nLa norme ISO 13849 définit les niveaux de performance (PL a à e) des fonctions de sécurité ; l'IEC 62061 les niveaux SIL. Plus le risque est grave, plus la fonction doit être fiable (redondance, autotest).\n\nUne modification importante d'une machine peut faire de l'entreprise le nouveau fabricant, avec toutes ses obligations.",
+          "image": "sm_reglementation.png"
+        },
+        {
+          "id": "sm_dispositifs",
+          "titre": "Les dispositifs de sécurité",
+          "contenu": "Arrêt d'urgence : bouton rouge sur fond jaune, à accrochage, câblé sur un relais de sécurité, qui coupe l'énergie sans passer par l'automate. Catégorie d'arrêt 0 (coupure immédiate) ou 1 (arrêt contrôlé puis coupure).\n\nProtecteurs : carters fixes, portes verrouillées (interverrouillage), barrières immatérielles, tapis sensibles, scrutateurs laser, commandes bimanuelles. Un protecteur ouvert doit arrêter le mouvement dangereux.\n\nLes robots collaboratifs limitent force et vitesse pour travailler à côté d'une personne ; les robots classiques restent en enceinte.",
+          "image": "sm_dispositifs.png"
+        },
+        {
+          "id": "sm_consignation",
+          "titre": "Consigner une machine",
+          "contenu": "Avant maintenance, on consigne toutes les énergies : électrique, mais aussi pneumatique, hydraulique, mécanique (ressorts, charges en hauteur), thermique, chimique. Le cadenassage (LOTO) met un cadenas par intervenant sur chaque organe.\n\nOn purge l'air, on décharge les accumulateurs hydrauliques, on cale les pièces qui pourraient tomber. On vérifie que rien ne peut redémarrer : essai de démarrage à vide.\n\nLe mode réglage (vitesse réduite, commande maintenue) permet les mises au point sous énergie avec des précautions renforcées.",
+          "image": "sm_consignation.png"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q8601",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "Une machine vendue en Europe porte…",
+          "reponses": [
+            "un autocollant vert",
+            "le marquage CE avec déclaration de conformité",
+            "rien",
+            "un cadenas"
+          ],
+          "bonne": 1,
+          "explication": "Directive machines."
+        },
+        {
+          "id": "q8602",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "L'employeur doit…",
+          "reponses": [
+            "ne rien faire après l'achat",
+            "maintenir la machine en état de conformité",
+            "retirer les protecteurs",
+            "modifier librement"
+          ],
+          "bonne": 1,
+          "explication": "Obligation permanente."
+        },
+        {
+          "id": "q8603",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "La norme ISO 13849 définit…",
+          "reponses": [
+            "les couleurs",
+            "les niveaux de performance PL des fonctions de sécurité",
+            "les prix",
+            "les puissances"
+          ],
+          "bonne": 1,
+          "explication": "PL a à e."
+        },
+        {
+          "id": "q8604",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "Plus un risque est grave, plus la fonction de sécurité doit être…",
+          "reponses": [
+            "simple",
+            "fiable (redondance, autotest)",
+            "rapide",
+            "chère"
+          ],
+          "bonne": 1,
+          "explication": "PL e pour les risques mortels."
+        },
+        {
+          "id": "q8605",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "Une modification importante d'une machine…",
+          "reponses": [
+            "ne change rien",
+            "peut faire de l'entreprise le fabricant, avec ses obligations",
+            "est interdite",
+            "supprime le marquage"
+          ],
+          "bonne": 1,
+          "explication": "Nouvelle analyse de risques."
+        },
+        {
+          "id": "q8606",
+          "fiche_id": "sm_reglementation",
+          "type": "qcm",
+          "enonce": "L'analyse des risques d'une machine est faite…",
+          "reponses": [
+            "par l'utilisateur seulement",
+            "par le fabricant à la conception",
+            "jamais",
+            "par l'assureur"
+          ],
+          "bonne": 1,
+          "explication": "Base de la conception."
+        },
+        {
+          "id": "q8607",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "Un arrêt d'urgence est…",
+          "reponses": [
+            "vert",
+            "rouge sur fond jaune, à accrochage",
+            "bleu",
+            "caché"
+          ],
+          "bonne": 1,
+          "explication": "Reconnaissable."
+        },
+        {
+          "id": "q8608",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "L'arrêt d'urgence coupe l'énergie…",
+          "reponses": [
+            "via l'automate",
+            "par un relais de sécurité, sans dépendre de l'automate",
+            "par Wi-Fi",
+            "lentement"
+          ],
+          "bonne": 1,
+          "explication": "Fiabilité indépendante du programme."
+        },
+        {
+          "id": "q8609",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "La catégorie d'arrêt 0 est…",
+          "reponses": [
+            "un arrêt contrôlé",
+            "une coupure immédiate de l'énergie",
+            "un ralentissement",
+            "une pause"
+          ],
+          "bonne": 1,
+          "explication": "Catégorie 1 : arrêt contrôlé puis coupure."
+        },
+        {
+          "id": "q8610",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "Une porte de protecteur ouverte doit…",
+          "reponses": [
+            "ne rien faire",
+            "arrêter le mouvement dangereux",
+            "accélérer",
+            "allumer une lampe seulement"
+          ],
+          "bonne": 1,
+          "explication": "Interverrouillage."
+        },
+        {
+          "id": "q8611",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "Une barrière immatérielle…",
+          "reponses": [
+            "est un mur",
+            "détecte le passage d'une personne par faisceaux",
+            "est une clôture",
+            "est un tapis"
+          ],
+          "bonne": 1,
+          "explication": "Arrêt à l'intrusion."
+        },
+        {
+          "id": "q8612",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "La commande bimanuelle sert à…",
+          "reponses": [
+            "aller plus vite",
+            "garder les deux mains hors de la zone dangereuse",
+            "économiser",
+            "démarrer à distance"
+          ],
+          "bonne": 1,
+          "explication": "Presses."
+        },
+        {
+          "id": "q8613",
+          "fiche_id": "sm_dispositifs",
+          "type": "qcm",
+          "enonce": "Un robot collaboratif…",
+          "reponses": [
+            "est en cage",
+            "limite force et vitesse pour travailler près d'une personne",
+            "est plus puissant",
+            "n'existe pas"
+          ],
+          "bonne": 1,
+          "explication": "Cobot."
+        },
+        {
+          "id": "q8614",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "Consigner une machine, c'est consigner…",
+          "reponses": [
+            "l'électricité seulement",
+            "toutes les énergies",
+            "rien",
+            "l'air seulement"
+          ],
+          "bonne": 1,
+          "explication": "Pneumatique, hydraulique, mécanique…"
+        },
+        {
+          "id": "q8615",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "LOTO signifie…",
+          "reponses": [
+            "un jeu",
+            "cadenassage et étiquetage",
+            "une norme de câbles",
+            "un robot"
+          ],
+          "bonne": 1,
+          "explication": "Lock Out, Tag Out."
+        },
+        {
+          "id": "q8616",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "Un cadenas par intervenant garantit…",
+          "reponses": [
+            "la couleur",
+            "que personne ne redémarre tant qu'un intervenant est présent",
+            "rien",
+            "le paiement"
+          ],
+          "bonne": 1,
+          "explication": "Chacun retire le sien."
+        },
+        {
+          "id": "q8617",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "Une charge en hauteur ou un ressort comprimé sont…",
+          "reponses": [
+            "sans risque",
+            "des énergies mécaniques à neutraliser",
+            "électriques",
+            "à ignorer"
+          ],
+          "bonne": 1,
+          "explication": "Caler, détendre."
+        },
+        {
+          "id": "q8618",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "L'essai de démarrage à vide sert à…",
+          "reponses": [
+            "tester le moteur",
+            "vérifier que rien ne peut redémarrer",
+            "chauffer",
+            "rien"
+          ],
+          "bonne": 1,
+          "explication": "Preuve de consignation."
+        },
+        {
+          "id": "q8619",
+          "fiche_id": "sm_consignation",
+          "type": "qcm",
+          "enonce": "Le mode réglage permet…",
+          "reponses": [
+            "de tout faire",
+            "des mises au point sous énergie à vitesse réduite avec précautions",
+            "de retirer les protecteurs définitivement",
+            "de travailler seul sans risque"
+          ],
+          "bonne": 1,
+          "explication": "Commande maintenue."
+        },
+        {
+          "id": "q8620",
+          "fiche_id": "sm_consignation",
+          "type": "ordre",
+          "enonce": "Consigner une machine : remets les étapes dans l'ordre.",
+          "reponses": [
+            "Prévenir et arrêter la machine",
+            "Couper et cadenasser toutes les énergies",
+            "Purger l'air, décharger l'hydraulique, caler les charges",
+            "Vérifier par un essai de démarrage",
+            "Intervenir"
+          ],
+          "explication": "Toutes les énergies, pas seulement l'électricité."
+        }
+      ],
+      "ordre": 89
     }
   ]
 }
