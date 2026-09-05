@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 /// Écran de test assez haut pour afficher les 5 modules sans défiler.
 void _ecranHaut(WidgetTester tester) {
-  tester.view.physicalSize = const Size(480, 5000);
+  tester.view.physicalSize = const Size(480, 6000);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }
@@ -25,7 +25,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text("Grandeurs électriques et loi d'Ohm"), findsOneWidget);
-    expect(find.text('0/20 questions réussies'), findsNWidgets(24));
+    expect(find.text('0/20 questions réussies'), findsNWidgets(29));
     expect(find.text('Contenu à venir'), findsNothing);
     // Les sections par thème.
     expect(find.text('Les bases'), findsOneWidget);
