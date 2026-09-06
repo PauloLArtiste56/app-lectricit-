@@ -241,6 +241,31 @@ class AppState extends ChangeNotifier {
     return (xpTotal - debut) / (fin - debut);
   }
 
+  /// Les 7 derniers jours (aujourd'hui en dernier) : XP gagnés et nombre
+  /// de quiz chaque jour, pour le récap hebdomadaire des stats.
+  List<JourActivite> get semaine {
+    final parDate = <String, List<EntreeHistorique>>{};
+    for (final e in _progression.historique) {
+      parDate.putIfAbsent(e.date, () => []).add(e);
+    }
+    return [
+      for (var i = 6; i >= 0; i--)
+        () {
+          final jour = _horloge().subtract(Duration(days: i));
+          final entrees = parDate[_formater(jour)] ?? const [];
+          return JourActivite(
+            date: jour,
+            xp: entrees.fold(0, (somme, e) => somme + xpPour(e.score)),
+            quiz: entrees.length,
+          );
+        }(),
+    ];
+  }
+
+  int get xpSemaine => semaine.fold(0, (somme, j) => somme + j.xp);
+  int get quizSemaine => semaine.fold(0, (somme, j) => somme + j.quiz);
+  int get joursActifsSemaine => semaine.where((j) => j.quiz > 0).length;
+
   /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins
   /// un quiz. 0 si la série est cassée.
   int get serieJours {
@@ -404,4 +429,13 @@ class AppState extends ChangeNotifier {
     String deux(int n) => n.toString().padLeft(2, '0');
     return '${d.year}-${deux(d.month)}-${deux(d.day)}';
   }
+}
+
+/// Activité d'une journée, pour le récap hebdomadaire.
+class JourActivite {
+  const JourActivite({required this.date, required this.xp, required this.quiz});
+
+  final DateTime date;
+  final int xp;
+  final int quiz;
 }

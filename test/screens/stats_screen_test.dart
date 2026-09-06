@@ -48,6 +48,10 @@ void main() {
 
     expect(find.text('0 %'), findsOneWidget);
     expect(find.textContaining('Aucun quiz'), findsOneWidget);
+    // Le récap de la semaine est là, à zéro.
+    expect(find.text('Cette semaine'), findsOneWidget);
+    expect(find.text('+0 XP'), findsOneWidget);
+    expect(find.text('0 / 7'), findsOneWidget);
   });
 
   testWidgets('avec progression : score, historique et réinitialisation',

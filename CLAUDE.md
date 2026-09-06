@@ -58,7 +58,8 @@ mélange des questions et réponses, "Revoir la fiche" après une erreur, questi
 vérification automatique par GitHub Actions, examen blanc (20 questions tirées dans les
 modules déjà abordés, 10 minutes au chrono, pas de correction avant la fin, corrigé sur
 l'écran Résultat, historique à part), points d'expérience (10 XP par bonne réponse, niveaux
-de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats).
+de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats), récap
+de la semaine dans les stats (XP, quiz, jours actifs, colonnes par jour).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
