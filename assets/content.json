@@ -16573,15 +16573,15 @@
           "id": "q4108",
           "fiche_id": "priorites",
           "type": "qcm",
-          "enonce": "Un vieux circuit en 1,5 mm² se protège par…",
+          "enonce": "Un vieux circuit en 1,5 mm² se protège par un disjoncteur de…",
           "reponses": [
-            "16 A ou 20 A",
-            "10 A",
+            "20 A ou 25 A",
+            "16 A au maximum, souvent 10 A par prudence",
             "32 A",
             "un fusible 25 A"
           ],
           "bonne": 1,
-          "explication": "On adapte le disjoncteur au câble existant."
+          "explication": "On adapte le disjoncteur au câble existant : 16 A est le maximum pour du 1,5 mm², et 10 A est prudent quand l'isolant est ancien."
         },
         {
           "id": "q4109",
@@ -28468,12 +28468,12 @@
           "enonce": "Les manœuvres HT se font avec…",
           "reponses": [
             "des gants classe 0",
-            "gants classe 2 ou plus, écran, tapis ou tabouret isolant, perches",
+            "des gants isolants de classe adaptée (3 en 20 kV), écran facial, tapis ou tabouret isolant, perches",
             "les mains nues",
             "un multimètre"
           ],
           "bonne": 1,
-          "explication": "EPI HT spécifiques."
+          "explication": "Les gants isolants sont choisis selon la tension : la classe 3 couvre 26,5 kV. Les EPI HT s'ajoutent aux perches et au tapis ou tabouret isolant."
         },
         {
           "id": "q5211",
@@ -29355,7 +29355,7 @@
             "0 µT"
           ],
           "bonne": 0,
-          "explication": "Valeur ICNIRP reprise en droit français."
+          "explication": "Valeur de la recommandation européenne de 1999, reprise en droit français (décret de 2002). L'ICNIRP a depuis relevé sa propre valeur guide à 200 µT."
         },
         {
           "id": "q7708",
