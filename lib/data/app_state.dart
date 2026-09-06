@@ -14,6 +14,7 @@ import '../models/progression_module.dart';
 import '../models/question.dart';
 import '../models/recompense.dart';
 import '../models/revision_question.dart';
+import '../models/tenue.dart';
 import '../models/terme.dart';
 import 'insignes.dart';
 import 'content_loader.dart';
@@ -130,6 +131,8 @@ class AppState extends ChangeNotifier {
       }
       _progression = await _store.charger();
       _parametres = await _store.chargerParametres();
+      // Un jour manqué depuis la dernière ouverture ? Un gel le rattrape.
+      if (_appliquerGels()) await _sauvegarder();
       _pret = true;
     } catch (e) {
       _erreur = e;
@@ -303,6 +306,67 @@ class AppState extends ChangeNotifier {
   int get meilleurEclair => _progression.historique
       .where((e) => e.moduleId == idEclair)
       .fold(0, (m, e) => e.score > m ? e.score : m);
+
+  // --- Boutique : gels de série et tenues -----------------------------------
+
+  static const int prixGel = 100;
+  static const int gelsMax = 2;
+
+  int get xpDepenses => _progression.xpDepenses;
+
+  /// XP restant à dépenser dans la boutique (le niveau, lui, ne baisse pas).
+  int get xpDisponibles => xpTotal - _progression.xpDepenses;
+
+  int get gels => _progression.gels;
+  List<String> get gelsUtilises => List.unmodifiable(_progression.gelsUtilises);
+  Tenue? get tenuePortee => Tenue.parId(_progression.tenue);
+  bool tenueAchetee(Tenue tenue) => _progression.achats.contains(tenue.id);
+
+  bool peutAcheterGel() => gels < gelsMax && xpDisponibles >= prixGel;
+
+  Future<bool> acheterGel() async {
+    if (!peutAcheterGel()) return false;
+    _progression.gels++;
+    _progression.xpDepenses += prixGel;
+    await _sauvegarder();
+    return true;
+  }
+
+  Future<bool> acheterTenue(Tenue tenue) async {
+    if (tenueAchetee(tenue) || xpDisponibles < tenue.prix) return false;
+    _progression.achats.add(tenue.id);
+    _progression.xpDepenses += tenue.prix;
+    _progression.tenue = tenue.id;
+    await _sauvegarder();
+    return true;
+  }
+
+  /// Porte une tenue achetée (`null` pour la retirer).
+  Future<void> porterTenue(Tenue? tenue) async {
+    if (tenue != null && !tenueAchetee(tenue)) return;
+    _progression.tenue = tenue?.id;
+    await _sauvegarder();
+  }
+
+  /// Comble avec des gels les jours manqués juste avant aujourd'hui, s'il y
+  /// en a assez pour rejoindre le dernier jour actif (7 jours au plus).
+  /// Renvoie vrai si un gel a été consommé.
+  bool _appliquerGels() {
+    if (_progression.gels == 0) return false;
+    final actifs = _joursActifs;
+    final manques = <String>[];
+    var jour = _horloge().subtract(const Duration(days: 1));
+    // On remonte les jours manqués jusqu'au dernier jour actif.
+    while (!actifs.contains(_formater(jour)) && manques.length < 7) {
+      manques.add(_formater(jour));
+      jour = jour.subtract(const Duration(days: 1));
+    }
+    if (manques.isEmpty || !actifs.contains(_formater(jour))) return false;
+    if (manques.length > _progression.gels) return false;
+    _progression.gels -= manques.length;
+    _progression.gelsUtilises.addAll(manques);
+    return true;
+  }
 
   // --- Glossaire -------------------------------------------------------------
 
@@ -503,8 +567,14 @@ class AppState extends ChangeNotifier {
 
   /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins
   /// un quiz. 0 si la série est cassée.
+  /// Jours comptés dans la série : un quiz fait, ou un gel utilisé.
+  Set<String> get _joursActifs => {
+        for (final e in _progression.historique) e.date,
+        ..._progression.gelsUtilises,
+      };
+
   int get serieJours {
-    final jours = _progression.historique.map((e) => e.date).toSet();
+    final jours = _joursActifs;
     var jour = _horloge();
     if (!jours.contains(_formater(jour))) {
       jour = jour.subtract(const Duration(days: 1));
@@ -644,6 +714,7 @@ class AppState extends ChangeNotifier {
       total: session.total,
     ));
     _verifierQuetesEtBadges();
+    _appliquerGels();
     await _sauvegarder();
   }
 

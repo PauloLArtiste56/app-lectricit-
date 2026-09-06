@@ -11,10 +11,17 @@ class Progression {
     List<EntreeHistorique>? historique,
     List<Recompense>? recompenses,
     Map<String, String>? badges,
+    this.xpDepenses = 0,
+    this.gels = 0,
+    List<String>? gelsUtilises,
+    List<String>? achats,
+    this.tenue,
   })  : modules = modules ?? {},
         historique = historique ?? [],
         recompenses = recompenses ?? [],
-        badges = badges ?? {};
+        badges = badges ?? {},
+        gelsUtilises = gelsUtilises ?? [],
+        achats = achats ?? [];
 
   final Map<String, ProgressionModule> modules;
   final List<EntreeHistorique> historique;
@@ -24,6 +31,15 @@ class Progression {
 
   /// Badges obtenus : identifiant → date d'obtention.
   final Map<String, String> badges;
+
+  /// Boutique : XP dépensés (le total gagné, lui, ne baisse jamais),
+  /// gels de série en stock, jours sauvés par un gel, tenues achetées et
+  /// tenue portée par la mascotte.
+  int xpDepenses;
+  int gels;
+  final List<String> gelsUtilises;
+  final List<String> achats;
+  String? tenue;
 
   /// Renvoie la progression du module, en la créant si elle n'existe pas.
   ProgressionModule pour(String moduleId) {
@@ -51,6 +67,11 @@ class Progression {
           .toList(),
       badges: (json['badges'] as Map<String, dynamic>? ?? {})
           .map((id, date) => MapEntry(id, date as String)),
+      xpDepenses: json['xp_depenses'] as int? ?? 0,
+      gels: json['gels'] as int? ?? 0,
+      gelsUtilises: (json['gels_utilises'] as List<dynamic>? ?? []).cast<String>(),
+      achats: (json['achats'] as List<dynamic>? ?? []).cast<String>(),
+      tenue: json['tenue'] as String?,
     );
   }
 
@@ -59,5 +80,10 @@ class Progression {
         'historique': historique.map((e) => e.toJson()).toList(),
         'recompenses': recompenses.map((r) => r.toJson()).toList(),
         'badges': badges,
+        'xp_depenses': xpDepenses,
+        'gels': gels,
+        'gels_utilises': gelsUtilises,
+        'achats': achats,
+        if (tenue != null) 'tenue': tenue,
       };
 }

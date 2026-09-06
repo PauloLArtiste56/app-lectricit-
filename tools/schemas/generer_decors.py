@@ -128,4 +128,21 @@ def pile_mascotte(niveau):
 
 for n in range(4):
     svg(f"pile_{n}", pile_mascotte(n), 300, 400, ombre=True)
-print(len(D) + 4, "dessins")
+
+# --- Tenues de la mascotte (boutique) : calques transparents 300×400 ---
+# Dessinés sur le même canevas que la pile, ils se superposent à l'image.
+T = {}
+T["casque"] = (P("M84,96 A66,60 0 0 1 216,96 L216,104 L84,104 Z", JAUNE) + R(70, 96, 160, 16, JAUNE_F, 8) +
+    R(140, 36, 20, 60, JAUNE_F, 6) + R(112, 52, 76, 14, "#FFE47A", 7))
+T["lunettes"] = (C(118, 130, 30, "none", f'stroke="{NOIR}" stroke-width="8"') + C(182, 130, 30, "none", f'stroke="{NOIR}" stroke-width="8"') +
+    L(148, 130, 152, 130, NOIR, 8) + L(88, 124, 66, 116, NOIR, 8) + L(212, 124, 234, 116, NOIR, 8) +
+    C(108, 120, 8, "rgba(255,255,255,0.7)") + C(172, 120, 8, "rgba(255,255,255,0.7)"))
+T["noeud"] = (poly([(150, 206), (114, 188), (114, 224)], ROUGE) + poly([(150, 206), (186, 188), (186, 224)], ROUGE) +
+    C(150, 206, 10, ROUGE_F))
+T["cape"] = (P("M82,200 L62,372 L150,340 L238,372 L218,200 Z", ROUGE) + P("M82,200 L62,372 L110,352 L118,206 Z", ROUGE_F) +
+    P("M76,196 Q150,230 224,196", "none", JAUNE, 12))
+T["couronne"] = (poly([(96, 96), (96, 46), (123, 72), (150, 30), (177, 72), (204, 46), (204, 96)], JAUNE) +
+    R(96, 84, 108, 18, JAUNE_F, 6) + C(150, 30, 9, ROUGE) + C(96, 46, 7, BLEU) + C(204, 46, 7, BLEU) + C(150, 93, 7, ROUGE))
+for nom, corps in T.items():
+    svg(f"tenue_{nom}", corps, 300, 400, ombre=False)
+print(len(D) + 4 + len(T), "dessins")

@@ -91,6 +91,13 @@ les stats et fêtées sur l'écran Résultat ; badge « Triple couronne »). Glo
 (`assets/glossaire.json`, `models/terme.dart`, `screens/glossaire_screen.dart` avec
 recherche, ouvert depuis l'onglet Modules ; dans les fiches, `widgets/texte_glossaire.dart`
 souligne la première occurrence de chaque terme et ouvre sa définition au toucher).
+Boutique (`screens/boutique_screen.dart`, icône sur l'écran Parcours) : les XP servent de
+monnaie sans faire baisser le niveau (`xpDepenses`, `xpDisponibles`). Gel de série (100 XP,
+2 en réserve au plus) : un jour manqué est comblé automatiquement à l'ouverture ou après un
+quiz (`_appliquerGels`, jours stockés dans `gels_utilises`, comptés dans la série). Tenues de
+la mascotte (`models/tenue.dart`, 5 calques PNG `decors/tenue_*.png` générés par
+`generer_decors.py`, superposés à la pile sur le parcours ; `achats` et `tenue` dans la
+progression).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 

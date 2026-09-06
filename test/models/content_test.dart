@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/models/question.dart';
+import 'package:elecapp/models/tenue.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Vérifie que `assets/content.json` est bien formé et cohérent.
@@ -97,6 +98,9 @@ void main() {
     }
     for (var n = 0; n <= 3; n++) {
       expect(File('assets/images/decors/pile_$n.png').existsSync(), isTrue);
+    }
+    for (final t in Tenue.toutes) {
+      expect(File('assets/images/${t.image}').existsSync(), isTrue, reason: t.id);
     }
   });
 

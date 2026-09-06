@@ -107,6 +107,21 @@ class CarteEntrainement extends StatelessWidget {
                     ),
                   ),
                 ),
+                if (etat.gels > 0) ...[
+                  Tooltip(
+                    message: '${etat.gels} gel${etat.gels > 1 ? 's' : ''} de série en réserve',
+                    child: Row(
+                      children: [
+                        Icon(Icons.ac_unit, color: Colors.lightBlue.shade600, size: 20),
+                        Text('${etat.gels}',
+                            style: theme.textTheme.labelLarge?.copyWith(
+                              color: scheme.onPrimaryContainer,
+                            )),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                ],
                 Icon(Icons.stars, color: Colors.amber.shade700),
                 const SizedBox(width: 4),
                 Text(
