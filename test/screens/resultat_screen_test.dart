@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
+import 'package:elecapp/data/quiz_session.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:elecapp/screens/resultat_screen.dart';
@@ -143,6 +144,8 @@ void main() {
 
     expect(find.text('Module réussi !'), findsOneWidget);
     expect(find.textContaining('Module suivant :'), findsOneWidget);
+    // Rien n'a été enregistré par cet écran : pas de bandeau de badge.
+    expect(find.textContaining('Nouveau badge'), findsNothing);
     // « Refaire les ratées » reste disponible, en second choix.
     expect(find.text('Refaire les ratées (4)'), findsOneWidget);
   });
@@ -184,5 +187,45 @@ void main() {
     expect(find.text('Module réussi !'), findsNothing);
     expect(find.text('Sans faute !'), findsOneWidget);
     expect(find.textContaining('Module suivant :'), findsOneWidget);
+  });
+
+  testWidgets('les quêtes accomplies et les badges gagnés sont annoncés',
+      (tester) async {
+    final modules = ContentLoader.parserModules(
+        File('assets/content.json').readAsStringSync());
+    final premier = modules.first;
+    final etat = AppState();
+    await etat.charger();
+    // Un sans-faute complet : premier quiz, module réussi, badge « Sans faute ».
+    final session = QuizSession(premier.questions, melanger: false);
+    for (final q in premier.questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, moduleComplet: premier);
+    expect(etat.badgesRecents, isNotEmpty);
+    tester.view.physicalSize = const Size(480, 2000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(ChangeNotifierProvider.value(
+      value: etat,
+      child: MaterialApp(
+        home: ResultatScreen(
+          titre: premier.titre,
+          module: premier,
+          score: 20,
+          total: 20,
+          questionsRatees: const [],
+        ),
+      ),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Nouveau badge : Premier pas'), findsOneWidget);
+    expect(find.text('Nouveau badge : Sans faute'), findsOneWidget);
+    for (final r in etat.recompensesRecentes) {
+      expect(find.textContaining('(+${r.xp} XP)'), findsWidgets);
+    }
   });
 }

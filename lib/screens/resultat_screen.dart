@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
+import '../data/quetes.dart';
 import '../models/module.dart';
 import '../models/question.dart';
 import '../widgets/couleurs_parcours.dart';
@@ -128,6 +129,19 @@ class ResultatScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          // Quêtes accomplies et badges débloqués par ce quiz.
+          for (final r in etat.recompensesRecentes)
+            _Bandeau(
+              icone: Icons.flag,
+              couleur: Colors.amber.shade800,
+              texte: 'Quête accomplie : ${_titreQuete(r.id)}  (+${r.xp} XP)',
+            ),
+          for (final b in etat.badgesRecents)
+            _Bandeau(
+              icone: b.icone,
+              couleur: Colors.purple.shade400,
+              texte: 'Nouveau badge : ${b.titre}',
+            ),
           if (tempsUtilise case final t?) ...[
             const SizedBox(height: 8),
             Text(
@@ -228,6 +242,54 @@ class _Fanfare extends StatelessWidget {
         Text(sousTitre,
             textAlign: TextAlign.center, style: theme.textTheme.bodyMedium),
       ],
+    );
+  }
+}
+
+/// Retrouve le titre d'une quête à partir de l'identifiant de sa
+/// récompense (`quete:<id>:<date>`).
+String _titreQuete(String idRecompense) {
+  final parts = idRecompense.split(':');
+  if (parts.length < 2) return idRecompense;
+  for (final q in Quete.toutes) {
+    if (q.id == parts[1]) return q.titre;
+  }
+  return parts[1];
+}
+
+/// Petit bandeau coloré : quête accomplie, badge gagné.
+class _Bandeau extends StatelessWidget {
+  const _Bandeau({required this.icone, required this.couleur, required this.texte});
+
+  final IconData icone;
+  final Color couleur;
+  final String texte;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: couleur.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: couleur.withValues(alpha: 0.5)),
+      ),
+      child: Row(
+        children: [
+          Icon(icone, color: couleur),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              texte,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium
+                  ?.copyWith(fontWeight: FontWeight.bold, color: couleur),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/widgets/banniere_chapitre.dart';
+import 'package:elecapp/widgets/carte_quetes.dart';
 import 'package:elecapp/widgets/noeud_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -27,6 +28,12 @@ void main() {
 
     expect(find.text('Ma séance du jour'), findsOneWidget);
     expect(find.text('Niveau 1 · 0 XP'), findsOneWidget);
+    // Objectif du jour et quêtes du jour sous la carte d'entraînement.
+    expect(find.text('Objectif du jour'), findsOneWidget);
+    expect(find.text('0 / 50 XP'), findsOneWidget);
+    expect(find.text('Quêtes du jour'), findsOneWidget);
+    expect(find.byType(CarteQuetes), findsOneWidget);
+    expect(find.text('0/3'), findsAtLeastNWidgets(1));
     expect(find.byType(BanniereChapitre), findsNWidgets(10));
     expect(find.byType(NoeudModule), findsNWidgets(100));
     expect(find.text('CHAPITRE 1'), findsOneWidget);

@@ -8,6 +8,7 @@ import '../models/chapitre.dart';
 import '../models/module.dart';
 import '../widgets/banniere_chapitre.dart';
 import '../widgets/carte_entrainement.dart';
+import '../widgets/carte_quetes.dart';
 import '../widgets/couleurs_parcours.dart';
 import '../widgets/noeud_module.dart';
 import 'module_screen.dart';
@@ -27,7 +28,7 @@ class ParcoursScreen extends StatefulWidget {
 class _ParcoursScreenState extends State<ParcoursScreen> {
   final _controleur = ScrollController();
 
-  /// Mesure la carte d'entraînement (sa hauteur dépend du texte) pour
+  /// Mesure l'en-tête (carte d'entraînement + quêtes, hauteur variable) pour
   /// calculer la position des modules en dessous.
   final _cleCarte = GlobalKey();
   double _hauteurCarte = 0;
@@ -123,10 +124,14 @@ class _ParcoursScreenState extends State<ParcoursScreen> {
             itemCount: etat.chapitres.length + 2,
             itemBuilder: (context, index) {
               if (index == 0) {
+                // Carte d'entraînement et quêtes du jour partagent la clé :
+                // leur hauteur cumulée sert au calcul du défilement.
                 return Padding(
                   key: _cleCarte,
                   padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: const CarteEntrainement(),
+                  child: const Column(
+                    children: [CarteEntrainement(), CarteQuetes()],
+                  ),
                 );
               }
               if (index == etat.chapitres.length + 1) {

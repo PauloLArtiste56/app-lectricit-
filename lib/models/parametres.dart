@@ -9,6 +9,7 @@ class Parametres {
     this.vibrations = true,
     this.tailleExamen = 20,
     this.dureeExamenMinutes = 10,
+    this.objectifXpJour = 50,
   });
 
   /// `systeme`, `clair` ou `sombre`.
@@ -29,6 +30,9 @@ class Parametres {
   final int tailleExamen;
   final int dureeExamenMinutes;
 
+  /// XP à gagner chaque jour pour remplir l'anneau de l'objectif.
+  final int objectifXpJour;
+
   Duration get dureeExamen => Duration(minutes: dureeExamenMinutes);
 
   Parametres copyWith({
@@ -39,6 +43,7 @@ class Parametres {
     bool? vibrations,
     int? tailleExamen,
     int? dureeExamenMinutes,
+    int? objectifXpJour,
   }) {
     return Parametres(
       theme: theme ?? this.theme,
@@ -48,6 +53,7 @@ class Parametres {
       vibrations: vibrations ?? this.vibrations,
       tailleExamen: tailleExamen ?? this.tailleExamen,
       dureeExamenMinutes: dureeExamenMinutes ?? this.dureeExamenMinutes,
+      objectifXpJour: objectifXpJour ?? this.objectifXpJour,
     );
   }
 
@@ -62,6 +68,7 @@ class Parametres {
       tailleExamen: json['taille_examen'] as int? ?? defaut.tailleExamen,
       dureeExamenMinutes:
           json['duree_examen_minutes'] as int? ?? defaut.dureeExamenMinutes,
+      objectifXpJour: json['objectif_xp_jour'] as int? ?? defaut.objectifXpJour,
     );
   }
 
@@ -73,5 +80,6 @@ class Parametres {
         'vibrations': vibrations,
         'taille_examen': tailleExamen,
         'duree_examen_minutes': dureeExamenMinutes,
+        'objectif_xp_jour': objectifXpJour,
       };
 }

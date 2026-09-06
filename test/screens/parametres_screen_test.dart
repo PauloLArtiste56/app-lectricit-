@@ -59,4 +59,26 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.textContaining('pas un export valide'), findsOneWidget);
   });
+
+  testWidgets('l\'objectif du jour se règle et s\'affiche sur le parcours',
+      (tester) async {
+    tester.view.physicalSize = const Size(480, 2000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const ElecApp());
+    await tester.pumpAndSettle();
+    expect(find.text('0 / 50 XP'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.settings_outlined));
+    await tester.pumpAndSettle();
+    expect(find.text('Objectif du jour'), findsOneWidget);
+    await tester.tap(find.text('50 XP'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('200 XP').last);
+    await tester.pumpAndSettle();
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(find.text('0 / 200 XP'), findsOneWidget);
+  });
 }
