@@ -20,6 +20,11 @@ class BanniereChapitre extends StatelessWidget {
   final int reussis;
   final int total;
 
+  /// Hauteur fixe de la bannière (marges comprises) : le parcours s'en sert
+  /// pour calculer la position de chaque module sans mesurer l'écran.
+  static const double hauteur = 96;
+  static const double hauteurTotale = hauteur + 12 + 4;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -31,7 +36,8 @@ class BanniereChapitre extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        height: hauteur,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
           color: fond,
           borderRadius: BorderRadius.circular(18),
@@ -43,6 +49,7 @@ class BanniereChapitre extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'CHAPITRE $numero',
@@ -53,6 +60,8 @@ class BanniereChapitre extends StatelessWidget {
                   ),
                   Text(
                     chapitre.titre,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: theme.textTheme.titleLarge?.copyWith(
                       color: avant,
                       fontWeight: FontWeight.w800,
@@ -61,6 +70,8 @@ class BanniereChapitre extends StatelessWidget {
                   if (chapitre.description.isNotEmpty)
                     Text(
                       chapitre.description,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.bodySmall?.copyWith(color: avant),
                     ),
                 ],
