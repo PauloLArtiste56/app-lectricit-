@@ -11,6 +11,7 @@ import '../widgets/carte_entrainement.dart';
 import '../widgets/couleurs_parcours.dart';
 import '../widgets/noeud_module.dart';
 import 'module_screen.dart';
+import 'parametres_screen.dart';
 
 /// Écran Parcours : la carte d'entraînement puis le chemin des modules,
 /// chapitre après chapitre, façon Duolingo : boutons en relief, cadenas,
@@ -53,7 +54,18 @@ class _ParcoursScreenState extends State<ParcoursScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('ElecApp')),
+      appBar: AppBar(
+        title: const Text('ElecApp'),
+        actions: [
+          IconButton(
+            tooltip: 'Paramètres',
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const ParametresScreen()),
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: etat.pret && etat.moduleCourant != null
           ? FloatingActionButton.small(
               tooltip: 'Aller au module en cours',

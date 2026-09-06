@@ -50,10 +50,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  late final QuizSession _session = QuizSession(
-    widget.questions ?? widget.module!.questions,
-    melanger: widget.melanger,
-  );
+  late final QuizSession _session;
 
   /// Type ordre : ordre courant des réponses (index affichés), modifiable
   /// par glisser-déposer tant qu'on n'a pas validé.
@@ -72,6 +69,11 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
+    final parametres = context.read<AppState>().parametres;
+    _session = QuizSession(
+      widget.questions ?? widget.module!.questions,
+      melanger: widget.melanger && parametres.melanger,
+    );
     _tempsUtilise.start();
     if (widget.duree != null) {
       _chrono = Timer.periodic(const Duration(seconds: 1), (_) {
@@ -103,6 +105,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _apresReponse() {
     // Petit retour haptique sur téléphone (sans effet sur le web).
+    if (!context.read<AppState>().parametres.vibrations) return;
     if (_session.derniereReussie) {
       HapticFeedback.lightImpact();
     } else {

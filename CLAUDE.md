@@ -35,6 +35,9 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 3. Quiz : une question à la fois, 3-4 réponses, feedback immédiat (vert/rouge + explication), barre de progression.
 4. Résultat : score, liste des questions ratées, bouton "Refaire les ratées".
 5. Stats : score global, modules terminés, historique.
+6. Paramètres (roue crantée sur le parcours) : thème, taille de la séance, parcours libre,
+   mélange, vibrations, examen (questions, durée), export / import / réinitialisation de la
+   progression, à propos. Stockés en local (`models/parametres.dart`, clé `parametres`).
 
 Navigation : barre du bas avec Parcours / Modules / Stats.
 Parcours → Module → Fiche → Quiz → Résultat → Parcours.
@@ -238,7 +241,8 @@ lib/
   main.dart
   models/        # Module, Fiche, Question, Progression
   data/          # chargement du JSON, service de stockage local
-  screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats
+  screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats,
+                 # parametres
   widgets/       # composants réutilisables (carte module, bouton réponse, bouton en relief,
                  # nœud et bannière du parcours, carte d'entraînement)
 assets/
