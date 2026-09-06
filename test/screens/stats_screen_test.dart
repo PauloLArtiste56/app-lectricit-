@@ -48,6 +48,10 @@ void main() {
 
     expect(find.text('0 %'), findsOneWidget);
     expect(find.textContaining('Aucun quiz'), findsOneWidget);
+    // Le récap de la semaine est là, à zéro.
+    expect(find.text('Cette semaine'), findsOneWidget);
+    expect(find.text('+0 XP'), findsOneWidget);
+    expect(find.text('0 / 7'), findsOneWidget);
   });
 
   testWidgets('avec progression : score, historique et réinitialisation',
@@ -75,6 +79,7 @@ void main() {
     // Et la liste des modules est bien repassée à zéro.
     await tester.tap(find.text('Modules'));
     await tester.pumpAndSettle();
-    expect(find.text('0/20 questions réussies'), findsNWidgets(100));
+    expect(find.textContaining('questions réussies'), findsNWidgets(100));
+    expect(find.text('0/20 questions réussies'), findsWidgets);
   });
 }

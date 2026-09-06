@@ -231,6 +231,17 @@ class _QuizScreenState extends State<QuizScreen> {
             style: theme.textTheme.labelLarge,
           ),
           const SizedBox(height: 24),
+          if (question.image case final image?) ...[
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                'assets/images/$image',
+                fit: BoxFit.contain,
+                height: 200,
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
           Text(question.enonce, style: theme.textTheme.titleLarge),
           const SizedBox(height: 24),
           if (question.type == TypeQuestion.ordre)

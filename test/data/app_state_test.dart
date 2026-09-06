@@ -94,6 +94,40 @@ void main() {
     expect(etat.progressionNiveau, closeTo(1 / 3, 0.001));
   });
 
+  test('le récap de la semaine additionne les XP et les quiz par jour', () async {
+    var maintenant = DateTime(2026, 9, 6); // un dimanche
+    final etat = AppState(horloge: () => maintenant);
+    await etat.charger();
+    expect(etat.semaine.length, 7);
+    expect(etat.semaine.last.date.day, 6);
+    expect(etat.semaine.first.date.weekday, DateTime.monday);
+    expect(etat.xpSemaine, 0);
+
+    final module = etat.modules.first;
+    Future<void> quiz() async {
+      final session = QuizSession(module.questions, melanger: false);
+      for (final q in module.questions) {
+        session.repondre(q.bonne);
+        session.suivante();
+      }
+      await etat.enregistrerResultat(session, moduleComplet: module);
+    }
+
+    await quiz(); // dimanche 6 : 200 XP
+    maintenant = DateTime(2026, 9, 8); // mardi
+    await quiz();
+    await quiz(); // mardi 8 : 400 XP
+    expect(etat.xpSemaine, 600);
+    expect(etat.quizSemaine, 3);
+    expect(etat.joursActifsSemaine, 2);
+    expect(etat.semaine.last.xp, 400);
+
+    // Huit jours plus tard, le quiz du 6 est sorti de la fenêtre.
+    maintenant = DateTime(2026, 9, 14);
+    expect(etat.xpSemaine, 400);
+    expect(etat.joursActifsSemaine, 1);
+  });
+
   test('au départ, aucune question réussie', () async {
     final etat = await etatCharge();
     final module = etat.modules.first;

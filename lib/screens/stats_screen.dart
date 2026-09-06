@@ -85,6 +85,10 @@ class StatsScreen extends StatelessWidget {
                 '(${AppState.xpParBonneReponse} XP par bonne réponse)',
           ),
           const SizedBox(height: 24),
+          Text('Cette semaine', style: theme.textTheme.titleMedium),
+          const SizedBox(height: 8),
+          const _RecapSemaine(),
+          const SizedBox(height: 24),
           Text('Historique', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
           if (historique.isEmpty)
@@ -132,6 +136,92 @@ class _Tuile extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(detail, style: theme.textTheme.bodySmall),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Récap des 7 derniers jours : trois chiffres et un petit graphique des XP
+/// par jour, dessiné avec de simples colonnes.
+class _RecapSemaine extends StatelessWidget {
+  const _RecapSemaine();
+
+  static const _initiales = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+
+  @override
+  Widget build(BuildContext context) {
+    final etat = context.watch<AppState>();
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final jours = etat.semaine;
+    final maxXp = jours.fold(0, (m, j) => j.xp > m ? j.xp : m);
+
+    Widget chiffre(String valeur, String legende) => Expanded(
+          child: Column(
+            children: [
+              Text(valeur,
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    color: scheme.primary,
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(legende, style: theme.textTheme.bodySmall),
+            ],
+          ),
+        );
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                chiffre('+${etat.xpSemaine} XP', 'gagnés'),
+                chiffre('${etat.quizSemaine}', 'quiz'),
+                chiffre('${etat.joursActifsSemaine} / 7', 'jours actifs'),
+              ],
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 96,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  for (final (i, jour) in jours.indexed) ...[
+                    if (i > 0) const SizedBox(width: 8),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Tooltip(
+                            message: '${jour.xp} XP, ${jour.quiz} quiz',
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 400),
+                              height: maxXp == 0 ? 4 : 4 + 64 * jour.xp / maxXp,
+                              decoration: BoxDecoration(
+                                color: jour.quiz > 0
+                                    ? Colors.amber.shade700
+                                    : scheme.surfaceContainerHighest,
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            _initiales[jour.date.weekday - 1],
+                            style: theme.textTheme.labelSmall?.copyWith(
+                              fontWeight: i == 6 ? FontWeight.bold : null,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
           ],
         ),
       ),

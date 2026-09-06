@@ -7,7 +7,11 @@ enum TypeQuestion {
 
   /// Remettre des étapes dans le bon ordre. Dans `content.json`, les
   /// `reponses` sont écrites dans le bon ordre ; l'appli les mélange.
-  ordre('ordre');
+  ordre('ordre'),
+
+  /// Comme un QCM, mais une image accompagne l'énoncé (« Quel est ce
+  /// symbole ? »). Le champ [Question.image] est obligatoire.
+  image('image');
 
   const TypeQuestion(this.code);
 
@@ -32,6 +36,7 @@ class Question {
     required this.reponses,
     this.bonne = 0,
     required this.explication,
+    this.image,
   });
 
   final String id;
@@ -47,6 +52,13 @@ class Question {
   final int bonne;
   final String explication;
 
+  /// Illustration de l'énoncé, chemin relatif à `assets/images/`
+  /// (ex. `questions/sym_lampe.png`). Utilisé par le type `image`.
+  final String? image;
+
+  /// Vrai pour les types à réponse unique parmi plusieurs (qcm, image).
+  bool get estChoixUnique => type != TypeQuestion.ordre;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
       id: json['id'] as String,
@@ -56,6 +68,7 @@ class Question {
       reponses: (json['reponses'] as List<dynamic>).cast<String>(),
       bonne: json['bonne'] as int? ?? 0,
       explication: json['explication'] as String,
+      image: json['image'] as String?,
     );
   }
 

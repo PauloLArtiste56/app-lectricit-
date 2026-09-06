@@ -58,7 +58,8 @@ mélange des questions et réponses, "Revoir la fiche" après une erreur, questi
 vérification automatique par GitHub Actions, examen blanc (20 questions tirées dans les
 modules déjà abordés, 10 minutes au chrono, pas de correction avant la fin, corrigé sur
 l'écran Résultat, historique à part), points d'expérience (10 XP par bonne réponse, niveaux
-de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats).
+de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats), récap
+de la semaine dans les stats (XP, quiz, jours actifs, colonnes par jour).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -90,9 +91,12 @@ Hors périmètre : comptes utilisateurs, notifications, backend, achats.
   ]
 }
 ```
-Le champ `type` vaut `qcm` ou `ordre`. Pour `ordre`, les `reponses` sont les étapes dans
-le bon ordre et `bonne` est absent. Prévoir de pouvoir ajouter `vrai_faux` et `image` plus
-tard sans casser la structure.
+Le champ `type` vaut `qcm`, `ordre` ou `image`. Pour `ordre`, les `reponses` sont les étapes
+dans le bon ordre et `bonne` est absent. Pour `image`, c'est un QCM dont l'énoncé est
+illustré : le champ `image` donne le chemin relatif à `assets/images/` (ex.
+`questions/sym_lampe.png`, symboles générés par `tools/schemas/generer_questions.py`, ou
+`decors/gants.png` pour réutiliser les dessins du parcours). Prévoir de pouvoir ajouter
+`vrai_faux` plus tard sans casser la structure.
 
 ### Progression utilisateur (stockage local)
 ```json
@@ -219,10 +223,11 @@ Modules existants (par thème) :
 99. Devis, documents et réception
 100. Géothermie, biomasse et énergies marines
 
-Objectif des 100 modules atteint. Idées pour la suite : approfondir les modules existants
-(nouvelles questions), questions de type `image`.
+Objectif des 100 modules atteint. Les modules Symboles, EPI et Sécurité de base ont en plus
+des questions `image` (20 au total). Idées pour la suite : approfondir les modules existants
+(nouvelles questions, plus de questions `image`).
 
-20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
+Au moins 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
 NF C 18-510) pour choisir les sujets, mais ne jamais reprendre de QCM (questionnaires à
 choix multiples) existants d'organismes de formation. Paulo relit et corrige si besoin.
