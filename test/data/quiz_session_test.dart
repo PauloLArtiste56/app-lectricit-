@@ -107,4 +107,22 @@ void main() {
     session.repondreOrdre(bonOrdre);
     expect(session.derniereReussie, isTrue);
   });
+
+  test('terminerMaintenant compte ratées la question en cours et la suite', () {
+    final session = QuizSession([_q('q1', 0), _q('q2', 1), _q('q3', 2)], melanger: false);
+    session.repondre(0); // juste
+    session.suivante();
+    session.terminerMaintenant(); // q2 sans réponse, q3 jamais vue
+    expect(session.estTerminee, isTrue);
+    expect(session.score, 1);
+    expect(session.questionsRatees.map((q) => q.id), ['q2', 'q3']);
+  });
+
+  test('terminerMaintenant après une réponse ne recompte pas la question', () {
+    final session = QuizSession([_q('q1', 0), _q('q2', 1)], melanger: false);
+    session.repondre(1); // faux
+    session.terminerMaintenant();
+    expect(session.questionsRatees.map((q) => q.id), ['q1', 'q2']);
+    expect(session.score, 0);
+  });
 }

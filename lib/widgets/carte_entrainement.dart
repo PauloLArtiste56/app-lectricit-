@@ -19,6 +19,21 @@ class CarteEntrainement extends StatelessWidget {
     );
   }
 
+  void _lancerExamen(BuildContext context, AppState etat) {
+    final questions = etat.questionsExamen();
+    if (questions.isEmpty) return;
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          titre: 'Examen blanc',
+          questions: questions,
+          examen: true,
+          duree: AppState.dureeExamen,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final etat = context.watch<AppState>();
@@ -88,6 +103,15 @@ class CarteEntrainement extends StatelessWidget {
                 label: Text('Retravailler mes $faibles point${faibles > 1 ? 's' : ''} faible${faibles > 1 ? 's' : ''}'),
               ),
             ],
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () => _lancerExamen(context, etat),
+              icon: const Icon(Icons.timer_outlined),
+              label: Text(
+                'Examen blanc : ${AppState.tailleExamen} questions '
+                'en ${AppState.dureeExamen.inMinutes} min',
+              ),
+            ),
           ],
         ),
       ),

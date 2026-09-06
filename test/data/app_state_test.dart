@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
@@ -43,6 +45,28 @@ void main() {
     expect(etat.moduleDeverrouille(troisieme), isFalse);
     expect(etat.moduleCourant, deuxieme);
     expect(etat.modulesReussisDans(chapitre), 1);
+  });
+
+  test("l'examen blanc tire 20 questions dans les modules déjà abordés",
+      () async {
+    final etat = await etatCharge();
+    // Au départ, seul le premier module est ouvert.
+    expect(etat.modulesVus.map((m) => m.id), [etat.modules.first.id]);
+    final questions = etat.questionsExamen(random: Random(1));
+    expect(questions.length, AppState.tailleExamen);
+    expect(questions.map((q) => q.id).toSet().length, AppState.tailleExamen);
+    for (final q in questions) {
+      expect(etat.moduleDe(q), etat.modules.first);
+    }
+
+    // Un examen va dans l'historique sous son propre identifiant.
+    final session = QuizSession(questions, melanger: false);
+    for (final q in questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, examen: true);
+    expect(etat.historique.last.moduleId, AppState.idExamen);
   });
 
   test('au départ, aucune question réussie', () async {

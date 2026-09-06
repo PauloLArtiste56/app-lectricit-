@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/foundation.dart';
 
 import '../models/chapitre.dart';
@@ -39,6 +41,13 @@ class AppState extends ChangeNotifier {
 
   /// Nombre maximum de questions dans une séance de révision.
   static const int tailleRevision = 15;
+
+  /// Identifiant utilisé dans l'historique pour un examen blanc.
+  static const String idExamen = 'examen';
+
+  /// Un examen blanc : [tailleExamen] questions en [dureeExamen].
+  static const int tailleExamen = 20;
+  static const Duration dureeExamen = Duration(minutes: 10);
 
   /// Part des questions à réussir pour qu'un module compte comme réussi
   /// sur le parcours (16 questions sur 20).
@@ -188,6 +197,22 @@ class AppState extends ChangeNotifier {
     return [...dues, ...nouvelles.take(tailleSeance - dues.length)];
   }
 
+  /// Modules déjà abordés : déverrouillés sur le parcours, ou commencés
+  /// depuis l'onglet Modules.
+  List<Module> get modulesVus => [
+        for (final m in modulesAvecContenu)
+          if (moduleDeverrouille(m) || questionsReussies(m) > 0) m,
+      ];
+
+  /// Questions d'un examen blanc : tirées au hasard dans les modules déjà
+  /// abordés, sans correction immédiate. [random] est injectable pour les
+  /// tests.
+  List<Question> questionsExamen({Random? random}) {
+    final toutes = [for (final m in modulesVus) ...m.questions]
+      ..shuffle(random ?? Random());
+    return toutes.take(tailleExamen).toList();
+  }
+
   /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins
   /// un quiz. 0 si la série est cassée.
   int get serieJours {
@@ -275,8 +300,9 @@ class AppState extends ChangeNotifier {
   /// Enregistre la fin d'un quiz. Chaque question met à jour son propre
   /// module (réussie / à revoir). Le meilleur score n'est mis à jour que
   /// pour un quiz complet d'un module ([moduleComplet]).
+  /// [examen] : le quiz était un examen blanc (historique à part).
   Future<void> enregistrerResultat(QuizSession session,
-      {Module? moduleComplet}) async {
+      {Module? moduleComplet, bool examen = false}) async {
     final ratees = session.questionsRatees.map((q) => q.id).toSet();
     for (final q in session.questions) {
       // Une question inconnue de l'index (contenu de test) est rattachée
@@ -305,7 +331,7 @@ class AppState extends ChangeNotifier {
       if (session.score > p.meilleurScore) p.meilleurScore = session.score;
     }
     _progression.historique.add(EntreeHistorique(
-      moduleId: moduleComplet?.id ?? idRevision,
+      moduleId: moduleComplet?.id ?? (examen ? idExamen : idRevision),
       date: _aujourdhui(),
       score: session.score,
       total: session.total,

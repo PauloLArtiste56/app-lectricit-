@@ -170,4 +170,39 @@ void main() {
     expect(find.text('Séance du jour'), findsOneWidget);
     expect(find.text('Question 1 / ${AppState.tailleSeance}'), findsOneWidget);
   });
+
+  testWidgets("en mode examen, pas de correction et le chrono termine l'épreuve",
+      (tester) async {
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: MaterialApp(
+        home: QuizScreen(
+          titre: 'Examen blanc',
+          questions: _module.questions,
+          melanger: false,
+          examen: true,
+          duree: const Duration(minutes: 1),
+        ),
+      ),
+    ));
+    // Le chrono n'est pas encore décompté.
+    expect(find.text('1:00'), findsOneWidget);
+
+    // Une réponse enchaîne directement sur la question suivante.
+    await tester.tap(find.text('Ohm'));
+    await tester.pump();
+    expect(find.text('Mauvaise réponse'), findsNothing);
+    expect(find.text('Question 2 / 2'), findsOneWidget);
+
+    // Le temps s'écoule : à zéro, l'épreuve se termine et la question sans
+    // réponse compte ratée.
+    await tester.pump(const Duration(seconds: 30));
+    expect(find.text('0:30'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 31));
+    // Le chrono est arrêté : la transition vers le résultat peut se finir.
+    await tester.pumpAndSettle();
+    expect(find.text('0 / 2'), findsOneWidget);
+    expect(find.textContaining('Temps :'), findsOneWidget);
+    expect(find.text('Unité du courant ?'), findsOneWidget);
+  });
 }
