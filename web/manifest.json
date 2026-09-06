@@ -3,9 +3,9 @@
     "short_name": "ElecApp",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0D47A1",
-    "theme_color": "#1565C0",
-    "description": "Apprendre les bases de l'électricité.",
+    "background_color": "#58CC02",
+    "theme_color": "#58CC02",
+    "description": "Apprendre l'électricité pas à pas et préparer l'habilitation électrique.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
@@ -31,5 +31,6 @@
             "type": "image/png",
             "purpose": "maskable"
         }
-    ]
+    ],
+    "lang": "fr"
 }

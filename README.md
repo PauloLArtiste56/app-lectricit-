@@ -58,6 +58,20 @@ par un schéma dessiné, soit par une « carte résumé » générée à partir 
 À chaque pull request, GitHub Actions lance `flutter analyze`, `flutter test` et
 `flutter build web` (fichier `.github/workflows/ci.yml`).
 
+## Sur l'iPhone (version web)
+
+À chaque fusion sur `main`, l'appli est mise en ligne automatiquement :
+<https://paulolartiste56.github.io/app-lectricit-/>
+
+Pour l'installer comme une appli :
+1. Ouvrir l'adresse dans **Safari** sur l'iPhone.
+2. Toucher le bouton Partager, puis « Sur l'écran d'accueil ».
+3. L'icône ElecApp apparaît ; l'appli s'ouvre en plein écran et fonctionne
+   hors ligne après le premier chargement. La progression reste dans le téléphone.
+
+La vraie appli iOS (TestFlight / App Store) viendra plus tard : elle demande une
+compilation sur macOS et un compte développeur Apple.
+
 ## Structure
 
 ```
