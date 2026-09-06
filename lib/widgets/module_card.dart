@@ -9,6 +9,7 @@ class ModuleCard extends StatelessWidget {
     super.key,
     required this.module,
     required this.questionsReussies,
+    this.couleur,
     this.onTap,
   });
 
@@ -16,6 +17,9 @@ class ModuleCard extends StatelessWidget {
 
   /// Nombre de questions déjà réussies dans ce module.
   final int questionsReussies;
+
+  /// Couleur du chapitre du module (icône et barre).
+  final Color? couleur;
   final VoidCallback? onTap;
 
   @override
@@ -25,6 +29,7 @@ class ModuleCard extends StatelessWidget {
     final enPreparation = total == 0;
     final termine = !enPreparation && questionsReussies == total;
     final progression = enPreparation ? 0.0 : questionsReussies / total;
+    final teinte = couleur ?? scheme.primary;
 
     return Card(
       clipBehavior: Clip.antiAlias,
@@ -37,9 +42,8 @@ class ModuleCard extends StatelessWidget {
               CircleAvatar(
                 radius: 26,
                 backgroundColor:
-                    termine ? Colors.green.shade600 : scheme.primaryContainer,
-                foregroundColor:
-                    termine ? Colors.white : scheme.onPrimaryContainer,
+                    termine ? Colors.green.shade600 : teinte.withValues(alpha: 0.15),
+                foregroundColor: termine ? Colors.white : teinte,
                 child: Icon(termine ? Icons.check : iconePourModule(module.id)),
               ),
               const SizedBox(width: 16),
@@ -62,7 +66,7 @@ class ModuleCard extends StatelessWidget {
                     LinearProgressIndicator(
                       value: progression,
                       minHeight: 6,
-                      color: termine ? Colors.green.shade600 : null,
+                      color: termine ? Colors.green.shade600 : teinte,
                     ),
                   ],
                 ),

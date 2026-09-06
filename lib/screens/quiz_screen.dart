@@ -6,8 +6,11 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../data/quiz_session.dart';
+import '../models/fiche.dart';
 import '../models/module.dart';
 import '../models/question.dart';
+import '../widgets/bouton_relief.dart';
+import '../widgets/couleurs_parcours.dart';
 import '../widgets/reponse_button.dart';
 import 'fiche_screen.dart';
 import 'resultat_screen.dart';
@@ -193,9 +196,18 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     final question = _session.questionCourante;
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final aRepondu = _session.aRepondu;
     final reussie = _session.derniereReussie;
-    final fiche = context.read<AppState>().ficheDe(question)?.fiche;
+    final etat = context.read<AppState>();
+    final fiche = etat.ficheDe(question)?.fiche;
+    final module = widget.module ?? etat.moduleDe(question);
+    final chapitre = module == null ? null : etat.chapitreDe(module);
+    final couleur = widget.examen
+        ? scheme.primary
+        : chapitre == null
+            ? scheme.primary
+            : couleurChapitre(chapitre);
 
     return Scaffold(
       appBar: AppBar(
@@ -224,26 +236,45 @@ class _QuizScreenState extends State<QuizScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          LinearProgressIndicator(value: _session.progression),
-          const SizedBox(height: 8),
-          Text(
-            'Question ${_session.numero} / ${_session.total}',
-            style: theme.textTheme.labelLarge,
+          // Barre de progression épaisse, à la couleur du chapitre.
+          Row(
+            children: [
+              Expanded(
+                child: LinearProgressIndicator(
+                  value: _session.progression,
+                  minHeight: 14,
+                  color: couleur,
+                  borderRadius: BorderRadius.circular(7),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                'Question ${_session.numero} / ${_session.total}',
+                style: theme.textTheme.labelLarge,
+              ),
+            ],
           ),
           const SizedBox(height: 24),
           if (question.image case final image?) ...[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(16),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: scheme.outlineVariant, width: 2),
+              ),
+              clipBehavior: Clip.antiAlias,
               child: Image.asset(
                 'assets/images/$image',
-                fit: BoxFit.contain,
                 height: 200,
+                fit: BoxFit.contain,
               ),
             ),
             const SizedBox(height: 16),
           ],
-          Text(question.enonce, style: theme.textTheme.titleLarge),
-          const SizedBox(height: 24),
+          Text(
+            question.enonce,
+            style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(height: 20),
           if (question.type == TypeQuestion.ordre)
             ..._buildOrdre(theme)
           else
@@ -253,45 +284,75 @@ class _QuizScreenState extends State<QuizScreen> {
                 etat: _etatQcm(i),
                 onPressed: aRepondu ? null : () => _repondre(i),
               ),
-          if (aRepondu) ...[
-            const SizedBox(height: 16),
-            Card(
-              color: reussie ? Colors.green.shade50 : Colors.red.shade50,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      reussie ? 'Bonne réponse !' : 'Mauvaise réponse',
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        color: reussie ? Colors.green.shade800 : Colors.red.shade800,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(question.explication,
-                        style: const TextStyle(color: Colors.black87)),
-                    if (!reussie && fiche != null) ...[
-                      const SizedBox(height: 8),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton.icon(
-                          onPressed: _revoirLaFiche,
-                          icon: const Icon(Icons.menu_book),
-                          label: Text('Revoir la fiche « ${fiche.titre} »'),
-                        ),
-                      ),
-                    ],
-                  ],
+          // De la place pour que le panneau du bas ne cache rien.
+          const SizedBox(height: 24),
+        ],
+      ),
+      bottomNavigationBar: _panneauBas(theme, question, fiche, couleur,
+          aRepondu: aRepondu, reussie: reussie),
+    );
+  }
+
+  /// Panneau fixé en bas : « Valider » pour une question ordre, puis la
+  /// correction (vert ou rouge) avec le bouton pour continuer.
+  Widget? _panneauBas(ThemeData theme, Question question, Fiche? fiche,
+      Color couleur, {required bool aRepondu, required bool reussie}) {
+    final scheme = theme.colorScheme;
+    if (!aRepondu) {
+      if (question.type != TypeQuestion.ordre) return null;
+      return _CadreBas(
+        couleur: scheme.surface,
+        child: BoutonRelief(
+          label: 'Valider cet ordre',
+          icone: Icons.check,
+          couleur: couleur,
+          onPressed: _validerOrdre,
+        ),
+      );
+    }
+    final teinte = reussie ? Colors.green : Colors.red;
+    final fond = reussie ? const Color(0xFFD7FFB8) : const Color(0xFFFFDFE0);
+    final encre = reussie ? const Color(0xFF3D8A00) : const Color(0xFFC62828);
+    return _CadreBas(
+      couleur: fond,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(reussie ? Icons.task_alt : Icons.highlight_off, color: encre, size: 28),
+              const SizedBox(width: 8),
+              Text(
+                reussie ? 'Bonne réponse !' : 'Mauvaise réponse',
+                style: theme.textTheme.titleLarge?.copyWith(
+                  color: encre,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Text(
+            question.explication,
+            style: const TextStyle(color: Color(0xFF2E2E2E), height: 1.4),
+          ),
+          if (!reussie && fiche != null)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                onPressed: _revoirLaFiche,
+                style: TextButton.styleFrom(foregroundColor: encre),
+                icon: const Icon(Icons.menu_book),
+                label: Text('Revoir la fiche « ${fiche.titre} »'),
+              ),
             ),
-            const SizedBox(height: 16),
-            FilledButton(
-              onPressed: _suivante,
-              child: Text(_session.estDerniere ? 'Terminer' : 'Question suivante'),
-            ),
-          ],
+          const SizedBox(height: 10),
+          BoutonRelief(
+            label: _session.estDerniere ? 'Terminer' : 'Question suivante',
+            couleur: teinte.shade600,
+            onPressed: _suivante,
+          ),
         ],
       ),
     );
@@ -359,14 +420,6 @@ class _QuizScreenState extends State<QuizScreen> {
             ligne(p, _ordreEnCours[p]),
         ],
       ),
-      if (!aRepondu) ...[
-        const SizedBox(height: 16),
-        FilledButton.icon(
-          onPressed: _validerOrdre,
-          icon: const Icon(Icons.check),
-          label: const Text('Valider cet ordre'),
-        ),
-      ],
       if (aRepondu && !_session.derniereReussie) ...[
         const SizedBox(height: 12),
         Text('Le bon ordre :', style: theme.textTheme.titleSmall),
@@ -377,5 +430,35 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
       ],
     ];
+  }
+}
+
+/// Cadre du panneau du bas : fond coloré, coins arrondis en haut, respecte
+/// la zone sûre du téléphone.
+class _CadreBas extends StatelessWidget {
+  const _CadreBas({required this.couleur, required this.child});
+
+  final Color couleur;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      decoration: BoxDecoration(
+        color: couleur,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+        boxShadow: const [
+          BoxShadow(color: Color(0x22000000), blurRadius: 12, offset: Offset(0, -2)),
+        ],
+      ),
+      child: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+          child: child,
+        ),
+      ),
+    );
   }
 }
