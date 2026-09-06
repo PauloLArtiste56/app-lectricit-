@@ -25,19 +25,53 @@ class ParcoursScreen extends StatefulWidget {
 }
 
 class _ParcoursScreenState extends State<ParcoursScreen> {
-  /// Repère le nœud du module en cours pour pouvoir défiler jusqu'à lui.
-  final _cleCourant = GlobalKey();
+  final _controleur = ScrollController();
+
+  /// Mesure la carte d'entraînement (sa hauteur dépend du texte) pour
+  /// calculer la position des modules en dessous.
+  final _cleCarte = GlobalKey();
+  double _hauteurCarte = 0;
   bool _aDefile = false;
 
+  @override
+  void dispose() {
+    _controleur.dispose();
+    super.dispose();
+  }
+
+  /// Position de défilement qui place le module en cours au quart de
+  /// l'écran. Les chapitres ont des hauteurs connues (bannière fixe, un
+  /// « pas » par module) : pas besoin que le nœud soit construit.
+  double? _offsetDuCourant(AppState etat) {
+    final courant = etat.moduleCourant;
+    if (courant == null) return null;
+    var y = _hauteurCarte;
+    for (final chapitre in etat.chapitres) {
+      final modules = etat.modulesDuChapitre(chapitre);
+      final i = modules.indexOf(courant);
+      if (i >= 0) {
+        y += BanniereChapitre.hauteurTotale + i * _SectionChapitre.pas;
+        break;
+      }
+      y += _SectionChapitre.hauteurPour(modules.length);
+    }
+    if (!_controleur.hasClients) return null;
+    final position = _controleur.position;
+    final cible = y - position.viewportDimension * 0.25;
+    return cible.clamp(0.0, position.maxScrollExtent);
+  }
+
   void _allerAuCourant({bool anime = true}) {
-    final ctx = _cleCourant.currentContext;
-    if (ctx == null) return;
-    Scrollable.ensureVisible(
-      ctx,
-      alignment: 0.25,
-      duration: anime ? const Duration(milliseconds: 500) : Duration.zero,
-      curve: Curves.easeInOut,
-    );
+    final boite = _cleCarte.currentContext?.findRenderObject() as RenderBox?;
+    if (boite != null) _hauteurCarte = boite.size.height;
+    final cible = _offsetDuCourant(context.read<AppState>());
+    if (cible == null) return;
+    if (anime) {
+      _controleur.animateTo(cible,
+          duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+    } else {
+      _controleur.jumpTo(cible);
+    }
   }
 
   @override
@@ -82,22 +116,27 @@ class _ParcoursScreenState extends State<ParcoursScreen> {
           ),
         AppState(pret: false) =>
           const Center(child: CircularProgressIndicator()),
-        _ => SingleChildScrollView(
-            child: Column(
-              children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
-                  child: CarteEntrainement(),
-                ),
-                for (final (i, chapitre) in etat.chapitres.indexed)
-                  _SectionChapitre(
-                    numero: i + 1,
-                    chapitre: chapitre,
-                    cleCourant: _cleCourant,
-                  ),
-                const SizedBox(height: 24),
-              ],
-            ),
+        // ListView.builder : seuls les chapitres visibles sont construits
+        // et dessinés, au lieu des 100 modules d'un coup.
+        _ => ListView.builder(
+            controller: _controleur,
+            itemCount: etat.chapitres.length + 2,
+            itemBuilder: (context, index) {
+              if (index == 0) {
+                return Padding(
+                  key: _cleCarte,
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: const CarteEntrainement(),
+                );
+              }
+              if (index == etat.chapitres.length + 1) {
+                return const SizedBox(height: 24);
+              }
+              return _SectionChapitre(
+                numero: index,
+                chapitre: etat.chapitres[index - 1],
+              );
+            },
           ),
       },
     );
@@ -107,17 +146,14 @@ class _ParcoursScreenState extends State<ParcoursScreen> {
 /// Un chapitre : fond teinté, bannière, puis ses modules en serpentin avec
 /// les illustrations et, s'il contient le module en cours, la mascotte.
 class _SectionChapitre extends StatelessWidget {
-  const _SectionChapitre({
-    required this.numero,
-    required this.chapitre,
-    required this.cleCourant,
-  });
+  const _SectionChapitre({required this.numero, required this.chapitre});
 
   final int numero;
   final Chapitre chapitre;
 
-  /// Posée sur le nœud du module en cours, s'il est dans ce chapitre.
-  final GlobalKey cleCourant;
+  /// Hauteur totale d'un chapitre de [nbModules] modules.
+  static double hauteurPour(int nbModules) =>
+      BanniereChapitre.hauteurTotale + nbModules * pas + 30;
 
   /// Hauteur réservée à chaque module sur le chemin (bulle + rond + titre).
   static const double pas = 192;
@@ -143,7 +179,10 @@ class _SectionChapitre extends StatelessWidget {
     final courant = etat.moduleCourant;
     final indexCourant = courant == null ? -1 : modules.indexOf(courant);
 
-    return ColoredBox(
+    // RepaintBoundary : pendant le défilement, le chapitre déjà dessiné est
+    // réutilisé tel quel au lieu d'être repeint à chaque image.
+    return RepaintBoundary(
+        child: ColoredBox(
       // Le fond du chapitre : sa couleur, très diluée.
       color: couleur.withValues(alpha: sombre ? 0.16 : 0.10),
       child: Column(
@@ -174,6 +213,8 @@ class _SectionChapitre extends StatelessWidget {
                   children: [
                     Positioned.fill(
                       child: CustomPaint(
+                        isComplex: true,
+                        willChange: false,
                         painter: _CheminPainter(
                           centres: centres,
                           couleur: couleur.withValues(alpha: 0.45),
@@ -183,7 +224,6 @@ class _SectionChapitre extends StatelessWidget {
                     ..._decors(centres, largeur, indexCourant),
                     for (final (i, module) in modules.indexed)
                       Positioned(
-                        key: i == indexCourant ? cleCourant : null,
                         left: centres[i].dx - largeurNoeud / 2,
                         top: i * pas,
                         width: largeurNoeud,
@@ -200,7 +240,7 @@ class _SectionChapitre extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 
   /// Côté opposé au rond : à gauche si le rond est à droite, et inversement.

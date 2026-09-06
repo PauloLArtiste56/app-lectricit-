@@ -149,17 +149,21 @@ class _NoeudModuleState extends State<NoeudModule>
         children: [
           SizedBox(
             height: NoeudModule.hauteurBulle,
+            // RepaintBoundary : l'animation de la bulle ne redessine
+            // qu'elle-même, pas tout le parcours.
             child: widget.courant
-                ? AnimatedBuilder(
-                    animation: _anim,
-                    builder: (_, enfant) => Transform.translate(
-                      offset: Offset(0, -4 * _anim.value),
-                      child: enfant,
-                    ),
-                    // Réduite si la police est plus grande que prévu.
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: _Bulle(couleur: widget.couleur),
+                ? RepaintBoundary(
+                    child: AnimatedBuilder(
+                      animation: _anim,
+                      builder: (_, enfant) => Transform.translate(
+                        offset: Offset(0, -4 * _anim.value),
+                        child: enfant,
+                      ),
+                      // Réduite si la police est plus grande que prévu.
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: _Bulle(couleur: widget.couleur),
+                      ),
                     ),
                   )
                 : null,

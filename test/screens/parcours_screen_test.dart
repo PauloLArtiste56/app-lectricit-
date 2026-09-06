@@ -116,7 +116,9 @@ void main() {
     final bulle = tester.getRect(find.text('COMMENCER'));
     expect(bulle.top, greaterThan(0));
     expect(bulle.bottom, lessThan(900));
-    final noeuds = tester.widgetList<NoeudModule>(find.byType(NoeudModule)).toList();
-    expect(noeuds[15].courant, isTrue);
+    // Seuls les chapitres visibles sont construits : on cherche le nœud
+    // marqué « en cours » plutôt qu'une position dans la liste.
+    final noeuds = tester.widgetList<NoeudModule>(find.byType(NoeudModule));
+    expect(noeuds.singleWhere((n) => n.courant).module.id, chemin[15]);
   });
 }
