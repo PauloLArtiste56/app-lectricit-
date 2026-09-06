@@ -17,11 +17,17 @@ class ElecApp extends StatelessWidget {
     // AppState est créé une fois ici et accessible depuis tous les écrans.
     return ChangeNotifierProvider(
       create: (_) => AppState()..charger(),
-      child: MaterialApp(
+      // Consumer : le thème suit le réglage choisi dans les paramètres.
+      child: Consumer<AppState>(
+        builder: (context, etat, _) => MaterialApp(
         title: 'ElecApp',
         theme: ElecTheme.clair(),
         darkTheme: ElecTheme.sombre(),
-        themeMode: ThemeMode.system,
+        themeMode: switch (etat.parametres.theme) {
+          'clair' => ThemeMode.light,
+          'sombre' => ThemeMode.dark,
+          _ => ThemeMode.system,
+        },
         home: const HomeShell(),
         // Sur un grand écran (Chrome sur PC), on limite la largeur pour
         // garder l'allure d'un téléphone. Sans effet sur un vrai mobile.
@@ -33,6 +39,7 @@ class ElecApp extends StatelessWidget {
               child: child,
             ),
           ),
+        ),
         ),
       ),
     );

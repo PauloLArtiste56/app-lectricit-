@@ -28,7 +28,7 @@ class CarteEntrainement extends StatelessWidget {
           titre: 'Examen blanc',
           questions: questions,
           examen: true,
-          duree: AppState.dureeExamen,
+          duree: etat.parametres.dureeExamen,
         ),
       ),
     );
@@ -129,8 +129,8 @@ class CarteEntrainement extends StatelessWidget {
               onPressed: () => _lancerExamen(context, etat),
               icon: const Icon(Icons.timer_outlined),
               label: Text(
-                'Examen blanc : ${AppState.tailleExamen} questions '
-                'en ${AppState.dureeExamen.inMinutes} min',
+                'Examen blanc : ${etat.parametres.tailleExamen} questions '
+                'en ${etat.parametres.dureeExamenMinutes} min',
               ),
             ),
           ],

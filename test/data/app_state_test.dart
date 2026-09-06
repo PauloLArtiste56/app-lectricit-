@@ -4,6 +4,7 @@ import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
 import 'package:elecapp/data/quiz_session.dart';
+import 'package:elecapp/models/parametres.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -126,6 +127,49 @@ void main() {
     maintenant = DateTime(2026, 9, 14);
     expect(etat.xpSemaine, 400);
     expect(etat.joursActifsSemaine, 1);
+  });
+
+  test('les paramètres changent la séance, l\'examen et le parcours', () async {
+    final etat = await etatCharge();
+    expect(etat.parametres.tailleSeance, AppState.tailleSeance);
+    final deuxieme = etat.modulesDuChapitre(etat.chapitres.first)[1];
+    expect(etat.moduleDeverrouille(deuxieme), isFalse);
+
+    await etat.modifierParametres(const Parametres(
+      tailleSeance: 5,
+      tailleExamen: 10,
+      parcoursLibre: true,
+    ));
+    expect(etat.questionsDuJour().length, 5);
+    expect(etat.questionsExamen().length, 10);
+    expect(etat.moduleDeverrouille(deuxieme), isTrue);
+
+    // Les paramètres sont relus au prochain démarrage.
+    final etat2 = await etatCharge();
+    expect(etat2.parametres.parcoursLibre, isTrue);
+    expect(etat2.parametres.tailleSeance, 5);
+  });
+
+  test('export puis import restituent la progression', () async {
+    final etat = await etatCharge();
+    final module = etat.modules.first;
+    final session = QuizSession(module.questions, melanger: false);
+    for (final q in module.questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, moduleComplet: module);
+    final code = etat.exporterProgression();
+
+    await etat.reinitialiser();
+    expect(etat.questionsReussies(module), 0);
+    expect(await etat.importerProgression('pas du json'), isFalse);
+    expect(await etat.importerProgression('{"autre": 1}'), isFalse);
+    expect(etat.questionsReussies(module), 0);
+
+    expect(await etat.importerProgression(code), isTrue);
+    expect(etat.questionsReussies(module), module.nombreQuestions);
+    expect(etat.historique.length, 1);
   });
 
   test('au départ, aucune question réussie', () async {

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
@@ -6,6 +7,7 @@ import '../models/chapitre.dart';
 import '../models/entree_historique.dart';
 import '../models/fiche.dart';
 import '../models/module.dart';
+import '../models/parametres.dart';
 import '../models/progression.dart';
 import '../models/progression_module.dart';
 import '../models/question.dart';
@@ -74,6 +76,7 @@ class AppState extends ChangeNotifier {
   List<String> _ordreParcours = [];
   final Map<String, Module> _moduleParQuestion = {};
   Progression _progression = Progression();
+  Parametres _parametres = const Parametres();
   bool _pret = false;
   Object? _erreur;
 
@@ -83,6 +86,7 @@ class AppState extends ChangeNotifier {
   List<Chapitre> get chapitres => _chapitres;
   bool get pret => _pret;
   Object? get erreur => _erreur;
+  Parametres get parametres => _parametres;
   List<EntreeHistorique> get historique => _progression.historique;
 
   /// À appeler une fois au démarrage.
@@ -97,6 +101,7 @@ class AppState extends ChangeNotifier {
         }
       }
       _progression = await _store.charger();
+      _parametres = await _store.chargerParametres();
       _pret = true;
     } catch (e) {
       _erreur = e;
@@ -105,6 +110,34 @@ class AppState extends ChangeNotifier {
   }
 
   ProgressionModule progressionDe(Module module) => _progression.pour(module.id);
+
+  Future<void> modifierParametres(Parametres nouveaux) async {
+    _parametres = nouveaux;
+    await _store.sauvegarderParametres(nouveaux);
+    notifyListeners();
+  }
+
+  /// La progression en JSON, à copier pour la transférer sur un autre
+  /// appareil.
+  String exporterProgression() => jsonEncode(_progression.toJson());
+
+  /// Remplace la progression par celle d'un export. Faux si le texte n'est
+  /// pas un export valide (rien n'est modifié dans ce cas).
+  Future<bool> importerProgression(String texte) async {
+    try {
+      final decode = jsonDecode(texte);
+      if (decode is! Map<String, dynamic> || !decode.containsKey('progression')) {
+        return false;
+      }
+      _progression = Progression.fromJson(decode);
+    } on FormatException {
+      return false;
+    } on TypeError {
+      return false;
+    }
+    await _sauvegarder();
+    return true;
+  }
 
   Module? moduleParId(String id) {
     for (final m in _modules) {
@@ -205,9 +238,10 @@ class AppState extends ChangeNotifier {
   /// La séance du jour : d'abord ce qui est à revoir aujourd'hui, puis des
   /// questions jamais faites, jusqu'à [tailleSeance].
   List<Question> questionsDuJour() {
-    final dues = questionsDues().take(tailleSeance).toList();
+    final taille = _parametres.tailleSeance;
+    final dues = questionsDues().take(taille).toList();
     final nouvelles = questionsJamaisFaites()..shuffle();
-    return [...dues, ...nouvelles.take(tailleSeance - dues.length)];
+    return [...dues, ...nouvelles.take(taille - dues.length)];
   }
 
   /// Modules déjà abordés : déverrouillés sur le parcours, ou commencés
@@ -223,7 +257,7 @@ class AppState extends ChangeNotifier {
   List<Question> questionsExamen({Random? random}) {
     final toutes = [for (final m in modulesVus) ...m.questions]
       ..shuffle(random ?? Random());
-    return toutes.take(tailleExamen).toList();
+    return toutes.take(_parametres.tailleExamen).toList();
   }
 
   /// Total des XP, recalculé depuis l'historique (rien à stocker en plus).
@@ -327,6 +361,7 @@ class AppState extends ChangeNotifier {
   /// Déverrouillé quand le module précédent du chemin est réussi.
   /// Le premier module, et tout module hors parcours, sont toujours ouverts.
   bool moduleDeverrouille(Module module) {
+    if (_parametres.parcoursLibre) return true;
     final avant = moduleAvant(module);
     return avant == null || moduleReussi(avant);
   }
