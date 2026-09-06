@@ -15,15 +15,52 @@ import 'module_screen.dart';
 /// Écran Parcours : la carte d'entraînement puis le chemin des modules,
 /// chapitre après chapitre, façon Duolingo : boutons en relief, cadenas,
 /// illustrations le long du chemin, mascotte « pile » sur le module en cours.
-class ParcoursScreen extends StatelessWidget {
+/// À l'ouverture, l'écran défile jusqu'au module en cours.
+class ParcoursScreen extends StatefulWidget {
   const ParcoursScreen({super.key});
+
+  @override
+  State<ParcoursScreen> createState() => _ParcoursScreenState();
+}
+
+class _ParcoursScreenState extends State<ParcoursScreen> {
+  /// Repère le nœud du module en cours pour pouvoir défiler jusqu'à lui.
+  final _cleCourant = GlobalKey();
+  bool _aDefile = false;
+
+  void _allerAuCourant({bool anime = true}) {
+    final ctx = _cleCourant.currentContext;
+    if (ctx == null) return;
+    Scrollable.ensureVisible(
+      ctx,
+      alignment: 0.25,
+      duration: anime ? const Duration(milliseconds: 500) : Duration.zero,
+      curve: Curves.easeInOut,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     final etat = context.watch<AppState>();
 
+    // Premier affichage du chemin : on se place sur le module en cours,
+    // une fois la page dessinée.
+    if (etat.pret && !_aDefile) {
+      _aDefile = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _allerAuCourant(anime: false);
+      });
+    }
+
     return Scaffold(
       appBar: AppBar(title: const Text('ElecApp')),
+      floatingActionButton: etat.pret && etat.moduleCourant != null
+          ? FloatingActionButton.small(
+              tooltip: 'Aller au module en cours',
+              onPressed: _allerAuCourant,
+              child: const Icon(Icons.my_location),
+            )
+          : null,
       body: switch (etat) {
         AppState(erreur: final e?) => Center(
             child: Padding(
@@ -41,7 +78,11 @@ class ParcoursScreen extends StatelessWidget {
                   child: CarteEntrainement(),
                 ),
                 for (final (i, chapitre) in etat.chapitres.indexed)
-                  _SectionChapitre(numero: i + 1, chapitre: chapitre),
+                  _SectionChapitre(
+                    numero: i + 1,
+                    chapitre: chapitre,
+                    cleCourant: _cleCourant,
+                  ),
                 const SizedBox(height: 24),
               ],
             ),
@@ -54,10 +95,17 @@ class ParcoursScreen extends StatelessWidget {
 /// Un chapitre : fond teinté, bannière, puis ses modules en serpentin avec
 /// les illustrations et, s'il contient le module en cours, la mascotte.
 class _SectionChapitre extends StatelessWidget {
-  const _SectionChapitre({required this.numero, required this.chapitre});
+  const _SectionChapitre({
+    required this.numero,
+    required this.chapitre,
+    required this.cleCourant,
+  });
 
   final int numero;
   final Chapitre chapitre;
+
+  /// Posée sur le nœud du module en cours, s'il est dans ce chapitre.
+  final GlobalKey cleCourant;
 
   /// Hauteur réservée à chaque module sur le chemin (bulle + rond + titre).
   static const double pas = 192;
@@ -123,6 +171,7 @@ class _SectionChapitre extends StatelessWidget {
                     ..._decors(centres, largeur, indexCourant),
                     for (final (i, module) in modules.indexed)
                       Positioned(
+                        key: i == indexCourant ? cleCourant : null,
                         left: centres[i].dx - largeurNoeud / 2,
                         top: i * pas,
                         width: largeurNoeud,

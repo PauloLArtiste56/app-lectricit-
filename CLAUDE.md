@@ -48,7 +48,10 @@ coche dès 80 % des questions réussies. Les modules se déverrouillent un à un
 l'ordre du chemin. Une mascotte « pile » se pose en face du module courant et se
 charge avec l'avancement du chapitre ; des illustrations plates (générées par
 `tools/schemas/generer_decors.py`, PNG dans `assets/images/decors/`) jalonnent le
-chemin. L'onglet Modules garde la liste complète par thème, sans verrou.
+chemin. À l'ouverture, l'écran défile jusqu'au module en cours (bouton flottant pour y
+revenir). Quand un quiz fait passer le seuil, l'écran Résultat fête le module (ou le
+chapitre) et propose directement le module suivant. L'onglet Modules garde la liste
+complète par thème, sans verrou.
 
 Ajouts faits depuis : révision ciblée (les questions ratées reviennent jusqu'à être réussies),
 mélange des questions et réponses, "Revoir la fiche" après une erreur, questions de type `ordre`,

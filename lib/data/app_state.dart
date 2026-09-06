@@ -226,6 +226,26 @@ class AppState extends ChangeNotifier {
     return moduleParId(_ordreParcours[i - 1]);
   }
 
+  /// Module qui suit [module] sur le chemin, ou null pour le dernier.
+  Module? moduleSuivant(Module module) {
+    final i = _ordreParcours.indexOf(module.id);
+    if (i < 0 || i + 1 >= _ordreParcours.length) return null;
+    return moduleParId(_ordreParcours[i + 1]);
+  }
+
+  /// Chapitre du parcours qui contient [module].
+  Chapitre? chapitreDe(Module module) {
+    for (final c in _chapitres) {
+      if (c.modulesIds.contains(module.id)) return c;
+    }
+    return null;
+  }
+
+  bool chapitreComplet(Chapitre chapitre) {
+    final modules = modulesDuChapitre(chapitre);
+    return modules.isNotEmpty && modules.every(moduleReussi);
+  }
+
   /// Déverrouillé quand le module précédent du chemin est réussi.
   /// Le premier module, et tout module hors parcours, sont toujours ouverts.
   bool moduleDeverrouille(Module module) {

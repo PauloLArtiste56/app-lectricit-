@@ -77,23 +77,28 @@ class _QuizScreenState extends State<QuizScreen> {
       final complet = widget.questions == null ||
           (widget.module != null &&
               widget.questions!.length == widget.module!.nombreQuestions);
+      final etat = context.read<AppState>();
+      // Réussi avant ce quiz ? Sert à fêter (ou non) le passage du seuil.
+      final dejaReussi =
+          widget.module != null && etat.moduleReussi(widget.module!);
       // La sauvegarde part en arrière-plan ; on n'attend pas pour afficher.
-      context.read<AppState>().enregistrerResultat(
-            _session,
-            moduleComplet: complet ? widget.module : null,
-          );
-      _afficherResultat();
+      etat.enregistrerResultat(
+        _session,
+        moduleComplet: complet ? widget.module : null,
+      );
+      _afficherResultat(dejaReussi: dejaReussi);
     }
   }
 
   /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
   /// résultat ramène donc à l'accueil, pas au milieu du quiz.
-  void _afficherResultat() {
+  void _afficherResultat({required bool dejaReussi}) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
         builder: (_) => ResultatScreen(
           titre: _titre,
           module: widget.module,
+          dejaReussi: dejaReussi,
           score: _session.score,
           total: _session.total,
           questionsRatees: _session.questionsRatees,
