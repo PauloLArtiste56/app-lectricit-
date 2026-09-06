@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
+import '../data/insignes.dart';
 import '../models/entree_historique.dart';
 
 /// Écran Stats : score global, modules terminés, historique des quiz.
@@ -88,6 +89,18 @@ class StatsScreen extends StatelessWidget {
           Text('Cette semaine', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
           const _RecapSemaine(),
+          const SizedBox(height: 24),
+          Row(
+            children: [
+              Expanded(child: Text('Badges', style: theme.textTheme.titleMedium)),
+              Text(
+                '${etat.badgesObtenus.length}/${Insigne.tous.length}',
+                style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.outline),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          const _GrilleBadges(),
           const SizedBox(height: 24),
           Text('Historique', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
@@ -256,6 +269,67 @@ class _LigneHistorique extends StatelessWidget {
           style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
+    );
+  }
+}
+
+/// Grille des badges : ceux obtenus en couleur avec leur date, les autres
+/// en gris. Un appui long (ou le survol) montre la condition.
+class _GrilleBadges extends StatelessWidget {
+  const _GrilleBadges();
+
+  @override
+  Widget build(BuildContext context) {
+    final etat = context.watch<AppState>();
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final obtenus = etat.badgesObtenus;
+
+    return GridView.count(
+      crossAxisCount: 4,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      mainAxisSpacing: 8,
+      crossAxisSpacing: 8,
+      childAspectRatio: 0.78,
+      children: [
+        for (final b in Insigne.tous)
+          () {
+            final date = obtenus[b.id];
+            final gagne = date != null;
+            final couleur = gagne ? Colors.purple.shade400 : scheme.outlineVariant;
+            return Tooltip(
+              message: gagne
+                  ? '${b.description}\nObtenu le ${StatsScreen.formaterDate(date)}'
+                  : b.description,
+              triggerMode: TooltipTriggerMode.tap,
+              child: Column(
+                children: [
+                  Container(
+                    width: 52,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: couleur.withValues(alpha: gagne ? 0.18 : 0.25),
+                      border: Border.all(color: couleur, width: 2),
+                    ),
+                    child: Icon(b.icone, color: gagne ? couleur : scheme.outline),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    b.titre,
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      color: gagne ? null : scheme.outline,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }(),
+      ],
     );
   }
 }

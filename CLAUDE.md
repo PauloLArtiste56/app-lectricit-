@@ -63,7 +63,12 @@ vérification automatique par GitHub Actions, examen blanc (20 questions tirées
 modules déjà abordés, 10 minutes au chrono, pas de correction avant la fin, corrigé sur
 l'écran Résultat, historique à part), points d'expérience (10 XP par bonne réponse, niveaux
 de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats), récap
-de la semaine dans les stats (XP, quiz, jours actifs, colonnes par jour).
+de la semaine dans les stats (XP, quiz, jours actifs, colonnes par jour), objectif du jour
+(XP à gagner chaque jour, réglable dans les paramètres, anneau sur la carte d'entraînement),
+quêtes du jour (`data/quetes.dart` : 3 défis tirés chaque jour parmi 7, XP versés une seule
+fois via `models/recompense.dart`, carte sous la carte d'entraînement), badges
+(`data/insignes.dart` : 16 conditions, débloqués après chaque quiz, grille dans les stats,
+annoncés sur l'écran Résultat). La progression stocke en plus `recompenses` et `badges`.
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -241,7 +246,7 @@ choix multiples) existants d'organismes de formation. Paulo relit et corrige si 
 lib/
   main.dart
   models/        # Module, Fiche, Question, Progression
-  data/          # chargement du JSON, service de stockage local
+  data/          # chargement du JSON, stockage local, état (AppState), quêtes, insignes
   screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats,
                  # parametres
   widgets/       # composants réutilisables (carte module, bouton réponse, bouton en relief,

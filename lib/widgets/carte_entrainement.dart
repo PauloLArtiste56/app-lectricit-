@@ -97,7 +97,10 @@ class CarteEntrainement extends StatelessWidget {
                 backgroundColor: scheme.surface.withValues(alpha: 0.6),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 10),
+            // Objectif du jour : anneau rempli au fil des XP gagnés.
+            _ObjectifDuJour(etat: etat),
+            const SizedBox(height: 10),
             Text('Ma séance du jour',
                 style: theme.textTheme.titleMedium?.copyWith(
                   color: scheme.onPrimaryContainer,
@@ -136,6 +139,70 @@ class CarteEntrainement extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Anneau d'objectif du jour : XP gagnés aujourd'hui sur l'objectif choisi
+/// dans les paramètres. Vire au vert quand l'objectif est atteint.
+class _ObjectifDuJour extends StatelessWidget {
+  const _ObjectifDuJour({required this.etat});
+
+  final AppState etat;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final atteint = etat.objectifAtteint;
+    final couleur = atteint ? Colors.green.shade600 : scheme.primary;
+
+    return Row(
+      children: [
+        SizedBox(
+          width: 44,
+          height: 44,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              CircularProgressIndicator(
+                value: etat.progressionObjectif,
+                strokeWidth: 5,
+                color: couleur,
+                backgroundColor: scheme.surface.withValues(alpha: 0.6),
+              ),
+              Center(
+                child: Icon(
+                  atteint ? Icons.check : Icons.track_changes,
+                  size: 20,
+                  color: couleur,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                atteint ? 'Objectif du jour atteint !' : 'Objectif du jour',
+                style: theme.textTheme.labelLarge?.copyWith(
+                  color: scheme.onPrimaryContainer,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '${etat.xpDuJour} / ${etat.objectifJour} XP',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: scheme.onPrimaryContainer,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

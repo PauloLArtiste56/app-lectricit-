@@ -167,6 +167,20 @@ class ParametresScreen extends StatelessWidget {
           ),
           titre('APPRENTISSAGE'),
           ListTile(
+            leading: const Icon(Icons.track_changes),
+            title: const Text('Objectif du jour'),
+            subtitle: const Text('XP à gagner chaque jour'),
+            trailing: DropdownButton<int>(
+              value: p.objectifXpJour,
+              items: [
+                for (final n in const [20, 50, 100, 200])
+                  DropdownMenuItem(value: n, child: Text('$n XP')),
+              ],
+              onChanged: (n) =>
+                  n == null ? null : _modifier(context, p.copyWith(objectifXpJour: n)),
+            ),
+          ),
+          ListTile(
             leading: const Icon(Icons.today_outlined),
             title: const Text('Questions par séance du jour'),
             trailing: DropdownButton<int>(

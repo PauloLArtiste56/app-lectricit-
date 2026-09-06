@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
+import 'package:elecapp/data/quetes.dart';
 import 'package:elecapp/data/quiz_session.dart';
+import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/parametres.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -89,10 +91,116 @@ void main() {
       session.suivante();
     }
     await etat.enregistrerResultat(session, moduleComplet: module);
-    expect(etat.xpTotal, 200);
-    expect(etat.niveau, 2);
-    expect(etat.xpManquants, 200);
-    expect(etat.progressionNiveau, closeTo(1 / 3, 0.001));
+    // 20 bonnes réponses = 200 XP, plus les quêtes du jour éventuellement
+    // accomplies par ce sans-faute (elles dépendent de la date).
+    final bonus = etat.recompenses.fold(0, (s, r) => s + r.xp);
+    expect(etat.xpTotal, 200 + bonus);
+    expect(etat.niveau, AppState.niveauPour(etat.xpTotal));
+    expect(etat.niveau, greaterThanOrEqualTo(2));
+    expect(etat.xpManquants, AppState.xpDebutNiveau(etat.niveau + 1) - etat.xpTotal);
+  });
+
+  test('l\'objectif du jour suit les XP gagnés aujourd\'hui', () async {
+    final etat = AppState(horloge: () => DateTime(2026, 9, 6));
+    await etat.charger();
+    expect(etat.objectifJour, 50);
+    expect(etat.xpDuJour, 0);
+    expect(etat.objectifAtteint, isFalse);
+    expect(etat.progressionObjectif, 0);
+
+    final module = etat.modules.first;
+    final session = QuizSession(module.questions.take(3).toList(), melanger: false);
+    for (final q in session.questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session);
+    expect(etat.xpDuJour, 30);
+    expect(etat.progressionObjectif, closeTo(0.6, 0.001));
+
+    await etat.modifierParametres(const Parametres(objectifXpJour: 20));
+    expect(etat.objectifAtteint, isTrue);
+    expect(etat.progressionObjectif, 1);
+  });
+
+  test('les quêtes du jour versent leur XP une seule fois et les badges restent',
+      () async {
+    final etat = AppState(horloge: () => DateTime(2026, 9, 6));
+    await etat.charger();
+    final quetes = etat.quetesDuJour;
+    expect(quetes.length, 3);
+    expect(quetes.every((q) => !q.accomplie), isTrue);
+    expect(etat.badgesObtenus, isEmpty);
+
+    // On remplit toutes les quêtes possibles : trois fiches, une révision,
+    // un examen, deux quiz complets sans faute (module réussi, 100 XP).
+    final module = etat.modules.first;
+    for (final f in module.fiches) {
+      await etat.marquerFicheLue(module, f.id);
+    }
+    expect(etat.fichesLuesAujourdhui, 3);
+
+    Future<void> quiz(List<Question> questions,
+        {Module? moduleComplet, bool examen = false}) async {
+      final session = QuizSession(questions, melanger: false);
+      for (final q in questions) {
+        session.repondre(q.bonne);
+        session.suivante();
+      }
+      await etat.enregistrerResultat(session,
+          moduleComplet: moduleComplet, examen: examen);
+    }
+
+    await quiz(module.questions.take(5).toList());
+    await quiz(module.questions.take(5).toList(), examen: true);
+    await quiz(module.questions, moduleComplet: module);
+    await quiz(module.questions, moduleComplet: module);
+
+    expect(etat.quetesDuJour.every((q) => q.accomplie), isTrue);
+    expect(etat.recompenses.length, 3);
+    expect(etat.quetesAccomplies, 3);
+    final xpQuetes = etat.quetesDuJour.fold(0, (s, q) => s + q.quete.xp);
+    final xpQuiz = etat.historique.fold(0, (s, e) => s + AppState.xpPour(e.score));
+    expect(etat.xpTotal, xpQuiz + xpQuetes);
+    expect(etat.xpDuJour, etat.xpTotal);
+
+    // Un quiz de plus ne reverse rien.
+    await quiz(module.questions.take(2).toList());
+    expect(etat.recompenses.length, 3);
+    expect(etat.recompensesRecentes, isEmpty);
+
+    // Badges débloqués par ce parcours, avec la date du jour.
+    expect(etat.badgesObtenus.keys,
+        containsAll(['premier_quiz', 'premier_module', 'sans_faute', 'examen']));
+    expect(etat.badgesObtenus['premier_quiz'], '2026-09-06');
+    expect(etat.badgesObtenus.containsKey('serie_7'), isFalse);
+
+    // Tout est bien enregistré : un nouvel état relit quêtes et badges.
+    final etat2 = AppState(horloge: () => DateTime(2026, 9, 6));
+    await etat2.charger();
+    expect(etat2.recompenses.length, 3);
+    expect(etat2.quetesDuJour.every((q) => q.accomplie), isTrue);
+    expect(etat2.badgesObtenus.length, etat.badgesObtenus.length);
+    expect(etat2.xpTotal, etat.xpTotal);
+
+    // Le lendemain, trois nouvelles quêtes repartent de zéro.
+    final etat3 = AppState(horloge: () => DateTime(2026, 9, 7));
+    await etat3.charger();
+    expect(etat3.quetesDuJour.every((q) => !q.accomplie), isTrue);
+    expect(etat3.xpDuJour, 0);
+  });
+
+  test('les quêtes d\'un jour sont toujours les mêmes trois', () {
+    final a = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
+    final b = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
+    expect(a, b);
+    expect(a.toSet().length, 3);
+    // Sur une semaine, le tirage change au moins une fois.
+    final ids = {
+      for (var j = 1; j <= 7; j++)
+        Quete.pourLeJour('2026-09-0$j').map((q) => q.id).join(','),
+    };
+    expect(ids.length, greaterThan(1));
   });
 
   test('le récap de la semaine additionne les XP et les quiz par jour', () async {

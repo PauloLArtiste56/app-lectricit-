@@ -11,9 +11,12 @@ import '../models/parametres.dart';
 import '../models/progression.dart';
 import '../models/progression_module.dart';
 import '../models/question.dart';
+import '../models/recompense.dart';
 import '../models/revision_question.dart';
+import 'insignes.dart';
 import 'content_loader.dart';
 import 'progression_store.dart';
+import 'quetes.dart';
 import 'quiz_session.dart';
 
 /// État partagé de l'appli : le contenu (modules) et la progression.
@@ -260,8 +263,105 @@ class AppState extends ChangeNotifier {
     return toutes.take(_parametres.tailleExamen).toList();
   }
 
-  /// Total des XP, recalculé depuis l'historique (rien à stocker en plus).
-  int get xpTotal => _progression.historique.fold(0, (somme, e) => somme + xpPour(e.score));
+  /// Total des XP : les quiz de l'historique plus les récompenses.
+  int get xpTotal =>
+      _progression.historique.fold(0, (somme, e) => somme + xpPour(e.score)) +
+      _progression.recompenses.fold(0, (somme, r) => somme + r.xp);
+
+  List<Recompense> get recompenses => List.unmodifiable(_progression.recompenses);
+
+  /// Récompenses et badges gagnés lors du dernier enregistrement, pour
+  /// les afficher sur l'écran Résultat. Vidés à chaque nouveau quiz.
+  List<Recompense> recompensesRecentes = [];
+  List<Insigne> badgesRecents = [];
+
+  // --- Objectif du jour ---------------------------------------------------
+
+  /// XP gagnés aujourd'hui, quiz et récompenses compris.
+  int get xpDuJour {
+    final jour = _aujourdhui();
+    return _progression.historique
+            .where((e) => e.date == jour)
+            .fold(0, (somme, e) => somme + xpPour(e.score)) +
+        _progression.recompenses
+            .where((r) => r.date == jour)
+            .fold(0, (somme, r) => somme + r.xp);
+  }
+
+  int get objectifJour => _parametres.objectifXpJour;
+  bool get objectifAtteint => xpDuJour >= objectifJour;
+  double get progressionObjectif => (xpDuJour / objectifJour).clamp(0.0, 1.0);
+
+  // --- Quêtes du jour ------------------------------------------------------
+
+  /// Fiches marquées lues aujourd'hui (pour la quête « Lis 3 fiches »).
+  final Set<String> _fichesLuesCeJour = {};
+  String _jourFiches = '';
+
+  int get fichesLuesAujourdhui =>
+      _jourFiches == _aujourdhui() ? _fichesLuesCeJour.length : 0;
+
+  List<EntreeHistorique> get _quizDuJour {
+    final jour = _aujourdhui();
+    return _progression.historique.where((e) => e.date == jour).toList();
+  }
+
+  /// Les trois quêtes d'aujourd'hui, avec leur avancement.
+  List<EtatQuete> get quetesDuJour {
+    final jour = _aujourdhui();
+    final quiz = _quizDuJour;
+    return [
+      for (final q in Quete.pourLeJour(jour))
+        () {
+          final avancement = q.mesurer(quiz, this);
+          final accomplie = _progression.recompenses
+              .any((r) => r.id == 'quete:${q.id}:$jour');
+          return EtatQuete(
+            quete: q,
+            avancement: accomplie ? q.cible : avancement,
+            accomplie: accomplie,
+          );
+        }(),
+    ];
+  }
+
+  /// Nombre total de quêtes accomplies depuis le début.
+  int get quetesAccomplies =>
+      _progression.recompenses.where((r) => r.id.startsWith('quete:')).length;
+
+  // --- Badges --------------------------------------------------------------
+
+  /// Badges obtenus : identifiant → date.
+  Map<String, String> get badgesObtenus => Map.unmodifiable(_progression.badges);
+
+  int get modulesReussisTotal => modulesAvecContenu.where(moduleReussi).length;
+
+  /// Verse les récompenses des quêtes accomplies et débloque les badges
+  /// dont la condition vient d'être remplie. Appelé après chaque
+  /// enregistrement ; ne verse jamais deux fois la même récompense.
+  void _verifierQuetesEtBadges() {
+    final jour = _aujourdhui();
+    recompensesRecentes = [];
+    badgesRecents = [];
+    final quiz = _quizDuJour;
+    for (final q in Quete.pourLeJour(jour)) {
+      final id = 'quete:${q.id}:$jour';
+      if (_progression.recompenses.any((r) => r.id == id)) continue;
+      if (q.mesurer(quiz, this) >= q.cible) {
+        final r = Recompense(id: id, date: jour, xp: q.xp);
+        _progression.recompenses.add(r);
+        recompensesRecentes.add(r);
+      }
+    }
+    for (final b in Insigne.tous) {
+      if (_progression.badges.containsKey(b.id)) continue;
+      if (b.condition(this)) {
+        _progression.badges[b.id] = jour;
+        badgesRecents.add(b);
+      }
+    }
+  }
+
 
   int get niveau => niveauPour(xpTotal);
 
@@ -381,7 +481,15 @@ class AppState extends ChangeNotifier {
       progressionDe(module).fichesLues.contains(ficheId);
 
   Future<void> marquerFicheLue(Module module, String ficheId) async {
-    if (!progressionDe(module).fichesLues.add(ficheId)) return;
+    final jour = _aujourdhui();
+    if (_jourFiches != jour) {
+      _jourFiches = jour;
+      _fichesLuesCeJour.clear();
+    }
+    final nouvelleCeJour = _fichesLuesCeJour.add('${module.id}/$ficheId');
+    final jamaisLue = progressionDe(module).fichesLues.add(ficheId);
+    if (!nouvelleCeJour && !jamaisLue) return;
+    _verifierQuetesEtBadges();
     await _sauvegarder();
   }
 
@@ -424,6 +532,7 @@ class AppState extends ChangeNotifier {
       score: session.score,
       total: session.total,
     ));
+    _verifierQuetesEtBadges();
     await _sauvegarder();
   }
 

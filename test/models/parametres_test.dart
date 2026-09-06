@@ -15,5 +15,10 @@ void main() {
     final ancien = Parametres.fromJson({'theme': 'clair'});
     expect(ancien.theme, 'clair');
     expect(ancien.tailleExamen, 20);
+    expect(ancien.objectifXpJour, 50);
+
+    // L'objectif du jour est conservé.
+    final avecObjectif = Parametres.fromJson(const Parametres(objectifXpJour: 200).toJson());
+    expect(avecObjectif.objectifXpJour, 200);
   });
 }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:elecapp/data/insignes.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/screens/stats_screen.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,10 @@ void main() {
     expect(find.text('Cette semaine'), findsOneWidget);
     expect(find.text('+0 XP'), findsOneWidget);
     expect(find.text('0 / 7'), findsOneWidget);
+    // La grille des badges est là, tous encore à gagner.
+    expect(find.text('Badges'), findsOneWidget);
+    expect(find.text('0/${Insigne.tous.length}'), findsOneWidget);
+    expect(find.text('Premier pas'), findsOneWidget);
   });
 
   testWidgets('avec progression : score, historique et réinitialisation',
