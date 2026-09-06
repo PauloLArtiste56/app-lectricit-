@@ -72,6 +72,7 @@ void main() {
     await tester.tap(find.byIcon(Icons.settings_outlined));
     await tester.pumpAndSettle();
     expect(find.text('Objectif du jour'), findsOneWidget);
+    expect(find.text('Sons'), findsOneWidget);
     await tester.tap(find.text('50 XP'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('200 XP').last);

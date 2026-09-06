@@ -213,6 +213,13 @@ class ParametresScreen extends StatelessWidget {
             value: p.vibrations,
             onChanged: (v) => _modifier(context, p.copyWith(vibrations: v)),
           ),
+          SwitchListTile(
+            secondary: const Icon(Icons.volume_up_outlined),
+            title: const Text('Sons'),
+            subtitle: const Text('Bonne ou mauvaise réponse, combo, fin de quiz'),
+            value: p.sons,
+            onChanged: (v) => _modifier(context, p.copyWith(sons: v)),
+          ),
           titre('EXAMEN BLANC'),
           ListTile(
             leading: const Icon(Icons.format_list_numbered),

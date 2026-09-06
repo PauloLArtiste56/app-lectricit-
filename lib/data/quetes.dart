@@ -88,6 +88,15 @@ class Quete {
           quiz.where((e) => e.moduleId == AppState.idExamen).length,
     ),
     Quete(
+      id: 'eclair',
+      titre: 'Fais un mode éclair',
+      icone: Icons.bolt,
+      cible: 1,
+      xp: 20,
+      mesurer: (quiz, _) =>
+          quiz.where((e) => e.moduleId == AppState.idEclair).length,
+    ),
+    Quete(
       id: 'fiches',
       titre: 'Lis 3 fiches',
       icone: Icons.menu_book,

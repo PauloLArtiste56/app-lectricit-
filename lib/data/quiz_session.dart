@@ -72,7 +72,24 @@ class QuizSession {
   /// Ordre : vrai si la réponse affichée à cet index est à sa bonne place
   /// dans l'ordre choisi par l'utilisateur.
   bool estBienPlacee(int position) =>
-      _choixOrdre != null && _ordreAffichage[_index][_choixOrdre![position]] == position;
+      _choixOrdre != null &&
+      position < _choixOrdre!.length &&
+      _ordreAffichage[_index][_choixOrdre![position]] == position;
+
+  /// Vrai si la question courante a été passée faute de temps (mode éclair).
+  bool get tempsEcoule => _choix == -1 || (_choixOrdre?.isEmpty ?? false);
+
+  /// Temps écoulé sur la question courante (mode éclair) : elle compte
+  /// ratée, sans qu'aucune réponse ne soit désignée.
+  void passer() {
+    if (aRepondu || _terminee) return;
+    if (questionCourante.type == TypeQuestion.ordre) {
+      _choixOrdre = [];
+    } else {
+      _choix = -1;
+    }
+    _compter(false);
+  }
 
   /// QCM : enregistre la réponse. Une seule réponse par question.
   void repondre(int indexAffiche) {

@@ -1,10 +1,12 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
+import '../data/sons.dart';
 import '../data/quiz_session.dart';
 import '../models/fiche.dart';
 import '../models/module.dart';
@@ -30,6 +32,7 @@ class QuizScreen extends StatefulWidget {
     this.melanger = true,
     this.examen = false,
     this.duree,
+    this.eclair = false,
   }) : assert(module != null || questions != null);
 
   final Module? module;
@@ -44,6 +47,9 @@ class QuizScreen extends StatefulWidget {
 
   /// Temps imparti (mode examen). Sans limite si null.
   final Duration? duree;
+
+  /// Mode éclair : un compte à rebours par question, sans question « ordre ».
+  final bool eclair;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -66,6 +72,14 @@ class _QuizScreenState extends State<QuizScreen> {
   late Duration _restant = widget.duree ?? Duration.zero;
   final Stopwatch _tempsUtilise = Stopwatch();
 
+  /// Mode éclair : compte à rebours de la question en cours, en secondes.
+  Timer? _chronoQuestion;
+  int _restantQuestion = AppState.dureeQuestionEclair.inSeconds;
+
+  /// Bonnes réponses d'affilée (combo) et meilleur combo du quiz.
+  int _combo = 0;
+  int _meilleurCombo = 0;
+
   @override
   void initState() {
     super.initState();
@@ -83,12 +97,34 @@ class _QuizScreenState extends State<QuizScreen> {
         if (_restant <= Duration.zero) _tempsEcoule();
       });
     }
+    if (widget.eclair) _demarrerQuestion();
   }
 
   @override
   void dispose() {
     _chrono?.cancel();
+    _chronoQuestion?.cancel();
     super.dispose();
+  }
+
+  /// Mode éclair : (re)lance le compte à rebours de la question courante.
+  /// Un « tic » sur les trois dernières secondes ; à zéro, la question est
+  /// passée et compte ratée.
+  void _demarrerQuestion() {
+    _chronoQuestion?.cancel();
+    _restantQuestion = AppState.dureeQuestionEclair.inSeconds;
+    _chronoQuestion = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted || _session.aRepondu) return;
+      setState(() => _restantQuestion--);
+      if (_restantQuestion <= 0) {
+        _chronoQuestion?.cancel();
+        setState(() => _session.passer());
+        _combo = 0;
+        context.read<AppState>().jouer(Son.mauvaise);
+      } else if (_restantQuestion <= 3) {
+        context.read<AppState>().jouer(Son.tic);
+      }
+    });
   }
 
   void _tempsEcoule() {
@@ -104,9 +140,27 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _apresReponse() {
+    _chronoQuestion?.cancel();
+    final etat = context.read<AppState>();
+    final reussie = _session.derniereReussie;
+    if (reussie) {
+      _combo++;
+      if (_combo > _meilleurCombo) _meilleurCombo = _combo;
+    } else {
+      _combo = 0;
+    }
+    // En examen, ni son ni vibration différenciés : ils trahiraient la
+    // réponse avant le corrigé.
+    if (widget.examen) return;
+    // Un son de combo tous les trois succès d'affilée, sinon le son de base.
+    etat.jouer(!reussie
+        ? Son.mauvaise
+        : _combo >= 3 && _combo % 3 == 0
+            ? Son.combo
+            : Son.bonne);
     // Petit retour haptique sur téléphone (sans effet sur le web).
-    if (!context.read<AppState>().parametres.vibrations) return;
-    if (_session.derniereReussie) {
+    if (!etat.parametres.vibrations) return;
+    if (reussie) {
       HapticFeedback.lightImpact();
     } else {
       HapticFeedback.heavyImpact();
@@ -131,12 +185,17 @@ class _QuizScreenState extends State<QuizScreen> {
       _session.suivante();
       if (!_session.estTerminee) _ordreEnCours = _ordreInitial();
     });
-    if (_session.estTerminee) _finir();
+    if (_session.estTerminee) {
+      _finir();
+    } else if (widget.eclair) {
+      _demarrerQuestion();
+    }
   }
 
   /// Enregistre le résultat et affiche l'écran Résultat.
   void _finir() {
     _chrono?.cancel();
+    _chronoQuestion?.cancel();
     _tempsUtilise.stop();
     {
       final complet = widget.questions == null ||
@@ -146,19 +205,23 @@ class _QuizScreenState extends State<QuizScreen> {
       // Réussi avant ce quiz ? Sert à fêter (ou non) le passage du seuil.
       final dejaReussi =
           widget.module != null && etat.moduleReussi(widget.module!);
+      // Record éclair avant ce quiz, pour fêter (ou non) un nouveau record.
+      final recordAvant = etat.meilleurEclair;
       // La sauvegarde part en arrière-plan ; on n'attend pas pour afficher.
       etat.enregistrerResultat(
         _session,
         moduleComplet: complet ? widget.module : null,
         examen: widget.examen,
+        eclair: widget.eclair,
       );
-      _afficherResultat(dejaReussi: dejaReussi);
+      etat.jouer(Son.fin);
+      _afficherResultat(dejaReussi: dejaReussi, recordAvant: recordAvant);
     }
   }
 
   /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
   /// résultat ramène donc à l'accueil, pas au milieu du quiz.
-  void _afficherResultat({required bool dejaReussi}) {
+  void _afficherResultat({required bool dejaReussi, required int recordAvant}) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
         builder: (_) => ResultatScreen(
@@ -169,6 +232,9 @@ class _QuizScreenState extends State<QuizScreen> {
           total: _session.total,
           questionsRatees: _session.questionsRatees,
           tempsUtilise: widget.examen ? _tempsUtilise.elapsed : null,
+          eclair: widget.eclair,
+          recordAvant: recordAvant,
+          meilleurCombo: _meilleurCombo,
         ),
       ),
     );
@@ -216,6 +282,15 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         title: Text(_titre),
         actions: [
+          if (widget.eclair)
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: _CompteARebours(
+                secondes: _restantQuestion,
+                total: AppState.dureeQuestionEclair.inSeconds,
+                fige: aRepondu,
+              ),
+            ),
           if (widget.duree != null)
             Padding(
               padding: const EdgeInsets.only(right: 16),
@@ -282,10 +357,14 @@ class _QuizScreenState extends State<QuizScreen> {
             ..._buildOrdre(theme)
           else
             for (var i = 0; i < _session.reponsesAffichees.length; i++)
-              ReponseButton(
-                texte: _session.reponsesAffichees[i],
-                etat: _etatQcm(i),
-                onPressed: aRepondu ? null : () => _repondre(i),
+              _Secousse(
+                // La secousse ne joue que sur la réponse fausse choisie.
+                active: _etatQcm(i) == EtatReponse.mauvaise,
+                child: ReponseButton(
+                  texte: _session.reponsesAffichees[i],
+                  etat: _etatQcm(i),
+                  onPressed: aRepondu ? null : () => _repondre(i),
+                ),
               ),
           // De la place pour que le panneau du bas ne cache rien.
           const SizedBox(height: 24),
@@ -318,7 +397,10 @@ class _QuizScreenState extends State<QuizScreen> {
     final encre = reussie ? const Color(0xFF3D8A00) : const Color(0xFFC62828);
     return _CadreBas(
       couleur: fond,
-      child: Column(
+      // Le panneau glisse du bas à chaque nouvelle question (clé = numéro).
+      child: _Apparition(
+        key: ValueKey(_session.numero),
+        child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -326,13 +408,45 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               Icon(reussie ? Icons.task_alt : Icons.highlight_off, color: encre, size: 28),
               const SizedBox(width: 8),
-              Text(
-                reussie ? 'Bonne réponse !' : 'Mauvaise réponse',
-                style: theme.textTheme.titleLarge?.copyWith(
-                  color: encre,
-                  fontWeight: FontWeight.w800,
+              Expanded(
+                child: Text(
+                  reussie
+                      ? 'Bonne réponse !'
+                      : _session.tempsEcoule
+                          ? 'Trop tard !'
+                          : 'Mauvaise réponse',
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    color: encre,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
+              if (reussie && _combo >= 2)
+                _Pop(
+                  key: ValueKey('combo$_combo'),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.orange.shade600,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.local_fire_department,
+                            color: Colors.white, size: 18),
+                        const SizedBox(width: 4),
+                        Text(
+                          'Combo ×$_combo',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
             ],
           ),
           const SizedBox(height: 6),
@@ -357,6 +471,7 @@ class _QuizScreenState extends State<QuizScreen> {
             onPressed: _suivante,
           ),
         ],
+        ),
       ),
     );
   }
@@ -433,6 +548,119 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
       ],
     ];
+  }
+}
+
+/// Compte à rebours du mode éclair : anneau qui se vide, rouge sur les
+/// trois dernières secondes.
+class _CompteARebours extends StatelessWidget {
+  const _CompteARebours({required this.secondes, required this.total, required this.fige});
+
+  final int secondes;
+  final int total;
+
+  /// Réponse donnée : le chrono s'arrête et passe en gris.
+  final bool fige;
+
+  @override
+  Widget build(BuildContext context) {
+    final couleur = fige
+        ? Theme.of(context).colorScheme.outline
+        : secondes <= 3
+            ? Colors.red
+            : Colors.amber.shade800;
+    return SizedBox(
+      width: 40,
+      height: 40,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          // TweenAnimationBuilder lisse le passage d'une seconde à l'autre.
+          TweenAnimationBuilder<double>(
+            tween: Tween(end: secondes / total),
+            duration: const Duration(milliseconds: 300),
+            builder: (_, v, _) => CircularProgressIndicator(
+              value: v,
+              strokeWidth: 4,
+              color: couleur,
+              backgroundColor: couleur.withValues(alpha: 0.2),
+            ),
+          ),
+          Center(
+            child: Text(
+              '$secondes',
+              style: TextStyle(
+                fontWeight: FontWeight.w800,
+                color: couleur,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Secoue son enfant de gauche à droite une fois quand [active] devient
+/// vrai (mauvaise réponse).
+class _Secousse extends StatelessWidget {
+  const _Secousse({required this.active, required this.child});
+
+  final bool active;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    if (!active) return child;
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 400),
+      builder: (_, t, enfant) => Transform.translate(
+        offset: Offset(math.sin(t * math.pi * 4) * 8 * (1 - t), 0),
+        child: enfant,
+      ),
+      child: child,
+    );
+  }
+}
+
+/// Fait apparaître son enfant en glissant du bas avec un fondu.
+class _Apparition extends StatelessWidget {
+  const _Apparition({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOut,
+      builder: (_, t, enfant) => Opacity(
+        opacity: t,
+        child: Transform.translate(offset: Offset(0, 24 * (1 - t)), child: enfant),
+      ),
+      child: child,
+    );
+  }
+}
+
+/// Petit « pop » élastique à l'apparition (pastille de combo).
+class _Pop extends StatelessWidget {
+  const _Pop({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0.4, end: 1),
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.elasticOut,
+      builder: (_, s, enfant) => Transform.scale(scale: s, child: enfant),
+      child: child,
+    );
   }
 }
 

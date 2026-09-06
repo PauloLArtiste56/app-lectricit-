@@ -5,6 +5,7 @@ import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
 import 'package:elecapp/data/quetes.dart';
 import 'package:elecapp/data/quiz_session.dart';
+import 'package:elecapp/data/sons.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/parametres.dart';
 import 'package:elecapp/models/question.dart';
@@ -115,8 +116,11 @@ void main() {
       session.suivante();
     }
     await etat.enregistrerResultat(session);
-    expect(etat.xpDuJour, 30);
-    expect(etat.progressionObjectif, closeTo(0.6, 0.001));
+    // 3 bonnes réponses = 30 XP, plus une éventuelle quête accomplie.
+    final bonus = etat.recompenses.fold(0, (s, r) => s + r.xp);
+    expect(etat.xpDuJour, 30 + bonus);
+    expect(etat.progressionObjectif,
+        closeTo(((30 + bonus) / 50).clamp(0.0, 1.0), 0.001));
 
     await etat.modifierParametres(const Parametres(objectifXpJour: 20));
     expect(etat.objectifAtteint, isTrue);
@@ -141,18 +145,19 @@ void main() {
     expect(etat.fichesLuesAujourdhui, 3);
 
     Future<void> quiz(List<Question> questions,
-        {Module? moduleComplet, bool examen = false}) async {
+        {Module? moduleComplet, bool examen = false, bool eclair = false}) async {
       final session = QuizSession(questions, melanger: false);
       for (final q in questions) {
         session.repondre(q.bonne);
         session.suivante();
       }
       await etat.enregistrerResultat(session,
-          moduleComplet: moduleComplet, examen: examen);
+          moduleComplet: moduleComplet, examen: examen, eclair: eclair);
     }
 
     await quiz(module.questions.take(5).toList());
     await quiz(module.questions.take(5).toList(), examen: true);
+    await quiz(module.questions.take(5).toList(), eclair: true);
     await quiz(module.questions, moduleComplet: module);
     await quiz(module.questions, moduleComplet: module);
 
@@ -188,6 +193,43 @@ void main() {
     await etat3.charger();
     expect(etat3.quetesDuJour.every((q) => !q.accomplie), isTrue);
     expect(etat3.xpDuJour, 0);
+  });
+
+  test('mode éclair : questions sans « ordre », record et historique', () async {
+    final etat = await etatCharge();
+    expect(etat.meilleurEclair, 0);
+    final questions = etat.questionsEclair(random: Random(1));
+    expect(questions.length, AppState.questionsParEclair);
+    expect(questions.every((q) => q.type != TypeQuestion.ordre), isTrue);
+    // Uniquement dans les modules déjà abordés (le premier au départ).
+    final premier = etat.modules.first;
+    expect(questions.every((q) => premier.questions.contains(q)), isTrue);
+
+    final session = QuizSession(questions, melanger: false);
+    for (var i = 0; i < questions.length; i++) {
+      // 7 bonnes, 3 passées faute de temps.
+      if (i < 7) {
+        session.repondre(questions[i].bonne);
+      } else {
+        session.passer();
+      }
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, eclair: true);
+    expect(etat.meilleurEclair, 7);
+    expect(etat.historique.last.moduleId, AppState.idEclair);
+    expect(etat.historique.last.score, 7);
+  });
+
+  test('les sons respectent le réglage', () async {
+    final sons = Sons(actif: false);
+    final etat = AppState(sons: sons);
+    await etat.charger();
+    etat.jouer(Son.bonne);
+    expect(sons.joues, [Son.bonne]);
+    await etat.modifierParametres(const Parametres(sons: false));
+    etat.jouer(Son.mauvaise);
+    expect(sons.joues, [Son.bonne]);
   });
 
   test('les quêtes d\'un jour sont toujours les mêmes trois', () {

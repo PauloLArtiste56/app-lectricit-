@@ -253,6 +253,7 @@ class _LigneHistorique extends StatelessWidget {
     final titre = switch (entree.moduleId) {
       AppState.idRevision => 'Révision',
       AppState.idExamen => 'Examen blanc',
+      AppState.idEclair => 'Mode éclair',
       final id => etat.moduleParId(id)?.titre ?? id,
     };
     final reussi = entree.score == entree.total;
