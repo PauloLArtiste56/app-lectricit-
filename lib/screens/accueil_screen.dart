@@ -5,6 +5,7 @@ import '../data/app_state.dart';
 import '../models/module.dart';
 import '../widgets/couleurs_parcours.dart';
 import '../widgets/module_card.dart';
+import 'glossaire_screen.dart';
 import 'module_screen.dart';
 
 /// Onglet Modules : tous les modules par thème, avec leur progression et un
@@ -50,6 +51,15 @@ class _AccueilScreenState extends State<AccueilScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Tous les modules'),
+        actions: [
+          IconButton(
+            tooltip: 'Glossaire',
+            icon: const Icon(Icons.menu_book_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const GlossaireScreen()),
+            ),
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
@@ -105,6 +115,7 @@ class _AccueilScreenState extends State<AccueilScreen> {
                 module: module,
                 questionsReussies: etat.questionsReussies(module),
                 couleur: chapitre == null ? null : couleurChapitre(chapitre),
+                couronnes: etat.couronnes(module),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(
                     builder: (_) => ModuleScreen(module: module),

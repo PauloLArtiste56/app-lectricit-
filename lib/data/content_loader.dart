@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 import '../models/cas_pratique.dart';
 import '../models/chapitre.dart';
 import '../models/module.dart';
+import '../models/terme.dart';
 
 /// Charge le contenu pédagogique embarqué dans `assets/content.json`.
 class ContentLoader {
@@ -16,6 +17,7 @@ class ContentLoader {
   static const String cheminContenu = 'assets/content.json';
   static const String cheminParcours = 'assets/parcours.json';
   static const String cheminCas = 'assets/cas_pratiques.json';
+  static const String cheminGlossaire = 'assets/glossaire.json';
 
   Future<List<Module>> chargerModules() async {
     // On lit les octets et on décode nous-mêmes : `loadString` passe par un
@@ -32,6 +34,11 @@ class ContentLoader {
   /// Charge les cas pratiques (`assets/cas_pratiques.json`).
   Future<List<CasPratique>> chargerCasPratiques() async {
     return parserCasPratiques(await _lireTexte(cheminCas));
+  }
+
+  /// Charge le glossaire (`assets/glossaire.json`).
+  Future<List<Terme>> chargerGlossaire() async {
+    return parserGlossaire(await _lireTexte(cheminGlossaire));
   }
 
   Future<String> _lireTexte(String chemin) async {
@@ -60,6 +67,15 @@ class ContentLoader {
     return (data['cas'] as List<dynamic>)
         .cast<Map<String, dynamic>>()
         .map(CasPratique.fromJson)
+        .toList();
+  }
+
+  /// Transforme le JSON du glossaire en liste de termes.
+  static List<Terme> parserGlossaire(String jsonTexte) {
+    final data = jsonDecode(jsonTexte) as Map<String, dynamic>;
+    return (data['termes'] as List<dynamic>)
+        .cast<Map<String, dynamic>>()
+        .map(Terme.fromJson)
         .toList();
   }
 

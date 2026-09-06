@@ -215,6 +215,8 @@ class _QuizScreenState extends State<QuizScreen> {
           widget.module != null && etat.moduleReussi(widget.module!);
       // Record éclair avant ce quiz, pour fêter (ou non) un nouveau record.
       final recordAvant = etat.meilleurEclair;
+      final couronnesAvant =
+          widget.module == null ? 0 : etat.couronnes(widget.module!);
       // La sauvegarde part en arrière-plan ; on n'attend pas pour afficher.
       etat.enregistrerResultat(
         _session,
@@ -224,13 +226,21 @@ class _QuizScreenState extends State<QuizScreen> {
         cas: widget.cas,
       );
       etat.jouer(Son.fin);
-      _afficherResultat(dejaReussi: dejaReussi, recordAvant: recordAvant);
+      _afficherResultat(
+        dejaReussi: dejaReussi,
+        recordAvant: recordAvant,
+        couronnesAvant: couronnesAvant,
+      );
     }
   }
 
   /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
   /// résultat ramène donc à l'accueil, pas au milieu du quiz.
-  void _afficherResultat({required bool dejaReussi, required int recordAvant}) {
+  void _afficherResultat({
+    required bool dejaReussi,
+    required int recordAvant,
+    required int couronnesAvant,
+  }) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
         builder: (_) => ResultatScreen(
@@ -244,6 +254,7 @@ class _QuizScreenState extends State<QuizScreen> {
           eclair: widget.eclair,
           recordAvant: recordAvant,
           meilleurCombo: _meilleurCombo,
+          couronnesAvant: couronnesAvant,
         ),
       ),
     );

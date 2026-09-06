@@ -25,6 +25,7 @@ flutter:
     - assets/content.json
     - assets/parcours.json
     - assets/cas_pratiques.json
+    - assets/glossaire.json
     - assets/images/
     - assets/images/decors/
     - assets/images/questions/

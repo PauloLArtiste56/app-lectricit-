@@ -80,6 +80,12 @@ class StatsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           _Tuile(
+            titre: 'Couronnes',
+            valeur: '${etat.couronnesTotal} / ${etat.couronnesMax}',
+            detail: 'réussi, sans faute, confirmé en révision : 3 par module',
+          ),
+          const SizedBox(height: 12),
+          _Tuile(
             titre: 'Niveau ${etat.niveau}',
             valeur: '${etat.xpTotal} XP',
             detail: 'encore ${etat.xpManquants} XP pour le niveau ${etat.niveau + 1} '
