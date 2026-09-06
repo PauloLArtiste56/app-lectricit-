@@ -69,8 +69,8 @@ void main() {
     expect(find.text('0 %'), findsOneWidget);
     expect(find.textContaining('Aucun quiz'), findsOneWidget);
 
-    // Et l'accueil est bien repassé à zéro.
-    await tester.tap(find.text('Accueil'));
+    // Et la liste des modules est bien repassée à zéro.
+    await tester.tap(find.text('Modules'));
     await tester.pumpAndSettle();
     expect(find.text('0/20 questions réussies'), findsNWidgets(100));
   });

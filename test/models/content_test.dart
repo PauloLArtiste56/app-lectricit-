@@ -67,4 +67,19 @@ void main() {
   test('un type de question inconnu est refusé clairement', () {
     expect(() => TypeQuestion.fromCode('devinette'), throwsFormatException);
   });
+
+  test('le parcours range chaque module dans un chapitre, une seule fois', () {
+    final modules = ContentLoader.parserModules(
+        File('assets/content.json').readAsStringSync());
+    final chapitres = ContentLoader.parserParcours(
+        File('assets/parcours.json').readAsStringSync());
+    expect(chapitres.length, 10);
+    final ids = [for (final c in chapitres) ...c.modulesIds];
+    expect(ids.toSet().length, ids.length, reason: 'module en double');
+    expect(ids.toSet(), modules.map((m) => m.id).toSet());
+    for (final c in chapitres) {
+      expect(c.titre, isNotEmpty);
+      expect(c.modulesIds, isNotEmpty);
+    }
+  });
 }

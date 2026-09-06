@@ -10,13 +10,14 @@ une étape à la fois.
 
 ✅ V1 complète et enrichie : 100 modules regroupés par thème, chacun avec 3 fiches illustrées
 et 20 questions (2 000 questions, dont des questions « remettre dans l'ordre »). Séance du jour
-avec révision espacée, série de jours, révision des points faibles, questions et réponses
+avec révision espacée, série de jours, parcours en 10 chapitres façon Duolingo, révision des points faibles, questions et réponses
 mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
 modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,
 conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
-Parcours : Accueil → Module → Fiches → Quiz (feedback immédiat) → Résultat (« Refaire les
-ratées ») → Accueil. La progression est sauvegardée sur l'appareil et l'onglet Stats montre
+Navigation : Parcours (chemin en 10 chapitres, un rond par module) → Module → Fiches → Quiz
+(feedback immédiat) → Résultat (« Refaire les ratées ») → Parcours. L'onglet Modules liste
+tout par thème pour aller droit sur un sujet. La progression est sauvegardée sur l'appareil et l'onglet Stats montre
 le score global, les modules terminés et l'historique. Le cadrage complet (périmètre, modèle de données, ordre de
 développement, conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 

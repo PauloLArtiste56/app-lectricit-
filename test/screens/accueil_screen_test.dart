@@ -14,7 +14,7 @@ void _ecranHaut(WidgetTester tester) {
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  testWidgets("l'accueil affiche les modules avec leur progression",
+  testWidgets("l'onglet Modules affiche les modules avec leur progression",
       (tester) async {
     _ecranHaut(tester);
     await tester.pumpWidget(const ElecApp());
@@ -22,6 +22,8 @@ void main() {
     // Pendant le chargement du JSON, un indicateur tourne.
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
 
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Modules'));
     await tester.pumpAndSettle();
 
     expect(find.text("Grandeurs électriques et loi d'Ohm"), findsOneWidget);
