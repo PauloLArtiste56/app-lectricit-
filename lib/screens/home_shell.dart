@@ -16,18 +16,29 @@ class HomeShell extends StatefulWidget {
 class _HomeShellState extends State<HomeShell> {
   int _onglet = 0;
 
+  /// Onglets déjà ouverts : les autres ne sont pas construits tant qu'on
+  /// n'y est pas allé, pour alléger le démarrage sur téléphone.
+  final _visites = {0};
+
   @override
   Widget build(BuildContext context) {
+    const onglets = [ParcoursScreen(), AccueilScreen(), StatsScreen()];
     return Scaffold(
-      // IndexedStack garde les onglets en mémoire : on ne perd pas
+      // IndexedStack garde les onglets visités en mémoire : on ne perd pas
       // la position de défilement en passant de l'un à l'autre.
       body: IndexedStack(
         index: _onglet,
-        children: const [ParcoursScreen(), AccueilScreen(), StatsScreen()],
+        children: [
+          for (var i = 0; i < onglets.length; i++)
+            _visites.contains(i) ? onglets[i] : const SizedBox.shrink(),
+        ],
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _onglet,
-        onDestinationSelected: (i) => setState(() => _onglet = i),
+        onDestinationSelected: (i) => setState(() {
+          _onglet = i;
+          _visites.add(i);
+        }),
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.route_outlined),
