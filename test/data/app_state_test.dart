@@ -309,6 +309,47 @@ void main() {
     expect(etat.badgesObtenus.keys, contains('triple_couronne'));
   });
 
+  test('un gel de série comble un jour manqué, deux gels deux jours, pas plus',
+      () async {
+    var maintenant = DateTime(2026, 9, 1);
+    final etat = AppState(horloge: () => maintenant);
+    await etat.charger();
+    final module = etat.modules.first;
+    Future<void> quiz() async {
+      final session = QuizSession(module.questions, melanger: false);
+      for (final q in module.questions) {
+        session.repondre(q.bonne);
+        session.suivante();
+      }
+      await etat.enregistrerResultat(session, moduleComplet: module);
+    }
+
+    await quiz(); // 1er septembre : 200 XP
+    expect(etat.serieJours, 1);
+    expect(etat.peutAcheterGel(), isTrue);
+    expect(await etat.acheterGel(), isTrue);
+    expect(await etat.acheterGel(), isTrue);
+    expect(etat.gels, 2);
+    expect(etat.xpDisponibles, etat.xpTotal - 2 * AppState.prixGel);
+    expect(etat.xpDepenses, 2 * AppState.prixGel);
+    // Deux au maximum.
+    expect(await etat.acheterGel(), isFalse);
+
+    // Le 2 est manqué ; le 3, la série tient grâce à un gel.
+    maintenant = DateTime(2026, 9, 3);
+    await quiz();
+    expect(etat.gels, 1);
+    expect(etat.gelsUtilises, ['2026-09-02']);
+    expect(etat.serieJours, 3);
+
+    // Les 4 et 5 manqués : un seul gel, la série est perdue, le gel gardé.
+    maintenant = DateTime(2026, 9, 6);
+    final relu = AppState(horloge: () => maintenant);
+    await relu.charger();
+    expect(relu.gels, 1);
+    expect(relu.serieJours, 0);
+  });
+
   test('les quêtes d\'un jour sont toujours les mêmes trois', () {
     final a = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
     final b = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();

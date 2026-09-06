@@ -6,12 +6,14 @@ import 'package:provider/provider.dart';
 import '../data/app_state.dart';
 import '../models/chapitre.dart';
 import '../models/module.dart';
+import '../models/tenue.dart';
 import '../widgets/banniere_chapitre.dart';
 import '../widgets/carte_entrainement.dart';
 import '../widgets/carte_quetes.dart';
 import '../widgets/couleurs_parcours.dart';
 import '../widgets/noeud_module.dart';
 import 'module_screen.dart';
+import 'boutique_screen.dart';
 import 'parametres_screen.dart';
 
 /// Écran Parcours : la carte d'entraînement puis le chemin des modules,
@@ -92,6 +94,13 @@ class _ParcoursScreenState extends State<ParcoursScreen> {
       appBar: AppBar(
         title: const Text('ElecApp'),
         actions: [
+          IconButton(
+            tooltip: 'Boutique',
+            icon: const Icon(Icons.storefront_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const BoutiqueScreen()),
+            ),
+          ),
           IconButton(
             tooltip: 'Paramètres',
             icon: const Icon(Icons.settings_outlined),
@@ -237,7 +246,7 @@ class _SectionChapitre extends StatelessWidget {
                       ),
                     if (indexCourant >= 0)
                       _mascotte(centres[indexCourant], largeur,
-                          reussis / math.max(modules.length, 1)),
+                          reussis / math.max(modules.length, 1), etat.tenuePortee),
                   ],
                 ),
               );
@@ -279,7 +288,7 @@ class _SectionChapitre extends StatelessWidget {
 
   /// La pile mascotte, posée en face du module en cours. Sa charge suit
   /// l'avancement du chapitre. Elle glisse quand le module en cours change.
-  Widget _mascotte(Offset centre, double largeur, double avancement) {
+  Widget _mascotte(Offset centre, double largeur, double avancement, Tenue? tenue) {
     final niveau = (avancement * 3).round().clamp(0, 3);
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 700),
@@ -288,8 +297,17 @@ class _SectionChapitre extends StatelessWidget {
       top: centre.dy - hauteurPile / 2,
       width: largeurPile,
       height: hauteurPile,
-      child: Image.asset('assets/images/decors/pile_$niveau.png',
-          filterQuality: FilterQuality.medium),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset('assets/images/decors/pile_$niveau.png',
+              filterQuality: FilterQuality.medium),
+          // La tenue achetée en boutique, calque transparent par-dessus.
+          if (tenue case final t?)
+            Image.asset('assets/images/${t.image}',
+                filterQuality: FilterQuality.medium),
+        ],
+      ),
     );
   }
 
