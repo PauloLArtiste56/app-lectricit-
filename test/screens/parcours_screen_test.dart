@@ -1,3 +1,7 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/widgets/banniere_chapitre.dart';
 import 'package:elecapp/widgets/noeud_module.dart';
@@ -77,5 +81,41 @@ void main() {
     expect(noeuds[1].courant, isTrue);
     expect(noeuds[2].etat, EtatNoeud.verrouille);
     expect(find.text('1/11'), findsOneWidget);
+  });
+
+  testWidgets("à l'ouverture, le parcours défile jusqu'au module en cours",
+      (tester) async {
+    // Les 15 premiers modules du chemin sont réussis : le module en cours
+    // est loin sous la première page.
+    final modules = ContentLoader.parserModules(
+        File('assets/content.json').readAsStringSync());
+    final chapitres = ContentLoader.parserParcours(
+        File('assets/parcours.json').readAsStringSync());
+    final chemin = [for (final c in chapitres) ...c.modulesIds];
+    final progression = <String, Object>{};
+    for (final id in chemin.take(15)) {
+      final m = modules.firstWhere((m) => m.id == id);
+      progression[id] = {
+        'questions_reussies': m.questions.map((q) => q.id).toList(),
+      };
+    }
+    SharedPreferences.setMockInitialValues({
+      'progression': jsonEncode({
+        'progression': progression,
+        'historique': <Object>[],
+      }),
+    });
+    tester.view.physicalSize = const Size(480, 900);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(const ElecApp());
+    await tester.pumpAndSettle();
+
+    final bulle = tester.getRect(find.text('COMMENCER'));
+    expect(bulle.top, greaterThan(0));
+    expect(bulle.bottom, lessThan(900));
+    final noeuds = tester.widgetList<NoeudModule>(find.byType(NoeudModule)).toList();
+    expect(noeuds[15].courant, isTrue);
   });
 }
