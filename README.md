@@ -15,7 +15,7 @@ mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continue
 modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,
 conventions) est dans [`CLAUDE.md`](CLAUDE.md).
 
-Navigation : Parcours (chemin en 10 chapitres, un rond par module) → Module → Fiches → Quiz
+Navigation : Parcours (chemin en 10 chapitres façon Duolingo, modules déverrouillés un à un, mascotte pile) → Module → Fiches → Quiz
 (feedback immédiat) → Résultat (« Refaire les ratées ») → Parcours. L'onglet Modules liste
 tout par thème pour aller droit sur un sujet. La progression est sauvegardée sur l'appareil et l'onglet Stats montre
 le score global, les modules terminés et l'historique. Le cadrage complet (périmètre, modèle de données, ordre de

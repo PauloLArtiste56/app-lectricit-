@@ -40,9 +40,15 @@ Navigation : barre du bas avec Parcours / Modules / Stats.
 Parcours → Module → Fiche → Quiz → Résultat → Parcours.
 
 Parcours (inspiré de Duolingo) : les 100 modules sont rangés en 10 chapitres dans
-`assets/parcours.json` ; l'écran Parcours affiche la séance du jour puis un chemin en
-serpentin avec un rond par module (gris à faire, bleu en cours, vert réussi à 80 %).
-L'onglet Modules garde la liste complète par thème pour aller droit sur un sujet.
+`assets/parcours.json` (titre, couleur, illustrations, ordre des modules). L'écran
+Parcours affiche la séance du jour puis un chemin en serpentin sur fond teinté par
+chapitre, avec un bouton en relief par module : cadenas si verrouillé, couleur du
+chapitre à faire ou en cours (bulle « Commencer » sur le module courant), vert avec
+coche dès 80 % des questions réussies. Les modules se déverrouillent un à un dans
+l'ordre du chemin. Une mascotte « pile » se pose en face du module courant et se
+charge avec l'avancement du chapitre ; des illustrations plates (générées par
+`tools/schemas/generer_decors.py`, PNG dans `assets/images/decors/`) jalonnent le
+chemin. L'onglet Modules garde la liste complète par thème, sans verrou.
 
 Ajouts faits depuis : révision ciblée (les questions ratées reviennent jusqu'à être réussies),
 mélange des questions et réponses, "Revoir la fiche" après une erreur, questions de type `ordre`,
@@ -226,7 +232,7 @@ lib/
 assets/
   content.json    # modules, fiches, questions
   parcours.json   # chapitres du parcours et ordre des modules
-  images/
+  images/         # schémas des fiches ; decors/ : illustrations et mascotte du parcours
 ```
 
 ## Ordre de développement
