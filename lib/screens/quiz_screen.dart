@@ -33,7 +33,6 @@ class QuizScreen extends StatefulWidget {
     this.melanger = true,
     this.examen = false,
     this.duree,
-    this.eclair = false,
     this.cas,
   }) : assert(module != null || questions != null || cas != null);
 
@@ -49,9 +48,6 @@ class QuizScreen extends StatefulWidget {
 
   /// Temps imparti (mode examen). Sans limite si null.
   final Duration? duree;
-
-  /// Mode éclair : un compte à rebours par question, sans question « ordre ».
-  final bool eclair;
 
   /// Cas pratique : ses étapes dans l'ordre, avec la situation rappelée
   /// au-dessus de chaque question.
@@ -79,10 +75,6 @@ class _QuizScreenState extends State<QuizScreen> {
   late Duration _restant = widget.duree ?? Duration.zero;
   final Stopwatch _tempsUtilise = Stopwatch();
 
-  /// Mode éclair : compte à rebours de la question en cours, en secondes.
-  Timer? _chronoQuestion;
-  int _restantQuestion = AppState.dureeQuestionEclair.inSeconds;
-
   /// Bonnes réponses d'affilée (combo) et meilleur combo du quiz.
   int _combo = 0;
   int _meilleurCombo = 0;
@@ -105,34 +97,12 @@ class _QuizScreenState extends State<QuizScreen> {
         if (_restant <= Duration.zero) _tempsEcoule();
       });
     }
-    if (widget.eclair) _demarrerQuestion();
   }
 
   @override
   void dispose() {
     _chrono?.cancel();
-    _chronoQuestion?.cancel();
     super.dispose();
-  }
-
-  /// Mode éclair : (re)lance le compte à rebours de la question courante.
-  /// Un « tic » sur les trois dernières secondes ; à zéro, la question est
-  /// passée et compte ratée.
-  void _demarrerQuestion() {
-    _chronoQuestion?.cancel();
-    _restantQuestion = AppState.dureeQuestionEclair.inSeconds;
-    _chronoQuestion = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (!mounted || _session.aRepondu) return;
-      setState(() => _restantQuestion--);
-      if (_restantQuestion <= 0) {
-        _chronoQuestion?.cancel();
-        setState(() => _session.passer());
-        _combo = 0;
-        context.read<AppState>().jouer(Son.mauvaise);
-      } else if (_restantQuestion <= 3) {
-        context.read<AppState>().jouer(Son.tic);
-      }
-    });
   }
 
   void _tempsEcoule() {
@@ -148,7 +118,6 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _apresReponse() {
-    _chronoQuestion?.cancel();
     final etat = context.read<AppState>();
     final reussie = _session.derniereReussie;
     if (reussie) {
@@ -193,17 +162,12 @@ class _QuizScreenState extends State<QuizScreen> {
       _session.suivante();
       if (!_session.estTerminee) _ordreEnCours = _ordreInitial();
     });
-    if (_session.estTerminee) {
-      _finir();
-    } else if (widget.eclair) {
-      _demarrerQuestion();
-    }
+    if (_session.estTerminee) _finir();
   }
 
   /// Enregistre le résultat et affiche l'écran Résultat.
   void _finir() {
     _chrono?.cancel();
-    _chronoQuestion?.cancel();
     _tempsUtilise.stop();
     {
       final complet = widget.questions == null ||
@@ -213,8 +177,6 @@ class _QuizScreenState extends State<QuizScreen> {
       // Réussi avant ce quiz ? Sert à fêter (ou non) le passage du seuil.
       final dejaReussi =
           widget.module != null && etat.moduleReussi(widget.module!);
-      // Record éclair avant ce quiz, pour fêter (ou non) un nouveau record.
-      final recordAvant = etat.meilleurEclair;
       final couronnesAvant =
           widget.module == null ? 0 : etat.couronnes(widget.module!);
       // La sauvegarde part en arrière-plan ; on n'attend pas pour afficher.
@@ -222,25 +184,16 @@ class _QuizScreenState extends State<QuizScreen> {
         _session,
         moduleComplet: complet ? widget.module : null,
         examen: widget.examen,
-        eclair: widget.eclair,
         cas: widget.cas,
       );
       etat.jouer(Son.fin);
-      _afficherResultat(
-        dejaReussi: dejaReussi,
-        recordAvant: recordAvant,
-        couronnesAvant: couronnesAvant,
-      );
+      _afficherResultat(dejaReussi: dejaReussi, couronnesAvant: couronnesAvant);
     }
   }
 
   /// Remplace l'écran Quiz par l'écran Résultat : le bouton "retour" du
   /// résultat ramène donc à l'accueil, pas au milieu du quiz.
-  void _afficherResultat({
-    required bool dejaReussi,
-    required int recordAvant,
-    required int couronnesAvant,
-  }) {
+  void _afficherResultat({required bool dejaReussi, required int couronnesAvant}) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
         builder: (_) => ResultatScreen(
@@ -251,8 +204,6 @@ class _QuizScreenState extends State<QuizScreen> {
           total: _session.total,
           questionsRatees: _session.questionsRatees,
           tempsUtilise: widget.examen ? _tempsUtilise.elapsed : null,
-          eclair: widget.eclair,
-          recordAvant: recordAvant,
           meilleurCombo: _meilleurCombo,
           couronnesAvant: couronnesAvant,
         ),
@@ -302,15 +253,6 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         title: Text(_titre),
         actions: [
-          if (widget.eclair)
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: _CompteARebours(
-                secondes: _restantQuestion,
-                total: AppState.dureeQuestionEclair.inSeconds,
-                fige: aRepondu,
-              ),
-            ),
           if (widget.duree != null)
             Padding(
               padding: const EdgeInsets.only(right: 16),
@@ -451,11 +393,7 @@ class _QuizScreenState extends State<QuizScreen> {
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  reussie
-                      ? 'Bonne réponse !'
-                      : _session.tempsEcoule
-                          ? 'Trop tard !'
-                          : 'Mauvaise réponse',
+                  reussie ? 'Bonne réponse !' : 'Mauvaise réponse',
                   style: theme.textTheme.titleLarge?.copyWith(
                     color: encre,
                     fontWeight: FontWeight.w800,
@@ -589,57 +527,6 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
       ],
     ];
-  }
-}
-
-/// Compte à rebours du mode éclair : anneau qui se vide, rouge sur les
-/// trois dernières secondes.
-class _CompteARebours extends StatelessWidget {
-  const _CompteARebours({required this.secondes, required this.total, required this.fige});
-
-  final int secondes;
-  final int total;
-
-  /// Réponse donnée : le chrono s'arrête et passe en gris.
-  final bool fige;
-
-  @override
-  Widget build(BuildContext context) {
-    final couleur = fige
-        ? Theme.of(context).colorScheme.outline
-        : secondes <= 3
-            ? Colors.red
-            : Colors.amber.shade800;
-    return SizedBox(
-      width: 40,
-      height: 40,
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          // TweenAnimationBuilder lisse le passage d'une seconde à l'autre.
-          TweenAnimationBuilder<double>(
-            tween: Tween(end: secondes / total),
-            duration: const Duration(milliseconds: 300),
-            builder: (_, v, _) => CircularProgressIndicator(
-              value: v,
-              strokeWidth: 4,
-              color: couleur,
-              backgroundColor: couleur.withValues(alpha: 0.2),
-            ),
-          ),
-          Center(
-            child: Text(
-              '$secondes',
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: couleur,
-                fontFeatures: const [FontFeature.tabularFigures()],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }
 

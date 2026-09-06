@@ -145,19 +145,18 @@ void main() {
     expect(etat.fichesLuesAujourdhui, 3);
 
     Future<void> quiz(List<Question> questions,
-        {Module? moduleComplet, bool examen = false, bool eclair = false}) async {
+        {Module? moduleComplet, bool examen = false}) async {
       final session = QuizSession(questions, melanger: false);
       for (final q in questions) {
         session.repondre(q.bonne);
         session.suivante();
       }
       await etat.enregistrerResultat(session,
-          moduleComplet: moduleComplet, examen: examen, eclair: eclair);
+          moduleComplet: moduleComplet, examen: examen);
     }
 
     await quiz(module.questions.take(5).toList());
     await quiz(module.questions.take(5).toList(), examen: true);
-    await quiz(module.questions.take(5).toList(), eclair: true);
     await quiz(module.questions, moduleComplet: module);
     await quiz(module.questions, moduleComplet: module);
 
@@ -193,32 +192,6 @@ void main() {
     await etat3.charger();
     expect(etat3.quetesDuJour.every((q) => !q.accomplie), isTrue);
     expect(etat3.xpDuJour, 0);
-  });
-
-  test('mode éclair : questions sans « ordre », record et historique', () async {
-    final etat = await etatCharge();
-    expect(etat.meilleurEclair, 0);
-    final questions = etat.questionsEclair(random: Random(1));
-    expect(questions.length, AppState.questionsParEclair);
-    expect(questions.every((q) => q.type != TypeQuestion.ordre), isTrue);
-    // Uniquement dans les modules déjà abordés (le premier au départ).
-    final premier = etat.modules.first;
-    expect(questions.every((q) => premier.questions.contains(q)), isTrue);
-
-    final session = QuizSession(questions, melanger: false);
-    for (var i = 0; i < questions.length; i++) {
-      // 7 bonnes, 3 passées faute de temps.
-      if (i < 7) {
-        session.repondre(questions[i].bonne);
-      } else {
-        session.passer();
-      }
-      session.suivante();
-    }
-    await etat.enregistrerResultat(session, eclair: true);
-    expect(etat.meilleurEclair, 7);
-    expect(etat.historique.last.moduleId, AppState.idEclair);
-    expect(etat.historique.last.score, 7);
   });
 
   test('les sons respectent le réglage', () async {

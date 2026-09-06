@@ -259,7 +259,8 @@ class _LigneHistorique extends StatelessWidget {
     final titre = switch (entree.moduleId) {
       AppState.idRevision => 'Révision',
       AppState.idExamen => 'Examen blanc',
-      AppState.idEclair => 'Mode éclair',
+      // Ancien mode éclair (retiré) : les lignes déjà enregistrées gardent un nom.
+      'eclair' => 'Mode éclair',
       final id when id.startsWith(AppState.prefixeCas) =>
         'Cas pratique : ${etat.casParId(id.substring(AppState.prefixeCas.length))?.titre ?? id}',
       final id => etat.moduleParId(id)?.titre ?? id,

@@ -1,6 +1,5 @@
 """Génère les petits sons de l'appli (WAV mono 22 050 Hz, 16 bits) sans
-aucune dépendance : bonne réponse, mauvaise réponse, combo, fin de quiz,
-tic-tac du mode éclair. Lancer : python tools/sons/generer_sons.py"""
+aucune dépendance : bonne réponse, mauvaise réponse, combo, fin de quiz. Lancer : python tools/sons/generer_sons.py"""
 import math
 import struct
 import wave
@@ -52,5 +51,3 @@ ecrire("combo.wav", [note(659, 0.07, 0.4), note(784, 0.07, 0.4), note(1047, 0.16
 # Fin de quiz : petite fanfare (do mi sol do).
 ecrire("fin.wav", [note(523, 0.12, 0.4), note(659, 0.12, 0.4), note(784, 0.12, 0.4),
                    silence(0.03), note(1047, 0.35, 0.45)])
-# Tic du chrono éclair : un clic bref.
-ecrire("tic.wav", [note(1200, 0.03, 0.25)])

@@ -36,20 +36,6 @@ class CarteEntrainement extends StatelessWidget {
     );
   }
 
-  void _lancerEclair(BuildContext context, AppState etat) {
-    final questions = etat.questionsEclair();
-    if (questions.isEmpty) return;
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (_) => QuizScreen(
-          titre: 'Mode éclair',
-          questions: questions,
-          eclair: true,
-        ),
-      ),
-    );
-  }
-
   void _lancerCartes(BuildContext context, List<Question> questions) {
     if (questions.isEmpty) return;
     Navigator.of(context).push(
@@ -196,17 +182,6 @@ class CarteEntrainement extends StatelessWidget {
               icon: const Icon(Icons.handyman),
               label: Text(
                 'Cas pratiques : ${etat.casResolus} / ${etat.casPratiques.length} résolus',
-              ),
-            ),
-            const SizedBox(height: 8),
-            OutlinedButton.icon(
-              onPressed: () => _lancerEclair(context, etat),
-              icon: Icon(Icons.bolt, color: Colors.amber.shade800),
-              label: Text(
-                etat.meilleurEclair > 0
-                    ? 'Mode éclair · record ${etat.meilleurEclair}/${AppState.questionsParEclair}'
-                    : 'Mode éclair : ${AppState.questionsParEclair} questions, '
-                        '${AppState.dureeQuestionEclair.inSeconds} s chacune',
               ),
             ),
           ],
