@@ -83,8 +83,9 @@ void main() {
     expect(find.text('1 / 2'), findsOneWidget);
   });
 
-  testWidgets("depuis l'accueil, module puis \"Lancer le quiz\" ouvre le quiz",
+  testWidgets("depuis le parcours, module puis \"Lancer le quiz\" ouvre le quiz",
       (tester) async {
+    _ecranHaut(tester);
     await tester.pumpWidget(const ElecApp());
     await tester.pumpAndSettle();
 

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../models/chapitre.dart';
+import 'couleurs_parcours.dart';
 
 /// Bandeau qui ouvre un chapitre sur le parcours : numéro, titre,
-/// description et nombre de modules réussis.
+/// description et nombre de modules réussis. Il prend la couleur du
+/// chapitre, et passe en vert quand tout le chapitre est réussi.
 class BanniereChapitre extends StatelessWidget {
   const BanniereChapitre({
     super.key,
@@ -21,16 +23,21 @@ class BanniereChapitre extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     final complet = total > 0 && reussis == total;
-    final fond = complet ? Colors.green.shade600 : scheme.primary;
-    final avant = complet ? Colors.white : scheme.onPrimary;
+    final fond = complet ? vertReussi : couleurChapitre(chapitre);
+    final ombre = assombrir(fond);
+    final avant = texteSur(fond);
 
-    return Card(
-      color: fond,
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      child: Padding(
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
+      child: Container(
         padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: fond,
+          borderRadius: BorderRadius.circular(18),
+          // Le même relief que les boutons : une ombre pleine vers le bas.
+          boxShadow: [BoxShadow(color: ombre, offset: const Offset(0, 5))],
+        ),
         child: Row(
           children: [
             Expanded(
@@ -38,16 +45,17 @@ class BanniereChapitre extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Chapitre $numero',
+                    'CHAPITRE $numero',
                     style: theme.textTheme.labelMedium?.copyWith(
-                      color: avant.withValues(alpha: 0.8),
+                      color: avant.withValues(alpha: 0.85),
+                      letterSpacing: 1,
                     ),
                   ),
                   Text(
                     chapitre.titre,
-                    style: theme.textTheme.titleMedium?.copyWith(
+                    style: theme.textTheme.titleLarge?.copyWith(
                       color: avant,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w800,
                     ),
                   ),
                   if (chapitre.description.isNotEmpty)

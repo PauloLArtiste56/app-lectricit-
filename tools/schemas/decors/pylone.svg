@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+<ellipse cx="150.0" cy="278" rx="96.0" ry="14" fill="rgba(0,0,0,0.13)"/>
+<line x1="100" y1="262" x2="140" y2="60" stroke="#777777" stroke-width="10" stroke-linecap="round"/>
+<line x1="200" y1="262" x2="160" y2="60" stroke="#777777" stroke-width="10" stroke-linecap="round"/>
+<line x1="140" y1="60" x2="160" y2="60" stroke="#777777" stroke-width="10" stroke-linecap="round"/>
+<line x1="70" y1="110" x2="230" y2="110" stroke="#777777" stroke-width="9" stroke-linecap="round"/>
+<line x1="85" y1="170" x2="215" y2="170" stroke="#777777" stroke-width="9" stroke-linecap="round"/>
+<line x1="110" y1="262" x2="190" y2="170" stroke="#AFAFAF" stroke-width="6" stroke-linecap="round"/>
+<line x1="190" y1="262" x2="110" y2="170" stroke="#AFAFAF" stroke-width="6" stroke-linecap="round"/>
+<line x1="120" y1="170" x2="180" y2="110" stroke="#AFAFAF" stroke-width="6" stroke-linecap="round"/>
+<line x1="180" y1="170" x2="120" y2="110" stroke="#AFAFAF" stroke-width="6" stroke-linecap="round"/>
+<circle cx="70" cy="128" r="8" fill="#1CB0F6" />
+<circle cx="230" cy="128" r="8" fill="#1CB0F6" />
+
+</svg>

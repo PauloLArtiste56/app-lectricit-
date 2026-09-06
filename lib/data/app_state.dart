@@ -46,6 +46,10 @@ class AppState extends ChangeNotifier {
 
   List<Module> _modules = [];
   List<Chapitre> _chapitres = [];
+
+  /// Identifiants des modules dans l'ordre du chemin, tous chapitres
+  /// confondus : c'est cet ordre qui déverrouille les modules un à un.
+  List<String> _ordreParcours = [];
   final Map<String, Module> _moduleParQuestion = {};
   Progression _progression = Progression();
   bool _pret = false;
@@ -64,6 +68,7 @@ class AppState extends ChangeNotifier {
     try {
       _modules = await _loader.chargerModules();
       _chapitres = await _loader.chargerParcours();
+      _ordreParcours = [for (final c in _chapitres) ...c.modulesIds];
       for (final m in _modules) {
         for (final q in m.questions) {
           _moduleParQuestion[q.id] = m;
@@ -212,6 +217,32 @@ class AppState extends ChangeNotifier {
   /// Nombre de modules réussis dans un chapitre.
   int modulesReussisDans(Chapitre chapitre) =>
       modulesDuChapitre(chapitre).where(moduleReussi).length;
+
+  /// Module qui précède [module] sur le chemin, ou null pour le premier
+  /// (et pour un module absent du parcours).
+  Module? moduleAvant(Module module) {
+    final i = _ordreParcours.indexOf(module.id);
+    if (i <= 0) return null;
+    return moduleParId(_ordreParcours[i - 1]);
+  }
+
+  /// Déverrouillé quand le module précédent du chemin est réussi.
+  /// Le premier module, et tout module hors parcours, sont toujours ouverts.
+  bool moduleDeverrouille(Module module) {
+    final avant = moduleAvant(module);
+    return avant == null || moduleReussi(avant);
+  }
+
+  /// Module « en cours » du parcours : le premier déverrouillé mais pas
+  /// encore réussi. Null quand tout le chemin est réussi.
+  Module? get moduleCourant {
+    for (final id in _ordreParcours) {
+      final m = moduleParId(id);
+      if (m == null) continue;
+      if (!moduleReussi(m)) return moduleDeverrouille(m) ? m : null;
+    }
+    return null;
+  }
 
   bool ficheLue(Module module, String ficheId) =>
       progressionDe(module).fichesLues.contains(ficheId);

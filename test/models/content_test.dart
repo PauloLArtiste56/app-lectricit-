@@ -80,6 +80,15 @@ void main() {
     for (final c in chapitres) {
       expect(c.titre, isNotEmpty);
       expect(c.modulesIds, isNotEmpty);
+      expect(c.couleur, matches(RegExp(r'^#[0-9A-Fa-f]{6}$')));
+      expect(c.decors, isNotEmpty);
+      for (final d in c.decors) {
+        expect(File('assets/images/decors/$d.png').existsSync(), isTrue,
+            reason: 'décor manquant : $d');
+      }
+    }
+    for (var n = 0; n <= 3; n++) {
+      expect(File('assets/images/decors/pile_$n.png').existsSync(), isTrue);
     }
   });
 }

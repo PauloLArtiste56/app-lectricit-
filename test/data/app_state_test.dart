@@ -19,6 +19,32 @@ void main() {
     return etat;
   }
 
+  test('le parcours déverrouille les modules un à un', () async {
+    final etat = await etatCharge();
+    final premier = etat.modules.first;
+    final chapitre = etat.chapitres.first;
+    final deuxieme = etat.modulesDuChapitre(chapitre)[1];
+    final troisieme = etat.modulesDuChapitre(chapitre)[2];
+    expect(etat.moduleDeverrouille(premier), isTrue);
+    expect(etat.moduleDeverrouille(deuxieme), isFalse);
+    expect(etat.moduleCourant, premier);
+    expect(etat.moduleAvant(deuxieme), premier);
+
+    // 16 bonnes réponses sur 20 : le seuil de 80 % est atteint.
+    final session = QuizSession(premier.questions, melanger: false);
+    for (final (i, q) in premier.questions.indexed) {
+      session.repondre(i < 16 ? q.bonne : (q.bonne + 1) % q.reponses.length);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session);
+    expect(etat.moduleReussi(premier), isTrue);
+    expect(etat.moduleTermine(premier), isFalse);
+    expect(etat.moduleDeverrouille(deuxieme), isTrue);
+    expect(etat.moduleDeverrouille(troisieme), isFalse);
+    expect(etat.moduleCourant, deuxieme);
+    expect(etat.modulesReussisDans(chapitre), 1);
+  });
+
   test('au départ, aucune question réussie', () async {
     final etat = await etatCharge();
     final module = etat.modules.first;

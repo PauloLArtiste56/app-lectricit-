@@ -4,6 +4,12 @@
       "id": "fondamentaux",
       "titre": "Les fondamentaux",
       "description": "Tension, courant, résistance : les bases pour tout comprendre",
+      "couleur": "#58CC02",
+      "decors": [
+        "ampoule",
+        "pile",
+        "aimant"
+      ],
       "modules": [
         "grandeurs",
         "courant",
@@ -22,6 +28,12 @@
       "id": "maison",
       "titre": "La maison",
       "description": "L'installation domestique de A à Z",
+      "couleur": "#1CB0F6",
+      "decors": [
+        "maison",
+        "prise",
+        "tableau"
+      ],
       "modules": [
         "installation",
         "cablage",
@@ -41,6 +53,12 @@
       "id": "securite_base",
       "titre": "Sécurité de base",
       "description": "Les dangers du courant et comment s'en protéger",
+      "couleur": "#FF4B4B",
+      "decors": [
+        "casque",
+        "panneau_danger",
+        "gants"
+      ],
       "modules": [
         "securite",
         "physiologie",
@@ -57,6 +75,12 @@
       "id": "habilitation",
       "titre": "Habilitation électrique",
       "description": "NF C 18-510 : B0, BS, BR, B1V, B2V, BC",
+      "couleur": "#CE82FF",
+      "decors": [
+        "cadenas",
+        "testeur",
+        "badge"
+      ],
       "modules": [
         "habilitation",
         "voisinage",
@@ -73,6 +97,12 @@
       "id": "depannage",
       "titre": "Mesurer, dépanner, rénover",
       "description": "Les bons réflexes et les bons outils",
+      "couleur": "#FF9600",
+      "decors": [
+        "multimetre",
+        "boite_outils",
+        "cle"
+      ],
       "modules": [
         "depannage",
         "mesures_avancees",
@@ -90,6 +120,12 @@
       "id": "industrie",
       "titre": "Moteurs, industrie et machines",
       "description": "Du moteur asynchrone à l'armoire d'automatisme",
+      "couleur": "#2B70C9",
+      "decors": [
+        "moteur",
+        "engrenage",
+        "robot"
+      ],
       "modules": [
         "moteurs",
         "triphase",
@@ -108,6 +144,12 @@
       "id": "energies",
       "titre": "Énergies et réseaux",
       "description": "De la centrale à la prise, et les renouvelables",
+      "couleur": "#00CD9C",
+      "decors": [
+        "eolienne",
+        "panneau_solaire",
+        "pylone"
+      ],
       "modules": [
         "reseaux",
         "postes_htb",
@@ -127,6 +169,12 @@
       "id": "transports",
       "titre": "Transports et mobilité",
       "description": "Voitures, vélos, trains, avions et bateaux",
+      "couleur": "#FFC800",
+      "decors": [
+        "voiture",
+        "velo",
+        "train"
+      ],
       "modules": [
         "vehicule_electrique",
         "automobile",
@@ -140,6 +188,12 @@
       "id": "tertiaire",
       "titre": "Tertiaire et bâtiments techniques",
       "description": "Bureaux, ERP, locaux techniques et équipements",
+      "couleur": "#FF86D0",
+      "decors": [
+        "immeuble",
+        "extincteur",
+        "ascenseur"
+      ],
       "modules": [
         "tertiaire_erp",
         "ssi",
@@ -158,6 +212,12 @@
       "id": "metier",
       "titre": "Milieux spécialisés et vie du métier",
       "description": "Des chantiers particuliers, et tout ce qui entoure le travail",
+      "couleur": "#A5673F",
+      "decors": [
+        "tracteur",
+        "hopital",
+        "projecteur"
+      ],
       "modules": [
         "agriculture",
         "medical",
