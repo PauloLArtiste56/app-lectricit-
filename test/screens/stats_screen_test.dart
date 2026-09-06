@@ -57,6 +57,9 @@ void main() {
 
     expect(find.text('05/09/2026'), findsOneWidget);
     expect(find.text('8 / 10'), findsOneWidget);
+    // 8 bonnes réponses dans l'historique : 80 XP, toujours niveau 1.
+    expect(find.text('80 XP'), findsOneWidget);
+    expect(find.text('Niveau 1'), findsOneWidget);
     expect(find.textContaining('Aucun quiz'), findsNothing);
 
     // La réinitialisation demande confirmation puis vide tout.

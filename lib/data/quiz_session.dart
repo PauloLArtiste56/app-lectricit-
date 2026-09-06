@@ -102,6 +102,16 @@ class QuizSession {
     }
   }
 
+  /// Termine le quiz tout de suite (temps écoulé) : la question en cours
+  /// si elle est sans réponse, et toutes les suivantes, comptent ratées.
+  void terminerMaintenant() {
+    if (_terminee) return;
+    for (var i = aRepondu ? _index + 1 : _index; i < questions.length; i++) {
+      _ratees.add(questions[i]);
+    }
+    _terminee = true;
+  }
+
   /// Passe à la question suivante, ou termine le quiz après la dernière.
   void suivante() {
     if (!aRepondu || _terminee) return;

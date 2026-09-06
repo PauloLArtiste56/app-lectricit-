@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/foundation.dart';
 
 import '../models/chapitre.dart';
@@ -39,6 +41,26 @@ class AppState extends ChangeNotifier {
 
   /// Nombre maximum de questions dans une séance de révision.
   static const int tailleRevision = 15;
+
+  /// Identifiant utilisé dans l'historique pour un examen blanc.
+  static const String idExamen = 'examen';
+
+  /// Un examen blanc : [tailleExamen] questions en [dureeExamen].
+  static const int tailleExamen = 20;
+  static const Duration dureeExamen = Duration(minutes: 10);
+
+  /// Points d'expérience gagnés par bonne réponse, dans n'importe quel quiz.
+  static const int xpParBonneReponse = 10;
+
+  /// XP rapportés par un quiz.
+  static int xpPour(int score) => score * xpParBonneReponse;
+
+  /// Niveau atteint avec [xp] points : 1 au départ, 2 à 100 XP, 3 à 400,
+  /// 4 à 900… (100 × (niveau − 1)²). Chaque niveau demande un peu plus.
+  static int niveauPour(int xp) => sqrt(xp / 100).floor() + 1;
+
+  /// XP nécessaires pour entrer dans [niveau].
+  static int xpDebutNiveau(int niveau) => 100 * (niveau - 1) * (niveau - 1);
 
   /// Part des questions à réussir pour qu'un module compte comme réussi
   /// sur le parcours (16 questions sur 20).
@@ -188,6 +210,37 @@ class AppState extends ChangeNotifier {
     return [...dues, ...nouvelles.take(tailleSeance - dues.length)];
   }
 
+  /// Modules déjà abordés : déverrouillés sur le parcours, ou commencés
+  /// depuis l'onglet Modules.
+  List<Module> get modulesVus => [
+        for (final m in modulesAvecContenu)
+          if (moduleDeverrouille(m) || questionsReussies(m) > 0) m,
+      ];
+
+  /// Questions d'un examen blanc : tirées au hasard dans les modules déjà
+  /// abordés, sans correction immédiate. [random] est injectable pour les
+  /// tests.
+  List<Question> questionsExamen({Random? random}) {
+    final toutes = [for (final m in modulesVus) ...m.questions]
+      ..shuffle(random ?? Random());
+    return toutes.take(tailleExamen).toList();
+  }
+
+  /// Total des XP, recalculé depuis l'historique (rien à stocker en plus).
+  int get xpTotal => _progression.historique.fold(0, (somme, e) => somme + xpPour(e.score));
+
+  int get niveau => niveauPour(xpTotal);
+
+  /// XP qu'il manque pour le niveau suivant.
+  int get xpManquants => xpDebutNiveau(niveau + 1) - xpTotal;
+
+  /// Avancement dans le niveau en cours, entre 0 et 1.
+  double get progressionNiveau {
+    final debut = xpDebutNiveau(niveau);
+    final fin = xpDebutNiveau(niveau + 1);
+    return (xpTotal - debut) / (fin - debut);
+  }
+
   /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins
   /// un quiz. 0 si la série est cassée.
   int get serieJours {
@@ -275,8 +328,9 @@ class AppState extends ChangeNotifier {
   /// Enregistre la fin d'un quiz. Chaque question met à jour son propre
   /// module (réussie / à revoir). Le meilleur score n'est mis à jour que
   /// pour un quiz complet d'un module ([moduleComplet]).
+  /// [examen] : le quiz était un examen blanc (historique à part).
   Future<void> enregistrerResultat(QuizSession session,
-      {Module? moduleComplet}) async {
+      {Module? moduleComplet, bool examen = false}) async {
     final ratees = session.questionsRatees.map((q) => q.id).toSet();
     for (final q in session.questions) {
       // Une question inconnue de l'index (contenu de test) est rattachée
@@ -305,7 +359,7 @@ class AppState extends ChangeNotifier {
       if (session.score > p.meilleurScore) p.meilleurScore = session.score;
     }
     _progression.historique.add(EntreeHistorique(
-      moduleId: moduleComplet?.id ?? idRevision,
+      moduleId: moduleComplet?.id ?? (examen ? idExamen : idRevision),
       date: _aujourdhui(),
       score: session.score,
       total: session.total,

@@ -19,6 +19,21 @@ class CarteEntrainement extends StatelessWidget {
     );
   }
 
+  void _lancerExamen(BuildContext context, AppState etat) {
+    final questions = etat.questionsExamen();
+    if (questions.isEmpty) return;
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          titre: 'Examen blanc',
+          questions: questions,
+          examen: true,
+          duree: AppState.dureeExamen,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final etat = context.watch<AppState>();
@@ -51,15 +66,36 @@ class CarteEntrainement extends StatelessWidget {
                 Icon(Icons.local_fire_department,
                     color: serie > 0 ? Colors.orange.shade700 : scheme.outline),
                 const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    serie > 0
+                        ? 'Série : $serie jour${serie > 1 ? 's' : ''}'
+                        : 'Pas de série en cours',
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: scheme.onPrimaryContainer,
+                    ),
+                  ),
+                ),
+                Icon(Icons.stars, color: Colors.amber.shade700),
+                const SizedBox(width: 4),
                 Text(
-                  serie > 0
-                      ? 'Série : $serie jour${serie > 1 ? 's' : ''}'
-                      : 'Pas de série en cours',
+                  'Niveau ${etat.niveau} · ${etat.xpTotal} XP',
                   style: theme.textTheme.labelLarge?.copyWith(
                     color: scheme.onPrimaryContainer,
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 6),
+            // Avancement vers le niveau suivant.
+            Tooltip(
+              message: 'Encore ${etat.xpManquants} XP pour le niveau ${etat.niveau + 1}',
+              child: LinearProgressIndicator(
+                value: etat.progressionNiveau,
+                minHeight: 6,
+                color: Colors.amber.shade700,
+                backgroundColor: scheme.surface.withValues(alpha: 0.6),
+              ),
             ),
             const SizedBox(height: 8),
             Text('Ma séance du jour',
@@ -88,6 +124,15 @@ class CarteEntrainement extends StatelessWidget {
                 label: Text('Retravailler mes $faibles point${faibles > 1 ? 's' : ''} faible${faibles > 1 ? 's' : ''}'),
               ),
             ],
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () => _lancerExamen(context, etat),
+              icon: const Icon(Icons.timer_outlined),
+              label: Text(
+                'Examen blanc : ${AppState.tailleExamen} questions '
+                'en ${AppState.dureeExamen.inMinutes} min',
+              ),
+            ),
           ],
         ),
       ),

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/data/progression_store.dart';
@@ -43,6 +45,53 @@ void main() {
     expect(etat.moduleDeverrouille(troisieme), isFalse);
     expect(etat.moduleCourant, deuxieme);
     expect(etat.modulesReussisDans(chapitre), 1);
+  });
+
+  test("l'examen blanc tire 20 questions dans les modules déjà abordés",
+      () async {
+    final etat = await etatCharge();
+    // Au départ, seul le premier module est ouvert.
+    expect(etat.modulesVus.map((m) => m.id), [etat.modules.first.id]);
+    final questions = etat.questionsExamen(random: Random(1));
+    expect(questions.length, AppState.tailleExamen);
+    expect(questions.map((q) => q.id).toSet().length, AppState.tailleExamen);
+    for (final q in questions) {
+      expect(etat.moduleDe(q), etat.modules.first);
+    }
+
+    // Un examen va dans l'historique sous son propre identifiant.
+    final session = QuizSession(questions, melanger: false);
+    for (final q in questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, examen: true);
+    expect(etat.historique.last.moduleId, AppState.idExamen);
+  });
+
+  test('les XP viennent de l\'historique et font monter de niveau', () async {
+    expect(AppState.niveauPour(0), 1);
+    expect(AppState.niveauPour(99), 1);
+    expect(AppState.niveauPour(100), 2);
+    expect(AppState.niveauPour(400), 3);
+    expect(AppState.xpDebutNiveau(3), 400);
+
+    final etat = await etatCharge();
+    expect(etat.xpTotal, 0);
+    expect(etat.niveau, 1);
+    expect(etat.xpManquants, 100);
+
+    final module = etat.modules.first;
+    final session = QuizSession(module.questions, melanger: false);
+    for (final q in module.questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, moduleComplet: module);
+    expect(etat.xpTotal, 200);
+    expect(etat.niveau, 2);
+    expect(etat.xpManquants, 200);
+    expect(etat.progressionNiveau, closeTo(1 / 3, 0.001));
   });
 
   test('au départ, aucune question réussie', () async {

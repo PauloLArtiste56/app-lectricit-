@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +13,8 @@ import 'fiche_screen.dart';
 import 'resultat_screen.dart';
 
 /// Écran Quiz : une question à la fois, feedback immédiat, barre de progression.
+/// En mode examen ([examen]) : pas de correction pendant l'épreuve, un
+/// chrono ([duree]) qui termine le quiz quand il tombe à zéro.
 class QuizScreen extends StatefulWidget {
   /// [module] : quiz d'un module (son titre, son meilleur score). `null`
   /// pour une séance de révision qui mélange plusieurs modules.
@@ -21,6 +25,8 @@ class QuizScreen extends StatefulWidget {
     this.questions,
     this.titre,
     this.melanger = true,
+    this.examen = false,
+    this.duree,
   }) : assert(module != null || questions != null);
 
   final Module? module;
@@ -29,6 +35,12 @@ class QuizScreen extends StatefulWidget {
 
   /// Désactivable dans les tests pour un ordre prévisible.
   final bool melanger;
+
+  /// Examen blanc : on enchaîne les questions sans feedback.
+  final bool examen;
+
+  /// Temps imparti (mode examen). Sans limite si null.
+  final Duration? duree;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -49,6 +61,43 @@ class _QuizScreenState extends State<QuizScreen> {
 
   String get _titre => widget.titre ?? widget.module?.titre ?? 'Quiz';
 
+  /// Chrono du mode examen.
+  Timer? _chrono;
+  late Duration _restant = widget.duree ?? Duration.zero;
+  final Stopwatch _tempsUtilise = Stopwatch();
+
+  @override
+  void initState() {
+    super.initState();
+    _tempsUtilise.start();
+    if (widget.duree != null) {
+      _chrono = Timer.periodic(const Duration(seconds: 1), (_) {
+        setState(() {
+          _restant -= const Duration(seconds: 1);
+        });
+        if (_restant <= Duration.zero) _tempsEcoule();
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _chrono?.cancel();
+    super.dispose();
+  }
+
+  void _tempsEcoule() {
+    _chrono?.cancel();
+    _session.terminerMaintenant();
+    _finir();
+  }
+
+  String get _chronoTexte {
+    final m = _restant.inMinutes;
+    final s = _restant.inSeconds % 60;
+    return '$m:${s.toString().padLeft(2, '0')}';
+  }
+
   void _apresReponse() {
     // Petit retour haptique sur téléphone (sans effet sur le web).
     if (_session.derniereReussie) {
@@ -61,11 +110,14 @@ class _QuizScreenState extends State<QuizScreen> {
   void _repondre(int index) {
     setState(() => _session.repondre(index));
     _apresReponse();
+    // En examen, pas de correction : on enchaîne.
+    if (widget.examen) _suivante();
   }
 
   void _validerOrdre() {
     setState(() => _session.repondreOrdre(_ordreEnCours));
     _apresReponse();
+    if (widget.examen) _suivante();
   }
 
   void _suivante() {
@@ -73,7 +125,14 @@ class _QuizScreenState extends State<QuizScreen> {
       _session.suivante();
       if (!_session.estTerminee) _ordreEnCours = _ordreInitial();
     });
-    if (_session.estTerminee) {
+    if (_session.estTerminee) _finir();
+  }
+
+  /// Enregistre le résultat et affiche l'écran Résultat.
+  void _finir() {
+    _chrono?.cancel();
+    _tempsUtilise.stop();
+    {
       final complet = widget.questions == null ||
           (widget.module != null &&
               widget.questions!.length == widget.module!.nombreQuestions);
@@ -85,6 +144,7 @@ class _QuizScreenState extends State<QuizScreen> {
       etat.enregistrerResultat(
         _session,
         moduleComplet: complet ? widget.module : null,
+        examen: widget.examen,
       );
       _afficherResultat(dejaReussi: dejaReussi);
     }
@@ -102,6 +162,7 @@ class _QuizScreenState extends State<QuizScreen> {
           score: _session.score,
           total: _session.total,
           questionsRatees: _session.questionsRatees,
+          tempsUtilise: widget.examen ? _tempsUtilise.elapsed : null,
         ),
       ),
     );
@@ -137,7 +198,29 @@ class _QuizScreenState extends State<QuizScreen> {
     final fiche = context.read<AppState>().ficheDe(question)?.fiche;
 
     return Scaffold(
-      appBar: AppBar(title: Text(_titre)),
+      appBar: AppBar(
+        title: Text(_titre),
+        actions: [
+          if (widget.duree != null)
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Row(
+                children: [
+                  Icon(Icons.timer_outlined,
+                      color: _restant.inSeconds <= 60 ? Colors.red : null),
+                  const SizedBox(width: 4),
+                  Text(
+                    _chronoTexte,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontFeatures: const [FontFeature.tabularFigures()],
+                      color: _restant.inSeconds <= 60 ? Colors.red : null,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

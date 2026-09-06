@@ -20,6 +20,7 @@ class ResultatScreen extends StatelessWidget {
     required this.total,
     required this.questionsRatees,
     this.dejaReussi = false,
+    this.tempsUtilise,
   });
 
   final String titre;
@@ -32,6 +33,9 @@ class ResultatScreen extends StatelessWidget {
 
   /// Le module était déjà réussi avant ce quiz : pas de fanfare.
   final bool dejaReussi;
+
+  /// Durée de l'épreuve (mode examen), affichée sous le score.
+  final Duration? tempsUtilise;
 
   void _refaireLesRatees(BuildContext context) {
     // On remplace l'écran Résultat par un nouveau quiz limité aux ratées,
@@ -113,6 +117,23 @@ class ResultatScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 4),
+          Text(
+            '+${AppState.xpPour(score)} XP',
+            textAlign: TextAlign.center,
+            style: theme.textTheme.titleMedium?.copyWith(
+              color: Colors.amber.shade800,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          if (tempsUtilise case final t?) ...[
+            const SizedBox(height: 8),
+            Text(
+              'Temps : ${t.inMinutes} min ${(t.inSeconds % 60).toString().padLeft(2, '0')} s',
+              textAlign: TextAlign.center,
+              style: theme.textTheme.bodyMedium,
+            ),
+          ],
           if (m != null && !reussi) ...[
             const SizedBox(height: 8),
             Text(

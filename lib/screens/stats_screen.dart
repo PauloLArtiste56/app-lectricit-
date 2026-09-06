@@ -77,6 +77,13 @@ class StatsScreen extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 12),
+          _Tuile(
+            titre: 'Niveau ${etat.niveau}',
+            valeur: '${etat.xpTotal} XP',
+            detail: 'encore ${etat.xpManquants} XP pour le niveau ${etat.niveau + 1} '
+                '(${AppState.xpParBonneReponse} XP par bonne réponse)',
+          ),
           const SizedBox(height: 24),
           Text('Historique', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
@@ -140,9 +147,11 @@ class _LigneHistorique extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final etat = context.read<AppState>();
-    final titre = entree.moduleId == AppState.idRevision
-        ? 'Révision'
-        : etat.moduleParId(entree.moduleId)?.titre ?? entree.moduleId;
+    final titre = switch (entree.moduleId) {
+      AppState.idRevision => 'Révision',
+      AppState.idExamen => 'Examen blanc',
+      final id => etat.moduleParId(id)?.titre ?? id,
+    };
     final reussi = entree.score == entree.total;
     return Card(
       child: ListTile(
