@@ -21,7 +21,8 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 - Poste de développement : **Windows**. Cible finale : **iPhone (iOS)**.
 - Contrainte : une appli iOS ne se compile que sur macOS. Stratégie :
   - au quotidien, on teste sur Windows avec `flutter run -d chrome` (ou un émulateur Android) ;
-  - sur l'iPhone, on teste la version web ajoutée à l'écran d'accueil de Safari ;
+  - sur l'iPhone, on teste la version web ajoutée à l'écran d'accueil de Safari
+    (mise en ligne automatique sur GitHub Pages par `.github/workflows/pages.yml`) ;
   - la vraie appli iOS (TestFlight / App Store) sera compilée plus tard via GitHub Actions
     (machine macOS dans le cloud) + un compte développeur Apple.
 - Pas de backend en V1 : contenu embarqué en JSON, progression stockée en local.
