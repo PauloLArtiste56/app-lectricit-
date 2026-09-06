@@ -77,6 +77,13 @@ l'identifiant `eclair`, fêté sur l'écran Résultat). Sons (`data/sons.dart`, 
 réglage « Sons » dans les paramètres, jamais en examen) et animations : secousse de la
 mauvaise réponse, panneau de correction qui glisse, pastille « Combo ×N » (son spécial
 tous les 3 succès d'affilée), score qui compte sur l'écran Résultat, meilleur combo.
+Cartes à retourner (`screens/cartes_screen.dart` : question au recto, réponse et
+explication au verso, « Je sais » / « À revoir » ; « À revoir » remet la question dans les
+points faibles ; depuis un module ou la carte d'entraînement avec la séance du jour).
+Cas pratiques (`assets/cas_pratiques.json`, `models/cas_pratique.dart` : 10 situations
+concrètes de 4 étapes QCM jouées dans l'ordre par `QuizScreen(cas:)` avec le contexte
+rappelé à chaque étape ; résolu à 80 %, historique sous `cas:<id>`, liste dans
+`screens/cas_pratiques_screen.dart`, quête et badge associés).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -261,6 +268,7 @@ lib/
                  # nœud et bannière du parcours, carte d'entraînement)
 assets/
   content.json    # modules, fiches, questions
+  cas_pratiques.json  # situations concrètes à résoudre étape par étape
   parcours.json   # chapitres du parcours et ordre des modules
   images/         # schémas des fiches ; decors/ : illustrations et mascotte du parcours
   sons/           # effets sonores WAV (générés par tools/sons/generer_sons.py)

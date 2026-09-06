@@ -97,6 +97,18 @@ class Quete {
           quiz.where((e) => e.moduleId == AppState.idEclair).length,
     ),
     Quete(
+      id: 'cas',
+      titre: 'Résous un cas pratique',
+      icone: Icons.handyman,
+      cible: 1,
+      xp: 30,
+      mesurer: (quiz, _) => quiz
+          .where((e) =>
+              e.moduleId.startsWith(AppState.prefixeCas) &&
+              e.score >= e.total * AppState.seuilReussite)
+          .length,
+    ),
+    Quete(
       id: 'fiches',
       titre: 'Lis 3 fiches',
       icone: Icons.menu_book,
