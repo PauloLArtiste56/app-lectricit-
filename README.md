@@ -11,7 +11,7 @@ une étape à la fois.
 ✅ V1 complète et enrichie : 100 modules regroupés par thème, chacun avec 3 fiches illustrées
 et 20 questions (2 020 questions, dont des questions « remettre dans l'ordre » et des questions illustrées). Séance du jour
 avec révision espacée, examen blanc chronométré, écran Paramètres (thème, parcours libre,
-export / import de la progression), série de jours, objectif du jour, quêtes quotidiennes et badges, parcours en 10 chapitres façon Duolingo, révision des points faibles, questions et réponses
+export / import de la progression), série de jours, objectif du jour, quêtes quotidiennes et badges, mode éclair chronométré, sons et animations, parcours en 10 chapitres façon Duolingo, révision des points faibles, questions et réponses
 mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
 modules pour ne jamais en faire le tour. Le cadrage complet (périmètre, modèle de données,
 conventions) est dans [`CLAUDE.md`](CLAUDE.md).

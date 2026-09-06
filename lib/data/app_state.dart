@@ -18,6 +18,7 @@ import 'content_loader.dart';
 import 'progression_store.dart';
 import 'quetes.dart';
 import 'quiz_session.dart';
+import 'sons.dart';
 
 /// État partagé de l'appli : le contenu (modules) et la progression.
 /// Les écrans lisent ici et appellent les méthodes ci-dessous ; ils ne
@@ -27,15 +28,25 @@ class AppState extends ChangeNotifier {
     ContentLoader? loader,
     ProgressionStore? store,
     DateTime Function()? horloge,
+    Sons? sons,
   })  : _loader = loader ?? ContentLoader(),
         _store = store ?? ProgressionStore(),
-        _horloge = horloge ?? DateTime.now;
+        _horloge = horloge ?? DateTime.now,
+        sons = sons ?? Sons();
 
   final ContentLoader _loader;
   final ProgressionStore _store;
 
   /// Injectable dans les tests pour simuler le passage des jours.
   final DateTime Function() _horloge;
+
+  /// Lecteur de sons ; injectable dans les tests.
+  final Sons sons;
+
+  /// Joue un son si l'utilisateur ne les a pas coupés.
+  void jouer(Son son) {
+    if (_parametres.sons) sons.jouer(son);
+  }
 
   /// Nombre de questions d'une séance du jour.
   static const int tailleSeance = 10;
@@ -49,6 +60,13 @@ class AppState extends ChangeNotifier {
 
   /// Identifiant utilisé dans l'historique pour un examen blanc.
   static const String idExamen = 'examen';
+
+  /// Identifiant du mode éclair dans l'historique.
+  static const String idEclair = 'eclair';
+
+  /// Mode éclair : 10 questions, 10 secondes chacune.
+  static const int questionsParEclair = 10;
+  static const Duration dureeQuestionEclair = Duration(seconds: 10);
 
   /// Un examen blanc : [tailleExamen] questions en [dureeExamen].
   static const int tailleExamen = 20;
@@ -262,6 +280,22 @@ class AppState extends ChangeNotifier {
       ..shuffle(random ?? Random());
     return toutes.take(_parametres.tailleExamen).toList();
   }
+
+  /// Questions d'un mode éclair : tirées dans les modules déjà abordés,
+  /// sans les questions « ordre » (trop longues en 10 secondes).
+  List<Question> questionsEclair({Random? random}) {
+    final toutes = [
+      for (final m in modulesVus)
+        for (final q in m.questions)
+          if (q.type != TypeQuestion.ordre) q,
+    ]..shuffle(random ?? Random());
+    return toutes.take(questionsParEclair).toList();
+  }
+
+  /// Meilleur score obtenu en mode éclair (0 si jamais joué).
+  int get meilleurEclair => _progression.historique
+      .where((e) => e.moduleId == idEclair)
+      .fold(0, (m, e) => e.score > m ? e.score : m);
 
   /// Total des XP : les quiz de l'historique plus les récompenses.
   int get xpTotal =>
@@ -498,7 +532,7 @@ class AppState extends ChangeNotifier {
   /// pour un quiz complet d'un module ([moduleComplet]).
   /// [examen] : le quiz était un examen blanc (historique à part).
   Future<void> enregistrerResultat(QuizSession session,
-      {Module? moduleComplet, bool examen = false}) async {
+      {Module? moduleComplet, bool examen = false, bool eclair = false}) async {
     final ratees = session.questionsRatees.map((q) => q.id).toSet();
     for (final q in session.questions) {
       // Une question inconnue de l'index (contenu de test) est rattachée
@@ -527,7 +561,12 @@ class AppState extends ChangeNotifier {
       if (session.score > p.meilleurScore) p.meilleurScore = session.score;
     }
     _progression.historique.add(EntreeHistorique(
-      moduleId: moduleComplet?.id ?? (examen ? idExamen : idRevision),
+      moduleId: moduleComplet?.id ??
+          (examen
+              ? idExamen
+              : eclair
+                  ? idEclair
+                  : idRevision),
       date: _aujourdhui(),
       score: session.score,
       total: session.total,

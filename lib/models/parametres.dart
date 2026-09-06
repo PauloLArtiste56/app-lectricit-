@@ -7,6 +7,7 @@ class Parametres {
     this.parcoursLibre = false,
     this.melanger = true,
     this.vibrations = true,
+    this.sons = true,
     this.tailleExamen = 20,
     this.dureeExamenMinutes = 10,
     this.objectifXpJour = 50,
@@ -27,6 +28,9 @@ class Parametres {
   /// Retour haptique après une réponse (téléphone uniquement).
   final bool vibrations;
 
+  /// Sons après une réponse et en fin de quiz.
+  final bool sons;
+
   final int tailleExamen;
   final int dureeExamenMinutes;
 
@@ -41,6 +45,7 @@ class Parametres {
     bool? parcoursLibre,
     bool? melanger,
     bool? vibrations,
+    bool? sons,
     int? tailleExamen,
     int? dureeExamenMinutes,
     int? objectifXpJour,
@@ -51,6 +56,7 @@ class Parametres {
       parcoursLibre: parcoursLibre ?? this.parcoursLibre,
       melanger: melanger ?? this.melanger,
       vibrations: vibrations ?? this.vibrations,
+      sons: sons ?? this.sons,
       tailleExamen: tailleExamen ?? this.tailleExamen,
       dureeExamenMinutes: dureeExamenMinutes ?? this.dureeExamenMinutes,
       objectifXpJour: objectifXpJour ?? this.objectifXpJour,
@@ -65,6 +71,7 @@ class Parametres {
       parcoursLibre: json['parcours_libre'] as bool? ?? defaut.parcoursLibre,
       melanger: json['melanger'] as bool? ?? defaut.melanger,
       vibrations: json['vibrations'] as bool? ?? defaut.vibrations,
+      sons: json['sons'] as bool? ?? defaut.sons,
       tailleExamen: json['taille_examen'] as int? ?? defaut.tailleExamen,
       dureeExamenMinutes:
           json['duree_examen_minutes'] as int? ?? defaut.dureeExamenMinutes,
@@ -78,6 +85,7 @@ class Parametres {
         'parcours_libre': parcoursLibre,
         'melanger': melanger,
         'vibrations': vibrations,
+        'sons': sons,
         'taille_examen': tailleExamen,
         'duree_examen_minutes': dureeExamenMinutes,
         'objectif_xp_jour': objectifXpJour,

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
+import 'package:elecapp/data/sons.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
@@ -232,5 +233,72 @@ void main() {
     await tester.tap(find.text('Une lampe'));
     await tester.pump();
     expect(find.text('Bonne réponse !'), findsOneWidget);
+  });
+
+  testWidgets('mode éclair : compte à rebours, « Trop tard ! » et son', (tester) async {
+    final sons = Sons(actif: false);
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(sons: sons),
+      child: MaterialApp(
+        home: QuizScreen(
+          titre: 'Mode éclair',
+          questions: _module.questions,
+          melanger: false,
+          eclair: true,
+        ),
+      ),
+    ));
+    expect(find.text('10'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 4));
+    expect(find.text('6'), findsOneWidget);
+    expect(sons.joues, isEmpty);
+
+    // Tic sur les trois dernières secondes, puis la question est passée.
+    await tester.pump(const Duration(seconds: 6));
+    await tester.pump();
+    expect(find.text('Trop tard !'), findsOneWidget);
+    expect(sons.joues, [Son.tic, Son.tic, Son.tic, Son.mauvaise]);
+    expect(find.byIcon(Icons.check_circle), findsOneWidget); // la bonne, en vert
+    expect(find.byIcon(Icons.cancel), findsNothing); // aucune réponse choisie
+
+    // La question suivante repart à 10 s.
+    await tester.tap(find.text('Question suivante'));
+    await tester.pumpAndSettle();
+    expect(find.text('10'), findsOneWidget);
+    await tester.tap(find.text('Ampère'));
+    await tester.pumpAndSettle();
+    expect(find.text('Bonne réponse !'), findsOneWidget);
+    expect(sons.joues.last, Son.bonne);
+
+    await tester.tap(find.text('Terminer'));
+    await tester.pumpAndSettle();
+    expect(find.text('Nouveau record !'), findsOneWidget);
+    expect(sons.joues.last, Son.fin);
+  });
+
+  testWidgets('deux bonnes réponses d\'affilée affichent un combo', (tester) async {
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: MaterialApp(home: QuizScreen(module: _module, melanger: false)),
+    ));
+    await tester.tap(find.text('Volt'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Combo'), findsNothing);
+    await tester.tap(find.text('Question suivante'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Ampère'));
+    await tester.pumpAndSettle();
+    expect(find.text('Combo ×2'), findsOneWidget);
+  });
+
+  testWidgets("la carte d'entraînement lance le mode éclair", (tester) async {
+    _ecranHaut(tester);
+    await tester.pumpWidget(const ElecApp());
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Mode éclair'));
+    await tester.pumpAndSettle();
+    expect(find.text('Mode éclair'), findsOneWidget);
+    expect(find.text('Question 1 / ${AppState.questionsParEclair}'), findsOneWidget);
+    expect(find.text('10'), findsOneWidget);
   });
 }

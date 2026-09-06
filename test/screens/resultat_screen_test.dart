@@ -55,6 +55,7 @@ void main() {
       ),
     ),
     ));
+    await tester.pumpAndSettle(); // le score « compte » jusqu'à sa valeur
 
     expect(find.text('1 / 2'), findsOneWidget);
     expect(find.text('Unité de la tension ?'), findsOneWidget);

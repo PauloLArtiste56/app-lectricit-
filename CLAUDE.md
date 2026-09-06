@@ -27,6 +27,7 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
     (machine macOS dans le cloud) + un compte développeur Apple.
 - Pas de backend en V1 : contenu embarqué en JSON, progression stockée en local.
 - Stockage local : `shared_preferences` pour la V1 (passer à `hive` si ça devient limitant).
+- Sons : `audioplayers` (seul moyen de jouer un son sur toutes les plateformes).
 - État : `provider` ou `riverpod`, au plus simple. Pas de bloc pour le moment.
 - Pas d'authentification, pas de réseau, pas de notifications en V1.
 
@@ -69,6 +70,13 @@ quêtes du jour (`data/quetes.dart` : 3 défis tirés chaque jour parmi 7, XP ve
 fois via `models/recompense.dart`, carte sous la carte d'entraînement), badges
 (`data/insignes.dart` : 16 conditions, débloqués après chaque quiz, grille dans les stats,
 annoncés sur l'écran Résultat). La progression stocke en plus `recompenses` et `badges`.
+Mode éclair (10 questions sans « ordre » tirées dans les modules abordés, 10 s par
+question avec compte à rebours, question passée = ratée, record dans l'historique sous
+l'identifiant `eclair`, fêté sur l'écran Résultat). Sons (`data/sons.dart`, plugin
+`audioplayers`, WAV générés par `tools/sons/generer_sons.py` dans `assets/sons/`,
+réglage « Sons » dans les paramètres, jamais en examen) et animations : secousse de la
+mauvaise réponse, panneau de correction qui glisse, pastille « Combo ×N » (son spécial
+tous les 3 succès d'affilée), score qui compte sur l'écran Résultat, meilleur combo.
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -255,6 +263,7 @@ assets/
   content.json    # modules, fiches, questions
   parcours.json   # chapitres du parcours et ordre des modules
   images/         # schémas des fiches ; decors/ : illustrations et mascotte du parcours
+  sons/           # effets sonores WAV (générés par tools/sons/generer_sons.py)
 ```
 
 ## Ordre de développement

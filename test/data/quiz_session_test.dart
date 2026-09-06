@@ -125,4 +125,22 @@ void main() {
     expect(session.questionsRatees.map((q) => q.id), ['q1', 'q2']);
     expect(session.score, 0);
   });
+
+  test('passer : la question compte ratée, sans réponse désignée', () {
+    final questions = [_q('q1', 0), _q('q2', 1)];
+    final session = QuizSession(questions, melanger: false);
+    expect(session.tempsEcoule, isFalse);
+    session.passer();
+    expect(session.aRepondu, isTrue);
+    expect(session.tempsEcoule, isTrue);
+    expect(session.derniereReussie, isFalse);
+    expect(session.choix, -1);
+    expect(session.questionsRatees, [questions.first]);
+    // Une réponse après coup ne compte plus.
+    session.repondre(questions.first.bonne);
+    expect(session.score, 0);
+    session.suivante();
+    expect(session.numero, 2);
+    expect(session.tempsEcoule, isFalse);
+  });
 }
