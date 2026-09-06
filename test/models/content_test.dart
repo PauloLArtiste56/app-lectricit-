@@ -18,10 +18,10 @@ void main() {
     expect(modules.first.titre, "Grandeurs électriques et loi d'Ohm");
   });
 
-  test('chaque module a des fiches et 20 questions', () {
+  test('chaque module a des fiches et au moins 20 questions', () {
     for (final module in modules) {
       expect(module.fiches, isNotEmpty, reason: '${module.id} sans fiche');
-      expect(module.nombreQuestions, 20, reason: module.id);
+      expect(module.nombreQuestions, greaterThanOrEqualTo(20), reason: module.id);
     }
   });
 
@@ -42,6 +42,14 @@ void main() {
           case TypeQuestion.ordre:
             expect(q.reponses.length, inInclusiveRange(3, 6),
                 reason: '${q.id} doit avoir 3 à 6 étapes');
+          case TypeQuestion.image:
+            expect(q.reponses.length, inInclusiveRange(3, 4),
+                reason: '${q.id} doit avoir 3 ou 4 réponses');
+            expect(q.bonne, inInclusiveRange(0, q.reponses.length - 1),
+                reason: '${q.id} : index de bonne réponse hors limites');
+            expect(q.image, isNotNull, reason: '${q.id} sans image');
+            expect(File('assets/images/${q.image}').existsSync(), isTrue,
+                reason: '${q.id} : image introuvable ${q.image}');
         }
         expect(q.explication, isNotEmpty, reason: '${q.id} sans explication');
       }
@@ -90,5 +98,14 @@ void main() {
     for (var n = 0; n <= 3; n++) {
       expect(File('assets/images/decors/pile_$n.png').existsSync(), isTrue);
     }
+  });
+
+  test('le contenu compte des questions avec image', () {
+    final images = [
+      for (final m in modules)
+        for (final q in m.questions)
+          if (q.type == TypeQuestion.image) q,
+    ];
+    expect(images.length, greaterThanOrEqualTo(15));
   });
 }

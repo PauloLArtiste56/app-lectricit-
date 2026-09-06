@@ -1228,6 +1228,141 @@
           ],
           "bonne": 1,
           "explication": "Le télérupteur, dans le tableau, est commandé par des boutons-poussoirs en nombre illimité."
+        },
+        {
+          "id": "qi001",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_resistance.png",
+          "enonce": "Quel est ce symbole ?",
+          "reponses": [
+            "Une résistance",
+            "Un fusible",
+            "Un condensateur",
+            "Une bobine"
+          ],
+          "bonne": 0,
+          "explication": "Un rectangle sur le fil : la résistance. Le fusible a le fil qui le traverse de part en part."
+        },
+        {
+          "id": "qi002",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_lampe.png",
+          "enonce": "Quel est ce symbole ?",
+          "reponses": [
+            "Une lampe",
+            "Un moteur",
+            "Un interrupteur",
+            "Une prise"
+          ],
+          "bonne": 0,
+          "explication": "Un cercle barré d'une croix : la lampe."
+        },
+        {
+          "id": "qi003",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_interrupteur.png",
+          "enonce": "Que représente ce symbole ?",
+          "reponses": [
+            "Un interrupteur ouvert",
+            "Un interrupteur fermé",
+            "Un fusible fondu",
+            "Une diode"
+          ],
+          "bonne": 0,
+          "explication": "Le contact est levé : le circuit est ouvert, le courant ne passe pas."
+        },
+        {
+          "id": "qi004",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_pile.png",
+          "enonce": "Sur ce symbole de pile, quel trait est la borne + ?",
+          "reponses": [
+            "Le trait long",
+            "Le trait court",
+            "Les deux",
+            "Aucun"
+          ],
+          "bonne": 0,
+          "explication": "Trait long = plus, trait court et épais = moins."
+        },
+        {
+          "id": "qi005",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_fusible.png",
+          "enonce": "Quel est ce symbole ?",
+          "reponses": [
+            "Un fusible",
+            "Une résistance",
+            "Un relais",
+            "Un transformateur"
+          ],
+          "bonne": 0,
+          "explication": "Le fil traverse le rectangle de bout en bout : c'est le fusible."
+        },
+        {
+          "id": "qi006",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_terre.png",
+          "enonce": "Quel est ce symbole ?",
+          "reponses": [
+            "La terre",
+            "Le neutre",
+            "La masse d'un châssis",
+            "Une antenne"
+          ],
+          "bonne": 0,
+          "explication": "Trois traits horizontaux décroissants sous un trait vertical : la prise de terre."
+        },
+        {
+          "id": "qi007",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_moteur.png",
+          "enonce": "Quel appareil ce symbole représente-t-il ?",
+          "reponses": [
+            "Un moteur",
+            "Un multimètre",
+            "Un microphone",
+            "Une masse"
+          ],
+          "bonne": 0,
+          "explication": "Un cercle avec la lettre M : le moteur."
+        },
+        {
+          "id": "qi008",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_voltmetre.png",
+          "enonce": "Quel appareil de mesure ce symbole représente-t-il ?",
+          "reponses": [
+            "Un voltmètre",
+            "Un ampèremètre",
+            "Un ohmmètre",
+            "Un wattmètre"
+          ],
+          "bonne": 0,
+          "explication": "Cercle avec V : voltmètre, branché en parallèle. Avec A, c'est l'ampèremètre, en série."
+        },
+        {
+          "id": "qi009",
+          "fiche_id": "symboles",
+          "type": "image",
+          "image": "questions/sym_disjoncteur.png",
+          "enonce": "Quel est ce symbole ?",
+          "reponses": [
+            "Un disjoncteur",
+            "Un interrupteur simple",
+            "Un sectionneur",
+            "Un fusible"
+          ],
+          "bonne": 0,
+          "explication": "Un contact avec une croix à son extrémité : le disjoncteur, qui coupe aussi automatiquement."
         }
       ],
       "theme": "Les bases"
@@ -24314,6 +24449,81 @@
           ],
           "bonne": 2,
           "explication": "Jamais d'eau sur un feu électrique. On coupe le courant et on utilise du CO2 ou de la poudre."
+        },
+        {
+          "id": "qi201",
+          "fiche_id": "dangers",
+          "type": "image",
+          "image": "decors/panneau_danger.png",
+          "enonce": "Que signifie ce panneau ?",
+          "reponses": [
+            "Danger électrique",
+            "Zone orageuse",
+            "Sol glissant",
+            "Recharge de batteries"
+          ],
+          "bonne": 0,
+          "explication": "Triangle jaune avec un éclair : danger électrique, présent sur les armoires et locaux sous tension."
+        },
+        {
+          "id": "qi202",
+          "fiche_id": "protections",
+          "type": "image",
+          "image": "decors/extincteur.png",
+          "enonce": "Sur un feu d'appareil électrique sous tension, cet extincteur doit être…",
+          "reponses": [
+            "Au dioxyde de carbone (CO2)",
+            "À eau sans additif",
+            "À mousse",
+            "À sable"
+          ],
+          "bonne": 0,
+          "explication": "Le CO2 n'est pas conducteur. Avant tout, couper le courant."
+        },
+        {
+          "id": "qi203",
+          "fiche_id": "contacts",
+          "type": "image",
+          "image": "decors/prise.png",
+          "enonce": "Sur cette prise, le plot métallique en haut est…",
+          "reponses": [
+            "La terre",
+            "La phase",
+            "Le neutre",
+            "Un détrompeur"
+          ],
+          "bonne": 0,
+          "explication": "La broche de terre relie les masses de l'appareil à la terre de l'installation."
+        },
+        {
+          "id": "qi204",
+          "fiche_id": "protections",
+          "type": "image",
+          "image": "decors/tableau.png",
+          "enonce": "Que montre cette image ?",
+          "reponses": [
+            "Un tableau électrique et ses disjoncteurs",
+            "Un compteur d'énergie",
+            "Une box internet",
+            "Un boîtier de dérivation"
+          ],
+          "bonne": 0,
+          "explication": "Le tableau regroupe les protections : disjoncteurs et différentiels."
+        },
+        {
+          "id": "qi205",
+          "fiche_id": "dangers",
+          "type": "image",
+          "image": "decors/pile.png",
+          "enonce": "Sur cette pile, la borne + est…",
+          "reponses": [
+            "En haut, sur la plus petite face",
+            "En bas",
+            "Sur le côté",
+            "Il n'y a pas de + sur une pile"
+          ],
+          "bonne": 0,
+          "explication": "Le plot saillant est le +, la face plate est le −."
         }
       ],
       "theme": "Sécurité et habilitation"
@@ -25234,6 +25444,96 @@
             "Enfiler, avec sous-gants et surgants si prévus"
           ],
           "explication": "Un gant percé ne se voit pas toujours : le gonflage est indispensable."
+        },
+        {
+          "id": "qi101",
+          "fiche_id": "epi_liste",
+          "type": "image",
+          "image": "decors/gants.png",
+          "enonce": "Quel est cet équipement de protection ?",
+          "reponses": [
+            "Des gants isolants",
+            "Des gants de manutention",
+            "Des gants anti-coupure",
+            "Des gants jetables"
+          ],
+          "bonne": 0,
+          "explication": "Gants isolants : classe marquée (00, 0…), à vérifier avant chaque usage."
+        },
+        {
+          "id": "qi102",
+          "fiche_id": "epi_liste",
+          "type": "image",
+          "image": "decors/casque.png",
+          "enonce": "Quel est cet EPI ?",
+          "reponses": [
+            "Un casque de chantier",
+            "Un écran facial",
+            "Un serre-tête antibruit",
+            "Une visière de soudeur"
+          ],
+          "bonne": 0,
+          "explication": "Le casque protège des chutes d'objets et des chocs ; contre l'arc, on ajoute l'écran facial."
+        },
+        {
+          "id": "qi103",
+          "fiche_id": "epc",
+          "type": "image",
+          "image": "decors/cadenas.png",
+          "enonce": "À quoi sert cet objet lors d'une consignation ?",
+          "reponses": [
+            "Condamner l'organe de séparation",
+            "Fermer le local technique",
+            "Suspendre les câbles",
+            "Marquer la zone de travail"
+          ],
+          "bonne": 0,
+          "explication": "Le cadenas, avec sa pancarte, empêche toute remise sous tension."
+        },
+        {
+          "id": "qi104",
+          "fiche_id": "verifier",
+          "type": "image",
+          "image": "decors/testeur.png",
+          "enonce": "Quel est cet appareil ?",
+          "reponses": [
+            "Un vérificateur d'absence de tension (VAT)",
+            "Un multimètre",
+            "Un chargeur de batterie",
+            "Une lampe torche"
+          ],
+          "bonne": 0,
+          "explication": "Le VAT, à tester avant et après la vérification."
+        },
+        {
+          "id": "qi105",
+          "fiche_id": "verifier",
+          "type": "image",
+          "image": "decors/multimetre.png",
+          "enonce": "Quel est cet appareil ?",
+          "reponses": [
+            "Un multimètre",
+            "Un VAT",
+            "Une pince ampèremétrique",
+            "Un compteur d'énergie"
+          ],
+          "bonne": 0,
+          "explication": "Le multimètre mesure tension, courant, résistance ; il ne remplace pas le VAT pour la vérification d'absence de tension."
+        },
+        {
+          "id": "qi106",
+          "fiche_id": "epi_liste",
+          "type": "image",
+          "image": "decors/badge.png",
+          "enonce": "Que représente ce document ?",
+          "reponses": [
+            "Le titre d'habilitation",
+            "Une carte de visite",
+            "Le permis de conduire",
+            "Une carte d'accès"
+          ],
+          "bonne": 0,
+          "explication": "Le titre d'habilitation, signé par l'employeur, précise ce que le salarié peut faire."
         }
       ],
       "ordre": 82

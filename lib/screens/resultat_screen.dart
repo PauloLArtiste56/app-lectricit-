@@ -67,7 +67,9 @@ class ResultatScreen extends StatelessWidget {
 
   /// Ce qu'il fallait répondre, en une ligne.
   String _bonneReponse(Question q) => switch (q.type) {
-        TypeQuestion.qcm => 'Bonne réponse : ${q.reponses[q.bonne]}',
+        TypeQuestion.qcm ||
+        TypeQuestion.image =>
+          'Bonne réponse : ${q.reponses[q.bonne]}',
         TypeQuestion.ordre => 'Bon ordre : ${q.reponses.join(' → ')}',
       };
 

@@ -75,6 +75,7 @@ void main() {
     // Et la liste des modules est bien repassée à zéro.
     await tester.tap(find.text('Modules'));
     await tester.pumpAndSettle();
-    expect(find.text('0/20 questions réussies'), findsNWidgets(100));
+    expect(find.textContaining('questions réussies'), findsNWidgets(100));
+    expect(find.text('0/20 questions réussies'), findsWidgets);
   });
 }

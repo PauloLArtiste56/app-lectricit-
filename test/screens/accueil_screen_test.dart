@@ -27,7 +27,8 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text("Grandeurs électriques et loi d'Ohm"), findsOneWidget);
-    expect(find.text('0/20 questions réussies'), findsNWidgets(100));
+    expect(find.textContaining('questions réussies'), findsNWidgets(100));
+    expect(find.text('0/20 questions réussies'), findsWidgets);
     expect(find.text('Contenu à venir'), findsNothing);
     // Les sections par thème.
     expect(find.text('Les bases'), findsOneWidget);

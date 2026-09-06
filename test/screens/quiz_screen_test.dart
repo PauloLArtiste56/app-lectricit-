@@ -205,4 +205,32 @@ void main() {
     expect(find.textContaining('Temps :'), findsOneWidget);
     expect(find.text('Unité du courant ?'), findsOneWidget);
   });
+
+  testWidgets("une question de type image affiche l'illustration", (tester) async {
+    const question = Question(
+      id: 'qi',
+      ficheId: 'f',
+      type: TypeQuestion.image,
+      enonce: 'Quel est ce symbole ?',
+      reponses: ['Une lampe', 'Une résistance', 'Un fusible'],
+      bonne: 0,
+      explication: 'Cercle barré d\'une croix.',
+      image: 'questions/sym_lampe.png',
+    );
+    // L'image pousse les réponses plus bas : écran haut pour pouvoir taper.
+    _ecranHaut(tester);
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: const MaterialApp(
+        home: QuizScreen(questions: [question], melanger: false),
+      ),
+    ));
+    expect(
+      find.image(const AssetImage('assets/images/questions/sym_lampe.png')),
+      findsOneWidget,
+    );
+    await tester.tap(find.text('Une lampe'));
+    await tester.pump();
+    expect(find.text('Bonne réponse !'), findsOneWidget);
+  });
 }
