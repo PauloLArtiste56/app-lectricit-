@@ -117,6 +117,15 @@ class ResultatScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 4),
+          Text(
+            '+${AppState.xpPour(score)} XP',
+            textAlign: TextAlign.center,
+            style: theme.textTheme.titleMedium?.copyWith(
+              color: Colors.amber.shade800,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           if (tempsUtilise case final t?) ...[
             const SizedBox(height: 8),
             Text(

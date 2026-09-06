@@ -49,6 +49,19 @@ class AppState extends ChangeNotifier {
   static const int tailleExamen = 20;
   static const Duration dureeExamen = Duration(minutes: 10);
 
+  /// Points d'expérience gagnés par bonne réponse, dans n'importe quel quiz.
+  static const int xpParBonneReponse = 10;
+
+  /// XP rapportés par un quiz.
+  static int xpPour(int score) => score * xpParBonneReponse;
+
+  /// Niveau atteint avec [xp] points : 1 au départ, 2 à 100 XP, 3 à 400,
+  /// 4 à 900… (100 × (niveau − 1)²). Chaque niveau demande un peu plus.
+  static int niveauPour(int xp) => sqrt(xp / 100).floor() + 1;
+
+  /// XP nécessaires pour entrer dans [niveau].
+  static int xpDebutNiveau(int niveau) => 100 * (niveau - 1) * (niveau - 1);
+
   /// Part des questions à réussir pour qu'un module compte comme réussi
   /// sur le parcours (16 questions sur 20).
   static const double seuilReussite = 0.8;
@@ -211,6 +224,21 @@ class AppState extends ChangeNotifier {
     final toutes = [for (final m in modulesVus) ...m.questions]
       ..shuffle(random ?? Random());
     return toutes.take(tailleExamen).toList();
+  }
+
+  /// Total des XP, recalculé depuis l'historique (rien à stocker en plus).
+  int get xpTotal => _progression.historique.fold(0, (somme, e) => somme + xpPour(e.score));
+
+  int get niveau => niveauPour(xpTotal);
+
+  /// XP qu'il manque pour le niveau suivant.
+  int get xpManquants => xpDebutNiveau(niveau + 1) - xpTotal;
+
+  /// Avancement dans le niveau en cours, entre 0 et 1.
+  double get progressionNiveau {
+    final debut = xpDebutNiveau(niveau);
+    final fin = xpDebutNiveau(niveau + 1);
+    return (xpTotal - debut) / (fin - debut);
   }
 
   /// Nombre de jours consécutifs (jusqu'à aujourd'hui ou hier) avec au moins

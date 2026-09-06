@@ -57,7 +57,8 @@ Ajouts faits depuis : révision ciblée (les questions ratées reviennent jusqu'
 mélange des questions et réponses, "Revoir la fiche" après une erreur, questions de type `ordre`,
 vérification automatique par GitHub Actions, examen blanc (20 questions tirées dans les
 modules déjà abordés, 10 minutes au chrono, pas de correction avant la fin, corrigé sur
-l'écran Résultat, historique à part).
+l'écran Résultat, historique à part), points d'expérience (10 XP par bonne réponse, niveaux
+de plus en plus longs, affichés sur la carte d'entraînement, le résultat et les stats).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 

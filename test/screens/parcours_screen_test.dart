@@ -26,6 +26,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Ma séance du jour'), findsOneWidget);
+    expect(find.text('Niveau 1 · 0 XP'), findsOneWidget);
     expect(find.byType(BanniereChapitre), findsNWidgets(10));
     expect(find.byType(NoeudModule), findsNWidgets(100));
     expect(find.text('CHAPITRE 1'), findsOneWidget);

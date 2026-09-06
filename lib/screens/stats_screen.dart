@@ -77,6 +77,13 @@ class StatsScreen extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 12),
+          _Tuile(
+            titre: 'Niveau ${etat.niveau}',
+            valeur: '${etat.xpTotal} XP',
+            detail: 'encore ${etat.xpManquants} XP pour le niveau ${etat.niveau + 1} '
+                '(${AppState.xpParBonneReponse} XP par bonne réponse)',
+          ),
           const SizedBox(height: 24),
           Text('Historique', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
