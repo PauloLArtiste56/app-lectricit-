@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 
+import '../models/cas_pratique.dart';
 import '../models/chapitre.dart';
 import '../models/module.dart';
 
@@ -14,6 +15,7 @@ class ContentLoader {
 
   static const String cheminContenu = 'assets/content.json';
   static const String cheminParcours = 'assets/parcours.json';
+  static const String cheminCas = 'assets/cas_pratiques.json';
 
   Future<List<Module>> chargerModules() async {
     // On lit les octets et on décode nous-mêmes : `loadString` passe par un
@@ -25,6 +27,11 @@ class ContentLoader {
   /// Charge le découpage en chapitres du parcours (`assets/parcours.json`).
   Future<List<Chapitre>> chargerParcours() async {
     return parserParcours(await _lireTexte(cheminParcours));
+  }
+
+  /// Charge les cas pratiques (`assets/cas_pratiques.json`).
+  Future<List<CasPratique>> chargerCasPratiques() async {
+    return parserCasPratiques(await _lireTexte(cheminCas));
   }
 
   Future<String> _lireTexte(String chemin) async {
@@ -45,6 +52,15 @@ class ContentLoader {
         .toList();
     modules.sort((a, b) => a.ordre.compareTo(b.ordre));
     return modules;
+  }
+
+  /// Transforme le JSON des cas pratiques en liste, dans l'ordre du fichier.
+  static List<CasPratique> parserCasPratiques(String jsonTexte) {
+    final data = jsonDecode(jsonTexte) as Map<String, dynamic>;
+    return (data['cas'] as List<dynamic>)
+        .cast<Map<String, dynamic>>()
+        .map(CasPratique.fromJson)
+        .toList();
   }
 
   /// Transforme le JSON du parcours en liste de chapitres, dans l'ordre du

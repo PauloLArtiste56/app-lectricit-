@@ -254,6 +254,8 @@ class _LigneHistorique extends StatelessWidget {
       AppState.idRevision => 'Révision',
       AppState.idExamen => 'Examen blanc',
       AppState.idEclair => 'Mode éclair',
+      final id when id.startsWith(AppState.prefixeCas) =>
+        'Cas pratique : ${etat.casParId(id.substring(AppState.prefixeCas.length))?.titre ?? id}',
       final id => etat.moduleParId(id)?.titre ?? id,
     };
     final reussi = entree.score == entree.total;

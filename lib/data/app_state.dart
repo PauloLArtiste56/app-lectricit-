@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 
+import '../models/cas_pratique.dart';
 import '../models/chapitre.dart';
 import '../models/entree_historique.dart';
 import '../models/fiche.dart';
@@ -68,6 +69,9 @@ class AppState extends ChangeNotifier {
   static const int questionsParEclair = 10;
   static const Duration dureeQuestionEclair = Duration(seconds: 10);
 
+  /// Préfixe des cas pratiques dans l'historique : `cas:<id>`.
+  static const String prefixeCas = 'cas:';
+
   /// Un examen blanc : [tailleExamen] questions en [dureeExamen].
   static const int tailleExamen = 20;
   static const Duration dureeExamen = Duration(minutes: 10);
@@ -115,6 +119,7 @@ class AppState extends ChangeNotifier {
     try {
       _modules = await _loader.chargerModules();
       _chapitres = await _loader.chargerParcours();
+      _casPratiques = await _loader.chargerCasPratiques();
       _ordreParcours = [for (final c in _chapitres) ...c.modulesIds];
       for (final m in _modules) {
         for (final q in m.questions) {
@@ -296,6 +301,36 @@ class AppState extends ChangeNotifier {
   int get meilleurEclair => _progression.historique
       .where((e) => e.moduleId == idEclair)
       .fold(0, (m, e) => e.score > m ? e.score : m);
+
+  // --- Cas pratiques --------------------------------------------------------
+
+  List<CasPratique> _casPratiques = [];
+  List<CasPratique> get casPratiques => List.unmodifiable(_casPratiques);
+
+  CasPratique? casParId(String id) {
+    for (final c in _casPratiques) {
+      if (c.id == id) return c;
+    }
+    return null;
+  }
+
+  /// Un cas est résolu dès qu'une tentative atteint le seuil de réussite.
+  bool casResolu(CasPratique cas) => _progression.historique.any((e) =>
+      e.moduleId == '$prefixeCas${cas.id}' &&
+      e.score >= e.total * seuilReussite);
+
+  int get casResolus => _casPratiques.where(casResolu).length;
+
+  /// Cartes à retourner : « À revoir » remet la question dans les points
+  /// faibles et la programme pour demain.
+  Future<void> marquerARevoir(Question question) async {
+    final module = moduleDe(question);
+    if (module == null) return;
+    final p = progressionDe(module);
+    p.questionsARevoir.add(question.id);
+    p.revisions[question.id] = RevisionQuestion(niveau: 0, prochaine: _dansJours(1));
+    await _sauvegarder();
+  }
 
   /// Total des XP : les quiz de l'historique plus les récompenses.
   int get xpTotal =>
@@ -532,7 +567,10 @@ class AppState extends ChangeNotifier {
   /// pour un quiz complet d'un module ([moduleComplet]).
   /// [examen] : le quiz était un examen blanc (historique à part).
   Future<void> enregistrerResultat(QuizSession session,
-      {Module? moduleComplet, bool examen = false, bool eclair = false}) async {
+      {Module? moduleComplet,
+      bool examen = false,
+      bool eclair = false,
+      CasPratique? cas}) async {
     final ratees = session.questionsRatees.map((q) => q.id).toSet();
     for (final q in session.questions) {
       // Une question inconnue de l'index (contenu de test) est rattachée
@@ -562,11 +600,13 @@ class AppState extends ChangeNotifier {
     }
     _progression.historique.add(EntreeHistorique(
       moduleId: moduleComplet?.id ??
-          (examen
-              ? idExamen
-              : eclair
-                  ? idEclair
-                  : idRevision),
+          (cas != null
+              ? '$prefixeCas${cas.id}'
+              : examen
+                  ? idExamen
+                  : eclair
+                      ? idEclair
+                      : idRevision),
       date: _aujourdhui(),
       score: session.score,
       total: session.total,

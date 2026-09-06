@@ -232,6 +232,46 @@ void main() {
     expect(sons.joues, [Son.bonne]);
   });
 
+  test('cas pratiques : chargés, résolus à 80 %, et cartes « à revoir »', () async {
+    final etat = await etatCharge();
+    expect(etat.casPratiques.length, greaterThanOrEqualTo(10));
+    expect(etat.casResolus, 0);
+    final cas = etat.casPratiques.first;
+    expect(etat.casParId(cas.id), same(cas));
+
+    // 2 bonnes sur 4 : pas résolu.
+    var session = QuizSession(cas.etapes, melanger: false);
+    for (var i = 0; i < cas.etapes.length; i++) {
+      session.repondre(i < 2 ? cas.etapes[i].bonne : (cas.etapes[i].bonne + 1) % 4);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, cas: cas);
+    expect(etat.casResolu(cas), isFalse);
+    expect(etat.historique.last.moduleId, 'cas:${cas.id}');
+    // Les étapes ne sont pas des questions de module : rien dans la progression.
+    expect(etat.totalReussies, 0);
+
+    // Puis sans faute : résolu.
+    session = QuizSession(cas.etapes, melanger: false);
+    for (final e in cas.etapes) {
+      session.repondre(e.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session, cas: cas);
+    expect(etat.casResolu(cas), isTrue);
+    expect(etat.casResolus, 1);
+
+    // « À revoir » sur une carte : la question rejoint les points faibles.
+    final q = etat.modules.first.questions.first;
+    expect(etat.nombreARevoir, 0);
+    await etat.marquerARevoir(q);
+    expect(etat.nombreARevoir, 1);
+    expect(etat.questionsPourRevision(), contains(q));
+    final relu = AppState();
+    await relu.charger();
+    expect(relu.nombreARevoir, 1);
+  });
+
   test('les quêtes d\'un jour sont toujours les mêmes trois', () {
     final a = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
     final b = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();

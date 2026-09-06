@@ -1,0 +1,324 @@
+{
+  "cas": [
+    {
+      "id": "prise_morte",
+      "titre": "Une prise qui ne fonctionne plus",
+      "module": "depannage",
+      "contexte": "Dans le salon, la prise derrière le canapé ne fournit plus de courant. La lampe branchée dessus reste éteinte alors que le reste de la pièce fonctionne.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : par quoi commences-tu ?",
+          "reponses": ["Démonter la prise tout de suite", "Vérifier que la lampe fonctionne sur une autre prise", "Changer le disjoncteur du tableau", "Appeler le fournisseur d'électricité"],
+          "bonne": 1,
+          "explication": "On élimine d'abord la cause la plus simple : l'appareil lui-même. Si la lampe marche ailleurs, le problème vient bien de la prise ou de son circuit."
+        },
+        {
+          "enonce": "Étape 2 : la lampe fonctionne ailleurs. Que regardes-tu au tableau ?",
+          "reponses": ["Le compteur Linky", "Le disjoncteur du circuit prises du salon, peut-être déclenché", "Le parafoudre", "La sonnette"],
+          "bonne": 1,
+          "explication": "Un disjoncteur divisionnaire déclenché coupe tout son circuit. On le réarme une fois, et s'il redéclenche, il y a un défaut à chercher."
+        },
+        {
+          "enonce": "Étape 3 : rien n'a déclenché. Avant d'ouvrir la prise, que fais-tu ?",
+          "reponses": ["Rien, on peut ouvrir une prise sous tension si on est prudent", "Couper le disjoncteur du circuit et vérifier l'absence de tension à la prise", "Mettre des gants de jardinage", "Ouvrir avec un tournevis en plastique"],
+          "bonne": 1,
+          "explication": "On ne travaille jamais sous tension : on coupe le circuit, on s'assure qu'il ne peut pas être remis, et on vérifie l'absence de tension avant de toucher aux conducteurs."
+        },
+        {
+          "enonce": "Étape 4 : la prise est ouverte, hors tension. Quelle est la panne la plus fréquente ?",
+          "reponses": ["Un conducteur desserré ou sorti de sa borne", "Un fil trop long", "Une prise trop haute", "Un mauvais sens de branchement phase / neutre"],
+          "bonne": 0,
+          "explication": "Avec le temps et les branchements répétés, un conducteur peut se desserrer dans sa borne : le contact se perd. On le rebranche fermement, puis on referme avant de remettre sous tension."
+        }
+      ]
+    },
+    {
+      "id": "differentiel_saute",
+      "titre": "Le différentiel saute sans arrêt",
+      "module": "securite",
+      "contexte": "Depuis ce matin, l'interrupteur différentiel 30 mA du tableau déclenche quelques minutes après chaque réarmement. Toute la maison se retrouve dans le noir.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : que signale un déclenchement du 30 mA ?",
+          "reponses": ["Une surcharge : trop d'appareils allumés", "Un courant de fuite vers la terre, donc un défaut d'isolement", "Une coupure du réseau", "Un compteur trop faible"],
+          "bonne": 1,
+          "explication": "Le différentiel compare le courant qui part et celui qui revient. Une différence de 30 mA signifie qu'un courant s'échappe vers la terre : c'est un défaut d'isolement, pas une surcharge."
+        },
+        {
+          "enonce": "Étape 2 : comment trouver le circuit responsable ?",
+          "reponses": ["Réarmer plusieurs fois jusqu'à ce que ça tienne", "Baisser tous les disjoncteurs, réarmer le différentiel, puis remonter les circuits un par un", "Changer le différentiel", "Débrancher le compteur"],
+          "bonne": 1,
+          "explication": "En remontant les disjoncteurs un à un, celui qui fait redéclencher le différentiel désigne le circuit en défaut."
+        },
+        {
+          "enonce": "Étape 3 : c'est le circuit du lave-linge. Que fais-tu ?",
+          "reponses": ["Débrancher le lave-linge et réarmer : s'il ne déclenche plus, l'appareil est en cause", "Remplacer le câble d'alimentation de la maison", "Couper la terre du lave-linge", "Mettre le lave-linge sur une rallonge"],
+          "bonne": 0,
+          "explication": "Si le différentiel tient une fois l'appareil débranché, le défaut est dans l'appareil (résistance de chauffe humide, par exemple). Ne jamais supprimer la terre : elle protège justement les personnes."
+        },
+        {
+          "enonce": "Étape 4 : pourquoi ne faut-il surtout pas remplacer le 30 mA par un modèle moins sensible ?",
+          "reponses": ["Parce que c'est plus cher", "Parce que 30 mA est le seuil qui protège les personnes contre l'électrocution", "Parce que ça ferait sauter le compteur", "Parce que le neutre serait coupé"],
+          "bonne": 1,
+          "explication": "Le 30 mA est la protection des personnes : au-dessus, un contact avec une pièce sous tension peut devenir mortel. On répare le défaut, on ne réduit pas la protection."
+        }
+      ]
+    },
+    {
+      "id": "prise_garage",
+      "titre": "Ajouter une prise dans le garage",
+      "module": "installation",
+      "contexte": "Tu veux installer une prise supplémentaire dans le garage pour un compresseur. Le tableau a encore une place libre et le garage est à 8 mètres du tableau.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quelle section de conducteur pour un circuit prises protégé par un disjoncteur 20 A ?",
+          "reponses": ["1,5 mm²", "2,5 mm²", "6 mm²", "0,75 mm²"],
+          "bonne": 1,
+          "explication": "Un circuit de prises 16 A protégé par 20 A se câble en 2,5 mm². Le 1,5 mm² se limite à 16 A (8 prises maximum)."
+        },
+        {
+          "enonce": "Étape 2 : quelle protection contre les fuites de courant faut-il en amont ?",
+          "reponses": ["Aucune, le disjoncteur suffit", "Un interrupteur différentiel 30 mA", "Un fusible 32 A", "Un parafoudre"],
+          "bonne": 1,
+          "explication": "Tout circuit de prises doit être protégé par un différentiel 30 mA : c'est la protection des personnes, indispensable dans un garage souvent humide."
+        },
+        {
+          "enonce": "Étape 3 : combien de prises au maximum sur ce circuit en 2,5 mm² ?",
+          "reponses": ["4", "8", "12", "Sans limite"],
+          "bonne": 2,
+          "explication": "La norme NF C 15-100 limite à 12 socles de prises par circuit en 2,5 mm² protégé par 20 A (8 en 1,5 mm² protégé par 16 A)."
+        },
+        {
+          "enonce": "Étape 4 : le compresseur a une carcasse métallique. Qu'est-ce qui est obligatoire ?",
+          "reponses": ["Une prise sans terre pour éviter les fuites", "Une prise avec terre reliée au conducteur de protection", "Un transformateur 12 V", "Un interrupteur à clé"],
+          "bonne": 1,
+          "explication": "La carcasse métallique doit être reliée à la terre : en cas de défaut, le courant part vers la terre et fait déclencher le différentiel au lieu de traverser une personne."
+        }
+      ]
+    },
+    {
+      "id": "salle_de_bains",
+      "titre": "Rénover la salle de bains",
+      "module": "installation",
+      "contexte": "Tu refais l'électricité d'une salle de bains avec une baignoire. Il faut placer un luminaire, une prise pour le sèche-cheveux et relier la robinetterie.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quel volume désigne l'intérieur de la baignoire ?",
+          "reponses": ["Volume 0", "Volume 1", "Volume 2", "Hors volume"],
+          "bonne": 0,
+          "explication": "Le volume 0 est l'intérieur de la baignoire ou du bac à douche : aucun appareil n'y est admis, sauf très basse tension de sécurité 12 V spécialement prévue."
+        },
+        {
+          "enonce": "Étape 2 : où placer la prise du sèche-cheveux ?",
+          "reponses": ["Dans le volume 1, au-dessus de la baignoire", "Hors des volumes, à plus de 60 cm du bord de la baignoire", "Dans le volume 0, à portée de main", "N'importe où, si elle a un cache"],
+          "bonne": 1,
+          "explication": "Les prises sont interdites dans les volumes 0 et 1. On les installe hors volumes, au-delà de 60 cm du bord de la baignoire, toujours protégées par un 30 mA."
+        },
+        {
+          "enonce": "Étape 3 : quel indice de protection minimum pour le luminaire dans le volume 1 ?",
+          "reponses": ["IP20", "IPX4", "IP68", "Aucun, s'il est en plastique"],
+          "bonne": 1,
+          "explication": "Dans le volume 1 (au-dessus de la baignoire jusqu'à 2,25 m), le matériel doit résister aux projections d'eau : IPX4 minimum, et il doit être alimenté en très basse tension ou spécialement prévu."
+        },
+        {
+          "enonce": "Étape 4 : à quoi sert la liaison équipotentielle supplémentaire ?",
+          "reponses": ["À économiser du câble", "À mettre au même potentiel toutes les masses métalliques (canalisations, baignoire) pour éviter une tension entre elles", "À alimenter le sèche-serviettes", "À remplacer le différentiel"],
+          "bonne": 1,
+          "explication": "En reliant entre elles les parties métalliques accessibles (tuyaux, baignoire métallique, huisseries), aucune tension dangereuse ne peut apparaître entre deux éléments qu'on toucherait en même temps, mouillé."
+        }
+      ]
+    },
+    {
+      "id": "consignation_armoire",
+      "titre": "Intervenir dans une armoire électrique",
+      "module": "br",
+      "contexte": "Tu es habilité BR. Un contacteur a grillé dans l'armoire d'une machine et tu dois le remplacer. L'armoire est alimentée en 400 V triphasé.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quelle est la première opération de la consignation ?",
+          "reponses": ["Vérifier l'absence de tension", "Séparer l'armoire de toute source d'énergie (ouvrir le sectionneur)", "Démonter le contacteur", "Mettre les gants isolants"],
+          "bonne": 1,
+          "explication": "La consignation commence toujours par la séparation : on ouvre le sectionneur ou le disjoncteur général pour isoler l'installation de ses sources."
+        },
+        {
+          "enonce": "Étape 2 : après la séparation, comment empêcher une remise sous tension par quelqu'un d'autre ?",
+          "reponses": ["En laissant un mot sur l'armoire", "En condamnant l'organe de séparation avec un cadenas et une pancarte", "En restant devant l'armoire", "En coupant le neutre"],
+          "bonne": 1,
+          "explication": "La condamnation (cadenas dont on garde la clé, plus une pancarte « ne pas manœuvrer ») garantit que personne ne réalimente pendant l'intervention."
+        },
+        {
+          "enonce": "Étape 3 : juste avant de toucher aux bornes, que dois-tu faire ?",
+          "reponses": ["Vérifier l'absence de tension avec un VAT contrôlé avant et après", "Regarder si le voyant de l'armoire est éteint", "Taper sur le contacteur avec un tournevis", "Mesurer la résistance du contacteur"],
+          "bonne": 0,
+          "explication": "On utilise un vérificateur d'absence de tension (VAT), dont on contrôle le bon fonctionnement avant et après la mesure, sur chaque conducteur. Un voyant éteint ne prouve rien."
+        },
+        {
+          "enonce": "Étape 4 : quel équipement complète la protection pendant l'intervention ?",
+          "reponses": ["Des chaussures de sport", "Des gants isolants et un écran facial contre l'arc", "Un casque audio", "Des lunettes de soleil"],
+          "bonne": 1,
+          "explication": "Les gants isolants (classe adaptée à la tension) et l'écran facial protègent contre le contact et contre un éventuel arc électrique."
+        }
+      ]
+    },
+    {
+      "id": "compteur_disjoncte",
+      "titre": "Tout s'éteint quand le four chauffe",
+      "module": "energie",
+      "contexte": "Le soir, quand le four, le chauffe-eau et le lave-linge tournent en même temps, le disjoncteur de branchement coupe toute la maison. L'abonnement est de 6 kVA.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quel est le problème le plus probable ?",
+          "reponses": ["Un défaut d'isolement", "La puissance appelée dépasse la puissance souscrite", "Le compteur est cassé", "Le four est mal relié à la terre"],
+          "bonne": 1,
+          "explication": "Le disjoncteur de branchement coupe quand la puissance appelée dépasse celle de l'abonnement, ici 6 kVA (environ 30 A en monophasé)."
+        },
+        {
+          "enonce": "Étape 2 : four 2 500 W + chauffe-eau 2 000 W + lave-linge 2 000 W. Puissance totale ?",
+          "reponses": ["4 500 W", "6 500 W", "2 500 W", "9 000 W"],
+          "bonne": 1,
+          "explication": "2 500 + 2 000 + 2 000 = 6 500 W, soit plus que les 6 000 VA disponibles : le disjoncteur de branchement finit par couper."
+        },
+        {
+          "enonce": "Étape 3 : quelle solution évite la coupure sans changer d'abonnement ?",
+          "reponses": ["Retirer le différentiel", "Faire chauffer l'eau la nuit avec un contacteur heures creuses", "Brancher le four sur une rallonge", "Régler le disjoncteur plus haut"],
+          "bonne": 1,
+          "explication": "Un contacteur jour/nuit fait fonctionner le chauffe-eau pendant les heures creuses, quand les autres gros appareils sont arrêtés. On répartit ainsi la puissance dans le temps."
+        },
+        {
+          "enonce": "Étape 4 : si la famille s'agrandit et que ça ne suffit plus, que faire ?",
+          "reponses": ["Demander au fournisseur d'augmenter la puissance souscrite (9 kVA)", "Remplacer le compteur soi-même", "Enlever le disjoncteur de branchement", "Passer tout le tableau en 1,5 mm²"],
+          "bonne": 0,
+          "explication": "La puissance souscrite se change auprès du fournisseur ; le compteur est alors reparamétré à distance. On ne touche jamais soi-même au disjoncteur de branchement."
+        }
+      ]
+    },
+    {
+      "id": "rallonge_jardin",
+      "titre": "Tondre avec une rallonge",
+      "module": "eclairage_exterieur",
+      "contexte": "Tu dois tondre la pelouse avec une tondeuse électrique de 1 800 W. La prise la plus proche est dans le garage, à 25 mètres du fond du jardin.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quelle rallonge choisir ?",
+          "reponses": ["Une rallonge d'intérieur fine, plus légère", "Une rallonge prévue pour l'extérieur (câble H07RN-F, prise IP44)", "Deux rallonges bon marché mises bout à bout", "Un fil de sonnette"],
+          "bonne": 1,
+          "explication": "Dehors, il faut un câble résistant à l'humidité et aux chocs (type H07RN-F) et des connexions protégées contre les projections (IP44)."
+        },
+        {
+          "enonce": "Étape 2 : pourquoi dérouler complètement l'enrouleur avant de tondre ?",
+          "reponses": ["Pour qu'il soit plus joli", "Parce qu'un câble enroulé chauffe et peut fondre sous 1 800 W", "Pour gagner du temps au rangement", "Ce n'est pas nécessaire"],
+          "bonne": 1,
+          "explication": "Enroulé, le câble ne dissipe pas sa chaleur : à forte puissance, la gaine peut fondre. Les enrouleurs indiquent d'ailleurs une puissance maximale bien plus faible enroulés."
+        },
+        {
+          "enonce": "Étape 3 : quelle protection doit couvrir la prise du garage ?",
+          "reponses": ["Un différentiel 30 mA", "Un fusible 63 A", "Un simple interrupteur", "Une lampe témoin"],
+          "bonne": 0,
+          "explication": "Dehors, avec de l'herbe humide et un câble qui peut être coupé, le 30 mA est la protection qui sauve : il coupe en quelques millisecondes en cas de fuite."
+        },
+        {
+          "enonce": "Étape 4 : la lame a sectionné le câble. Que fais-tu en premier ?",
+          "reponses": ["Ramasser les deux bouts pour voir", "Débrancher la rallonge à la prise avant de toucher quoi que ce soit", "Réparer avec du ruban adhésif", "Continuer, le différentiel a coupé"],
+          "bonne": 1,
+          "explication": "On coupe à la source avant de s'approcher : même si le différentiel a déclenché, on ne touche jamais un câble endommagé qui pourrait encore être alimenté."
+        }
+      ]
+    },
+    {
+      "id": "moteur_portail",
+      "titre": "Le portail ne s'ouvre plus",
+      "module": "moteurs",
+      "contexte": "Le moteur du portail bourdonne quand on appuie sur la télécommande, mais le portail ne bouge pas. Il fonctionnait normalement la semaine dernière.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : où trouves-tu la tension et la puissance du moteur ?",
+          "reponses": ["Sur la télécommande", "Sur la plaque signalétique du moteur", "Sur la facture d'électricité", "Sur le portail"],
+          "bonne": 1,
+          "explication": "La plaque signalétique donne tension, courant, puissance, vitesse et indice de protection : c'est le point de départ de tout diagnostic."
+        },
+        {
+          "enonce": "Étape 2 : un moteur monophasé qui bourdonne sans tourner, c'est souvent…",
+          "reponses": ["Un condensateur de démarrage défaillant", "Une télécommande déchargée", "Un manque de peinture", "Le neutre inversé"],
+          "bonne": 0,
+          "explication": "Sur un moteur monophasé, le condensateur crée le déphasage qui lance la rotation. Sans lui, le moteur reçoit du courant, bourdonne, mais ne démarre pas."
+        },
+        {
+          "enonce": "Étape 3 : avant de remplacer le condensateur, que fais-tu ?",
+          "reponses": ["Couper l'alimentation du portail et décharger le condensateur", "Le retirer sous tension pour gagner du temps", "Le chauffer au sèche-cheveux", "Mettre le portail en manuel seulement"],
+          "bonne": 0,
+          "explication": "On coupe et on vérifie l'absence de tension. Un condensateur peut rester chargé : on le décharge avec une résistance avant de le manipuler."
+        },
+        {
+          "enonce": "Étape 4 : quelle valeur doit avoir le nouveau condensateur ?",
+          "reponses": ["N'importe laquelle, pourvu qu'il rentre", "La même capacité (µF) et une tension au moins égale à l'ancien", "Une capacité deux fois plus grande pour plus de force", "Une tension plus faible pour économiser"],
+          "bonne": 1,
+          "explication": "Le condensateur est choisi pour ce moteur : même capacité en microfarads, tension nominale au moins égale. Une valeur différente use le moteur ou l'empêche de démarrer."
+        }
+      ]
+    },
+    {
+      "id": "facture_elevee",
+      "titre": "Une facture qui grimpe",
+      "module": "energie",
+      "contexte": "La facture d'électricité de l'hiver a doublé. Le logement est chauffé avec des radiateurs électriques et l'eau chaude vient d'un ballon électrique.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : quels appareils pèsent le plus dans une facture d'hiver ?",
+          "reponses": ["La box internet et la télévision", "Le chauffage et le chauffe-eau", "Les ampoules LED", "Le chargeur de téléphone"],
+          "bonne": 1,
+          "explication": "Le chauffage électrique représente souvent plus de la moitié de la consommation en hiver, suivi de l'eau chaude. Les petits appareils comptent peu."
+        },
+        {
+          "enonce": "Étape 2 : un radiateur de 2 000 W qui chauffe 5 heures par jour consomme…",
+          "reponses": ["2 kWh", "10 kWh", "400 Wh", "100 kWh"],
+          "bonne": 1,
+          "explication": "Énergie = puissance × temps : 2 kW × 5 h = 10 kWh par jour, soit environ 300 kWh par mois pour ce seul radiateur."
+        },
+        {
+          "enonce": "Étape 3 : quel réglage économise sans perdre de confort ?",
+          "reponses": ["Chauffer à 24 °C partout", "Baisser à 19 °C dans les pièces à vivre et 17 °C dans les chambres, avec une programmation", "Ouvrir les fenêtres radiateurs allumés", "Chauffer seulement avec le four"],
+          "bonne": 1,
+          "explication": "Chaque degré en moins fait économiser environ 7 % de chauffage. Une programmation baisse la température la nuit et pendant les absences."
+        },
+        {
+          "enonce": "Étape 4 : comment réduire le coût de l'eau chaude ?",
+          "reponses": ["Chauffer le ballon en heures creuses avec un contacteur et régler à 55 °C environ", "Régler le ballon à 80 °C", "Laisser couler l'eau chaude pour la garder chaude", "Retirer l'isolation du ballon"],
+          "bonne": 0,
+          "explication": "Le tarif heures creuses est moins cher, et 55 °C suffit pour l'usage tout en limitant les pertes et le tartre (sans descendre sous 50 °C, pour éviter les bactéries)."
+        }
+      ]
+    },
+    {
+      "id": "borne_recharge",
+      "titre": "Installer une borne de recharge",
+      "module": "vehicule_electrique",
+      "contexte": "Tu viens d'acheter une voiture électrique et tu veux installer une borne de 7,4 kW dans ton garage, en monophasé.",
+      "etapes": [
+        {
+          "enonce": "Étape 1 : sur quel circuit brancher la borne ?",
+          "reponses": ["Sur le circuit des prises du garage", "Sur un circuit dédié depuis le tableau", "Sur le circuit du chauffe-eau", "Sur une multiprise"],
+          "bonne": 1,
+          "explication": "Une borne demande un circuit dédié, avec sa propre protection, dimensionné pour une charge de plusieurs heures à pleine puissance."
+        },
+        {
+          "enonce": "Étape 2 : quel courant appelle une borne de 7,4 kW en monophasé 230 V ?",
+          "reponses": ["10 A", "16 A", "32 A", "63 A"],
+          "bonne": 2,
+          "explication": "I = P / U = 7 400 / 230 ≈ 32 A. Le circuit se câble donc en 10 mm² avec une protection 40 A, bien plus qu'une prise classique."
+        },
+        {
+          "enonce": "Étape 3 : quel type de différentiel faut-il ?",
+          "reponses": ["Type AC standard", "Type A (ou F / B) 30 mA, sensible aux courants continus de fuite", "Aucun, la borne a le sien", "Un type S retardé"],
+          "bonne": 1,
+          "explication": "Le chargeur de la voiture peut produire des courants de fuite avec une composante continue qu'un type AC ne détecte pas. On installe un type A au minimum, souvent un type F ou B selon la borne."
+        },
+        {
+          "enonce": "Étape 4 : qui peut installer cette borne ?",
+          "reponses": ["N'importe qui, c'est comme une prise", "Un électricien qualifié IRVE, obligatoire au-delà de 3,7 kW", "Le vendeur de la voiture", "Le voisin bricoleur"],
+          "bonne": 1,
+          "explication": "Au-delà de 3,7 kW, la loi impose un installateur qualifié IRVE (infrastructure de recharge de véhicule électrique). C'est aussi une condition pour les aides financières."
+        }
+      ]
+    }
+  ]
+}

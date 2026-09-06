@@ -128,6 +128,13 @@ class Insigne {
           e.modulesReussisTotal == e.modulesAvecContenu.length,
     ),
     Insigne(
+      id: 'cas_tous',
+      titre: 'Homme de terrain',
+      description: 'Tous les cas pratiques résolus.',
+      icone: Icons.handyman,
+      condition: (e) => e.casPratiques.isNotEmpty && e.casResolus == e.casPratiques.length,
+    ),
+    Insigne(
       id: 'quetes_10',
       titre: 'Chasseur de quêtes',
       description: 'Dix quêtes du jour accomplies.',

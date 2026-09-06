@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../data/sons.dart';
+import '../models/cas_pratique.dart';
 import '../data/quiz_session.dart';
 import '../models/fiche.dart';
 import '../models/module.dart';
@@ -33,7 +34,8 @@ class QuizScreen extends StatefulWidget {
     this.examen = false,
     this.duree,
     this.eclair = false,
-  }) : assert(module != null || questions != null);
+    this.cas,
+  }) : assert(module != null || questions != null || cas != null);
 
   final Module? module;
   final List<Question>? questions;
@@ -51,6 +53,10 @@ class QuizScreen extends StatefulWidget {
   /// Mode éclair : un compte à rebours par question, sans question « ordre ».
   final bool eclair;
 
+  /// Cas pratique : ses étapes dans l'ordre, avec la situation rappelée
+  /// au-dessus de chaque question.
+  final CasPratique? cas;
+
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
@@ -65,7 +71,8 @@ class _QuizScreenState extends State<QuizScreen> {
   List<int> _ordreInitial() =>
       List.generate(_session.questionCourante.reponses.length, (i) => i);
 
-  String get _titre => widget.titre ?? widget.module?.titre ?? 'Quiz';
+  String get _titre =>
+      widget.titre ?? widget.module?.titre ?? widget.cas?.titre ?? 'Quiz';
 
   /// Chrono du mode examen.
   Timer? _chrono;
@@ -85,8 +92,9 @@ class _QuizScreenState extends State<QuizScreen> {
     super.initState();
     final parametres = context.read<AppState>().parametres;
     _session = QuizSession(
-      widget.questions ?? widget.module!.questions,
-      melanger: widget.melanger && parametres.melanger,
+      widget.questions ?? widget.cas?.etapes ?? widget.module!.questions,
+      // Les étapes d'un cas pratique restent dans l'ordre.
+      melanger: widget.cas == null && widget.melanger && parametres.melanger,
     );
     _tempsUtilise.start();
     if (widget.duree != null) {
@@ -213,6 +221,7 @@ class _QuizScreenState extends State<QuizScreen> {
         moduleComplet: complet ? widget.module : null,
         examen: widget.examen,
         eclair: widget.eclair,
+        cas: widget.cas,
       );
       etat.jouer(Son.fin);
       _afficherResultat(dejaReussi: dejaReussi, recordAvant: recordAvant);
@@ -333,6 +342,27 @@ class _QuizScreenState extends State<QuizScreen> {
             ],
           ),
           const SizedBox(height: 24),
+          if (widget.cas case final cas?) ...[
+            // La situation du cas pratique, rappelée à chaque étape.
+            Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: scheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.handyman, color: scheme.primary),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(cas.contexte, style: theme.textTheme.bodyMedium),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
           if (question.image case final image?) ...[
             Container(
               decoration: BoxDecoration(

@@ -7,6 +7,7 @@ import '../models/question.dart';
 import '../widgets/bouton_relief.dart';
 import '../widgets/couleurs_parcours.dart';
 import '../widgets/module_icon.dart';
+import 'cartes_screen.dart';
 import 'fiche_screen.dart';
 import 'quiz_screen.dart';
 
@@ -30,6 +31,14 @@ class ModuleScreen extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(module: module, questions: questions),
+      ),
+    );
+  }
+
+  void _lancerCartes(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => CartesScreen(titre: module.titre, questions: module.questions),
       ),
     );
   }
@@ -176,6 +185,16 @@ class ModuleScreen extends StatelessWidget {
                     couleur: couleur,
                     onPressed: total == 0 ? null : () => _lancerQuiz(context),
                   ),
+                if (total > 0) ...[
+                  const SizedBox(height: 10),
+                  BoutonRelief(
+                    label: 'Réviser en cartes ($total cartes)',
+                    icone: Icons.style,
+                    couleur: couleur,
+                    secondaire: true,
+                    onPressed: () => _lancerCartes(context),
+                  ),
+                ],
               ],
             ),
           ),

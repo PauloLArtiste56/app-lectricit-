@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../models/question.dart';
+import '../screens/cartes_screen.dart';
+import '../screens/cas_pratiques_screen.dart';
 import '../screens/quiz_screen.dart';
 
 /// Carte d'entraînement en tête du parcours : séance du jour (révision
@@ -45,6 +47,21 @@ class CarteEntrainement extends StatelessWidget {
           eclair: true,
         ),
       ),
+    );
+  }
+
+  void _lancerCartes(BuildContext context, List<Question> questions) {
+    if (questions.isEmpty) return;
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => CartesScreen(titre: 'Cartes du jour', questions: questions),
+      ),
+    );
+  }
+
+  void _ouvrirCas(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => const CasPratiquesScreen()),
     );
   }
 
@@ -132,6 +149,14 @@ class CarteEntrainement extends StatelessWidget {
               icon: const Icon(Icons.play_arrow),
               label: Text('Lancer la séance (${seance.length} questions)'),
             ),
+            if (seance.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
+                onPressed: () => _lancerCartes(context, seance),
+                icon: const Icon(Icons.style),
+                label: Text('Cartes à retourner (${seance.length})'),
+              ),
+            ],
             if (faibles > 0) ...[
               const SizedBox(height: 8),
               OutlinedButton.icon(
@@ -148,6 +173,14 @@ class CarteEntrainement extends StatelessWidget {
               label: Text(
                 'Examen blanc : ${etat.parametres.tailleExamen} questions '
                 'en ${etat.parametres.dureeExamenMinutes} min',
+              ),
+            ),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () => _ouvrirCas(context),
+              icon: const Icon(Icons.handyman),
+              label: Text(
+                'Cas pratiques : ${etat.casResolus} / ${etat.casPratiques.length} résolus',
               ),
             ),
             const SizedBox(height: 8),
