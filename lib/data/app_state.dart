@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import '../models/chapitre.dart';
 import '../models/entree_historique.dart';
 import '../models/fiche.dart';
 import '../models/module.dart';
@@ -39,13 +40,21 @@ class AppState extends ChangeNotifier {
   /// Nombre maximum de questions dans une séance de révision.
   static const int tailleRevision = 15;
 
+  /// Part des questions à réussir pour qu'un module compte comme réussi
+  /// sur le parcours (16 questions sur 20).
+  static const double seuilReussite = 0.8;
+
   List<Module> _modules = [];
+  List<Chapitre> _chapitres = [];
   final Map<String, Module> _moduleParQuestion = {};
   Progression _progression = Progression();
   bool _pret = false;
   Object? _erreur;
 
   List<Module> get modules => _modules;
+
+  /// Chapitres du parcours, dans l'ordre du chemin.
+  List<Chapitre> get chapitres => _chapitres;
   bool get pret => _pret;
   Object? get erreur => _erreur;
   List<EntreeHistorique> get historique => _progression.historique;
@@ -54,6 +63,7 @@ class AppState extends ChangeNotifier {
   Future<void> charger() async {
     try {
       _modules = await _loader.chargerModules();
+      _chapitres = await _loader.chargerParcours();
       for (final m in _modules) {
         for (final q in m.questions) {
           _moduleParQuestion[q.id] = m;
@@ -78,6 +88,11 @@ class AppState extends ChangeNotifier {
 
   /// Module auquel appartient une question.
   Module? moduleDe(Question question) => _moduleParQuestion[question.id];
+
+  /// Modules d'un chapitre, dans l'ordre du parcours. Un identifiant inconnu
+  /// est ignoré plutôt que de faire planter l'écran.
+  List<Module> modulesDuChapitre(Chapitre chapitre) =>
+      [for (final id in chapitre.modulesIds) ?moduleParId(id)];
 
   /// Fiche à laquelle se rapporte une question, et son module.
   ({Module module, Fiche fiche, int index})? ficheDe(Question question) {
@@ -188,6 +203,15 @@ class AppState extends ChangeNotifier {
   bool moduleTermine(Module module) =>
       module.nombreQuestions > 0 &&
       questionsReussies(module) == module.nombreQuestions;
+
+  /// Réussi au sens du parcours : au moins [seuilReussite] des questions.
+  bool moduleReussi(Module module) =>
+      module.nombreQuestions > 0 &&
+      questionsReussies(module) >= module.nombreQuestions * seuilReussite;
+
+  /// Nombre de modules réussis dans un chapitre.
+  int modulesReussisDans(Chapitre chapitre) =>
+      modulesDuChapitre(chapitre).where(moduleReussi).length;
 
   bool ficheLue(Module module, String ficheId) =>
       progressionDe(module).fichesLues.contains(ficheId);

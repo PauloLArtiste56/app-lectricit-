@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 
+import '../models/chapitre.dart';
 import '../models/module.dart';
 
 /// Charge le contenu pédagogique embarqué dans `assets/content.json`.
@@ -12,17 +13,26 @@ class ContentLoader {
   final AssetBundle _bundle;
 
   static const String cheminContenu = 'assets/content.json';
+  static const String cheminParcours = 'assets/parcours.json';
 
   Future<List<Module>> chargerModules() async {
     // On lit les octets et on décode nous-mêmes : `loadString` passe par un
     // isolate au-delà de 50 Ko et garde un cache, deux comportements qui
     // bloquent les tests quand l'appli est rechargée plusieurs fois.
-    final octets = await _bundle.load(cheminContenu);
-    final texte = utf8.decode(octets.buffer.asUint8List(
+    return parserModules(await _lireTexte(cheminContenu));
+  }
+
+  /// Charge le découpage en chapitres du parcours (`assets/parcours.json`).
+  Future<List<Chapitre>> chargerParcours() async {
+    return parserParcours(await _lireTexte(cheminParcours));
+  }
+
+  Future<String> _lireTexte(String chemin) async {
+    final octets = await _bundle.load(chemin);
+    return utf8.decode(octets.buffer.asUint8List(
       octets.offsetInBytes,
       octets.lengthInBytes,
     ));
-    return parserModules(texte);
   }
 
   /// Transforme le texte JSON en liste de modules triés par `ordre`.
@@ -35,5 +45,15 @@ class ContentLoader {
         .toList();
     modules.sort((a, b) => a.ordre.compareTo(b.ordre));
     return modules;
+  }
+
+  /// Transforme le JSON du parcours en liste de chapitres, dans l'ordre du
+  /// fichier.
+  static List<Chapitre> parserParcours(String jsonTexte) {
+    final data = jsonDecode(jsonTexte) as Map<String, dynamic>;
+    return (data['chapitres'] as List<dynamic>)
+        .cast<Map<String, dynamic>>()
+        .map(Chapitre.fromJson)
+        .toList();
   }
 }

@@ -1,0 +1,174 @@
+{
+  "chapitres": [
+    {
+      "id": "fondamentaux",
+      "titre": "Les fondamentaux",
+      "description": "Tension, courant, résistance : les bases pour tout comprendre",
+      "modules": [
+        "grandeurs",
+        "courant",
+        "circuits",
+        "symboles",
+        "unites",
+        "energie",
+        "materiaux",
+        "calculs_circuits",
+        "magnetisme",
+        "condensateurs",
+        "electronique"
+      ]
+    },
+    {
+      "id": "maison",
+      "titre": "La maison",
+      "description": "L'installation domestique de A à Z",
+      "modules": [
+        "installation",
+        "cablage",
+        "eclairage",
+        "lire_tableau",
+        "mesures",
+        "chauffage",
+        "locaux_risques",
+        "parafoudre",
+        "courants_faibles",
+        "eclairage_exterieur",
+        "domotique",
+        "alarme"
+      ]
+    },
+    {
+      "id": "securite_base",
+      "titre": "Sécurité de base",
+      "description": "Les dangers du courant et comment s'en protéger",
+      "modules": [
+        "securite",
+        "physiologie",
+        "enfants",
+        "secours",
+        "epi",
+        "outillage",
+        "foudre",
+        "atex",
+        "cem_sante"
+      ]
+    },
+    {
+      "id": "habilitation",
+      "titre": "Habilitation électrique",
+      "description": "NF C 18-510 : B0, BS, BR, B1V, B2V, BC",
+      "modules": [
+        "habilitation",
+        "voisinage",
+        "b0_bs",
+        "br",
+        "b1_b2",
+        "bc",
+        "arc_tst",
+        "haute_tension",
+        "regimes_neutre"
+      ]
+    },
+    {
+      "id": "depannage",
+      "titre": "Mesurer, dépanner, rénover",
+      "description": "Les bons réflexes et les bons outils",
+      "modules": [
+        "depannage",
+        "mesures_avancees",
+        "plaque_signaletique",
+        "normes",
+        "renovation",
+        "cabler_tableau",
+        "selectivite",
+        "oscilloscope",
+        "maintenance_preventive",
+        "devis_documents"
+      ]
+    },
+    {
+      "id": "industrie",
+      "titre": "Moteurs, industrie et machines",
+      "description": "Du moteur asynchrone à l'armoire d'automatisme",
+      "modules": [
+        "moteurs",
+        "triphase",
+        "cos_phi",
+        "industrie",
+        "schemas_industriels",
+        "variateurs",
+        "servomoteurs",
+        "securite_machines",
+        "cem_perturbations",
+        "induction_industrie",
+        "soudure"
+      ]
+    },
+    {
+      "id": "energies",
+      "titre": "Énergies et réseaux",
+      "description": "De la centrale à la prise, et les renouvelables",
+      "modules": [
+        "reseaux",
+        "postes_htb",
+        "hvdc",
+        "smart_grid",
+        "nucleaire",
+        "hydraulique",
+        "eolien",
+        "photovoltaique",
+        "autoconsommation",
+        "batteries",
+        "hydrogene",
+        "energies_diverses"
+      ]
+    },
+    {
+      "id": "transports",
+      "titre": "Transports et mobilité",
+      "description": "Voitures, vélos, trains, avions et bateaux",
+      "modules": [
+        "vehicule_electrique",
+        "automobile",
+        "mobilite_legere",
+        "ferroviaire",
+        "aeronautique",
+        "camping_car_bateau"
+      ]
+    },
+    {
+      "id": "tertiaire",
+      "titre": "Tertiaire et bâtiments techniques",
+      "description": "Bureaux, ERP, locaux techniques et équipements",
+      "modules": [
+        "tertiaire_erp",
+        "ssi",
+        "gtb",
+        "ventilation",
+        "pac",
+        "secours_energie",
+        "eclairage_public",
+        "portails_ascenseurs",
+        "pompes_eau",
+        "data_centers",
+        "cuisines_pro"
+      ]
+    },
+    {
+      "id": "metier",
+      "titre": "Milieux spécialisés et vie du métier",
+      "description": "Des chantiers particuliers, et tout ce qui entoure le travail",
+      "modules": [
+        "agriculture",
+        "medical",
+        "spectacle",
+        "telecoms",
+        "electrochimie",
+        "factures_pro",
+        "recyclage",
+        "metiers",
+        "histoire"
+      ]
+    }
+  ]
+}

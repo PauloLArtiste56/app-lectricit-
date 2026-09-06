@@ -36,8 +36,13 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 4. Résultat : score, liste des questions ratées, bouton "Refaire les ratées".
 5. Stats : score global, modules terminés, historique.
 
-Navigation : barre du bas avec Accueil / Stats.
-Accueil → Module → Fiche → Quiz → Résultat → Accueil.
+Navigation : barre du bas avec Parcours / Modules / Stats.
+Parcours → Module → Fiche → Quiz → Résultat → Parcours.
+
+Parcours (inspiré de Duolingo) : les 100 modules sont rangés en 10 chapitres dans
+`assets/parcours.json` ; l'écran Parcours affiche la séance du jour puis un chemin en
+serpentin avec un rond par module (gris à faire, bleu en cours, vert réussi à 80 %).
+L'onglet Modules garde la liste complète par thème pour aller droit sur un sujet.
 
 Ajouts faits depuis : révision ciblée (les questions ratées reviennent jusqu'à être réussies),
 mélange des questions et réponses, "Revoir la fiche" après une erreur, questions de type `ordre`,
@@ -216,10 +221,11 @@ lib/
   main.dart
   models/        # Module, Fiche, Question, Progression
   data/          # chargement du JSON, service de stockage local
-  screens/       # accueil, module, fiche, quiz, resultat, stats
+  screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats
   widgets/       # composants réutilisables (carte module, bouton réponse, barre de progression)
 assets/
-  content.json
+  content.json    # modules, fiches, questions
+  parcours.json   # chapitres du parcours et ordre des modules
   images/
 ```
 

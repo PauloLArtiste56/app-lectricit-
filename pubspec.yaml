@@ -22,4 +22,5 @@ flutter:
   # Contenu pédagogique embarqué (lecture seule) et images des fiches.
   assets:
     - assets/content.json
+    - assets/parcours.json
     - assets/images/
