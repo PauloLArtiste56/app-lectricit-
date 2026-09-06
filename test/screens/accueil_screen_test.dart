@@ -34,4 +34,23 @@ void main() {
     expect(find.text('Les bases'), findsOneWidget);
     expect(find.text('Sécurité et habilitation'), findsOneWidget);
   });
+
+  testWidgets('la recherche filtre les modules, sans tenir compte des accents',
+      (tester) async {
+    _ecranHaut(tester);
+    await tester.pumpWidget(const ElecApp());
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Modules'));
+    await tester.pumpAndSettle();
+
+    await tester.enterText(find.byType(TextField), 'eclairage');
+    await tester.pumpAndSettle();
+    expect(find.text('Éclairage et commandes'), findsOneWidget);
+    expect(find.text('Éclairage extérieur et jardin'), findsOneWidget);
+    expect(find.text("Grandeurs électriques et loi d'Ohm"), findsNothing);
+
+    await tester.enterText(find.byType(TextField), 'zzz');
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Aucun module ne correspond'), findsOneWidget);
+  });
 }

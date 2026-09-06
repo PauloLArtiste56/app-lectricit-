@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../data/app_state.dart';
 import '../models/fiche.dart';
 import '../models/module.dart';
+import '../widgets/bouton_relief.dart';
+import '../widgets/couleurs_parcours.dart';
 import 'quiz_screen.dart';
 
 /// Écran Fiche : titre, texte, image optionnelle, et "Passer au quiz".
@@ -64,46 +66,97 @@ class _FicheScreenState extends State<FicheScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final fiche = _fiche;
+    final etat = context.read<AppState>();
+    final chapitre = etat.chapitreDe(widget.module);
+    final couleur = chapitre == null ? scheme.primary : couleurChapitre(chapitre);
+    final nombre = widget.module.fiches.length;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fiche ${widget.index + 1} / ${widget.module.fiches.length}'),
+        title: Text('Fiche ${widget.index + 1} / $nombre'),
+        // Un petit stepper sous le titre : une barre par fiche.
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(14),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Row(
+              children: [
+                for (var i = 0; i < nombre; i++) ...[
+                  if (i > 0) const SizedBox(width: 6),
+                  Expanded(
+                    child: Container(
+                      height: 6,
+                      decoration: BoxDecoration(
+                        color: i <= widget.index ? couleur : scheme.surfaceContainerHighest,
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(20),
         children: [
-          Text(fiche.titre, style: theme.textTheme.headlineSmall),
+          Text(
+            fiche.titre,
+            style: theme.textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.w800,
+              color: couleur,
+            ),
+          ),
           const SizedBox(height: 16),
           if (fiche.image != null) ...[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: scheme.outlineVariant, width: 2),
+              ),
+              clipBehavior: Clip.antiAlias,
               child: Image.asset('assets/images/${fiche.image}'),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
           ],
-          Text(fiche.contenu, style: theme.textTheme.bodyLarge),
+          Text(
+            fiche.contenu,
+            style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
+          ),
           const SizedBox(height: 32),
           if (widget.depuisQuiz)
-            FilledButton.icon(
+            BoutonRelief(
+              label: 'Retour au quiz',
+              icone: Icons.arrow_back,
+              couleur: couleur,
               onPressed: () => Navigator.of(context).pop(),
-              icon: const Icon(Icons.arrow_back),
-              label: const Text('Retour au quiz'),
             )
           else ...[
             if (!_estDerniere) ...[
-              FilledButton.tonalIcon(
+              BoutonRelief(
+                label: 'Fiche suivante',
+                icone: Icons.arrow_forward,
+                couleur: couleur,
                 onPressed: _ficheSuivante,
-                icon: const Icon(Icons.arrow_forward),
-                label: const Text('Fiche suivante'),
               ),
-              const SizedBox(height: 8),
-            ],
-            FilledButton.icon(
-              onPressed: _passerAuQuiz,
-              icon: const Icon(Icons.quiz),
-              label: const Text('Passer au quiz'),
-            ),
+              const SizedBox(height: 10),
+              BoutonRelief(
+                label: 'Passer au quiz',
+                icone: Icons.quiz,
+                couleur: couleur,
+                secondaire: true,
+                onPressed: _passerAuQuiz,
+              ),
+            ] else
+              BoutonRelief(
+                label: 'Passer au quiz',
+                icone: Icons.quiz,
+                couleur: couleur,
+                onPressed: _passerAuQuiz,
+              ),
           ],
         ],
       ),

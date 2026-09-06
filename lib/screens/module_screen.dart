@@ -4,11 +4,14 @@ import 'package:provider/provider.dart';
 import '../data/app_state.dart';
 import '../models/module.dart';
 import '../models/question.dart';
+import '../widgets/bouton_relief.dart';
+import '../widgets/couleurs_parcours.dart';
+import '../widgets/module_icon.dart';
 import 'fiche_screen.dart';
 import 'quiz_screen.dart';
 
-/// Écran Module : les fiches à lire (avec coche si déjà lues) et le
-/// bouton pour lancer le quiz.
+/// Écran Module : en-tête à la couleur du chapitre, les fiches présentées
+/// comme des étapes (coche si déjà lues) et le bouton pour lancer le quiz.
 class ModuleScreen extends StatelessWidget {
   const ModuleScreen({super.key, required this.module});
 
@@ -35,86 +38,216 @@ class ModuleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final etat = context.watch<AppState>();
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final reussies = etat.questionsReussies(module);
+    final total = module.nombreQuestions;
     final meilleur = etat.progressionDe(module).meilleurScore;
     final aRevoir = etat.questionsARevoir(module);
     // Module déjà commencé mais pas terminé : on propose les deux options.
     final commence = reussies > 0 && aRevoir.isNotEmpty;
+    final chapitre = etat.chapitreDe(module);
+    final couleur = chapitre == null ? scheme.primary : couleurChapitre(chapitre);
+    final encre = texteSur(couleur);
+    final reussi = etat.moduleReussi(module);
+    final seuil = (total * AppState.seuilReussite).ceil();
 
     return Scaffold(
-      appBar: AppBar(title: Text(module.titre)),
+      appBar: AppBar(
+        title: Text(module.titre),
+        backgroundColor: couleur,
+        foregroundColor: encre,
+      ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.zero,
         children: [
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('$reussies / ${module.nombreQuestions} questions réussies',
-                      style: theme.textTheme.titleMedium),
-                  const SizedBox(height: 8),
-                  LinearProgressIndicator(
-                    value: module.nombreQuestions == 0
-                        ? 0
-                        : reussies / module.nombreQuestions,
+          // En-tête coloré : icône, progression, meilleur score.
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+            decoration: BoxDecoration(
+              color: couleur,
+              borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
+            ),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 84,
+                  height: 84,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      CircularProgressIndicator(
+                        value: total == 0 ? 0 : reussies / total,
+                        strokeWidth: 6,
+                        color: reussi ? vertReussi : encre,
+                        backgroundColor: encre.withValues(alpha: 0.25),
+                      ),
+                      Center(
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: encre,
+                          child: Icon(
+                            reussi ? Icons.check : iconePourModule(module.id),
+                            color: reussi ? vertReussi : couleur,
+                            size: 32,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  if (meilleur > 0) ...[
-                    const SizedBox(height: 8),
-                    Text('Meilleur score : $meilleur / ${module.nombreQuestions}'),
-                  ],
-                ],
-              ),
+                ),
+                const SizedBox(width: 20),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (chapitre != null)
+                        Text(
+                          chapitre.titre.toUpperCase(),
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: encre.withValues(alpha: 0.85),
+                            letterSpacing: 1,
+                          ),
+                        ),
+                      Text(
+                        '$reussies / $total questions réussies',
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          color: encre,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        reussi
+                            ? 'Module réussi'
+                            : 'Objectif : $seuil sur $total pour débloquer la suite',
+                        style: theme.textTheme.bodySmall?.copyWith(color: encre),
+                      ),
+                      if (meilleur > 0)
+                        Text(
+                          'Meilleur score : $meilleur / $total',
+                          style: theme.textTheme.bodySmall?.copyWith(color: encre),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 16),
-          Text('Fiches de cours', style: theme.textTheme.titleMedium),
-          const SizedBox(height: 8),
-          if (module.fiches.isEmpty)
-            const Text('Pas encore de fiche pour ce module.'),
-          for (var i = 0; i < module.fiches.length; i++)
-            Card(
-              child: ListTile(
-                leading: Icon(
-                  etat.ficheLue(module, module.fiches[i].id)
-                      ? Icons.check_circle
-                      : Icons.article_outlined,
-                  color: etat.ficheLue(module, module.fiches[i].id)
-                      ? Colors.green
-                      : null,
-                ),
-                title: Text(module.fiches[i].titre),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () => _ouvrirFiche(context, i),
-              ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text('Fiches de cours', style: theme.textTheme.titleMedium),
+                const SizedBox(height: 8),
+                if (module.fiches.isEmpty)
+                  const Text('Pas encore de fiche pour ce module.'),
+                for (var i = 0; i < module.fiches.length; i++)
+                  _EtapeFiche(
+                    numero: i + 1,
+                    titre: module.fiches[i].titre,
+                    lue: etat.ficheLue(module, module.fiches[i].id),
+                    couleur: couleur,
+                    derniere: i == module.fiches.length - 1,
+                    onTap: () => _ouvrirFiche(context, i),
+                  ),
+                const SizedBox(height: 24),
+                if (commence) ...[
+                  BoutonRelief(
+                    label: 'Refaire uniquement les ratées (${aRevoir.length})',
+                    icone: Icons.replay,
+                    couleur: couleur,
+                    onPressed: () => _lancerQuiz(context, questions: aRevoir),
+                  ),
+                  const SizedBox(height: 10),
+                  BoutonRelief(
+                    label: 'Recommencer depuis le début ($total questions)',
+                    icone: Icons.restart_alt,
+                    couleur: couleur,
+                    secondaire: true,
+                    onPressed: () => _lancerQuiz(context),
+                  ),
+                ] else
+                  BoutonRelief(
+                    label: reussies == 0
+                        ? 'Lancer le quiz ($total questions)'
+                        : 'Refaire le quiz ($total questions)',
+                    icone: Icons.quiz,
+                    couleur: couleur,
+                    onPressed: total == 0 ? null : () => _lancerQuiz(context),
+                  ),
+              ],
             ),
-          const SizedBox(height: 24),
-          if (commence) ...[
-            FilledButton.icon(
-              onPressed: () => _lancerQuiz(context, questions: aRevoir),
-              icon: const Icon(Icons.replay),
-              label: Text('Refaire uniquement les ratées (${aRevoir.length})'),
-            ),
-            const SizedBox(height: 8),
-            FilledButton.tonalIcon(
-              onPressed: () => _lancerQuiz(context),
-              icon: const Icon(Icons.restart_alt),
-              label: Text(
-                'Recommencer depuis le début (${module.nombreQuestions} questions)',
-              ),
-            ),
-          ] else
-            FilledButton.icon(
-              onPressed: () => _lancerQuiz(context),
-              icon: const Icon(Icons.quiz),
-              label: Text(
-                reussies == 0
-                    ? 'Lancer le quiz (${module.nombreQuestions} questions)'
-                    : 'Refaire le quiz (${module.nombreQuestions} questions)',
-              ),
-            ),
+          ),
         ],
+      ),
+    );
+  }
+}
+
+/// Une fiche présentée comme une étape numérotée, reliée à la suivante.
+class _EtapeFiche extends StatelessWidget {
+  const _EtapeFiche({
+    required this.numero,
+    required this.titre,
+    required this.lue,
+    required this.couleur,
+    required this.derniere,
+    required this.onTap,
+  });
+
+  final int numero;
+  final String titre;
+  final bool lue;
+  final Color couleur;
+  final bool derniere;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: IntrinsicHeight(
+        child: Row(
+          children: [
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 18,
+                  backgroundColor: lue ? vertReussi : couleur.withValues(alpha: 0.15),
+                  child: lue
+                      ? const Icon(Icons.check_circle, color: Colors.white, size: 22)
+                      : Text('$numero',
+                          style: TextStyle(color: couleur, fontWeight: FontWeight.w800)),
+                ),
+                if (!derniere)
+                  Expanded(
+                    child: Container(width: 3, color: scheme.outlineVariant),
+                  ),
+              ],
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 6, bottom: 22),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(titre,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w600,
+                          )),
+                    ),
+                    Icon(Icons.chevron_right, color: scheme.outline),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

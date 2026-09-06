@@ -239,7 +239,8 @@ lib/
   models/        # Module, Fiche, Question, Progression
   data/          # chargement du JSON, service de stockage local
   screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats
-  widgets/       # composants réutilisables (carte module, bouton réponse, barre de progression)
+  widgets/       # composants réutilisables (carte module, bouton réponse, bouton en relief,
+                 # nœud et bannière du parcours, carte d'entraînement)
 assets/
   content.json    # modules, fiches, questions
   parcours.json   # chapitres du parcours et ordre des modules
