@@ -272,6 +272,43 @@ void main() {
     expect(relu.nombreARevoir, 1);
   });
 
+  test('couronnes : réussi, sans faute, puis confirmé en révision', () async {
+    var maintenant = DateTime(2026, 9, 6);
+    final etat = AppState(horloge: () => maintenant);
+    await etat.charger();
+    final module = etat.modules.first;
+    expect(etat.couronnes(module), 0);
+    expect(etat.prochaineCouronne(module), contains('80 %'));
+    expect(etat.couronnesMax, etat.modulesAvecContenu.length * 3);
+    expect(etat.glossaire.length, greaterThanOrEqualTo(60));
+
+    Future<void> quiz({int ratees = 0}) async {
+      final session = QuizSession(module.questions, melanger: false);
+      for (var i = 0; i < module.questions.length; i++) {
+        final q = module.questions[i];
+        session.repondre(i < ratees ? (q.bonne + 1) % q.reponses.length : q.bonne);
+        session.suivante();
+      }
+      await etat.enregistrerResultat(session, moduleComplet: module);
+    }
+
+    // 17/20 : réussi, une couronne.
+    await quiz(ratees: 3);
+    expect(etat.couronnes(module), 1);
+    expect(etat.prochaineCouronne(module), contains('sans faute'));
+    // Sans faute : deux couronnes, mais chaque question n'est réussie qu'une
+    // ou deux fois : pas encore confirmé.
+    await quiz();
+    expect(etat.couronnes(module), 2);
+    expect(etat.couronnesTotal, 2);
+    // Le lendemain, tout est réussi une fois de plus : niveau ≥ 2 partout.
+    maintenant = DateTime(2026, 9, 8);
+    await quiz();
+    expect(etat.couronnes(module), 3);
+    expect(etat.prochaineCouronne(module), isNull);
+    expect(etat.badgesObtenus.keys, contains('triple_couronne'));
+  });
+
   test('les quêtes d\'un jour sont toujours les mêmes trois', () {
     final a = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
     final b = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();

@@ -309,6 +309,7 @@ class _SectionChapitre extends StatelessWidget {
       etat: etatNoeud,
       couleur: couleur,
       courant: courant,
+      couronnes: etat.couronnes(module),
       progression:
           module.nombreQuestions == 0 ? 0 : reussies / module.nombreQuestions,
       onTap: () {

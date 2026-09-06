@@ -6,6 +6,7 @@ import '../models/module.dart';
 import '../models/question.dart';
 import '../widgets/bouton_relief.dart';
 import '../widgets/couleurs_parcours.dart';
+import '../widgets/couronnes.dart';
 import '../widgets/module_icon.dart';
 import 'cartes_screen.dart';
 import 'fiche_screen.dart';
@@ -136,6 +137,23 @@ class ModuleScreen extends StatelessWidget {
                           'Meilleur score : $meilleur / $total',
                           style: theme.textTheme.bodySmall?.copyWith(color: encre),
                         ),
+                      const SizedBox(height: 6),
+                      Row(
+                        children: [
+                          Couronnes(
+                            nombre: etat.couronnes(module),
+                            taille: 18,
+                            couleurVide: encre.withValues(alpha: 0.35),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              etat.prochaineCouronne(module) ?? 'Module maîtrisé !',
+                              style: theme.textTheme.bodySmall?.copyWith(color: encre),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

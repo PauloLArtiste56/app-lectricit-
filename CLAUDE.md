@@ -84,6 +84,13 @@ Cas pratiques (`assets/cas_pratiques.json`, `models/cas_pratique.dart` : 10 situ
 concrètes de 4 étapes QCM jouées dans l'ordre par `QuizScreen(cas:)` avec le contexte
 rappelé à chaque étape ; résolu à 80 %, historique sous `cas:<id>`, liste dans
 `screens/cas_pratiques_screen.dart`, quête et badge associés).
+Couronnes de maîtrise (`AppState.couronnes(module)`, 0 à 3 : module réussi à 80 %, quiz
+complet sans faute, chaque question réussie deux fois d'affilée en révision ; widget
+`widgets/couronnes.dart`, affichées sur le parcours, l'onglet Modules, l'en-tête du module,
+les stats et fêtées sur l'écran Résultat ; badge « Triple couronne »). Glossaire
+(`assets/glossaire.json`, `models/terme.dart`, `screens/glossaire_screen.dart` avec
+recherche, ouvert depuis l'onglet Modules ; dans les fiches, `widgets/texte_glossaire.dart`
+souligne la première occurrence de chaque terme et ouvre sa définition au toucher).
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -269,6 +276,7 @@ lib/
 assets/
   content.json    # modules, fiches, questions
   cas_pratiques.json  # situations concrètes à résoudre étape par étape
+  glossaire.json  # termes et définitions (soulignés dans les fiches)
   parcours.json   # chapitres du parcours et ordre des modules
   images/         # schémas des fiches ; decors/ : illustrations et mascotte du parcours
   sons/           # effets sonores WAV (générés par tools/sons/generer_sons.py)

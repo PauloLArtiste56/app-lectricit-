@@ -6,6 +6,7 @@ import '../models/fiche.dart';
 import '../models/module.dart';
 import '../widgets/bouton_relief.dart';
 import '../widgets/couleurs_parcours.dart';
+import '../widgets/texte_glossaire.dart';
 import 'quiz_screen.dart';
 
 /// Écran Fiche : titre, texte, image optionnelle, et "Passer au quiz".
@@ -122,8 +123,10 @@ class _FicheScreenState extends State<FicheScreen> {
             ),
             const SizedBox(height: 20),
           ],
-          Text(
-            fiche.contenu,
+          // Les termes du glossaire sont soulignés : un appui ouvre la définition.
+          TexteGlossaire(
+            texte: fiche.contenu,
+            termes: etat.glossaire,
             style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
           ),
           const SizedBox(height: 32),

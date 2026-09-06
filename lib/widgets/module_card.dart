@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/module.dart';
+import 'couronnes.dart';
 import 'module_icon.dart';
 
 /// Carte d'un module sur l'écran d'accueil : icône, titre, progression "3/10".
@@ -10,6 +11,7 @@ class ModuleCard extends StatelessWidget {
     required this.module,
     required this.questionsReussies,
     this.couleur,
+    this.couronnes = 0,
     this.onTap,
   });
 
@@ -20,6 +22,9 @@ class ModuleCard extends StatelessWidget {
 
   /// Couleur du chapitre du module (icône et barre).
   final Color? couleur;
+
+  /// Couronnes de maîtrise gagnées (0 à 3).
+  final int couronnes;
   final VoidCallback? onTap;
 
   @override
@@ -51,9 +56,16 @@ class ModuleCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      module.titre,
-                      style: Theme.of(context).textTheme.titleMedium,
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            module.titre,
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                        ),
+                        if (!enPreparation) Couronnes(nombre: couronnes, taille: 14),
+                      ],
                     ),
                     const SizedBox(height: 4),
                     Text(

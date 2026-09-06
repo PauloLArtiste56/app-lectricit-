@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/module.dart';
 import 'couleurs_parcours.dart';
+import 'couronnes.dart';
 import 'module_icon.dart';
 
 /// État d'un module sur le chemin du parcours.
@@ -18,6 +19,7 @@ class NoeudModule extends StatefulWidget {
     required this.progression,
     required this.couleur,
     this.courant = false,
+    this.couronnes = 0,
     this.onTap,
   });
 
@@ -32,6 +34,9 @@ class NoeudModule extends StatefulWidget {
 
   /// Le module à faire maintenant : bulle et anneau autour.
   final bool courant;
+
+  /// Couronnes de maîtrise gagnées (0 à 3), affichées sous le disque.
+  final int couronnes;
   final VoidCallback? onTap;
 
   /// Diamètre du disque, utilisé aussi pour tracer le chemin entre les ronds.
@@ -170,6 +175,11 @@ class _NoeudModuleState extends State<NoeudModule>
           ),
           disque,
           const SizedBox(height: 2),
+          if (widget.couronnes > 0)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 2),
+              child: Couronnes(nombre: widget.couronnes, taille: 12),
+            ),
           Text(
             widget.module.titre,
             textAlign: TextAlign.center,

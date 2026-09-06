@@ -14,6 +14,7 @@ import '../models/progression_module.dart';
 import '../models/question.dart';
 import '../models/recompense.dart';
 import '../models/revision_question.dart';
+import '../models/terme.dart';
 import 'insignes.dart';
 import 'content_loader.dart';
 import 'progression_store.dart';
@@ -120,6 +121,7 @@ class AppState extends ChangeNotifier {
       _modules = await _loader.chargerModules();
       _chapitres = await _loader.chargerParcours();
       _casPratiques = await _loader.chargerCasPratiques();
+      _glossaire = await _loader.chargerGlossaire();
       _ordreParcours = [for (final c in _chapitres) ...c.modulesIds];
       for (final m in _modules) {
         for (final q in m.questions) {
@@ -301,6 +303,36 @@ class AppState extends ChangeNotifier {
   int get meilleurEclair => _progression.historique
       .where((e) => e.moduleId == idEclair)
       .fold(0, (m, e) => e.score > m ? e.score : m);
+
+  // --- Glossaire -------------------------------------------------------------
+
+  List<Terme> _glossaire = [];
+  List<Terme> get glossaire => List.unmodifiable(_glossaire);
+
+  // --- Couronnes de maîtrise ------------------------------------------------
+
+  /// Couronnes d'un module, de 0 à 3 :
+  /// 1. module réussi (80 % des questions) ;
+  /// 2. un quiz complet sans faute ;
+  /// 3. confirmé : chaque question réussie deux fois d'affilée en révision.
+  int couronnes(Module module) {
+    if (!moduleReussi(module)) return 0;
+    final p = progressionDe(module);
+    if (p.meilleurScore < module.nombreQuestions) return 1;
+    final confirme = module.questions.every((q) => (p.revisions[q.id]?.niveau ?? 0) >= 2);
+    return confirme ? 3 : 2;
+  }
+
+  /// Ce qu'il reste à faire pour la couronne suivante (`null` si les 3 sont là).
+  String? prochaineCouronne(Module module) => switch (couronnes(module)) {
+        0 => 'Réussis 80 % des questions pour la première couronne.',
+        1 => 'Fais un quiz complet sans faute pour la deuxième.',
+        2 => 'Réussis chaque question deux fois d\'affilée en révision pour la troisième.',
+        _ => null,
+      };
+
+  int get couronnesTotal => modulesAvecContenu.fold(0, (s, m) => s + couronnes(m));
+  int get couronnesMax => modulesAvecContenu.length * 3;
 
   // --- Cas pratiques --------------------------------------------------------
 

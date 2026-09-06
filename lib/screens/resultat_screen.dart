@@ -25,6 +25,7 @@ class ResultatScreen extends StatelessWidget {
     this.eclair = false,
     this.recordAvant = 0,
     this.meilleurCombo = 0,
+    this.couronnesAvant = 0,
   });
 
   final String titre;
@@ -47,6 +48,9 @@ class ResultatScreen extends StatelessWidget {
 
   /// Meilleur enchaînement de bonnes réponses pendant le quiz.
   final int meilleurCombo;
+
+  /// Couronnes du module avant ce quiz, pour annoncer les nouvelles.
+  final int couronnesAvant;
 
   void _refaireLesRatees(BuildContext context) {
     // On remplace l'écran Résultat par un nouveau quiz limité aux ratées,
@@ -151,6 +155,18 @@ class ResultatScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          // Nouvelle couronne de maîtrise sur le module.
+          if (m != null && etat.couronnes(m) > couronnesAvant)
+            _Bandeau(
+              icone: Icons.workspace_premium,
+              couleur: const Color(0xFFB88A00),
+              texte: 'Couronne ${etat.couronnes(m)} sur 3 : '
+                  '${switch (etat.couronnes(m)) {
+                1 => 'module réussi',
+                2 => 'sans faute',
+                _ => 'confirmé en révision',
+              }} !',
+            ),
           // Quêtes accomplies et badges débloqués par ce quiz.
           for (final r in etat.recompensesRecentes)
             _Bandeau(

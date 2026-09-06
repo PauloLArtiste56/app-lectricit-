@@ -128,6 +128,13 @@ class Insigne {
           e.modulesReussisTotal == e.modulesAvecContenu.length,
     ),
     Insigne(
+      id: 'triple_couronne',
+      titre: 'Triple couronne',
+      description: 'Les trois couronnes sur un même module.',
+      icone: Icons.diamond,
+      condition: (e) => e.modulesAvecContenu.any((m) => e.couronnes(m) == 3),
+    ),
+    Insigne(
       id: 'cas_tous',
       titre: 'Homme de terrain',
       description: 'Tous les cas pratiques résolus.',
