@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 
 /// Les petits sons de l'appli, un fichier WAV chacun dans `assets/sons/`
 /// (générés par `tools/sons/generer_sons.py`).
-enum Son { bonne, mauvaise, combo, fin, tic }
+enum Son { bonne, mauvaise, combo, fin }
 
 /// Joue les sons via le plugin `audioplayers`. Un seul lecteur : un nouveau
 /// son coupe le précédent, ce qui convient à des effets très courts.

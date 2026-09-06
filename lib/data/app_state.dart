@@ -64,13 +64,6 @@ class AppState extends ChangeNotifier {
   /// Identifiant utilisé dans l'historique pour un examen blanc.
   static const String idExamen = 'examen';
 
-  /// Identifiant du mode éclair dans l'historique.
-  static const String idEclair = 'eclair';
-
-  /// Mode éclair : 10 questions, 10 secondes chacune.
-  static const int questionsParEclair = 10;
-  static const Duration dureeQuestionEclair = Duration(seconds: 10);
-
   /// Préfixe des cas pratiques dans l'historique : `cas:<id>`.
   static const String prefixeCas = 'cas:';
 
@@ -290,22 +283,6 @@ class AppState extends ChangeNotifier {
       ..shuffle(random ?? Random());
     return toutes.take(_parametres.tailleExamen).toList();
   }
-
-  /// Questions d'un mode éclair : tirées dans les modules déjà abordés,
-  /// sans les questions « ordre » (trop longues en 10 secondes).
-  List<Question> questionsEclair({Random? random}) {
-    final toutes = [
-      for (final m in modulesVus)
-        for (final q in m.questions)
-          if (q.type != TypeQuestion.ordre) q,
-    ]..shuffle(random ?? Random());
-    return toutes.take(questionsParEclair).toList();
-  }
-
-  /// Meilleur score obtenu en mode éclair (0 si jamais joué).
-  int get meilleurEclair => _progression.historique
-      .where((e) => e.moduleId == idEclair)
-      .fold(0, (m, e) => e.score > m ? e.score : m);
 
   // --- Boutique : gels de série et tenues -----------------------------------
 
@@ -671,7 +648,6 @@ class AppState extends ChangeNotifier {
   Future<void> enregistrerResultat(QuizSession session,
       {Module? moduleComplet,
       bool examen = false,
-      bool eclair = false,
       CasPratique? cas}) async {
     final ratees = session.questionsRatees.map((q) => q.id).toSet();
     for (final q in session.questions) {
@@ -706,9 +682,7 @@ class AppState extends ChangeNotifier {
               ? '$prefixeCas${cas.id}'
               : examen
                   ? idExamen
-                  : eclair
-                      ? idEclair
-                      : idRevision),
+                  : idRevision),
       date: _aujourdhui(),
       score: session.score,
       total: session.total,

@@ -22,8 +22,6 @@ class ResultatScreen extends StatelessWidget {
     required this.questionsRatees,
     this.dejaReussi = false,
     this.tempsUtilise,
-    this.eclair = false,
-    this.recordAvant = 0,
     this.meilleurCombo = 0,
     this.couronnesAvant = 0,
   });
@@ -41,10 +39,6 @@ class ResultatScreen extends StatelessWidget {
 
   /// Durée de l'épreuve (mode examen), affichée sous le score.
   final Duration? tempsUtilise;
-
-  /// Mode éclair : on compare au record d'avant ce quiz.
-  final bool eclair;
-  final int recordAvant;
 
   /// Meilleur enchaînement de bonnes réponses pendant le quiz.
   final int meilleurCombo;
@@ -93,7 +87,6 @@ class ResultatScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final etat = context.watch<AppState>();
     final sansFaute = questionsRatees.isEmpty;
-    final nouveauRecord = eclair && score > recordAvant && score > 0;
     final m = module;
     final reussi = m != null && etat.moduleReussi(m);
     final suivant = m == null ? null : etat.moduleSuivant(m);
@@ -117,11 +110,6 @@ class ResultatScreen extends StatelessWidget {
                   : suivant == null
                       ? 'Tu as fini le parcours. Chapeau !'
                       : 'Le module suivant est débloqué.',
-            )
-          else if (nouveauRecord)
-            const _Fanfare(
-              titre: 'Nouveau record !',
-              sousTitre: 'Ton meilleur score en mode éclair.',
             )
           else
             Text(
@@ -180,14 +168,6 @@ class ResultatScreen extends StatelessWidget {
               couleur: Colors.purple.shade400,
               texte: 'Nouveau badge : ${b.titre}',
             ),
-          if (eclair && !nouveauRecord && recordAvant > 0) ...[
-            const SizedBox(height: 8),
-            Text(
-              'Record : $recordAvant / $total',
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium,
-            ),
-          ],
           if (meilleurCombo >= 3) ...[
             const SizedBox(height: 8),
             Text(

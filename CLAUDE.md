@@ -72,9 +72,7 @@ quêtes du jour (`data/quetes.dart` : 3 défis tirés chaque jour parmi 7, XP ve
 fois via `models/recompense.dart`, carte sous la carte d'entraînement), badges
 (`data/insignes.dart` : 16 conditions, débloqués après chaque quiz, grille dans les stats,
 annoncés sur l'écran Résultat). La progression stocke en plus `recompenses` et `badges`.
-Mode éclair (10 questions sans « ordre » tirées dans les modules abordés, 10 s par
-question avec compte à rebours, question passée = ratée, record dans l'historique sous
-l'identifiant `eclair`, fêté sur l'écran Résultat). Sons (`data/sons.dart`, plugin
+Sons (`data/sons.dart`, plugin
 `audioplayers`, WAV générés par `tools/sons/generer_sons.py` dans `assets/sons/`,
 réglage « Sons » dans les paramètres, jamais en examen) et animations : secousse de la
 mauvaise réponse, panneau de correction qui glisse, pastille « Combo ×N » (son spécial
