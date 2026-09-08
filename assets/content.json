@@ -304,6 +304,30 @@
           ],
           "bonne": 1,
           "explication": "Kilo = mille : 1 kW = 1 000 W. Un radiateur de 2 kW fait 2 000 W."
+        },
+        {
+          "id": "vf_grandeurs_1",
+          "fiche_id": "ohm",
+          "type": "vrai_faux",
+          "enonce": "Dans la loi d'Ohm, si on double la résistance sans changer la tension, le courant est divisé par deux.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "I = U / R : à tension constante, doubler R divise bien le courant par deux."
+        },
+        {
+          "id": "vf_grandeurs_2",
+          "fiche_id": "puissance",
+          "type": "vrai_faux",
+          "enonce": "Un appareil de 3 000 W branché sur 230 V appelle environ 3 A.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "I = P / U = 3 000 / 230 ≈ 13 A, pas 3 A. On confond souvent watts et ampères."
         }
       ],
       "theme": "Les bases"
@@ -612,6 +636,30 @@
           ],
           "bonne": 1,
           "explication": "400 V entre phases, 230 V entre une phase et le neutre : c'est le même réseau."
+        },
+        {
+          "id": "vf_courant_1",
+          "fiche_id": "alternatif",
+          "type": "vrai_faux",
+          "enonce": "En France, le courant alternatif du réseau change de sens 50 fois par seconde.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La fréquence est de 50 Hz : le courant fait 50 cycles complets par seconde."
+        },
+        {
+          "id": "vf_courant_2",
+          "fiche_id": "continu",
+          "type": "vrai_faux",
+          "enonce": "Une batterie de voiture fournit du courant alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une batterie fournit du courant continu. C'est l'alternateur qui produit de l'alternatif, redressé ensuite pour la recharger."
         }
       ],
       "theme": "Les bases"
@@ -920,6 +968,30 @@
           ],
           "bonne": 1,
           "explication": "Résistance quasi nulle donc courant énorme : c'est le disjoncteur qui doit couper immédiatement."
+        },
+        {
+          "id": "vf_circuits_1",
+          "fiche_id": "serie",
+          "type": "vrai_faux",
+          "enonce": "Dans un montage en série, le courant est le même dans tous les éléments.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Il n'y a qu'un seul chemin : le même courant traverse tous les récepteurs, et les tensions s'additionnent."
+        },
+        {
+          "id": "vf_circuits_2",
+          "fiche_id": "parallele",
+          "type": "vrai_faux",
+          "enonce": "Si une lampe grille dans un montage en parallèle, toutes les autres s'éteignent.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "En parallèle, chaque branche est indépendante : les autres restent allumées. C'est en série que tout s'éteint."
         }
       ],
       "theme": "Les bases"
@@ -1363,6 +1435,30 @@
           ],
           "bonne": 0,
           "explication": "Un contact avec une croix à son extrémité : le disjoncteur, qui coupe aussi automatiquement."
+        },
+        {
+          "id": "vf_symboles_1",
+          "fiche_id": "couleurs",
+          "type": "vrai_faux",
+          "enonce": "Le conducteur de protection est repéré par la couleur vert et jaune, et cette couleur ne sert à rien d'autre.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le vert-jaune est réservé à la terre. L'utiliser pour un autre conducteur est interdit et dangereux."
+        },
+        {
+          "id": "vf_symboles_2",
+          "fiche_id": "couleurs",
+          "type": "vrai_faux",
+          "enonce": "Le neutre peut être repéré en marron si le bleu manque.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le neutre est bleu clair. Le marron, le rouge et le noir sont des couleurs de phase : les inverser trompe le prochain intervenant."
         }
       ],
       "theme": "Les bases"
@@ -1671,6 +1767,30 @@
           ],
           "bonne": 1,
           "explication": "La prise-compteur s'intercale entre la prise et l'appareil et affiche les watts et les kWh cumulés."
+        },
+        {
+          "id": "vf_energie_1",
+          "fiche_id": "energie",
+          "type": "vrai_faux",
+          "enonce": "Une ampoule de 10 W allumée pendant 100 heures consomme 1 kWh.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "10 W × 100 h = 1 000 Wh, soit 1 kWh."
+        },
+        {
+          "id": "vf_energie_2",
+          "fiche_id": "economies",
+          "type": "vrai_faux",
+          "enonce": "Un appareil en veille ne consomme rien du tout.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une veille consomme quelques watts en permanence, ce qui finit par compter sur l'année."
         }
       ],
       "theme": "Les bases"
@@ -1978,6 +2098,30 @@
             "Le moteur tourne, même bouton relâché"
           ],
           "explication": "Le contact d'auto-maintien garde la bobine alimentée : c'est le bouton Arrêt qui coupera."
+        },
+        {
+          "id": "vf_moteurs_1",
+          "fiche_id": "transformateur",
+          "type": "vrai_faux",
+          "enonce": "Un transformateur fonctionne aussi bien en courant continu qu'en alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il lui faut un champ magnétique variable : en continu, il ne transforme rien et son bobinage chauffe."
+        },
+        {
+          "id": "vf_moteurs_2",
+          "fiche_id": "demarrage",
+          "type": "vrai_faux",
+          "enonce": "Un moteur appelle beaucoup plus de courant au démarrage qu'en marche normale.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La pointe de démarrage peut atteindre plusieurs fois le courant nominal, d'où les protections et démarrages adaptés."
         }
       ],
       "ordre": 6
@@ -2285,6 +2429,30 @@
             "Le courant alimente le réseau"
           ],
           "explication": "Mouvement → variation de champ → induction → courant."
+        },
+        {
+          "id": "vf_magnetisme_1",
+          "fiche_id": "induction",
+          "type": "vrai_faux",
+          "enonce": "Il faut un mouvement ou une variation pour qu'une bobine produise une tension induite.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Sans variation du champ magnétique, aucune tension n'apparaît : c'est le principe de l'induction."
+        },
+        {
+          "id": "vf_magnetisme_2",
+          "fiche_id": "aimants",
+          "type": "vrai_faux",
+          "enonce": "Un courant qui circule dans un fil ne crée aucun champ magnétique.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Tout courant crée un champ magnétique autour du conducteur : c'est ce que mesure une pince ampèremétrique."
         }
       ],
       "ordre": 7
@@ -2592,6 +2760,30 @@
             "Régulateur : tension de sortie fixe"
           ],
           "explication": "Abaisser, redresser, lisser, réguler."
+        },
+        {
+          "id": "vf_electronique_1",
+          "fiche_id": "composants",
+          "type": "vrai_faux",
+          "enonce": "Une diode ne laisse passer le courant que dans un seul sens.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est sa fonction : elle conduit dans le sens passant et bloque dans l'autre, d'où son usage en redressement."
+        },
+        {
+          "id": "vf_electronique_2",
+          "fiche_id": "securite_elec",
+          "type": "vrai_faux",
+          "enonce": "Un condensateur d'alimentation est sans danger dès que l'appareil est débranché.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il peut rester chargé longtemps après la coupure : on le décharge avant d'intervenir."
         }
       ],
       "ordre": 8
@@ -2900,6 +3092,30 @@
             "Branchement, compteur, tableau, prise"
           ],
           "explication": "Production, transport, distribution HTA, distribution BT, installation."
+        },
+        {
+          "id": "vf_reseaux_1",
+          "fiche_id": "production",
+          "type": "vrai_faux",
+          "enonce": "On transporte l'électricité sous haute tension pour limiter les pertes en ligne.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "À puissance égale, monter la tension baisse le courant, et les pertes par échauffement dépendent du carré du courant."
+        },
+        {
+          "id": "vf_reseaux_2",
+          "fiche_id": "regimes_neutre",
+          "type": "vrai_faux",
+          "enonce": "En France, les logements sont raccordés en régime IT.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Les logements sont en régime TT : neutre à la terre côté distributeur, masses à la terre chez l'usager. L'IT sert là où la continuité prime, comme à l'hôpital."
         }
       ],
       "ordre": 9
@@ -3207,6 +3423,30 @@
             "Réduire pour ne pas décharger à 100 %"
           ],
           "explication": "Énergie, puis division par la puissance, puis marge de sécurité."
+        },
+        {
+          "id": "vf_batteries_1",
+          "fiche_id": "capacite",
+          "type": "vrai_faux",
+          "enonce": "Une batterie de 100 Ah sous 12 V stocke environ 1,2 kWh.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Énergie = capacité × tension = 100 × 12 = 1 200 Wh, soit 1,2 kWh."
+        },
+        {
+          "id": "vf_batteries_2",
+          "fiche_id": "securite_batteries",
+          "type": "vrai_faux",
+          "enonce": "Une batterie au lithium endommagée ou gonflée peut être jetée avec les ordures ménagères.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle peut prendre feu : on l'isole, on ne la perce pas, et on la dépose en point de collecte."
         }
       ],
       "ordre": 10
@@ -3514,6 +3754,30 @@
             "1 MW"
           ],
           "explication": "milli, unité, kilo, méga : chaque étape multiplie par 1 000."
+        },
+        {
+          "id": "vf_unites_1",
+          "fiche_id": "prefixes",
+          "type": "vrai_faux",
+          "enonce": "Un mégawatt vaut mille kilowatts.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Chaque préfixe monte de mille en mille : 1 MW = 1 000 kW = 1 000 000 W."
+        },
+        {
+          "id": "vf_unites_2",
+          "fiche_id": "unites_si",
+          "type": "vrai_faux",
+          "enonce": "Le kWh et le kW mesurent la même chose.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le kW est une puissance, le kWh une énergie : une puissance pendant une durée."
         }
       ],
       "ordre": 11
@@ -3822,6 +4086,30 @@
             "Rééquilibrer si une phase est trop chargée"
           ],
           "explication": "Lister, répartir, câbler, mesurer, ajuster."
+        },
+        {
+          "id": "vf_triphase_1",
+          "fiche_id": "couplages",
+          "type": "vrai_faux",
+          "enonce": "En triphasé 400 V, la tension entre une phase et le neutre est de 230 V.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les 400 V sont entre phases ; entre phase et neutre, on retrouve les 230 V du monophasé."
+        },
+        {
+          "id": "vf_triphase_2",
+          "fiche_id": "equilibrage",
+          "type": "vrai_faux",
+          "enonce": "Répartir les circuits sur les trois phases n'a aucune importance.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un déséquilibre fait chauffer le neutre et peut faire déclencher une phase alors que les autres sont peu chargées."
         }
       ],
       "ordre": 12
@@ -4130,6 +4418,30 @@
             "Surveiller les harmoniques"
           ],
           "explication": "Mesurer, calculer, installer, vérifier."
+        },
+        {
+          "id": "vf_cos_phi_1",
+          "fiche_id": "puissances",
+          "type": "vrai_faux",
+          "enonce": "Un radiateur électrique a un cos φ très proche de 1.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Une résistance pure ne déphase pas le courant : toute la puissance appelée est utile."
+        },
+        {
+          "id": "vf_cos_phi_2",
+          "fiche_id": "compensation",
+          "type": "vrai_faux",
+          "enonce": "On compense l'énergie réactive en ajoutant des bobines.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "On la compense avec des condensateurs : ce sont les bobines des moteurs qui la consomment."
         }
       ],
       "ordre": 13
@@ -4438,6 +4750,30 @@
             "La lampe d'Edison"
           ],
           "explication": "1800, 1820, 1827, 1831, 1879."
+        },
+        {
+          "id": "vf_histoire_1",
+          "fiche_id": "industrialisation",
+          "type": "vrai_faux",
+          "enonce": "La « guerre des courants » a opposé les partisans du continu à ceux de l'alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Edison défendait le continu, Westinghouse et Tesla l'alternatif, qui l'a emporté grâce au transformateur."
+        },
+        {
+          "id": "vf_histoire_2",
+          "fiche_id": "pionniers",
+          "type": "vrai_faux",
+          "enonce": "L'ampère porte le nom d'un physicien italien.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "André-Marie Ampère était français. Volta, lui, était italien."
         }
       ],
       "ordre": 14
@@ -4746,6 +5082,30 @@
             "Le réseau distribue"
           ],
           "explication": "Mécanique, génération, conversion, raccordement, distribution."
+        },
+        {
+          "id": "vf_eolien_1",
+          "fiche_id": "principe_eolien",
+          "type": "vrai_faux",
+          "enonce": "Une éolienne produit d'autant plus que le vent est fort, sans aucune limite.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Au-delà d'une vitesse de sécurité, elle est arrêtée ou mise en drapeau pour ne pas se détruire."
+        },
+        {
+          "id": "vf_eolien_2",
+          "fiche_id": "integration_reseau",
+          "type": "vrai_faux",
+          "enonce": "La production éolienne est variable et doit être compensée par d'autres moyens sur le réseau.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le vent ne se commande pas : le réseau équilibre avec d'autres sources, du stockage ou de la flexibilité."
         }
       ],
       "ordre": 15
@@ -5054,6 +5414,30 @@
             "Électricité, eau et chaleur"
           ],
           "explication": "Produire, stocker, restituer."
+        },
+        {
+          "id": "vf_hydrogene_1",
+          "fiche_id": "electrolyse",
+          "type": "vrai_faux",
+          "enonce": "L'hydrogène se produit notamment par électrolyse de l'eau.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Un courant continu sépare l'eau en hydrogène et oxygène : c'est l'électrolyse."
+        },
+        {
+          "id": "vf_hydrogene_2",
+          "fiche_id": "securite_h2",
+          "type": "vrai_faux",
+          "enonce": "L'hydrogène est plus lourd que l'air et s'accumule au sol.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il est très léger et monte : les fuites s'accumulent en point haut, d'où la ventilation en toiture."
         }
       ],
       "ordre": 16
@@ -5362,6 +5746,30 @@
             "Transformateur élévateur vers 400 kV"
           ],
           "explication": "Chaleur, vapeur, turbine, alternateur, réseau."
+        },
+        {
+          "id": "vf_nucleaire_1",
+          "fiche_id": "principe_centrale",
+          "type": "vrai_faux",
+          "enonce": "Dans une centrale nucléaire, c'est la vapeur qui fait tourner la turbine et l'alternateur.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La fission chauffe l'eau ; la vapeur entraîne la turbine, couplée à l'alternateur qui produit l'électricité."
+        },
+        {
+          "id": "vf_nucleaire_2",
+          "fiche_id": "parc_francais",
+          "type": "vrai_faux",
+          "enonce": "Le nucléaire fournit une part minoritaire de l'électricité produite en France.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il en reste la source principale, autour de deux tiers de la production française."
         }
       ],
       "ordre": 17
@@ -5670,6 +6078,30 @@
             "Électricité restituée au réseau"
           ],
           "explication": "Pomper quand c'est abondant, turbiner à la pointe."
+        },
+        {
+          "id": "vf_hydraulique_1",
+          "fiche_id": "barrages",
+          "type": "vrai_faux",
+          "enonce": "Une station de transfert d'énergie par pompage sert à stocker de l'énergie.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "On pompe l'eau vers le bassin haut quand l'électricité est abondante, on turbine quand elle manque."
+        },
+        {
+          "id": "vf_hydraulique_2",
+          "fiche_id": "principe_hydro",
+          "type": "vrai_faux",
+          "enonce": "La puissance d'une installation hydraulique ne dépend que du débit.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle dépend du débit et de la hauteur de chute : un petit débit sous forte chute peut produire beaucoup."
         }
       ],
       "ordre": 18
@@ -5978,6 +6410,30 @@
             "Si insuffisant, délestage automatique"
           ],
           "explication": "Détecter, réagir vite, puis durablement, puis délester."
+        },
+        {
+          "id": "vf_smart_grid_1",
+          "fiche_id": "equilibre",
+          "type": "vrai_faux",
+          "enonce": "Sur le réseau, la production doit à chaque instant égaler la consommation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'électricité ne se stocke pas en masse : le déséquilibre fait dériver la fréquence, d'où l'équilibrage permanent."
+        },
+        {
+          "id": "vf_smart_grid_2",
+          "fiche_id": "compteur_communicant",
+          "type": "vrai_faux",
+          "enonce": "Un compteur communicant mesure la consommation de chaque appareil séparément.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il mesure la consommation globale du logement. Le détail par appareil demande des mesures dédiées."
         }
       ],
       "ordre": 19
@@ -6286,6 +6742,30 @@
             "Le moteur bouge, nouvelle mesure"
           ],
           "explication": "Consigne, mesure, écart, correction, en boucle."
+        },
+        {
+          "id": "vf_servomoteurs_1",
+          "fiche_id": "pas_a_pas",
+          "type": "vrai_faux",
+          "enonce": "Un moteur pas à pas peut se positionner sans capteur de position.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Il avance d'un angle fixe par impulsion, donc on connaît sa position tant qu'il ne perd pas de pas."
+        },
+        {
+          "id": "vf_servomoteurs_2",
+          "fiche_id": "servo",
+          "type": "vrai_faux",
+          "enonce": "Un servomoteur fonctionne en boucle ouverte, sans retour d'information.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le servomoteur est asservi : un capteur renvoie la position réelle et la commande corrige l'écart."
         }
       ],
       "ordre": 20
@@ -6594,6 +7074,30 @@
             "Moteurs de traction, retour par les rails"
           ],
           "explication": "Transport, sous-station, caténaire, train, rails."
+        },
+        {
+          "id": "vf_ferroviaire_1",
+          "fiche_id": "securite_ferroviaire",
+          "type": "vrai_faux",
+          "enonce": "Une caténaire reste dangereuse même si aucun train ne circule.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Elle est sous tension en permanence ; seule une consignation par l'exploitant met la ligne hors tension."
+        },
+        {
+          "id": "vf_ferroviaire_2",
+          "fiche_id": "traction",
+          "type": "vrai_faux",
+          "enonce": "Tout le réseau ferré français est alimenté sous la même tension.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il coexiste du 1 500 V continu et du 25 000 V alternatif, d'où les engins bicourants."
         }
       ],
       "ordre": 21
@@ -6902,6 +7406,30 @@
             "Atterrissage en mode dégradé"
           ],
           "explication": "Cascade de secours."
+        },
+        {
+          "id": "vf_aeronautique_1",
+          "fiche_id": "avion",
+          "type": "vrai_faux",
+          "enonce": "Le réseau de bord d'un avion de ligne utilise couramment du 400 Hz.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Une fréquence élevée permet des transformateurs et moteurs plus légers, ce qui compte en aviation."
+        },
+        {
+          "id": "vf_aeronautique_2",
+          "fiche_id": "normes_aero",
+          "type": "vrai_faux",
+          "enonce": "Dans l'espace, la redondance des circuits n'est pas nécessaire.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Aucune réparation n'est possible : les alimentations et commandes sont doublées, voire triplées."
         }
       ],
       "ordre": 22
@@ -7210,6 +7738,30 @@
             "Rinçage et séchage"
           ],
           "explication": "Préparer, brancher, déposer, finir."
+        },
+        {
+          "id": "vf_electrochimie_1",
+          "fiche_id": "electrolyse_metaux",
+          "type": "vrai_faux",
+          "enonce": "La galvanoplastie dépose une couche de métal grâce à un courant continu.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La pièce à traiter sert d'électrode : le métal dissous dans le bain se dépose dessus."
+        },
+        {
+          "id": "vf_electrochimie_2",
+          "fiche_id": "corrosion",
+          "type": "vrai_faux",
+          "enonce": "La protection cathodique consiste à isoler complètement la structure du sol.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle impose un potentiel à la structure, avec une anode sacrificielle ou un courant imposé, pour que ce soit l'anode qui se corrode."
         }
       ],
       "ordre": 23
@@ -7518,6 +8070,30 @@
             "Mise à la terre et en court-circuit de part et d'autre"
           ],
           "explication": "Même logique qu'en BT, distances en plus."
+        },
+        {
+          "id": "vf_postes_htb_1",
+          "fiche_id": "htb_niveaux",
+          "type": "vrai_faux",
+          "enonce": "Un poste de transformation permet de passer d'une tension à une autre sur le réseau.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est sa fonction : élever la tension pour le transport, l'abaisser pour la distribution."
+        },
+        {
+          "id": "vf_postes_htb_2",
+          "fiche_id": "htb_risques",
+          "type": "vrai_faux",
+          "enonce": "En haute tension, un contact direct est nécessaire pour être blessé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un amorçage peut se produire à distance : il faut respecter des distances de sécurité bien plus grandes qu'en basse tension."
         }
       ],
       "ordre": 24
@@ -7826,6 +8402,30 @@
             "Négocier le contrat et envisager l'autoconsommation"
           ],
           "explication": "Du gratuit vers l'investissement."
+        },
+        {
+          "id": "vf_factures_pro_1",
+          "fiche_id": "fac_puissance",
+          "type": "vrai_faux",
+          "enonce": "Dépasser sa puissance souscrite peut coûter cher sur la facture.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les dépassements sont facturés en plus, et répétés ils justifient de revoir l'abonnement."
+        },
+        {
+          "id": "vf_factures_pro_2",
+          "fiche_id": "fac_structure",
+          "type": "vrai_faux",
+          "enonce": "Sur une facture, l'abonnement dépend de la quantité d'énergie consommée.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'abonnement dépend de la puissance souscrite ; c'est la part variable qui suit les kWh consommés."
         }
       ],
       "ordre": 25
@@ -8134,6 +8734,30 @@
             "Réseau alternatif d'arrivée"
           ],
           "explication": "Deux conversions."
+        },
+        {
+          "id": "vf_hvdc_1",
+          "fiche_id": "hvdc_principe",
+          "type": "vrai_faux",
+          "enonce": "Le courant continu haute tension permet de transporter l'énergie sur de très longues distances avec moins de pertes.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Au-delà d'une certaine distance, et surtout en câble sous-marin, le continu devient plus avantageux que l'alternatif."
+        },
+        {
+          "id": "vf_hvdc_2",
+          "fiche_id": "hvdc_securite",
+          "type": "vrai_faux",
+          "enonce": "Couper un courant continu de forte intensité est plus facile qu'en alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "En alternatif, le courant passe par zéro cent fois par seconde, ce qui éteint l'arc. En continu, il faut forcer cette extinction, d'où des disjoncteurs bien plus complexes."
         }
       ],
       "ordre": 26
@@ -8442,6 +9066,30 @@
             "Intervenir"
           ],
           "explication": "Le bus continu reste dangereux plusieurs minutes."
+        },
+        {
+          "id": "vf_condensateurs_1",
+          "fiche_id": "cond_principe",
+          "type": "vrai_faux",
+          "enonce": "Un condensateur laisse passer le courant alternatif mais bloque le courant continu établi.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Il se charge puis bloque en continu ; en alternatif, il se charge et se décharge sans arrêt, donc du courant circule."
+        },
+        {
+          "id": "vf_condensateurs_2",
+          "fiche_id": "cond_dangers",
+          "type": "vrai_faux",
+          "enonce": "Une bobine s'oppose aux variations brusques du courant qui la traverse.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est son effet d'inductance : elle lisse le courant et provoque une surtension si on le coupe brutalement."
         }
       ],
       "ordre": 27
@@ -8750,6 +9398,30 @@
             "Vérifier que le problème a disparu"
           ],
           "explication": "Méthode d'enquête."
+        },
+        {
+          "id": "vf_cem_perturbations_1",
+          "fiche_id": "cemp_installation",
+          "type": "vrai_faux",
+          "enonce": "Faire cheminer les câbles de puissance et les câbles de données dans la même goulotte améliore la CEM.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "C'est le contraire : on les sépare, ou on les croise à angle droit, pour éviter que la puissance ne perturbe les signaux."
+        },
+        {
+          "id": "vf_cem_perturbations_2",
+          "fiche_id": "cemp_principe",
+          "type": "vrai_faux",
+          "enonce": "Un appareil doit à la fois peu perturber les autres et supporter les perturbations reçues.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Ce sont les deux volets de la CEM : l'émission et l'immunité."
         }
       ],
       "ordre": 28
@@ -9058,6 +9730,30 @@
             "Ranger la batterie au frais"
           ],
           "explication": "Routine de sécurité."
+        },
+        {
+          "id": "vf_mobilite_legere_1",
+          "fiche_id": "ml_securite",
+          "type": "vrai_faux",
+          "enonce": "Charger une trottinette avec un chargeur d'une autre marque est sans risque si la prise rentre.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une tension ou un profil de charge inadapté peut faire chauffer la batterie et provoquer un incendie."
+        },
+        {
+          "id": "vf_mobilite_legere_2",
+          "fiche_id": "ml_batterie",
+          "type": "vrai_faux",
+          "enonce": "Une batterie de vélo électrique est constituée de nombreuses cellules gérées par une électronique dédiée.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le BMS surveille chaque groupe de cellules, équilibre la charge et coupe en cas de défaut."
         }
       ],
       "ordre": 29
@@ -9366,6 +10062,30 @@
             "Démarrer le véhicule donneur puis le véhicule en panne"
           ],
           "explication": "Ordre qui limite les étincelles près de la batterie."
+        },
+        {
+          "id": "vf_automobile_1",
+          "fiche_id": "auto_reseau",
+          "type": "vrai_faux",
+          "enonce": "L'alternateur recharge la batterie quand le moteur tourne.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Il produit du courant alternatif, redressé et régulé pour recharger la batterie et alimenter le bord."
+        },
+        {
+          "id": "vf_automobile_2",
+          "fiche_id": "auto_securite",
+          "type": "vrai_faux",
+          "enonce": "Sur un véhicule électrique, les câbles orange peuvent être manipulés comme les autres.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'orange signale la haute tension : ces circuits demandent une habilitation et une consignation du véhicule."
         }
       ],
       "ordre": 30
@@ -9674,6 +10394,30 @@
             "Verre (isolant)"
           ],
           "explication": "Conductivité décroissante."
+        },
+        {
+          "id": "vf_materiaux_1",
+          "fiche_id": "mat_conducteurs",
+          "type": "vrai_faux",
+          "enonce": "L'argent conduit mieux que le cuivre, mais on utilise surtout le cuivre pour son prix.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'argent est le meilleur conducteur ; le cuivre offre le meilleur compromis conductivité, prix et tenue mécanique."
+        },
+        {
+          "id": "vf_materiaux_2",
+          "fiche_id": "mat_isolants",
+          "type": "vrai_faux",
+          "enonce": "Un bon isolant le reste quelle que soit la température ou l'humidité.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Chaleur, humidité et vieillissement dégradent les isolants : c'est l'origine de bien des défauts d'isolement."
         }
       ],
       "ordre": 31
@@ -9982,6 +10726,30 @@
             "Choisir la protection adaptée à la section"
           ],
           "explication": "Méthode."
+        },
+        {
+          "id": "vf_calculs_circuits_1",
+          "fiche_id": "calc_kirchhoff",
+          "type": "vrai_faux",
+          "enonce": "La somme des courants qui entrent dans un nœud est égale à la somme de ceux qui en sortent.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est la loi des nœuds : rien ne se perd, le courant se répartit."
+        },
+        {
+          "id": "vf_calculs_circuits_2",
+          "fiche_id": "calc_diviseurs",
+          "type": "vrai_faux",
+          "enonce": "Dans un diviseur de tension, la plus grande tension se retrouve aux bornes de la plus petite résistance.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "En série, la tension se répartit proportionnellement aux résistances : la plus grande résistance prend la plus grande tension."
         }
       ],
       "ordre": 32
@@ -10290,6 +11058,30 @@
             "Régler le trigger et lire amplitude et période"
           ],
           "explication": "Méthode de mesure."
+        },
+        {
+          "id": "vf_oscilloscope_1",
+          "fiche_id": "osc_signaux",
+          "type": "vrai_faux",
+          "enonce": "Un signal carré contient des fréquences bien plus élevées que sa fréquence de base.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Ses fronts raides correspondent à de nombreuses harmoniques, d'où les perturbations qu'il peut créer."
+        },
+        {
+          "id": "vf_oscilloscope_2",
+          "fiche_id": "osc_securite",
+          "type": "vrai_faux",
+          "enonce": "On peut brancher n'importe quel oscilloscope directement sur le réseau 230 V.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La masse de l'appareil est souvent reliée à la terre : sans sonde différentielle ni isolation, on crée un court-circuit."
         }
       ],
       "ordre": 33
@@ -10598,6 +11390,30 @@
             "Éliminer (enfouir)"
           ],
           "explication": "Prévention d'abord."
+        },
+        {
+          "id": "vf_recyclage_1",
+          "fiche_id": "rec_deee",
+          "type": "vrai_faux",
+          "enonce": "Les équipements électriques usagés se déposent dans une filière de collecte dédiée.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La filière DEEE récupère les métaux et traite les composants dangereux ; la benne tout-venant est interdite."
+        },
+        {
+          "id": "vf_recyclage_2",
+          "fiche_id": "rec_filieres",
+          "type": "vrai_faux",
+          "enonce": "Une lampe fluocompacte cassée se ramasse comme du verre ordinaire.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle contient du mercure : on aère, on ramasse sans aspirateur et on dépose les débris en déchetterie."
         }
       ],
       "ordre": 34
@@ -10906,6 +11722,30 @@
             "Injection de l'électricité et valorisation de la chaleur"
           ],
           "explication": "Chaîne du biogaz."
+        },
+        {
+          "id": "vf_energies_diverses_1",
+          "fiche_id": "en_geothermie",
+          "type": "vrai_faux",
+          "enonce": "La géothermie profite d'une température du sous-sol à peu près stable toute l'année.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est ce qui permet à une pompe à chaleur géothermique d'être régulière, été comme hiver."
+        },
+        {
+          "id": "vf_energies_diverses_2",
+          "fiche_id": "en_marines",
+          "type": "vrai_faux",
+          "enonce": "L'énergie des marées est imprévisible.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Les marées se calculent des années à l'avance : c'est même l'atout de cette énergie face au vent ou au soleil."
         }
       ],
       "ordre": 35
@@ -11214,6 +12054,30 @@
           ],
           "bonne": 1,
           "explication": "Tous les conducteurs actifs sont vérifiés, entre eux et par rapport à la terre."
+        },
+        {
+          "id": "vf_mesures_1",
+          "fiche_id": "vat",
+          "type": "vrai_faux",
+          "enonce": "Un vérificateur d'absence de tension doit être testé avant et après la mesure.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Sans ce double test, un VAT en panne pourrait faire croire à tort qu'un conducteur est hors tension."
+        },
+        {
+          "id": "vf_mesures_2",
+          "fiche_id": "mesurer",
+          "type": "vrai_faux",
+          "enonce": "Pour mesurer un courant, on branche le multimètre en parallèle sur le récepteur.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'ampèremètre se branche en série, dans le circuit. En parallèle, on crée un court-circuit."
         }
       ],
       "theme": "Installation et pratique"
@@ -11522,6 +12386,30 @@
           ],
           "bonne": 1,
           "explication": "Premier 4 : solides > 1 mm. Second 4 : projections d'eau de toutes directions."
+        },
+        {
+          "id": "vf_installation_1",
+          "fiche_id": "sections",
+          "type": "vrai_faux",
+          "enonce": "Un circuit de prises en 1,5 mm² peut être protégé par un disjoncteur 20 A.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le 1,5 mm² se protège au maximum en 16 A. Pour du 20 A, il faut du 2,5 mm²."
+        },
+        {
+          "id": "vf_installation_2",
+          "fiche_id": "salle_de_bain",
+          "type": "vrai_faux",
+          "enonce": "Dans une salle de bains, aucune prise n'est admise dans les volumes 0 et 1.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les prises sont interdites dans ces volumes ; elles s'installent hors volumes, protégées par un différentiel 30 mA."
         }
       ],
       "theme": "Installation et pratique"
@@ -11829,6 +12717,30 @@
             "Retour par le neutre au tableau"
           ],
           "explication": "La phase passe par l'interrupteur puis la lampe ; le neutre retourne directement au tableau."
+        },
+        {
+          "id": "vf_eclairage_1",
+          "fiche_id": "commandes",
+          "type": "vrai_faux",
+          "enonce": "Un va-et-vient permet de commander un point lumineux depuis deux endroits.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Deux interrupteurs à trois bornes reliés par deux navettes : c'est le montage classique d'un couloir."
+        },
+        {
+          "id": "vf_eclairage_2",
+          "fiche_id": "lampes",
+          "type": "vrai_faux",
+          "enonce": "À éclairage égal, une LED consomme autant qu'une lampe à incandescence.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une LED consomme environ six à huit fois moins pour la même quantité de lumière."
         }
       ],
       "ordre": 38
@@ -12137,6 +13049,30 @@
             "Remettre sous tension et tester"
           ],
           "explication": "Couper, vérifier, remplacer, remettre sous tension. Jamais l'inverse."
+        },
+        {
+          "id": "vf_cablage_1",
+          "fiche_id": "raccordement",
+          "type": "vrai_faux",
+          "enonce": "Une dérivation faite dans le vide d'une cloison, sans boîte, est acceptable si elle est bien isolée.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Toute connexion doit rester accessible dans une boîte de dérivation : sinon on ne peut ni contrôler ni réparer."
+        },
+        {
+          "id": "vf_cablage_2",
+          "fiche_id": "prises",
+          "type": "vrai_faux",
+          "enonce": "Une prise de courant doit être reliée au conducteur de protection.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Sans terre, un défaut sur un appareil de classe I met sa carcasse sous tension sans faire déclencher la protection."
         }
       ],
       "ordre": 39
@@ -12444,6 +13380,30 @@
             "La surtension s'écoule vers la terre"
           ],
           "explication": "Le parafoudre est le seul élément qui réagit à la surtension : d'où sa place en tête du tableau."
+        },
+        {
+          "id": "vf_parafoudre_1",
+          "fiche_id": "surtensions",
+          "type": "vrai_faux",
+          "enonce": "Une surtension peut venir de la foudre mais aussi de manœuvres sur le réseau.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Coupures, enclenchements de gros moteurs et défauts créent aussi des surtensions, plus fréquentes que la foudre."
+        },
+        {
+          "id": "vf_parafoudre_2",
+          "fiche_id": "installation_pf",
+          "type": "vrai_faux",
+          "enonce": "Un parafoudre remplace la mise à la terre.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il évacue les surtensions vers la terre : sans une bonne prise de terre, il ne sert à rien."
         }
       ],
       "ordre": 40
@@ -12751,6 +13711,30 @@
             "Brancher et utiliser l'outil"
           ],
           "explication": "Protection, câble déroulé, connexions au sec : ensuite seulement on travaille."
+        },
+        {
+          "id": "vf_locaux_risques_1",
+          "fiche_id": "piscine",
+          "type": "vrai_faux",
+          "enonce": "Autour d'une piscine, on applique des volumes de sécurité comme dans une salle de bains.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les volumes définissent ce qui est admis et à quel indice de protection, l'eau augmentant fortement le risque."
+        },
+        {
+          "id": "vf_locaux_risques_2",
+          "fiche_id": "exterieur",
+          "type": "vrai_faux",
+          "enonce": "Une rallonge d'intérieur convient pour alimenter une tondeuse dans le jardin.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Dehors, il faut un câble prévu pour l'extérieur et des connexions protégées des projections d'eau."
         }
       ],
       "ordre": 41
@@ -13058,6 +14042,30 @@
             "Déconnecter les connecteurs MC4"
           ],
           "explication": "Jamais de déconnexion sous charge : couper, sectionner, vérifier, puis déconnecter."
+        },
+        {
+          "id": "vf_photovoltaique_1",
+          "fiche_id": "principe_pv",
+          "type": "vrai_faux",
+          "enonce": "Les panneaux photovoltaïques produisent du courant continu.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'onduleur le convertit ensuite en alternatif pour la maison ou le réseau."
+        },
+        {
+          "id": "vf_photovoltaique_2",
+          "fiche_id": "securite_pv",
+          "type": "vrai_faux",
+          "enonce": "Un panneau photovoltaïque est hors tension dès que l'onduleur est coupé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Tant qu'il reçoit de la lumière, il produit : la partie continue reste sous tension côté panneaux."
         }
       ],
       "ordre": 42
@@ -13365,6 +14373,30 @@
             "Le thermostat coupe à la température réglée"
           ],
           "explication": "Compteur, contacteur, résistance, thermostat : la chaîne de commande."
+        },
+        {
+          "id": "vf_chauffage_1",
+          "fiche_id": "eau_chaude",
+          "type": "vrai_faux",
+          "enonce": "Régler un chauffe-eau à 55 ou 60 °C limite le tartre tout en évitant les bactéries.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Trop bas, on risque la légionelle ; trop haut, on entartre et on gaspille."
+        },
+        {
+          "id": "vf_chauffage_2",
+          "fiche_id": "regulation",
+          "type": "vrai_faux",
+          "enonce": "Baisser le chauffage d'un degré change à peine la consommation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un degré en moins représente environ 7 % de consommation de chauffage en moins."
         }
       ],
       "ordre": 43
@@ -13672,6 +14704,30 @@
             "Le module relais allume la lampe"
           ],
           "explication": "Capteur, centrale, décision, actionneur."
+        },
+        {
+          "id": "vf_domotique_1",
+          "fiche_id": "securite_domotique",
+          "type": "vrai_faux",
+          "enonce": "Une installation domotique doit rester utilisable même si la box tombe en panne.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "On garde des commandes manuelles : sinon une panne réseau laisse la maison sans lumière ni volets."
+        },
+        {
+          "id": "vf_domotique_2",
+          "fiche_id": "technologies",
+          "type": "vrai_faux",
+          "enonce": "Le sans-fil est toujours préférable au filaire en domotique.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le filaire est plus fiable et durable ; le sans-fil est surtout pratique en rénovation."
         }
       ],
       "ordre": 44
@@ -13980,6 +15036,30 @@
             "Tester la charge"
           ],
           "explication": "Alimentation, câblage, protections, borne, test."
+        },
+        {
+          "id": "vf_vehicule_electrique_1",
+          "fiche_id": "installation_ve",
+          "type": "vrai_faux",
+          "enonce": "Au-delà de 3,7 kW, l'installation d'une borne doit être faite par un professionnel qualifié IRVE.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est une obligation, et une condition pour les aides financières."
+        },
+        {
+          "id": "vf_vehicule_electrique_2",
+          "fiche_id": "securite_ve",
+          "type": "vrai_faux",
+          "enonce": "Recharger longuement une voiture sur une prise domestique ordinaire est sans risque.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une prise standard n'est pas prévue pour des heures à pleine charge : elle chauffe. D'où la prise renforcée ou la borne."
         }
       ],
       "ordre": 45
@@ -14287,6 +15367,30 @@
             "Comparer au courant indiqué sur la plaque pour ce couplage"
           ],
           "explication": "La plaque donne directement le courant par couplage ; le calcul sert à vérifier."
+        },
+        {
+          "id": "vf_plaque_signaletique_1",
+          "fiche_id": "plaque_moteur",
+          "type": "vrai_faux",
+          "enonce": "La plaque d'un moteur indique sa puissance utile sur l'arbre, pas la puissance absorbée.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La puissance absorbée est plus élevée : le rendement du moteur fait la différence."
+        },
+        {
+          "id": "vf_plaque_signaletique_2",
+          "fiche_id": "classes_ip",
+          "type": "vrai_faux",
+          "enonce": "Un indice IP65 protège mieux contre l'eau qu'un IP44.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le second chiffre monte avec la protection contre l'eau : 5 résiste aux jets, 4 aux simples projections."
         }
       ],
       "ordre": 46
@@ -14595,6 +15699,30 @@
             "Mettre en service et tester"
           ],
           "explication": "Alimentation, unités, fluide, mise en service."
+        },
+        {
+          "id": "vf_ventilation_1",
+          "fiche_id": "vmc",
+          "type": "vrai_faux",
+          "enonce": "Une VMC doit fonctionner en permanence pour assurer le renouvellement d'air.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'arrêter fait apparaître humidité et moisissures : elle tourne en continu, à petit débit."
+        },
+        {
+          "id": "vf_ventilation_2",
+          "fiche_id": "raccordement_clim",
+          "type": "vrai_faux",
+          "enonce": "On peut brancher un climatiseur fixe sur une prise partagée avec d'autres appareils.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Sa puissance impose un circuit dédié et une protection adaptée."
         }
       ],
       "ordre": 47
@@ -14902,6 +16030,30 @@
             "Étiqueter le disjoncteur"
           ],
           "explication": "Repérer, noter, étiqueter : le prochain dépannage sera plus rapide."
+        },
+        {
+          "id": "vf_lire_tableau_1",
+          "fiche_id": "reperage",
+          "type": "vrai_faux",
+          "enonce": "Le repérage des circuits sur un tableau est obligatoire.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Chaque protection doit indiquer ce qu'elle alimente : c'est la norme, et c'est vital en dépannage."
+        },
+        {
+          "id": "vf_lire_tableau_2",
+          "fiche_id": "calibres_lecture",
+          "type": "vrai_faux",
+          "enonce": "Le nombre inscrit sur un disjoncteur indique la section du câble à utiliser.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il indique le calibre en ampères. La section se déduit de ce calibre, mais ce n'est pas le même nombre."
         }
       ],
       "ordre": 48
@@ -15210,6 +16362,30 @@
             "Le faire réparer ou le remplacer"
           ],
           "explication": "Isoler, réarmer, rebrancher, identifier, traiter."
+        },
+        {
+          "id": "vf_depannage_1",
+          "fiche_id": "methode",
+          "type": "vrai_faux",
+          "enonce": "Un bon dépannage commence par observer et questionner avant de démonter.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Depuis quand, sur quel circuit, après quel événement : la moitié du diagnostic vient de là."
+        },
+        {
+          "id": "vf_depannage_2",
+          "fiche_id": "pannes_courantes",
+          "type": "vrai_faux",
+          "enonce": "Si un disjoncteur redéclenche juste après réarmement, il faut le réarmer plusieurs fois de suite.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un redéclenchement immédiat signale un défaut réel : insister abîme le matériel et masque le problème."
         }
       ],
       "ordre": 49
@@ -15518,6 +16694,30 @@
             "Brasser vers la box ou le switch"
           ],
           "explication": "Tirer, raccorder, tester, repérer, brasser."
+        },
+        {
+          "id": "vf_courants_faibles_1",
+          "fiche_id": "definition_cf",
+          "type": "vrai_faux",
+          "enonce": "Les courants faibles ne présentent aucun risque d'électrisation dans un logement.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les tensions restent très basses ; le risque vient surtout d'un mélange avec les courants forts, qui est interdit."
+        },
+        {
+          "id": "vf_courants_faibles_2",
+          "fiche_id": "coffret_com",
+          "type": "vrai_faux",
+          "enonce": "On peut faire passer un câble réseau dans la même gaine qu'un câble d'alimentation 230 V.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "C'est interdit : risque de contact accidentel et perturbations sur le signal."
         }
       ],
       "ordre": 50
@@ -15826,6 +17026,30 @@
             "Tester le fonctionnement et le différentiel"
           ],
           "explication": "Protection, cheminement, raccordement étanche, luminaire, test."
+        },
+        {
+          "id": "vf_eclairage_exterieur_1",
+          "fiche_id": "cablage_ext",
+          "type": "vrai_faux",
+          "enonce": "Un câble enterré doit être posé sous fourreau et signalé par un grillage avertisseur.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le fourreau protège le câble et le grillage prévient celui qui creusera plus tard."
+        },
+        {
+          "id": "vf_eclairage_exterieur_2",
+          "fiche_id": "solaire_ext",
+          "type": "vrai_faux",
+          "enonce": "Un éclairage de jardin en très basse tension 12 V dispense de toute précaution.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le risque d'électrisation est écarté, mais le transformateur, les connexions et l'étanchéité restent à soigner."
         }
       ],
       "ordre": 51
@@ -16134,6 +17358,30 @@
             "Paramétrer les modes et tester tout le système"
           ],
           "explication": "Analyse, centrale, détecteurs, sirènes, test."
+        },
+        {
+          "id": "vf_alarme_1",
+          "fiche_id": "installation_alarme",
+          "type": "vrai_faux",
+          "enonce": "Une alarme doit continuer à fonctionner en cas de coupure de courant.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Sa batterie de secours prend le relais, sinon couper le courant suffirait à la neutraliser."
+        },
+        {
+          "id": "vf_alarme_2",
+          "fiche_id": "video",
+          "type": "vrai_faux",
+          "enonce": "On peut installer une caméra filmant la rue et les voisins sans contrainte.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La vidéosurveillance privée doit se limiter à sa propriété : filmer la voie publique ou chez autrui est interdit."
         }
       ],
       "ordre": 52
@@ -16442,6 +17690,30 @@
             "Comparer au seuil de 0,5 MΩ"
           ],
           "explication": "Hors tension, débrancher, régler, mesurer, comparer."
+        },
+        {
+          "id": "vf_mesures_avancees_1",
+          "fiche_id": "isolement",
+          "type": "vrai_faux",
+          "enonce": "La mesure d'isolement se fait sous une tension bien plus élevée que celle d'un multimètre.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le mégohmmètre applique 250, 500 ou 1 000 V pour révéler un défaut invisible en usage normal."
+        },
+        {
+          "id": "vf_mesures_avancees_2",
+          "fiche_id": "prise_terre",
+          "type": "vrai_faux",
+          "enonce": "Une prise de terre est correcte quelle que soit sa valeur si un différentiel 30 mA est installé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La valeur doit rester assez basse pour que le différentiel coupe avant qu'une tension dangereuse n'apparaisse."
         }
       ],
       "ordre": 53
@@ -16750,6 +18022,30 @@
             "Remplacer le matériel vétuste et protéger les conducteurs"
           ],
           "explication": "Terre, différentiels, protections, salle de bains, matériel et conducteurs."
+        },
+        {
+          "id": "vf_renovation_1",
+          "fiche_id": "priorites",
+          "type": "vrai_faux",
+          "enonce": "Remplacer un tableau à fusibles par un tableau moderne suffit à sécuriser une installation ancienne.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Si les câbles sont sans terre ou abîmés, le tableau seul ne protège pas : l'état des circuits compte autant."
+        },
+        {
+          "id": "vf_renovation_2",
+          "fiche_id": "etat_des_lieux",
+          "type": "vrai_faux",
+          "enonce": "Une installation ancienne sans conducteur de terre justifie une remise à niveau prioritaire.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Sans terre, les défauts d'isolement ne sont pas évacués et les masses peuvent rester sous tension."
         }
       ],
       "ordre": 54
@@ -17058,6 +18354,30 @@
             "Arrêter le groupe"
           ],
           "explication": "Démarrer, basculer, vérifier, rebasculer, arrêter."
+        },
+        {
+          "id": "vf_secours_energie_1",
+          "fiche_id": "inverseur",
+          "type": "vrai_faux",
+          "enonce": "Un groupe électrogène peut être raccordé à l'installation sans dispositif de commutation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut un inverseur de source : sinon le groupe peut réinjecter sur le réseau et mettre en danger les agents."
+        },
+        {
+          "id": "vf_secours_energie_2",
+          "fiche_id": "groupe",
+          "type": "vrai_faux",
+          "enonce": "Un groupe électrogène doit fonctionner à l'extérieur, jamais dans un local fermé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Ses gaz d'échappement contiennent du monoxyde de carbone, mortel et inodore."
         }
       ],
       "ordre": 55
@@ -17366,6 +18686,30 @@
             "Vérifier la charge des batteries"
           ],
           "explication": "Hors tension, brancher, enclencher, tester."
+        },
+        {
+          "id": "vf_camping_car_bateau_1",
+          "fiche_id": "deux_reseaux",
+          "type": "vrai_faux",
+          "enonce": "À bord, on trouve souvent deux réseaux : un 12 V continu et un 230 V alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le 12 V vient des batteries, le 230 V du quai ou d'un convertisseur."
+        },
+        {
+          "id": "vf_camping_car_bateau_2",
+          "fiche_id": "branchement_quai",
+          "type": "vrai_faux",
+          "enonce": "Le branchement au quai ou à la borne de camping ne nécessite pas de différentiel.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'humidité et les câbles souples rendent le différentiel 30 mA d'autant plus indispensable."
         }
       ],
       "ordre": 56
@@ -17673,6 +19017,30 @@
             "Évaluer une batterie si le surplus reste important"
           ],
           "explication": "Mesurer, déplacer, router, stocker."
+        },
+        {
+          "id": "vf_autoconsommation_1",
+          "fiche_id": "taux",
+          "type": "vrai_faux",
+          "enonce": "Faire tourner ses appareils quand le soleil brille augmente le taux d'autoconsommation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Consommer au moment de la production évite d'injecter à bas prix puis de racheter plus cher."
+        },
+        {
+          "id": "vf_autoconsommation_2",
+          "fiche_id": "stockage_domestique",
+          "type": "vrai_faux",
+          "enonce": "Ajouter une batterie domestique est toujours rentable.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Son coût reste élevé : la rentabilité dépend du profil de consommation et du tarif, ce n'est pas automatique."
         }
       ],
       "ordre": 57
@@ -17981,6 +19349,30 @@
             "Intervention"
           ],
           "explication": "Prévenir, autoriser, annoncer, baliser, intervenir."
+        },
+        {
+          "id": "vf_tertiaire_erp_1",
+          "fiche_id": "specificites_erp",
+          "type": "vrai_faux",
+          "enonce": "Un établissement recevant du public est soumis à des vérifications périodiques obligatoires.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Un organisme agréé contrôle l'installation à intervalle réglementaire, et le registre doit être tenu à jour."
+        },
+        {
+          "id": "vf_tertiaire_erp_2",
+          "fiche_id": "chantiers_tertiaire",
+          "type": "vrai_faux",
+          "enonce": "L'éclairage de sécurité peut être coupé la nuit pour économiser.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il doit rester opérationnel en permanence : c'est lui qui permet l'évacuation en cas de coupure."
         }
       ],
       "ordre": 58
@@ -18289,6 +19681,30 @@
             "Attendre la décharge des variateurs et condensateurs"
           ],
           "explication": "Séparer, condamner, identifier, vérifier, plus le délai des condensateurs."
+        },
+        {
+          "id": "vf_industrie_1",
+          "fiche_id": "armoire",
+          "type": "vrai_faux",
+          "enonce": "Dans une armoire industrielle, on sépare les circuits de puissance des circuits de commande.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Cette séparation limite les perturbations et clarifie le dépannage."
+        },
+        {
+          "id": "vf_industrie_2",
+          "fiche_id": "automate",
+          "type": "vrai_faux",
+          "enonce": "Un automate programmable se dépanne uniquement en changeant son programme.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La plupart des pannes viennent des capteurs, des câbles et des alimentations : on vérifie les entrées et sorties avant de toucher au programme."
         }
       ],
       "ordre": 59
@@ -18597,6 +20013,30 @@
             "Régler courant nominal et rampes, puis essayer"
           ],
           "explication": "Filtre, câble, blindage, séparation, réglages."
+        },
+        {
+          "id": "vf_variateurs_1",
+          "fiche_id": "harmoniques",
+          "type": "vrai_faux",
+          "enonce": "Un variateur de vitesse génère des harmoniques sur le réseau.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Son électronique découpe le courant : d'où des harmoniques, un neutre qui chauffe et des filtres parfois nécessaires."
+        },
+        {
+          "id": "vf_variateurs_2",
+          "fiche_id": "cem",
+          "type": "vrai_faux",
+          "enonce": "Le câble entre variateur et moteur peut être un câble ordinaire, sans blindage.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un câble blindé et correctement mis à la terre limite les perturbations rayonnées par les fronts de commutation."
         }
       ],
       "ordre": 60
@@ -18905,6 +20345,30 @@
             "Remettre sous tension et essayer"
           ],
           "explication": "Baliser, couper, vérifier, intervenir, essayer."
+        },
+        {
+          "id": "vf_eclairage_public_1",
+          "fiche_id": "interventions_ep",
+          "type": "vrai_faux",
+          "enonce": "Un candélabre peut rester alimenté même quand l'éclairage est éteint le jour.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'armoire de commande coupe la commande, pas forcément l'alimentation : on consigne avant d'intervenir."
+        },
+        {
+          "id": "vf_eclairage_public_2",
+          "fiche_id": "economies_ep",
+          "type": "vrai_faux",
+          "enonce": "Éclairer plus fort la nuit est sans conséquence pour la faune.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La pollution lumineuse perturbe insectes et oiseaux : d'où les extinctions nocturnes et les luminaires orientés vers le sol."
         }
       ],
       "ordre": 61
@@ -19213,6 +20677,30 @@
             "Tester la détection d'obstacle"
           ],
           "explication": "Alimentation, mécanique, sécurités, réglages, test."
+        },
+        {
+          "id": "vf_portails_ascenseurs_1",
+          "fiche_id": "portail",
+          "type": "vrai_faux",
+          "enonce": "Un portail motorisé doit s'arrêter ou repartir en arrière s'il rencontre un obstacle.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Cellules et détection d'effort évitent l'écrasement : c'est une exigence de sécurité."
+        },
+        {
+          "id": "vf_portails_ascenseurs_2",
+          "fiche_id": "ascenseur",
+          "type": "vrai_faux",
+          "enonce": "Un particulier peut intervenir librement dans la gaine d'un ascenseur de son immeuble.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'accès est réservé aux personnels formés et habilités : le risque mécanique et électrique y est majeur."
         }
       ],
       "ordre": 62
@@ -19521,6 +21009,30 @@
             "Mise en service et essai"
           ],
           "explication": "Protection, câble, raccordement, sécurité, essai."
+        },
+        {
+          "id": "vf_pompes_eau_1",
+          "fiche_id": "alimentation_pompe",
+          "type": "vrai_faux",
+          "enonce": "Une pompe immergée doit être protégée par un différentiel 30 mA.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Eau et électricité : la protection des personnes est indispensable, en plus de la mise à la terre."
+        },
+        {
+          "id": "vf_pompes_eau_2",
+          "fiche_id": "types_pompes",
+          "type": "vrai_faux",
+          "enonce": "Faire tourner une pompe à vide n'a aucune conséquence.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Sans eau pour la refroidir et la lubrifier, elle chauffe et se détériore rapidement."
         }
       ],
       "ordre": 63
@@ -19829,6 +21341,30 @@
             "Contrôler hors tension puis mettre sous tension progressivement"
           ],
           "explication": "Préparer, monter, équiper, raccorder, contrôler."
+        },
+        {
+          "id": "vf_cabler_tableau_1",
+          "fiche_id": "controle_tableau",
+          "type": "vrai_faux",
+          "enonce": "Avant la mise sous tension d'un tableau neuf, on vérifie les serrages et l'absence de court-circuit.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Contrôle visuel, serrage au couple et mesure d'isolement : la mise sous tension vient en dernier."
+        },
+        {
+          "id": "vf_cabler_tableau_2",
+          "fiche_id": "montage",
+          "type": "vrai_faux",
+          "enonce": "Le peigne d'alimentation d'un tableau peut être recoupé n'importe où sans précaution.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Une coupe mal faite laisse des dents actives ou dénudées : on utilise l'outil prévu et on protège les extrémités."
         }
       ],
       "ordre": 64
@@ -20137,6 +21673,30 @@
             "Réparer et mettre le schéma à jour"
           ],
           "explication": "Lire, vérifier les évidences, mesurer, contrôler, réparer."
+        },
+        {
+          "id": "vf_schemas_industriels_1",
+          "fiche_id": "puissance_commande",
+          "type": "vrai_faux",
+          "enonce": "Sur un schéma industriel, les circuits de commande et de puissance sont représentés séparément.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Cette séparation rend le schéma lisible : le folio de puissance montre le moteur, celui de commande la logique."
+        },
+        {
+          "id": "vf_schemas_industriels_2",
+          "fiche_id": "organisation_schema",
+          "type": "vrai_faux",
+          "enonce": "Un même appareil ne peut apparaître que sur un seul folio d'un schéma.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Un contacteur apparaît en puissance et en commande, sous le même repère : c'est le repérage qui fait le lien."
         }
       ],
       "ordre": 65
@@ -20445,6 +22005,30 @@
             "Amorcer l'arc"
           ],
           "explication": "Incendie, retour de courant, EPI, fumées, puis souder."
+        },
+        {
+          "id": "vf_soudure_1",
+          "fiche_id": "risques_soudure",
+          "type": "vrai_faux",
+          "enonce": "Le rayonnement d'un arc de soudure peut brûler les yeux même sans regarder directement.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Les ultraviolets provoquent le coup d'arc, d'où le masque et la protection des personnes autour."
+        },
+        {
+          "id": "vf_soudure_2",
+          "fiche_id": "alimentation_soudure",
+          "type": "vrai_faux",
+          "enonce": "Un poste à souder peut se brancher sur n'importe quelle prise domestique.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Sa puissance impose souvent un circuit dédié : sur une prise ordinaire, la protection déclenche ou le câble chauffe."
         }
       ],
       "ordre": 66
@@ -20753,6 +22337,30 @@
             "Groupe de secours pour la ventilation"
           ],
           "explication": "Équipotentialité, protection des personnes et animaux, matériel, câbles, secours."
+        },
+        {
+          "id": "vf_agriculture_1",
+          "fiche_id": "clotures",
+          "type": "vrai_faux",
+          "enonce": "Une clôture électrique délivre des impulsions brèves plutôt qu'un courant permanent.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'électrificateur envoie des impulsions courtes et espacées : dissuasif sans être dangereux pour l'animal."
+        },
+        {
+          "id": "vf_agriculture_2",
+          "fiche_id": "batiments_agricoles",
+          "type": "vrai_faux",
+          "enonce": "L'humidité et les poussières des bâtiments d'élevage n'imposent pas de matériel particulier.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut du matériel étanche et résistant à la corrosion, et une attention forte aux courants parasites, mal supportés par le bétail."
         }
       ],
       "ordre": 67
@@ -21061,6 +22669,30 @@
             "Reprise des circuits par ordre de priorité"
           ],
           "explication": "Redondance en cascade."
+        },
+        {
+          "id": "vf_medical_1",
+          "fiche_id": "secours_hopital",
+          "type": "vrai_faux",
+          "enonce": "Un bloc opératoire dispose d'une alimentation de secours capable de prendre le relais en quelques secondes.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Onduleurs et groupes garantissent la continuité : une coupure en pleine intervention serait critique."
+        },
+        {
+          "id": "vf_medical_2",
+          "fiche_id": "locaux_medicaux",
+          "type": "vrai_faux",
+          "enonce": "Les locaux médicaux utilisent les mêmes régimes de neutre que les logements.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Les zones critiques sont souvent en régime IT médical : un premier défaut ne coupe pas l'alimentation."
         }
       ],
       "ordre": 68
@@ -21369,6 +23001,30 @@
             "Remettre en service et lever l'alarme"
           ],
           "explication": "Rayonnement, hauteur, intervention, remise en service."
+        },
+        {
+          "id": "vf_telecoms_1",
+          "fiche_id": "fibre_reseaux",
+          "type": "vrai_faux",
+          "enonce": "La fibre optique transporte de la lumière, pas du courant.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Aucun risque électrique dans la fibre, mais le laser impose de ne jamais regarder l'extrémité."
+        },
+        {
+          "id": "vf_telecoms_2",
+          "fiche_id": "sites_telecom",
+          "type": "vrai_faux",
+          "enonce": "On peut intervenir sur une antenne de téléphonie sans précaution particulière.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut couper ou faire baisser la puissance, respecter les périmètres de sécurité, et intervenir avec les habilitations requises."
         }
       ],
       "ordre": 69
@@ -21677,6 +23333,30 @@
             "Trempe, fusion ou brasage selon le procédé"
           ],
           "explication": "Courant, champ, induction, chaleur, procédé."
+        },
+        {
+          "id": "vf_induction_industrie_1",
+          "fiche_id": "chauffage_induction",
+          "type": "vrai_faux",
+          "enonce": "Le chauffage par induction chauffe directement la pièce métallique, sans flamme.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Des courants induits circulent dans la pièce et l'échauffent : c'est rapide et propre."
+        },
+        {
+          "id": "vf_induction_industrie_2",
+          "fiche_id": "securite_thermique",
+          "type": "vrai_faux",
+          "enonce": "Un four à induction est sans risque pour une personne porteuse d'un stimulateur cardiaque.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Les champs magnétiques intenses peuvent perturber un implant : des périmètres et une signalisation sont nécessaires."
         }
       ],
       "ordre": 70
@@ -21985,6 +23665,30 @@
             "Retour du réseau, resynchronisation et arrêt des groupes"
           ],
           "explication": "Cascade de secours."
+        },
+        {
+          "id": "vf_data_centers_1",
+          "fiche_id": "dc_alimentation",
+          "type": "vrai_faux",
+          "enonce": "Un data center est alimenté par plusieurs sources indépendantes pour éviter toute coupure.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Double arrivée, onduleurs et groupes : la continuité de service est la priorité absolue."
+        },
+        {
+          "id": "vf_data_centers_2",
+          "fiche_id": "dc_refroidissement",
+          "type": "vrai_faux",
+          "enonce": "Le refroidissement représente une part négligeable de la consommation d'un data center.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Évacuer la chaleur pèse lourd dans la facture : c'est même l'indicateur principal d'efficacité de ces bâtiments."
         }
       ],
       "ordre": 71
@@ -22293,6 +23997,30 @@
             "Rédiger le rapport et programmer les corrections"
           ],
           "explication": "De la préparation au suivi."
+        },
+        {
+          "id": "vf_maintenance_preventive_1",
+          "fiche_id": "maint_thermo",
+          "type": "vrai_faux",
+          "enonce": "La thermographie infrarouge repère un serrage défectueux avant la panne.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Une connexion mal serrée chauffe : la caméra la voit alors que tout fonctionne encore."
+        },
+        {
+          "id": "vf_maintenance_preventive_2",
+          "fiche_id": "maint_types",
+          "type": "vrai_faux",
+          "enonce": "La maintenance corrective coûte généralement moins cher que la préventive.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Attendre la panne coûte l'arrêt de production et les dégâts associés, bien plus qu'un contrôle planifié."
         }
       ],
       "ordre": 72
@@ -22601,6 +24329,30 @@
             "Le fluide repart vers l'évaporateur"
           ],
           "explication": "Boucle fermée."
+        },
+        {
+          "id": "vf_pac_1",
+          "fiche_id": "pac_principe",
+          "type": "vrai_faux",
+          "enonce": "Une pompe à chaleur déplace de la chaleur au lieu de la produire, d'où son rendement élevé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Pour 1 kWh consommé, elle restitue souvent 3 à 4 kWh de chaleur puisée dehors."
+        },
+        {
+          "id": "vf_pac_2",
+          "fiche_id": "pac_exploitation",
+          "type": "vrai_faux",
+          "enonce": "Une pompe à chaleur fonctionne aussi bien quelle que soit la température extérieure.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Son rendement baisse quand il fait très froid, et un appoint peut prendre le relais."
         }
       ],
       "ordre": 73
@@ -22909,6 +24661,30 @@
             "Vérifier sélectivité et longueur protégée"
           ],
           "explication": "Méthode de dimensionnement."
+        },
+        {
+          "id": "vf_selectivite_1",
+          "fiche_id": "sel_selectivite",
+          "type": "vrai_faux",
+          "enonce": "La sélectivité vise à ne faire déclencher que la protection la plus proche du défaut.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le reste de l'installation continue de fonctionner : c'est tout l'objectif."
+        },
+        {
+          "id": "vf_selectivite_2",
+          "fiche_id": "sel_courbes",
+          "type": "vrai_faux",
+          "enonce": "Deux disjoncteurs de même calibre placés l'un derrière l'autre assurent la sélectivité.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut un écart de calibre et des courbes adaptées, sinon les deux déclenchent ensemble."
         }
       ],
       "ordre": 74
@@ -23217,6 +24993,30 @@
             "Utiliser l'extincteur adapté (classe F)"
           ],
           "explication": "L'eau projette l'huile en feu."
+        },
+        {
+          "id": "vf_cuisines_pro_1",
+          "fiche_id": "cp_securite",
+          "type": "vrai_faux",
+          "enonce": "Une cuisine professionnelle doit disposer d'un arrêt d'urgence coupant les appareils.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Un coup de poing accessible coupe l'alimentation en cas d'incident, gaz compris quand il y en a."
+        },
+        {
+          "id": "vf_cuisines_pro_2",
+          "fiche_id": "cp_environnement",
+          "type": "vrai_faux",
+          "enonce": "La graisse et la vapeur n'ont pas d'effet sur le matériel électrique.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elles encrassent, isolent thermiquement et favorisent les échauffements : d'où le matériel adapté et le nettoyage régulier."
         }
       ],
       "ordre": 75
@@ -23525,6 +25325,30 @@
             "Mettre en service poste par poste"
           ],
           "explication": "Progressif."
+        },
+        {
+          "id": "vf_spectacle_1",
+          "fiche_id": "sp_securite_site",
+          "type": "vrai_faux",
+          "enonce": "Sur un site de spectacle, les câbles au sol doivent être protégés du passage du public.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Passages de câbles, ponts et fixations évitent l'usure et les chutes."
+        },
+        {
+          "id": "vf_spectacle_2",
+          "fiche_id": "sp_distribution",
+          "type": "vrai_faux",
+          "enonce": "Une puissance de scène se calcule seulement en additionnant les projecteurs.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut aussi le son, la vidéo, les machines et une marge : la puissance appelée dépasse vite l'estimation naïve."
         }
       ],
       "ordre": 76
@@ -23833,6 +25657,30 @@
             "Former les exploitants et suivre les consommations"
           ],
           "explication": "De l'installation à l'exploitation."
+        },
+        {
+          "id": "vf_gtb_1",
+          "fiche_id": "gtb_energie",
+          "type": "vrai_faux",
+          "enonce": "Une GTB permet de repérer les dérives de consommation d'un bâtiment.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "En centralisant les mesures, elle rend visibles les gaspillages et les pannes silencieuses."
+        },
+        {
+          "id": "vf_gtb_2",
+          "fiche_id": "gtb_installation",
+          "type": "vrai_faux",
+          "enonce": "Une GTB fonctionne sans jamais nécessiter de réglage après sa mise en service.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Sans réglage ni suivi, les programmations dérivent et le bâtiment consomme plus qu'avant."
         }
       ],
       "ordre": 77
@@ -24141,6 +25989,30 @@
             "Garanties : 1, 2 et 10 ans"
           ],
           "explication": "Cycle d'un chantier."
+        },
+        {
+          "id": "vf_devis_documents_1",
+          "fiche_id": "doc_devis",
+          "type": "vrai_faux",
+          "enonce": "Un devis engage l'entreprise sur le prix une fois signé par le client.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est un contrat : les travaux et les prix acceptés ne changent pas sans avenant."
+        },
+        {
+          "id": "vf_devis_documents_2",
+          "fiche_id": "doc_attestations",
+          "type": "vrai_faux",
+          "enonce": "L'attestation de conformité est facultative pour une installation neuve.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle est obligatoire et visée par le Consuel avant la mise en service par le distributeur."
         }
       ],
       "ordre": 78
@@ -24524,6 +26396,30 @@
           ],
           "bonne": 0,
           "explication": "Le plot saillant est le +, la face plate est le −."
+        },
+        {
+          "id": "vf_securite_1",
+          "fiche_id": "dangers",
+          "type": "vrai_faux",
+          "enonce": "C'est l'intensité qui traverse le corps qui est dangereuse, pas seulement la tension.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Quelques dizaines de milliampères suffisent : la tension et l'impédance du corps déterminent ce courant."
+        },
+        {
+          "id": "vf_securite_2",
+          "fiche_id": "protections",
+          "type": "vrai_faux",
+          "enonce": "Un disjoncteur protège les personnes contre l'électrisation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il protège les câbles contre les surcharges et courts-circuits. Ce sont les 30 mA différentiels qui protègent les personnes."
         }
       ],
       "theme": "Sécurité et habilitation"
@@ -24829,6 +26725,30 @@
             "Remettre l'attestation de consignation"
           ],
           "explication": "S-C-I-V, puis l'attestation de consignation remise au chargé de travaux."
+        },
+        {
+          "id": "vf_habilitation_1",
+          "fiche_id": "principe",
+          "type": "vrai_faux",
+          "enonce": "L'habilitation est délivrée par l'employeur, pas par l'organisme de formation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La formation prépare ; c'est l'employeur qui reconnaît la capacité et délivre le titre."
+        },
+        {
+          "id": "vf_habilitation_2",
+          "fiche_id": "consignation",
+          "type": "vrai_faux",
+          "enonce": "La vérification d'absence de tension peut se faire avant la condamnation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'ordre est : séparer, condamner, identifier, puis vérifier l'absence de tension."
         }
       ],
       "theme": "Sécurité et habilitation"
@@ -25137,6 +27057,30 @@
             "Commencer le travail sous surveillance"
           ],
           "explication": "Analyser, supprimer ou réduire le risque, baliser, se protéger, puis travailler."
+        },
+        {
+          "id": "vf_voisinage_1",
+          "fiche_id": "hors_portee",
+          "type": "vrai_faux",
+          "enonce": "Mettre hors de portée par éloignement, obstacle ou isolation évite le travail au voisinage.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Si la pièce nue sous tension est rendue inaccessible, on sort du voisinage et les contraintes tombent."
+        },
+        {
+          "id": "vf_voisinage_2",
+          "fiche_id": "zones",
+          "type": "vrai_faux",
+          "enonce": "Les distances de voisinage sont les mêmes en basse et en haute tension.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elles augmentent avec la tension, à cause du risque d'amorçage à distance."
         }
       ],
       "ordre": 81
@@ -25534,6 +27478,30 @@
           ],
           "bonne": 0,
           "explication": "Le titre d'habilitation, signé par l'employeur, précise ce que le salarié peut faire."
+        },
+        {
+          "id": "vf_epi_1",
+          "fiche_id": "verifier",
+          "type": "vrai_faux",
+          "enonce": "Des gants isolants doivent être vérifiés avant chaque utilisation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Contrôle visuel et test à l'air : un trou invisible suffit à les rendre inutiles."
+        },
+        {
+          "id": "vf_epi_2",
+          "fiche_id": "epc",
+          "type": "vrai_faux",
+          "enonce": "Un écran facial protège surtout contre le contact électrique.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il protège contre les effets de l'arc : projections, chaleur et rayonnement."
         }
       ],
       "ordre": 82
@@ -25842,6 +27810,30 @@
             "Remettre sous tension et essayer"
           ],
           "explication": "Pré-identifier, séparer, condamner, vérifier : c'est la mise en sécurité du BS."
+        },
+        {
+          "id": "vf_b0_bs_1",
+          "fiche_id": "b0_detail",
+          "type": "vrai_faux",
+          "enonce": "Un titulaire du B0 n'a pas le droit d'effectuer des opérations électriques.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le B0 permet de travailler dans un environnement électrique, pas d'intervenir sur l'installation."
+        },
+        {
+          "id": "vf_b0_bs_2",
+          "fiche_id": "bs_detail",
+          "type": "vrai_faux",
+          "enonce": "Le BS autorise à travailler sous tension sur un circuit terminal.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le BS n'intervient que hors tension, sur des circuits de faible puissance, après consignation ou mise hors tension."
         }
       ],
       "ordre": 83
@@ -26150,6 +28142,30 @@
             "Compte rendu"
           ],
           "explication": "Analyser, sécuriser, réparer, remettre en service, rendre compte."
+        },
+        {
+          "id": "vf_br_1",
+          "fiche_id": "br_role",
+          "type": "vrai_faux",
+          "enonce": "Le BR peut réaliser un dépannage et une mise en service sur des installations basse tension.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est le chargé d'intervention générale : recherche de panne, remplacement, mesures, dans les limites fixées."
+        },
+        {
+          "id": "vf_br_2",
+          "fiche_id": "br_limites",
+          "type": "vrai_faux",
+          "enonce": "Le BR peut intervenir sur n'importe quelle puissance sans limite.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Les interventions BR sont bornées, notamment en courant et en puissance ; au-delà, il faut d'autres habilitations."
         }
       ],
       "ordre": 84
@@ -26457,6 +28473,30 @@
             "PLS si elle respire, réanimation si elle ne respire pas"
           ],
           "explication": "Protéger, alerter, secourir : l'ordre du secourisme, adapté au risque électrique."
+        },
+        {
+          "id": "vf_secours_1",
+          "fiche_id": "electrisation",
+          "type": "vrai_faux",
+          "enonce": "Devant une personne électrisée encore en contact, il faut d'abord couper le courant.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Toucher la victime avant la coupure fait une deuxième victime : couper, protéger, alerter, secourir."
+        },
+        {
+          "id": "vf_secours_2",
+          "fiche_id": "incendie",
+          "type": "vrai_faux",
+          "enonce": "On peut éteindre un feu d'origine électrique à l'eau si l'incendie est petit.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'eau conduit : on coupe l'alimentation et on utilise un extincteur adapté, à CO2 ou à poudre."
         }
       ],
       "ordre": 85
@@ -26766,6 +28806,30 @@
             "Déconsignation et remise sous tension"
           ],
           "explication": "Préparer, consigner, vérifier, travailler, clôturer, déconsigner."
+        },
+        {
+          "id": "vf_b1_b2_1",
+          "fiche_id": "b2_chef",
+          "type": "vrai_faux",
+          "enonce": "Le chargé de travaux B2 dirige l'équipe et veille à sa sécurité sur le chantier.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Il reçoit l'attestation de consignation, organise le travail et surveille les exécutants."
+        },
+        {
+          "id": "vf_b1_b2_2",
+          "fiche_id": "b1_exec",
+          "type": "vrai_faux",
+          "enonce": "Le B1V exécute des travaux sous tension.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le V signale le voisinage : le B1V travaille hors tension, mais au voisinage de pièces sous tension."
         }
       ],
       "ordre": 86
@@ -27074,6 +29138,30 @@
             "Remettre sous tension"
           ],
           "explication": "Ordre inverse de la consignation, après l'avis de fin de travail."
+        },
+        {
+          "id": "vf_bc_1",
+          "fiche_id": "bc_role",
+          "type": "vrai_faux",
+          "enonce": "Le chargé de consignation est celui qui réalise la consignation et délivre l'attestation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le BC effectue les opérations et remet l'attestation au chargé de travaux ou d'intervention."
+        },
+        {
+          "id": "vf_bc_2",
+          "fiche_id": "documents",
+          "type": "vrai_faux",
+          "enonce": "Une attestation de consignation peut être remise oralement, sans document.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle est écrite et signée : c'est la trace qui engage et protège chacun."
         }
       ],
       "ordre": 87
@@ -27382,6 +29470,30 @@
             "Utiliser l'outil à deux mains"
           ],
           "explication": "Vérifier, alimenter proprement, se protéger, travailler."
+        },
+        {
+          "id": "vf_outillage_1",
+          "fiche_id": "bonnes_pratiques",
+          "type": "vrai_faux",
+          "enonce": "Sur un chantier, une rallonge doit être déroulée complètement avant usage prolongé.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Enroulée, elle chauffe : la gaine peut fondre sous forte puissance."
+        },
+        {
+          "id": "vf_outillage_2",
+          "fiche_id": "outils_electro",
+          "type": "vrai_faux",
+          "enonce": "Un outil électroportatif de classe II doit être relié à la terre.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "La classe II repose sur une double isolation : il n'a pas de conducteur de terre, c'est normal."
         }
       ],
       "ordre": 88
@@ -27690,6 +29802,30 @@
             "Mise sous tension"
           ],
           "explication": "Norme, attestation, visa, mise en service."
+        },
+        {
+          "id": "vf_normes_1",
+          "fiche_id": "les_normes",
+          "type": "vrai_faux",
+          "enonce": "La NF C 15-100 concerne les installations, la NF C 18-510 les opérations et les habilitations.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'une décrit comment installer, l'autre comment travailler en sécurité."
+        },
+        {
+          "id": "vf_normes_2",
+          "fiche_id": "diagnostic",
+          "type": "vrai_faux",
+          "enonce": "Le diagnostic électrique obligatoire à la vente vaut mise en conformité.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il signale les anomalies mais n'oblige pas à les corriger : c'est une information pour l'acheteur."
         }
       ],
       "ordre": 89
@@ -27998,6 +30134,30 @@
             "Intervenir sous surveillance"
           ],
           "explication": "Permis, mesure, terre, matériel Ex, surveillance."
+        },
+        {
+          "id": "vf_atex_1",
+          "fiche_id": "statique",
+          "type": "vrai_faux",
+          "enonce": "L'électricité statique peut suffire à enflammer une atmosphère explosive.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Une étincelle de quelques millijoules suffit : d'où les liaisons équipotentielles et les sols dissipateurs."
+        },
+        {
+          "id": "vf_atex_2",
+          "fiche_id": "zones_atex",
+          "type": "vrai_faux",
+          "enonce": "En zone ATEX, on peut utiliser du matériel électrique ordinaire s'il est neuf.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il faut du matériel certifié pour la zone concernée, conçu pour ne pas produire d'étincelle ou pour la confiner."
         }
       ],
       "ordre": 90
@@ -28306,6 +30466,30 @@
             "Refermer l'armoire et retirer le balisage"
           ],
           "explication": "Questionner, analyser, se protéger, mesurer, ranger."
+        },
+        {
+          "id": "vf_arc_tst_1",
+          "fiche_id": "arc",
+          "type": "vrai_faux",
+          "enonce": "Un arc électrique peut porter l'air à plusieurs milliers de degrés.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "D'où des brûlures graves, même sans contact, et la nécessité d'un écran facial et de vêtements adaptés."
+        },
+        {
+          "id": "vf_arc_tst_2",
+          "fiche_id": "tst",
+          "type": "vrai_faux",
+          "enonce": "Le travail sous tension est autorisé dès qu'on est habilité BR.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le TST exige une habilitation spécifique, une formation dédiée, des outils adaptés et une justification."
         }
       ],
       "ordre": 91
@@ -28614,6 +30798,30 @@
             "Mise à la terre et en court-circuit"
           ],
           "explication": "S-C-I-V, puis MALT et court-circuit obligatoires en HT."
+        },
+        {
+          "id": "vf_haute_tension_1",
+          "fiche_id": "domaines",
+          "type": "vrai_faux",
+          "enonce": "La haute tension commence au-dessus de 1 000 volts en alternatif.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Au-delà, on parle de HTA puis de HTB, avec des règles bien plus strictes."
+        },
+        {
+          "id": "vf_haute_tension_2",
+          "fiche_id": "risques_ht",
+          "type": "vrai_faux",
+          "enonce": "En haute tension, la mise à la terre et en court-circuit après consignation est facultative.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle est indispensable : elle protège contre une réalimentation, une induction ou une charge résiduelle."
         }
       ],
       "ordre": 92
@@ -28922,6 +31130,30 @@
             "Expliquer les règles simples"
           ],
           "explication": "Prises, câbles, lampe, appareils, parole."
+        },
+        {
+          "id": "vf_enfants_1",
+          "fiche_id": "prevention_enfants",
+          "type": "vrai_faux",
+          "enonce": "Les prises modernes possèdent des obturateurs qui empêchent l'introduction d'un objet.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "L'éclipse ne s'ouvre que si les deux broches entrent en même temps."
+        },
+        {
+          "id": "vf_enfants_2",
+          "fiche_id": "risques_enfants",
+          "type": "vrai_faux",
+          "enonce": "Un enfant peut manipuler une multiprise sans surveillance si elle est neuve.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Rallonges et multiprises restent hors de portée : elles se débranchent, se mouillent et se mordent."
         }
       ],
       "ordre": 93
@@ -29230,6 +31462,30 @@
             "Le parafoudre limite la surtension résiduelle"
           ],
           "explication": "Capter, descendre, écouler, équilibrer, limiter."
+        },
+        {
+          "id": "vf_foudre_1",
+          "fiche_id": "comportement",
+          "type": "vrai_faux",
+          "enonce": "Pendant un orage, une voiture fermée offre une bonne protection.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La carrosserie métallique conduit le courant vers le sol autour des occupants : c'est une cage de Faraday."
+        },
+        {
+          "id": "vf_foudre_2",
+          "fiche_id": "protection_batiment",
+          "type": "vrai_faux",
+          "enonce": "Un paratonnerre attire la foudre sur le bâtiment qu'il protège et augmente le risque.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il capte l'impact et l'écoule vers la terre par un conducteur prévu, au lieu de laisser le courant traverser la structure."
         }
       ],
       "ordre": 94
@@ -29538,6 +31794,30 @@
             "Informer et suivre les travailleurs sensibles"
           ],
           "explication": "Démarche de prévention classique."
+        },
+        {
+          "id": "vf_cem_sante_1",
+          "fiche_id": "cem_champs",
+          "type": "vrai_faux",
+          "enonce": "L'intensité d'un champ électromagnétique diminue rapidement avec la distance.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "S'éloigner de quelques dizaines de centimètres suffit souvent à faire chuter fortement l'exposition."
+        },
+        {
+          "id": "vf_cem_sante_2",
+          "fiche_id": "cem_sante",
+          "type": "vrai_faux",
+          "enonce": "Les valeurs limites d'exposition du public sont fixées par la réglementation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Des seuils réglementaires encadrent l'exposition, et des mesures peuvent être demandées pour les vérifier."
         }
       ],
       "ordre": 95
@@ -29846,6 +32126,30 @@
             "Se recycler tous les 3 ans"
           ],
           "explication": "Le diplôme d'abord, l'habilitation ensuite."
+        },
+        {
+          "id": "vf_metiers_1",
+          "fiche_id": "metier_parcours",
+          "type": "vrai_faux",
+          "enonce": "Une habilitation électrique se renouvelle périodiquement.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Un recyclage régulier est prévu, et l'habilitation doit être revue en cas de changement de poste ou de matériel."
+        },
+        {
+          "id": "vf_metiers_2",
+          "fiche_id": "metier_formations",
+          "type": "vrai_faux",
+          "enonce": "Le métier d'électricien se limite au bâtiment.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Industrie, réseaux, ferroviaire, énergies renouvelables, maintenance : les débouchés sont bien plus larges."
         }
       ],
       "ordre": 96
@@ -30154,6 +32458,30 @@
             "Les secours sont alertés et prennent le relais"
           ],
           "explication": "Chaîne de mise en sécurité."
+        },
+        {
+          "id": "vf_ssi_1",
+          "fiche_id": "ssi_dispositifs",
+          "type": "vrai_faux",
+          "enonce": "Un système de sécurité incendie peut commander le désenfumage et le déverrouillage des issues.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "La mise en sécurité regroupe alarme, compartimentage, désenfumage et déverrouillage."
+        },
+        {
+          "id": "vf_ssi_2",
+          "fiche_id": "ssi_composants",
+          "type": "vrai_faux",
+          "enonce": "Un détecteur de fumée d'habitation fait partie d'un SSI.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Le détecteur autonome protège un logement ; un SSI est un système complet exigé dans les établissements recevant du public."
         }
       ],
       "ordre": 97
@@ -30462,6 +32790,30 @@
             "L'isolement revient à la normale"
           ],
           "explication": "Le second défaut ne doit pas arriver."
+        },
+        {
+          "id": "vf_regimes_neutre_1",
+          "fiche_id": "rn_tt_tn",
+          "type": "vrai_faux",
+          "enonce": "En régime TT, un défaut d'isolement fait déclencher le différentiel.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Le courant de défaut passe par la terre et le 30 mA coupe : c'est le régime des logements."
+        },
+        {
+          "id": "vf_regimes_neutre_2",
+          "fiche_id": "rn_it",
+          "type": "vrai_faux",
+          "enonce": "En régime IT, un premier défaut d'isolement coupe immédiatement l'alimentation.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Il est seulement signalé par un contrôleur permanent d'isolement, ce qui laisse le temps de le réparer avant le second défaut."
         }
       ],
       "ordre": 98
@@ -30770,6 +33122,30 @@
             "Intervenir"
           ],
           "explication": "Toutes les énergies, pas seulement l'électricité."
+        },
+        {
+          "id": "vf_securite_machines_1",
+          "fiche_id": "sm_consignation",
+          "type": "vrai_faux",
+          "enonce": "Consigner une machine avant intervention fait partie des obligations de sécurité.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "Coupure de toutes les énergies, condamnation, vérification : l'électricité, mais aussi l'air comprimé et les masses suspendues."
+        },
+        {
+          "id": "vf_securite_machines_2",
+          "fiche_id": "sm_dispositifs",
+          "type": "vrai_faux",
+          "enonce": "Un arrêt d'urgence remplace la consignation pour intervenir dans une machine.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "L'arrêt d'urgence stoppe le mouvement mais ne garantit ni l'absence d'énergie ni l'impossibilité de redémarrage."
         }
       ],
       "ordre": 99
@@ -31078,6 +33454,30 @@
             "Arrêt cardiaque, brûlures internes : plusieurs ampères"
           ],
           "explication": "Courbes de la norme IEC 60479."
+        },
+        {
+          "id": "vf_physiologie_1",
+          "fiche_id": "phy_seuils",
+          "type": "vrai_faux",
+          "enonce": "À partir d'environ 30 mA, le courant peut provoquer une fibrillation cardiaque.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 0,
+          "explication": "C'est ce seuil qui a donné la sensibilité des différentiels de protection des personnes."
+        },
+        {
+          "id": "vf_physiologie_2",
+          "fiche_id": "phy_impedance",
+          "type": "vrai_faux",
+          "enonce": "L'impédance du corps humain est la même quelles que soient les conditions.",
+          "reponses": [
+            "Vrai",
+            "Faux"
+          ],
+          "bonne": 1,
+          "explication": "Elle chute fortement avec l'humidité, la surface de contact et la tension : mouillé, on est bien plus vulnérable."
         }
       ],
       "ordre": 100

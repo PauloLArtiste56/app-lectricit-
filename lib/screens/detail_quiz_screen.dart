@@ -29,7 +29,10 @@ class DetailQuizScreen extends StatelessWidget {
 
   /// Ce qu'il fallait répondre, en une ligne.
   static String bonneReponse(Question q) => switch (q.type) {
-        TypeQuestion.qcm || TypeQuestion.image => q.reponses[q.bonne],
+        TypeQuestion.qcm ||
+        TypeQuestion.image ||
+        TypeQuestion.vraiFaux =>
+          q.reponses[q.bonne],
         TypeQuestion.ordre => q.reponses.join(' → '),
       };
 

@@ -338,6 +338,25 @@ class _QuizScreenState extends State<QuizScreen> {
           const SizedBox(height: 20),
           if (question.type == TypeQuestion.ordre)
             ..._buildOrdre(theme)
+          else if (question.type == TypeQuestion.vraiFaux)
+            // Deux boutons côte à côte : la réponse est un choix franc.
+            Row(
+              children: [
+                for (var i = 0; i < _session.reponsesAffichees.length; i++) ...[
+                  if (i > 0) const SizedBox(width: 12),
+                  Expanded(
+                    child: _Secousse(
+                      active: _etatQcm(i) == EtatReponse.mauvaise,
+                      child: ReponseButton(
+                        texte: _session.reponsesAffichees[i],
+                        etat: _etatQcm(i),
+                        onPressed: aRepondu ? null : () => _repondre(i),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            )
           else
             for (var i = 0; i < _session.reponsesAffichees.length; i++)
               _Secousse(

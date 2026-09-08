@@ -11,7 +11,11 @@ enum TypeQuestion {
 
   /// Comme un QCM, mais une image accompagne l'énoncé (« Quel est ce
   /// symbole ? »). Le champ [Question.image] est obligatoire.
-  image('image');
+  image('image'),
+
+  /// Une affirmation à juger : les `reponses` sont toujours
+  /// `["Vrai", "Faux"]`, dans cet ordre, et ne sont jamais mélangées.
+  vraiFaux('vrai_faux');
 
   const TypeQuestion(this.code);
 

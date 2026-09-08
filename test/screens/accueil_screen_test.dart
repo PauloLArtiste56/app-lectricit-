@@ -28,7 +28,8 @@ void main() {
 
     expect(find.text("Grandeurs électriques et loi d'Ohm"), findsOneWidget);
     expect(find.textContaining('questions réussies'), findsNWidgets(100));
-    expect(find.text('0/20 questions réussies'), findsWidgets);
+    expect(find.textContaining(RegExp(r'^0/\d+ questions réussies$')),
+        findsNWidgets(100));
     expect(find.text('Contenu à venir'), findsNothing);
     // Les sections par thème.
     expect(find.text('Les bases'), findsOneWidget);

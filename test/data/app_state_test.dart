@@ -36,10 +36,12 @@ void main() {
     expect(etat.moduleCourant, premier);
     expect(etat.moduleAvant(deuxieme), premier);
 
-    // 16 bonnes réponses sur 20 : le seuil de 80 % est atteint.
+    // Juste ce qu'il faut pour atteindre le seuil de 80 %.
+    final seuil =
+        (premier.nombreQuestions * AppState.seuilReussite).ceil();
     final session = QuizSession(premier.questions, melanger: false);
     for (final (i, q) in premier.questions.indexed) {
-      session.repondre(i < 16 ? q.bonne : (q.bonne + 1) % q.reponses.length);
+      session.repondre(i < seuil ? q.bonne : (q.bonne + 1) % q.reponses.length);
       session.suivante();
     }
     await etat.enregistrerResultat(session);
@@ -92,10 +94,11 @@ void main() {
       session.suivante();
     }
     await etat.enregistrerResultat(session, moduleComplet: module);
-    // 20 bonnes réponses = 200 XP, plus les quêtes du jour éventuellement
-    // accomplies par ce sans-faute (elles dépendent de la date).
+    // Un sans-faute du module rapporte 10 XP par question, plus les quêtes
+    // du jour éventuellement accomplies (elles dépendent de la date).
+    final attendu = module.nombreQuestions * AppState.xpParBonneReponse;
     final bonus = etat.recompenses.fold(0, (s, r) => s + r.xp);
-    expect(etat.xpTotal, 200 + bonus);
+    expect(etat.xpTotal, attendu + bonus);
     expect(etat.niveau, AppState.niveauPour(etat.xpTotal));
     expect(etat.niveau, greaterThanOrEqualTo(2));
     expect(etat.xpManquants, AppState.xpDebutNiveau(etat.niveau + 1) - etat.xpTotal);
@@ -384,18 +387,20 @@ void main() {
       await etat.enregistrerResultat(session, moduleComplet: module);
     }
 
-    await quiz(); // dimanche 6 : 200 XP
+    // Un module complet sans faute = 10 XP par question.
+    final parQuiz = module.nombreQuestions * AppState.xpParBonneReponse;
+    await quiz(); // dimanche 6 : un quiz
     maintenant = DateTime(2026, 9, 8); // mardi
     await quiz();
-    await quiz(); // mardi 8 : 400 XP
-    expect(etat.xpSemaine, 600);
+    await quiz(); // mardi 8 : deux quiz
+    expect(etat.xpSemaine, 3 * parQuiz);
     expect(etat.quizSemaine, 3);
     expect(etat.joursActifsSemaine, 2);
-    expect(etat.semaine.last.xp, 400);
+    expect(etat.semaine.last.xp, 2 * parQuiz);
 
     // Huit jours plus tard, le quiz du 6 est sorti de la fenêtre.
     maintenant = DateTime(2026, 9, 14);
-    expect(etat.xpSemaine, 400);
+    expect(etat.xpSemaine, 2 * parQuiz);
     expect(etat.joursActifsSemaine, 1);
   });
 

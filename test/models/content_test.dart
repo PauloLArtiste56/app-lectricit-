@@ -43,6 +43,10 @@ void main() {
           case TypeQuestion.ordre:
             expect(q.reponses.length, inInclusiveRange(3, 6),
                 reason: '${q.id} doit avoir 3 à 6 étapes');
+          case TypeQuestion.vraiFaux:
+            expect(q.reponses, ['Vrai', 'Faux'],
+                reason: '${q.id} : les réponses doivent être Vrai puis Faux');
+            expect(q.bonne, inInclusiveRange(0, 1), reason: q.id);
           case TypeQuestion.image:
             expect(q.reponses.length, inInclusiveRange(3, 4),
                 reason: '${q.id} doit avoir 3 ou 4 réponses');
@@ -102,6 +106,33 @@ void main() {
     for (final t in Tenue.toutes) {
       expect(File('assets/images/${t.image}').existsSync(), isTrue, reason: t.id);
     }
+  });
+
+  test('chaque module a au moins deux questions vrai ou faux', () {
+    var total = 0;
+    for (final module in modules) {
+      final vf = module.questions
+          .where((q) => q.type == TypeQuestion.vraiFaux)
+          .toList();
+      expect(vf.length, greaterThanOrEqualTo(2), reason: module.id);
+      total += vf.length;
+      // Les affirmations sont des phrases, pas des questions tronquées.
+      for (final q in vf) {
+        expect(q.enonce.length, greaterThan(20), reason: q.id);
+      }
+    }
+    expect(total, greaterThanOrEqualTo(200));
+  });
+
+  test('les vrai ou faux ne sont pas tous du même côté', () {
+    final vf = [
+      for (final m in modules)
+        for (final q in m.questions)
+          if (q.type == TypeQuestion.vraiFaux) q,
+    ];
+    final vrais = vf.where((q) => q.bonne == 0).length;
+    // Sinon répondre toujours « Vrai » suffirait à réussir.
+    expect(vrais / vf.length, closeTo(0.5, 0.15));
   });
 
   test('le contenu compte des questions avec image', () {

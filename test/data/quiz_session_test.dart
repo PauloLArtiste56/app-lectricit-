@@ -126,4 +126,31 @@ void main() {
     expect(session.score, 0);
   });
 
+
+  test('vrai ou faux : les deux réponses ne sont jamais mélangées', () {
+    const vf = Question(
+      id: 'vf1',
+      ficheId: 'f',
+      type: TypeQuestion.vraiFaux,
+      enonce: 'Le neutre est bleu clair.',
+      reponses: ['Vrai', 'Faux'],
+      bonne: 0,
+      explication: 'Le bleu clair est réservé au neutre.',
+    );
+    // Quelle que soit la graine, « Vrai » reste en premier.
+    for (var graine = 0; graine < 20; graine++) {
+      final session =
+          QuizSession([vf], melanger: true, random: Random(graine));
+      expect(session.reponsesAffichees, ['Vrai', 'Faux']);
+      expect(session.estBonneAffichee(0), isTrue);
+    }
+    // Alors qu'un QCM ordinaire, lui, est bien mélangé au moins une fois.
+    final ordres = {
+      for (var graine = 0; graine < 20; graine++)
+        QuizSession([_q('q1', 0)], melanger: true, random: Random(graine))
+            .reponsesAffichees
+            .join(),
+    };
+    expect(ordres.length, greaterThan(1));
+  });
 }
