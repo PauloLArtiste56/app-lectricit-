@@ -13,12 +13,16 @@ class BanniereChapitre extends StatelessWidget {
     required this.chapitre,
     required this.reussis,
     required this.total,
+    this.onTap,
   });
 
   final int numero;
   final Chapitre chapitre;
   final int reussis;
   final int total;
+
+  /// Ouvre la fiche de révision du chapitre.
+  final VoidCallback? onTap;
 
   /// Hauteur fixe de la bannière (marges comprises) : le parcours s'en sert
   /// pour calculer la position de chaque module sans mesurer l'écran.
@@ -35,7 +39,9 @@ class BanniereChapitre extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
-      child: Container(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
         height: hauteur,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
@@ -87,7 +93,13 @@ class BanniereChapitre extends StatelessWidget {
                 ),
               ],
             ),
+            if (onTap != null) ...[
+              const SizedBox(width: 10),
+              // Signale la fiche de révision du chapitre.
+              Icon(Icons.menu_book, color: avant.withValues(alpha: 0.9)),
+            ],
           ],
+        ),
         ),
       ),
     );

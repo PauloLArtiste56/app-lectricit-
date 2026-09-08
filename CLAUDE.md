@@ -98,6 +98,12 @@ quiz (`_appliquerGels`, jours stockés dans `gels_utilises`, comptés dans la s�
 la mascotte (`models/tenue.dart`, 5 calques PNG `decors/tenue_*.png` générés par
 `generer_decors.py`, superposés à la pile sur le parcours ; `achats` et `tenue` dans la
 progression).
+Stats par thème (`AppState.questionsDansChapitre`, `reussiesDansChapitre`, `scoreChapitre`,
+`chapitreLePlusFaible` : une carte par chapitre dans les stats, pourcentage, barre à la
+couleur du chapitre et rappel du thème à travailler en priorité). Fiche de révision d'un
+chapitre (`screens/revision_chapitre_screen.dart`) : toutes les fiches de ses modules sur
+un seul écran, en lecture seule (aucune fiche marquée lue), ouverte par la bannière du
+chapitre sur le parcours ou par une carte des stats.
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -277,7 +283,7 @@ lib/
   models/        # Module, Fiche, Question, Progression
   data/          # chargement du JSON, stockage local, état (AppState), quêtes, insignes
   screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats,
-                 # parametres
+                 # parametres, revision de chapitre, cartes, cas pratiques, glossaire, boutique
   widgets/       # composants réutilisables (carte module, bouton réponse, bouton en relief,
                  # nœud et bannière du parcours, carte d'entraînement)
 assets/

@@ -47,8 +47,16 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await _ouvrirStats(tester);
 
-    expect(find.text('0 %'), findsOneWidget);
+    // Le score global : « 0 % » apparaît aussi sur chaque thème, on vise
+    // donc le détail de la tuile.
+    expect(find.textContaining(RegExp(r'^0 / \d+ questions$')), findsOneWidget);
+    expect(find.text('0 %'), findsWidgets);
     expect(find.textContaining('Aucun quiz'), findsOneWidget);
+    // Les thèmes sont listés, tous à zéro.
+    expect(find.text('Par thème'), findsOneWidget);
+    expect(find.text('Les fondamentaux'), findsOneWidget);
+    expect(find.text('0 %'), findsNWidgets(1 + 10));
+    expect(find.textContaining('À travailler en priorité'), findsNothing);
     // Le récap de la semaine est là, à zéro.
     expect(find.text('Cette semaine'), findsOneWidget);
     expect(find.text('+0 XP'), findsOneWidget);
@@ -80,7 +88,7 @@ void main() {
     await tester.tap(find.text('Réinitialiser'));
     await tester.pumpAndSettle();
 
-    expect(find.text('0 %'), findsOneWidget);
+    expect(find.textContaining(RegExp(r'^0 / \d+ questions$')), findsOneWidget);
     expect(find.textContaining('Aucun quiz'), findsOneWidget);
 
     // Et la liste des modules est bien repassée à zéro.

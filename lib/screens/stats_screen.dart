@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../data/app_state.dart';
 import '../data/insignes.dart';
 import '../models/entree_historique.dart';
+import '../widgets/couleurs_parcours.dart';
+import 'revision_chapitre_screen.dart';
 
 /// Écran Stats : score global, modules terminés, historique des quiz.
 class StatsScreen extends StatelessWidget {
@@ -91,6 +93,10 @@ class StatsScreen extends StatelessWidget {
             detail: 'encore ${etat.xpManquants} XP pour le niveau ${etat.niveau + 1} '
                 '(${AppState.xpParBonneReponse} XP par bonne réponse)',
           ),
+          const SizedBox(height: 24),
+          Text('Par thème', style: theme.textTheme.titleMedium),
+          const SizedBox(height: 8),
+          const _ParTheme(),
           const SizedBox(height: 24),
           Text('Cette semaine', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
@@ -336,6 +342,104 @@ class _GrilleBadges extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            );
+          }(),
+      ],
+    );
+  }
+}
+
+/// Réussite chapitre par chapitre : où tu es solide, où il faut retravailler.
+/// Chaque ligne ouvre la fiche de révision du chapitre.
+class _ParTheme extends StatelessWidget {
+  const _ParTheme();
+
+  @override
+  Widget build(BuildContext context) {
+    final etat = context.watch<AppState>();
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final faible = etat.chapitreLePlusFaible;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        if (faible != null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Text(
+              'À travailler en priorité : « ${faible.titre} ».',
+              style: theme.textTheme.bodySmall?.copyWith(color: scheme.outline),
+            ),
+          ),
+        for (final c in etat.chapitres)
+          () {
+            final couleur = couleurChapitre(c);
+            final total = etat.questionsDansChapitre(c);
+            final reussies = etat.reussiesDansChapitre(c);
+            final part = etat.scoreChapitre(c);
+            final complet = total > 0 && reussies == total;
+            return Card(
+              margin: const EdgeInsets.only(bottom: 8),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => RevisionChapitreScreen(chapitre: c),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 12,
+                            height: 12,
+                            decoration: BoxDecoration(
+                              color: complet ? vertReussi : couleur,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(c.titre,
+                                style: theme.textTheme.titleSmall,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis),
+                          ),
+                          Text(
+                            '${(part * 100).round()} %',
+                            style: theme.textTheme.titleSmall?.copyWith(
+                              fontWeight: FontWeight.w800,
+                              color: complet ? vertReussi : couleur,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: LinearProgressIndicator(
+                          value: part,
+                          minHeight: 7,
+                          color: complet ? vertReussi : couleur,
+                          backgroundColor: scheme.surfaceContainerHighest,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '$reussies / $total questions réussies · '
+                        '${etat.modulesReussisDans(c)} / ${etat.modulesDuChapitre(c).length} modules',
+                        style: theme.textTheme.bodySmall
+                            ?.copyWith(color: scheme.outline),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             );
           }(),
