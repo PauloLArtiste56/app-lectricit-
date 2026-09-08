@@ -323,6 +323,35 @@ void main() {
     expect(relu.serieJours, 0);
   });
 
+  test('statistiques par chapitre et chapitre le plus faible', () async {
+    final etat = await etatCharge();
+    final chapitre = etat.chapitres.first;
+    final modules = etat.modulesDuChapitre(chapitre);
+    expect(etat.questionsDansChapitre(chapitre),
+        modules.fold(0, (s, m) => s + m.nombreQuestions));
+    expect(etat.reussiesDansChapitre(chapitre), 0);
+    expect(etat.scoreChapitre(chapitre), 0);
+    // Rien de commencé : aucun chapitre à travailler en priorité.
+    expect(etat.chapitreLePlusFaible, isNull);
+
+    // 10 questions réussies dans le premier module du chapitre.
+    final module = modules.first;
+    final session = QuizSession(module.questions.take(10).toList(), melanger: false);
+    for (final q in session.questions) {
+      session.repondre(q.bonne);
+      session.suivante();
+    }
+    await etat.enregistrerResultat(session);
+    expect(etat.reussiesDansChapitre(chapitre), 10);
+    expect(etat.scoreChapitre(chapitre),
+        closeTo(10 / etat.questionsDansChapitre(chapitre), 0.0001));
+    // Seul chapitre commencé, donc le plus faible.
+    expect(etat.chapitreLePlusFaible, same(chapitre));
+    for (final autre in etat.chapitres.skip(1)) {
+      expect(etat.scoreChapitre(autre), 0);
+    }
+  });
+
   test('les quêtes d\'un jour sont toujours les mêmes trois', () {
     final a = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();
     final b = Quete.pourLeJour('2026-09-06').map((q) => q.id).toList();

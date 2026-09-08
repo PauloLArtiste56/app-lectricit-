@@ -575,6 +575,35 @@ class AppState extends ChangeNotifier {
       questionsReussies(module) >= module.nombreQuestions * seuilReussite;
 
   /// Nombre de modules réussis dans un chapitre.
+  /// Questions d'un chapitre : total et réussies, pour les stats par thème.
+  int questionsDansChapitre(Chapitre chapitre) => modulesDuChapitre(chapitre)
+      .fold(0, (somme, m) => somme + m.nombreQuestions);
+
+  int reussiesDansChapitre(Chapitre chapitre) => modulesDuChapitre(chapitre)
+      .fold(0, (somme, m) => somme + questionsReussies(m));
+
+  /// Part des questions réussies dans le chapitre, entre 0 et 1.
+  double scoreChapitre(Chapitre chapitre) {
+    final total = questionsDansChapitre(chapitre);
+    return total == 0 ? 0 : reussiesDansChapitre(chapitre) / total;
+  }
+
+  /// Chapitre à travailler en priorité : le moins bien réussi parmi ceux
+  /// déjà commencés et pas encore terminés. `null` si rien n'est commencé.
+  Chapitre? get chapitreLePlusFaible {
+    Chapitre? faible;
+    var pire = 1.0;
+    for (final c in _chapitres) {
+      final score = scoreChapitre(c);
+      if (reussiesDansChapitre(c) == 0 || score >= 1) continue;
+      if (faible == null || score < pire) {
+        faible = c;
+        pire = score;
+      }
+    }
+    return faible;
+  }
+
   int modulesReussisDans(Chapitre chapitre) =>
       modulesDuChapitre(chapitre).where(moduleReussi).length;
 

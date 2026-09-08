@@ -15,6 +15,7 @@ import '../widgets/noeud_module.dart';
 import 'module_screen.dart';
 import 'boutique_screen.dart';
 import 'parametres_screen.dart';
+import 'revision_chapitre_screen.dart';
 
 /// Écran Parcours : la carte d'entraînement puis le chemin des modules,
 /// chapitre après chapitre, façon Duolingo : boutons en relief, cadenas,
@@ -206,6 +207,11 @@ class _SectionChapitre extends StatelessWidget {
             chapitre: chapitre,
             reussis: reussis,
             total: modules.length,
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => RevisionChapitreScreen(chapitre: chapitre),
+              ),
+            ),
           ),
           LayoutBuilder(
             builder: (context, contraintes) {
