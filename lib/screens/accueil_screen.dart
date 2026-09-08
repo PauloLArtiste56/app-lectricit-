@@ -7,6 +7,7 @@ import '../widgets/couleurs_parcours.dart';
 import '../widgets/module_card.dart';
 import 'glossaire_screen.dart';
 import 'module_screen.dart';
+import 'outils_screen.dart';
 
 /// Onglet Modules : tous les modules par thème, avec leur progression et un
 /// champ de recherche. Pratique pour aller droit sur un sujet, sans suivre
@@ -52,6 +53,13 @@ class _AccueilScreenState extends State<AccueilScreen> {
       appBar: AppBar(
         title: const Text('Tous les modules'),
         actions: [
+          IconButton(
+            tooltip: 'Boîte à outils',
+            icon: const Icon(Icons.calculate_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const OutilsScreen()),
+            ),
+          ),
           IconButton(
             tooltip: 'Glossaire',
             icon: const Icon(Icons.menu_book_outlined),
