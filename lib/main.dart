@@ -31,12 +31,18 @@ class ElecApp extends StatelessWidget {
         home: const HomeShell(),
         // Sur un grand écran (Chrome sur PC), on limite la largeur pour
         // garder l'allure d'un téléphone. Sans effet sur un vrai mobile.
-        builder: (context, child) => ColoredBox(
-          color: Theme.of(context).colorScheme.surfaceContainerHighest,
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: ElecTheme.largeurMax),
-              child: child,
+        builder: (context, child) => MediaQuery(
+          // Taille du texte choisie dans les paramètres, pour toute l'appli.
+          data: MediaQuery.of(context).copyWith(
+            textScaler: TextScaler.linear(etat.parametres.tailleTexte),
+          ),
+          child: ColoredBox(
+            color: Theme.of(context).colorScheme.surfaceContainerHighest,
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: ElecTheme.largeurMax),
+                child: child,
+              ),
             ),
           ),
         ),

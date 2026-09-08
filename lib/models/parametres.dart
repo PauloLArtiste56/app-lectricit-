@@ -11,6 +11,8 @@ class Parametres {
     this.tailleExamen = 20,
     this.dureeExamenMinutes = 10,
     this.objectifXpJour = 50,
+    this.tailleTexte = 1.0,
+    this.derniereSauvegarde = '',
   });
 
   /// `systeme`, `clair` ou `sombre`.
@@ -31,6 +33,13 @@ class Parametres {
   /// Sons après une réponse et en fin de quiz.
   final bool sons;
 
+  /// Facteur appliqué à toute la taille du texte de l'appli.
+  final double tailleTexte;
+
+  /// Date du dernier export de la progression (`AAAA-MM-JJ`), vide si
+  /// aucun export n'a jamais été fait.
+  final String derniereSauvegarde;
+
   final int tailleExamen;
   final int dureeExamenMinutes;
 
@@ -49,6 +58,8 @@ class Parametres {
     int? tailleExamen,
     int? dureeExamenMinutes,
     int? objectifXpJour,
+    double? tailleTexte,
+    String? derniereSauvegarde,
   }) {
     return Parametres(
       theme: theme ?? this.theme,
@@ -60,6 +71,8 @@ class Parametres {
       tailleExamen: tailleExamen ?? this.tailleExamen,
       dureeExamenMinutes: dureeExamenMinutes ?? this.dureeExamenMinutes,
       objectifXpJour: objectifXpJour ?? this.objectifXpJour,
+      tailleTexte: tailleTexte ?? this.tailleTexte,
+      derniereSauvegarde: derniereSauvegarde ?? this.derniereSauvegarde,
     );
   }
 
@@ -76,6 +89,10 @@ class Parametres {
       dureeExamenMinutes:
           json['duree_examen_minutes'] as int? ?? defaut.dureeExamenMinutes,
       objectifXpJour: json['objectif_xp_jour'] as int? ?? defaut.objectifXpJour,
+      tailleTexte:
+          (json['taille_texte'] as num?)?.toDouble() ?? defaut.tailleTexte,
+      derniereSauvegarde:
+          json['derniere_sauvegarde'] as String? ?? defaut.derniereSauvegarde,
     );
   }
 
@@ -89,5 +106,7 @@ class Parametres {
         'taille_examen': tailleExamen,
         'duree_examen_minutes': dureeExamenMinutes,
         'objectif_xp_jour': objectifXpJour,
+        'taille_texte': tailleTexte,
+        'derniere_sauvegarde': derniereSauvegarde,
       };
 }

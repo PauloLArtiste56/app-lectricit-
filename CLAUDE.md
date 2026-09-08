@@ -39,7 +39,7 @@ L'appli sert à apprendre les bases de l'électricité (V1), puis à préparer l
 3. Quiz : une question à la fois, 3-4 réponses, feedback immédiat (vert/rouge + explication), barre de progression.
 4. Résultat : score, liste des questions ratées, bouton "Refaire les ratées".
 5. Stats : score global, modules terminés, historique.
-6. Paramètres (roue crantée sur le parcours) : thème, taille de la séance, parcours libre,
+6. Paramètres (roue crantée sur le parcours) : thème, taille du texte, taille de la séance, parcours libre,
    mélange, vibrations, examen (questions, durée), export / import / réinitialisation de la
    progression, à propos. Stockés en local (`models/parametres.dart`, clé `parametres`).
 
@@ -108,6 +108,13 @@ Boîte à outils (`data/calculs.dart` pour les formules pures,
 `screens/outils_screen.dart` pour l'écran, icône calculatrice dans l'onglet Modules) :
 loi d'Ohm, puissance et courant, section de câble et calibre (tableau NF C 15-100),
 chute de tension (mono et triphasé, alerte au-delà de 5 %), coût mensuel d'un appareil.
+Revoir un quiz passé (`screens/detail_quiz_screen.dart`) : chaque ligne de l'historique
+s'ouvre sur ses questions ratées, avec la bonne réponse, l'explication et un bouton pour
+les refaire (les ratées sont stockées dans `EntreeHistorique.ratees`, absentes des quiz
+d'avant). Taille du texte réglable (`Parametres.tailleTexte`, appliquée par un
+`MediaQuery` dans `main.dart`). Rappel de sauvegarde : la progression ne vit que dans le
+navigateur, donc au bout de 10 quiz sans export (ou 30 jours après le dernier) une carte
+des stats propose de copier le code, et `Parametres.derniereSauvegarde` retient la date.
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -158,7 +165,8 @@ illustré : le champ `image` donne le chemin relatif à `assets/images/` (ex.
     }
   },
   "historique": [
-    { "module": "grandeurs", "date": "2026-09-05", "score": 8, "total": 10 }
+    { "module": "grandeurs", "date": "2026-09-05", "score": 8, "total": 10,
+      "ratees": ["q004"] }
   ]
 }
 ```

@@ -5,6 +5,8 @@ import '../data/app_state.dart';
 import '../data/insignes.dart';
 import '../models/entree_historique.dart';
 import '../widgets/couleurs_parcours.dart';
+import 'detail_quiz_screen.dart';
+import 'parametres_screen.dart';
 import 'revision_chapitre_screen.dart';
 
 /// Écran Stats : score global, modules terminés, historique des quiz.
@@ -61,6 +63,10 @@ class StatsScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
+          if (etat.sauvegardeConseillee) ...[
+            const _RappelSauvegarde(),
+            const SizedBox(height: 12),
+          ],
           Row(
             children: [
               Expanded(
@@ -262,15 +268,7 @@ class _LigneHistorique extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final etat = context.read<AppState>();
-    final titre = switch (entree.moduleId) {
-      AppState.idRevision => 'Révision',
-      AppState.idExamen => 'Examen blanc',
-      // Ancien mode éclair (retiré) : les lignes déjà enregistrées gardent un nom.
-      'eclair' => 'Mode éclair',
-      final id when id.startsWith(AppState.prefixeCas) =>
-        'Cas pratique : ${etat.casParId(id.substring(AppState.prefixeCas.length))?.titre ?? id}',
-      final id => etat.moduleParId(id)?.titre ?? id,
-    };
+    final titre = titreQuiz(etat, entree);
     final reussi = entree.score == entree.total;
     return Card(
       child: ListTile(
@@ -283,6 +281,12 @@ class _LigneHistorique extends StatelessWidget {
         trailing: Text(
           '${entree.score} / ${entree.total}',
           style: Theme.of(context).textTheme.titleMedium,
+        ),
+        // Ouvre le détail : les questions ratées ce jour-là.
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => DetailQuizScreen(entree: entree),
+          ),
         ),
       ),
     );
@@ -444,6 +448,65 @@ class _ParTheme extends StatelessWidget {
             );
           }(),
       ],
+    );
+  }
+}
+
+/// Rappel d'export : la progression ne vit que dans le navigateur, un
+/// effacement des données du site la perdrait.
+class _RappelSauvegarde extends StatelessWidget {
+  const _RappelSauvegarde();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final couleur = Colors.orange.shade800;
+
+    return Card(
+      color: couleur.withValues(alpha: 0.10),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: couleur.withValues(alpha: 0.5)),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.backup_outlined, color: couleur),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Sauvegarde ta progression',
+                    style: theme.textTheme.titleSmall?.copyWith(
+                      color: couleur,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
+            Text(
+              'Elle n\'existe que sur cet appareil. Si tu effaces les données '
+              'du navigateur, tout est perdu : copie le code et garde-le '
+              'quelque part.',
+              style: theme.textTheme.bodySmall,
+            ),
+            const SizedBox(height: 10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: FilledButton.icon(
+                onPressed: () => afficherExportProgression(context),
+                icon: const Icon(Icons.copy),
+                label: const Text('Sauvegarder maintenant'),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
