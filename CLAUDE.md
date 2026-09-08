@@ -104,6 +104,10 @@ couleur du chapitre et rappel du thème à travailler en priorité). Fiche de r�
 chapitre (`screens/revision_chapitre_screen.dart`) : toutes les fiches de ses modules sur
 un seul écran, en lecture seule (aucune fiche marquée lue), ouverte par la bannière du
 chapitre sur le parcours ou par une carte des stats.
+Boîte à outils (`data/calculs.dart` pour les formules pures,
+`screens/outils_screen.dart` pour l'écran, icône calculatrice dans l'onglet Modules) :
+loi d'Ohm, puissance et courant, section de câble et calibre (tableau NF C 15-100),
+chute de tension (mono et triphasé, alerte au-delà de 5 %), coût mensuel d'un appareil.
 
 Hors périmètre : comptes utilisateurs, notifications, backend, achats.
 
@@ -281,7 +285,8 @@ choix multiples) existants d'organismes de formation. Paulo relit et corrige si 
 lib/
   main.dart
   models/        # Module, Fiche, Question, Progression
-  data/          # chargement du JSON, stockage local, état (AppState), quêtes, insignes
+  data/          # chargement du JSON, stockage local, état (AppState), quêtes, insignes,
+                 # calculs de la boîte à outils
   screens/       # parcours, accueil (onglet Modules), module, fiche, quiz, resultat, stats,
                  # parametres, revision de chapitre, cartes, cas pratiques, glossaire, boutique
   widgets/       # composants réutilisables (carte module, bouton réponse, bouton en relief,
