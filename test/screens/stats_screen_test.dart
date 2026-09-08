@@ -95,6 +95,7 @@ void main() {
     await tester.tap(find.text('Modules'));
     await tester.pumpAndSettle();
     expect(find.textContaining('questions réussies'), findsNWidgets(100));
-    expect(find.text('0/20 questions réussies'), findsWidgets);
+    expect(find.textContaining(RegExp(r'^0/\d+ questions réussies$')),
+        findsNWidgets(100));
   });
 }

@@ -108,11 +108,12 @@ void main() {
 
   testWidgets('un module réussi est fêté et propose le module suivant',
       (tester) async {
-    // Progression réelle : 16 questions du premier module déjà réussies.
+    // Progression réelle : juste assez de questions réussies pour 80 %.
     final modules = ContentLoader.parserModules(
         File('assets/content.json').readAsStringSync());
     final premier = modules.first;
-    final reussies = premier.questions.take(16).map((q) => q.id).toList();
+    final seuil = (premier.nombreQuestions * AppState.seuilReussite).ceil();
+    final reussies = premier.questions.take(seuil).map((q) => q.id).toList();
     SharedPreferences.setMockInitialValues({
       'progression': jsonEncode({
         'progression': {
@@ -135,9 +136,9 @@ void main() {
         home: ResultatScreen(
           titre: premier.titre,
           module: premier,
-          score: 16,
-          total: 20,
-          questionsRatees: premier.questions.skip(16).toList(),
+          score: seuil,
+          total: premier.nombreQuestions,
+          questionsRatees: premier.questions.skip(seuil).toList(),
         ),
       ),
     ));
@@ -148,7 +149,8 @@ void main() {
     // Rien n'a été enregistré par cet écran : pas de bandeau de badge.
     expect(find.textContaining('Nouveau badge'), findsNothing);
     // « Refaire les ratées » reste disponible, en second choix.
-    expect(find.text('Refaire les ratées (4)'), findsOneWidget);
+    expect(find.text('Refaire les ratées (${premier.nombreQuestions - seuil})'),
+        findsOneWidget);
   });
 
   testWidgets('un module déjà réussi avant le quiz n\'est pas refêté',
@@ -176,8 +178,8 @@ void main() {
         home: ResultatScreen(
           titre: premier.titre,
           module: premier,
-          score: 20,
-          total: 20,
+          score: premier.nombreQuestions,
+          total: premier.nombreQuestions,
           questionsRatees: const [],
           dejaReussi: true,
         ),
@@ -215,8 +217,8 @@ void main() {
         home: ResultatScreen(
           titre: premier.titre,
           module: premier,
-          score: 20,
-          total: 20,
+          score: premier.nombreQuestions,
+          total: premier.nombreQuestions,
           questionsRatees: const [],
         ),
       ),

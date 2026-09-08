@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:elecapp/data/app_state.dart';
 import 'package:elecapp/data/content_loader.dart';
 import 'package:elecapp/main.dart';
 import 'package:elecapp/widgets/banniere_chapitre.dart';
@@ -71,10 +72,21 @@ void main() {
   });
 
   testWidgets('un module réussi passe en vert et déverrouille le suivant', (tester) async {
+    // Juste assez de questions réussies pour passer les 80 % du module.
+    final premier = ContentLoader.parserModules(
+            File('assets/content.json').readAsStringSync())
+        .first;
+    final seuil = (premier.nombreQuestions * AppState.seuilReussite).ceil();
     SharedPreferences.setMockInitialValues({
-      'progression': '{"progression": {"grandeurs": {"questions_reussies": '
-          '["q001","q002","q003","q004","q005","q006","q007","q008","q009",'
-          '"q010","q011","q012","q013","q014","q015","q016"]}}, "historique": []}',
+      'progression': jsonEncode({
+        'progression': {
+          premier.id: {
+            'questions_reussies':
+                premier.questions.take(seuil).map((q) => q.id).toList(),
+          },
+        },
+        'historique': <Object>[],
+      }),
     });
     _ecranHaut(tester);
     await tester.pumpWidget(const ElecApp());

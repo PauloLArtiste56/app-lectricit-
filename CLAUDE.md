@@ -146,12 +146,13 @@ Hors périmètre : comptes utilisateurs, notifications, backend, achats.
   ]
 }
 ```
-Le champ `type` vaut `qcm`, `ordre` ou `image`. Pour `ordre`, les `reponses` sont les étapes
+Le champ `type` vaut `qcm`, `ordre`, `image` ou `vrai_faux`. Pour `ordre`, les `reponses` sont les étapes
 dans le bon ordre et `bonne` est absent. Pour `image`, c'est un QCM dont l'énoncé est
 illustré : le champ `image` donne le chemin relatif à `assets/images/` (ex.
 `questions/sym_lampe.png`, symboles générés par `tools/schemas/generer_questions.py`, ou
-`decors/gants.png` pour réutiliser les dessins du parcours). Prévoir de pouvoir ajouter
-`vrai_faux` plus tard sans casser la structure.
+`decors/gants.png` pour réutiliser les dessins du parcours). Pour `vrai_faux`, l'énoncé
+est une affirmation à juger, les `reponses` sont toujours `["Vrai", "Faux"]` dans cet
+ordre (jamais mélangées) et `bonne` vaut 0 ou 1 ; l'écran Quiz les affiche côte à côte.
 
 ### Progression utilisateur (stockage local)
 ```json
@@ -173,8 +174,8 @@ illustré : le champ `image` donne le chemin relatif à `assets/images/` (ex.
 
 ## Modules de contenu
 Objectif de Paulo : beaucoup de modules (100 atteints) pour ne jamais en faire le tour.
-Chaque module : un `theme` (section de l'accueil), 3 fiches illustrées, 20 questions
-(qcm et ordre). Les fiches sont illustrées par un schéma dessiné ou par une « carte résumé »
+Chaque module : un `theme` (section de l'accueil), 3 fiches illustrées, 22 questions
+(20 qcm ou ordre, plus 2 vrai/faux). Les fiches sont illustrées par un schéma dessiné ou par une « carte résumé »
 générée (`tools/schemas/generer_schemas.py`, fonction `carte_resume`).
 
 Modules existants (par thème) :
@@ -280,10 +281,12 @@ Modules existants (par thème) :
 100. Géothermie, biomasse et énergies marines
 
 Objectif des 100 modules atteint. Les modules Symboles, EPI et Sécurité de base ont en plus
-des questions `image` (20 au total). Idées pour la suite : approfondir les modules existants
-(nouvelles questions, plus de questions `image`).
+des questions `image` (20 au total). Chaque module a en plus 2 questions `vrai_faux`
+(200 au total), réparties à peu près également entre affirmations vraies et fausses pour
+que répondre toujours pareil ne marche pas. Idées pour la suite : approfondir les modules
+existants (nouvelles questions, plus de questions `image`).
 
-Au moins 20 questions par module. Paulo fait confiance à Claude Code pour rédiger les
+Au moins 22 questions par module. Paulo fait confiance à Claude Code pour rédiger les
 questions : s'appuyer sur les thèmes classiques des référentiels (programmes de formation,
 NF C 18-510) pour choisir les sujets, mais ne jamais reprendre de QCM (questionnaires à
 choix multiples) existants d'organismes de formation. Paulo relit et corrige si besoin.
@@ -324,7 +327,6 @@ assets/
 - Textes de l'interface en français.
 - Garder les solutions minimales : pas de package en plus sans justification.
 
-## Plus tard (V2/V3, ne pas anticiper dans le code sauf le champ `type`)
+## Plus tard (V2/V3)
 - Modules par niveau d'habilitation (B0, BS, BR, B1V, B2V…).
-- Questions de type "ordre" (étapes de consignation), "image" (choisir les EPI, équipements de protection individuelle).
 - Cible possible : organismes de formation comme outil de révision pour leurs stagiaires.

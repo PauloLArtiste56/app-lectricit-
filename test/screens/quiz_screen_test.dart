@@ -6,6 +6,7 @@ import 'package:elecapp/main.dart';
 import 'package:elecapp/models/module.dart';
 import 'package:elecapp/models/question.dart';
 import 'package:elecapp/screens/quiz_screen.dart';
+import 'package:elecapp/widgets/reponse_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -45,6 +46,33 @@ void _ecranHaut(WidgetTester tester) {
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
 }
+
+final _moduleVraiFaux = Module(
+  id: 'vf',
+  titre: 'Module vrai ou faux',
+  ordre: 1,
+  fiches: const [],
+  questions: const [
+    Question(
+      id: 'vf1',
+      ficheId: 'f',
+      type: TypeQuestion.vraiFaux,
+      enonce: 'Le neutre est repéré en bleu clair.',
+      reponses: ['Vrai', 'Faux'],
+      bonne: 0,
+      explication: 'Le bleu clair est réservé au neutre.',
+    ),
+    Question(
+      id: 'vf2',
+      ficheId: 'f',
+      type: TypeQuestion.vraiFaux,
+      enonce: 'Un disjoncteur protège les personnes contre l\'électrisation.',
+      reponses: ['Vrai', 'Faux'],
+      bonne: 1,
+      explication: 'C\'est le différentiel 30 mA qui protège les personnes.',
+    ),
+  ],
+);
 
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
@@ -94,7 +122,8 @@ void main() {
     await tester.tap(find.textContaining('Lancer le quiz'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Question 1 / 20'), findsOneWidget);
+    // Le quiz porte sur toutes les questions du module.
+    expect(find.textContaining(RegExp(r'^Question 1 / \d+$')), findsOneWidget);
   });
 
   testWidgets('une mauvaise réponse propose "Revoir la fiche"', (tester) async {
@@ -249,4 +278,37 @@ void main() {
     expect(find.text('Combo ×2'), findsOneWidget);
   });
 
+
+  testWidgets('une question vrai ou faux montre deux boutons, dans l\'ordre',
+      (tester) async {
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (_) => AppState(),
+      child: MaterialApp(
+          home: QuizScreen(module: _moduleVraiFaux, melanger: false)),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Vrai'), findsOneWidget);
+    expect(find.text('Faux'), findsOneWidget);
+    expect(tester.getTopLeft(find.text('Vrai')).dx,
+        lessThan(tester.getTopLeft(find.text('Faux')).dx));
+    expect(find.byType(ReponseButton), findsNWidgets(2));
+
+    // Bonne réponse sur la première affirmation.
+    await tester.tap(find.text('Vrai'));
+    await tester.pumpAndSettle();
+    expect(find.text('Bonne réponse !'), findsOneWidget);
+    expect(find.text('Le bleu clair est réservé au neutre.'), findsOneWidget);
+
+    await tester.tap(find.text('Question suivante'));
+    await tester.pumpAndSettle();
+    // Deuxième affirmation : c'est « Faux » qu'il faut choisir.
+    await tester.tap(find.text('Vrai'));
+    await tester.pumpAndSettle();
+    expect(find.text('Mauvaise réponse'), findsOneWidget);
+
+    await tester.tap(find.text('Terminer'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 2'), findsOneWidget);
+  });
 }

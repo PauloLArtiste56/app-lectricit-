@@ -17,7 +17,9 @@ class QuizSession {
     if (melanger) this.questions.shuffle(rng);
     for (final q in this.questions) {
       final ordre = List.generate(q.reponses.length, (i) => i);
-      if (melanger) ordre.shuffle(rng);
+      // « Vrai » reste avant « Faux » : mélanger ces deux-là n'apporte
+      // rien et rend la lecture confuse.
+      if (melanger && q.type != TypeQuestion.vraiFaux) ordre.shuffle(rng);
       _ordreAffichage.add(ordre);
     }
   }

@@ -9,7 +9,7 @@ une étape à la fois.
 ## État du projet
 
 ✅ V1 complète et enrichie : 100 modules regroupés par thème, chacun avec 3 fiches illustrées
-et 20 questions (2 020 questions, dont des questions « remettre dans l'ordre » et des questions illustrées). Séance du jour
+et 22 questions (2 220 questions, dont des « vrai ou faux », des « remettre dans l'ordre » et des questions illustrées). Séance du jour
 avec révision espacée, examen blanc chronométré, écran Paramètres (thème, parcours libre,
 export / import de la progression), série de jours, objectif du jour, quêtes quotidiennes et badges, sons et animations, cartes à retourner, cas pratiques, couronnes de maîtrise, glossaire, stats par thème, fiches de révision par chapitre, boîte à outils de calcul, boutique (gel de série, tenues de la mascotte), parcours en 10 chapitres façon Duolingo, révision des points faibles, questions et réponses
 mélangées, bouton « Revoir la fiche » après une erreur. Objectif : continuer à ajouter des
