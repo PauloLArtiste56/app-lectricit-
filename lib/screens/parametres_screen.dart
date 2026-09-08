@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../data/app_state.dart';
 import '../models/parametres.dart';
+import 'stats_screen.dart';
 
 /// Numéro de version affiché dans « À propos » (à mettre à jour avec
 /// `pubspec.yaml`).
@@ -17,55 +18,6 @@ class ParametresScreen extends StatelessWidget {
   Future<void> _modifier(BuildContext context, Parametres nouveaux) =>
       context.read<AppState>().modifierParametres(nouveaux);
 
-  Future<void> _exporter(BuildContext context) async {
-    final texte = context.read<AppState>().exporterProgression();
-    await showDialog<void>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Exporter la progression'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Copie ce code et colle-le dans « Importer » sur '
-                'ton autre appareil.'),
-            const SizedBox(height: 12),
-            Container(
-              constraints: const BoxConstraints(maxHeight: 140),
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Theme.of(ctx).colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: SingleChildScrollView(
-                child: SelectableText(texte,
-                    style: const TextStyle(fontSize: 11, fontFamily: 'monospace')),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Fermer'),
-          ),
-          FilledButton.icon(
-            onPressed: () async {
-              await Clipboard.setData(ClipboardData(text: texte));
-              if (ctx.mounted) {
-                Navigator.of(ctx).pop();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Code copié.')),
-                );
-              }
-            },
-            icon: const Icon(Icons.copy),
-            label: const Text('Copier'),
-          ),
-        ],
-      ),
-    );
-  }
 
   Future<void> _importer(BuildContext context) async {
     final controleur = TextEditingController();
@@ -165,6 +117,21 @@ class ParametresScreen extends StatelessWidget {
               ),
             ),
           ),
+          ListTile(
+            leading: const Icon(Icons.format_size),
+            title: const Text('Taille du texte'),
+            trailing: DropdownButton<double>(
+              value: p.tailleTexte,
+              items: const [
+                DropdownMenuItem(value: 0.9, child: Text('Petite')),
+                DropdownMenuItem(value: 1.0, child: Text('Normale')),
+                DropdownMenuItem(value: 1.1, child: Text('Grande')),
+                DropdownMenuItem(value: 1.2, child: Text('Très grande')),
+              ],
+              onChanged: (t) =>
+                  t == null ? null : _modifier(context, p.copyWith(tailleTexte: t)),
+            ),
+          ),
           titre('APPRENTISSAGE'),
           ListTile(
             leading: const Icon(Icons.track_changes),
@@ -250,8 +217,11 @@ class ParametresScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.upload_outlined),
             title: const Text('Exporter la progression'),
-            subtitle: const Text('Un code à copier pour changer d\'appareil'),
-            onTap: () => _exporter(context),
+            subtitle: Text(p.derniereSauvegarde.isEmpty
+                ? 'Jamais sauvegardée : un code à copier et à garder'
+                : 'Dernière sauvegarde le '
+                    '${StatsScreen.formaterDate(p.derniereSauvegarde)}'),
+            onTap: () => afficherExportProgression(context),
           ),
           ListTile(
             leading: const Icon(Icons.download_outlined),
@@ -280,4 +250,59 @@ class ParametresScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Boîte d'export de la progression : le code à copier et à garder.
+/// Appelée depuis les paramètres et depuis le rappel des stats.
+Future<void> afficherExportProgression(BuildContext context) async {
+  final etat = context.read<AppState>();
+  final texte = etat.exporterProgression();
+  await showDialog<void>(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      title: const Text('Exporter la progression'),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('Copie ce code et colle-le dans « Importer » sur '
+              'ton autre appareil.'),
+          const SizedBox(height: 12),
+          Container(
+            constraints: const BoxConstraints(maxHeight: 140),
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Theme.of(ctx).colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: SingleChildScrollView(
+              child: SelectableText(texte,
+                  style: const TextStyle(fontSize: 11, fontFamily: 'monospace')),
+            ),
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.of(ctx).pop(),
+          child: const Text('Fermer'),
+        ),
+        FilledButton.icon(
+          onPressed: () async {
+            await Clipboard.setData(ClipboardData(text: texte));
+            // On note la date : le rappel de sauvegarde se tait.
+            await etat.marquerSauvegarde();
+            if (ctx.mounted) {
+              Navigator.of(ctx).pop();
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Code copié.')),
+              );
+            }
+          },
+          icon: const Icon(Icons.copy),
+          label: const Text('Copier'),
+        ),
+      ],
+    ),
+  );
 }

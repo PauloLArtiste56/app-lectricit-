@@ -145,6 +145,21 @@ class AppState extends ChangeNotifier {
   /// appareil.
   String exporterProgression() => jsonEncode(_progression.toJson());
 
+  /// Note qu'une sauvegarde vient d'être faite, pour ne plus la rappeler.
+  Future<void> marquerSauvegarde() async {
+    await modifierParametres(
+        _parametres.copyWith(derniereSauvegarde: _aujourdhui()));
+  }
+
+  /// Vrai s'il est temps de rappeler l'export : la progression ne vit que
+  /// dans le navigateur, et un effacement des données du site la perdrait.
+  bool get sauvegardeConseillee {
+    if (_progression.historique.length < 10) return false;
+    final derniere = DateTime.tryParse(_parametres.derniereSauvegarde);
+    if (derniere == null) return true;
+    return _horloge().difference(derniere).inDays > 30;
+  }
+
   /// Remplace la progression par celle d'un export. Faux si le texte n'est
   /// pas un export valide (rien n'est modifié dans ce cas).
   Future<bool> importerProgression(String texte) async {
@@ -172,6 +187,27 @@ class AppState extends ChangeNotifier {
 
   /// Module auquel appartient une question.
   Module? moduleDe(Question question) => _moduleParQuestion[question.id];
+
+  /// Retrouve une question par son identifiant, dans les modules comme dans
+  /// les cas pratiques. `null` si elle n'existe plus (contenu modifié).
+  Question? questionParId(String id) {
+    final module = _moduleParQuestion[id];
+    if (module != null) {
+      for (final q in module.questions) {
+        if (q.id == id) return q;
+      }
+    }
+    for (final cas in _casPratiques) {
+      for (final q in cas.etapes) {
+        if (q.id == id) return q;
+      }
+    }
+    return null;
+  }
+
+  /// Les questions ratées d'un quiz passé, celles qui existent encore.
+  List<Question> rateesDe(EntreeHistorique entree) =>
+      [for (final id in entree.ratees) ?questionParId(id)];
 
   /// Modules d'un chapitre, dans l'ordre du parcours. Un identifiant inconnu
   /// est ignoré plutôt que de faire planter l'écran.
@@ -715,6 +751,7 @@ class AppState extends ChangeNotifier {
       date: _aujourdhui(),
       score: session.score,
       total: session.total,
+      ratees: [for (final q in session.questionsRatees) q.id],
     ));
     _verifierQuetesEtBadges();
     _appliquerGels();
